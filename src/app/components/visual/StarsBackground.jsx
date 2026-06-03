@@ -128,7 +128,7 @@ export function StarsBackground({
       >
         {/* Far Stars */}
         <StarLayer
-          count={250}
+          count={500}
           size={1}
           starColor={starColor}
           transition={{
@@ -140,7 +140,7 @@ export function StarsBackground({
 
         {/* Mid Stars */}
         <StarLayer
-          count={100}
+          count={300}
           size={1.5}
           starColor={starColor}
           transition={{
@@ -152,7 +152,7 @@ export function StarsBackground({
 
         {/* Near Stars */}
         <StarLayer
-          count={40}
+          count={100}
           size={2}
           starColor="#ffd9b3"
           transition={{

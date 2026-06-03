@@ -52,27 +52,6 @@ function CaseCard({ c, i }) {
       <h3 className="mt-3 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
         {c.title}
       </h3>
-      {/* <CaseStudies />
-        <GovtNGO />
-        <GlobalPresence />
-        <Insights />
-        <div
-          data-testid="landing-zone"
-          className="relative overflow-hidden w-full bg-[radial-gradient(ellipse_at_top,_#0a0e2a_0%,_#02030a_60%,_#000000_100%)]"
-        >
-          <StarsBackground
-            data-testid="landing-zone-stars"
-            className="absolute inset-0 z-0 bg-transparent"
-            starColor="#ffffff"
-          />
-          <div className="absolute inset-x-0 bottom-[260px] sm:bottom-[320px] z-[1] pointer-events-none">
-            <GroundHorizon />
-          </div>
-          <div className="relative z-10">
-            <FinalCTA />
-            <Footer />
-          </div>
-        </div> */}
       <div className="mt-6 divider-line" />
 
       <div className="mt-6 grid grid-cols-2 gap-6">
@@ -122,6 +101,25 @@ export function CaseStudies() {
           title="Outcomes, not optics."
           intro="Three engagements — anonymised under NDA — where the brief was hard, the stakes were public, and the metrics moved."
         />
+
+         {/* <div
+          data-testid="landing-zone"
+          className="relative overflow-hidden w-full bg-[radial-gradient(ellipse_at_top,_#0a0e2a_0%,_#02030a_60%,_#000000_100%)]"
+        >
+          <StarsBackground
+            data-testid="landing-zone-stars"
+            className="absolute inset-0 z-0 bg-transparent"
+            starColor="#ffffff"
+          />
+          <div className="absolute inset-x-0 bottom-[260px] sm:bottom-[320px] z-[1] pointer-events-none">
+            <GroundHorizon />
+          </div>
+          <div className="relative z-10">
+            <FinalCTA />
+            <Footer />
+          </div>
+        </div>  */}
+
         <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {CASES.map((c, i) => (
             <CaseCard key={c.title} c={c} i={i} />
