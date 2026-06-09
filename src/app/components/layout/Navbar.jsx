@@ -5,6 +5,8 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Base2BrandWordmark } from "../../components/visual/Base2BrandLogo";
 import { cn } from "../../lib/utils";
 import Link from "next/link";
+import Image from "next/image";
+import { CurrentLogo } from "./CurrentLogo";
 
 /**
  * Premium mega-dropdown navbar for Base2Brand.
@@ -169,7 +171,7 @@ export function Navbar() {
             data-testid="navbar-logo-link"
             className="flex items-center gap-3 group"
           >
-            <Base2BrandWordmark className="h-6 sm:h-7" />
+           <CurrentLogo />
           </Link>
 
           {/* Desktop nav — buttons row only. Mouse leave/enter schedules close. */}
@@ -235,17 +237,11 @@ export function Navbar() {
                   data-testid={`nav-panel-${activeMenu.label.toLowerCase()}`}
                   className="relative rounded-3xl border border-line-strong bg-[#04061a]/95 backdrop-blur-xl p-7 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
                 >
-                    <div
-                      className="pointer-events-none absolute inset-0 rounded-3xl opacity-60"
-                      style={{
-                        background:
-                          "radial-gradient(600px circle at 20% 0%, rgba(255,106,0,0.10), transparent 50%)",
-                      }}
-                    />
+                    <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-60 bg-brand-radial-glow" />
                     <div className="relative grid grid-cols-[1fr_2fr] gap-8">
                       <div>
                         <div className="text-[10px] font-mono-display uppercase tracking-[0.28em] text-mute">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
+                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-brand-dot" />
                           {activeMenu.label}
                         </div>
                         <h3 className="mt-3 font-display text-white text-2xl tracking-tight">

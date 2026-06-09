@@ -1,16 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, JetBrains_Mono, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css?dsh";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./sections/Footer";
+import { ThemeWrapper } from "./components/layout/ThemeWrapper";
+import { DEFAULT_THEME } from "./lib/themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata = {
@@ -22,12 +36,19 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${manrope.variable} ${jetbrainsMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} ${DEFAULT_THEME.className} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col" cz-shortcut-listen="true">
-        <Navbar />
-        {children}
-        <Footer />
+      <body
+        className={`${DEFAULT_THEME.className} min-h-full flex flex-col`}
+        cz-shortcut-listen="true"
+        suppressHydrationWarning
+      >
+        <ThemeWrapper>
+          <Navbar />
+           {children}
+          <Footer />
+        </ThemeWrapper>
       </body>
     </html>
   );
