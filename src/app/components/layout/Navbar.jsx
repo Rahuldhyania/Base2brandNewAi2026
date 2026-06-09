@@ -264,7 +264,7 @@ export function Navbar() {
                       <ul className="grid grid-cols-2 gap-1.5">
                         {activeMenu.items.map((it) => (
                           <li key={it.label}>
-                            <a
+                            <Link
                               href={it.href}
                               onClick={(e) => handleAnchor(e, it.href)}
                               data-testid={`nav-item-${it.label
@@ -281,7 +281,7 @@ export function Navbar() {
                                   {captionFor(activeMenu.label, it.label)}
                                 </div>
                               </div>
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
