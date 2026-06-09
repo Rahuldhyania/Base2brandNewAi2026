@@ -21,7 +21,6 @@ import { Trust } from "./sections/Trust";
 export default function page() {
   return (
     <main className="App relative bg-[#02030a] text-white min-h-screen overflow-x-hidden" data-testid="app-root">
-      <Navbar />
       <RocketScrollNavigator />
       <main>
         <Hero />
@@ -50,7 +49,6 @@ export default function page() {
           </div>
           <div className="relative z-10">
             <FinalCTA />
-            <Footer />
           </div>
         </div>
       </main>

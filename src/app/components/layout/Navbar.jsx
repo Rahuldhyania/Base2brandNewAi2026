@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Base2BrandWordmark } from "../../components/visual/Base2BrandLogo";
 import { cn } from "../../lib/utils";
+import Link from "next/link";
 
 /**
  * Premium mega-dropdown navbar for Base2Brand.
@@ -18,7 +19,7 @@ const MENU = [
     label: "Services",
     href: "#services",
     items: [
-      { label: "AI & Automation", href: "#services" },
+      { label: "AI & Automation", href: "/ai-automation" },
       { label: "Software Development", href: "#services" },
       { label: "Apple Ecosystem Development", href: "#services" },
       { label: "Ecommerce Solutions", href: "#services" },
@@ -163,14 +164,13 @@ export function Navbar() {
               : "px-2 sm:px-3 py-2"
           )}
         >
-          <a
-            href="#top"
-            onClick={(e) => handleAnchor(e, "#top")}
+          <Link
+            href="/"
             data-testid="navbar-logo-link"
             className="flex items-center gap-3 group"
           >
             <Base2BrandWordmark className="h-6 sm:h-7" />
-          </a>
+          </Link>
 
           {/* Desktop nav — buttons row only. Mouse leave/enter schedules close. */}
           <div
