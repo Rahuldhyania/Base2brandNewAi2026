@@ -9,7 +9,7 @@ const FinalCTA = () => {
     <section
       id="contact"
       data-testid="final-cta-section"
-      className="relative py-16 md:py-24 overflow-hidden"
+      className="relative py-12 md:py-16 overflow-hidden"
     >
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0 pointer-events-none">

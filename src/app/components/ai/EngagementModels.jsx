@@ -53,7 +53,7 @@ const EngagementModels = () => {
   return (
     <section
       data-testid="engagement-section"
-      className="relative py-16 md:py-24 border-y border-white/5 bg-[#05030E]"
+      className="relative py-12 md:py-16 border-y border-white/5 bg-[#05030E]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto">

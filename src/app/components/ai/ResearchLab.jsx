@@ -56,7 +56,7 @@ const ResearchLab = () => {
       className="relative py-16"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <BackgroundPaths opacity={0.35} />
+        <BackgroundPaths opacity={0.01} />
         <SmokeBackground smokeColor="#8B5CF6" opacity={0.22} />
         <Atmosphere intensity={0.25} />
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(109,40,217,0.08),rgba(3,3,10,0)_60%)]" />

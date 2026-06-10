@@ -20,25 +20,13 @@ export const THEMES = {
       pathname === "/ai-automation" ||
       pathname.startsWith("/ai-automation/"),
   },
-  // Future examples (uncomment when routes exist):
-  // seo: {
-  //   id: "seo",
-  //   className: "theme-seo",
-  //   match: (pathname) =>
-  //     pathname === "/seo" || pathname.startsWith("/seo/"),
-  // },
-  // marketing: {
-  //   id: "marketing",
-  //   className: "theme-marketing",
-  //   match: (pathname) =>
-  //     pathname === "/marketing" || pathname.startsWith("/marketing/"),
-  // },
-  // development: {
-  //   id: "development",
-  //   className: "theme-development",
-  //   match: (pathname) =>
-  //     pathname === "/development" || pathname.startsWith("/development/"),
-  // },
+  apple: {
+    id: "apple",
+    className: "theme-apple",
+    match: (pathname) =>
+      pathname === "/apple-ecosystem" ||
+      pathname.startsWith("/apple-ecosystem/"),
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

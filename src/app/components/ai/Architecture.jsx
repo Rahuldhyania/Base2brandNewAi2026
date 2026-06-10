@@ -109,7 +109,7 @@ const Architecture = () => {
       ref={sectionRef}
       id="architecture"
       data-testid="architecture-section"
-      className="relative py-16 md:py-24 overflow-hidden"
+      className="relative py-12 md:py-16 overflow-hidden"
     >
       {/* Atmospheric backdrop: paths + smoke + atmosphere combined at low opacity */}
       <div className="absolute inset-0 pointer-events-none">

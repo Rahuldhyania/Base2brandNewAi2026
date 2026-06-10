@@ -206,7 +206,7 @@ export function RocketScrollNavigator() {
               with the flame trail rising upward behind it */}
           <motion.div
             style={{ y: rocketY }}
-            className="absolute top-0 left-1/2 -translate-x-1/2"
+            className="absolute top-0 left-1/1 -translate-x-1/2"
             data-testid="rocket-nav-rocket"
           >
             <div className="relative -translate-y-1/2" style={{ transform: "rotate(180deg)" }}>

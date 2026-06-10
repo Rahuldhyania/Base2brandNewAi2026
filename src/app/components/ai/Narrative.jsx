@@ -6,7 +6,7 @@ const Narrative = () => {
   return (
     <section
       data-testid="narrative-section"
-      className="relative py-16 md:py-24"
+      className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid lg:grid-cols-12 gap-10">

@@ -64,6 +64,71 @@ code {
     animation: b2b-spin-slow 40s linear infinite;
 }
 
+@keyframes b2b-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes b2b-pulse-glow {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes b2b-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Scrollbar — follows active theme background */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--b2b-bg, #02030a);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 /* =============================================================================
    THEME: HOME — Manrope, orange brand, deep navy backgrounds
    ============================================================================= */
@@ -223,12 +288,130 @@ code {
 }
 
 /* =============================================================================
+   THEME: APPLE — Inter + Bricolage Grotesque, Apple Blue brand
+   ============================================================================= */
+
+.theme-apple {
+    /* Core surface */
+    --b2b-bg: #020408;
+    --b2b-bg-2: #050810;
+    --b2b-surface: #0d1117;
+    --b2b-surface-2: #11161f;
+    --b2b-border: rgba(255, 255, 255, 0.08);
+    --b2b-border-strong: rgba(255, 255, 255, 0.14);
+    --b2b-glass: rgba(255, 255, 255, 0.05);
+    --b2b-text: #f5f7fa;
+    --b2b-text-muted: #98a2b3;
+    --b2b-text-dim: #667085;
+
+    /* Apple Ecosystem palette */
+    --apple-primary: #0a84ff;
+    --apple-secondary: #5ac8fa;
+    --apple-highlight: #64d2ff;
+    --apple-deep: #0040dd;
+    --apple-glow: rgba(10, 132, 255, 0.35);
+
+    /* Page accents (in-page orange/purple gradients) */
+    --b2b-page-orange: #ff6a2c;
+    --b2b-page-orange-soft: #ffa47a;
+    --b2b-purple: #a855f7;
+    --b2b-purple-soft: #c084fc;
+
+    /* Shared chrome (Navbar, Footer) → Apple blue */
+    --b2b-orange: var(--apple-primary);
+    --b2b-orange-soft: var(--apple-glow);
+
+    /* Bridge → shared utilities (Navbar, Footer, etc.) */
+    --b2b-ink: var(--b2b-text);
+    --b2b-mute: var(--b2b-text-muted);
+    --b2b-line: var(--b2b-border);
+    --b2b-line-strong: var(--b2b-border-strong);
+    --b2b-primary: var(--apple-primary);
+    --b2b-primary-2: var(--apple-secondary);
+    --b2b-primary-soft: var(--apple-glow);
+    --b2b-glass-bg: var(--b2b-glass);
+    --b2b-glow-ring: var(--apple-glow);
+    --b2b-glow-shadow: rgba(10, 132, 255, 0.55);
+    --b2b-glow-ambient: var(--apple-glow);
+    --b2b-text-glow: rgba(10, 132, 255, 0.55);
+    --b2b-text-glow-ambient: rgba(10, 132, 255, 0.25);
+    --b2b-ring-orbit: rgba(10, 132, 255, 0.25);
+    --b2b-marker-pulse: var(--apple-primary);
+    --b2b-selection-fg: #ffffff;
+
+    /* Typography */
+    --b2b-font-body: var(--font-inter), -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", sans-serif;
+    --b2b-font-display: var(--font-bricolage), var(--font-inter), sans-serif;
+    --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+    /* Radii */
+    --radius: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    /* shadcn tokens */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 100% 52%;
+    --chart-1: 212 100% 52%;
+    --chart-2: 197 100% 67%;
+    --chart-3: 30 100% 60%;
+    --chart-4: 270 95% 65%;
+    --chart-5: 340 75% 55%;
+
+    background: var(--b2b-bg);
+    color: var(--b2b-text);
+    font-family: var(--b2b-font-body);
+    font-feature-settings: "ss01", "cv11";
+}
+
+.theme-apple code {
+    font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas,
+        monospace;
+}
+
+.theme-apple ::selection {
+    background: var(--apple-primary);
+    color: var(--b2b-selection-fg);
+}
+
+.theme-apple :focus-visible {
+    outline: 2px solid var(--apple-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.theme-apple .font-display {
+    letter-spacing: -0.02em;
+}
+
+/* =============================================================================
    TAILWIND BASE — border color follows active theme tokens
    ============================================================================= */
 
 @layer base {
     .theme-home *,
     .theme-ai * {
+        border-color: hsl(var(--border));
+    }
+    .theme-apple * {
         border-color: hsl(var(--border));
     }
 }
@@ -243,7 +426,8 @@ code {
         letter-spacing: -0.025em;
     }
 
-    .font-mono-display {
+    .font-mono-display,
+    .font-mono {
         font-family: var(--b2b-font-mono);
         letter-spacing: 0;
     }
@@ -356,3 +540,173 @@ code {
     background: var(--b2b-marker-pulse);
     animation: b2b-pulse 2.4s ease-out infinite;
 }
+
+/* =============================================================================
+   APPLE ECOSYSTEM — page utilities (use Apple CSS variables)
+   ============================================================================= */
+
+.b2b-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .b2b-container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.b2b-glass {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.015) 100%
+    );
+    border: 1px solid var(--b2b-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.b2b-glass-strong {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    border: 1px solid var(--b2b-border-strong);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.apple-glow {
+    box-shadow: 0 0 60px -10px var(--apple-glow);
+}
+
+.apple-text-gradient {
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #5ac8fa 50%,
+        #0a84ff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.orange-text-gradient {
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #ffa47a 50%,
+        #ff6a2c 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.b2b-hairline {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--b2b-border-strong) 50%,
+        transparent 100%
+    );
+}
+
+.b2b-fade-up {
+    animation: b2b-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.b2b-pulse-glow {
+    animation: b2b-pulse-glow 4s ease-in-out infinite;
+}
+
+.b2b-stars {
+    background-image:
+        radial-gradient(
+            1px 1px at 20% 30%,
+            rgba(255, 255, 255, 0.6),
+            transparent 50%
+        ),
+        radial-gradient(
+            1px 1px at 60% 70%,
+            rgba(255, 255, 255, 0.4),
+            transparent 50%
+        ),
+        radial-gradient(
+            1.5px 1.5px at 85% 15%,
+            rgba(255, 255, 255, 0.5),
+            transparent 50%
+        ),
+        radial-gradient(
+            1px 1px at 10% 80%,
+            rgba(255, 255, 255, 0.3),
+            transparent 50%
+        ),
+        radial-gradient(
+            2px 2px at 40% 50%,
+            rgba(90, 200, 250, 0.4),
+            transparent 50%
+        ),
+        radial-gradient(
+            1px 1px at 70% 90%,
+            rgba(255, 255, 255, 0.4),
+            transparent 50%
+        ),
+        radial-gradient(
+            1px 1px at 90% 60%,
+            rgba(255, 255, 255, 0.3),
+            transparent 50%
+        );
+    background-size: 1200px 800px;
+    background-repeat: repeat;
+}
+
+.b2b-grain {
+    position: relative;
+}
+
+.b2b-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
+}
+
+.b2b-marquee {
+    animation: b2b-marquee 60s linear infinite;
+}
+
+[data-debug-wrapper="true"] {
+    display: contents !important;
+}
+
+[data-debug-wrapper="true"] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+}
+
+
+

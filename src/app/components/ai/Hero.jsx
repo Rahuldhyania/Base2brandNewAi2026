@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       data-testid="hero-section"
-      className="relative pt-24 md:pt-32 pb-14 md:pb-20 overflow-hidden"
+      className="relative pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden"
     >
       {/* Background field */}
       <div className="absolute inset-0 pointer-events-none">
@@ -73,7 +73,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
-              className="mt-8 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-balance"
+              className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-balance"
             >
               We engineer AI systems that{" "}
               <span className="text-white/95">operate businesses,</span>{" "}
@@ -87,7 +87,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="mt-8 text-base md:text-lg lg:text-xl text-white/55 max-w-2xl leading-relaxed"
+              className="mt-4 text-base md:text-lg lg:text-xl text-white/55 max-w-2xl"
             >
               Agentic workflows, enterprise copilots, voice intelligence,
               decision systems, and autonomous operations — designed for
@@ -123,7 +123,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.25em] font-mono text-white/35"
+              className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.25em] font-mono text-white/35"
             >
               <span>Enterprise Grade</span>
               <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />

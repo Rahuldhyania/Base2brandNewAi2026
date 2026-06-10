@@ -234,7 +234,7 @@ const Industries = () => {
     <section
       id="industries"
       data-testid="industries-section"
-      className="relative py-16 md:py-24"
+      className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">

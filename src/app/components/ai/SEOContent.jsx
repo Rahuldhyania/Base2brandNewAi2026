@@ -86,7 +86,7 @@ const SEOContent = () => {
   return (
     <section
       data-testid="seo-content-section"
-      className="relative py-16 md:py-24"
+      className="relative py-12 md:py-16"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto">

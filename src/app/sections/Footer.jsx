@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { Base2BrandWordmark } from "../components/visual/Base2BrandLogo";
+import { CurrentLogo } from "../components/layout/CurrentLogo";
 import { Linkedin, Twitter, Github, Youtube } from "lucide-react";
 
 const OFFICES = [
@@ -31,7 +31,7 @@ export function Footer() {
         {/* Top: brand + nav */}
         <div className="grid lg:grid-cols-[1.5fr_2fr] gap-12">
           <div>
-            <Base2BrandWordmark className="h-7 sm:h-8" />
+            <CurrentLogo />
             <p className="mt-6 text-mute max-w-md text-sm sm:text-base leading-relaxed">
               From base — to brand. From idea — to orbit. Base2Brand is the
               digital transformation, AI and enterprise software partner for

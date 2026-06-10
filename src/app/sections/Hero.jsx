@@ -70,7 +70,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.6 }}
-            className="font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl"
+            className="font-display text-white text-3xl lg:text-4xl  leading-[1.05] tracking-tight max-w-3xl"
             data-testid="hero-headline"
           >
             We architect the digital{" "}

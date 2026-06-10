@@ -92,7 +92,7 @@ const CapCard = ({ cap, idx }) => {
     >
       <div
         data-testid={`capability-card-${idx}`}
-        className="relative h-full b2b-card p-8 md:p-10 overflow-hidden transition-all duration-500 hover:border-[#8B5CF6]/40"
+        className="relative h-full b2b-card p-8 overflow-hidden transition-all duration-500 hover:border-[#8B5CF6]/40"
       >
         {/* Hover glow */}
         <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#8B5CF6]/0 group-hover:bg-[#8B5CF6]/15 blur-[80px] transition-all duration-700" />
@@ -168,7 +168,7 @@ const Capabilities = () => {
     <section
       id="capabilities"
       data-testid="capabilities-section"
-      className="relative py-16 md:py-24"
+      className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">

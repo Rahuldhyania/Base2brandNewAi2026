@@ -1,33 +1,33 @@
 "use client";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const DEFAULT_LOGO = "/images/homeLogo.png";
 
 const logosList = [
-  {
-    slug: "/",
-    logourl: "/images/homeLogo.avif",
-  },
-  {
-    slug: "/ai-automation",
-    logourl: "/images/aiLogo.png",
-  },
+  { slug: "/", logourl: DEFAULT_LOGO },
+  { slug: "/ai-automation", logourl: "/images/aiLogo.png" },
+  { slug: "/apple-ecosystem", logourl: "/images/appleLogo.png" },
 ];
-export function CurrentLogo() {
-  const currentPath = usePathname();
 
-  const currentLogo = logosList.find((logo) => logo.slug === currentPath);
+export function CurrentLogo({ className = "max-w-50" }) {
+  const currentPath = usePathname();
+  const matched = logosList.find((logo) => logo.slug === currentPath);
+  const [src, setSrc] = useState(matched?.logourl ?? DEFAULT_LOGO);
+
+  useEffect(() => {
+    setSrc(matched?.logourl ?? DEFAULT_LOGO);
+  }, [matched?.logourl]);
+
   return (
-    <div>
-      {currentLogo ? (
-        <Image src={currentLogo.logourl} alt="Logo" width={200} height={100} />
-      ) : (
-        <Image
-          src="/images/homeLogo.avif"
-          alt="Logo"
-          width={200}
-          height={100}
-        />
-      )}
-    </div>
+    <Image
+      src={src}
+      alt="Base2Brand"
+      width={200}
+      height={100}
+      className={className}
+      onError={() => setSrc(DEFAULT_LOGO)}
+    />
   );
 }

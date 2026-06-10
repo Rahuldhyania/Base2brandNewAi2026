@@ -33,7 +33,7 @@ const Outcomes = () => {
     <section
       id="outcomes"
       data-testid="outcomes-section"
-      className="relative py-16 md:py-24 bg-[#04030C] border-y border-white/5 overflow-hidden"
+      className="relative py-12 md:py-16 bg-[#04030C] border-y border-white/5 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <svg
