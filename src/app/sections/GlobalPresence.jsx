@@ -78,7 +78,7 @@ export function GlobalPresence() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-orange-brand font-mono-display">
+                  <div className="text-xs uppercase tracking-[0.22em] text-orange-brand font-mono-display">
                     {l.role}
                   </div>
                   <div className="mt-1 inline-block relative h-2 w-2 rounded-full bg-orange-brand">

@@ -198,12 +198,12 @@ export function Testimonials() {
                   <p className="text-sm sm:text-base font-display tracking-tight text-white">
                     {name}
                   </p>
-                  <span className="block text-[11px] font-mono-display uppercase tracking-[0.18em] text-mute">
+                  <span className="block text-xs font-mono-display uppercase tracking-[0.18em] text-mute">
                     {role} · {company}
                   </span>
                 </div>
                 <blockquote className="mt-3">
-                  <p className="text-sm sm:text-[15px] leading-relaxed text-white/85 font-light tracking-wide">
+                  <p className="text-sm sm:text-base leading-relaxed text-white/85 font-light tracking-wide">
                     “{quote}”
                   </p>
                 </blockquote>

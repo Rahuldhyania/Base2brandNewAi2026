@@ -37,10 +37,10 @@ export default function VisionPro() {
       />
 
       <div className="relative text-center max-w-3xl mx-auto">
-        <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
           Vision Pro & Spatial Computing
         </p>
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
           A new computing surface.{" "}
           <span className="apple-text-gradient">We were ready on day one.</span>
         </h2>

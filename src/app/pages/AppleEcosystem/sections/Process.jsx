@@ -45,10 +45,10 @@ export default function Process() {
   return (
     <section className="b2b-container py-12">
       <div className="text-center max-w-3xl mx-auto mb-14">
-        <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
           Development Process
         </p>
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
           From discovery to operate —{" "}
           <span className="apple-text-gradient">one continuous engagement.</span>
         </h2>
@@ -79,7 +79,7 @@ export default function Process() {
                 <p className="mt-2.5 text-white/60 leading-relaxed">{s.body}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {s.artefacts.map((a) => (
-                    <span key={a} className="text-[11px] font-mono uppercase tracking-[0.16em] text-white/55 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
+                    <span key={a} className="text-xs font-mono uppercase tracking-[0.16em] text-white/55 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
                       {a}
                     </span>
                   ))}

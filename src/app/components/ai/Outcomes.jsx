@@ -66,7 +66,7 @@ const Outcomes = () => {
           <ShiningText testId="outcomes-eyebrow">
             OUTCOMES, NOT EXPERIMENTS
           </ShiningText>
-          <h2 className="mt-6 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
             Numbers measured in production. Not pilots.
           </h2>
         </Reveal>
@@ -83,10 +83,10 @@ const Outcomes = () => {
                 className="relative b2b-card p-8 md:p-12 overflow-hidden h-full"
               >
                 <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#8B5CF6]/6 blur-[100px]" />
-                <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/35">
+                <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
                   Result {String(i + 1).padStart(2, "0")}
                 </div>
-                <div className="mt-4 font-display text-6xl md:text-7xl lg:text-8xl leading-none tracking-[-0.05em] font-light bg-gradient-to-br from-white via-white/90 to-[#C084FC] bg-clip-text text-transparent">
+                <div className="mt-4 font-display text-4xl sm:text-5xl leading-none tracking-[-0.05em] font-light bg-gradient-to-br from-white via-white/90 to-[#C084FC] bg-clip-text text-transparent">
                   {o.v}
                 </div>
                 <div className="mt-6 font-display text-lg md:text-xl font-medium max-w-md">

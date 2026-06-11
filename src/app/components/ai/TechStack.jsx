@@ -115,7 +115,7 @@ const TechStack = () => {
           <ShiningText testId="techstack-eyebrow">
             BUILT ON THE LATEST AI STACK
           </ShiningText>
-          <h2 className="mt-6 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
             Models, frameworks, and infrastructure — composed deliberately.
           </h2>
         </Reveal>
@@ -124,7 +124,7 @@ const TechStack = () => {
           {STACK.map((group, i) => (
             <Reveal key={group.cat} delay={i * 0.05} className="bg-[#06040D]">
               <div data-testid={`techstack-group-${i}`} className="p-8 h-full">
-                <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#C084FC]/80">
+                <div className="font-mono text-xs tracking-[0.25em] uppercase text-[#C084FC]/80">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="mt-3 font-display text-lg font-medium">

@@ -240,7 +240,7 @@ export function Navbar() {
                     <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-60 bg-brand-radial-glow" />
                     <div className="relative grid grid-cols-[1fr_2fr] gap-8">
                       <div>
-                        <div className="text-[10px] font-mono-display uppercase tracking-[0.28em] text-mute">
+                        <div className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute">
                           <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-brand-dot" />
                           {activeMenu.label}
                         </div>

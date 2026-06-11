@@ -130,12 +130,12 @@ const CapCard = ({ cap, idx }) => {
           <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 text-[#C084FC]">
             <Icon className="w-5 h-5" />
           </div>
-          <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/30">
+          <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/30">
             {String(idx + 1).padStart(2, "0")}
           </span>
         </div>
 
-        <h3 className="mt-7 font-display text-xl md:text-2xl font-medium tracking-tight">
+        <h3 className="mt-7 font-display text-xl sm:text-2xl font-medium tracking-tight">
           {cap.title}
         </h3>
 
@@ -176,7 +176,7 @@ const Capabilities = () => {
             <ShiningText testId="capabilities-eyebrow">
               ENTERPRISE AI CAPABILITIES
             </ShiningText>
-            <h2 className="mt-6 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
+            <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
               Six practices. One intelligence layer.
             </h2>
           </Reveal>

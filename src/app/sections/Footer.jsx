@@ -122,7 +122,7 @@ export function Footer() {
                 data-testid={`footer-office-${o.city.toLowerCase().replace(/\s/g, "-")}`}
                 className="border-l border-orange-brand/30 pl-4"
               >
-                <div className="text-[10px] uppercase tracking-[0.22em] text-orange-brand font-mono-display">
+                <div className="text-xs uppercase tracking-[0.22em] text-orange-brand font-mono-display">
                   {o.role}
                 </div>
                 <div className="mt-2 font-display text-white text-base">

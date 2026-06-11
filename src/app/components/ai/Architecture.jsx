@@ -83,7 +83,7 @@ const LayerCard = ({ layer, index, total, scrollProgress }) => {
         }`}
       />
       <div className="pl-3">
-        <div className="font-mono text-[9px] tracking-[0.25em] uppercase text-white/35">
+        <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
           L{String(LAYERS.length - index).padStart(2, "0")}
         </div>
         <div className="font-display font-medium text-white/90">
@@ -126,7 +126,7 @@ const Architecture = () => {
               <ShiningText testId="architecture-eyebrow">
                 ENTERPRISE AI ARCHITECTURE
               </ShiningText>
-              <h2 className="mt-5 font-display text-3xl md:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
+              <h2 className="mt-5 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance">
                 A stack built for systems that operate the business.
               </h2>
               <p className="mt-6 text-white/55 leading-relaxed">
@@ -186,15 +186,15 @@ const Architecture = () => {
                     <div>
                       <ShiningText
                         testId="architecture-chart-eyebrow"
-                        className="text-[10px]"
+                        className="text-xs"
                       >
                         CAPABILITY TRAJECTORY
                       </ShiningText>
-                      <h3 className="mt-2 font-display text-xl md:text-2xl font-medium">
+                      <h3 className="mt-2 font-display text-xl sm:text-2xl font-medium">
                         How AI capability compounds across layers.
                       </h3>
                     </div>
-                    <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/35">
+                    <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
                       Stacked · indexed
                     </span>
                   </div>
@@ -208,10 +208,10 @@ const Architecture = () => {
                       ["8q", "compounding"],
                     ].map(([v, l]) => (
                       <div key={l}>
-                        <div className="font-display text-xl md:text-2xl font-medium tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
+                        <div className="font-display text-xl sm:text-2xl font-medium tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
                           {v}
                         </div>
-                        <div className="mt-1 font-mono text-[9px] tracking-[0.2em] uppercase text-white/40">
+                        <div className="mt-1 font-mono text-xs tracking-[0.2em] uppercase text-white/40">
                           {l}
                         </div>
                       </div>

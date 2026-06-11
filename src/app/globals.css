@@ -130,6 +130,19 @@ code {
 }
 
 /* =============================================================================
+   SHARED TYPOGRAPHY — homepage fonts site-wide (Manrope + JetBrains Mono)
+   ============================================================================= */
+
+.theme-home,
+.theme-ai,
+.theme-apple {
+  --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  --b2b-font-display: var(--font-manrope), sans-serif;
+  --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+}
+
+/* =============================================================================
    THEME: HOME — Manrope, orange brand, deep navy backgrounds
    ============================================================================= */
 
@@ -159,12 +172,6 @@ code {
   --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
   --b2b-marker-pulse: var(--b2b-primary);
   --b2b-selection-fg: #000000;
-
-  /* Typography */
-  --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont,
-      "Segoe UI", sans-serif;
-  --b2b-font-display: var(--font-manrope), sans-serif;
-  --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
 
   /* Tailwind / shadcn HSL tokens */
   --background: 230 60% 3%;
@@ -204,7 +211,7 @@ code {
 }
 
 /* =============================================================================
-   THEME: AI — IBM Plex Sans, purple brand, intelligence division
+   THEME: AI — purple brand, intelligence division
    ============================================================================= */
 
 .theme-ai {
@@ -231,11 +238,6 @@ code {
   --b2b-ring-orbit: rgba(139, 92, 246, 0.25);
   --b2b-marker-pulse: var(--b2b-primary);
   --b2b-selection-fg: #ffffff;
-
-  --b2b-font-body: var(--font-ibm-plex-sans), -apple-system, BlinkMacSystemFont,
-      "Segoe UI", sans-serif;
-  --b2b-font-display: var(--font-ibm-plex-sans), sans-serif;
-  --b2b-font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
 
   --background: 260 60% 3%;
   --foreground: 260 30% 96%;
@@ -288,7 +290,7 @@ code {
 }
 
 /* =============================================================================
-   THEME: APPLE — Inter + Bricolage Grotesque, Apple Blue brand
+   THEME: APPLE — Apple Blue brand
    ============================================================================= */
 
 .theme-apple {
@@ -339,12 +341,6 @@ code {
     --b2b-marker-pulse: var(--apple-primary);
     --b2b-selection-fg: #ffffff;
 
-    /* Typography */
-    --b2b-font-body: var(--font-inter), -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Segoe UI", sans-serif;
-    --b2b-font-display: var(--font-bricolage), var(--font-inter), sans-serif;
-    --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
-
     /* Radii */
     --radius: 0.75rem;
     --radius-lg: 1.5rem;
@@ -379,7 +375,6 @@ code {
     background: var(--b2b-bg);
     color: var(--b2b-text);
     font-family: var(--b2b-font-body);
-    font-feature-settings: "ss01", "cv11";
 }
 
 .theme-apple code {
@@ -396,10 +391,6 @@ code {
     outline: 2px solid var(--apple-primary);
     outline-offset: 3px;
     border-radius: 4px;
-}
-
-.theme-apple .font-display {
-    letter-spacing: -0.02em;
 }
 
 /* =============================================================================
@@ -421,6 +412,91 @@ code {
    ============================================================================= */
 
 @layer utilities {
+    /* Homepage typography scale — use across all pages */
+    .type-eyebrow {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-family: var(--b2b-font-mono);
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    }
+
+    .type-h1 {
+        font-family: var(--b2b-font-display);
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.025em;
+    }
+
+    .type-h2 {
+        font-family: var(--b2b-font-display);
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.025em;
+    }
+
+    .type-h2-lg {
+        font-family: var(--b2b-font-display);
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.025em;
+    }
+
+    .type-h3 {
+        font-family: var(--b2b-font-display);
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.025em;
+    }
+
+    .type-h4 {
+        font-family: var(--b2b-font-display);
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .type-body {
+        font-size: 0.875rem;
+        line-height: 1.625;
+    }
+
+    .type-body-lg {
+        font-size: 1rem;
+        line-height: 1.625;
+    }
+
+    @media (min-width: 640px) {
+        .type-h2 {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .type-body {
+            font-size: 1rem;
+        }
+        .type-body-lg {
+            font-size: 1.125rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .type-h1 {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .type-h2 {
+            font-size: 3rem;
+            line-height: 1.05;
+        }
+        .type-h2-lg {
+            font-size: 3.75rem;
+            line-height: 1.02;
+        }
+        .type-h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
     .font-display {
         font-family: var(--b2b-font-display);
         letter-spacing: -0.025em;

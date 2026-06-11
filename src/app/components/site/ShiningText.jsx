@@ -28,7 +28,7 @@ const ShiningText = ({
   return (
     <span
       data-testid={testId}
-      className={`inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.3em] uppercase ${className}`}
+      className={`inline-flex items-center gap-2 font-mono text-xs tracking-[0.3em] uppercase ${className}`}
     >
       {dot && (
         <span

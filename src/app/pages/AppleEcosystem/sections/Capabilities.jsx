@@ -59,10 +59,10 @@ export default function Capabilities() {
     <section id="capabilities" className="b2b-container py-12">
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Capabilities
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4 max-w-3xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-3xl">
             One engineering team. Every Apple surface.
           </h2>
         </div>
@@ -98,7 +98,7 @@ export default function Capabilities() {
                 </span>
                 <h3 className="mt-5 font-display text-lg leading-tight">{c.title}</h3>
                 <p className="mt-2 text-sm text-white/55 leading-relaxed">{c.body}</p>
-                <p className="mt-5 text-[10px] font-mono uppercase tracking-[0.18em] text-white/35">
+                <p className="mt-5 text-xs font-mono uppercase tracking-[0.18em] text-white/35">
                   {c.keywords}
                 </p>
               </div>

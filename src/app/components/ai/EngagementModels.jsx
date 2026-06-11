@@ -64,7 +64,7 @@ const EngagementModels = () => {
             >
               AI ENGAGEMENT MODELS
             </ShiningText>
-            <h2 className="mt-6 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
+            <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
               How we work with enterprises.
             </h2>
             <p className="mt-6 text-white/55 leading-relaxed">
@@ -91,7 +91,7 @@ const EngagementModels = () => {
                     <div className="absolute -top-32 -right-32 w-72 h-72 rounded-full bg-[#8B5CF6]/20 blur-[100px]" />
                   )}
                   {m.accent && (
-                    <div className="absolute top-5 right-5 text-[10px] font-mono uppercase tracking-[0.25em] px-2.5 py-1 rounded-full bg-[#8B5CF6]/20 border border-[#8B5CF6]/40 text-[#E9D5FF]">
+                    <div className="absolute top-5 right-5 text-xs font-mono uppercase tracking-[0.25em] px-2.5 py-1 rounded-full bg-[#8B5CF6]/20 border border-[#8B5CF6]/40 text-[#E9D5FF]">
                       Most engaged
                     </div>
                   )}
@@ -101,10 +101,10 @@ const EngagementModels = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="mt-7">
-                      <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/35">
+                      <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
                         Engagement {String(i + 1).padStart(2, "0")}
                       </div>
-                      <h3 className="mt-2 font-display text-2xl md:text-3xl font-medium tracking-tight">
+                      <h3 className="mt-2 font-display text-xl sm:text-2xl font-medium tracking-tight">
                         {m.name}
                       </h3>
                       <p className="mt-2 text-sm text-[#C084FC]/80">

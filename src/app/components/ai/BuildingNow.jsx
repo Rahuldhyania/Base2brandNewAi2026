@@ -168,7 +168,7 @@ const BuildingNow = () => {
                 <ShiningText testId="building-now-eyebrow">
                   CURRENTLY IN PRODUCTION
                 </ShiningText>
-                <h2 className="mt-4 font-display text-3xl md:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
+                <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance">
                   What we are building right now.
                 </h2>
               </div>
@@ -213,7 +213,7 @@ const BuildingNow = () => {
                     </motion.span>
                     <span className="flex-1 min-w-0">
                       <span
-                        className={`block font-mono text-[10px] tracking-[0.25em] uppercase ${
+                        className={`block font-mono text-xs tracking-[0.25em] uppercase ${
                           isActive ? "text-[#C084FC]" : "text-white/30"
                         }`}
                       >
@@ -287,7 +287,7 @@ const BuildingNow = () => {
                   <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 text-[#C084FC]">
                     <Icon className="w-5 h-5" />
                   </span>
-                  <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/40">
+                  <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/40">
                     {it.tagline}
                   </span>
                 </div>
@@ -296,7 +296,7 @@ const BuildingNow = () => {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.08, duration: 0.45 }}
-                  className="relative mt-7 font-display text-3xl md:text-4xl lg:text-5xl tracking-[-0.03em] font-medium leading-[1.05]"
+                  className="relative mt-7 font-display text-xl sm:text-2xl lg:text-5xl tracking-[-0.03em] font-medium leading-[1.05]"
                 >
                   {it.title}
                 </motion.h3>
@@ -319,7 +319,7 @@ const BuildingNow = () => {
                   {it.metrics.map((m) => (
                     <span
                       key={m}
-                      className="text-[11px] font-mono px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/70"
+                      className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/70"
                     >
                       {m}
                     </span>
@@ -327,7 +327,7 @@ const BuildingNow = () => {
                 </motion.div>
 
                 <div className="relative mt-9 pt-5 border-t border-white/5 flex items-center justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/35">
+                  <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
                     Program {String(active + 1).padStart(2, "0")} / {ITEMS.length}
                   </span>
                   <a

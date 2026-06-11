@@ -35,10 +35,10 @@ export default function WhyApple() {
     <section className="b2b-container py-12">
       <div className="grid lg:grid-cols-[1fr_2fr] gap-6">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Why Apple
           </p>
-          <h2 className="font-display text-[40px]  leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-3xl sm:text-4xl  leading-[1.05] tracking-tight mt-4">
             Why Apple still defines{" "}
             <span className="apple-text-gradient">premium digital experiences.</span>
           </h2>

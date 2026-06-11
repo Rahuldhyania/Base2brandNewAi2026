@@ -88,7 +88,7 @@ function DetailedInfo({ activities }) {
     >
       {activities.map((a) => (
         <div key={a.label} className="flex flex-col">
-          <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-white/50">
+          <span className="text-xs font-mono uppercase tracking-[0.22em] text-white/50">
             {a.label}
           </span>
           <span className="text-3xl font-display mt-1.5" style={{ color: a.color }}>
@@ -131,7 +131,7 @@ export default function AppleActivityCard({
       </div>
       {title && (
         <motion.p
-          className="mt-8 font-mono text-[11px] uppercase tracking-[0.22em] text-white/45 text-center lg:text-left"
+          className="mt-8 font-mono text-xs uppercase tracking-[0.22em] text-white/45 text-center lg:text-left"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -50,7 +50,7 @@ const tooltipStyles = {
   border: "1px solid rgba(139,92,246,0.4)",
   borderRadius: 8,
   color: "#fff",
-  fontFamily: "'IBM Plex Mono', monospace",
+  fontFamily: "var(--b2b-font-mono)",
   fontSize: 11,
   padding: "10px 12px",
   boxShadow: "0 8px 30px -10px rgba(139,92,246,0.4)",
@@ -189,7 +189,7 @@ const InnerChart = ({ width, height }) => {
             tickLabelProps={() => ({
               fill: "rgba(255,255,255,0.55)",
               fontSize: 10,
-              fontFamily: "'IBM Plex Mono', monospace",
+              fontFamily: "var(--b2b-font-mono)",
               textAnchor: "middle",
               dy: "0.6em",
             })}
@@ -203,7 +203,7 @@ const InnerChart = ({ width, height }) => {
             tickLabelProps={() => ({
               fill: "rgba(255,255,255,0.4)",
               fontSize: 10,
-              fontFamily: "'IBM Plex Mono', monospace",
+              fontFamily: "var(--b2b-font-mono)",
               textAnchor: "end",
               dx: "-0.3em",
               dy: "0.3em",
@@ -240,10 +240,10 @@ const ArchitectureChart = () => {
   return (
     <div className="w-full">
       <div className="flex items-center justify-between mb-4">
-        <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/40">
+        <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/40">
           Capability deployment — last 8 quarters
         </div>
-        <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/30 hidden sm:block">
+        <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/30 hidden sm:block">
           Illustrative · indexed units
         </div>
       </div>
@@ -262,7 +262,7 @@ const ArchitectureChart = () => {
               return (
                 <span
                   key={l.text}
-                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55"
+                  className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.18em] uppercase text-white/55"
                 >
                   <span
                     className="w-3 h-3 rounded-sm"

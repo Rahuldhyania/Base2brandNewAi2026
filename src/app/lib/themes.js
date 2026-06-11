@@ -3,7 +3,8 @@
  *
  * To add a new section theme:
  * 1. Add an entry below with `className: "theme-<id>"` and a `match` function.
- * 2. Define `.theme-<id>` variables and overrides in globals.css.
+ * 2. Define `.theme-<id>` color/surface overrides in globals.css.
+ *    Typography is shared site-wide (Manrope) — see SHARED TYPOGRAPHY in globals.css.
  * 3. No layout or ThemeWrapper changes required.
  */
 

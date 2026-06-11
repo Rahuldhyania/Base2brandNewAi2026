@@ -54,10 +54,10 @@ export default function Technologies() {
     <section className="b2b-container py-12">
       <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Modern Apple Technologies
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
             The current Apple stack —{" "}
             <span className="apple-text-gradient">
               used like it was designed to be.
@@ -93,7 +93,7 @@ export default function Technologies() {
                 <span className="text-sm text-white/90 font-medium">
                   {t.name}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-[0.16em] text-white/40 hidden sm:inline">
+                <span className="text-xs font-mono uppercase tracking-[0.16em] text-white/40 hidden sm:inline">
                   {t.category}
                 </span>
               </motion.span>

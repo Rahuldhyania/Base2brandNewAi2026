@@ -94,7 +94,7 @@ const ResearchLab = () => {
               <ShiningText testId="research-eyebrow">
                 AI RESEARCH LAB
               </ShiningText>
-              <h2 className="mt-6 font-display text-3xl md:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
+              <h2 className="mt-6 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance">
                 What we&apos;re researching.
               </h2>
               <p className="mt-6 text-white/55 leading-relaxed">
@@ -109,7 +109,7 @@ const ResearchLab = () => {
                   <span className="w-2 h-2 rounded-full bg-[#A855F7]" />
                   <span className="absolute inset-0 w-2 h-2 rounded-full bg-[#A855F7] animate-ping" />
                 </span>
-                <ShiningText dot={false} className="text-[10px]">
+                <ShiningText dot={false} className="text-xs">
                   Base2Brand AI is thinking
                 </ShiningText>
               </div>
@@ -129,11 +129,11 @@ const ResearchLab = () => {
                     className="w-full py-3 flex items-center justify-between gap-6 text-left group"
                   >
                     <div className="flex items-center gap-6">
-                      <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/30 w-8">
+                      <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/30 w-8">
                         R{String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <div className="font-display text-xl md:text-2xl font-medium tracking-tight">
+                        <div className="font-display text-xl sm:text-2xl font-medium tracking-tight">
                           {t.title}
                         </div>
                         <div className="text-sm text-white/40 mt-1">

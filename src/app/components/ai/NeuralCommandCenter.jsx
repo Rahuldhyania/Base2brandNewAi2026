@@ -210,7 +210,7 @@ const NeuralCommandCenter = () => {
 
       {/* Central core label — positioned just below the central glow */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 mt-9 text-center pointer-events-none">
-        <div className="font-mono text-[9px] tracking-[0.3em] uppercase text-[#C084FC] drop-shadow-[0_1px_4px_rgba(3,3,10,0.9)]">
+        <div className="font-mono text-xs tracking-[0.3em] uppercase text-[#C084FC] drop-shadow-[0_1px_4px_rgba(3,3,10,0.9)]">
           Neural Core
         </div>
         <div className="font-display text-sm font-semibold text-white mt-0.5 drop-shadow-[0_2px_6px_rgba(3,3,10,0.95)]">
@@ -232,7 +232,7 @@ const NeuralCommandCenter = () => {
             data-testid={`neural-node-${n.label.toLowerCase().replace(/\s+/g, "-")}`}
           >
             <div
-              className={`px-2.5 py-1 rounded-full text-[10px] font-mono tracking-wider whitespace-nowrap backdrop-blur-md ${
+              className={`px-2.5 py-1 rounded-full text-xs font-mono tracking-wider whitespace-nowrap backdrop-blur-md ${
                 n.accent
                   ? "bg-[#8B5CF6]/12 border border-[#8B5CF6]/35 text-[#E9D5FF] shadow-[0_0_12px_-3px_rgba(139,92,246,0.5)]"
                   : "bg-white/[0.04] border border-white/12 text-white/80"

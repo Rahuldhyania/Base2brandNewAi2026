@@ -97,7 +97,7 @@ const SEOContent = () => {
             >
               ENTERPRISE AI · NOTES FROM THE FIELD
             </ShiningText>
-            <h2 className="mt-5 font-display text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-[-0.03em] font-medium text-balance">
+            <h2 className="mt-5 font-display text-xl sm:text-2xl lg:text-5xl leading-[1.1] tracking-[-0.03em] font-medium text-balance">
               Enterprise AI Solutions, Agentic AI, and the New Operating Model.
             </h2>
             <p className="mt-5 text-white/55 leading-relaxed">

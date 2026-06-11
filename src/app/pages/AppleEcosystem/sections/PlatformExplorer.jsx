@@ -107,10 +107,10 @@ function PlatformDetailCard({ platform, detail }) {
             exit="exit"
             transition={{ duration: 0.48, ease: EASE }}
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#64D2FF]">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#64D2FF]">
               {label}
             </p>
-            <h3 className="mt-2 font-display text-2xl sm:text-3xl md:text-4xl leading-tight max-w-2xl">
+            <h3 className="mt-2 font-display text-2xl sm:text-xl sm:text-2xl leading-tight max-w-2xl">
               {detail.headline}
             </h3>
             <p className="mt-5 text-white/65 leading-relaxed max-w-xl">
@@ -121,7 +121,7 @@ function PlatformDetailCard({ platform, detail }) {
                 <motion.span
                   layout
                   key={t}
-                  className="text-[11px] font-mono uppercase tracking-[0.16em] text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03]"
+                  className="text-xs font-mono uppercase tracking-[0.16em] text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03]"
                 >
                   {t}
                 </motion.span>
@@ -143,7 +143,7 @@ function PlatformDetailCard({ platform, detail }) {
             transition={{ duration: 0.48, ease: EASE, delay: 0.07 }}
             className="b2b-glass rounded-2xl p-6 lg:p-7 h-full"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/45">
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
               Engineering bar
             </p>
             <p className="mt-3 font-display text-4xl sm:text-5xl apple-text-gradient">
@@ -265,10 +265,10 @@ export default function PlatformExplorer() {
     return (
       <section className="b2b-container py-12">
         <div className="flex flex-col items-center text-center mb-12">
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Ecosystem Explorer
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
             Every device. Same engineering team. One coherent product.
           </h2>
           <p className="mt-5 text-white/60 max-w-2xl leading-relaxed">
@@ -317,10 +317,10 @@ export default function PlatformExplorer() {
 
         <div className="relative w-full b2b-container py-8 md:py-10">
           <div className="flex flex-col items-center text-center mb-8 md:mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Ecosystem Explorer
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
+            <h2 className="font-display text-3xl sm:text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
               Every device. Same engineering team. One coherent product.
             </h2>
             <p className="mt-4 md:mt-5 text-white/60 max-w-2xl leading-relaxed text-sm sm:text-base">
@@ -350,7 +350,7 @@ export default function PlatformExplorer() {
               />
             </div>
 
-            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-white/35">
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/35">
               {String(activeIndex + 1).padStart(2, "0")} / {String(PLATFORMS.length).padStart(2, "0")}
             </p>
           </div>

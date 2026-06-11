@@ -119,7 +119,7 @@ export function RocketScrollNavigator() {
         {/* Progress % indicator (kept small, top-aligned with the rail) */}
         <div className="flex flex-col items-end h-[460px] py-1">
           <span
-            className="text-[10px] font-mono-display uppercase tracking-[0.28em] text-mute"
+            className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute"
             data-testid="rocket-nav-progress"
           >
             <motion.span>{progressPercent}</motion.span>
@@ -181,7 +181,7 @@ export function RocketScrollNavigator() {
                   className={[
                     "absolute right-6 top-1/2 -translate-y-1/2 whitespace-nowrap",
                     "rounded-full border bg-[#04061a]/95 backdrop-blur-md",
-                    "px-3 py-1 text-[10px] font-mono-display uppercase tracking-[0.22em]",
+                    "px-3 py-1 text-xs font-mono-display uppercase tracking-[0.22em]",
                     "transition-all duration-300 pointer-events-none",
                     active && isScrolling
                       ? "opacity-100 translate-x-0 border-orange-brand/60 text-orange-brand"

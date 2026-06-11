@@ -15,7 +15,7 @@ const Narrative = () => {
               <ShiningText testId="narrative-eyebrow">
                 THE NEW OPERATING MODEL
               </ShiningText>
-              <div className="mt-8 font-mono text-[10px] tracking-[0.3em] uppercase text-white/30">
+              <div className="mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/30">
                 01 — Thesis
               </div>
             </Reveal>
@@ -25,7 +25,7 @@ const Narrative = () => {
             <Reveal delay={0.05}>
               <h2
                 data-testid="narrative-headline"
-                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-[1.02] tracking-[-0.035em] font-medium text-balance"
+                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance"
               >
                 AI is becoming the{" "}
                 <span className="text-white/90">operating system</span> of

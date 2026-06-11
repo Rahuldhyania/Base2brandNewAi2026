@@ -25,10 +25,10 @@ export default function Outcomes() {
     <section className="b2b-container py-12">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Outcomes & Business Impact
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
             Premium isn't a colour palette —{" "}
             <span className="apple-text-gradient">it's a measurable outcome.</span>
           </h2>

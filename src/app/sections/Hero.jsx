@@ -70,13 +70,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.6 }}
-            className="font-display text-white text-3xl lg:text-4xl  leading-[1.05] tracking-tight max-w-3xl"
+            className="font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl"
             data-testid="hero-headline"
           >
             We architect the digital{" "}
             <span className="text-orange-brand text-glow-orange">backbone</span>{" "}
             for enterprises ready to leave gravity behind.
-            <span className="block text-mute mt-4 text-base sm:text-lg font-normal max-w-2xl">
+            <span className="block text-mute mt-4 text-lg sm:text-xl font-normal max-w-2xl">
               AI systems, enterprise software, cloud and intelligent automation —
               engineered end-to-end from 8 cities across 4 continents.
             </span>
@@ -123,7 +123,7 @@ export function Hero() {
             { k: "14 yrs", v: "Engineering DNA" },
           ].map((s) => (
             <div key={s.v} className="bg-[#02030a] p-5 sm:p-6">
-              <div className="font-display text-3xl sm:text-4xl text-white">
+              <div className="font-display text-4xl sm:text-5xl text-white">
                 {s.k}
               </div>
               <div className="mt-1 text-xs sm:text-sm text-mute uppercase tracking-wider">

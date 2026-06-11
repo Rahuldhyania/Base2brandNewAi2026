@@ -164,7 +164,7 @@ const MaturityFramework = () => {
             >
               AI MATURITY FRAMEWORK
             </ShiningText>
-            <h2 className="mt-5 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
+            <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
               The Evolution of Enterprise AI.
             </h2>
             <p className="mt-4 text-white/55 leading-relaxed">
@@ -295,7 +295,7 @@ const MaturityFramework = () => {
                         className="block w-3.5 h-3.5 rounded-full border-2 group-hover:border-[#C084FC]"
                       />
                       <span
-                        className={`absolute left-1/2 -translate-x-1/2 mt-2.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.2em] transition-colors ${
+                        className={`absolute left-1/2 -translate-x-1/2 mt-2.5 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] transition-colors ${
                           isActive
                             ? "text-white"
                             : isPast
@@ -313,10 +313,10 @@ const MaturityFramework = () => {
                   data-testid="maturity-center-label"
                   className="absolute left-0 top-0 pointer-events-none"
                 >
-                  <div className="font-mono text-[9px] tracking-[0.3em] uppercase text-[#C084FC]/80">
+                  <div className="font-mono text-xs tracking-[0.3em] uppercase text-[#C084FC]/80">
                     Active Stage
                   </div>
-                  <div className="font-display text-xl md:text-2xl font-medium text-white/90 mt-1">
+                  <div className="font-display text-xl sm:text-2xl font-medium text-white/90 mt-1">
                     {String(active + 1).padStart(2, "0")}
                     <span className="text-white/30 text-base">
                       {" "}
@@ -340,7 +340,7 @@ const MaturityFramework = () => {
               >
                 <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#8B5CF6]/12 blur-[80px] pointer-events-none" />
                 <div className="relative flex items-center gap-3">
-                  <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#C084FC]">
+                  <span className="font-mono text-xs tracking-[0.25em] uppercase text-[#C084FC]">
                     Stage {String(active + 1).padStart(2, "0")}
                   </span>
                   <span className="flex-1 h-px bg-gradient-to-r from-[#8B5CF6]/60 to-transparent" />
@@ -349,7 +349,7 @@ const MaturityFramework = () => {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.5 }}
-                  className="relative mt-3 font-display text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight"
+                  className="relative mt-3 font-display text-xl sm:text-2xl font-medium tracking-tight"
                 >
                   {STAGES[active].label}
                 </motion.div>
@@ -386,7 +386,7 @@ const MaturityFramework = () => {
                     type="button"
                     aria-label={`Jump to stage ${i + 1}: ${s.label}`}
                     onClick={() => jumpToStage(i)}
-                    className={`group flex-1 first:text-left last:text-right text-center font-mono text-[9px] tracking-[0.18em] uppercase transition-colors ${
+                    className={`group flex-1 first:text-left last:text-right text-center font-mono text-xs tracking-[0.18em] uppercase transition-colors ${
                       i <= active ? "text-white/70" : "text-white/30"
                     } hover:text-white`}
                   >

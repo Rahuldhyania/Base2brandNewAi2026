@@ -66,12 +66,12 @@ function IslandContent({ index }) {
         </span>
         <div className="flex flex-col items-start text-left">
           <p className="text-sm text-white font-medium leading-tight">{s.label}</p>
-          <p className="text-[11px] text-white/60">{s.sub}</p>
+          <p className="text-xs text-white/60">{s.sub}</p>
         </div>
       </div>
       <div className="flex items-center gap-1.5 absolute right-10 top-10">
         <span className="w-1.5 h-1.5 rounded-full bg-[#64D2FF] animate-pulse" />
-        <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-white/45">Live</span>
+        <span className="text-xs font-mono uppercase tracking-[0.18em] text-white/45">Live</span>
       </div>
     </DynamicContainer>
   );
@@ -112,7 +112,7 @@ function IslandShow() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
-              className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/50"
+              className="font-mono text-xs uppercase tracking-[0.24em] text-white/50"
             >
               {STATES[index].sub}
             </motion.p>
@@ -140,10 +140,10 @@ export default function AppleIntelligence() {
     <section className="b2b-container py-12">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 items-center">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Apple Intelligence
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
             Intelligence that respects the user —{" "}
             <span className="apple-text-gradient">designed for the enterprise.</span>
           </h2>
@@ -173,10 +173,10 @@ export default function AppleIntelligence() {
       {/* Intelligence features Message Dock */}
       <div className="mt-24 lg:mt-32">
         <div className="text-center mb-12">
-          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Intelligence Features
           </p>
-          <h3 className="font-display text-3xl md:text-4xl leading-tight mt-3 max-w-3xl mx-auto">
+          <h3 className="font-display text-xl sm:text-2xl leading-tight mt-3 max-w-3xl mx-auto">
             Smart Actions. Context Awareness. Private Processing. Intelligent Workflows.
           </h3>
           <p className="mt-4 text-white/55 max-w-2xl mx-auto text-sm leading-relaxed">

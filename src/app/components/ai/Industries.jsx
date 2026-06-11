@@ -149,7 +149,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
           opacity: isActive ? 1 : 0,
         }}
         transition={{ duration: 0.4 }}
-        className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white"
+        className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-xs uppercase tracking-[0.2em] text-white"
       >
         {industry.name}
       </motion.div>
@@ -205,7 +205,7 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
           x: isActive ? 0 : -8,
         }}
         transition={{ duration: 0.3 }}
-        className="ml-auto inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.2em] uppercase text-[#C084FC]"
+        className="ml-auto inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-[#C084FC]"
       >
         Use case <ArrowUpRight className="w-3 h-3" />
       </motion.span>
@@ -240,7 +240,7 @@ const Industries = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <Reveal>
             <ShiningText testId="industries-eyebrow">INDUSTRIES</ShiningText>
-            <h2 className="mt-5 font-display text-3xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
+            <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
               Deployed across regulated, ops-heavy environments.
             </h2>
           </Reveal>

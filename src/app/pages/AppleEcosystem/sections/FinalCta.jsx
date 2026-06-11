@@ -25,10 +25,10 @@ export default function FinalCta() {
 
         <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Start an Apple engagement
             </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.04] tracking-tight mt-4 max-w-2xl">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.04] tracking-tight mt-4 max-w-2xl">
               Bring an Apple-grade product team to your roadmap.
             </h2>
             <p className="mt-5 text-white/65 leading-relaxed max-w-xl">
@@ -55,7 +55,7 @@ export default function FinalCta() {
           </div>
 
           <div className="b2b-glass rounded-2xl p-6 lg:p-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/45">
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
               What you get back
             </p>
             <ul className="mt-4 space-y-3 text-sm text-white/75">

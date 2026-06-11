@@ -28,13 +28,13 @@ const MetricsBar = () => {
             >
               <div
                 data-testid={`metric-${i}`}
-                className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.04em]"
+                className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-[-0.04em]"
               >
                 <span className="bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
                   {m.v}
                 </span>
               </div>
-              <div className="mt-3 text-[11px] uppercase tracking-[0.25em] font-mono text-white/40">
+              <div className="mt-3 text-xs uppercase tracking-[0.25em] font-mono text-white/40">
                 {m.l}
               </div>
             </Reveal>

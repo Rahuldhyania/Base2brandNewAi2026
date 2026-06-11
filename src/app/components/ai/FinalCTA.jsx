@@ -52,7 +52,7 @@ const FinalCTA = () => {
         <Reveal delay={0.1}>
           <h2
             data-testid="final-cta-headline"
-            className="mt-8 font-display text-4xl md:text-6xl lg:text-7xl leading-[1.0] tracking-[-0.04em] font-medium text-balance"
+            className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-[-0.04em] font-medium text-balance"
           >
             Tell us the hardest workflow{" "}
             <span className="bg-gradient-to-br from-[#C084FC] via-[#A855F7] to-[#6D28D9] bg-clip-text text-transparent">
@@ -94,7 +94,7 @@ const FinalCTA = () => {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.25em] font-mono text-white/35">
+          <div className="mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] font-mono text-white/35">
             <span>Engineering-led</span>
             <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
             <span>Outcome-instrumented</span>

@@ -73,7 +73,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#5AC8FA]"
+        className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]"
       >
         Apple Ecosystem Division · From Idea to Orbit
       </motion.p>
@@ -82,7 +82,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-        className="font-display text-5xl md:text-7xl lg:text-[88px] leading-[1.02] tracking-tight mt-4 max-w-5xl"
+        className="font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-5xl"
       >
         Build experiences across the{" "}
         <span className="apple-text-gradient">entire Apple ecosystem.</span>
@@ -92,7 +92,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="mt-6 text-base lg:text-lg text-white/65 max-w-2xl leading-relaxed"
+        className="mt-6 text-lg sm:text-xl text-white/65 max-w-2xl leading-relaxed"
       >
         Base2Brand is an Apple-first engineering partner. We design, develop and operate
         native applications for iPhone, iPad, Apple Watch, Apple TV, Vision Pro, CarPlay
@@ -135,7 +135,7 @@ export default function Hero() {
           <div className="absolute inset-x-0 -bottom-10 h-40 mx-auto rounded-full opacity-60 pointer-events-none"
                style={{ background: "radial-gradient(ellipse at center, rgba(10,132,255,0.28) 0%, transparent 70%)", filter: "blur(20px)" }} />
           <div className="flex flex-col items-center">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40 mb-4">
+            <p className="font-mono text-xs uppercase tracking-[0.28em] text-white/40 mb-4">
               ↓ Hover. Tap. Explore the surface area we engineer for.
             </p>
             <div className="flex justify-center w-full  pb-2 -mx-4 px-4">
