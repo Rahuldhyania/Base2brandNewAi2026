@@ -4,7 +4,6 @@ import Capabilities from "@/pages/AppleEcosystem/sections/Capabilities";
 import Enterprise from "@/pages/AppleEcosystem/sections/Enterprise";
 import FinalCta from "@/pages/AppleEcosystem/sections/FinalCta";
 import Hero from "@/pages/AppleEcosystem/sections/Hero";
-import Outcomes from "@/pages/AppleEcosystem/sections/Outcomes";
 import PlatformExplorer from "@/pages/AppleEcosystem/sections/PlatformExplorer";
 import Process from "@/pages/AppleEcosystem/sections/Process";
 import SeoBlock from "@/pages/AppleEcosystem/sections/SeoBlock";
@@ -24,7 +23,7 @@ export default function page() {
         <VisionPro />
         <Enterprise />
         <Process />
-        <Outcomes />
+       
         <SeoBlock />
         <FinalCta />
       </main>

@@ -64,7 +64,7 @@ const FinalCTA = () => {
         <Reveal delay={0.15}>
           <p
             data-testid="final-cta-subheadline"
-            className="mt-8 max-w-2xl mx-auto text-white/55 text-base md:text-lg leading-relaxed"
+            className="mt-4 max-w-2xl mx-auto text-white/55 text-base md:text-lg leading-relaxed"
           >
             Our AI architects will return a practical implementation roadmap
             focused on measurable business outcomes — not slideware.
@@ -72,7 +72,7 @@ const FinalCTA = () => {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:hello@base2brand.com?subject=AI%20Transformation"
               data-testid="final-cta-primary"
@@ -94,7 +94,7 @@ const FinalCTA = () => {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] font-mono text-white/35">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] font-mono text-white/35">
             <span>Engineering-led</span>
             <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
             <span>Outcome-instrumented</span>

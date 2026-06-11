@@ -25,7 +25,7 @@ const MENU = [
       { label: "Software Development", href: "#services" },
       { label: "Apple Ecosystem Development", href: "/apple-ecosystem" },
       { label: "Ecommerce Solutions", href: "#services" },
-      { label: "Growth & Visibility", href: "#services" },
+      { label: "Growth & Visibility", href: "/growth-visibility" },
       { label: "Enterprise Systems", href: "#services" },
       { label: "Emerging Technologies", href: "#services" },
     ],

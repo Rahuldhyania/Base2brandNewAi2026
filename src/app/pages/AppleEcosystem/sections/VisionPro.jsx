@@ -109,7 +109,7 @@ export default function VisionPro() {
         </div>
       </div>
 
-      <div className="relative mt-16 grid sm:grid-cols-3 gap-px b2b-glass rounded-2xl overflow-hidden">
+      <div className="relative mt-4 grid sm:grid-cols-3 gap-px b2b-glass rounded-2xl overflow-hidden">
         {SIGNALS.map((s) => (
           <div key={s.label} className="bg-[rgba(10,12,18,0.5)] p-6">
             <p className="text-sm font-semibold text-white">{s.label}</p>

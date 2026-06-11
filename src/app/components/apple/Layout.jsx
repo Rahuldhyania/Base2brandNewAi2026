@@ -23,7 +23,7 @@ export default function Layout({ tint = "orange", children }) {
       <RouteTransition tint={tint} />
 
       {/* <Navbar tint={tint} /> */}
-      <main className="relative z-10 pt-16 lg:pt-20">{children}</main>
+      <main className="relative z-10">{children}</main>
       {/* <Footer tint={tint} /> */}
     </div>
   );

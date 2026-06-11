@@ -151,7 +151,7 @@ const MaturityFramework = () => {
         style={panelStyle}
       >
       <div className="absolute inset-0 pointer-events-none">
-        <BackgroundPaths opacity={0.35} />
+        {/* <BackgroundPaths opacity={0.35} /> */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[radial-gradient(circle,rgba(109,40,217,0.14),rgba(3,3,10,0)_70%)]" />
       </div>
 

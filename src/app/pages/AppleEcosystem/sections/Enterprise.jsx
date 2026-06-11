@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Truck, Stethoscope, Factory, ShoppingBag, Briefcase } from "lucide-react";
+import Outcomes from "@/pages/AppleEcosystem/sections/Outcomes";
+
 
 const PILLARS = [
   {
@@ -74,7 +76,7 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
+      <Outcomes />
       {/* INDUSTRY APPLICATIONS */}
       <section className="b2b-container pb-12">
         <div className="text-center max-w-3xl mx-auto mb-14">

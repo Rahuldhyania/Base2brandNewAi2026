@@ -92,7 +92,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="mt-6 text-lg sm:text-xl text-white/65 max-w-2xl leading-relaxed"
+        className="mt-2 text-lg sm:text-xl text-white/65 max-w-2xl leading-relaxed"
       >
         Base2Brand is an Apple-first engineering partner. We design, develop and operate
         native applications for iPhone, iPad, Apple Watch, Apple TV, Vision Pro, CarPlay
