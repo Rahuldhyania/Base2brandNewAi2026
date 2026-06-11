@@ -315,7 +315,7 @@ export default function PlatformExplorer() {
           />
         </motion.div>
 
-        <div className="relative w-full b2b-container py-8 md:py-10">
+        <div className="relative w-full b2b-container py-8 md:py-10 cursor-grab">
           <div className="flex flex-col items-center text-center mb-8 md:mb-10">
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Ecosystem Explorer

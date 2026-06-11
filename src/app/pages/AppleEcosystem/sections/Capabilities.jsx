@@ -98,7 +98,7 @@ export default function Capabilities() {
                 </span>
                 <h3 className="mt-5 font-display text-lg leading-tight">{c.title}</h3>
                 <p className="mt-2 text-sm text-white/55 leading-relaxed">{c.body}</p>
-                <p className="mt-5 text-xs font-mono uppercase tracking-[0.18em] text-white/35">
+                <p className="mt-2 md:mt-5 text-xs font-mono uppercase tracking-[0.18em] text-white/35">
                   {c.keywords}
                 </p>
               </div>

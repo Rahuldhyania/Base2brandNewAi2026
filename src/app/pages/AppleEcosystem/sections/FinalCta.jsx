@@ -6,7 +6,7 @@ import { APPLE } from "@/constants/testIds";
 
 export default function FinalCta() {
   return (
-    <section id="contact" className="relative b2b-container py-24 lg:py-32">
+    <section id="contact" className="relative b2b-container py-12">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

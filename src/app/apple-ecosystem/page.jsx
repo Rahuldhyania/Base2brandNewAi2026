@@ -1,3 +1,4 @@
+import Layout from "@/components/apple/Layout";
 import AppleIntelligence from "@/pages/AppleEcosystem/sections/AppleIntelligence";
 import Capabilities from "@/pages/AppleEcosystem/sections/Capabilities";
 import Enterprise from "@/pages/AppleEcosystem/sections/Enterprise";
@@ -10,22 +11,23 @@ import SeoBlock from "@/pages/AppleEcosystem/sections/SeoBlock";
 import Technologies from "@/pages/AppleEcosystem/sections/Technologies";
 import VisionPro from "@/pages/AppleEcosystem/sections/VisionPro";
 import WhyApple from "@/pages/AppleEcosystem/sections/WhyApple";
-
 export default function page() {
   return (
-    <main className="relative flex-1 min-h-screen overflow-x-hidden">
-      <Hero />
-      <WhyApple />
-      <Capabilities />
-      <PlatformExplorer />
-      <Technologies />
-      <AppleIntelligence />
-      <VisionPro />
-      <Enterprise />
-      <Process />
-      <Outcomes />
-      <SeoBlock />
-      <FinalCta />
-    </main>
+    <Layout tint="blue">
+      <main className="relative flex-1 min-h-screen overflow-x-hidden">
+        <Hero />
+        <WhyApple />
+        <Capabilities />
+        <PlatformExplorer />
+        <Technologies />
+        <AppleIntelligence />
+        <VisionPro />
+        <Enterprise />
+        <Process />
+        <Outcomes />
+        <SeoBlock />
+        <FinalCta />
+      </main>
+    </Layout>
   );
 }
