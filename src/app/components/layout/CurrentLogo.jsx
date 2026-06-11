@@ -8,7 +8,7 @@ const DEFAULT_LOGO = "/images/homeLogo.png";
 const logosList = [
   { slug: "/", logourl: DEFAULT_LOGO },
   { slug: "/ai-automation", logourl: "/images/aiLogo.png" },
-  { slug: "/apple-ecosystem", logourl: "/images/appleLogo.png" },
+  { slug: "/apple-ecosystem", logourl: "/images/applelogo.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-50" }) {
