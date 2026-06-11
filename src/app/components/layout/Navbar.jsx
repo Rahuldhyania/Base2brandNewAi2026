@@ -23,7 +23,7 @@ const MENU = [
     items: [
       { label: "AI & Automation", href: "/ai-automation" },
       { label: "Software Development", href: "#services" },
-      { label: "Apple Ecosystem Development", href: "#services" },
+      { label: "Apple Ecosystem Development", href: "/apple-ecosystem" },
       { label: "Ecommerce Solutions", href: "#services" },
       { label: "Growth & Visibility", href: "#services" },
       { label: "Enterprise Systems", href: "#services" },

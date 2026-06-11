@@ -93,7 +93,7 @@ export function CaseStudies() {
     <section
       id="case-studies"
       data-testid="case-studies-section"
-      className="relative py-16 sm:py-20 border-t border-line"
+      className="relative py-12  border-t border-line"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader

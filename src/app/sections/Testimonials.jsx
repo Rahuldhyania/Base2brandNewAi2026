@@ -115,7 +115,7 @@ export function Testimonials() {
     <section
       id="voices"
       data-testid="testimonials-section"
-      className="relative w-full overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24"
+      className="relative w-full overflow-hidden py-12"
     >
       {/* faint radial spotlight backdrop */}
       <div

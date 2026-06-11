@@ -94,7 +94,7 @@ export function Services() {
     <section
       id="services"
       data-testid="services-section"
-      className="relative py-16 sm:py-20"
+      className="relative py-12 "
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
@@ -103,7 +103,7 @@ export function Services() {
           title="Six practices. One orbit of execution."
           intro="From discovery to scale, each engagement is staffed by senior engineers, AI scientists and domain leads — accountable for outcomes, not slides."
         />
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {SERVICES.map((s, i) => (
             <ServiceCard key={s.title} s={s} index={i} />
           ))}

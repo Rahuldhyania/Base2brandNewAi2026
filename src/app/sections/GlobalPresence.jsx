@@ -27,7 +27,7 @@ export function GlobalPresence() {
     <section
       id="global"
       data-testid="global-section"
-      className="relative py-16 sm:py-20 border-t border-line overflow-hidden"
+      className="relative py-12  border-t border-line overflow-hidden"
     >
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
@@ -57,7 +57,7 @@ export function GlobalPresence() {
         </motion.div>
 
         {/* Office grid + stats */}
-        <div className="mt-12 grid lg:grid-cols-[1.4fr_1fr] gap-8">
+        <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-8">
           <div className="grid sm:grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line">
             {LOCATIONS.map((l, i) => (
               <motion.div

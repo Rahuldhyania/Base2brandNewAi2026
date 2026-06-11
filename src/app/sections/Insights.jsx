@@ -33,7 +33,7 @@ export function Insights() {
     <section
       id="insights"
       data-testid="insights-section"
-      className="relative py-16 sm:py-20 border-t border-line"
+      className="relative py-12  border-t border-line"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -52,7 +52,7 @@ export function Insights() {
           </a>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-5">
+        <div className="mt-6 grid md:grid-cols-3 gap-5">
           {POSTS.map((p, i) => (
             <motion.article
               key={p.title}

@@ -34,7 +34,7 @@ export function Trust() {
     <section
       id="trust"
       data-testid="trust-section"
-      className="relative py-14 sm:py-20 border-y border-line"
+      className="relative py-12 border-y border-line"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <motion.div

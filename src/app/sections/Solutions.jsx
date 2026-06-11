@@ -62,7 +62,7 @@ export function Solutions() {
     <section
       id="solutions"
       data-testid="solutions-section"
-      className="relative py-16 sm:py-20 border-t border-line"
+      className="relative py-12  border-t border-line"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader

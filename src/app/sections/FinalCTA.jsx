@@ -64,7 +64,7 @@ export function FinalCTA() {
     <section
       id="contact"
       data-testid="final-cta-section"
-      className="relative py-16 sm:py-24"
+      className="relative py-12"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div

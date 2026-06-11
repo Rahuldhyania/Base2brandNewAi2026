@@ -40,7 +40,7 @@ export function Innovation() {
     <section
       id="innovation"
       data-testid="innovation-section"
-      className="relative py-16 sm:py-20 overflow-hidden border-t border-line"
+      className="relative py-12  overflow-hidden border-t border-line"
     >
       <div
         className="absolute inset-0 pointer-events-none opacity-60"

@@ -23,7 +23,7 @@ export function ClientFootprint() {
     <section
       id="footprint"
       data-testid="client-footprint-section"
-      className="relative w-full overflow-hidden py-16 sm:py-20"
+      className="relative w-full overflow-hidden py-12"
     >
       {/* faint radial backdrop */}
       <div
