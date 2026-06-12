@@ -137,7 +137,7 @@ export default function page() {
   return (
     <main
       data-testid="ai-page"
-      className="relative bg-[#03030A] text-white overflow-x-hidden"
+      className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
     >
       <Hero />
       <MetricsBar />

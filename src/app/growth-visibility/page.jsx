@@ -105,7 +105,7 @@ export default function page() {
   return (
     <main
       data-testid="geo-page"
-      className="relative bg-[#030305] text-white overflow-x-hidden"
+      className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
     >
       <Hero />
       <Narrative
@@ -124,9 +124,9 @@ export default function page() {
         ]}
       />
       <Capabilities
-        title={"Six practices. One intelligence layer."}
-        description={`We don't sell features. We engineer the AI capability stack your operations depend on — designed, governed, and measured end-to-end.`}
-        highlightTag={"ENTERPRISE AI CAPABILITIES"}
+        title={"A new layer of growth built for AI-first buyers."}
+        description={`Three disciplines, one outcome — your brand cited, recommended and chosen inside every AI surface that matters.`}
+        highlightTag={"The Stack"}
         capsData={CAPS}
       />
       <BuildingNow

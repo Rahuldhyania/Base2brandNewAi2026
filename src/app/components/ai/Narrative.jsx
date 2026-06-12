@@ -50,7 +50,7 @@ const Narrative = ({title, description, features, highlightTag , tagList}) => {
                 {features.map((p) => (
                   <div
                     key={p.l}
-                    className="border-l-2 border-[#8B5CF6]/40 pl-4 py-2"
+                    className="border-l-2 border-[rgba(var(--b2b-primary-rgb),0.4)] pl-4 py-2"
                   >
                     <div className="font-display text-lg font-medium">
                       {p.l}

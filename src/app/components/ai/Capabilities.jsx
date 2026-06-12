@@ -23,14 +23,16 @@ const icons = {
 
 const CapCard = ({cap, idx }) => {
   const Icon = icons[cap.icon];
+  const primaryStroke = "rgba(var(--b2b-primary-rgb),0.4)";
+  const secondaryStroke = "rgba(var(--b2b-primary-2-rgb),0.25)";
   return (
     <Reveal delay={idx * 0.04} className={` group relative`}>
       <div
         data-testid={`capability-card-${idx}`}
-        className="relative h-full b2b-card p-8 overflow-hidden transition-all duration-500 hover:border-[#8B5CF6]/40"
+        className="relative h-full b2b-card p-8 overflow-hidden transition-all duration-500 hover:border-[rgba(var(--b2b-primary-rgb),0.4)]"
       >
         {/* Hover glow */}
-        <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#8B5CF6]/0 group-hover:bg-[#8B5CF6]/15 blur-[80px] transition-all duration-700" />
+        <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[rgba(var(--b2b-primary-rgb),0)] group-hover:bg-[rgba(var(--b2b-primary-rgb),0.15)] blur-[80px] transition-all duration-700" />
 
         {/* Mini orbital deco */}
         {cap.accent && (
@@ -44,7 +46,7 @@ const CapCard = ({cap, idx }) => {
               cy="50"
               r="20"
               fill="none"
-              stroke="rgba(139,92,246,0.4)"
+              stroke={primaryStroke}
               strokeWidth="0.8"
               strokeDasharray="2 3"
             />
@@ -53,16 +55,16 @@ const CapCard = ({cap, idx }) => {
               cy="50"
               r="35"
               fill="none"
-              stroke="rgba(168,85,247,0.25)"
+              stroke={secondaryStroke}
               strokeWidth="0.5"
               strokeDasharray="1 4"
             />
-            <circle cx="50" cy="50" r="3" fill="#C084FC" />
+            <circle cx="50" cy="50" r="3" fill="var(--b2b-primary-2)" />
           </svg>
         )}
 
         <div className="relative flex items-start justify-between">
-          <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 text-[#C084FC]">
+          <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-[rgba(var(--b2b-primary-rgb),0.1)] border border-[rgba(var(--b2b-primary-rgb),0.2)] text-(--b2b-primary-2)">
             <Icon className="w-5 h-5" />
           </div>
           <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/30">
@@ -80,7 +82,7 @@ const CapCard = ({cap, idx }) => {
               key={item}
               className="flex items-center gap-3 text-sm text-white/55"
             >
-              <span className="w-3 h-px bg-[#8B5CF6]/60" />
+              <span className="w-3 h-px bg-[rgba(var(--b2b-primary-rgb),0.6)]" />
               {item}
             </li>
           ))}
@@ -89,7 +91,7 @@ const CapCard = ({cap, idx }) => {
         <a
           href="#contact"
           data-testid={`capability-link-${idx}`}
-          className="mt-8 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-mono text-[#C084FC]/80 hover:text-white transition-colors"
+          className="mt-8 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-mono text-[rgba(var(--b2b-primary-2-rgb),0.8)] hover:text-white transition-colors"
         >
           Discuss this practice <ArrowUpRight className="w-3.5 h-3.5" />
         </a>

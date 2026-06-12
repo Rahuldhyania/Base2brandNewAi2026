@@ -93,6 +93,8 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
   const it = ITEMS[active];
   const Icon = icons[it.icon];
+  const primaryStroke = "rgba(var(--b2b-primary-rgb),0.3)";
+  const secondaryStroke = "rgba(var(--b2b-primary-2-rgb),0.25)";
 
   const scrollTrackHeight = `${ITEMS.length * 50}vh`;
   const panelHeight = `calc(100vh - ${NAV_HEIGHT}px)`;
@@ -113,15 +115,15 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
     <section
       ref={sectionRef}
       data-testid="building-now-section"
-      className="relative border-y border-white/5 bg-[#04030C]"
+      className="relative border-y border-white/5 bg-(--b2b-bg)"
       style={{ height: scrollTrackHeight }}
     >
       <div
-        className={`${panelClass} flex items-center overflow-hidden bg-[#04030C]`}
+        className={`${panelClass} flex items-center overflow-hidden bg-(--b2b-bg)`}
         style={panelStyle}
       >
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#6D28D9]/12 blur-[120px]" />
+          <div className="absolute top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[rgba(var(--b2b-primary-rgb),0.12)] blur-[120px]" />
           <div className="grain" />
         </div>
 
@@ -157,29 +159,27 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                     data-testid={`building-now-tab-${i}`}
                     className={`group w-full text-left flex items-center gap-4 py-3 px-4 rounded-xl border transition-all duration-500 ${
                       isActive
-                        ? "bg-[#8B5CF6]/12 border-[#8B5CF6]/40"
-                        : "bg-transparent border-transparent hover:border-white/10 hover:bg-white/[0.02]"
+                        ? "bg-[rgba(var(--b2b-primary-rgb),0.12)] border-[rgba(var(--b2b-primary-rgb),0.4)]"
+                        : "bg-transparent border-transparent hover:border-white/10 hover:bg-white/2"
                     }`}
                   >
                     <motion.span
                       animate={{
                         scale: isActive ? 1.05 : 1,
-                        backgroundColor: isActive
-                          ? "rgba(139,92,246,0.20)"
-                          : "rgba(255,255,255,0.04)",
-                        color: isActive
-                          ? "#C084FC"
-                          : "rgba(255,255,255,0.4)",
                       }}
                       transition={{ duration: 0.35 }}
-                      className="flex items-center justify-center w-9 h-9 rounded-lg shrink-0 border border-white/8"
+                      className={`flex items-center justify-center w-9 h-9 rounded-lg shrink-0 border border-white/8 ${
+                        isActive
+                          ? "bg-[rgba(var(--b2b-primary-rgb),0.2)] text-(--b2b-primary-2)"
+                          : "bg-white/4 text-white/40"
+                      }`}
                     >
                       <ItemIcon className="w-4 h-4" />
                     </motion.span>
                     <span className="flex-1 min-w-0">
                       <span
                         className={`block font-mono text-xs tracking-[0.25em] uppercase ${
-                          isActive ? "text-[#C084FC]" : "text-white/30"
+                          isActive ? "text-(--b2b-primary-2)" : "text-white/30"
                         }`}
                       >
                         {String(i + 1).padStart(2, "0")}
@@ -198,7 +198,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                         opacity: isActive ? 1 : 0,
                       }}
                       transition={{ duration: 0.35 }}
-                      className="hidden md:block w-1 rounded-full bg-gradient-to-b from-[#C084FC] to-[#6D28D9]"
+                      className="hidden md:block w-1 rounded-full bg-linear-to-b from-(--b2b-primary-2) to-(--b2b-primary)"
                     />
                   </button>
                 );
@@ -207,7 +207,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
               {/* Scroll-linked progress bar */}
               <div className="mt-6 relative h-0.5 rounded-full bg-white/8 overflow-hidden">
                 <motion.div
-                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#C084FC]"
+                  className="absolute inset-y-0 left-0 bg-linear-to-r from-(--b2b-primary) via-[rgba(var(--b2b-primary-rgb),0.8)] to-(--b2b-primary-2)"
                   style={{ width: progressWidth }}
                 />
               </div>
@@ -222,7 +222,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="b2b-card p-7 md:p-10 h-full relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#8B5CF6]/12 blur-[100px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[rgba(var(--b2b-primary-rgb),0.12)] blur-[100px] pointer-events-none" />
                 <svg
                   className="absolute -top-8 -right-8 w-44 h-44 opacity-50 pointer-events-none"
                   viewBox="0 0 100 100"
@@ -233,7 +233,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                     cy="50"
                     r="32"
                     fill="none"
-                    stroke="rgba(139,92,246,0.3)"
+                    stroke={primaryStroke}
                     strokeWidth="0.4"
                     strokeDasharray="1.5 2.5"
                   />
@@ -242,14 +242,14 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                     cy="50"
                     r="22"
                     fill="none"
-                    stroke="rgba(192,132,252,0.25)"
+                    stroke={secondaryStroke}
                     strokeWidth="0.3"
                   />
-                  <circle cx="50" cy="50" r="3" fill="#C084FC" />
+                  <circle cx="50" cy="50" r="3" fill="var(--b2b-primary-2)" />
                 </svg>
 
                 <div className="relative flex items-center gap-3">
-                  <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 text-[#C084FC]">
+                  <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-[rgba(var(--b2b-primary-rgb),0.15)] border border-[rgba(var(--b2b-primary-rgb),0.3)] text-(--b2b-primary-2)">
                     <Icon className="w-5 h-5" />
                   </span>
                   <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/40">
@@ -284,7 +284,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                   {it.metrics.map((m) => (
                     <span
                       key={m}
-                      className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/70"
+                      className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/4 border border-white/10 text-white/70"
                     >
                       {m}
                     </span>
@@ -298,7 +298,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                   <a
                     href="#contact"
                     data-testid={`building-now-cta-${active}`}
-                    className="text-xs font-mono uppercase tracking-[0.2em] text-[#C084FC]/80 hover:text-white transition-colors"
+                    className="text-xs font-mono uppercase tracking-[0.2em] text-[rgba(var(--b2b-primary-2-rgb),0.8)] hover:text-white transition-colors"
                   >
                     Engage →
                   </a>
