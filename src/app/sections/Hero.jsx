@@ -91,7 +91,7 @@ export function Hero() {
             <a
               href="#contact"
               data-testid="hero-cta-primary"
-              className="group inline-flex items-center justify-between gap-4 rounded-full bg-orange-brand text-black font-semibold px-6 py-4 hover:brightness-110 transition glow-orange"
+              className="group inline-flex items-center justify-between gap-4 rounded-full bg-orange-brand font-semibold px-6 py-4 hover:brightness-110 transition glow-orange"
             >
               Start a transformation
               <span className="grid place-items-center h-7 w-7 rounded-full bg-black/15 group-hover:translate-x-0.5 transition">

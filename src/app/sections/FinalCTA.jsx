@@ -168,7 +168,7 @@ export function FinalCTA() {
             type="submit"
             disabled={submitting || sent}
             data-testid="contact-submit"
-            className="mt-6 w-full inline-flex items-center justify-center gap-3 rounded-full bg-orange-brand text-black font-semibold px-6 py-4 hover:brightness-110 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="mt-6 w-full inline-flex items-center justify-center gap-3 rounded-full bg-orange-brand font-semibold px-6 py-4 hover:brightness-110 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {sent ? (
               <>

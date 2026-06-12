@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -75,21 +76,21 @@ export default function Services() {
     <section
       id="services"
       data-testid="services-section"
-      className="relative py-28 md:py-36 bg-[#06060A] border-y border-white/5"
+      className="relative py-12 bg-[#06060A] border-y border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div className="gap-6 mb-16 text-center mx-auto">
           <div>
             <div className="label-mono">· Capabilities</div>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl lg:text-6xl font-light tracking-tighter">
+            <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
               Everything you need to be
-              <br />
+              
               <span className="text-gradient-blue-violet font-medium">
-                the recommended brand.
+                the <br /> recommended brand.
               </span>
             </h2>
           </div>
-          <p className="text-zinc-400 max-w-md">
+          <p className="text-zinc-400 mx-auto pt-3">
             A complete AI-first growth practice — built to make your brand the
             obvious answer in any AI conversation.
           </p>
@@ -103,14 +104,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: (i % 4) * 0.05 + 0.05 }}
-              className={`group relative card-hover rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent p-6 md:p-7 overflow-hidden ${
+              className={`group relative card-hover rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent p-4 overflow-hidden ${
                 s.span || ""
               }`}
               data-testid={`service-card-${i}`}
             >
               <div className="absolute -top-24 -right-24 w-52 h-52 rounded-full bg-gradient-to-br from-blue-500/0 to-violet-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
-                <div className="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-400/40 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center mb-2 group-hover:border-blue-400/40 transition-colors">
                   <s.icon className="w-4 h-4 text-blue-300" />
                 </div>
                 <h3
@@ -122,7 +123,7 @@ export default function Services() {
                 >
                   {s.title}
                 </h3>
-                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
+                <p className="mt-1 text-sm text-zinc-400 leading-relaxed">
                   {s.desc}
                 </p>
               </div>

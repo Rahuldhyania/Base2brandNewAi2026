@@ -296,7 +296,7 @@ export function Navbar() {
               href="#contact"
               onClick={(e) => handleAnchor(e, "#contact")}
               data-testid="navbar-cta-proposal"
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-orange-brand text-black font-semibold text-sm px-4 py-2 hover:brightness-110 transition group"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-orange-brand font-semibold text-sm px-4 py-2 hover:brightness-110 transition group"
             >
               Get Proposal
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -375,7 +375,7 @@ export function Navbar() {
                 href="#contact"
                 onClick={(e) => handleAnchor(e, "#contact")}
                 data-testid="navbar-mobile-cta"
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-orange-brand text-black font-semibold text-sm px-4 py-3"
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-orange-brand font-semibold text-sm px-4 py-3"
               >
                 Get Proposal →
               </a>

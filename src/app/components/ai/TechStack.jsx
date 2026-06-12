@@ -104,23 +104,24 @@ const LogoBadge = ({ item }) => {
   );
 };
 
-const TechStack = () => {
+const TechStack = ({title, highlightTag}) => {
   return (
     <section
       data-testid="techstack-section"
       className="relative py-12 md:py-16 border-y border-white/5 bg-[#05030E]"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className=" mx-auto px-6 md:px-10 text-center">
         <Reveal>
           <ShiningText testId="techstack-eyebrow">
-            BUILT ON THE LATEST AI STACK
+            {highlightTag}
           </ShiningText>
-          <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-3xl text-balance">
-            Models, frameworks, and infrastructure — composed deliberately.
-          </h2>
+          <h2 
+            className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-4xl mx-auto text-balance"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
+        <div className="mt-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
           {STACK.map((group, i) => (
             <Reveal key={group.cat} delay={i * 0.05} className="bg-[#06040D]">
               <div data-testid={`techstack-group-${i}`} className="p-8 h-full">

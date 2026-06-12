@@ -20,52 +20,16 @@ import {
 
 const NAV_HEIGHT = 96;
 
-const ITEMS = [
-  {
-    icon: Users,
-    title: "AI Workforce",
-    tagline: "Digital employees operating continuously.",
-    desc: "Always-on digital workers handling structured operations, ticketing, scheduling, qualification, and follow-through across 24/7 cycles.",
-    metrics: ["24/7 cadence", "0 onboarding ramp", "Audit-grade logs"],
-  },
-  {
-    icon: GitBranch,
-    title: "Multi-Agent Operations",
-    tagline: "AI teams collaborating autonomously.",
-    desc: "Coordinated agent networks that plan, delegate, validate, and execute multi-step workflows with shared memory and guardrails.",
-    metrics: ["Agent-to-agent", "Tool routing", "Policy-aware"],
-  },
-  {
-    icon: Briefcase,
-    title: "Enterprise Copilots",
-    tagline: "Department-specific intelligence systems.",
-    desc: "Copilots embedded in sales, ops, support, and engineering — trained on private context, integrated to systems of record.",
-    metrics: ["RAG-grounded", "RBAC native", "BYO models"],
-  },
-  {
-    icon: BrainCircuit,
-    title: "Decision Intelligence",
-    tagline: "Systems that recommend and execute.",
-    desc: "Models that synthesize signals across data warehouses and act — with explainability, human review, and reversibility built-in.",
-    metrics: ["Explainable", "Reversible", "Outcome tracked"],
-  },
-  {
-    icon: PhoneCall,
-    title: "Voice Operations",
-    tagline: "Human-like voice for customer interactions.",
-    desc: "Production voice agents handling inbound, outbound, qualification, scheduling, and structured data capture at low latency.",
-    metrics: ["<350ms latency", "Telephony native", "Hand-off ready"],
-  },
-  {
-    icon: LayoutDashboard,
-    title: "AI Command Centers",
-    tagline: "Unified enterprise AI control planes.",
-    desc: "Single pane to deploy, observe, govern, and meter your entire AI estate — agents, models, prompts, costs, and outcomes.",
-    metrics: ["Observability", "Cost metering", "Governance"],
-  },
-];
+const icons = {
+  Users,
+  GitBranch,
+  Briefcase,
+  BrainCircuit,
+  PhoneCall,
+  LayoutDashboard,
+};
 
-const BuildingNow = () => {
+const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
   const sectionRef = useRef(null);
   const [active, setActive] = useState(0);
   const [pinPhase, setPinPhase] = useState("before");
@@ -128,7 +92,7 @@ const BuildingNow = () => {
   };
 
   const it = ITEMS[active];
-  const Icon = it.icon;
+  const Icon = icons[it.icon];
 
   const scrollTrackHeight = `${ITEMS.length * 50}vh`;
   const panelHeight = `calc(100vh - ${NAV_HEIGHT}px)`;
@@ -166,16 +130,17 @@ const BuildingNow = () => {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
                 <ShiningText testId="building-now-eyebrow">
-                  CURRENTLY IN PRODUCTION
+                  {highlightTag}
                 </ShiningText>
-                <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance">
-                  What we are building right now.
-                </h2>
+                <h2 
+                  className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance"
+                  dangerouslySetInnerHTML={{ __html: title }}
+               />
               </div>
-              <p className="max-w-md text-white/50 leading-relaxed">
-                Six categories of intelligent systems, shipped into production
-                — discovered as you scroll.
-              </p>
+              <p 
+               className="max-w-md text-white/50 leading-relaxed"
+               dangerouslySetInnerHTML={{ __html: description }}
+              />
             </div>
           </Reveal>
 
@@ -183,7 +148,7 @@ const BuildingNow = () => {
             {/* Left: vertical scroll-driven list */}
             <div className="lg:col-span-5 space-y-1.5">
               {ITEMS.map((item, i) => {
-                const ItemIcon = item.icon;
+                const ItemIcon = icons[item.icon];
                 const isActive = i === active;
                 return (
                   <button

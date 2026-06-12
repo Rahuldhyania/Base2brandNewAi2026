@@ -57,7 +57,7 @@ export default function PlatformSwitcher({
                 }}
               />
             )}
-            <span className="relative inline-flex items-center gap-2">
+            <span className="relative inline-flex items-center gap-2 cursor-grab">
               {Icon && <Icon size={14} className={active ? "text-[#64D2FF]" : "text-white/55"} />}
               <span className="whitespace-nowrap">{p.label}</span>
             </span>

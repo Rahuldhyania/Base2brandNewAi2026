@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import {
@@ -9,87 +9,22 @@ import {
   Bot,
   Microscope,
   ArrowUpRight,
-} from "lucide-react";
+} from "lucide-react";  
 
-const CAPS = [
-  {
-    icon: Network,
-    title: "Applied AI & Agentic Engineering",
-    span: "md:col-span-7",
-    items: [
-      "Multi-agent systems",
-      "Enterprise copilots",
-      "RAG architectures",
-      "Knowledge systems",
-      "MCP integrations",
-    ],
-    accent: true,
-  },
-  {
-    icon: Workflow,
-    title: "AI Operations",
-    span: "md:col-span-5",
-    items: [
-      "Workflow orchestration",
-      "Decision automation",
-      "Human-in-the-loop systems",
-      "Operational intelligence",
-    ],
-  },
-  {
-    icon: AudioLines,
-    title: "Voice Intelligence",
-    span: "md:col-span-5",
-    items: [
-      "Voice agents",
-      "Contact center AI",
-      "Appointment automation",
-      "Sales enablement",
-    ],
-  },
-  {
-    icon: ServerCog,
-    title: "Enterprise AI Platforms",
-    span: "md:col-span-7",
-    items: [
-      "Private AI deployments",
-      "Enterprise search",
-      "Secure LLM infrastructure",
-      "Cloud-native AI",
-    ],
-    accent: true,
-  },
-  {
-    icon: Bot,
-    title: "Autonomous Business Systems",
-    span: "md:col-span-7",
-    items: [
-      "Sales operations",
-      "Customer support",
-      "Compliance workflows",
-      "Internal knowledge",
-    ],
-  },
-  {
-    icon: Microscope,
-    title: "AI Research & Innovation",
-    span: "md:col-span-5",
-    items: [
-      "Small language models",
-      "Agent architectures",
-      "Retrieval systems",
-      "AI optimization",
-    ],
-  },
-];
+const icons = {
+  Network,
+  Workflow,
+  AudioLines,
+  ServerCog,
+  Bot,
+  Microscope,
+};
 
-const CapCard = ({ cap, idx }) => {
-  const Icon = cap.icon;
+
+const CapCard = ({cap, idx }) => {
+  const Icon = icons[cap.icon];
   return (
-    <Reveal
-      delay={idx * 0.04}
-      className={` group relative`}
-    >
+    <Reveal delay={idx * 0.04} className={` group relative`}>
       <div
         data-testid={`capability-card-${idx}`}
         className="relative h-full b2b-card p-8 overflow-hidden transition-all duration-500 hover:border-[#8B5CF6]/40"
@@ -163,7 +98,8 @@ const CapCard = ({ cap, idx }) => {
   );
 };
 
-const Capabilities = () => {
+const Capabilities = ({title, description, highlightTag, capsData}) => {
+
   return (
     <section
       id="capabilities"
@@ -174,23 +110,22 @@ const Capabilities = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
           <Reveal>
             <ShiningText testId="capabilities-eyebrow">
-              ENTERPRISE AI CAPABILITIES
+              {highlightTag}
             </ShiningText>
-            <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
-              Six practices. One intelligence layer.
-            </h2>
+            <h2
+              className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-white/50 leading-relaxed">
-              We don&apos;t sell features. We engineer the AI capability stack
-              your operations depend on — designed, governed, and measured
-              end-to-end.
+              {description}
             </p>
           </Reveal>
         </div>
 
         <div className="grid grid-cols-2 gap-5 md:gap-6">
-          {CAPS.map((cap, idx) => (
+          {capsData.map((cap, idx) => (
             <CapCard key={cap.title} cap={cap} idx={idx} />
           ))}
         </div>

@@ -90,7 +90,7 @@ export function Solutions() {
                 >
                   <div className={`grid place-items-center h-10 w-10 rounded-xl border ${
                     isActive
-                      ? "bg-orange-brand text-black border-orange-brand"
+                      ? "bg-orange-brand text-on-brand border-orange-brand"
                       : "bg-white/5 text-white/80 border-line"
                   }`}>
                     <I size={18} />

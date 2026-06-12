@@ -3,15 +3,16 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DEFAULT_LOGO = "/images/homeLogo.png";
+const DEFAULT_LOGO = "/images/homelogo.png";
 
 const logosList = [
   { slug: "/", logourl: DEFAULT_LOGO },
   { slug: "/ai-automation", logourl: "/images/aiLogo.png" },
   { slug: "/apple-ecosystem", logourl: "/images/applelogo.png" },
+  { slug: "/growth-visibility", logourl: "/images/growth-visibility.png" },
 ];
 
-export function CurrentLogo({ className = "max-w-50" }) {
+export function CurrentLogo({ className = "max-w-46" }) {
   const currentPath = usePathname();
   const matched = logosList.find((logo) => logo.slug === currentPath);
   const [src, setSrc] = useState(matched?.logourl ?? DEFAULT_LOGO);

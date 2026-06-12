@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { motion } from "framer-motion";
 import { Bot, Sparkles, Brain, Compass, Search, Bird } from "lucide-react";

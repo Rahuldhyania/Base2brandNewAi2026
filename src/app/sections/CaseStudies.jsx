@@ -72,7 +72,7 @@ function CaseCard({ c, i }) {
         className="mt-8 inline-flex items-center justify-between gap-3 text-sm text-white font-medium group/cta"
       >
         Request the unredacted brief
-        <span className="grid place-items-center h-9 w-9 rounded-full border border-line group-hover/cta:bg-orange-brand group-hover/cta:text-black group-hover/cta:border-orange-brand transition">
+        <span className="grid place-items-center h-9 w-9 rounded-full border border-line group-hover/cta:bg-orange-brand group-hover/cta:text-on-brand group-hover/cta:border-orange-brand transition">
           <ArrowUpRight size={14} />
         </span>
       </a>

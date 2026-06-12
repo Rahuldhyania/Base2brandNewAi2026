@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -46,19 +47,18 @@ export default function Framework() {
     <section
       id="framework"
       data-testid="framework-section"
-      className="relative py-28 md:py-40"
+      className="relative py-12"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl text-center mx-auto">
           <div className="label-mono">· Methodology</div>
-          <h2 className="font-display mt-4 text-4xl md:text-5xl lg:text-6xl font-light tracking-tighter leading-[1.05]">
-            The Base2Brand
-            <br />
+          <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
+            The Base2Brand{' '}
             <span className="text-gradient-blue-violet font-medium">
               GEO Framework
             </span>
           </h2>
-          <p className="mt-6 text-zinc-400 text-lg max-w-xl">
+          <p className="mt-2 text-zinc-400 text-lg max-w-xl mx-auto">
             A five-step operating system for turning your brand into the
             answer AI engines recommend.
           </p>
@@ -107,7 +107,7 @@ export default function Framework() {
                   <div className={`${isLeft ? "md:pl-16" : "md:pr-16 md:order-1"}`}>
                     <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-6 overflow-hidden">
                       <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-blue-500/10 blur-3xl" />
-                      <div className="font-display text-7xl md:text-8xl font-extralight tracking-tighter text-white/10 leading-none">
+                      <div className="font-display text-7xl md:text-8xl font-extralight tracking-tighter  leading-none">
                         {s.n}
                       </div>
                       <div className="mt-4 grid grid-cols-3 gap-2">

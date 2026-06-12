@@ -48,7 +48,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative pt-36 md:pt-44 pb-24 md:pb-32 overflow-hidden"
+      className="relative pt-16 lg:pt-28  pb-12 overflow-hidden"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid pointer-events-none opacity-60" />
@@ -72,15 +72,9 @@ export default function Hero() {
                 GEO · AEO · AI Search Optimization
               </span>
             </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className="font-display mt-6 text-[44px] sm:text-6xl lg:text-7xl xl:text-[88px] leading-[1.02] font-light tracking-tighter"
-              data-testid="hero-headline"
-            >
-              Dominate{" "}
+             
+             <h1 className="font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-5xl">
+             Dominate{" "}
               <span className="text-gradient-blue-violet font-medium">
                 AI Search
               </span>
@@ -88,7 +82,7 @@ export default function Hero() {
               <span className="text-zinc-400 font-light">before your</span>
               <br />
               competitors do.
-            </motion.h1>
+             </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -196,7 +190,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom stat strip */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -219,7 +213,7 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -28,6 +28,14 @@ export const THEMES = {
       pathname === "/apple-ecosystem" ||
       pathname.startsWith("/apple-ecosystem/"),
   },
+  geo: {
+    id: "geo",
+    className: "theme-geo",
+    match: (pathname) =>
+      pathname === "/growth-visibility" ||
+      pathname.startsWith("/growth-visibility/") ||
+      pathname === "/growth-visibility-demo",
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

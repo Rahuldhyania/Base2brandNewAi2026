@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { motion } from "framer-motion";
 import { Rocket, BarChart3, Cpu, Building2 } from "lucide-react";
@@ -29,13 +30,13 @@ export default function WhyUs() {
   return (
     <section
       data-testid="why-us-section"
-      className="relative py-28 md:py-36"
+      className="relative pb-12"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="label-mono">· Why Base2Brand</div>
-            <h2 className="font-display mt-4 text-4xl md:text-5xl lg:text-6xl font-light tracking-tighter leading-[1.05]">
+            <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
               Brands choose us
               <br />
               <span className="text-gradient-blue-violet font-medium">
@@ -77,12 +78,12 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-hover rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent p-7 h-full"
+                className="card-hover rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent p-4 h-full"
               >
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-white/10 flex items-center justify-center">
                   <c.icon className="w-5 h-5 text-blue-300" />
                 </div>
-                <h3 className="font-display mt-6 text-xl md:text-2xl font-medium tracking-tight">
+                <h3 className="font-display mt-3 text-xl md:text-2xl font-medium tracking-tight">
                   {c.title}
                 </h3>
                 <p className="mt-3 text-sm text-zinc-400 leading-relaxed">

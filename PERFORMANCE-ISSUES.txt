@@ -1,0 +1,447 @@
+================================================================================
+BASE2BRAND AI — COMPONENT-WISE PERFORMANCE ISSUES
+Generated: Performance Audit Report
+================================================================================
+
+NOTE: Yeh file sirf investigation report hai. Koi code change nahi kiya gaya.
+
+
+================================================================================
+🔴 CRITICAL — SABSE ZYADA SLOW (Runtime / CPU / GPU)
+================================================================================
+
+1. StarsBackground
+   File: src/app/components/visual/StarsBackground.jsx
+   Used in: src/app/sections/Hero.jsx, src/app/page.js (landing zone)
+   Issues:
+   - 900 stars (500+300+100) ko ek giant box-shadow string se render karta hai
+   - Har star layer par infinite Framer Motion animation (y: 0 → -2000)
+   - Mouse move par requestAnimationFrame + spring physics har frame
+   - will-change: transform multiple layers par
+   - Paint/compositing cost bahut high — browser ko lag feel hota hai
+   Affects: Runtime, CPU, GPU, Memory, Scroll smoothness
+
+2. GlobeHero (cobe 3D Globe)
+   File: src/app/components/visual/GlobeHero.jsx
+   Used in: src/app/sections/ClientFootprint.jsx
+   Issues:
+   - mapSamples: 18000 — bahut heavy WebGL globe
+   - Continuous requestAnimationFrame loop (kabhi band nahi hota jab visible ho)
+   - devicePixelRatio × 2 canvas size = zyada GPU load
+   - Window pointermove listener globally
+   Affects: Runtime, CPU, GPU, Memory
+
+3. SmokeBackground (WebGL2 Shader)
+   File: src/app/components/site/SmokeBackground.jsx
+   Used in: Architecture.jsx, ResearchLab.jsx
+   Issues:
+   - Har instance apna WebGL2 context + continuous RAF loop chalata hai
+   - AI page par 2 sections mein simultaneously load ho sakta hai
+   - Fragment shader har frame full-screen render
+   Affects: Runtime, CPU, GPU
+
+4. Warp Shader (@paper-design/shaders-react)
+   File: src/app/pages/AppleEcosystem/sections/Hero.jsx
+   Issues:
+   - Real-time GPU shader hero ke poore background mein
+   - swirlIterations={10} — expensive shader pass
+   - speed={0.65} — continuous animation
+   - MacOSDock ke saath same hero mein double load
+   Affects: Runtime, GPU, Bundle size
+
+5. MacOSDock
+   File: src/app/components/apple/MacOSDock.jsx
+   Used in: Apple Ecosystem Hero
+   Issues:
+   - Continuous requestAnimationFrame loop (hamesha chalta rehta hai)
+   - Har frame setState (currentScales, currentPositions) — re-render pressure
+   - Mouse move par magnification calculate hota hai
+   - "use client" missing but parent se client bundle mein aata hai
+   Affects: Runtime, CPU, Re-renders
+
+6. BackgroundPaths
+   File: src/app/components/site/BackgroundPaths.jsx
+   Used in: Hero, Architecture, MaturityFramework, ResearchLab, FinalCTA (AI)
+   Issues:
+   - 36 SVG paths × 2 mirrored fields = 72 animated motion.path elements per instance
+   - Har path par infinite animation (pathLength, pathOffset, opacity)
+   - Ek page par multiple instances simultaneously
+   Affects: Runtime, CPU, GPU
+
+7. BuildingNow (Scroll-Pinned Section)
+   File: src/app/components/ai/BuildingNow.jsx
+   Issues:
+   - Section height: 6 items × 50vh = 300vh artificial scroll
+   - useScroll + useSpring + useMotionValueEvent har scroll frame
+   - window scroll listener + getBoundingClientRect pin logic
+   - Poor scroll performance feel karta hai
+   Affects: Runtime, Scroll, CPU, Memory
+
+8. MaturityFramework (Scroll-Pinned Section)
+   File: src/app/components/ai/MaturityFramework.jsx
+   Issues:
+   - 6 stages × 45vh = 270vh scroll track
+   - Same heavy scroll/pin pattern as BuildingNow
+   - BackgroundPaths bhi iske andar
+   - useTransform rotation + progress bar animations
+   Affects: Runtime, Scroll, CPU
+
+9. PlatformExplorer (Scroll-Pinned Section)
+   File: src/app/pages/AppleEcosystem/sections/PlatformExplorer.jsx
+   Issues:
+   - 6 tabs × 50vh = 300vh scroll track
+   - useScroll + useSpring + useMotionValueEvent + pin phase scroll listener
+   - AnimatePresence double (left + right content)
+   Affects: Runtime, Scroll, CPU
+
+
+================================================================================
+🟠 HIGH — SIGNIFICANT SLOWDOWN
+================================================================================
+
+10. RocketScrollNavigator
+    File: src/app/components/layout/RocketScrollNavigator.jsx
+    Used in: src/app/page.js (homepage — hamesha mounted)
+    Issues:
+    - Global useScroll() — poori page scroll track karta hai
+    - useSpring on scroll progress — har frame calculation
+    - Alag scroll listener: 13 sections ke liye getBoundingClientRect loop
+    - Fixed position + backdrop-blur labels
+    Affects: Runtime, Scroll, CPU (homepage only)
+
+11. Navbar
+    File: src/app/components/layout/Navbar.jsx
+    Used in: src/app/layout.js (HAR ROUTE par)
+    Issues:
+    - Client component — poori site par load
+    - Scroll listener (setScrolled state → re-render)
+    - Framer Motion AnimatePresence mega-dropdown
+    - 6 menu groups, bahut saare DOM nodes
+    Affects: Dev startup, HMR, Runtime, Bundle (global)
+
+12. NeuralCommandCenter
+    File: src/app/components/ai/NeuralCommandCenter.jsx
+    Used in: src/app/components/ai/Hero.jsx
+    Issues:
+    - Complex SVG with multiple infinite rotation animations
+    - 10 animated nodes + orbital rings
+    - Hero load hote hi sab mount hota hai
+    Affects: Runtime, CPU, GPU
+
+13. ArchitectureChart (@visx)
+    File: src/app/components/ai/ArchitectureChart.jsx
+    Used in: Architecture.jsx
+    Issues:
+    - 8 separate @visx packages import
+    - ParentSize resize observer
+    - Tooltip portal + interactive hover
+    - Heavy chart library sirf ek section ke liye
+    Affects: Bundle size, Runtime, Dev compile time
+
+14. Industries (AI Page)
+    File: src/app/components/ai/Industries.jsx
+    Issues:
+    - 8 external Unsplash images (next/image use nahi — raw motion.img)
+    - Har image par CSS filter animation (brightness, saturate, contrast, scale)
+    - Hover par multiple motion layers re-animate
+    - Network latency + paint cost
+    Affects: Runtime, Network, Paint
+
+15. DynamicIsland + AppleIntelligence
+    Files: DynamicIsland.jsx, AppleIntelligence.jsx
+    Issues:
+    - Complex context provider + reducer state machine
+    - setInterval har 2.8s par island state change
+    - Layout animations + size morphing
+    - useWillChange on animated elements
+    Affects: Runtime, Re-renders, CPU
+
+16. Atmosphere
+    File: src/app/components/site/Atmosphere.jsx
+    Used in: Architecture, ResearchLab
+    Issues:
+    - 3 large motion.div layers (700px, 600px, 500px)
+    - filter: blur(60px), blur(70px), blur(40px) — expensive CSS
+    - Infinite animations (28s, 36s, 44s loops)
+    - .grain overlay bhi included
+    Affects: Runtime, GPU, Paint
+
+17. DottedWorldMap
+    File: src/app/components/visual/DottedWorldMap.jsx
+    Used in: GlobalPresence.jsx
+    Issues:
+    - dotted-map library se poora SVG generate (useMemo mein)
+    - dangerouslySetInnerHTML se inject
+    - Animated arcs + pins with Framer Motion
+    Affects: Runtime, Bundle, Memory
+
+18. TechStack
+    File: src/app/components/ai/TechStack.jsx
+    Issues:
+    - react-icons se 14+ brand icons import (tree-shake limited)
+    - react-fast-marquee — continuous CSS transform animation
+    - Do alag marquees simultaneously
+    Affects: Bundle size, Runtime
+
+19. InfiniteSlider
+    File: src/app/components/visual/InfiniteSlider.jsx
+    Used in: src/app/sections/Trust.jsx
+    Issues:
+    - 2 sliders homepage par (ek reverse)
+    - Infinite Framer Motion x animation
+    - ResizeObserver + animation restart on hover
+    Affects: Runtime, CPU
+
+20. ResearchLab
+    File: src/app/components/ai/ResearchLab.jsx
+    Issues:
+    - SmokeBackground + Atmosphere + BackgroundPaths teeno ek saath
+    - AnimatePresence accordion animations
+    - Triple atmospheric layer stack
+    Affects: Runtime, GPU
+
+
+================================================================================
+🟡 MEDIUM — NOTICEABLE IMPACT
+================================================================================
+
+21. ShiningText
+    File: src/app/components/site/ShiningText.jsx
+    Used in: 15+ AI page sections
+    Issues:
+    - Har instance par infinite backgroundPosition animation (4s loop)
+    - AI page par 20+ simultaneous shimmer animations possible
+    Affects: Runtime, CPU
+
+22. Reveal
+    File: src/app/components/site/Reveal.jsx
+    Used in: Bahut saare sections
+    Issues:
+    - whileInView IntersectionObserver har wrapper par
+    - AI page par dozens of observers
+    Affects: Runtime, Memory
+
+23. MessageDock
+    File: src/app/components/apple/MessageDock.jsx
+    Used in: AppleIntelligence section
+    Issues:
+    - AnimatePresence expand/collapse
+    - Resize measurement effects
+    - Click outside + escape listeners
+    Affects: Runtime, Re-renders
+
+24. Architecture
+    File: src/app/components/ai/Architecture.jsx
+    Issues:
+    - 4 background layers ek saath (Paths + Smoke + Atmosphere + gradient)
+    - useScroll per layer card (7 LayerCard components)
+    - ArchitectureChart nested inside
+    Affects: Runtime, GPU, Bundle
+
+25. Footer
+    File: src/app/sections/Footer.jsx
+    Used in: layout.js (global)
+    Issues:
+    - Unnecessary "use client" — koi interactivity nahi
+    - Global client boundary banata hai
+    - 8 offices + 4 nav columns — heavy static DOM
+    Affects: Bundle, Dev HMR (global)
+
+26. ThemeWrapper
+    File: src/app/components/layout/ThemeWrapper.jsx
+    Used in: layout.js (root)
+    Issues:
+    - Poori app ko client boundary ke andar rakhta hai
+    - usePathname + useLayoutEffect har route change par DOM class manipulation
+  Affects: Dev HMR, Runtime, Navigation speed
+
+27. GroundHorizon
+    File: src/app/components/visual/GroundHorizon.jsx
+    Used in: page.js landing zone
+    Issues:
+    - Infinite pulse animation (opacity + scale)
+    - filter: blur on glow layers
+    Affects: Runtime, GPU
+
+28. SectionHeader
+    File: src/app/components/layout/SectionHeader.jsx
+    Issues:
+    - Client component sirf whileInView animation ke liye
+    - Server component ho sakta tha
+    Affects: Bundle, Client JS
+
+29. Apple Ecosystem Hero
+    File: src/app/pages/AppleEcosystem/sections/Hero.jsx
+    Issues:
+    - Warp shader + MacOSDock + 8 dock apps + Framer animations
+    - Sab kuch page load par ek saath mount
+    Affects: Runtime, GPU, Bundle
+
+30. GlobalPresence
+    File: src/app/sections/GlobalPresence.jsx
+    Issues:
+    - DottedWorldMap + 3 whileInView animations
+    - Large SVG overlay processing
+    Affects: Runtime
+
+31. ClientFootprint
+    File: src/app/sections/ClientFootprint.jsx
+    Issues:
+    - GlobeHero (heavy WebGL) mount
+    - .grain overlay
+    - 3 whileInView motion elements
+    Affects: Runtime, GPU
+
+32. Testimonials
+    File: src/app/sections/Testimonials.jsx
+    Issues:
+    - whileInView animations
+    - .grain overlay
+    - Potentially heavy card DOM
+    Affects: Runtime
+
+33. FinalCTA (Home + AI)
+    Files: sections/FinalCTA.jsx, components/ai/FinalCTA.jsx
+    Issues:
+    - Client component with animations
+    - AI version mein BackgroundPaths
+    - setTimeout in home version
+    Affects: Runtime
+
+
+================================================================================
+🟢 LOW — MINOR BUT CUMULATIVE
+================================================================================
+
+34. PlatformSwitcher — layoutId spring animation (minor, acceptable)
+35. CurrentLogo — client component, Image load (minor)
+36. MetricsBar — client, animated counters (minor)
+37. OrbitalDivider — infinite rotation (minor if used)
+38. TweetCard — react-icons import (unused on main pages?)
+39. Outcomes (Apple) — simple motion, low impact
+40. WhyApple, Capabilities, Process, Technologies, VisionPro, Enterprise — 
+    individual Framer whileInView, cumulative on Apple page load
+
+
+================================================================================
+⚙️ CONFIG / PROJECT-LEVEL ISSUES (Component se related)
+================================================================================
+
+A. Root Layout (src/app/layout.js)
+   - 6 Google Fonts load (Manrope, JetBrains Mono, IBM Plex Sans/Mono, Inter, Bricolage)
+   - Navbar + Footer + ThemeWrapper — teen global client components
+   - globals.css?dsh import — unusual, HMR affect kar sakta hai
+
+B. next.config.mjs
+   - reactCompiler: true — dev/HMR mein extra compile time har file change par
+
+C. Workspace Root Warning
+   - Next.js F:\ANKIT\ package-lock.json detect karta hai (galat root)
+   - Dev server slow start + wrong file watching possible
+
+D. No Code Splitting
+   - Koi dynamic(), lazy(), ya Suspense use nahi
+   - Har page ke saare sections ek saath bundle hote hain
+   - page.js → 13 sections sab eager import
+   - ai-automation/page.jsx → 12 sections eager import
+   - apple-ecosystem/page.jsx → 11 sections eager import
+
+E. Unused Heavy Dependencies (node_modules bloat)
+   - Measured: 46 files in src/app/components/ui, ~3,664 node_modules subdirectories
+   - Pages mein sirf Toaster use ho raha hai — baaki 45 UI components unused
+   - @tanstack/react-query — use nahi ho raha
+   - axios, swr — use nahi ho raha
+   - recharts — use nahi ho raha
+   - lodash — use nahi ho raha
+   - 46 shadcn/ui components — sirf Toaster use ho raha hai pages mein
+   - 25+ @radix-ui packages — mostly unused
+   - date-fns + dayjs dono installed
+
+F. page.js Issues
+   - Navbar import hai but use nahi (dead import)
+   - Nested <main> inside layout children
+   - Footer layout mein bhi hai, page mein nahi but duplicate structure
+
+G. EngagementModels
+   - ai-automation/page.jsx mein import hai but JSX mein commented
+   - Phir bhi bundle mein aa sakta hai
+
+
+================================================================================
+📊 TOP 10 BIGGEST REASONS (Quick Summary)
+================================================================================
+
+Rank | Issue                              | Est. Impact | Main Files
+-----|-------------------------------------|-------------|---------------------------
+ 1   | StarsBackground box-shadow stars    | ~20%        | StarsBackground.jsx, Hero.jsx
+ 2   | No lazy loading — sab eager import  | ~15%        | All page.jsx files
+ 3   | Multiple WebGL/Shader (Globe,Smoke,Warp) | ~14%   | GlobeHero, SmokeBackground, Hero.jsx
+ 4   | Scroll-pinned sections (900vh total)| ~12%        | BuildingNow, MaturityFramework, PlatformExplorer
+ 5   | Global client layout (Navbar+Theme) | ~10%      | layout.js, Navbar, ThemeWrapper
+ 6   | BackgroundPaths × multiple instances| ~8%         | BackgroundPaths.jsx
+ 7   | Framer Motion everywhere (~50 files)| ~7%        | Most sections
+ 8   | MacOSDock continuous RAF loop       | ~5%         | MacOSDock.jsx
+ 9   | React Compiler + 6 fonts + deps bloat| ~5%        | next.config, layout.js, package.json
+10   | Multiple scroll listeners           | ~4%         | RocketNav, Navbar, pinned sections
+
+SINGLE BIGGEST BOTTLENECK:
+→ Poori site almost 100% client-side render + koi code splitting nahi +
+  homepage par StarsBackground + GlobeHero + RocketScrollNavigator ek saath.
+
+
+================================================================================
+✅ PRIORITIZED FIX LIST (Implement mat karna abhi — sirf plan)
+================================================================================
+
+Priority 1 (Immediate impact):
+  1. StarsBackground ko replace/simplify karo (CSS stars ya kam stars)
+  2. dynamic() import har page section ke liye
+  3. GlobeHero — mapSamples kam karo + IntersectionObserver se pause
+  4. SmokeBackground/Warp — sirf visible hone par render karo
+
+Priority 2 (High impact):
+  5. Footer, SectionHeader, Outcomes ko Server Components banao
+  6. MacOSDock RAF loop — visible/interaction par hi chalao
+  7. BackgroundPaths instances kam karo ya static banao
+  8. Scroll-pinned sections ki height kam karo (50vh → 30vh)
+
+Priority 3 (Dev speed):
+  9. Unused dependencies hatao (react-query, axios, swr, recharts, lodash)
+  10. reactCompiler dev mein band karo, prod mein on
+  11. Workspace root fix karo (turbopack.root in next.config)
+  12. Fonts 6 se 2-3 par lao
+
+Priority 4 (Polish):
+  13. Industries images → next/image with domains config
+  14. ShiningText — sirf viewport mein animate karo
+  15. RocketScrollNavigator — homepage only lazy load
+  16. EngagementModels dead import hatao
+
+
+================================================================================
+PAGE-WISE COMPONENT LOAD SUMMARY
+================================================================================
+
+HOMEPAGE (/):
+  Heavy: StarsBackground×2, RocketScrollNavigator, GlobeHero, DottedWorldMap,
+         InfiniteSlider×2, GroundHorizon, 13 animated sections
+  Scroll listeners: Navbar + RocketScrollNavigator
+
+AI AUTOMATION (/ai-automation):
+  Heavy: NeuralCommandCenter, BackgroundPaths, SmokeBackground×2, Atmosphere×2,
+         BuildingNow (300vh), MaturityFramework (270vh), ArchitectureChart,
+         TechStack marquee, Industries unsplash images
+  Total artificial scroll: ~570vh extra
+
+APPLE ECOSYSTEM (/apple-ecosystem):
+  Heavy: Warp shader, MacOSDock, DynamicIsland, MessageDock,
+         PlatformExplorer (300vh), multiple Framer sections
+  Total artificial scroll: ~300vh extra
+
+GLOBAL (har page):
+  Navbar (client) + Footer (client) + ThemeWrapper (client) + 6 fonts
+
+
+================================================================================
+END OF REPORT
+================================================================================
