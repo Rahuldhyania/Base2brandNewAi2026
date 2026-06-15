@@ -9,6 +9,8 @@ import {
   Bot,
   Microscope,
   ArrowUpRight,
+  Shield,
+  Target
 } from "lucide-react";  
 
 const icons = {
@@ -18,6 +20,8 @@ const icons = {
   ServerCog,
   Bot,
   Microscope,
+  Shield,
+  Target
 };
 
 
@@ -126,7 +130,7 @@ const Capabilities = ({title, description, highlightTag, capsData}) => {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {capsData.map((cap, idx) => (
             <CapCard key={cap.title} cap={cap} idx={idx} />
           ))}

@@ -28,6 +28,7 @@ const MENU = [
       { label: "Growth & Visibility", href: "/growth-visibility" },
       { label: "Enterprise Systems", href: "#services" },
       { label: "Emerging Technologies", href: "#services" },
+      { label: "Social Media Services", href: "/social-media-services" },
     ],
   },
   {

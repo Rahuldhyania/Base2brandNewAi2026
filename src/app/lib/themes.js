@@ -36,6 +36,13 @@ export const THEMES = {
       pathname.startsWith("/growth-visibility/") ||
       pathname === "/growth-visibility-demo",
   },
+  socialMedia: {
+    id: "social-media",
+    className: "theme-social-media",
+    match: (pathname) =>
+      pathname === "/social-media-services" ||
+      pathname.startsWith("/social-media-services/"),
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

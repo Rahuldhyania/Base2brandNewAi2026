@@ -10,6 +10,7 @@ const logosList = [
   { slug: "/ai-automation", logourl: "/images/aiLogo.png" },
   { slug: "/apple-ecosystem", logourl: "/images/applelogo.png" },
   { slug: "/growth-visibility", logourl: "/images/growth-visibility.png" },
+  { slug: "/social-media-services", logourl: "/images/socialmedialogo.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {
@@ -21,14 +22,24 @@ export function CurrentLogo({ className = "max-w-46" }) {
     setSrc(matched?.logourl ?? DEFAULT_LOGO);
   }, [matched?.logourl]);
 
+  useEffect(() => {
+    if (currentPath !== "/social-media-services") return;
+
+    const handler = (e) => {
+      if (e.detail.logoUrl) setSrc(e.detail.logoUrl);
+    };
+    window.addEventListener("serviceActive", handler);
+    return () => window.removeEventListener("serviceActive", handler);
+  }, [currentPath]);
+
   return (
     <Image
       src={src}
       alt="Base2Brand"
       width={200}
       height={100}
-      className={className}
-      onError={() => setSrc(DEFAULT_LOGO)}
+      className={`${className} transition-all duration-500`}
+      onError={() => setSrc(matched?.logourl ?? DEFAULT_LOGO)}
     />
   );
 }

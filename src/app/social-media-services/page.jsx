@@ -1,59 +1,98 @@
-import React from "react";
-import Hero from "@/components/landing/Hero";
 import Narrative from "@/components/ai/Narrative";
+import Hero from "@/components/social-media/site/Hero";
+import MarqueeStrip from "@/components/social-media/site/MarqueeStrip";
+import ServicesSection from "@/components/social-media/site/ServicesSection";
 import Capabilities from "@/components/ai/Capabilities";
 import BuildingNow from "@/components/ai/BuildingNow";
 import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
-import Services from "@/components/landing/Services";
-import WhyUs from "@/components/landing/WhyUs";
+import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
 
 const features = [
   {
-    l: "AI search is exploding",
-    d: "Conversational AI is replacing 10-blue-links for high-intent commercial queries.",
+    l: "Search Behaviour Evolution",
+    d: "Customers no longer travel a single funnel — they bounce between AI assistants, classic search, social, and communities. Visibility is now multi-modal.",
   },
   {
-    l: "Behaviour is shifting",
-    d: "Buyers now ask AI assistants before they ever open a search tab.",
+    l: "AI Discovery Platforms",
+    d: "ChatGPT, Gemini and Perplexity answer commercial queries directly. Being cited as an authoritative source is the new top-of-funnel.",
   },
   {
-    l: "Invisibility costs revenue",
-    d: "Brands not surfaced inside AI answers are quietly losing pipeline.",
+    l: "Creative-Led Advertising",
+    d: "Media buying is commoditized. Performance is increasingly decided by the creative — motion, hooks, formats, and message-market fit.",
+  },
+  {
+    l: "Trust & Reputation Signals",
+    d: "Reviews, sentiment, and brand mentions shape conversion across every channel — and feed the AI models that decide who gets recommended.",
   },
 ];
 
 const CAPS = [
   {
     icon: "Network",
-    title: "Generative Engine Optimization",
-    span: "md:col-span-7",
+    title: "SEO & Technical SEO",
+    span: "md:col-span-6 lg:col-span-4",
     items: [
-      "Entity-first content modelling",
-      "AI-readable brand graphs",
-      "Prompt-targeted authority",
+      "Technical audits",
+      "On-page SEO",
+      "Local SEO",
+      "Authority building",
     ],
     accent: true,
   },
   {
     icon: "Workflow",
-    title: "Answer Engine Optimization",
-    span: "md:col-span-5",
+    title: "Generative Engine Optimization",
+    span: "md:col-span-6 lg:col-span-4",
     items: [
-      "Question intent mapping",
-      "Structured answer blocks",
-      "Citation-grade signals",
+      "ChatGPT visibility",
+      "AI answer optimization",
+      "Entity optimization",
+      "Citation management",
     ],
   },
   {
     icon: "AudioLines",
-    title: "AI Search Optimization",
-    span: "md:col-span-5",
+    title: "Performance Marketing",
+    span: "md:col-span-6 lg:col-span-4",
+    items: ["Google Ads", "Meta Ads", "LinkedIn Ads", "Retargeting systems"],
+  },
+
+  {
+    icon: "Network",
+    title: "Creative Studio",
+    span: "md:col-span-6 lg:col-span-4",
     items: [
-      "Cross-platform presence",
-      "Recommendation positioning",
-      "Topical depth at scale",
+      "Ad creatives",
+      "Motion graphics",
+      "Video production",
+      "UGC content",
     ],
+    accent: true,
+  },
+  {
+    icon: "Workflow",
+    title: "Growth Analytics",
+    span: "md:col-span-6 lg:col-span-4",
+    items: ["Attribution", "Dashboard reporting", "Performance insights"],
+  },
+  {
+    icon: "AudioLines",
+    title: "Social Media Marketing",
+    span: "md:col-span-6 lg:col-span-4",
+    items: ["Content strategy", "Community growth", "Platform management"],
+  },
+  {
+    icon: "Shield",
+    title: "Online Reputation Management",
+    span: "md:col-span-6 lg:col-span-4",
+    items: ["Review management", "Brand monitoring", "Sentiment tracking"],
+  },
+  {
+    icon: "Target",
+    title: "Conversion Rate Optimization",
+    span: "md:col-span-6 lg:col-span-4",
+    items: ["Landing pages", "Funnel optimization", "A/B testing"],
   },
 ];
 
@@ -102,54 +141,51 @@ const ITEMS = [
   },
 ];
 
-
 const steps = [
   {
     n: "01",
-    title: "AI Brand Audit",
-    body: "We analyze how ChatGPT, Gemini, Claude and Perplexity currently perceive — or ignore — your brand.",
+    title: "Discovery & Audit",
+    body: "Diagnose current marketing performance, technical SEO, brand sentiment, paid efficiency, and competitive landscape.",
     icon: 'ScanSearch',
   },
   {
     n: "02",
-    title: "Knowledge Optimization",
-    body: "We engineer your business knowledge graph: structured data, authority signals and entity relationships AI can trust.",
+    title: "Growth Strategy",
+    body: "Identify high-leverage channels, define ICPs, build a quarterly growth thesis and the metrics that decide success.",
     icon: 'Database',
   },
   {
     n: "03",
-    title: "Content Intelligence",
-    body: "We produce AI-readable, answer-shaped content tuned to the exact prompts buyers use in your category.",
+    title: "Creative & Campaign Production",
+    body: "Develop the assets — ad creatives, video, landing pages, and content — engineered to perform against the thesis.",
     icon: 'FileText',
   },
   {
     n: "04",
-    title: "Entity Authority Building",
-    body: "We compound digital trust through citations, mentions, partnerships and recognition AI engines weigh heavily.",
+    title: "Launch & Optimization",
+    body: "Deploy campaigns, instrument attribution, run rigorous experimentation, and improve unit economics weekly.",
     icon: 'Award',
   },
   {
     n: "05",
-    title: "AI Recommendation Positioning",
-    body: "We monitor and lift the probability of your brand being recommended inside AI answers — month after month.",
+    title: "Scale & Expansion",
+    body: "Compound winners — expand to new geographies, channels, and audience segments without sacrificing efficiency.",
     icon: 'Sparkles',
   },
 ];
 export default function page() {
   return (
-    <main
-      data-testid="geo-page"
-      className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
-    >
+    <div>
       <Hero />
+      <ServicesSection />
+      <MarqueeStrip />
       <Narrative
-        title={"Search has changed. <br /> Your marketing should too."}
+        highlightTag={"Why Growth Has Changed"}
+        title={"Attention has fragmented. Growth strategies should too."}
         description={[
-          "People don't only ask Google anymore. They ask ChatGPT, Gemini, Perplexity and Claude — and AI decides which brand gets recommended.",
-          "85% of high-intent buyers consult an AI assistant before talking to your sales team.",
+          "Customers discover brands through AI assistants, search engines, social feeds, videos, communities, and recommendations. Winning brands engineer visibility across every touchpoint.",
         ]}
         features={features}
-        highlightTag={"How customers ask today"}
         tagList={[
           "Best CRM software for B2B SaaS",
           "Top digital marketing agency in 2026",
@@ -177,14 +213,15 @@ export default function page() {
           "Models, frameworks, and infrastructure — composed deliberately."
         }
       />
-      <Framework 
+      <Framework
         highlightTag={"· Methodology"}
         title={"The Base2Brand GEO Framework"}
-        description={"A five-step operating system for turning your brand into the answer AI engines recommend."}
+        description={
+          "A five-step operating system for turning your brand into the answer AI engines recommend."
+        }
         steps={steps}
       />
-      <Services />
-      <WhyUs />
-    </main>
+      <CreativeShowcase />
+    </div>
   );
 }
