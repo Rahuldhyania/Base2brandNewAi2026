@@ -1,6 +1,6 @@
-'use client';
+"use client";
 import React from "react";
-import  {motion}  from "framer-motion";
+import { motion } from "framer-motion";
 import { StarsBackground } from "../components/visual/StarsBackground";
 import { OfficialLogo } from "../components/visual/OfficialLogo";
 
@@ -64,6 +64,20 @@ export function Hero() {
           />
         </motion.div>
 
+        {/* <h1
+          className="text-start font-black text-white leading-[0.9] tracking-tight pt-8"
+          style={{
+            fontFamily: "'Archivo Black', sans-serif",
+            fontSize: "clamp(56px, 9vw, 100px)",
+          }}
+        >
+          <SlotText
+            default_text="RANK."
+            items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
+            ClassName="justify-start"
+          />
+        </h1> */}
+
         {/* tagline + CTAs */}
         <div className="mt-8 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-end">
           <motion.h1
@@ -77,8 +91,8 @@ export function Hero() {
             <span className="text-orange-brand text-glow-orange">backbone</span>{" "}
             for enterprises ready to leave gravity behind.
             <span className="block text-mute mt-4 text-lg sm:text-xl font-normal max-w-2xl">
-              AI systems, enterprise software, cloud and intelligent automation —
-              engineered end-to-end from 8 cities across 4 continents.
+              AI systems, enterprise software, cloud and intelligent automation
+              — engineered end-to-end from 8 cities across 4 continents.
             </span>
           </motion.h1>
 

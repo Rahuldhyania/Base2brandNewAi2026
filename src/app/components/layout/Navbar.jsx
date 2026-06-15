@@ -6,6 +6,7 @@ import { Base2BrandWordmark } from "../../components/visual/Base2BrandLogo";
 import { cn } from "../../lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { CurrentLogo } from "./CurrentLogo";
 
 /**
@@ -101,7 +102,9 @@ export function Navbar() {
   const [openKey, setOpenKey] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState(null);
+  const [ctaColor, setCtaColor] = useState(null);
   const closeTimer = useRef(null);
+  const currentPath = usePathname();
 
   const cancelClose = () => {
     if (closeTimer.current) {
@@ -135,6 +138,16 @@ export function Navbar() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  useEffect(() => {
+    if (currentPath !== "/social-media-services") {
+      setCtaColor(null);
+      return;
+    }
+    const handler = (e) => setCtaColor(e.detail.color ?? null);
+    window.addEventListener("serviceActive", handler);
+    return () => window.removeEventListener("serviceActive", handler);
+  }, [currentPath]);
 
   const handleAnchor = (e, href) => {
     if (href && href.startsWith("#")) {
@@ -297,7 +310,11 @@ export function Navbar() {
               href="#contact"
               onClick={(e) => handleAnchor(e, "#contact")}
               data-testid="navbar-cta-proposal"
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-orange-brand font-semibold text-sm px-4 py-2 hover:brightness-110 transition group"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full font-semibold text-sm px-4 py-2 hover:brightness-110 transition group"
+              style={{
+                backgroundColor: ctaColor ?? "var(--b2b-primary)",
+                transition: "background-color 0.5s ease",
+              }}
             >
               Get Proposal
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -376,7 +393,11 @@ export function Navbar() {
                 href="#contact"
                 onClick={(e) => handleAnchor(e, "#contact")}
                 data-testid="navbar-mobile-cta"
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-orange-brand font-semibold text-sm px-4 py-3"
+                className="mt-2 inline-flex items-center justify-center rounded-full font-semibold text-sm px-4 py-3"
+                style={{
+                  backgroundColor: ctaColor ?? "var(--b2b-primary)",
+                  transition: "background-color 0.5s ease",
+                }}
               >
                 Get Proposal →
               </a>

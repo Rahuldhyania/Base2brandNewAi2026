@@ -66,3 +66,17 @@ export default function page() {
     </main>
   );
 }
+
+
+// 1
+// DottedWorldMap / GlobalPresence
+// next/dynamic se lazy load
+// 2
+// Sab sections eager import
+// Below-fold sections ko dynamic() se defer
+// 3
+// StarsBackground x2
+// Already optimized (canvas + IntersectionObserver)
+// 4
+// RocketScrollNavigator
+// Minor, leave as-is

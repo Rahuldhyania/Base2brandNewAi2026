@@ -209,6 +209,13 @@ export default function ServicesSection() {
       );
 
     const handleScroll = () => {
+      // If sentinel (after last card) has crossed the top, reset to default
+      const sentinel = document.getElementById("services-end");
+      if (sentinel && sentinel.getBoundingClientRect().top <= TRIGGER_OFFSET) {
+        dispatch(SOCIAL_MEDIA_DEFAULT_LOGO, null);
+        return;
+      }
+
       let activeService = null;
 
       for (const service of SERVICES) {
@@ -291,6 +298,14 @@ export default function ServicesSection() {
         {SERVICES.map((s, i) => (
           <ServiceCard key={s.id} service={s} index={i} />
         ))}
+
+        <div id="services-end" className="flex justify-center items-center py-16">
+          <img
+            src={SOCIAL_MEDIA_DEFAULT_LOGO}
+            alt="Base2Brand Logo"
+            className="w-32 h-32 object-contain opacity-80"
+          />
+        </div>
       </div>
     </section>
   );

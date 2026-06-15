@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { FLOATING_CARDS, HERO_TAGS, BRAND } from "../site/mock";
+import SlotText from "@/components/ui/SlotText";
 
 const ICONS = { Search, Target, ShoppingBag, ThumbsUp, Youtube };
 
@@ -16,23 +17,29 @@ function FloatingCard({ card, mouse }) {
   const Icon = ICONS[card.icon];
   const tx = (mouse.x - 0.5) * 14;
   const ty = (mouse.y - 0.5) * 14;
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className="absolute hidden md:block"
+      className="absolute hidden md:block z-20"
       style={{
         ...card.style,
-        transform: `translate(${tx}px, ${ty}px) rotate(${card.style.rotate})`,
-        transition: "transform 200ms ease-out",
+        transform: `translate(${hovered ? 0 : tx}px, ${hovered ? 0 : ty}px) rotate(${hovered ? "0deg" : card.style.rotate}) scale(${hovered ? 1.06 : 1})`,
+        transition: "transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1)",
       }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div
-        className="relative px-5 py-4 rounded-2xl border"
+        className="relative px-5 py-4 rounded-2xl border cursor-pointer"
         style={{
           background: "rgba(15,15,17,0.7)",
-          borderColor: `${card.color}55`,
-          boxShadow: `0 0 60px ${card.glow}, inset 0 1px 0 rgba(255,255,255,0.06)`,
+          borderColor: hovered ? card.color : `${card.color}55`,
+          boxShadow: hovered
+            ? `0 0 80px ${card.glow}, 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)`
+            : `0 0 60px ${card.glow}, inset 0 1px 0 rgba(255,255,255,0.06)`,
           backdropFilter: "blur(8px)",
+          transition: "border-color 350ms ease, box-shadow 350ms ease",
         }}
       >
         <span
@@ -107,9 +114,9 @@ export default function Hero() {
       />
 
       {/* Top scrolling tape */}
-      <div className="absolute top-0 left-0 right-0 overflow-hidden border-b border-white/5">
+      <div className="absolute top-0 left-0 right-0 overflow-hidden">
         <div
-          className="flex gap-10 py-3 whitespace-nowrap animate-marquee"
+          className="flex gap-10 pt-2 pb-2 whitespace-nowrap animate-marquee"
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           {[...HERO_TAGS, ...HERO_TAGS, ...HERO_TAGS].map((t, i) => (
@@ -167,17 +174,11 @@ export default function Hero() {
           }}
         >
           <span className="block">GROW.</span>
-          <span className="block">
-            RANK.{" "}
-            <span
-              className="italic text-(--b2b-primary)"
-              style={{
-                textShadow: "0 0 40px rgba(243,115,53,0.6)",
-              }}
-            >
-              CONVERT.
-            </span>
-          </span>
+          <SlotText
+            default_text="RANK."
+            items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
+            ClassName="justify-center"
+          />
         </h1>
 
         <p className="mt-10 max-w-2xl text-center text-zinc-400 text-[16px] leading-relaxed">
