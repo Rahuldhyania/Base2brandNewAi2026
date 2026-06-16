@@ -43,6 +43,13 @@ export const THEMES = {
       pathname === "/social-media-services" ||
       pathname.startsWith("/social-media-services/"),
   },
+  emergingTechnologies: {
+    id: "emerging-technologies",
+    className: "theme-emerging-technologies",
+    match: (pathname) =>
+      pathname === "/emerging-technologies" ||
+      pathname.startsWith("/emerging-technologies/"),
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

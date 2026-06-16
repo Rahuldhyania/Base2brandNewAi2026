@@ -28,7 +28,7 @@ const MENU = [
       { label: "Ecommerce Solutions", href: "#services" },
       { label: "Growth & Visibility", href: "/growth-visibility" },
       { label: "Enterprise Systems", href: "#services" },
-      { label: "Emerging Technologies", href: "#services" },
+      { label: "Emerging Technologies", href: "/emerging-technologies" },
       { label: "Social Media Services", href: "/social-media-services" },
     ],
   },

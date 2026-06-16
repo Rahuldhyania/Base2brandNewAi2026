@@ -29,13 +29,11 @@ export function Footer() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Top: brand + nav */}
-        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-12">
+        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-8">
           <div>
             <CurrentLogo />
             <p className="mt-6 text-mute max-w-md text-sm sm:text-base leading-relaxed">
-              From base — to brand. From idea — to orbit. Base2Brand is the
-              digital transformation, AI and enterprise software partner for
-              organisations that build for the public good and the global stage.
+              From base — to brand. From idea — to orbit. Base2Brand is the digital transformation, AI and enterprise software partner for organisations that build for the public good and the global stage.
             </p>
 
             <form
@@ -108,7 +106,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-10 divider-line" />
+        <div className="my-2 divider-line" />
 
         {/* Office grid */}
         <div>

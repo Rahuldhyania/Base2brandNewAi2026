@@ -299,11 +299,11 @@ export default function ServicesSection() {
           <ServiceCard key={s.id} service={s} index={i} />
         ))}
 
-        <div id="services-end" className="flex justify-center items-center py-16">
+        <div id="services-end" className="flex justify-center items-center py-1">
           <img
             src={SOCIAL_MEDIA_DEFAULT_LOGO}
             alt="Base2Brand Logo"
-            className="w-32 h-32 object-contain opacity-80"
+            className="w-5 h-5 object-contain opacity-80  hidden"
           />
         </div>
       </div>
