@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -125,7 +126,7 @@ const ProductsWeBuild = () => {
   const Icon = product.icon;
 
   return (
-    <section id="products" className="b2b-section relative">
+    <section id="products" className="b2b-section relative py-12">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
@@ -134,22 +135,22 @@ const ProductsWeBuild = () => {
           variants={fadeUp}
           className="max-w-3xl"
         >
-          <div className="b2b-eyebrow mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
+          <div className="text-(--b2b-primary) mb-6">
+            <span className="w-1.5 h-1.5 rounded-full text-(--b2b-primary)" />
             Products We Build
           </div>
-          <h2 className="b2b-h2">
+          <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">Software engineered around </span>
-            <span className="b2b-text-red-gradient">business outcomes.</span>
+            <span className="text-(--b2b-primary)">business outcomes.</span>
           </h2>
-          <p className="b2b-lead mt-6">
+          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             From SaaS products to mission-critical B2B platforms — every engagement is shaped by
             the outcome it must deliver.
           </p>
         </motion.div>
 
         {/* Tabs */}
-        <div className="mt-14 flex flex-wrap gap-2" data-testid="products-tablist">
+        <div className="mt-8 flex flex-wrap gap-2" data-testid="products-tablist">
           {PRODUCTS.map((p) => {
             const isActive = p.id === active;
             const PIcon = p.icon;
@@ -159,12 +160,12 @@ const ProductsWeBuild = () => {
                 onClick={() => setActive(p.id)}
                 className={`group inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[13px] font-medium transition-all duration-300 border ${
                   isActive
-                    ? "bg-[color:var(--b2b-red)]/12 border-[color:var(--b2b-red)]/50 text-white shadow-[0_0_0_4px_rgba(255,59,48,0.06)]"
-                    : "bg-white/[0.02] border-white/10 text-white/70 hover:text-white hover:border-[color:var(--b2b-red)]/30"
+                    ? "bg-[color:var(--b2b-primary)]/12 border-[color:var(--b2b-primary)]/50 text-white shadow-[0_0_0_4px_rgba(255,59,48,0.06)]"
+                    : "bg-white/[0.02] border-white/10 text-white/70 hover:text-white hover:border-[color:var(--b2b-primary)]/30"
                 }`}
                 data-testid={`product-tab-${p.id}`}
               >
-                <PIcon className={`w-3.5 h-3.5 ${isActive ? "text-[color:var(--b2b-red)]" : "text-white/55"}`} />
+                <PIcon className={`w-3.5 h-3.5 ${isActive ? "text-[color:var(--b2b-primary)]" : "text-white/55"}`} />
                 {p.title}
               </button>
             );
@@ -180,12 +181,12 @@ const ProductsWeBuild = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="col-span-12 lg:col-span-7 b2b-card p-8 lg:p-10"
+              className="col-span-12 lg:col-span-7 b2b-card p-8"
               data-testid="product-detail"
             >
               <div className="flex items-start gap-5">
-                <div className="shrink-0 w-12 h-12 rounded-xl border border-[color:var(--b2b-red)]/40 bg-[color:var(--b2b-red)]/10 grid place-items-center">
-                  <Icon className="w-5 h-5 text-[color:var(--b2b-red)]" />
+                <div className="shrink-0 w-12 h-12 rounded-xl border border-[color:var(--b2b-primary)]/40 bg-[color:var(--b2b-primary)]/10 grid place-items-center">
+                  <Icon className="w-5 h-5 text-[color:var(--b2b-primary)]" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold tracking-tight text-white">{product.title}</h3>
@@ -199,8 +200,8 @@ const ProductsWeBuild = () => {
                     key={b}
                     className="flex items-start gap-3 p-3 rounded-xl border border-white/[0.06] bg-white/[0.015]"
                   >
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
-                    <span className="text-[14px] text-white/80">{b}</span>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-primary)]" />
+                    <span className="text-[14px] text-white/80 font-semibold">{b}</span>
                   </div>
                 ))}
               </div>

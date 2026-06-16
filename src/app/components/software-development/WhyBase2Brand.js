@@ -29,27 +29,26 @@ const CARDS = [
 
 const WhyBase2Brand = () => {
   return (
-    <section id="why" className="b2b-section relative">
+    <section id="why" className="b2b-section relative py-12">
       <div className="b2b-container">
         <motion.div
           variants={stagger(0.06)}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="max-w-3xl"
+          className="max-w-4xl mx-auto text-center"
         >
-          <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
+          <motion.div variants={fadeUp} className="text-[var(--b2b-primary)] mb-6 text-center">
+            <span className="w-1.5 h-1.5 rounded-full text-(--b2b-primary)" />
             Why Base2Brand
           </motion.div>
-          <motion.h2 variants={fadeUp} className="b2b-h2">
+          <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">Why modern software products require </span>
-            <span className="b2b-text-red-gradient">engineering discipline.</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} className="b2b-lead mt-6">
-            Real software products are continuously operated, evolved, and scaled — not just
-            launched. Our engineering approach is built around that reality.
-          </motion.p>
+            <span className="text-(--b2b-primary)">engineering discipline.</span>
+          </h2>
+          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+            Real software products are continuously operated, evolved, and scaled — not just launched. Our engineering approach is built around that reality.
+          </p>
         </motion.div>
 
         <motion.div
@@ -60,7 +59,7 @@ const WhyBase2Brand = () => {
           className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           {CARDS.map((c, idx) => {
-            const Icon = c.icon;
+            const Icon = c.icon; 
             return (
               <motion.div
                 key={c.title}
@@ -69,8 +68,8 @@ const WhyBase2Brand = () => {
                 className="b2b-card p-8 lg:p-9 group"
               >
                 <div className="flex items-start gap-5">
-                  <div className="shrink-0 w-12 h-12 rounded-xl border border-[color:var(--b2b-red)]/30 bg-[color:var(--b2b-red)]/10 grid place-items-center group-hover:scale-105 transition-transform">
-                    <Icon className="w-5 h-5 text-[color:var(--b2b-red)]" />
+                  <div className="shrink-0 w-12 h-12 rounded-xl border border-[color:var(--b2b-primary)]/30 bg-[color:var(--b2b-primary)]/10 grid place-items-center group-hover:scale-105 transition-transform">
+                    <Icon className="w-5 h-5 text-[color:var(--b2b-primary)]" />
                   </div>
                   <div>
                     <h3 className="b2b-h3">{c.title}</h3>
@@ -81,7 +80,7 @@ const WhyBase2Brand = () => {
                   <span className="text-[11px] uppercase tracking-[0.22em] text-white/40">
                     Principle 0{idx + 1}
                   </span>
-                  <span className="text-[12px] text-[color:var(--b2b-red)] font-medium">Engineered→</span>
+                  <span className="text-[12px] text-[color:var(--b2b-primary)] font-medium">Engineered→</span>
                 </div>
               </motion.div>
             );

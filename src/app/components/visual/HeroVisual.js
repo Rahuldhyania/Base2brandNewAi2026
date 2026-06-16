@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import {
   Database,
   Cloud,
@@ -16,27 +15,21 @@ import {
  * Pure SVG/Tailwind so it stays performant and on-brand.
  */
 const Node = ({ icon: Icon, label, x, y, accent }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+  <div
     className="absolute -translate-x-1/2 -translate-y-1/2"
     style={{ left: `${x}%`, top: `${y}%` }}
   >
     <div
       className={`relative inline-flex items-center gap-2 rounded-full border ${
         accent
-          ? "border-[color:var(--b2b-red)]/50 bg-[color:var(--b2b-red)]/10 text-white"
+          ? "border-[color:var(--b2b-primary)]/50 bg-[color:var(--b2b-primary)]/10 text-white"
           : "border-white/10 bg-white/[0.03] text-white/85"
-      } px-3 py-1.5 text-[11.5px] font-medium backdrop-blur-sm`}
+      } px-3 py-1.5 text-[11.5px] font-medium`}
     >
-      <Icon className={`w-3.5 h-3.5 ${accent ? "text-[color:var(--b2b-red)]" : "text-white/70"}`} />
+      <Icon className={`w-3.5 h-3.5 ${accent ? "text-[color:var(--b2b-primary)]" : "text-white/70"}`} />
       {label}
-      {accent && (
-        <span className="absolute -inset-1 -z-10 rounded-full bg-[color:var(--b2b-red)]/30 blur-md" />
-      )}
     </div>
-  </motion.div>
+  </div>
 );
 
 const HeroVisual = () => {
@@ -48,15 +41,7 @@ const HeroVisual = () => {
       {/* Outer ring */}
       <div className="absolute inset-2 rounded-full border border-white/[0.05]" />
       <div className="absolute inset-12 rounded-full border border-white/[0.07]" />
-      <div className="absolute inset-24 rounded-full border border-[color:var(--b2b-red)]/15" />
-
-      {/* Orbiting dotted rings */}
-      <div className="absolute inset-2 rounded-full animate-b2b-orbit" style={{ animationDuration: "60s" }}>
-        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[color:var(--b2b-red)] shadow-[0_0_20px_rgba(255,59,48,0.8)]" />
-      </div>
-      <div className="absolute inset-12 rounded-full animate-b2b-orbit" style={{ animationDuration: "40s", animationDirection: "reverse" }}>
-        <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-white/70" />
-      </div>
+      <div className="absolute inset-24 rounded-full border border-[color:var(--b2b-primary)]/15" />
 
       {/* SVG connectors */}
       <svg
@@ -92,23 +77,17 @@ const HeroVisual = () => {
         </g>
       </svg>
 
-      {/* Center hub - the square is exactly at the geometric center of the rings */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24"
-      >
-        <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-[#ff5a4d] to-[#ff3b30] grid place-items-center shadow-[0_30px_60px_-20px_rgba(255,59,48,0.7)]">
+      {/* Center hub */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24">
+        <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-[#ff5a4d] to-[#ff3b30] grid place-items-center shadow-[0_30px_60px_-20px_rgba(255,59,48,0.5)]">
           <div className="absolute inset-0 rounded-2xl ring-1 ring-white/30" />
           <Layers className="w-9 h-9 text-white" />
         </div>
-        {/* Label sits below the square absolutely so it doesn't shift centering */}
         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-5 whitespace-nowrap text-center pointer-events-none">
           <div className="text-[10px] uppercase tracking-[0.22em] text-white/55">Engineering</div>
           <div className="text-[12px] font-medium text-white/90 mt-0.5">Core Platform</div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Surrounding nodes */}
       <Node icon={Cloud} label="Cloud Infra" x={15} y={18} accent />

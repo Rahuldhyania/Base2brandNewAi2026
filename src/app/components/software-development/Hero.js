@@ -38,8 +38,8 @@ const Hero = () => {
           <div className="col-span-12 lg:col-span-7">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-7">
               <span className="relative inline-flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-red)] animate-b2b-pulse" />
-                <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-red)] opacity-60 blur-md" />
+                <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-primary)] animate-pulse" />
+                <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-primary)] opacity-40" />
               </span>
               <span className="text-[11px] uppercase tracking-[0.28em] text-white/70">
                 Digital Product Engineering
@@ -50,7 +50,7 @@ const Hero = () => {
             <motion.h1 variants={fadeUp} className="font-display font-medium text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
               <span className="b2b-text-gradient">Engineer products that </span>
               <span className="b2b-text-gradient"> scale with your </span>
-              <span className="b2b-text-red-gradient"> ambition. </span>
+              <span className="text-(--b2b-primary)"> ambition. </span>
             </motion.h1>
 
             <motion.p variants={fadeUp} className="b2b-lead mt-7">
@@ -76,7 +76,7 @@ const Hero = () => {
                   key={text}
                   className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70;"
                 >
-                  <Icon className="w-3.5 h-3.5 text-[color:var(--b2b-red)]" />
+                  <Icon className="w-3.5 h-3.5 text-[color:var(--b2b-primary)]" />
                   {text}
                 </div>
               ))}

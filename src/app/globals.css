@@ -138,7 +138,8 @@ code {
 .theme-apple,
 .theme-geo,
 .theme-social-media,
-.theme-emerging-technologies {
+.theme-emerging-technologies,
+.theme-software-development {
   --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
   --b2b-font-display: var(--font-manrope), sans-serif;
@@ -540,6 +541,93 @@ code {
 }
 
 /* =============================================================================
+   THEME: SOFTWARE DEVELOPMENT — Red brand (#FF3B30)
+   ============================================================================= */
+
+.theme-software-development {
+  --b2b-bg: #030305;
+  --b2b-bg-2: #0a0a14;
+  --b2b-ink: #f5f7ff;
+  --b2b-mute: #9aa0b4;
+  --b2b-line: rgba(255, 255, 255, 0.08);
+  --b2b-line-strong: rgba(255, 255, 255, 0.14);
+  --b2b-primary: #ff3b30;
+  --b2b-primary-rgb: 255, 59, 48;
+  --b2b-primary-2: #ff6b63;
+  --b2b-primary-2-rgb: 255, 107, 99;
+  --b2b-primary-soft: rgba(255, 59, 48, 0.18);
+  --b2b-red: #ff3b30;
+  --b2b-orange: var(--b2b-primary);
+  --b2b-orange-2: var(--b2b-primary-2);
+  --b2b-orange-soft: var(--b2b-primary-soft);
+
+  --b2b-glass-bg: rgba(10, 10, 20, 0.55);
+  --b2b-glow-ring: rgba(255, 59, 48, 0.35);
+  --b2b-glow-shadow: rgba(255, 59, 48, 0.55);
+  --b2b-glow-ambient: rgba(255, 59, 48, 0.35);
+  --b2b-text-glow: rgba(255, 59, 48, 0.55);
+  --b2b-text-glow-ambient: rgba(255, 59, 48, 0.25);
+  --b2b-ring-orbit: rgba(255, 59, 48, 0.25);
+  --b2b-marker-pulse: var(--b2b-primary);
+  --b2b-selection-fg: #ffffff;
+  --b2b-on-primary: #ffffff;
+
+  --background: 2 100% 2%;
+  --foreground: 2 20% 96%;
+  --card: 2 50% 4%;
+  --card-foreground: 2 20% 96%;
+  --popover: 2 50% 4%;
+  --popover-foreground: 2 20% 96%;
+  --primary: 2 100% 59%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 2 20% 12%;
+  --secondary-foreground: 2 20% 96%;
+  --muted: 2 20% 12%;
+  --muted-foreground: 2 10% 65%;
+  --accent: 2 100% 59%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 2 15% 18%;
+  --input: 2 15% 18%;
+  --ring: 2 100% 59%;
+  --radius: 0.75rem;
+
+  background: var(--b2b-bg);
+  color: var(--b2b-ink);
+  font-family: var(--b2b-font-body);
+}
+
+.theme-software-development code {
+    font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas,
+        monospace;
+}
+
+.theme-software-development ::selection {
+    background: var(--b2b-primary);
+    color: var(--b2b-selection-fg);
+}
+
+.theme-software-development .b2b-glow-red,
+.b2b-glow-red {
+    box-shadow: 0 0 120px 40px rgba(255, 59, 48, 0.25);
+    border-radius: 9999px;
+}
+
+.theme-software-development .b2b-card {
+    border-radius: 1.25rem;
+    border: 1px solid var(--b2b-line);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 59, 48, 0.04) 0%,
+        rgba(255, 255, 255, 0.02) 40%,
+        rgba(3, 3, 5, 0.45) 100%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* =============================================================================
    THEME: APPLE — Apple Blue brand
    ============================================================================= */
 
@@ -655,7 +743,8 @@ code {
     .theme-ai *,
     .theme-geo *,
     .theme-social-media *,
-    .theme-emerging-technologies * {
+    .theme-emerging-technologies *,
+    .theme-software-development * {
         border-color: hsl(var(--border));
     }
     .theme-apple * {

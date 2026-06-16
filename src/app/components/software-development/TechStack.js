@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
@@ -37,7 +38,7 @@ const CATEGORIES = [
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="b2b-section relative">
+    <section id="tech-stack" className="b2b-section relative py-12">
       <div className="pointer-events-none absolute -top-40 right-1/3 w-[600px] h-[600px] b2b-glow-red opacity-40" />
       <div className="b2b-container relative">
         <motion.div
@@ -47,18 +48,18 @@ const TechStack = () => {
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
+          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-primary)]" />
             Technology Stack
           </motion.div>
-          <motion.h2 variants={fadeUp} className="b2b-h2">
+          <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">The modern software stack — </span>
-            <span className="b2b-text-red-gradient">engineered deliberately.</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} className="b2b-lead mt-6">
+            <span className="text-(--b2b-primary)">engineered deliberately.</span>
+          </h2>
+          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3 mt-6">
             We choose tools to match the problem, not the trend. Every layer of the stack is
             selected for fit, durability, and operational maturity.
-          </motion.p>
+          </p>
         </motion.div>
 
         <motion.div
@@ -72,7 +73,7 @@ const TechStack = () => {
             <motion.div
               key={cat.label}
               variants={fadeUp}
-              className="b2b-card p-7 group"
+              className=" hover:shadow-[inset_0_1px_0_rgba(255,90,77,0.15),0_30px_80px_-40px_rgba(255,59,48,0.45)] p-7 group border-2 border-var(--b2b-primary)/60 rounded-2xl hover:border-var(--b2b-primary)"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -87,7 +88,7 @@ const TechStack = () => {
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
                 {cat.tags.map((t) => (
-                  <span key={t} className="b2b-tech-tag">{t}</span>
+                  <span key={t} className="py-1.5 px-3.5 rounded-xl border-white hover:border-(--b2b-primary) border-2 text-[13px] font-medium text-white/65 transition-all duration-300 hover:bg-(--b2b-primary)/10">{t}</span>
                 ))}
               </div>
             </motion.div>
