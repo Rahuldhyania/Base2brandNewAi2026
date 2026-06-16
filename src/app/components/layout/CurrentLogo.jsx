@@ -11,6 +11,7 @@ const logosList = [
   { slug: "/apple-ecosystem", logourl: "/images/applelogo.png" },
   { slug: "/growth-visibility", logourl: "/images/growth-visibility.png" },
   { slug: "/social-media-services", logourl: "/images/socialmedialogo.png" },
+  { slug: "/emerging-technologies", logourl: "/images/emerging-technologiesLOGO.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {
