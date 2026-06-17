@@ -113,7 +113,7 @@ const Architecture = () => {
     >
       {/* Atmospheric backdrop: paths + smoke + atmosphere combined at low opacity */}
       <div className="absolute inset-0 pointer-events-none">
-        <BackgroundPaths opacity={0.4} />
+        {/* <BackgroundPaths opacity={0.4} /> */}
         <SmokeBackground smokeColor="#7C3AED" opacity={0.14} />
         <Atmosphere intensity={0.25} />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-[radial-gradient(ellipse,rgba(109,40,217,0.08),rgba(3,3,10,0)_70%)]" />

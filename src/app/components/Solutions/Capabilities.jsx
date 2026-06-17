@@ -1,0 +1,136 @@
+'use client'
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Compass,
+  Rocket,
+  Search,
+  Sparkles,
+  MousePointer2,
+  Workflow,
+  ArrowUpRight,
+} from "lucide-react";
+
+
+const Icons = {
+  Compass,
+  Rocket,
+  Search,
+  Sparkles,
+  MousePointer2,
+  Workflow,
+  ArrowUpRight,
+}
+
+
+export default function Capabilities({highlightTag, titleUpper, titleLower, description, capabilitiesData}) {
+  return (
+    <section
+      id="capabilities"
+      className="relative py-10 overflow-hidden"
+      data-testid="capabilities-section"
+    >
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--b2b-primary)/40 to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="section-label"
+            >
+              {highlightTag}
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="mt-6 font-display text-[34px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium text-white"
+            >
+              {titleUpper} {" "}
+              <span className="text-orange-gradient">{titleLower}</span>
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="md:max-w-sm text-zinc-400 text-base leading-relaxed"
+          >
+            {description}
+          </motion.p>
+        </div>
+
+        <div
+          className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          data-testid="capabilities-grid"
+        >
+          {capabilitiesData.map((cap, i) => {
+            const Icon = Icons[cap.icon]
+            return (
+              <motion.div
+                key={cap.id}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.06 }}
+                className="glass-card p-7 relative group flex flex-col"
+                data-testid={`capability-card-${cap.id}`}
+              >
+                <span className="card-corner-mark card-corner-mark--tl" />
+                <span className="card-corner-mark card-corner-mark--tr" />
+                <span className="card-corner-mark card-corner-mark--bl" />
+                <span className="card-corner-mark card-corner-mark--br" />
+                <div className="spotlight" />
+
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-(--b2b-primary)/25 to-[#E26033]/10 border border-(--b2b-primary)/25 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-(--b2b-primary)" />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="status-pulse" />
+                    <span className="font-mono text-[10px] tracking-[0.22em] text-zinc-500 uppercase">
+                      {cap.id}
+                    </span>
+                  </div>
+                </div>
+
+                <h3 className="mt-7 text-[22px] md:text-[24px] font-medium text-white leading-tight">
+                  {cap.title}
+                </h3>
+                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
+                  {cap.description}
+                </p>
+
+                <div className="mt-2 pt-2 border-t border-white/5 grid grid-cols-2 gap-x-3 gap-y-2.5">
+                  {cap.features.map((f) => (
+                    <div
+                      key={f}
+                      className="flex items-center gap-2 text-[13px] text-zinc-300"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-(--b2b-primary)" />
+                      {f}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 flex items-center justify-between text-zinc-500 text-[12px] font-mono tracking-[0.15em] uppercase">
+                  <span>System {String(i + 1).padStart(2, "0")} / 06</span>
+                  <ArrowUpRight
+                    size={16}
+                    className="text-zinc-500 group-hover:text-(--b2b-primary) group-hover:rotate-12 transition-all"
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

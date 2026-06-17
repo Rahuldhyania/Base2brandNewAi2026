@@ -38,7 +38,7 @@ const STEPS = [
 
 const DevelopmentProcess = () => {
   return (
-    <section id="process" className="b2b-section relative">
+    <section id="process" className="py-12 relative">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
@@ -47,15 +47,15 @@ const DevelopmentProcess = () => {
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
+          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
             Development Process
           </motion.div>
-          <motion.h2 variants={fadeUp} className="b2b-h2">
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">From concept to production — </span>
             <span className="b2b-text-red-gradient">one continuous engagement.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="b2b-lead mt-6">
+          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             We engineer in a single, continuous lifecycle — from the first conversation to the
             millionth user.
           </motion.p>
@@ -70,7 +70,7 @@ const DevelopmentProcess = () => {
             whileInView="visible"
             viewport={viewportOnce}
             variants={stagger(0.08)}
-            className="space-y-10"
+            className="space-y-8"
           >
             {STEPS.map((s, idx) => {
               const onLeft = idx % 2 === 0;
@@ -91,7 +91,7 @@ const DevelopmentProcess = () => {
                   </div>
 
                   <div className={`col-span-12 md:col-span-5 ${onLeft ? "md:col-start-1" : "md:col-start-8"} pl-16 md:pl-0`}>
-                    <div className="b2b-card p-7">
+                    <div className="hover:shadow-[inset_0_1px_0_#ff5a4d26,_0_30px_80px_-40px_#ff3b3073] p-7 rounded-2xl border border-(--b2b-primary)/30 hover:border-(--b2b-primary)/50 transition-all duration-300">
                       <h3 className="b2b-h3">{s.title}</h3>
                       <p className="mt-3 text-[14.5px] leading-relaxed text-white/60">{s.desc}</p>
                       <div className="mt-5 pt-4 border-t border-white/[0.06] text-[11px] uppercase tracking-[0.22em] text-white/40">

@@ -31,7 +31,7 @@ export default function Industries() {
       className="relative py-12 border-t border-white/[0.05]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="gap-12 mb-16">
+        <div className="gap-12 mb-10">
           <div className="text-center">
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-2">
               · Industries
@@ -42,9 +42,7 @@ export default function Industries() {
             </h2>
           </div>
           <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed text-center pt-3">
-            We work primarily with regulated, safety-critical and
-            operationally-complex organisations — from advanced manufacturing
-            and life sciences to public-sector and global energy operators.
+            We work primarily with regulated, safety-critical and operationally-complex organisations — from advanced manufacturing and life sciences to public-sector and global energy operators.
           </p>
         </div>
 

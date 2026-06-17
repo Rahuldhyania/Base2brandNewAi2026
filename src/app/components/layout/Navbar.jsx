@@ -36,7 +36,7 @@ const MENU = [
     label: "Solutions",
     href: "#solutions",
     items: [
-      { label: "Sales & Marketing", href: "#solutions" },
+      { label: "Sales & Marketing", href: "/sales-marketing" },
       { label: "Operations", href: "#solutions" },
       { label: "Enterprise", href: "#solutions" },
       { label: "Public Sector & NGOs", href: "#govt" },
@@ -153,10 +153,15 @@ export function Navbar() {
     if (href && href.startsWith("#")) {
       e.preventDefault();
       smoothScrollTo(href);
-      setOpenKey(null);
-      setMobileOpen(false);
     }
+    setOpenKey(null);
+    setMobileOpen(false);
   };
+
+  useEffect(() => {
+    setOpenKey(null);
+    setMobileOpen(false);
+  }, [currentPath]);
 
   const activeMenu = useMemo(
     () => MENU.find((m) => m.label === openKey) || null,

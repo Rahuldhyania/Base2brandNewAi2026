@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { FLOATING_CARDS, HERO_TAGS, BRAND } from "../site/mock";
 import SlotText from "@/components/ui/SlotText";
+import Link from "next/link";
 
 const ICONS = { Search, Target, ShoppingBag, ThumbsUp, Youtube };
 
@@ -20,7 +21,8 @@ function FloatingCard({ card, mouse }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div
+    <Link
+      href={`/social-media-services/#${card.id}`}
       className="absolute hidden md:block z-20"
       style={{
         ...card.style,
@@ -62,7 +64,7 @@ function FloatingCard({ card, mouse }) {
           {card.sub}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

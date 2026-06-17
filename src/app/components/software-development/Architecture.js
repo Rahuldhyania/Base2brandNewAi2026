@@ -15,7 +15,7 @@ const LAYERS = [
 
 const Architecture = () => {
   return (
-    <section id="architecture" className="b2b-section relative">
+    <section id="architecture" className="py-12 relative">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
@@ -25,15 +25,15 @@ const Architecture = () => {
           className="grid grid-cols-12 gap-10"
         >
           <div className="col-span-12 lg:col-span-5">
-            <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
+            <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-primary)]" />
               Architecture
             </motion.div>
-            <motion.h2 variants={fadeUp} className="b2b-h2">
+            <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
               <span className="b2b-text-gradient">Systems designed to </span>
-              <span className="b2b-text-red-gradient">evolve.</span>
-            </motion.h2>
-            <motion.p variants={fadeUp} className="b2b-lead mt-6">
+              <span className="text-(--b2b-primary)">evolve.</span>
+            </h2>
+            <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3 mt-6">
               Modern software products are built as adaptable systems. Base2Brand engineers
               composable architectures that evolve with changing business needs.
             </motion.p>
@@ -72,7 +72,7 @@ const Architecture = () => {
                       className="group relative rounded-xl border border-white/[0.07] bg-white/[0.02] p-4 lg:p-5 hover:border-[color:var(--b2b-red)]/40 hover:bg-[color:var(--b2b-red)]/[0.04] transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-9 h-9 rounded-lg border border-[color:var(--b2b-red)]/30 bg-[color:var(--b2b-red)]/10 grid place-items-center">
+                        <div className="w-9 h-9 rounded-lg border border-white bg-[color:var(--b2b-red)]/10 grid place-items-center rounded-2xl">
                           <Icon className="w-4 h-4 text-[color:var(--b2b-red)]" />
                         </div>
                         <div className="flex-1">

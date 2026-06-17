@@ -53,26 +53,26 @@ const CASES = [
 
 const CaseStudies = () => {
   return (
-    <section id="case-studies" className="b2b-section relative">
+    <section id="case-studies" className="py-12 relative">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
-          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8"
+          className="text-center gap-8"
         >
-          <div className="max-w-2xl">
-            <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
+          <div className="max-w-2xl mx-auto">
+            <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
               Case Studies
             </motion.div>
-            <motion.h2 variants={fadeUp} className="b2b-h2">
+            <motion.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
               <span className="b2b-text-gradient">Outcomes, </span>
-              <span className="b2b-text-red-gradient">not deployments.</span>
+              <span className="text-(--b2b-primary)">not deployments.</span>
             </motion.h2>
           </div>
-          <motion.p variants={fadeUp} className="b2b-lead lg:max-w-sm">
+          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             Engagements are measured by the business outcomes they unlock — not the artifacts they
             ship.
           </motion.p>

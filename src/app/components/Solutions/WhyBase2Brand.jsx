@@ -1,0 +1,104 @@
+'use client'
+import React from "react";
+import { motion } from "framer-motion";
+import { Building2, GitMerge, FlaskConical, Handshake } from "lucide-react";
+
+const REASONS = [
+  {
+    id: "R1",
+    icon: Building2,
+    title: "We Think Like Owners",
+    desc: "Every recommendation is evaluated through business impact.",
+  },
+  {
+    id: "R2",
+    icon: GitMerge,
+    title: "Growth Beyond Marketing",
+    desc: "We connect marketing, sales, operations, and technology.",
+  },
+  {
+    id: "R3",
+    icon: FlaskConical,
+    title: "Research-Led Decisions",
+    desc: "Every strategy begins with understanding the market.",
+  },
+  {
+    id: "R4",
+    icon: Handshake,
+    title: "Long-Term Partnerships",
+    desc: "We focus on sustainable growth, not short-term wins.",
+  },
+];
+
+export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, description}) {
+  return (
+    <section
+      id="why"
+      className="relative py-10 overflow-hidden"
+      data-testid="why-section"
+    >
+      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="section-label"
+          >
+            {highlightTag}
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.05 }}
+            className="mt-6 font-display text-[32px] sm:text-[44px] md:text-[52px] leading-[1.05] font-medium text-white"
+          >
+            {titleUpper}
+            <span className="text-orange-gradient">{titleLower}</span>
+          </motion.h2>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {REASONS.map((r, i) => {
+            const Icon = r.icon;
+            return (
+              <motion.div
+                key={r.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.07 }}
+                className="glass-card p-8 relative flex gap-5"
+                data-testid={`why-card-${r.id}`}
+              >
+                <span className="card-corner-mark card-corner-mark--tl" />
+                <span className="card-corner-mark card-corner-mark--br" />
+                <div className="spotlight" />
+
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--b2b-primary)]/30 to-[var(--b2b-primary)]/var(--b2b-primary)]/25 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-[var(--b2b-primary)]" />  
+                </div>
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-[10px] tracking-[0.22em] text-zinc-500 uppercase">
+                      {r.id}
+                    </span>
+                    <span className="h-px w-10 bg-white/10" />
+                  </div>
+                  <h3 className="mt-2 text-[22px] font-medium text-white">
+                    {r.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                    {r.desc}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

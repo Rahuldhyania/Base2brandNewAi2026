@@ -2,6 +2,8 @@ import Architecture from "@/components/software-development/Architecture";
 import Capabilities from "@/components/software-development/Capabilities";
 import CaseStudies from "@/components/software-development/CaseStudies";
 import DevelopmentProcess from "@/components/software-development/DevelopmentProcess";
+import EngineeringPrinciples from "@/components/software-development/EngineeringPrinciples";
+import FinalCTA from "@/components/software-development/FinalCTA";
 import Hero from "@/components/software-development/Hero";
 import Industries from "@/components/software-development/Industries";
 import ProductsWeBuild from "@/components/software-development/ProductsWeBuild";
@@ -17,10 +19,13 @@ const page = () => {
         <Capabilities />
         <ProductsWeBuild />
         <TechStack />
+
         <Architecture />
         <Industries />
         <DevelopmentProcess />
         <CaseStudies />
+        <EngineeringPrinciples />
+        <FinalCTA />
       </main>
     </div>
   );

@@ -112,7 +112,7 @@ const Capabilities = () => {
                 data-testid={`capability-card-${cap.n}`}
               >
                 {/* corner number */}
-                <div className="flex items-start justify-between mb-7">
+                <div className="flex items-start justify-between mb-4">
                   <div className="w-11 h-11 rounded-xl border border-[color:var(--b2b-primary)]/30 bg-[color:var(--b2b-primary)]/8 grid place-items-center">
                     <Icon className="w-5 h-5 text-[color:var(--b2b-primary)]" />
                   </div>

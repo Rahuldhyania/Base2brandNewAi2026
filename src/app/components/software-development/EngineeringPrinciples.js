@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Boxes, Eye, ShieldCheck, TrendingUp, Wrench } from "lucide-react";
@@ -33,7 +34,7 @@ const PRINCIPLES = [
 
 const EngineeringPrinciples = () => {
   return (
-    <section id="principles" className="b2b-section relative">
+    <section id="principles" className="pb-12 relative">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
@@ -42,15 +43,15 @@ const EngineeringPrinciples = () => {
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="b2b-eyebrow mb-6">
+          <motion.div variants={fadeUp} className="text-(--b2b-primary) ">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
             Engineering Principles
           </motion.div>
-          <motion.h2 variants={fadeUp} className="b2b-h2">
+          <motion.h2 variants={fadeUp} className="mt-2 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">How we </span>
-            <span className="b2b-text-red-gradient">build software.</span>
+            <span className="text-(--b2b-primary)">build software.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="b2b-lead mt-6">
+          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-2">
             Five principles shape every decision — from architecture sketches to production
             runbooks.
           </motion.p>
@@ -61,7 +62,7 @@ const EngineeringPrinciples = () => {
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
+          className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
         >
           {PRINCIPLES.map((p, idx) => {
             const Icon = p.icon;
@@ -70,16 +71,16 @@ const EngineeringPrinciples = () => {
                 key={p.title}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
-                className="b2b-card p-6 group"
+                className="b2b-card p-4 group"
               >
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-2">
                   <div className="w-10 h-10 rounded-xl border border-[color:var(--b2b-red)]/30 bg-[color:var(--b2b-red)]/8 grid place-items-center">
                     <Icon className="w-4 h-4 text-[color:var(--b2b-red)]" />
                   </div>
                   <span className="text-[11px] uppercase tracking-[0.22em] text-white/35 b2b-number">0{idx + 1}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-white/60">{p.desc}</p>
+                <p className="text-[13.5px] leading-relaxed text-white/60">{p.desc}</p>
               </motion.div>
             );
           })}

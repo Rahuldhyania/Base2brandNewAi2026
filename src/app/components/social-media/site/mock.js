@@ -52,9 +52,9 @@ export const FLOATING_CARDS = [
     style: { top: "10%", right: "5%", rotate: "7deg" },
   },
   {
-    id: "ecom",
-    title: "ECOMMERCE",
-    sub: "SALES · GROWTH",
+    id: "orm",
+    title: "ORM",
+    sub: "PROTECT, REPAIR",
     icon: "ShoppingBag",
     color: "#F37335",
     glow: "rgba(243,115,53,0.6)",
@@ -70,7 +70,7 @@ export const FLOATING_CARDS = [
     style: { top: "55%", left: "4%", rotate: "6deg" },
   },
   {
-    id: "yt",
+    id: "youtube",
     title: "YOUTUBE",
     sub: "VIDEO · REACH",
     icon: "Youtube",
