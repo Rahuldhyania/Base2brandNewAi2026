@@ -55,7 +55,7 @@ export function Footer() {
                 <button
                   type="submit"
                   data-testid="footer-newsletter-submit"
-                  className="rounded-full bg-orange-brand font-semibold text-sm px-5 py-3 hover:brightness-110 transition"
+                  className="rounded-full bg-(--b2b-primary) font-semibold text-sm px-5 py-3 hover:brightness-110 transition"
                 >
                   Subscribe
                 </button>

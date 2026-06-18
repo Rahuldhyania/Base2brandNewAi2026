@@ -36,6 +36,7 @@ export default function RotatingEarth({
   interactive = true,
   hotspots = DEFAULT_HOTSPOTS,
   className = "",
+  primaryColor='rgb(21 93 252)'
 }) {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
@@ -50,7 +51,7 @@ export default function RotatingEarth({
     if (!context) return;
 
     // Theme colors
-    const LAND_DOT = "#3B82F6"; // electric blue
+    const LAND_DOT = primaryColor ; // electric blue
     // const LAND_DOT_GLOW = "rgba(139, 92, 246, 0.55)"; // violet glow
     const OUTLINE = "rgba(139, 92, 246, 0.45)";
     const GRATICULE = "rgba(99, 102, 241, 0.18)";

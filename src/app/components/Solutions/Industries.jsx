@@ -8,6 +8,9 @@ import {
   Truck,
   Cpu,
   Briefcase,
+  Building2,
+  Landmark,
+  Users
 } from "lucide-react";
 
 const Icons = {
@@ -17,6 +20,9 @@ const Icons = {
   Truck,
   Cpu,
   Briefcase,
+  Building2,
+  Landmark,
+  Users
 }
 
 export default function Industries({highlightTag, titleUpper, titleLower, description, industriesData}) {
@@ -77,7 +83,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="industry-tag"
+                className="industry-tag hover:bg-[var(--b2b-primary)]/30"
                 data-testid={`industry-${ind.name.toLowerCase().replace(/\s/g, "-")}`}
               >
                 <Icon className="w-4 h-4 text-(--b2b-primary)" />

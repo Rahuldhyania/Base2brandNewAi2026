@@ -59,7 +59,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-display text-[34px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium text-white"
           >
-            {titleUpper}
+            {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
           </motion.h2>
           <motion.p
@@ -126,7 +126,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
                     whileInView={{ width: `${65 + (i * 5)}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="h-full bg-gradient-to-r from-(--b2b-primary) to-[#E26033]"
+                    className="h-full bg-gradient-to-r from-(--b2b-primary) to-(--b2b-primary)/40"
                   />
                 </div>
               </motion.div>

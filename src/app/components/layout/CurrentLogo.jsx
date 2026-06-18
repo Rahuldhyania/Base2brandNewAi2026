@@ -9,9 +9,11 @@ const logosList = [
   { slug: "/", logourl: DEFAULT_LOGO },
   { slug: "/ai-automation", logourl: "/images/aiLogo.png" },
   { slug: "/apple-ecosystem", logourl: "/images/applelogo.png" },
+  { slug: "/enterprise", logourl: "/images/applelogo.png" },
   { slug: "/growth-visibility", logourl: "/images/growth-visibility.png" },
   { slug: "/social-media-services", logourl: "/images/socialmedialogo.png" },
   { slug: "/emerging-technologies", logourl: "/images/emerging-technologiesLOGO.png" },
+  { slug: "/operations-excellence", logourl: "/images/aiLogo.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {

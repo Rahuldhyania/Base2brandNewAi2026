@@ -25,7 +25,7 @@
 
 /* ---------- Gradient text + shift ---------- */
 .text-orange-gradient {
-color: var(--b2b-primary);
+    color: var(--b2b-primary);
 }
 
 .text-mono-gradient {
@@ -69,7 +69,7 @@ color: var(--b2b-primary);
 }
 
 .orbital-ring--accent {
-    border-color: rgba(244, 123, 82, 0.18);
+    border-color: color-mix(in srgb, var(--b2b-primary) 40%, transparent);
     box-shadow: 0 0 80px rgba(244, 123, 82, 0.04) inset;
 }
 
@@ -78,8 +78,14 @@ color: var(--b2b-primary);
     width: 8px;
     height: 8px;
     border-radius: 9999px;
-    background: radial-gradient(circle, #FF9A6B 0%, #F47B52 50%, transparent 100%);
-    box-shadow: 0 0 12px rgba(244, 123, 82, 0.7), 0 0 24px rgba(244, 123, 82, 0.3);
+    background: radial-gradient(circle,
+            color-mix(in srgb, var(--b2b-primary) 60%, white) 0%,
+            var(--b2b-primary) 50%,
+            transparent 100%);
+
+    box-shadow:
+        0 0 12px color-mix(in srgb, var(--b2b-primary) 70%, transparent),
+        0 0 24px color-mix(in srgb, var(--b2b-primary) 30%, transparent);
 }
 
 .orbital-grid {
@@ -96,10 +102,12 @@ color: var(--b2b-primary);
 .glow-orange {
     position: absolute;
     border-radius: 9999px;
-    background: radial-gradient(circle,
-            rgba(244, 123, 82, 0.35) 0%,
-            rgba(244, 123, 82, 0.05) 45%,
-            transparent 75%);
+    background: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--b2b-primary) 35%, transparent) 0%,
+        color-mix(in srgb, var(--b2b-primary) 5%, transparent) 45%,
+        transparent 75%
+    );
     filter: blur(40px);
     pointer-events: none;
 }
@@ -143,17 +151,17 @@ color: var(--b2b-primary);
     animation: pulse-orange 2.2s ease-in-out infinite;
 }
 
-@keyframes pulse-orange {
+@keyframes pulse-primary {
 
     0%,
     100% {
         opacity: 1;
-        box-shadow: 0 0 0 0 rgba(244, 123, 82, 0.55);
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--b2b-primary) 55%, transparent);
     }
 
     50% {
         opacity: 0.85;
-        box-shadow: 0 0 0 8px rgba(244, 123, 82, 0);
+        box-shadow: 0 0 0 8px color-mix(in srgb, var(--b2b-primary) 0%, transparent);
     }
 }
 
@@ -169,7 +177,6 @@ color: var(--b2b-primary);
 }
 
 .glass-card:hover {
-    border-color: rgba(244, 123, 82, 0.35);
     box-shadow: 0 24px 60px -20px var(--b2b-primary)/30;
 }
 
@@ -211,25 +218,33 @@ color: var(--b2b-primary);
 /* ---------- Mission control specific ---------- */
 .mc-frame {
     position: relative;
-    border: 1px solid rgba(244, 123, 82, 0.18);
-    background:
-        linear-gradient(180deg, rgba(13, 13, 18, 0.92) 0%, rgba(7, 7, 10, 0.92) 100%);
+    border: 1px solid color-mix(in srgb, var(--b2b-primary) 18%, transparent);
+
+    background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--b2b-primary) 6%, #0D0D12) 0%,
+        color-mix(in srgb, var(--b2b-primary) 4%, #07070A) 100%
+    );
+
     border-radius: 16px;
     overflow: hidden;
+
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        0 30px 80px -30px rgba(244, 123, 82, 0.25),
-        0 0 1px rgba(244, 123, 82, 0.4);
+        0 30px 80px -30px color-mix(in srgb, var(--b2b-primary) 25%, transparent),
+        0 0 1px color-mix(in srgb, var(--b2b-primary) 40%, transparent);
 }
 
 .mc-scan {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(180deg,
-            transparent 0%,
-            rgba(244, 123, 82, 0.08) 50%,
-            transparent 100%);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        color-mix(in srgb, var(--b2b-primary) 8%, transparent) 50%,
+        transparent 100%
+      );
     height: 35%;
     animation: scan-line 7s linear infinite;
     mix-blend-mode: screen;
@@ -262,8 +277,8 @@ color: var(--b2b-primary);
     border-radius: 9999px;
     background: var(--b2b-primary);
     box-shadow:
-        0 0 0 0 rgba(244, 123, 82, 0.6),
-        0 0 10px rgba(244, 123, 82, 0.9);
+    0 0 0 0 color-mix(in srgb, var(--b2b-primary) 60%, transparent),
+    0 0 10px color-mix(in srgb, var(--b2b-primary) 90%, transparent);
     animation: pulse-orange 1.8s ease-in-out infinite;
     flex-shrink: 0;
 }
@@ -300,7 +315,7 @@ color: var(--b2b-primary);
 .tick-row span {
     display: block;
     width: 3px;
-    background: linear-gradient(180deg, var(--b2b-primary),  rgba(244, 123, 82, 0.2));
+    background: linear-gradient(180deg, var(--b2b-primary), rgba(244, 123, 82, 0.2));
     border-radius: 1px;
 }
 
@@ -311,7 +326,7 @@ color: var(--b2b-primary);
     align-items: center;
     gap: 8px;
     padding: 14px 26px;
-    background: var(--b2b-primary) ;
+    background: var(--b2b-primary);
     background-size: 200% 200%;
     color: #000;
     font-family: "Inter", sans-serif;
@@ -359,14 +374,14 @@ color: var(--b2b-primary);
     font-size: 14px;
     letter-spacing: 0.02em;
     border-radius: 9999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid color-mix(in srgb, var(--b2b-primary) 12%, white);
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
-    border-color: rgba(244, 123, 82, 0.5);
+    border-color: color-mix(in srgb, var(--b2b-primary) 12%, white);
     background: rgba(244, 123, 82, 0.06);
     color: #fff;
 }
@@ -409,7 +424,7 @@ color: var(--b2b-primary);
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 22px;
+    padding: 10px 22px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.02);
@@ -422,8 +437,7 @@ color: var(--b2b-primary);
 }
 
 .industry-tag:hover {
-    border-color: rgba(244, 123, 82, 0.45);
-    background: rgba(244, 123, 82, 0.07);
+    border-color: color-mix(in srgb, var(--b2b-primary) 45%, transparent);
     color: #fff;
     transform: translateY(-2px);
 }
@@ -443,9 +457,9 @@ color: var(--b2b-primary);
     left: -1px;
     right: -1px;
     bottom: -1px;
-    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-            rgba(244, 123, 82, 0.18),
-            transparent 40%);
+    background: radial-gradient(700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            color-mix(in srgb, var(--b2b-primary) 15%, transparent),
+            transparent 45%);
     border-radius: inherit;
     opacity: 0;
     transition: opacity 0.4s ease;

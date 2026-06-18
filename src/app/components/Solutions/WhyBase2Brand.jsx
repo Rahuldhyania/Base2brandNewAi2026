@@ -1,36 +1,18 @@
 'use client'
 import React from "react";
 import { motion } from "framer-motion";
-import { Building2, GitMerge, FlaskConical, Handshake } from "lucide-react";
+import { Building2, GitMerge, FlaskConical, Handshake, Icon } from "lucide-react";
 
-const REASONS = [
-  {
-    id: "R1",
-    icon: Building2,
-    title: "We Think Like Owners",
-    desc: "Every recommendation is evaluated through business impact.",
-  },
-  {
-    id: "R2",
-    icon: GitMerge,
-    title: "Growth Beyond Marketing",
-    desc: "We connect marketing, sales, operations, and technology.",
-  },
-  {
-    id: "R3",
-    icon: FlaskConical,
-    title: "Research-Led Decisions",
-    desc: "Every strategy begins with understanding the market.",
-  },
-  {
-    id: "R4",
-    icon: Handshake,
-    title: "Long-Term Partnerships",
-    desc: "We focus on sustainable growth, not short-term wins.",
-  },
-];
 
-export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, description}) {
+const Icons = {
+  Building2,
+  GitMerge,
+  FlaskConical,
+  Handshake,
+  Icon
+}
+
+export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, description, reasonsData}) {
   return (
     <section
       id="why"
@@ -55,14 +37,14 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-display text-[32px] sm:text-[44px] md:text-[52px] leading-[1.05] font-medium text-white"
           >
-            {titleUpper}
+            {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
           </motion.h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {REASONS.map((r, i) => {
-            const Icon = r.icon;
+          {reasonsData.map((r, i) => {
+            const Icon = Icons[r.icon];
             return (
               <motion.div
                 key={r.id}

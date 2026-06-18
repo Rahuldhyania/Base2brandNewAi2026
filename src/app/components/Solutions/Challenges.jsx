@@ -54,7 +54,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-display text-[32px] sm:text-[40px] md:text-[52px] leading-[1.05] font-medium text-white"
           >
-            {titleUpper}
+            {titleUpper}{' '}
             <br />
             <span className="text-orange-gradient"> {titleLower}</span>
           </motion.h2>
@@ -90,7 +90,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
                 <div className="spotlight" />
 
                 <div className="flex items-start justify-between">
-                  <div className="w-12 h-12 rounded-xl border border-[#F47B52]/25 bg-[#F47B52]/5 flex items-center justify-center group-hover:bg-[#F47B52]/15 transition-colors">
+                  <div className="w-12 h-12 rounded-xl border border-(--b2b-primary)/25 bg-(--b2b-primary)/5 flex items-center justify-center group-hover:bg-(--b2b-primary)/15 transition-colors">
                     {
                       Icon ? 
                         <Icon className="w-5 h-5 text-(--b2b-primary)" />

@@ -181,6 +181,33 @@ const MODULES = [
   },
 ];
 
+const REASONS = [
+  {
+    id: "R1",
+    icon: 'Building2',
+    title: "We Think Like Owners",
+    desc: "Every recommendation is evaluated through business impact.",
+  },
+  {
+    id: "R2",
+    icon: 'GitMerge',
+    title: "Growth Beyond Marketing",
+    desc: "We connect marketing, sales, operations, and technology.",
+  },
+  {
+    id: "R3",
+    icon: 'FlaskConical',
+    title: "Research-Led Decisions",
+    desc: "Every strategy begins with understanding the market.",
+  },
+  {
+    id: "R4",
+    icon: 'Handshake',
+    title: "Long-Term Partnerships",
+    desc: "We focus on sustainable growth, not short-term wins.",
+  },
+];
+
 const Steps = [
   { id: "01", icon: 'Search', label: "Understand", desc: "Map how revenue is generated today." },
   { id: "02", icon: 'Microscope', label: "Research", desc: "Decode market, audience, and competition." },
@@ -303,6 +330,7 @@ const page = () => {
         titleUpper="Built For Owners. "
         titleLower="Built For Outcomes."
         description="We focus on sustainable growth, not short-term wins."
+        reasonsData={REASONS}
       />
       <Process 
        highlightTag={'Process'}

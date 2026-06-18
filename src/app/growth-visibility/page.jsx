@@ -101,8 +101,6 @@ const ITEMS = [
     metrics: ["Observability", "Cost metering", "Governance"],
   },
 ];
-
-
 const steps = [
   {
     n: "01",
@@ -135,13 +133,47 @@ const steps = [
     icon: 'Sparkles',
   },
 ];
+
+const floatingMetrics = [
+  {
+    label: "AI visibility",
+    value: "+340%",
+    icon: 'TrendingUp',
+    pos: "top-6 -left-4 md:left-6",
+    delay: 0.3,
+  },
+  {
+    label: "ChatGPT mention rate",
+    value: "8.2×",
+    icon: 'Bot',
+    pos: "bottom-16 -right-2 md:right-8",
+    delay: 0.55,
+  },
+  {
+    label: "Brand authority",
+    value: "Enterprise",
+    icon: 'ShieldCheck',
+    pos: "top-1/2 -right-6 md:-right-10",
+    delay: 0.75,
+  },
+];
 export default function page() {
   return (
     <main
       data-testid="geo-page"
       className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
     >
-      <Hero />
+      <Hero 
+        highlightTag={'GEO · AEO · AI Search Optimization'}
+        titleUpper={'Dominate'}
+        titleMiddle={'AI Search'}
+        titleLower={'competitors do.'}
+        description={'We get your brand recommended inside ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and the next generation of search — through Generative Engine Optimization (GEO), Answer Engine Optimization (AEO) and AI visibility strategies.'}
+        leftCTA='Book Free Strategy Call'
+        rightCTA={'Get AI Visibility Audit'}
+        primaryColor='rgb(21 93 252)'
+        floatingMetrics={floatingMetrics}
+      />
       <Narrative
         title={"Search has changed. <br /> Your marketing should too."}
         description={[

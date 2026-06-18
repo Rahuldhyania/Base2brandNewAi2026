@@ -9,6 +9,7 @@ import {
   Bot,
 } from "lucide-react";
 import RotatingEarth from "@/components/landing/RotatingEarth";
+import { GlobeHero } from "../visual/GlobeHero";
 
 const Icons = {
   ArrowUpRight,
@@ -51,9 +52,9 @@ export default function Hero({
       <div className="absolute inset-0 noise pointer-events-none mix-blend-overlay" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-center">
           {/* Left */}
-          <div className="lg:col-span-7">
+          <div className="">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -129,52 +130,35 @@ export default function Hero({
           </div>
 
           {/* Right - Rotating Earth */}
-          <div className="lg:col-span-5 relative h-[440px] md:h-[560px]">
+          <div>
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="absolute inset-0"
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1.1 }}
+              className="relative mx-auto w-full max-w-[520px]"
+              data-testid="footprint-globe"
             >
-              {/* Glow ring behind globe */}
-              <div className="absolute inset-8 rounded-full conic-ring blur-3xl opacity-50 animate-pulse-glow" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <RotatingEarth
-                  width={560}
-                  height={560}
-                  autoRotate={true}
-                  interactive={true}
-                  primaryColor={primaryColor}
-                />
+              {/* outer orbit ring */}
+              {/* <div className="pointer-events-none absolute inset-[-6%] rounded-full border border-white/5" />
+              <div className="pointer-events-none absolute inset-[-14%] rounded-full border border-white/[0.04]" /> */}
+              {/* halo */}
+              <div
+                className="pointer-events-none absolute inset-[5%] rounded-full opacity-70"
+                style={{
+                  background:
+                    "radial-gradient(circle, color-mix(in srgb, var(--b2b-primary) 18%, transparent) 0%, transparent 65%)",
+                  filter: "blur(20px)",
+                }}
+              />
+              <div className="relative aspect-square">
+                <GlobeHero className="w-full h-full" />
               </div>
-              {floatingMetrics &&
-                floatingMetrics.map((m, i) => {
-                  const Icon = Icons[m.icon]
-                  return (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 14 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.7, delay: m.delay }}
-                      className={`absolute ${m.pos} animate-float-slow z-10`}
-                      style={{ animationDelay: `${i * 1.2}s` }}
-                    >
-                      <div className="glass-strong rounded-2xl px-4 py-3 flex items-center gap-3 min-w-[170px] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-                        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500/30 to-violet-500/30 border border-white/10 flex items-center justify-center">
-                          <Icon className="w-4 h-4 text-blue-300" />
-                        </div>
-                        <div>
-                          <div className="text-[10px] uppercase tracking-widest text-zinc-500 font-mono">
-                            {m.label}
-                          </div>
-                          <div className="font-display text-lg font-medium text-white">
-                            {m.value}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
+              {/* caption pill */}
+              <div className="mt-6 flex items-center justify-center gap-2 text-xs font-mono-display text-mute uppercase tracking-[0.25em]">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand" />
+                Interactive · drag to rotate
+              </div>
             </motion.div>
           </div>
         </div>

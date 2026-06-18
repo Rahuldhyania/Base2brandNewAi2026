@@ -46,7 +46,7 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           transition={{ duration: 0.8, delay: 0.05 }}
           className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight"
         >
-          {titleUpper}
+          {titleUpper}{' '}
           <br />
           <span className="text-orange-gradient">
             {titleLower}

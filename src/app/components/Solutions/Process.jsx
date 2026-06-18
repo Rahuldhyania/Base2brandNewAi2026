@@ -9,6 +9,7 @@ import {
   Settings2,
   TrendingUp,
   ArrowDown,
+  Rocket
 } from "lucide-react";
 
 const Icons = {
@@ -18,6 +19,7 @@ const Icons = {
   Play,
   Settings2,
   TrendingUp,
+  Rocket
 }
 
 export default function Process({highlightTag, titleUpper, titleLower, StepsData}) {
@@ -56,8 +58,15 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
           <div
             className="hidden md:block absolute left-1/2 -translate-x-1/2 top-4 bottom-4 w-px"
             style={{
-              background:
-                "linear-gradient(180deg, transparent, rgba(244,123,82,0.45) 12%, rgba(244,123,82,0.45) 88%, transparent)",
+              background: `
+                linear-gradient(
+                  180deg,
+                  transparent,
+                  color-mix(in srgb, var(--b2b-primary) 45%, transparent) 12%,
+                  color-mix(in srgb, var(--b2b-primary) 45%, transparent) 88%,
+                  transparent
+                )
+              `,
             }}
           />
           <div className="flex flex-col gap-10">

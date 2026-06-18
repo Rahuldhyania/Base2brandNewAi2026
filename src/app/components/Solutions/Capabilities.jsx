@@ -2,25 +2,62 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
+  Database,
+  Users,
+  Warehouse,
+  Handshake,
+  Bot,
+  Workflow,
+  Truck,
+  Package,
+  Building2,
+  MessageSquare,
+  Brain,
+  Cpu,
+  Network,
+  Eye,
+  TrendingUp,
+  GitBranch,
+  Search,
+  Factory,
+  HeartPulse,
+  ShoppingBag,
+  Briefcase,
+  ArrowUpRight,
+  MousePointer2,
   Compass,
   Rocket,
-  Search,
-  Sparkles,
-  MousePointer2,
-  Workflow,
-  ArrowUpRight,
+  Sparkles
 } from "lucide-react";
 
 
 const Icons = {
+  Database,
+  Users,
+  Warehouse,
+  Handshake,
+  Bot,
+  Workflow,
+  Truck,
+  Package,
+  Building2,
+  MessageSquare,
+  Brain,
+  Cpu,
+  Network,
+  Eye,
+  TrendingUp,
+  GitBranch,
+  Search,
+  Factory,
+  HeartPulse,
+  ShoppingBag,
+  Briefcase,
+  MousePointer2,
   Compass,
   Rocket,
-  Search,
-  Sparkles,
-  MousePointer2,
-  Workflow,
-  ArrowUpRight,
-}
+  Sparkles
+};
 
 
 export default function Capabilities({highlightTag, titleUpper, titleLower, description, capabilitiesData}) {

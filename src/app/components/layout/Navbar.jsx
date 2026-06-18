@@ -37,10 +37,10 @@ const MENU = [
     href: "#solutions",
     items: [
       { label: "Sales & Marketing", href: "/sales-marketing" },
-      { label: "Operations", href: "#solutions" },
-      { label: "Enterprise", href: "#solutions" },
-      { label: "Public Sector & NGOs", href: "#govt" },
-      { label: "Automotive", href: "#industries" },
+      { label: "Operations", href: "/operations-excellence" },
+      { label: "Enterprise", href: "/enterprise" },
+      { label: "Public Sector & NGOs", href: "/public-sector-ngos" },
+      { label: "Intelligent Solutions", href: "/intelligent-solutions" },
     ],
   },
   {

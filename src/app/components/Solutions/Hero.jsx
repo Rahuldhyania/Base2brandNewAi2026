@@ -59,7 +59,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           transition={{ duration: 0.85, ease: "easeOut", delay: 0.1 }}
           className="mt-8 font-display text-[44px] sm:text-[64px] md:text-[88px] lg:text-[104px] leading-[0.95] font-medium text-white"
         >
-          <span className="block">{titleupper}</span>
+          <span className="block">{titleupper}</span>{' '}
           <span className="block text-orange-gradient w-fit mx-auto">{titlelower}</span>
         </motion.h1>
 

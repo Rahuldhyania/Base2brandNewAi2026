@@ -67,8 +67,13 @@ export function OrbitalBackground({
               width: "60%",
               height: "60%",
               transform: "translate(-50%, -50%)",
-              background:
-                "radial-gradient(circle, rgba(244,123,82,0.18) 0%, rgba(244,123,82,0) 70%)",
+              background: `
+              radial-gradient(
+                circle,
+                color-mix(in srgb, var(--b2b-primary) 18%, transparent) 0%,
+                transparent 70%
+              )
+            `,
               filter: "blur(40px)",
             }}
           />

@@ -43,7 +43,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
               transition={{ duration: 0.7, delay: 0.05 }}
               className="mt-6 font-display text-[36px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium tracking-tight text-white"
             >
-              {titleUpper}
+              {titleUpper}{' '}
               <br />
               <span className="text-orange-gradient"> {titleLower}</span>
             </motion.h2>

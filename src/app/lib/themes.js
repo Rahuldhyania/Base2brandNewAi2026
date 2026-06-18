@@ -57,6 +57,20 @@ export const THEMES = {
       pathname === "/software-development" ||
       pathname.startsWith("/software-development/"),
   },
+  enterPrise: {
+    id: "enterprise",
+    className: "theme-enterprise",
+    match: (pathname) =>
+      pathname === "/enterprise" ||
+      pathname.startsWith("/enterprise/"),
+  },
+  operationsExcellence: {
+    id: "operations-excellence",
+    className: "theme-operations-excellence",
+    match: (pathname) =>
+      pathname === "/operations-excellence" ||
+      pathname.startsWith("/operations-excellence/"),
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

@@ -734,6 +734,166 @@ code {
     border-radius: 4px;
 }
 
+/* EnterPrise */
+.theme-enterprise {
+    /* Core surface */
+    --b2b-bg: #020408;
+    --b2b-bg-2: #050810;
+    --b2b-surface: #0d1117;
+    --b2b-primary :#0a84ff;
+    --b2b-surface-2: #11161f;
+    --b2b-border: rgba(255, 255, 255, 0.08);
+    --b2b-border-strong: rgba(255, 255, 255, 0.14);
+    --b2b-glass: rgba(255, 255, 255, 0.05);
+    --b2b-text: #f5f7fa;
+    --b2b-text-muted: #98a2b3;
+    --b2b-text-dim: #667085;
+
+    /* Apple Ecosystem palette */
+    --apple-primary: #0a84ff;
+    --apple-secondary: #5ac8fa;
+    --apple-highlight: #64d2ff;
+    --apple-deep: #0040dd;
+    --apple-glow: rgba(10, 132, 255, 0.35);
+
+    /* Page accents (in-page orange/purple gradients) */
+    --b2b-page-orange: #ff6a2c;
+    --b2b-page-orange-soft: #ffa47a;
+    --b2b-purple: #a855f7;
+    --b2b-purple-soft: #c084fc;
+
+    /* Shared chrome (Navbar, Footer) → Apple blue */
+    --b2b-orange: var(--apple-primary);
+    --b2b-orange-soft: var(--apple-glow);
+
+    /* Bridge → shared utilities (Navbar, Footer, etc.) */
+    --b2b-ink: var(--b2b-text);
+    --b2b-mute: var(--b2b-text-muted);
+    --b2b-line: var(--b2b-border);
+    --b2b-line-strong: var(--b2b-border-strong);
+    --b2b-primary: var(--apple-primary);
+    --b2b-primary-rgb: 10, 132, 255;
+    --b2b-primary-2: var(--apple-secondary);
+    --b2b-primary-2-rgb: 90, 200, 250;
+    --b2b-primary-soft: var(--apple-glow);
+    --b2b-glass-bg: var(--b2b-glass);
+    --b2b-glow-ring: var(--apple-glow);
+    --b2b-glow-shadow: rgba(10, 132, 255, 0.55);
+    --b2b-glow-ambient: var(--apple-glow);
+    --b2b-text-glow: rgba(10, 132, 255, 0.55);
+    --b2b-text-glow-ambient: rgba(10, 132, 255, 0.25);
+    --b2b-ring-orbit: rgba(10, 132, 255, 0.25);
+    --b2b-marker-pulse: var(--apple-primary);
+    --b2b-selection-fg: #ffffff;
+    --b2b-on-primary: #ffffff;
+
+    /* Radii */
+    --radius: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    /* shadcn tokens */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 100% 52%;
+    --chart-1: 212 100% 52%;
+    --chart-2: 197 100% 67%;
+    --chart-3: 30 100% 60%;
+    --chart-4: 270 95% 65%;
+    --chart-5: 340 75% 55%;
+
+    background: var(--b2b-bg);
+    color: var(--b2b-text);
+    font-family: var(--b2b-font-body);
+}
+
+/* Operations Excellence */
+.theme-operations-excellence {
+    /* Core surface */
+    --b2b-bg: #020408;
+    --b2b-bg-2: #050810;
+    --b2b-surface: #0d1117;
+    --b2b-primary :#8B5CF6;
+    --b2b-surface-2: #11161f;
+    --b2b-border: rgba(255, 255, 255, 0.08);
+    --b2b-border-strong: rgba(255, 255, 255, 0.14);
+    --b2b-glass: rgba(255, 255, 255, 0.05);
+    --b2b-text: #f5f7fa;
+    --b2b-text-muted: #98a2b3;
+    --b2b-text-dim: #667085;
+
+    /* Bridge → shared utilities (Navbar, Footer, etc.) */
+    --b2b-ink: var(--b2b-text);
+    --b2b-mute: var(--b2b-text-muted);
+    --b2b-line: var(--b2b-border);
+    --b2b-line-strong: var(--b2b-border-strong);
+    --b2b-primary: var(--apple-primary);
+    --b2b-primary-rgb: 10, 132, 255;
+    --b2b-primary-2: var(--apple-secondary);
+    --b2b-primary-2-rgb: 90, 200, 250;
+    --b2b-primary-soft: var(--apple-glow);
+    --b2b-glass-bg: var(--b2b-glass);
+    --b2b-glow-ring: var(--apple-glow);
+    --b2b-glow-shadow: rgba(10, 132, 255, 0.55);
+    --b2b-glow-ambient: var(--apple-glow);
+    --b2b-text-glow: rgba(10, 132, 255, 0.55);
+    --b2b-text-glow-ambient: rgba(10, 132, 255, 0.25);
+    --b2b-ring-orbit: rgba(10, 132, 255, 0.25);
+    --b2b-marker-pulse: var(--apple-primary);
+    --b2b-selection-fg: #ffffff;
+    --b2b-on-primary: #ffffff;
+
+    /* Radii */
+    --radius: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    /* shadcn tokens */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 100% 52%;
+    --chart-1: 212 100% 52%;
+    --chart-2: 197 100% 67%;
+    --chart-3: 30 100% 60%;
+    --chart-4: 270 95% 65%;
+    --chart-5: 340 75% 55%;
+
+    background: var(--b2b-bg);
+    color: var(--b2b-text);
+    font-family: var(--b2b-font-body);
+}
 /* =============================================================================
    TAILWIND BASE — border color follows active theme tokens
    ============================================================================= */
