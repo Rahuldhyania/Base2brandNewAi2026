@@ -1,8 +1,8 @@
 import { useReducedMotion } from "framer-motion";
-import Container from "@/components/site/Container";
-import SectionHeader from "@/components/site/SectionHeader";
-import Reveal from "@/components/site/Reveal";
-import StatusChip from "@/components/site/StatusChip";
+import Container from "@/components/shopify-solution/site/Container";
+import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
+import Reveal from "@/components/shopify-solution/site/Reveal";
+import StatusChip from "@/components/shopify-solution/site/StatusChip";
 import { cn } from "@/lib/utils";
 
 const KPI_TILES = [

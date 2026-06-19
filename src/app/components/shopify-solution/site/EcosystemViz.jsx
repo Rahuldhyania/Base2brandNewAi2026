@@ -92,7 +92,9 @@ export const EcosystemViz = () => {
       data-testid="ecosystem-map"
       className="relative py-20 sm:py-24 lg:py-28 border-t border-white/[0.06]"
     >
-
+      <div className="absolute left-0 top-1/2 h-[900px] w-[1200px] -translate-y-1/2 overflow-hidden pointer-events-none">
+        <div className="shadow-bgl absolute inset-0 -translate-x-[55%] scale-[1.3] animate-[onloadbgl_1s_ease-in-out_forwards] rounded-full opacity-60" />
+      </div>
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -114,7 +116,7 @@ export const EcosystemViz = () => {
         </div>
 
         {/* Hub diagram (desktop) */}
-        <div className="mt-14 hidden lg:block">
+        <div className="mt-10 hidden lg:block">
           <div className="relative grid grid-cols-3 items-center gap-6">
             {/* Left categories */}
             <div className="space-y-6">
@@ -167,7 +169,7 @@ export const EcosystemViz = () => {
         </div>
 
         {/* Mobile / tablet: stacked categories */}
-        <div className="mt-12 lg:hidden space-y-6">
+        <div className="mt-10 lg:hidden space-y-6">
           {CATEGORIES.map((cat) => (
             <CategoryBlock
               key={cat.key}
@@ -180,6 +182,7 @@ export const EcosystemViz = () => {
           ))}
         </div>
       </Container>
+
     </section>
   );
 };
