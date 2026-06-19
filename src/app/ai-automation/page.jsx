@@ -166,7 +166,7 @@ export default function page() {
         ITEMS={ITEMS}
       />
       <Architecture />
-      <TechStack 
+      <TechStack
         highlightTag={'BUILT ON THE LATEST AI STACK'}
         title={"Models, frameworks, and infrastructure — composed deliberately."}
       />

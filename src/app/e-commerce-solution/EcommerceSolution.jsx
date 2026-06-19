@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import LeadFormDialog from "@/components/shopify-solution/site/LeadFormDialog";
 import Hero from "@/components/shopify-solution/site/Hero";
+import CommerceSystems from "@/components/shopify-solution/site/CommerceSystems";
+import EcosystemViz from "@/components/shopify-solution/site/EcosystemViz";
 
 const EcommerceSolution = () => {
   const [leadFormOpen, setLeadFormOpen] = useState(false);
@@ -13,6 +15,8 @@ const EcommerceSolution = () => {
       className="relative min-h-screen bg-[#050505] text-white overflow-x-hidden"
     >
       <Hero onOpenLeadForm={openLeadForm} />
+      <CommerceSystems />
+      <EcosystemViz />
       <LeadFormDialog open={leadFormOpen} onOpenChange={setLeadFormOpen} />
     </main>
   );

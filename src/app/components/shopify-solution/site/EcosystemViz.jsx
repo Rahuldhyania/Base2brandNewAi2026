@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Container from "@/components/site/Container";
-import SectionHeader from "@/components/site/SectionHeader";
-import Reveal from "@/components/site/Reveal";
-import StatusChip from "@/components/site/StatusChip";
+import Container from "@/components/shopify-solution/site/Container";
+import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
+import Reveal from "@/components/shopify-solution/site/Reveal";
+import StatusChip from "@/components/shopify-solution/site/StatusChip";
 import { cn } from "@/lib/utils";
 import {
   ShopifyLogo,
@@ -12,7 +12,7 @@ import {
   RechargeLogo,
   MetaLogo,
   GoogleLogo,
-} from "@/components/site/Logos";
+} from "@/components/shopify-solution/site/Logos";
 
 const CATEGORIES = [
   {
@@ -92,6 +92,7 @@ export const EcosystemViz = () => {
       data-testid="ecosystem-map"
       className="relative py-20 sm:py-24 lg:py-28 border-t border-white/[0.06]"
     >
+
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -114,9 +115,9 @@ export const EcosystemViz = () => {
 
         {/* Hub diagram (desktop) */}
         <div className="mt-14 hidden lg:block">
-          <div className="relative grid grid-cols-12 items-center gap-6">
+          <div className="relative grid grid-cols-3 items-center gap-6">
             {/* Left categories */}
-            <div className="col-span-3 space-y-6">
+            <div className="space-y-6">
               {CATEGORIES.slice(0, 2).map((cat) => (
                 <CategoryBlock
                   key={cat.key}
@@ -130,7 +131,7 @@ export const EcosystemViz = () => {
             </div>
 
             {/* Central hub */}
-            <div className="col-span-6 flex items-center justify-center relative">
+            <div className="flex items-center justify-center relative">
               <CentralHub />
               {/* Connectors (subtle dashed lines, decorative) */}
               <div
@@ -150,7 +151,7 @@ export const EcosystemViz = () => {
             </div>
 
             {/* Right categories */}
-            <div className="col-span-3 space-y-6">
+            <div className="space-y-6">
               {CATEGORIES.slice(2).map((cat) => (
                 <CategoryBlock
                   key={cat.key}

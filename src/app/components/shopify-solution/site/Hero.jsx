@@ -268,16 +268,16 @@ export const Hero = ({ onOpenLeadForm }) => {
 
         {/* === EXACT illuminated text treatment from the original (recolored) === */}
         <div
-          className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-[68px]  font-semibold leading-[1.04] tracking-[-0.035em] max-w-[1100px]"
+          className="text-center text-4xl sm:text-5xl md:text-6xl   font-semibold leading-[1.04] tracking-[-0.035em] max-w-[1100px]"
           aria-hidden="true"
         >
           <span
             className={cn(
               "relative inline-block pointer-events-auto",
-              "before:absolute before:inset-0 before:animate-[onloadopacity_1s_ease-out_forwards] before:opacity-0 before:content-[attr(data-text)]",
-              "before:bg-[linear-gradient(0deg,#dfe5ee_0%,#fffaf6_50%)] before:bg-clip-text before:text-[#fffaf6]",
+              // "before:absolute before:inset-0 before:animate-[onloadopacity_1s_ease-out_forwards] before:opacity-0 before:content-[attr(data-text)]",
+              
             )}
-            style={{ filter: "url(#glow-4)" }}
+            // style={{ filter: "url(#glow-4)" }}
             data-text="Built Around Shopify."
           >
             Built Around Shopify.
@@ -289,7 +289,7 @@ export const Hero = ({ onOpenLeadForm }) => {
               "before:absolute before:inset-0 before:animate-[onloadopacity_1s_ease-out_forwards] before:opacity-0 before:content-[attr(data-text)]",
               "before:bg-[linear-gradient(0deg,#dfe5ee_0%,#fffaf6_50%)] before:bg-clip-text before:text-[#fffaf6]",
             )}
-            style={{ filter: "url(#glow-4)" }}
+            // style={{ filter: "url(#glow-4)" }}
             data-text="Engineered For Growth."
           >
             Engineered For Growth.
@@ -305,8 +305,8 @@ export const Hero = ({ onOpenLeadForm }) => {
         <div
           className="relative mt-6 sm:mt-8 lg:mt-8 animate-[onloadopacity_1.2s_ease-out_forwards] opacity-0 pointer-events-auto"
           style={{
-            width: (r2 + nodeSize / 2) * 2 + 32,
-            height: (r2 + nodeSize / 2) * 2 + 32,
+            width: (r2 + nodeSize / 2) * 2 + 25,
+            height: (r2 + nodeSize / 2) * 2 + 25,
           }}
         >
           {/* faint outermost ring */}
@@ -314,8 +314,8 @@ export const Hero = ({ onOpenLeadForm }) => {
             aria-hidden
             className="absolute left-1/2 top-1/2 rounded-full border border-white/[0.06] pointer-events-none"
             style={{
-              width: (r2 + 56) * 2,
-              height: (r2 + 56) * 2,
+              width: (r2 + 40) * 2,
+              height: (r2 + 40) * 2,
               transform: "translate(-50%, -50%)",
             }}
           />

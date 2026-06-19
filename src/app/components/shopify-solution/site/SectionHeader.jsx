@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Reveal from "@/components/site/Reveal";
-import MonoLabel from "@/components/site/MonoLabel";
+import MonoLabel from "@/components/shopify-solution/site/MonoLabel";
 
 export const SectionHeader = ({
   eyebrow,
@@ -26,7 +26,7 @@ export const SectionHeader = ({
       <Reveal delay={0.05}>
         <h2
           className={cn(
-            "font-display mt-3 text-3xl sm:text-4xl lg:text-5xl font-[650] text-white tracking-[-0.025em] leading-[1.05]",
+            "font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-3xl",
             titleClassName,
           )}
         >

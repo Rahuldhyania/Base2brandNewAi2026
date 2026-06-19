@@ -1,3 +1,4 @@
+'use client'
 import {
   PenTool,
   Code2,
@@ -7,10 +8,10 @@ import {
   Repeat,
   LineChart,
 } from "lucide-react";
-import Container from "@/components/site/Container";
-import SectionHeader from "@/components/site/SectionHeader";
-import Reveal from "@/components/site/Reveal";
-import StatusChip from "@/components/site/StatusChip";
+import Container from "@/components/shopify-solution/site/Container";
+import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
+import Reveal from "@/components/shopify-solution/site/Reveal";
+import StatusChip from "@/components/shopify-solution/site/StatusChip";
 import { cn } from "@/lib/utils";
 
 const MODULES = [
@@ -84,7 +85,7 @@ export const CommerceSystems = () => {
     <section
       id="services"
       data-testid="commerce-systems-section"
-      className="relative py-20 sm:py-24 lg:py-28"
+      className="relative py-14"
     >
       <div
         aria-hidden
@@ -106,15 +107,15 @@ export const CommerceSystems = () => {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {MODULES.map((m, idx) => {
             const Icon = m.icon;
             return (
-              <Reveal key={m.key} delay={idx * 0.05}>
+              <Reveal className="h-full" key={m.key} delay={idx * 0.05}>
                 <article
                   data-testid={`service-module-card-${m.key}`}
                   className={cn(
-                    "group relative rounded-2xl p-5 sm:p-6",
+                    "group relative rounded-2xl p-5 sm:p-6 h-full",
                     "bg-white/[0.035] border border-white/10",
                     "hover:border-white/20 hover:bg-white/[0.05]",
                     "transition-colors duration-200",
