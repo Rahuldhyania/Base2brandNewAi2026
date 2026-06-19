@@ -17,45 +17,29 @@ export const ValueProp = () => {
         >
           <div className="lg:col-span-7">
             <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-6 text-(--b2b-primary)">
-              ▸ The Base2Brand Approach
+              ▸ Mission Statement
             </p>
             <h2
               data-testid="value-prop-headline"
               className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5.5vw,4.75rem)]"
             >
-              Digital Marketing Built Around{" "}
-              <span className="text-(--b2b-primary)">Revenue</span>,<br />
-              Not Vanity Metrics.
+              Solving{" "}
+              <span className="text-(--b2b-primary)">Problems</span>
+              <br />
+              That Matter.
             </h2>
           </div>
           <div className="lg:col-span-5 space-y-5 text-base md:text-lg text-muted-foreground lg:pt-6">
-            <p>More clicks mean nothing without conversions.</p>
-            <p>More traffic means nothing without customers.</p>
             <p>
-              And more ad spend means nothing without measurable business
-              growth.
+              Technology should improve lives, strengthen communities, and
+              empower organizations working toward meaningful change.
             </p>
             <div className="h-px w-12 bg-brand my-6" />
             <p>
-              At Base2Brand, we combine{" "}
-              <span className="text-foreground font-semibold">
-                performance marketing, conversion strategy, creative execution,
-                SEO, paid advertising, retention systems
-              </span>
-              , and{" "}
-              <span className="text-foreground font-semibold">
-                AI-powered optimization
-              </span>{" "}
-              to help businesses grow smarter.
-            </p>
-            <p>
-              We don't believe in marketing that simply looks good in reports.
-              We build growth systems that generate{" "}
-              <span className="text-foreground font-semibold">
-                qualified leads, stronger customer acquisition, better
-                retention, and long-term brand visibility
-              </span>
-              .
+              Whether supporting educational institutions, nonprofit initiatives,
+              or government modernization efforts, we approach every engagement
+              with a long-term perspective focused on measurable outcomes,
+              operational efficiency, and community impact.
             </p>
           </div>
         </motion.div>

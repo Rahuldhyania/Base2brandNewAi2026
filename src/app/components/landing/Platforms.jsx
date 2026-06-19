@@ -19,7 +19,7 @@ export default function Platforms() {
   return (
     <section
       data-testid="platforms-section"
-      className="relative py-24 md:py-32 border-y border-white/5 bg-[#06060A]"
+      className="relative py-14 border-y border-white/5 bg-[#06060A]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto">

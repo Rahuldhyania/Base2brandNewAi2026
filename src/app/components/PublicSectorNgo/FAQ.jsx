@@ -41,7 +41,7 @@ export const FAQ = () => {
     <section
       id="faq"
       data-testid="faq-accordion"
-      className="relative py-24 md:py-32 border-y border-border bg-secondary/30"
+      className="relative py-14 border-y border-border bg-secondary/30"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12">

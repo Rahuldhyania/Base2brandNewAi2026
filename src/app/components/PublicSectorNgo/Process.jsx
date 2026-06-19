@@ -4,23 +4,33 @@ import { motion } from "framer-motion";
 const steps = [
   {
     n: "01",
-    title: "Understand The Growth Problem",
-    desc: "We identify what's slowing your sales, visibility, or lead generation. Deep-dive audit, market analysis, and gap discovery.",
+    title: "Understand the Mission",
+    desc: "We begin by understanding the communities you serve, your operational challenges, and the outcomes that matter most.",
+    tags: ["Mission Review", "Stakeholder Analysis", "Opportunity Mapping"],
   },
   {
     n: "02",
-    title: "Build A Smart Marketing Strategy",
-    desc: "A custom roadmap designed around your goals, audience, and market — not a recycled template.",
+    title: "Assess Systems & Operations",
+    desc: "We evaluate current processes, infrastructure, and technology gaps to identify improvement opportunities.",
+    tags: ["System Audit", "Workflow Review", "Data Assessment"],
   },
   {
     n: "03",
-    title: "Launch & Optimize Campaigns",
-    desc: "From ads to SEO to automation, we execute and continuously improve performance week after week.",
+    title: "Design the Solution",
+    desc: "Technology, user experience, and operational requirements come together to create a practical roadmap.",
+    tags: ["Solution Design", "User Experience", "Implementation Plan"],
   },
   {
     n: "04",
-    title: "Scale What Works",
-    desc: "Once growth becomes predictable, we focus on scaling profitably — bigger budgets, bigger returns.",
+    title: "Build & Deploy",
+    desc: "We develop, integrate, and launch secure, scalable solutions aligned with organizational goals.",
+    tags: ["Development", "Integration", "Deployment"],
+  },
+  {
+    n: "05",
+    title: "Measure & Improve",
+    desc: "Continuous monitoring, reporting, and optimization ensure long-term success.",
+    tags: ["Analytics", "Optimization", "Long-Term Support"],
   },
 ];
 
@@ -34,21 +44,23 @@ export const Process = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="max-w-3xl mb-12">
           <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-5">
-            ▸ Our Process
+            ▸ Process Timeline
           </p>
           <h2
             data-testid="process-headline"
             className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)]"
           >
-            How We Help Businesses Grow
+            From Discovery{" "}
+            <span className="text-brand">To Community</span>
+            <br />
+            Impact.
           </h2>
         </div>
 
         <div className="relative">
-          {/* vertical line on mobile, horizontal connector on desktop */}
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-border" />
+          <div className="hidden xl:block absolute top-12 left-0 right-0 h-px bg-border" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 xl:gap-6">
             {steps.map((s, i) => (
               <motion.div
                 key={s.n}
@@ -59,7 +71,7 @@ export const Process = () => {
                 data-testid={`process-step-${i + 1}`}
                 className="relative"
               >
-                <div className="hidden lg:block absolute top-9 left-0 w-7 h-7 -translate-y-1/2 -translate-x-0 z-10">
+                <div className="hidden xl:block absolute top-9 left-0 w-7 h-7 -translate-y-1/2 z-10">
                   <div className="w-3.5 h-3.5 rounded-full bg-brand ring-4 ring-background" />
                 </div>
                 <div className="font-display text-5xl md:text-6xl font-bold text-brand/90 leading-none mb-4 text-(--b2b-primary)">
@@ -71,6 +83,16 @@ export const Process = () => {
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed pr-2">
                   {s.desc}
                 </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {s.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 rounded-full hairline bg-secondary/60 text-[10px] uppercase tracking-wider text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
