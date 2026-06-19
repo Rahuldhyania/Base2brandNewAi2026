@@ -429,6 +429,7 @@ const page = () => {
         description="Whether you're modernizing legacy systems, implementing intelligent automation, or building enterprise platforms from the ground up, Base2Brand helps organizations create connected ecosystems designed for long-term growth."
       />
     </div>
+    
   );
 };
 
