@@ -1063,6 +1063,187 @@ code {
 .theme-enterprise-systems .erp-surface-panel {
     background: color-mix(in srgb, var(--b2b-surface) 85%, transparent);
 }
+
+/* =============================================================================
+   THEME: E-COMMERCE / SHOPIFY — Shopify green #95BF47
+   ============================================================================= */
+
+.theme-e-commerce-solution {
+    --b2b-primary: #95bf47;
+    --b2b-primary-rgb: 149, 191, 71;
+    --b2b-primary-2: #b7e36a;
+    --b2b-primary-2-rgb: 183, 227, 106;
+    --b2b-primary-soft: rgba(149, 191, 71, 0.18);
+    --b2b-accent-glow: rgba(149, 191, 71, 0.16);
+    --b2b-accent-glow-strong: rgba(149, 191, 71, 0.35);
+
+    --b2b-bg: #050505;
+    --b2b-bg-2: #0a0b0c;
+    --b2b-surface: #0f1112;
+    --b2b-surface-2: #141618;
+    --b2b-border: rgba(255, 255, 255, 0.08);
+    --b2b-border-strong: rgba(255, 255, 255, 0.14);
+    --b2b-glass: rgba(255, 255, 255, 0.05);
+    --b2b-text: #f5f7fa;
+    --b2b-text-muted: #98a2b3;
+    --b2b-text-dim: #667085;
+
+    --b2b-orange: var(--b2b-primary);
+    --b2b-orange-2: var(--b2b-primary-2);
+    --b2b-orange-soft: var(--b2b-primary-soft);
+
+    --b2b-ink: var(--b2b-text);
+    --b2b-mute: var(--b2b-text-muted);
+    --b2b-line: var(--b2b-border);
+    --b2b-line-strong: var(--b2b-border-strong);
+    --b2b-glass-bg: var(--b2b-glass);
+    --b2b-glow-ring: var(--b2b-primary-soft);
+    --b2b-glow-shadow: rgba(149, 191, 71, 0.35);
+    --b2b-glow-ambient: rgba(149, 191, 71, 0.12);
+    --b2b-text-glow: rgba(149, 191, 71, 0.45);
+    --b2b-text-glow-ambient: rgba(149, 191, 71, 0.18);
+    --b2b-ring-orbit: rgba(149, 191, 71, 0.22);
+    --b2b-shadow-sm: rgba(149, 191, 71, 0.12);
+    --b2b-shadow-md: rgba(149, 191, 71, 0.22);
+    --b2b-shadow-lg: rgba(149, 191, 71, 0.32);
+    --b2b-marker-pulse: var(--b2b-primary);
+    --b2b-selection-fg: #071006;
+    --b2b-on-primary: #071006;
+
+    --radius: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    --background: 0 0% 2%;
+    --foreground: 210 40% 98%;
+    --card: 210 6% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 210 6% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 79 46% 51%;
+    --primary-foreground: 100 20% 4%;
+    --secondary: 210 6% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 6% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 79 46% 51%;
+    --accent-foreground: 100 20% 4%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 6% 16%;
+    --input: 210 6% 16%;
+    --ring: 79 46% 51%;
+    --chart-1: 79 46% 51%;
+    --chart-2: 79 40% 42%;
+    --chart-3: 210 6% 28%;
+    --chart-4: 210 6% 20%;
+    --chart-5: 210 6% 14%;
+
+    background: var(--b2b-bg);
+    color: var(--b2b-text);
+    font-family: var(--b2b-font-body);
+}
+
+.theme-e-commerce-solution ::selection {
+    background: var(--b2b-primary);
+    color: var(--b2b-selection-fg);
+}
+
+.theme-e-commerce-solution .status-dot {
+    background-color: var(--b2b-primary);
+    box-shadow:
+        0 0 8px var(--b2b-primary-soft),
+        0 0 16px var(--b2b-glow-shadow);
+}
+
+.theme-e-commerce-solution .shopify-surface-panel {
+    background: color-mix(in srgb, var(--b2b-surface) 85%, transparent);
+}
+
+.theme-e-commerce-solution .shadow-bgt {
+    background: radial-gradient(
+        ellipse 68% 53% at 50% 28%,
+        rgba(var(--b2b-primary-rgb), 0.72) 0%,
+        rgba(var(--b2b-primary-rgb), 0.28) 32%,
+        rgba(var(--b2b-primary-rgb), 0.1) 56%,
+        transparent 76%
+    );
+    box-shadow:
+        0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.14) inset,
+        0 0 240px 90px rgba(var(--b2b-primary-rgb), 0.07);
+    filter: blur(3px);
+}
+
+.theme-e-commerce-solution .shadow-bgb {
+    background: radial-gradient(
+        ellipse 68% 53% at 50% 72%,
+        rgba(var(--b2b-primary-rgb), 0.52) 0%,
+        rgba(var(--b2b-primary-rgb), 0.18) 36%,
+        rgba(var(--b2b-primary-rgb), 0.06) 58%,
+        transparent 76%
+    );
+    box-shadow:
+        0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.12) inset,
+        0 0 240px 90px rgba(var(--b2b-primary-rgb), 0.06);
+    filter: blur(3px);
+}
+
+.theme-e-commerce-solution .shadow-bgb-reverse {
+    background: radial-gradient(
+        ellipse 68% 53% at 50% 72%,
+        rgba(var(--b2b-primary-rgb), 0.72) 0%,
+        rgba(var(--b2b-primary-rgb), 0.28) 32%,
+        rgba(var(--b2b-primary-rgb), 0.1) 56%,
+        transparent 76%
+    );
+    box-shadow:
+        0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.14) inset,
+        0 0 240px 90px rgba(var(--b2b-primary-rgb), 0.07);
+    filter: blur(3px);
+}
+
+@keyframes onloadbgt {
+    0% {
+        opacity: 0;
+        transform: translateY(-92%) scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(-70%) scale(1.25);
+    }
+}
+
+@keyframes onloadbgb {
+    0% {
+        opacity: 0;
+        transform: translateY(-55%) scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(-70%) scale(1.25);
+    }
+}
+
+@keyframes onloadbgbreverse {
+    0% {
+        opacity: 0;
+        transform: translateY(92%) scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(70%) scale(1.25);
+    }
+}
+
+@keyframes onloadopacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* =============================================================================
    TAILWIND BASE — border color follows active theme tokens
    ============================================================================= */
@@ -1080,6 +1261,9 @@ code {
         border-color: hsl(var(--border));
     }
     .theme-enterprise-systems * {
+        border-color: hsl(var(--border));
+    }
+    .theme-e-commerce-solution * {
         border-color: hsl(var(--border));
     }
 }

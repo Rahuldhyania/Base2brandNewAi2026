@@ -31,7 +31,13 @@ export default function RouteTransition({ tint = "orange" }) {
   }, [pathname]);
 
   const accent =
-    tint === "blue" ? "#0A84FF" : tint === "purple" ? "#A855F7" : "#FF6A2C";
+    tint === "blue"
+      ? "#0A84FF"
+      : tint === "purple"
+        ? "#A855F7"
+        : tint === "green"
+          ? "#95BF47"
+          : "#FF6A2C";
 
   return (
     <AnimatePresence>

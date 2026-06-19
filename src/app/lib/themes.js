@@ -85,6 +85,13 @@ export const THEMES = {
       pathname === "/enterprise-systems" ||
       pathname.startsWith("/enterprise-systems/"),
   },
+  eCommerceSolution: {
+    id: "e-commerce-solution",
+    className: "theme-e-commerce-solution",
+    match: (pathname) =>
+      pathname === "/e-commerce-solution" ||
+      pathname.startsWith("/e-commerce-solution/"),
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */
