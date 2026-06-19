@@ -64,12 +64,26 @@ export const THEMES = {
       pathname === "/enterprise" ||
       pathname.startsWith("/enterprise/"),
   },
+  erp: {
+    id: "erp",
+    className: "theme-enterprise",
+    match: (pathname) =>
+      pathname === "/erp" ||
+      pathname.startsWith("/erp/"),
+  },
   operationsExcellence: {
     id: "operations-excellence",
     className: "theme-operations-excellence",
     match: (pathname) =>
       pathname === "/operations-excellence" ||
       pathname.startsWith("/operations-excellence/"),
+  },
+  enterpriseSystems: {
+    id: "enterprise-systems",
+    className: "theme-enterprise-systems",
+    match: (pathname) =>
+      pathname === "/enterprise-systems" ||
+      pathname.startsWith("/enterprise-systems/"),
   },
 };
 

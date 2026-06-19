@@ -14,6 +14,7 @@ const logosList = [
   { slug: "/social-media-services", logourl: "/images/socialmedialogo.png" },
   { slug: "/emerging-technologies", logourl: "/images/emerging-technologiesLOGO.png" },
   { slug: "/operations-excellence", logourl: "/images/aiLogo.png" },
+  { slug: "/enterprise-systems", logourl: "/images/enterprise-logo.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {

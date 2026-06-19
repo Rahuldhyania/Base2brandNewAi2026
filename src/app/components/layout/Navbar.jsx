@@ -27,7 +27,7 @@ const MENU = [
       { label: "Apple Ecosystem Development", href: "/apple-ecosystem" },
       { label: "Ecommerce Solutions", href: "#services" },
       { label: "Growth & Visibility", href: "/growth-visibility" },
-      { label: "Enterprise Systems", href: "#services" },
+      { label: "Enterprise Systems", href: "/enterprise-systems" },
       { label: "Emerging Technologies", href: "/emerging-technologies" },
       { label: "Social Media Services", href: "/social-media-services" },
     ],
