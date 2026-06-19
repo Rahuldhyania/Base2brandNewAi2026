@@ -15,6 +15,7 @@ const logosList = [
   { slug: "/emerging-technologies", logourl: "/images/emerging-technologiesLOGO.png" },
   { slug: "/operations-excellence", logourl: "/images/aiLogo.png" },
   { slug: "/enterprise-systems", logourl: "/images/enterprise-logo.png" },
+  { slug: "/e-commerce-solution", logourl: "/images/shopify-solution.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {

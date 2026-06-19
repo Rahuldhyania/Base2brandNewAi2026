@@ -516,7 +516,7 @@ export default function CardFanCarousel({
         >
             <div
                 ref={containerRef}
-                className="relative mx-auto w-full overflow-visible h-[30rem] sm:h-[34rem] md:h-[36rem] lg:h-[42rem] xl:h-[46rem]"
+                className="relative mx-auto w-full overflow-visible h-[30rem] sm:h-[34rem] md:h-[36rem] lg:h-[40rem]"
             >
                 {cards.map((card, index) => {
                     const content = renderCardContent(card, index);

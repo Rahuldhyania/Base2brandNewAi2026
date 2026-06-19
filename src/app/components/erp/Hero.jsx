@@ -29,7 +29,7 @@ export const Hero = () => {
             />
 
             {/* Content */}
-            <div className="relative z-10 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 pt-32 sm:pt-40 pb-18 lg:pb-18">
+            <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 pt-32 sm:pt-40 pb-18 lg:pb-18">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-center">
                     {/* Left: content */}
                     <div className="max-w-xl">
@@ -54,7 +54,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.2,
                             }}
-                            className="mt-8 font-display text-[40px] sm:text-[54px] lg:text-[64px] leading-[1.02] tracking-[-0.025em] font-light text-white"
+                            className="mt-4 font-display text-[40px] sm:text-[54px] lg:text-[64px] leading-[1.02] tracking-[-0.025em] font-light text-white"
                             data-testid="hero-headline"
                         >
                             From{" "}

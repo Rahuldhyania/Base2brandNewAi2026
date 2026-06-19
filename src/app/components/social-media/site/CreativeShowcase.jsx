@@ -156,7 +156,7 @@ export default function CreativeShowcase() {
       id="showcase"
       className="relative py-12 border-t border-b2b-border"
     >
-      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="text-center">
           <label className="label-mono">Creative Showcase</label>
           <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">

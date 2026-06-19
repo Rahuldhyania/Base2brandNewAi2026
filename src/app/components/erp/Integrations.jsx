@@ -66,11 +66,10 @@ const LogoItem = ({ Icon, label, index }) => (
 const MarqueeRow = ({ reverse = false }) => (
     <div className="overflow-hidden">
         <div
-            className={`flex items-center gap-12 w-max whitespace-nowrap ${
-                reverse
+            className={`flex items-center gap-12 w-max whitespace-nowrap ${reverse
                     ? "animate-marquee-reverse [animation-duration:75s]"
                     : "animate-marquee [animation-duration:65s]"
-            }`}
+                }`}
         >
             {MARQUEE_LOGOS.map(({ Icon, label }, i) => (
                 <LogoItem
@@ -91,7 +90,7 @@ export const Integrations = () => {
             className="relative py-12 md:py-16 overflow-hidden"
             data-testid="integrations-section"
         >
-            <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+            <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
                 <SectionHeading
                     eyebrow="Connected Ecosystem"
                     title={
@@ -123,7 +122,7 @@ export const Integrations = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="mt-16 mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16"
+                className="mt-16 mx-auto max-w-7xl px-6 sm:px-10 lg:px-16"
             >
                 <div className="rounded-2xl border border-white/[0.07] erp-surface-panel backdrop-blur-sm px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-3">

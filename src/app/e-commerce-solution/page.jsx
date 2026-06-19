@@ -1,12 +1,22 @@
-import React from "react";
+"use client";
+
+import Layout from "@/components/apple/Layout";
+import StarsBackground from "@/components/erp/StarsBackground";
 import EcommerceSolution from "./EcommerceSolution";
 import "./ecommerce.css";
-const page = () => {
+export default function EcommerceSolutionPage() {
   return (
-    <main>
-      <EcommerceSolution />
-    </main>
-  );
-};
+    <Layout tint="green">
+      <div className="theme-e-commerce-solution relative min-h-screen overflow-x-hidden">
+        <StarsBackground
+          className="!fixed inset-0 z-0 pointer-events-none"
+          starColor="#95BF47"
+        />
 
-export default page;
+        <div className="relative z-[1]">
+          <EcommerceSolution />
+        </div>
+      </div>
+    </Layout>
+  );
+}

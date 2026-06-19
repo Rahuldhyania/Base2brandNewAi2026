@@ -4,7 +4,7 @@ import BackgroundPaths from "@/components/site/BackgroundPaths";
 import Rocket from "@/components/site/Rocket";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 
-const FinalCTA = () => {
+const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, CTARight, features = [] }) => {
   return (
     <section
       id="contact"
@@ -45,7 +45,7 @@ const FinalCTA = () => {
             testId="final-cta-eyebrow"
             className="justify-center mx-auto"
           >
-            START AN AI TRANSFORMATION
+            {highlightTag}
           </ShiningText>
         </Reveal>
 
@@ -54,9 +54,9 @@ const FinalCTA = () => {
             data-testid="final-cta-headline"
             className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-[-0.04em] font-medium text-balance"
           >
-            Tell us the hardest workflow{" "}
-            <span className="bg-gradient-to-br from-[#C084FC] via-[#A855F7] to-[#6D28D9] bg-clip-text text-transparent">
-              you&apos;ve postponed.
+            {titleUpper} {" "}
+            <span className=" text-(--b2b-primary) bg-clip-text">
+              {titleLower}
             </span>
           </h2>
         </Reveal>
@@ -66,8 +66,7 @@ const FinalCTA = () => {
             data-testid="final-cta-subheadline"
             className="mt-4 max-w-2xl mx-auto text-white/55 text-base md:text-lg leading-relaxed"
           >
-            Our AI architects will return a practical implementation roadmap
-            focused on measurable business outcomes — not slideware.
+            {description}
           </p>
         </Reveal>
 
@@ -76,10 +75,10 @@ const FinalCTA = () => {
             <a
               href="mailto:hello@base2brand.com?subject=AI%20Transformation"
               data-testid="final-cta-primary"
-              className="group inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#A855F7] text-white px-7 py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
+              className="group inline-flex items-center gap-2 bg-(--b2b-primary)/80 hover:bg-(--b2b-primary) text-white px-7 py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
             >
               <Sparkles className="w-4 h-4" />
-              Start An AI Transformation
+              {CTALeft}
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a
@@ -87,7 +86,7 @@ const FinalCTA = () => {
               data-testid="final-cta-secondary"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-7 py-4 rounded-full text-sm font-medium transition-all"
             >
-              Talk To AI Architects
+              {CTARight}
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
@@ -95,13 +94,14 @@ const FinalCTA = () => {
 
         <Reveal delay={0.3}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] font-mono text-white/35">
-            <span>Engineering-led</span>
-            <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
-            <span>Outcome-instrumented</span>
-            <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
-            <span>Production-grade</span>
-            <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
-            <span>Globally deployed</span>
+            {features.map((item, index) => (
+              <div key={item}>
+                {index > 0 && (
+                  <span className="h-1 w-1 rounded-full bg-(--b2b-primary)" />
+                )}
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>

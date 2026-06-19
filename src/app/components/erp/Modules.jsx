@@ -255,7 +255,7 @@ const getScrollAngle = (progress) => {
         Math.max(
             0,
             (progress - INTRO_FRACTION) /
-                (1 - INTRO_FRACTION),
+            (1 - INTRO_FRACTION),
         ),
     );
 
@@ -272,16 +272,16 @@ const getScrollAngle = (progress) => {
 
     const nextAngle =
         SCROLL_ANGLES[
-            Math.min(
-                currentIndex + 1,
-                SCROLL_ANGLES.length - 1,
-            )
+        Math.min(
+            currentIndex + 1,
+            SCROLL_ANGLES.length - 1,
+        )
         ];
 
     return (
         currentAngle +
         (nextAngle - currentAngle) *
-            fractionalProgress
+        fractionalProgress
     );
 };
 
@@ -453,8 +453,8 @@ function ModulesWheel({
     const activeScrollIndex =
         activeId !== null && activeId !== undefined
             ? MODULES_SCROLL.findIndex(
-                  (module) => module.id === activeId,
-              )
+                (module) => module.id === activeId,
+            )
             : -1;
 
     return (
@@ -562,8 +562,8 @@ function ModulesWheel({
                                 stroke: isActive
                                     ? "rgba(255,255,255,0.42)"
                                     : isPast
-                                      ? "rgba(255,255,255,0.18)"
-                                      : "rgba(255,255,255,0.08)",
+                                        ? "rgba(255,255,255,0.18)"
+                                        : "rgba(255,255,255,0.08)",
 
                                 strokeWidth: isActive
                                     ? 0.22
@@ -603,10 +603,9 @@ function ModulesWheel({
                             -translate-y-1/2
                         "
                         style={{
-                            top: `${
-                                CENTER_Y -
+                            top: `${CENTER_Y -
                                 ORBIT_RADIUS
-                            }%`,
+                                }%`,
                         }}
                     >
                         <span
@@ -775,8 +774,8 @@ function ModulesWheel({
                                 borderColor: isActive
                                     ? "rgba(255,255,255,0.48)"
                                     : isPast
-                                      ? "rgba(255,255,255,0.22)"
-                                      : "rgba(255,255,255,0.12)",
+                                        ? "rgba(255,255,255,0.22)"
+                                        : "rgba(255,255,255,0.12)",
 
                                 backgroundColor: isActive
                                     ? "rgba(255,255,255,0.08)"
@@ -801,10 +800,9 @@ function ModulesWheel({
                                 justify-center
                                 transition-colors
                                 duration-300
-                                ${
-                                    isActive
-                                        ? "text-white shadow-[0_0_24px_-4px_rgba(255,255,255,0.35)]"
-                                        : "text-white/75 group-hover:border-white/28 group-hover:text-brand"
+                                ${isActive
+                                    ? "text-white shadow-[0_0_24px_-4px_rgba(255,255,255,0.35)]"
+                                    : "text-white/75 group-hover:border-white/28 group-hover:text-brand"
                                 }
                             `}
                         >
@@ -839,12 +837,11 @@ function ModulesWheel({
                                     leading-tight
                                     transition-colors
                                     duration-300
-                                    ${
-                                        isActive
-                                            ? "text-white"
-                                            : isPast
-                                              ? "text-white/52"
-                                              : "text-white/40"
+                                    ${isActive
+                                        ? "text-white"
+                                        : isPast
+                                            ? "text-white/52"
+                                            : "text-white/40"
                                     }
                                 `}
                             >
@@ -940,73 +937,73 @@ export const Modules = () => {
      * Raw scroll progress active step ke liye use ho raha hai.
      * Isse step correct timing par change hoga.
      */
-   /*
- * Raw scroll sirf intro/split layout control karega.
- */
-useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    const nextLayoutPhase =
-        progress < INTRO_FRACTION ? "intro" : "split";
+    /*
+  * Raw scroll sirf intro/split layout control karega.
+  */
+    useMotionValueEvent(scrollYProgress, "change", (progress) => {
+        const nextLayoutPhase =
+            progress < INTRO_FRACTION ? "intro" : "split";
 
-    setLayoutPhase((previousPhase) =>
-        previousPhase === nextLayoutPhase
-            ? previousPhase
-            : nextLayoutPhase,
-    );
-});
+        setLayoutPhase((previousPhase) =>
+            previousPhase === nextLayoutPhase
+                ? previousPhase
+                : nextLayoutPhase,
+        );
+    });
 
-/*
- * Dot aur active module dono same smooth progress se control honge.
- * Isse icon highlight aur moving dot sync mein rahenge.
- */
-useMotionValueEvent(
-    smoothScrollProgress,
-    "change",
-    (progress) => {
-        /*
-         * Section ke beginning par hamesha Logistics active hoga.
-         */
-        if (progress <= INTRO_FRACTION) {
-            if (activeRef.current !== 0) {
-                setDirection(-1);
-                activeRef.current = 0;
-                setActive(0);
+    /*
+     * Dot aur active module dono same smooth progress se control honge.
+     * Isse icon highlight aur moving dot sync mein rahenge.
+     */
+    useMotionValueEvent(
+        smoothScrollProgress,
+        "change",
+        (progress) => {
+            /*
+             * Section ke beginning par hamesha Logistics active hoga.
+             */
+            if (progress <= INTRO_FRACTION) {
+                if (activeRef.current !== 0) {
+                    setDirection(-1);
+                    activeRef.current = 0;
+                    setActive(0);
+                }
+
+                return;
             }
 
-            return;
-        }
-
-        const normalizedProgress = Math.min(
-            0.999999,
-            Math.max(
-                0,
-                (progress - INTRO_FRACTION) /
+            const normalizedProgress = Math.min(
+                0.999999,
+                Math.max(
+                    0,
+                    (progress - INTRO_FRACTION) /
                     (1 - INTRO_FRACTION),
-            ),
-        );
-
-        const nextActive = Math.min(
-            MODULES_SCROLL.length - 1,
-            Math.max(
-                0,
-                Math.round(
-                    normalizedProgress *
-                        (MODULES_SCROLL.length - 1),
                 ),
-            ),
-        );
+            );
 
-        if (nextActive === activeRef.current) {
-            return;
-        }
+            const nextActive = Math.min(
+                MODULES_SCROLL.length - 1,
+                Math.max(
+                    0,
+                    Math.round(
+                        normalizedProgress *
+                        (MODULES_SCROLL.length - 1),
+                    ),
+                ),
+            );
 
-        setDirection(
-            nextActive > activeRef.current ? 1 : -1,
-        );
+            if (nextActive === activeRef.current) {
+                return;
+            }
 
-        activeRef.current = nextActive;
-        setActive(nextActive);
-    },
-);
+            setDirection(
+                nextActive > activeRef.current ? 1 : -1,
+            );
+
+            activeRef.current = nextActive;
+            setActive(nextActive);
+        },
+    );
 
     useLayoutEffect(() => {
         const section = sectionRef.current;
@@ -1117,8 +1114,8 @@ useMotionValueEvent(
         const scrollableDistance = Math.max(
             0,
             sectionRect.height -
-                (window.innerHeight -
-                    NAV_HEIGHT),
+            (window.innerHeight -
+                NAV_HEIGHT),
         );
 
         const moduleProgress =
@@ -1128,12 +1125,12 @@ useMotionValueEvent(
         const targetProgress =
             INTRO_FRACTION +
             moduleProgress *
-                (1 - INTRO_FRACTION);
+            (1 - INTRO_FRACTION);
 
         const targetScrollPosition =
             sectionTop +
             targetProgress *
-                scrollableDistance;
+            scrollableDistance;
 
         window.scrollTo({
             top: targetScrollPosition,
@@ -1143,10 +1140,9 @@ useMotionValueEvent(
         });
     };
 
-    const scrollTrackHeight = `${
-        (MODULES_SCROLL.length + 1) *
+    const scrollTrackHeight = `${(MODULES_SCROLL.length + 1) *
         SCROLL_PER_STAGE_VH
-    }vh`;
+        }vh`;
 
     const panelTop =
         layoutPhase === "split"
@@ -1159,18 +1155,18 @@ useMotionValueEvent(
         pinPhase === "pinned"
             ? "fixed left-0 right-0 z-20"
             : pinPhase === "after"
-              ? "absolute left-0 right-0 bottom-0 z-10"
-              : "relative z-10";
+                ? "absolute left-0 right-0 bottom-0 z-10"
+                : "relative z-10";
 
     const panelStyle =
         pinPhase === "pinned"
             ? {
-                  top: panelTop,
-                  height: panelHeight,
-              }
+                top: panelTop,
+                height: panelHeight,
+            }
             : {
-                  height: panelHeight,
-              };
+                height: panelHeight,
+            };
 
     const activeModule =
         MODULES_SCROLL[active];
@@ -1212,7 +1208,7 @@ useMotionValueEvent(
                     className="
                         relative
                         w-full
-                        max-w-[1520px]
+                        max-w-7xl
                         mx-auto
                         px-6
                         sm:px-10
@@ -1248,11 +1244,10 @@ useMotionValueEvent(
                             mt-8
                             lg:mt-12
                             items-center
-                            ${
-                                layoutPhase ===
+                            ${layoutPhase ===
                                 "intro"
-                                    ? "flex flex-col justify-center"
-                                    : "grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-12 lg:gap-16 xl:gap-24"
+                                ? "flex flex-col justify-center"
+                                : "grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-12 lg:gap-16 xl:gap-24"
                             }
                         `}
                     >
@@ -1260,7 +1255,7 @@ useMotionValueEvent(
                             layout
                             className={
                                 layoutPhase ===
-                                "intro"
+                                    "intro"
                                     ? "w-full flex flex-col items-center justify-center"
                                     : "flex justify-center lg:justify-start xl:pl-2"
                             }
@@ -1281,7 +1276,7 @@ useMotionValueEvent(
                             <ModulesWheel
                                 activeId={
                                     layoutPhase ===
-                                    "split"
+                                        "split"
                                         ? activeModule?.id
                                         : null
                                 }
@@ -1295,8 +1290,8 @@ useMotionValueEvent(
 
                             {layoutPhase ===
                                 "intro" && (
-                                <p
-                                    className="
+                                    <p
+                                        className="
                                         mt-7
                                         text-center
                                         font-mono
@@ -1305,25 +1300,25 @@ useMotionValueEvent(
                                         tracking-[0.28em]
                                         text-white/30
                                     "
-                                >
-                                    Scroll to explore
-                                    modules
-                                </p>
-                            )}
+                                    >
+                                        Scroll to explore
+                                        modules
+                                    </p>
+                                )}
                         </motion.div>
 
                         <motion.div
                             layout
                             className={
                                 layoutPhase ===
-                                "intro"
+                                    "intro"
                                     ? "hidden"
                                     : "relative min-h-[300px] sm:min-h-[360px] lg:min-h-[420px] flex flex-col justify-center"
                             }
                             style={{
                                 opacity:
                                     layoutPhase ===
-                                    "split"
+                                        "split"
                                         ? panelOpacity
                                         : 0,
 
@@ -1400,9 +1395,9 @@ useMotionValueEvent(
 
                             {layoutPhase ===
                                 "split" && (
-                                <>
-                                    <div
-                                        className="
+                                    <>
+                                        <div
+                                            className="
                                             mt-10
                                             relative
                                             h-px
@@ -1413,9 +1408,9 @@ useMotionValueEvent(
                                             lg:ml-auto
                                             lg:w-full
                                         "
-                                    >
-                                        <motion.div
-                                            className="
+                                        >
+                                            <motion.div
+                                                className="
                                                 absolute
                                                 inset-y-0
                                                 left-0
@@ -1424,14 +1419,14 @@ useMotionValueEvent(
                                                 via-white/45
                                                 to-white/25
                                             "
-                                            style={{
-                                                width: progressWidth,
-                                            }}
-                                        />
-                                    </div>
+                                                style={{
+                                                    width: progressWidth,
+                                                }}
+                                            />
+                                        </div>
 
-                                    <div
-                                        className="
+                                        <div
+                                            className="
                                             mt-4
                                             flex
                                             items-center
@@ -1441,24 +1436,24 @@ useMotionValueEvent(
                                             lg:ml-auto
                                             lg:w-full
                                         "
-                                    >
-                                        {MODULES_SCROLL.map(
-                                            (
-                                                module,
-                                                index,
-                                            ) => (
-                                                <button
-                                                    key={
-                                                        module.id
-                                                    }
-                                                    type="button"
-                                                    aria-label={`Jump to ${module.label}`}
-                                                    onClick={() =>
-                                                        jumpToModule(
-                                                            index,
-                                                        )
-                                                    }
-                                                    className={`
+                                        >
+                                            {MODULES_SCROLL.map(
+                                                (
+                                                    module,
+                                                    index,
+                                                ) => (
+                                                    <button
+                                                        key={
+                                                            module.id
+                                                        }
+                                                        type="button"
+                                                        aria-label={`Jump to ${module.label}`}
+                                                        onClick={() =>
+                                                            jumpToModule(
+                                                                index,
+                                                            )
+                                                        }
+                                                        className={`
                                                         flex-1
                                                         text-center
                                                         font-mono
@@ -1470,36 +1465,35 @@ useMotionValueEvent(
                                                         transition-colors
                                                         duration-300
                                                         py-1
-                                                        ${
-                                                            index <=
-                                                            active
+                                                        ${index <=
+                                                                active
                                                                 ? "text-white/72"
                                                                 : "text-white/26"
-                                                        }
+                                                            }
                                                         hover:text-white
                                                     `}
-                                                >
-                                                    <span className="hidden sm:inline">
-                                                        {
-                                                            module.label
-                                                        }
-                                                    </span>
+                                                    >
+                                                        <span className="hidden sm:inline">
+                                                            {
+                                                                module.label
+                                                            }
+                                                        </span>
 
-                                                    <span className="sm:hidden">
-                                                        {String(
-                                                            index +
+                                                        <span className="sm:hidden">
+                                                            {String(
+                                                                index +
                                                                 1,
-                                                        ).padStart(
-                                                            2,
-                                                            "0",
-                                                        )}
-                                                    </span>
-                                                </button>
-                                            ),
-                                        )}
-                                    </div>
-                                </>
-                            )}
+                                                            ).padStart(
+                                                                2,
+                                                                "0",
+                                                            )}
+                                                        </span>
+                                                    </button>
+                                                ),
+                                            )}
+                                        </div>
+                                    </>
+                                )}
                         </motion.div>
                     </div>
                 </div>

@@ -89,7 +89,7 @@ export function MissionDossierFan({
     return (
         <section
             className={cn(
-                "relative py-16 md:py-20 lg:py-24 overflow-visible border-t border-white/[0.06]",
+                "relative py-16 overflow-visible border-t border-white/[0.06]",
                 className,
             )}
             data-testid="mission-dossier-fan-section"

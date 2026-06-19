@@ -175,7 +175,20 @@ export default function page() {
       <ResearchLab />
       {/* <EngagementModels /> */}
       <SEOContent />
-      <FinalCTA />
+      <FinalCTA
+        highlightTag={'START AN AI TRANSFORMATION'}
+        titleUpper={'Tell us the hardest workflow'}
+        titleLower={"you've postponed."}
+        description={'Our AI architects will return a practical implementation roadmap focused on measurable business outcomes — not slideware.'}
+        CTALeft={'Start An AI Transformation'}
+        CTARight={'Talk To AI Architects'}
+        features={[
+          "Engineering-led",
+          "Outcome-instrumented",
+          "Production-grade",
+          "Globally deployed",
+        ]}
+      />
     </main>
   );
 }

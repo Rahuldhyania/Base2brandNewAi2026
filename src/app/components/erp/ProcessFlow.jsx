@@ -212,9 +212,8 @@ const Stage = ({ stage, idx }) => {
             </div>
 
             <div
-                className={`col-span-12 md:col-span-5 ${
-                    onLeft ? "md:col-start-1" : "md:col-start-8"
-                } pl-16 md:pl-0`}
+                className={`col-span-12 md:col-span-5 ${onLeft ? "md:col-start-1" : "md:col-start-8"
+                    } pl-16 md:pl-0`}
             >
                 <div className="p-4 sm:p-5 rounded-2xl border border-[color:var(--b2b-primary)]/25 hover:border-[color:var(--b2b-primary)]/45 erp-surface-panel backdrop-blur-sm transition-all duration-300 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_30px_80px_-40px_var(--b2b-glow-shadow)]">
                     <div className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-brand">
@@ -247,7 +246,7 @@ export const ProcessFlow = () => {
             className="relative py-12 md:py-16"
             data-testid="process-section"
         >
-            <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+            <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                     <SectionHeading
                         eyebrow="Transformation Sequence"

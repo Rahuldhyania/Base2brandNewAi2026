@@ -102,7 +102,7 @@ export const Capabilities = () => {
             className="relative py-12 md:py-16"
             data-testid="capabilities-section"
         >
-            <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 relative z-10">
+            <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                     <SectionHeading
                         eyebrow="ERP Capabilities"
