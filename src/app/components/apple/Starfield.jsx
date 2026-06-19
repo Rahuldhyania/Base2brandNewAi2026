@@ -31,6 +31,8 @@ export default function Starfield({
         ? "rgba(255, 106, 44, "
         : accent === "purple"
         ? "rgba(168, 85, 247, "
+        : accent === "green"
+        ? "rgba(149, 191, 71, "
         : "rgba(90, 200, 250, ";
 
     const resize = () => {
