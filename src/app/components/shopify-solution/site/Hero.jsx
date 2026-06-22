@@ -11,7 +11,7 @@ import {
   MetaLogo,
   GoogleLogo,
 } from "@/components/shopify-solution/site/Logos";
-
+import '../../illuminated-hero.css';
 /* =============================================================================
    IlluminatedHero — exact 21st.dev structure (recolored to Shopify Green #95BF47)
    - Original SVG glow filter preserved (filter id="glow-4")
@@ -189,11 +189,11 @@ const OrbitRing = ({
                     reduced
                       ? undefined
                       : {
-                          duration: 3.6 + i * 0.3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: i * 0.2,
-                        }
+                        duration: 3.6 + i * 0.3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: i * 0.2,
+                      }
                   }
                   style={{
                     width: nodeSize,
@@ -239,14 +239,16 @@ export const Hero = ({ onOpenLeadForm }) => {
       data-testid="hero-section"
       className={cn(
         // EXACT classes from the original IlluminatedHero source
-        "relative w-full flex min-h-screen flex-wrap items-center justify-center overflow-hidden bg-black text-[calc(var(--size)*0.022)] text-white",
+        "relative w-full flex min-h-screen flex-wrap items-center justify-center overflow-hidden  text-[calc(var(--size)*0.022)] text-white",
         "[--factor:min(1000px,100vh)] [--size:min(var(--factor),100vw)]",
       )}
     >
       {/* === EXACT background glow structure from the original === */}
-      <div className="absolute h-full w-full max-w-[540px]">
-        <div className="shadow-bgt absolute size-full translate-[0_-70%] scale-[1.2] animate-[onloadbgt_1s_ease-in-out_forwards] rounded-[100em] opacity-60" />
-        <div className="shadow-bgb absolute size-full translate-[0_-70%] scale-[1.2] animate-[onloadbgb_1s_ease-in-out_forwards] rounded-[100em] opacity-60" />
+
+      <div className="bg absolute h-full w-full max-w-[44em]">
+        <div className="shadow-bgt absolute size-full animate-[onloadbgb_1s_ease-in-out_forwards]" />
+
+        <div className="shadow-bgb absolute size-full animate-[onloadbgbreverse_1s_ease-in-out_forwards]" />
       </div>
 
       {/* === Foreground content: stacked headline → orbital system (Shopify focal) → CTAs === */}
@@ -275,7 +277,7 @@ export const Hero = ({ onOpenLeadForm }) => {
             className={cn(
               "relative inline-block pointer-events-auto",
               // "before:absolute before:inset-0 before:animate-[onloadopacity_1s_ease-out_forwards] before:opacity-0 before:content-[attr(data-text)]",
-              
+
             )}
             // style={{ filter: "url(#glow-4)" }}
             data-text="Built Around Shopify."
@@ -680,11 +682,11 @@ export const Hero = ({ onOpenLeadForm }) => {
         </defs>
       </svg>
 
-      <div className="absolute h-full w-full max-w-[540px] bottom-0">
+      {/* <div className="absolute h-full w-full max-w-[540px] bottom-0">
 
         <div className="shadow-bgb-reverse absolute size-full translate-y-[0%] scale-[1.2] animate-[onloadbgbreverse_1s_ease-in-out_forwards] rounded-[100em] opacity-60" />
         <div className="shadow-bgb-reverse absolute size-full translate-y-[0%] scale-[1.2] animate-[onloadbgbreverse_1s_ease-in-out_forwards] rounded-[100em] opacity-60" />
-      </div>
+      </div> */}
     </section>
   );
 };

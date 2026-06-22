@@ -1,0 +1,171 @@
+/* ==========================================================
+   Illuminated Hero Background
+   ========================================================== */
+
+.bg {
+    position: relative;
+}
+
+
+/* ==========================================================
+   Shared Circle
+   ========================================================== */
+
+.shadow-bgt,
+.shadow-bgb {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   Border + Inner Glow
+   ========================================================== */
+
+.shadow-bgt::before,
+.shadow-bgb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(var(--b2b-primary-rgb), 0.22);
+    background: radial-gradient(circle, rgba(var(--b2b-primary-rgb), 0.08) 0%, rgba(var(--b2b-primary-rgb), 0.03) 40%, transparent 72%);
+    box-shadow: inset 0 0 30px rgba(var(--b2b-primary-rgb), 0.08), inset 0 0 80px rgba(var(--b2b-primary-rgb), 0.05), inset 0 0 140px rgba(var(--b2b-primary-rgb), 0.03);
+}
+
+
+/* ==========================================================
+   Outer Glow
+   ========================================================== */
+
+.shadow-bgt::after,
+.shadow-bgb::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    border: 1px solid rgba(var(--b2b-primary-rgb), 0.18);
+    filter: blur(10px);
+    box-shadow: 0 0 12px rgba(var(--b2b-primary-rgb), 0.18), 0 0 35px rgba(var(--b2b-primary-rgb), 0.12), 0 0 70px rgba(var(--b2b-primary-rgb), 0.08), 0 0 120px rgba(var(--b2b-primary-rgb), 0.04);
+}
+
+
+/* ==========================================================
+   Top Circle Fill
+   ========================================================== */
+
+.theme-e-commerce-solution .shadow-bgt {
+    background: radial-gradient(ellipse 68% 53% at 50% 28%, rgba(var(--b2b-primary-rgb), 0.70) 0%, rgba(var(--b2b-primary-rgb), 0.32) 32%, rgba(var(--b2b-primary-rgb), 0.12) 56%, transparent 76%);
+    box-shadow: inset 0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.18), 0 0 20px 10px rgba(var(--b2b-primary-rgb), 0.08);
+    filter: blur(3px);
+}
+
+
+/* ==========================================================
+   Bottom Circle Fill
+   ========================================================== */
+
+.theme-e-commerce-solution .shadow-bgb {
+    background: radial-gradient(ellipse 68% 53% at 50% 72%, rgba(var(--b2b-primary-rgb), 0.55) 0%, rgba(var(--b2b-primary-rgb), 0.22) 36%, rgba(var(--b2b-primary-rgb), 0.08) 58%, transparent 76%);
+    box-shadow: inset 0 0 180px 50px rgba(var(--b2b-primary-rgb), 0.18), 0 0 20px 10px rgba(var(--b2b-primary-rgb), 0.08);
+    filter: blur(3px);
+}
+
+
+/* ==========================================================
+   Selection
+   ========================================================== */
+
+.theme-e-commerce-solution ::selection {
+    background: var(--b2b-primary);
+    color: var(--b2b-selection-fg);
+}
+
+
+/* ==========================================================
+   Status Dot
+   ========================================================== */
+
+.theme-e-commerce-solution .status-dot {
+    background-color: var(--b2b-primary);
+    box-shadow: 0 0 8px rgba(var(--b2b-primary-rgb), 0.45), 0 0 16px rgba(var(--b2b-primary-rgb), 0.28);
+}
+
+
+/* ==========================================================
+   Surface Panel
+   ========================================================== */
+
+.theme-e-commerce-solution .shopify-surface-panel {
+    background: color-mix(in srgb, var(--b2b-surface) 85%, transparent);
+}
+
+
+/* ==========================================================
+   Top Animation
+   ========================================================== */
+
+@keyframes onloadbgb {
+    0% {
+        opacity: 0;
+        transform: translateY(-55%) scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(-70%) scale(1.25);
+    }
+}
+
+
+/* ==========================================================
+   Bottom Animation
+   ========================================================== */
+
+@keyframes onloadbgbreverse {
+    0% {
+        opacity: 0;
+        transform: translateY(92%) scale(1.05);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(70%) scale(1.25);
+    }
+}
+
+
+/* For right and left  */
+
+
+/* ==========================================================
+   Left Glow
+   ========================================================== */
+
+.glow-left {
+    position: absolute;
+    width: 1800px;
+    height: 788px;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: radial-gradient(ellipse 53% 68% at 0% 50%, rgba(var(--b2b-primary-rgb), 0.55) 0%, rgba(var(--b2b-primary-rgb), 0.22) 36%, rgba(var(--b2b-primary-rgb), 0.08) 58%, transparent 76%);
+    filter: blur(3px);
+    box-shadow: inset 50px 0 180px rgba(var(--b2b-primary-rgb), 0.18), 0 0 20px 10px rgba(var(--b2b-primary-rgb), 0.08);
+}
+
+
+/* ==========================================================
+   Right Glow
+   ========================================================== */
+
+.glow-right {
+    position: absolute;
+    width: 1800px;
+    height: 788px;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: radial-gradient(ellipse 53% 68% at 100% 50%, rgba(var(--b2b-primary-rgb), 0.55) 0%, rgba(var(--b2b-primary-rgb), 0.22) 36%, rgba(var(--b2b-primary-rgb), 0.08) 58%, transparent 76%);
+    filter: blur(3px);
+    box-shadow: inset -50px 0 180px rgba(var(--b2b-primary-rgb), 0.18), 0 0 20px 10px rgba(var(--b2b-primary-rgb), 0.08);
+}

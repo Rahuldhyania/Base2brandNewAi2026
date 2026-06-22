@@ -1,19 +1,19 @@
-.shadow-bgt {
+/* .shadow-bgt {
     background: radial-gradient(ellipse 68% 53% at 50% 28%, rgba(149, 191, 71, 0.72) 0%, rgba(149, 191, 71, 0.28) 32%, rgba(149, 191, 71, 0.10) 56%, transparent 76%);
     box-shadow: 0 0 110px 35px rgba(149, 191, 71, .10) inset, 0 0 150px 55px rgba(149, 191, 71, .04);
     filter: blur(8px);
-}
-
-.shadow-bgb {
-    background: radial-gradient(ellipse 68% 53% at 50% 72%, rgba(149, 191, 71, 0.52) 0%, rgba(149, 191, 71, 0.18) 36%, rgba(149, 191, 71, 0.06) 58%, transparent 76%);
-    box-shadow: 0 0 150px 50px rgba(149, 191, 71, 0.12) inset, 0 0 240px 90px rgba(149, 191, 71, 0.06);
-    filter: blur(8px);
-}
+} */
 
 .shadow-bgb-reverse {
     background: radial-gradient(ellipse 68% 53% at 50% 72%, rgba(149, 191, 71, 0.72) 0%, rgba(149, 191, 71, 0.28) 32%, rgba(149, 191, 71, 0.10) 56%, transparent 76%);
     box-shadow: 0 0 150px 50px rgba(149, 191, 71, 0.14) inset, 0 0 240px 90px rgba(149, 191, 71, 0.07);
     filter: blur(8px);
+}
+
+.shadow-bgb-bottom {
+    background: radial-gradient(ellipse 160% 80% at 50% 100%, rgba(149, 191, 71, 0.92) 0%, rgba(149, 191, 71, 0.34) 24%, rgba(149, 191, 71, 0.12) 44%, transparent 90%);
+    box-shadow: 0 0 260px 110px rgba(149, 191, 71, 0.14) inset, 0 0 340px 150px rgba(149, 191, 71, 0.1);
+    filter: blur(10px);
 }
 
 @keyframes onloadbgt {

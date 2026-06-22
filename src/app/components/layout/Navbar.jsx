@@ -25,7 +25,7 @@ const MENU = [
       { label: "AI & Automation", href: "/ai-automation" },
       { label: "Software Development", href: "/software-development" },
       { label: "Apple Ecosystem Development", href: "/apple-ecosystem" },
-      { label: "Ecommerce Solutions", href: "#services" },
+      { label: "Ecommerce Solutions", href: "/e-commerce-solution" },
       { label: "Growth & Visibility", href: "/growth-visibility" },
       { label: "Enterprise Systems", href: "/enterprise-systems" },
       { label: "Emerging Technologies", href: "/emerging-technologies" },
@@ -190,7 +190,7 @@ export function Navbar() {
             data-testid="navbar-logo-link"
             className="flex items-center gap-3 group"
           >
-           <CurrentLogo />
+            <CurrentLogo />
           </Link>
 
           {/* Desktop nav — buttons row only. Mouse leave/enter schedules close. */}
@@ -256,55 +256,55 @@ export function Navbar() {
                   data-testid={`nav-panel-${activeMenu.label.toLowerCase()}`}
                   className="relative rounded-3xl border border-line-strong bg-[#04061a]/95 backdrop-blur-xl p-7 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
                 >
-                    <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-60 bg-brand-radial-glow" />
-                    <div className="relative grid grid-cols-[1fr_2fr] gap-8">
-                      <div>
-                        <div className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-brand-dot" />
-                          {activeMenu.label}
-                        </div>
-                        <h3 className="mt-3 font-display text-white text-2xl tracking-tight">
-                          Explore our {activeMenu.label.toLowerCase()}.
-                        </h3>
-                        <p className="mt-3 text-mute text-sm leading-relaxed">
-                          Hand-picked capabilities that we deploy end-to-end —
-                          designed for regulated, multi-region enterprises.
-                        </p>
-                        <a
-                          href={activeMenu.href}
-                          onClick={(e) => handleAnchor(e, activeMenu.href)}
-                          data-testid={`nav-panel-allcta-${activeMenu.label.toLowerCase()}`}
-                          className="mt-5 inline-flex items-center gap-2 text-sm text-orange-brand hover:text-white transition"
-                        >
-                          View all {activeMenu.label.toLowerCase()}
-                          <span aria-hidden>→</span>
-                        </a>
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-60 bg-brand-radial-glow" />
+                  <div className="relative grid grid-cols-[1fr_2fr] gap-8">
+                    <div>
+                      <div className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute">
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-brand-dot" />
+                        {activeMenu.label}
                       </div>
-                      <ul className="grid grid-cols-2 gap-1.5">
-                        {activeMenu.items.map((it) => (
-                          <li key={it.label}>
-                            <Link
-                              href={it.href}
-                              onClick={(e) => handleAnchor(e, it.href)}
-                              data-testid={`nav-item-${it.label
-                                .toLowerCase()
-                                .replace(/[^a-z0-9]+/g, "-")}`}
-                              className="group flex items-start gap-3 rounded-2xl px-4 py-3 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
-                            >
-                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-orange-brand/70 group-hover:bg-orange-brand transition shrink-0" />
-                              <div>
-                                <div className="text-white text-sm font-medium leading-tight">
-                                  {it.label}
-                                </div>
-                                <div className="mt-0.5 text-mute text-xs">
-                                  {captionFor(activeMenu.label, it.label)}
-                                </div>
-                              </div>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                      <h3 className="mt-3 font-display text-white text-2xl tracking-tight">
+                        Explore our {activeMenu.label.toLowerCase()}.
+                      </h3>
+                      <p className="mt-3 text-mute text-sm leading-relaxed">
+                        Hand-picked capabilities that we deploy end-to-end —
+                        designed for regulated, multi-region enterprises.
+                      </p>
+                      <a
+                        href={activeMenu.href}
+                        onClick={(e) => handleAnchor(e, activeMenu.href)}
+                        data-testid={`nav-panel-allcta-${activeMenu.label.toLowerCase()}`}
+                        className="mt-5 inline-flex items-center gap-2 text-sm text-orange-brand hover:text-white transition"
+                      >
+                        View all {activeMenu.label.toLowerCase()}
+                        <span aria-hidden>→</span>
+                      </a>
                     </div>
+                    <ul className="grid grid-cols-2 gap-1.5">
+                      {activeMenu.items.map((it) => (
+                        <li key={it.label}>
+                          <Link
+                            href={it.href}
+                            onClick={(e) => handleAnchor(e, it.href)}
+                            data-testid={`nav-item-${it.label
+                              .toLowerCase()
+                              .replace(/[^a-z0-9]+/g, "-")}`}
+                            className="group flex items-start gap-3 rounded-2xl px-4 py-3 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
+                          >
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-orange-brand/70 group-hover:bg-orange-brand transition shrink-0" />
+                            <div>
+                              <div className="text-white text-sm font-medium leading-tight">
+                                {it.label}
+                              </div>
+                              <div className="mt-0.5 text-mute text-xs">
+                                {captionFor(activeMenu.label, it.label)}
+                              </div>
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               </div>
             )}

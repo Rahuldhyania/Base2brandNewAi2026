@@ -9,6 +9,7 @@ import MissionDossierFan from "@/components/ui/MissionDossierFan";
 import MissionControlTimeline from "@/components/shopify-solution/site/MissionControlTimeline";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 import FinalCTA from "@/components/ai/FinalCTA";
+import { IlluminatedHero } from "@/components/illuminated-hero";
 
 const EcommerceSolution = () => {
 
@@ -20,7 +21,8 @@ const EcommerceSolution = () => {
       data-testid="shopify-agency-page"
       className="relative min-h-screen overflow-x-hidden"
     >
-      <Hero onOpenLeadForm={openLeadForm} />
+      {/* <Hero onOpenLeadForm={openLeadForm} /> */}
+      <IlluminatedHero />
       <CommerceSystems />
       <EcosystemViz />
       <MissionDossierFan />
