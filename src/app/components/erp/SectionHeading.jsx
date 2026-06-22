@@ -33,7 +33,7 @@ export const SectionHeading = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="mt-5 font-display text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.05] tracking-[-0.02em] font-light text-white"
+                className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance text-white"
             >
                 {title}
             </motion.h2>

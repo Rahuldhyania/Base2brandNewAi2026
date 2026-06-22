@@ -124,7 +124,7 @@ const CoreVis = ({ labels }) => (
             <div className="font-mono text-[8px] uppercase tracking-[0.24em] text-white/55">
                 Nucleus
             </div>
-            <div className="font-display text-[11px] font-light text-white">
+            <div className="font-display text-[11px] font-medium text-white">
                 ERP CORE
             </div>
         </div>
@@ -220,7 +220,7 @@ const Stage = ({ stage, idx }) => {
                         {stage.kicker}
                     </div>
 
-                    <h3 className="mt-1.5 font-display text-[19px] sm:text-[21px] leading-[1.2] tracking-[-0.02em] font-light text-white">
+                    <h3 className="mt-1.5 font-display text-xl sm:text-2xl leading-[1.2] tracking-tight font-medium text-white">
                         {stage.title}
                     </h3>
 
@@ -253,7 +253,7 @@ export const ProcessFlow = () => {
                         title={
                             <>
                                 Three stages.{" "}
-                                <span className="text-white/40 italic font-extralight">
+                                <span className="text-brand">
                                     One trajectory.
                                 </span>
                             </>

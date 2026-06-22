@@ -15,7 +15,7 @@ export default function ErpPage() {
             <div className="theme-enterprise-systems relative min-h-screen overflow-x-hidden">
                 <StarsBackground
                     className="!fixed inset-0 z-0 pointer-events-none"
-                    starColor="#ffffff"
+                    starColor="#0891B2"
                 />
 
                 <div className="relative z-[1]">
