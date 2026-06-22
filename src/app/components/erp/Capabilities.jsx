@@ -82,7 +82,7 @@ const Card = ({ item, idx }) => {
                 </div>
             </div>
 
-            <h3 className="mt-8 font-display text-[22px] sm:text-[24px] tracking-[-0.015em] font-light text-white">
+            <h3 className="mt-7 font-display text-xl sm:text-2xl font-medium tracking-tight text-white">
                 {item.title}
             </h3>
             <p className="mt-3 text-[14px] leading-[1.6] text-white/55 max-w-md">
@@ -109,7 +109,7 @@ export const Capabilities = () => {
                         title={
                             <>
                                 The operating layer beneath{" "}
-                                <span className="text-white/40 italic font-extralight">
+                                <span className="text-brand">
                                     every department.
                                 </span>
                             </>

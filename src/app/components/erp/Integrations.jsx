@@ -97,7 +97,7 @@ export const Integrations = () => {
                     title={
                         <>
                             Wired into your stack.{" "}
-                            <span className="text-white/40 italic font-extralight">
+                            <span className="text-brand">
                                 Native, not bolted on.
                             </span>
                         </>

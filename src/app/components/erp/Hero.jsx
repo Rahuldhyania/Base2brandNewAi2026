@@ -54,11 +54,11 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.2,
                             }}
-                            className="mt-8 font-display text-[40px] sm:text-[54px] lg:text-[64px] leading-[1.02] tracking-[-0.025em] font-light text-white"
+                            className="mt-4 font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance"
                             data-testid="hero-headline"
                         >
                             From{" "}
-                            <span className="text-white/45 italic font-extralight">
+                            <span className="text-brand">
                                 operational chaos
                             </span>
                             <br />
@@ -95,7 +95,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.35,
                             }}
-                            className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.55] text-white/75 max-w-[560px]"
+                            className="mt-4 text-lg sm:text-xl text-brand/85 max-w-2xl"
                             data-testid="hero-subheading"
                         >
                             Unify inventory, finance, procurement,
@@ -109,7 +109,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.5,
                             }}
-                            className="mt-5 text-[14px] leading-relaxed text-white/50 max-w-[560px]"
+                            className="mt-4 text-base sm:text-lg text-brand/70 max-w-2xl"
                             data-testid="hero-description"
                         >
                             Most businesses operate through disconnected tools,
@@ -172,7 +172,7 @@ export const Hero = () => {
                                 { v: "1×", l: "Source of truth" },
                             ].map((s) => (
                                 <div key={s.l}>
-                                    <div className="font-display text-2xl font-light text-white">
+                                    <div className="font-display text-3xl sm:text-4xl font-light tracking-[-0.04em] text-white">
                                         {s.v}
                                     </div>
                                     <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">

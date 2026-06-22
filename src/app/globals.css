@@ -139,7 +139,8 @@ code {
 .theme-geo,
 .theme-social-media,
 .theme-emerging-technologies,
-.theme-software-development {
+.theme-software-development,
+.theme-enterprise-systems {
   --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
   --b2b-font-display: var(--font-manrope), sans-serif;
@@ -896,15 +897,21 @@ code {
 }
 
 
-/* Enterprise Systems — gray & white monochrome */
+/* Enterprise Systems — dark enterprise with graphite cyan accent */
 .theme-enterprise-systems {
-    /* Brand accent */
-    --b2b-primary: #ffffff73;
-    --b2b-primary-2: #94a3b8;
-    --b2b-primary-rgb: 245, 247, 250;
-    --b2b-primary-soft: rgba(255, 255, 255, 0.14);
-    --b2b-accent-glow: rgba(255, 255, 255, 0.16);
-    --b2b-accent-glow-strong: rgba(255, 255, 255, 0.35);
+    /* Typography — Manrope + JetBrains Mono (match ai-automation) */
+    --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    --b2b-font-display: var(--font-manrope), sans-serif;
+    --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+    /* Brand accent — graphite cyan */
+    --b2b-primary: #0891b2;
+    --b2b-primary-2: #22d3ee;
+    --b2b-primary-rgb: 8, 145, 178;
+    --b2b-primary-soft: rgba(8, 145, 178, 0.18);
+    --b2b-accent-glow: rgba(8, 145, 178, 0.22);
+    --b2b-accent-glow-strong: rgba(8, 145, 178, 0.42);
 
     /* Core surface */
     --b2b-bg: #020408;
@@ -929,14 +936,14 @@ code {
     --b2b-line-strong: var(--b2b-border-strong);
     --b2b-glass-bg: var(--b2b-glass);
     --b2b-glow-ring: var(--b2b-primary-soft);
-    --b2b-glow-shadow: rgba(255, 255, 255, 0.12);
-    --b2b-glow-ambient: rgba(255, 255, 255, 0.06);
-    --b2b-text-glow: rgba(255, 255, 255, 0.25);
-    --b2b-text-glow-ambient: rgba(255, 255, 255, 0.08);
-    --b2b-ring-orbit: rgba(255, 255, 255, 0.12);
-    --b2b-shadow-sm: rgba(255, 255, 255, 0.08);
-    --b2b-shadow-md: rgba(255, 255, 255, 0.14);
-    --b2b-shadow-lg: rgba(255, 255, 255, 0.22);
+    --b2b-glow-shadow: rgba(8, 145, 178, 0.32);
+    --b2b-glow-ambient: rgba(8, 145, 178, 0.1);
+    --b2b-text-glow: rgba(8, 145, 178, 0.45);
+    --b2b-text-glow-ambient: rgba(8, 145, 178, 0.12);
+    --b2b-ring-orbit: rgba(8, 145, 178, 0.22);
+    --b2b-shadow-sm: rgba(8, 145, 178, 0.12);
+    --b2b-shadow-md: rgba(8, 145, 178, 0.22);
+    --b2b-shadow-lg: rgba(8, 145, 178, 0.35);
     --b2b-marker-pulse: var(--b2b-primary);
     --b2b-selection-fg: #ffffff;
     --b2b-on-primary: #fff;
@@ -953,8 +960,8 @@ code {
     --card-foreground: 210 40% 98%;
     --popover: 222 47% 4%;
     --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 188 91% 36%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;
@@ -975,6 +982,19 @@ code {
     background: var(--b2b-bg);
     color: var(--b2b-text);
     font-family: var(--b2b-font-body);
+}
+
+.theme-enterprise-systems code {
+    font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas,
+        monospace;
+}
+
+.theme-enterprise-systems h1,
+.theme-enterprise-systems h2,
+.theme-enterprise-systems h3,
+.theme-enterprise-systems .font-display {
+    font-family: var(--b2b-font-display);
+    letter-spacing: -0.025em;
 }
 
 /* ERP page component helpers */
@@ -999,6 +1019,7 @@ code {
 }
 
 .theme-enterprise-systems .btn-primary:hover {
+    background: #0e7490;
     transform: translateY(-1px);
     box-shadow: 0 14px 40px -10px var(--b2b-shadow-lg);
 }
@@ -1011,8 +1032,8 @@ code {
 }
 
 .theme-enterprise-systems .btn-ghost:hover {
-    border-color: rgba(255, 255, 255, 0.28);
-    color: var(--b2b-primary);
+    border-color: rgba(8, 145, 178, 0.35);
+    color: var(--b2b-primary-2);
     box-shadow: 0 0 20px -6px var(--b2b-glow-shadow);
 }
 
@@ -1031,7 +1052,7 @@ code {
 
 .theme-enterprise-systems .card-glow:hover {
     box-shadow: 0 0 50px -10px var(--b2b-shadow-md);
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(8, 145, 178, 0.22);
 }
 
 .theme-enterprise-systems .capability-hover-glow {
@@ -1046,7 +1067,7 @@ code {
     0%,
     100% {
         box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.16),
+            0 0 0 1px rgba(8, 145, 178, 0.2),
             0 0 50px var(--b2b-glow-ambient);
     }
     50% {

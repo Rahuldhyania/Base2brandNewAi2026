@@ -37,11 +37,11 @@ export const CTA = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    className="mt-8 font-display text-[44px] sm:text-[60px] lg:text-[72px] leading-[1.02] tracking-[-0.025em] font-light text-white"
+                    className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-[-0.04em] font-medium text-balance text-white"
                     data-testid="cta-headline"
                 >
                     Step into the{" "}
-                    <span className="text-white/45 italic font-extralight">
+                    <span className="text-brand">
                         command center
                     </span>{" "}
                     of your business.

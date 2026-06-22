@@ -4,6 +4,7 @@ import "../components/Solutions/solution.css";
 import Philosophy from "@/components/Solutions/Philosophy";
 import Challenges from "@/components/Solutions/Challenges";
 import Capabilities from "@/components/Solutions/Capabilities";
+import CoreTechnologies from "@/components/Solutions/CoreTechnologies";
 import MissionControl from "@/components/Solutions/MissionControl";
 import WhyBase2Brand from "@/components/Solutions/WhyBase2Brand";
 import Process from "@/components/Solutions/Process";
@@ -382,6 +383,8 @@ const page = () => {
         description="From ERP and HRMS to AI-powered automation, we build connected enterprise solutions that streamline operations, improve visibility, and support long-term growth."
         capabilitiesData={CAPABILITIES}
       />
+
+      <CoreTechnologies />
 
       <MissionControl
         highlightTag="Enterprise Operations"

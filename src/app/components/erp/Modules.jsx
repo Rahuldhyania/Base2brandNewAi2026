@@ -408,7 +408,7 @@ function ModuleImagePanel({ module }) {
                             font-display
                             text-2xl
                             sm:text-[28px]
-                            font-light
+                            font-medium
                             tracking-tight
                             text-white
                         "
@@ -685,7 +685,7 @@ function ModulesWheel({
                             mt-1.5
                             font-display
                             text-[18px]
-                            font-light
+                            font-medium
                             tracking-tight
                             text-white
                         "
@@ -1229,9 +1229,7 @@ useMotionValueEvent(
 
                                 <span
                                     className="
-                                        text-white/40
-                                        italic
-                                        font-extralight
+                                        text-brand
                                     "
                                 >
                                     One nucleus.
