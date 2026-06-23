@@ -64,16 +64,13 @@ export default function ContactCTA() {
             <div className="flex items-center gap-3 mb-5">
               <span
                 className="text-[11px] tracking-[0.28em] text-zinc-400"
-                style={{ fontFamily: "'JetBrains Mono', monospace" }}
               >
                 ● GOT A PROJECT?
               </span>
             </div>
             <h2
               className="font-black text-white leading-[0.92] tracking-tight"
-              style={{
-                fontFamily: "'Archivo Black', sans-serif",
-                fontSize: "clamp(56px, 8vw, 120px)",
+              style={{                fontSize: "clamp(56px, 8vw, 120px)",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -96,7 +93,6 @@ export default function ContactCTA() {
                 </div>
                 <span
                   className="text-[14px]"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   {BRAND.email}
                 </span>
@@ -110,7 +106,6 @@ export default function ContactCTA() {
                 </div>
                 <span
                   className="text-[14px]"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   {BRAND.phone}
                 </span>
@@ -133,9 +128,7 @@ export default function ContactCTA() {
                   </defs>
                   <text
                     fill="#F37335"
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "11px",
+                    style={{                      fontSize: "11px",
                       letterSpacing: "0.32em",
                       fontWeight: 700,
                     }}
@@ -169,9 +162,7 @@ export default function ContactCTA() {
           >
             <h3
               className="font-black text-white mb-6"
-              style={{
-                fontFamily: "'Archivo Black', sans-serif",
-                fontSize: "28px",
+              style={{                fontSize: "28px",
                 letterSpacing: "-0.02em",
               }}
             >
@@ -181,7 +172,6 @@ export default function ContactCTA() {
               <div>
                 <label
                   className="text-[10px] tracking-[0.22em] text-zinc-500 mb-2 block"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   NAME
                 </label>
@@ -196,7 +186,6 @@ export default function ContactCTA() {
               <div>
                 <label
                   className="text-[10px] tracking-[0.22em] text-zinc-500 mb-2 block"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   EMAIL
                 </label>
@@ -214,7 +203,6 @@ export default function ContactCTA() {
               <div>
                 <label
                   className="text-[10px] tracking-[0.22em] text-zinc-500 mb-2 block"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   PHONE
                 </label>
@@ -230,7 +218,6 @@ export default function ContactCTA() {
               <div>
                 <label
                   className="text-[10px] tracking-[0.22em] text-zinc-500 mb-2 block"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   SERVICE
                 </label>
@@ -271,7 +258,6 @@ export default function ContactCTA() {
               <div className="sm:col-span-2">
                 <label
                   className="text-[10px] tracking-[0.22em] text-zinc-500 mb-2 block"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   MESSAGE
                 </label>
@@ -297,9 +283,7 @@ export default function ContactCTA() {
                 style={{
                   background: "#F37335",
                   color: "#fff",
-                  boxShadow: "0 10px 30px rgba(243,115,53,0.4)",
-                  fontFamily: "'JetBrains Mono', monospace",
-                  letterSpacing: "0.08em",
+                  boxShadow: "0 10px 30px rgba(243,115,53,0.4)",                  letterSpacing: "0.08em",
                 }}
               >
                 {submitted ? "SENT ✓" : "SEND MESSAGE"}

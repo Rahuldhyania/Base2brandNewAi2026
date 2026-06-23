@@ -153,7 +153,7 @@ export function DottedWorldMap({
             {/* label */}
             <g transform="translate(8 -8)">
               <text
-                fontFamily="JetBrains Mono, monospace"
+                fontFamily="var(--font-manrope), sans-serif"
                 fontSize="7"
                 fill={hoverIdx === i ? "#ffffff" : "rgba(255,255,255,0.7)"}
                 style={{ transition: "fill 0.2s" }}

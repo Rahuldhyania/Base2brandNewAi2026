@@ -13,13 +13,14 @@
         
         body {
             margin: 0;
+            font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
         
         code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+            font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
         /* Shared keyframes — reused across themes */
         
@@ -130,7 +131,7 @@
             }
         }
         /* =============================================================================
-   SHARED TYPOGRAPHY — homepage fonts site-wide (Manrope + JetBrains Mono)
+   SHARED TYPOGRAPHY — homepage fonts site-wide (Manrope)
    ============================================================================= */
         
         .theme-home,
@@ -139,17 +140,15 @@
         .theme-geo,
         .theme-social-media,
         .theme-emerging-technologies,
-        /* <<<<<<< HEAD .theme-software-development {
-        --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        --b2b-font-display: var(--font-manrope), sans-serif;
-        --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
-        =======.theme-software-development,
-        .theme-enterprise-systems {
+        .theme-software-development,
+        .theme-enterprise,
+        .theme-operations-excellence,
+        .theme-enterprise-systems,
+        .theme-e-commerce-solution {
             --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             --b2b-font-display: var(--font-manrope), sans-serif;
-            --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
-            >>>>>>>64d92e5c388b44375d3adc78013acaf923563b66
-        } */
+            --b2b-font-mono: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
         /* =============================================================================
    THEME: HOME — Manrope, orange brand, deep navy backgrounds
    ============================================================================= */
@@ -209,7 +208,7 @@
         }
         
         .theme-home code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-home ::selection {
@@ -272,7 +271,7 @@
         }
         
         .theme-ai code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-ai ::selection {
@@ -344,7 +343,7 @@
         }
         
         .theme-geo code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-geo ::selection {
@@ -414,7 +413,7 @@
         }
         
         .theme-social-media code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-social-media ::selection {
@@ -484,7 +483,7 @@
         }
         
         .theme-emerging-technologies code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-emerging-technologies ::selection {
@@ -555,7 +554,7 @@
         }
         
         .theme-software-development code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-software-development ::selection {
@@ -661,7 +660,7 @@
         }
         
         .theme-apple code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-apple ::selection {
@@ -827,10 +826,10 @@
         /* Enterprise Systems — dark enterprise with graphite cyan accent */
         
         .theme-enterprise-systems {
-            /* Typography — Manrope + JetBrains Mono (match ai-automation) */
+            /* Typography — Manrope (match ai-automation) */
             --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             --b2b-font-display: var(--font-manrope), sans-serif;
-            --b2b-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+            --b2b-font-mono: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             /* Brand accent — graphite cyan */
             --b2b-primary: #0891b2;
             --b2b-primary-2: #22d3ee;
@@ -905,7 +904,7 @@
         }
         
         .theme-enterprise-systems code {
-            font-family: var(--b2b-font-mono), source-code-pro, Menlo, Monaco, Consolas, monospace;
+            font-family: var(--b2b-font-body);
         }
         
         .theme-enterprise-systems h1,
@@ -1136,7 +1135,7 @@
             .type-eyebrow {
                 font-size: 0.75rem;
                 line-height: 1rem;
-                font-family: var(--b2b-font-mono);
+                font-family: var(--b2b-font-body);
                 text-transform: uppercase;
                 letter-spacing: 0.25em;
             }
@@ -1213,7 +1212,7 @@
             }
             .font-mono-display,
             .font-mono {
-                font-family: var(--b2b-font-mono);
+                font-family: var(--b2b-font-body);
                 letter-spacing: 0;
             }
             /* Primary brand color utilities */
@@ -1434,8 +1433,8 @@
         }
         
         @theme inline {
-            --font-heading: var(--font-sans);
-            --font-sans: var(--font-sans);
+            --font-heading: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+            --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
             --color-sidebar-ring: var(--sidebar-ring);
             --color-sidebar-border: var(--sidebar-border);
             --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

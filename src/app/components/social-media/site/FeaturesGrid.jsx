@@ -37,16 +37,13 @@ export default function FeaturesGrid() {
         <div className="flex items-center gap-3 mb-6">
           <span
             className="text-[11px] tracking-[0.28em] text-zinc-500"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             ● FEATURE-RICH SERVICES
           </span>
         </div>
         <h2
           className="font-black text-white leading-[0.92] tracking-tight max-w-4xl"
-          style={{
-            fontFamily: "'Archivo Black', sans-serif",
-            fontSize: "clamp(48px, 7vw, 100px)",
+          style={{            fontSize: "clamp(48px, 7vw, 100px)",
             letterSpacing: "-0.03em",
           }}
         >
@@ -85,9 +82,7 @@ export default function FeaturesGrid() {
                 </div>
                 <h3
                   className="relative font-black text-white mb-3"
-                  style={{
-                    fontFamily: "'Archivo Black', sans-serif",
-                    fontSize: "22px",
+                  style={{                    fontSize: "22px",
                     letterSpacing: "-0.01em",
                   }}
                 >
@@ -112,16 +107,13 @@ export default function FeaturesGrid() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="text-[11px] tracking-[0.28em] text-zinc-500"
-                style={{ fontFamily: "'JetBrains Mono', monospace" }}
               >
                 ● WHY CHOOSE US
               </span>
             </div>
             <h2
               className="font-black text-white leading-[0.92] tracking-tight"
-              style={{
-                fontFamily: "'Archivo Black', sans-serif",
-                fontSize: "clamp(44px, 6vw, 88px)",
+              style={{                fontSize: "clamp(44px, 6vw, 88px)",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -160,9 +152,7 @@ export default function FeaturesGrid() {
                     <div className="flex items-baseline justify-between mb-2 gap-3">
                       <h3
                         className="font-black text-white"
-                        style={{
-                          fontFamily: "'Archivo Black', sans-serif",
-                          fontSize: "20px",
+                        style={{                          fontSize: "20px",
                           letterSpacing: "-0.01em",
                         }}
                       >
@@ -170,9 +160,7 @@ export default function FeaturesGrid() {
                       </h3>
                       <span
                         className="text-[11px] tracking-[0.2em] text-zinc-500"
-                        style={{
-                          fontFamily: "'JetBrains Mono', monospace",
-                        }}
+                        style={{                        }}
                       >
                         0{i + 1}
                       </span>
@@ -193,16 +181,13 @@ export default function FeaturesGrid() {
         <div className="flex items-center gap-3 mb-6">
           <span
             className="text-[11px] tracking-[0.28em] text-zinc-500"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             ● RESULTS IN THE WILD
           </span>
         </div>
         <h3
           className="font-black text-white leading-[0.95] tracking-tight mb-12"
-          style={{
-            fontFamily: "'Archivo Black', sans-serif",
-            fontSize: "clamp(36px, 5vw, 72px)",
+          style={{            fontSize: "clamp(36px, 5vw, 72px)",
             letterSpacing: "-0.03em",
           }}
         >
@@ -225,17 +210,13 @@ export default function FeaturesGrid() {
               <span
                 className="relative text-[10px] tracking-[0.28em]"
                 style={{
-                  color: c.accent,
-                  fontFamily: "'JetBrains Mono', monospace",
-                }}
+                  color: c.accent,                }}
               >
                 {c.sector}
               </span>
               <h4
                 className="relative font-black text-white mt-3 mb-4"
-                style={{
-                  fontFamily: "'Archivo Black', sans-serif",
-                  fontSize: "clamp(32px, 3vw, 44px)",
+                style={{                  fontSize: "clamp(32px, 3vw, 44px)",
                   letterSpacing: "-0.02em",
                   lineHeight: "1",
                 }}

@@ -24,7 +24,6 @@ export default function Process() {
         <div className="flex items-center gap-3 mb-6">
           <span
             className="text-[11px] tracking-[0.28em] text-zinc-500"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             ● OUR PROCESS
           </span>
@@ -33,9 +32,7 @@ export default function Process() {
           <div>
             <h2
               className="font-black text-zinc-900 leading-[0.92] tracking-tight"
-              style={{
-                fontFamily: "'Archivo Black', sans-serif",
-                fontSize: "clamp(48px, 7vw, 96px)",
+              style={{                fontSize: "clamp(48px, 7vw, 96px)",
                 letterSpacing: "-0.03em",
               }}
             >
@@ -56,7 +53,6 @@ export default function Process() {
                 <span
                   key={c.l}
                   className="px-3 py-1.5 rounded-full bg-white border border-zinc-200 text-zinc-700 text-[11px] tracking-[0.18em] flex items-center gap-2"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   <span
                     className="w-1.5 h-1.5 rounded-full"
@@ -97,9 +93,7 @@ export default function Process() {
                       <div className="flex items-baseline gap-3">
                         <span
                           className="font-black text-zinc-900 text-[26px]"
-                          style={{
-                            fontFamily: "'Archivo Black', sans-serif",
-                            letterSpacing: "-0.02em",
+                          style={{                            letterSpacing: "-0.02em",
                             transform: isActive ? "translateX(6px)" : "none",
                             transition: "transform 250ms",
                             display: "inline-block",
@@ -114,7 +108,6 @@ export default function Process() {
                     </div>
                     <span
                       className="text-[12px] tracking-[0.2em] text-zinc-500"
-                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
                     >
                       {p.step}
                     </span>
@@ -137,9 +130,7 @@ export default function Process() {
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-800 transition-colors"
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              letterSpacing: "0.08em",
+            style={{              letterSpacing: "0.08em",
             }}
           >
             START YOUR PROJECT

@@ -32,9 +32,7 @@ function ServiceCard({ service, index }) {
       >
         <span
           className="text-[11px] tracking-[0.3em]"
-          style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            color: service.tagColor,
+          style={{            color: service.tagColor,
           }}
         >
           {service.index} <span className="text-zinc-400">/ {TOTAL}</span>
@@ -53,9 +51,7 @@ function ServiceCard({ service, index }) {
         >
           <div
             className="absolute top-5 left-5 px-3 py-1.5 rounded-full bg-black/85 text-white"
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "10px",
+            style={{              fontSize: "10px",
               letterSpacing: "0.2em",
             }}
           >
@@ -75,9 +71,7 @@ function ServiceCard({ service, index }) {
 
           <div
             className="absolute bottom-6 left-1/2 -translate-x-1/2 font-black uppercase tracking-tight whitespace-nowrap"
-            style={{
-              fontFamily: "'Archivo Black', sans-serif",
-              fontSize: "38px",
+            style={{              fontSize: "38px",
               color: "rgba(10,10,10,0.25)",
               letterSpacing: "-0.02em",
             }}
@@ -106,9 +100,7 @@ function ServiceCard({ service, index }) {
           <div>
             <h2
               className="font-black tracking-tight text-white"
-              style={{
-                fontFamily: "'Archivo Black', sans-serif",
-                fontSize: "clamp(36px, 4.5vw, 64px)",
+              style={{                fontSize: "clamp(36px, 4.5vw, 64px)",
                 lineHeight: "0.95",
                 letterSpacing: "-0.02em",
               }}
@@ -117,7 +109,6 @@ function ServiceCard({ service, index }) {
             </h2>
             <p
               className="text-white mt-1 text-[12px] tracking-[0.18em]"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
             >
               {service.fullName.toUpperCase()}
             </p>
@@ -126,9 +117,7 @@ function ServiceCard({ service, index }) {
 
         <h3
           className="text-white mt-4 mb-4 font-bold"
-          style={{
-            fontFamily: "'Archivo Black', sans-serif",
-            fontSize: "clamp(18px, 1.5vw, 22px)",
+          style={{            fontSize: "clamp(18px, 1.5vw, 22px)",
             letterSpacing: "0.01em",
             lineHeight: "1.2",
           }}
@@ -152,9 +141,7 @@ function ServiceCard({ service, index }) {
               >
                 <span
                   className="text-[11px] tracking-[0.2em] w-8"
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    color: active ? service.tagColor : "#9CA3AF",
+                  style={{                    color: active ? service.tagColor : "#9CA3AF",
                     transition: "color 200ms",
                   }}
                 >
@@ -185,9 +172,7 @@ function ServiceCard({ service, index }) {
         <a
           href="#contact"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-800 transition-colors"
-          style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            letterSpacing: "0.08em",
+          style={{            letterSpacing: "0.08em",
           }}
         >
           {service.cta.toUpperCase()}
@@ -248,7 +233,6 @@ export default function ServicesSection() {
         <div className="mb-3">
           <span
             className="inline-flex items-center gap-2 text-[11px] tracking-[0.28em] text-white"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
             OUR DIGITAL MARKETING SERVICES
@@ -257,9 +241,7 @@ export default function ServicesSection() {
         <div className="grid lg:grid-cols-2 gap-10 items-end">
           <h2
             className="font-black text-white leading-[0.92] tracking-tight"
-            style={{
-              fontFamily: "'Archivo Black', sans-serif",
-              fontSize: "clamp(56px, 8vw, 120px)",
+            style={{              fontSize: "clamp(56px, 8vw, 120px)",
               letterSpacing: "-0.03em",
             }}
           >
@@ -280,7 +262,6 @@ export default function ServicesSection() {
                 <span
                   key={c.l}
                   className="px-3 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-700 text-[11px] tracking-[0.18em] flex items-center gap-2"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
                 >
                   <span
                     className="w-1.5 h-1.5 rounded-full"

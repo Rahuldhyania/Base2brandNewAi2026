@@ -188,7 +188,7 @@ export default function FinalCTA() {
           padding: 12px 14px;
           color: #fff;
           font-size: 14px;
-          font-family: "Satoshi", sans-serif;
+          font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           transition: border-color .2s ease, background .2s ease;
           outline: none;
         }

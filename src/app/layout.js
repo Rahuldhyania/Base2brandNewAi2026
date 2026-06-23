@@ -1,4 +1,4 @@
-import { Manrope, JetBrains_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css?dsh";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./sections/Footer";
@@ -7,11 +7,6 @@ import { DEFAULT_THEME } from "./lib/themes";
 
 const manrope = Manrope({
   variable: "--font-manrope",
-  subsets: ["latin"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -24,11 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${jetbrainsMono.variable} ${DEFAULT_THEME.className} h-full antialiased`}
+      className={`${manrope.variable} ${DEFAULT_THEME.className} h-full antialiased`}
       suppressHydrationWarning
     >
       <body
-        className={`${DEFAULT_THEME.className} min-h-full flex flex-col`}
+        className={`${manrope.className} ${DEFAULT_THEME.className} min-h-full flex flex-col`}
         cz-shortcut-listen="true"
         suppressHydrationWarning
       >

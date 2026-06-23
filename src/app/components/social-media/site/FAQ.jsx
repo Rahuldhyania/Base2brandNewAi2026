@@ -14,16 +14,13 @@ export default function FAQ() {
         <div className="flex items-center gap-3 mb-6">
           <span
             className="text-[11px] tracking-[0.28em] text-zinc-500"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             ● FREQUENTLY ASKED
           </span>
         </div>
         <h2
           className="font-black text-zinc-900 leading-[0.92] tracking-tight mb-14"
-          style={{
-            fontFamily: "'Archivo Black', sans-serif",
-            fontSize: "clamp(48px, 7vw, 96px)",
+          style={{            fontSize: "clamp(48px, 7vw, 96px)",
             letterSpacing: "-0.03em",
           }}
         >
@@ -41,15 +38,12 @@ export default function FAQ() {
                 >
                   <span
                     className="text-[11px] tracking-[0.2em] text-zinc-500 w-10"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span
                     className="flex-1 text-zinc-900 font-bold pr-6"
-                    style={{
-                      fontFamily: "'Archivo Black', sans-serif",
-                      fontSize: "clamp(18px, 1.8vw, 22px)",
+                    style={{                      fontSize: "clamp(18px, 1.8vw, 22px)",
                       letterSpacing: "-0.01em",
                       lineHeight: "1.3",
                     }}

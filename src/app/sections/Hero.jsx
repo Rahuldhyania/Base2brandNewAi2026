@@ -66,9 +66,7 @@ export function Hero() {
 
         {/* <h1
           className="text-start font-black text-white leading-[0.9] tracking-tight pt-8"
-          style={{
-            fontFamily: "'Archivo Black', sans-serif",
-            fontSize: "clamp(56px, 9vw, 100px)",
+          style={{            fontSize: "clamp(56px, 9vw, 100px)",
           }}
         >
           <SlotText

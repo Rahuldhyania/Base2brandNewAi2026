@@ -52,14 +52,12 @@ function FloatingCard({ card, mouse }) {
           {Icon && <Icon size={18} style={{ color: card.color }} />}
           <span
             className="font-black tracking-tight text-white text-lg"
-            style={{ fontFamily: "'Archivo Black', sans-serif" }}
           >
             {card.title}
           </span>
         </div>
         <div
           className="text-[10px] tracking-[0.18em] text-zinc-400"
-          style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           {card.sub}
         </div>
@@ -119,7 +117,6 @@ export default function Hero() {
       <div className="absolute top-0 left-0 right-0 overflow-hidden">
         <div
           className="flex gap-10 pt-2 pb-2 whitespace-nowrap animate-marquee"
-          style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           {[...HERO_TAGS, ...HERO_TAGS, ...HERO_TAGS].map((t, i) => (
             <span
@@ -136,7 +133,6 @@ export default function Hero() {
       <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center">
         <p
           className="text-[11px] tracking-[0.28em] text-zinc-500"
-          style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           {BRAND.name.toUpperCase()} · DIGITAL MARKETING
         </p>
@@ -155,7 +151,6 @@ export default function Hero() {
         >
           <span
             className="text-[10px] tracking-[0.28em] text-zinc-400 flex items-center gap-2"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             <span
               className="w-1.5 h-1.5 rounded-full"
@@ -171,7 +166,6 @@ export default function Hero() {
         <h1
           className="text-center font-black text-white leading-[0.9] tracking-tight"
           style={{
-            fontFamily: "'Archivo Black', sans-serif",
             fontSize: "clamp(56px, 9vw, 150px)",
           }}
         >
@@ -196,7 +190,6 @@ export default function Hero() {
             style={{
               color: "#fff",
               boxShadow: "0 10px 40px rgba(243,115,53,0.4)",
-              fontFamily: "'JetBrains Mono', monospace",
               letterSpacing: "0.08em",
             }}
           >
@@ -210,7 +203,6 @@ export default function Hero() {
             href="#services"
             className="px-6 py-3 rounded-full font-semibold text-sm border border-white/15 text-white hover:bg-white/5 transition-colors"
             style={{
-              fontFamily: "'JetBrains Mono', monospace",
               letterSpacing: "0.08em",
             }}
           >
@@ -224,7 +216,6 @@ export default function Hero() {
             <span className="text-amber-400">★★★★★</span>
             <span
               className="text-[12px] tracking-[0.18em]"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
             >
               4.9 / 5 (89+ REVIEWS)
             </span>
@@ -232,14 +223,12 @@ export default function Hero() {
           <span className="w-1 h-1 rounded-full bg-zinc-600" />
           <span
             className="text-[12px] tracking-[0.18em]"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             TRUSTED BY 200+ BRANDS
           </span>
           <span className="w-1 h-1 rounded-full bg-zinc-600" />
           <span
             className="text-[12px] tracking-[0.18em]"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             A DECADE OF EXPERIENCE
           </span>
@@ -249,7 +238,6 @@ export default function Hero() {
           <span className="w-10 h-px bg-zinc-700" />
           <span
             className="text-[10px] tracking-[0.28em] text-zinc-500"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             SCROLL FOR THE DETAIL
           </span>

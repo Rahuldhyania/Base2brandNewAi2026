@@ -12,9 +12,7 @@ export default function MarqueeStrip() {
               <span
                 key={i}
                 className="flex items-center gap-10"
-                style={{
-                  fontFamily: "'Archivo Black', sans-serif",
-                  fontSize: "42px",
+                style={{                  fontSize: "42px",
                   color: "#F4F2EE",
                   letterSpacing: "-0.02em",
                 }}
@@ -35,9 +33,7 @@ export default function MarqueeStrip() {
               <span
                 key={i}
                 className="flex items-center gap-10"
-                style={{
-                  fontFamily: "'Archivo Black', sans-serif",
-                  fontSize: "42px",
+                style={{                  fontSize: "42px",
                   color: "transparent",
                   WebkitTextStroke: "1.5px #F4F2EE",
                   letterSpacing: "-0.02em",
