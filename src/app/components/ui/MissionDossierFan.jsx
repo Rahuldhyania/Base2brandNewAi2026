@@ -9,71 +9,13 @@ import StatusChip from "@/components/shopify-solution/site/StatusChip";
 import Reveal from "@/components/shopify-solution/site/Reveal";
 import { cn } from "@/lib/utils";
 
-export const DEFAULT_DOSSIER_CARDS = [
-    {
-        id: "dossier-01",
-        code: "DOSSIER-01",
-        title: "Discovery & Systems Audit",
-        body: "We map your commerce stack — storefront, CRM, ERP, OMS, ads — to surface the gaps and the multipliers.",
-        accent: "MISSION PLANNING",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-02",
-        code: "DOSSIER-02",
-        title: "UX & Design System",
-        body: "A Shopify-native design system tuned for conversion, scale, and storytelling across PDPs and bundles.",
-        accent: "BRAND-LED UX",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-03",
-        code: "DOSSIER-03",
-        title: "Shopify Build",
-        body: "Online Store 2.0, Liquid, Hydrogen — engineered for performance and shipped on cadence.",
-        accent: "ENGINEERING",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-04",
-        code: "DOSSIER-04",
-        title: "Integrations",
-        body: "Klaviyo, Recharge, Odoo, Unicommerce, EasyEcom, Increff — wired into a unified commerce OS.",
-        accent: "ECOSYSTEM",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-05",
-        code: "DOSSIER-05",
-        title: "Launch & Stabilize",
-        body: "Controlled cutovers, SEO preserved, observability online — we land safely and accelerate from there.",
-        accent: "OPERATIONS",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-06",
-        code: "DOSSIER-06",
-        title: "Growth Ops",
-        body: "Continuous experimentation: lifecycle, paid acquisition, CRO, and analytics tied to revenue.",
-        accent: "COMPOUNDING",
-        channel: "CHANNEL A · LOCKED",
-    },
-    {
-        id: "dossier-07",
-        code: "DOSSIER-07",
-        title: "Scale & Optimize",
-        body: "Performance tuning, CRO experiments, and lifecycle automation — compounding gains across storefront, retention, and acquisition.",
-        accent: "OPTIMIZATION",
-        channel: "CHANNEL A · LOCKED",
-    },
-];
 
 /**
  * Ready-to-use mission dossier fan carousel.
  * Pass `cards` to override defaults, or `renderCard` for fully custom slots.
  */
 export function MissionDossierFan({
-    cards = DEFAULT_DOSSIER_CARDS,
+    cards ,
     renderCard,
     className,
     eyebrow = "PLAYBOOKS · MISSION DOSSIERS",
@@ -82,9 +24,8 @@ export function MissionDossierFan({
     badgeLabel,
     showHeader = true,
 }) {
-    const dossierCount = cards.length;
-    const resolvedBadge =
-        badgeLabel ?? `${dossierCount} DOSSIERS`;
+    // const dossierCount = cards.length; 
+    const resolvedBadge =`${badgeLabel} DOSSIERS`;
 
     return (
         <section

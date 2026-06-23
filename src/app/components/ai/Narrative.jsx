@@ -1,8 +1,8 @@
-'use client'
+"use client";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 
-const Narrative = ({title, description, features, highlightTag , tagList}) => {
+const Narrative = ({ title, description, features, highlightTag, tagList }) => {
   return (
     <section
       data-testid="narrative-section"
@@ -16,11 +16,9 @@ const Narrative = ({title, description, features, highlightTag , tagList}) => {
                 {highlightTag}
               </ShiningText>
               <div className="mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/60 space-y-2">
-               {
-                tagList.map((item)=>(
+                {tagList.map((item) => (
                   <p key={item}>{item}</p>
-                ))
-               }
+                ))}
               </div>
             </Reveal>
           </div>
@@ -36,32 +34,31 @@ const Narrative = ({title, description, features, highlightTag , tagList}) => {
 
             <Reveal delay={0.15}>
               <div className="mt-5 max-w-3xl space-y-3 text-white/55 text-base md:text-lg leading-relaxed">
-              
-               {
-                description.map((item) => (
+                {description.map((item) => (
                   <p>{item}</p>
-                ))
-               }
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.25}>
-              <div className="mt-12 grid sm:grid-cols-3 gap-4">
-                {features.map((p) => (
-                  <div
-                    key={p.l}
-                    className="border-l-2 border-[rgba(var(--b2b-primary-rgb),0.4)] pl-4 py-2"
-                  >
-                    <div className="font-display text-lg font-medium">
-                      {p.l}
-                    </div>
-                    <div className="text-sm text-white/40 font-mono mt-1">
-                      {p.d}
-                    </div>
-                  </div>
                 ))}
               </div>
             </Reveal>
+
+            {features && (
+              <Reveal delay={0.25}>
+                <div className="mt-12 grid sm:grid-cols-3 gap-4">
+                  {features.map((p) => (
+                    <div
+                      key={p.l}
+                      className="border-l-2 border-[rgba(var(--b2b-primary-rgb),0.4)] pl-4 py-2"
+                    >
+                      <div className="font-display text-lg font-medium">
+                        {p.l}
+                      </div>
+                      <div className="text-sm text-white/40 font-mono mt-1">
+                        {p.d}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            )}
           </div>
         </div>
       </div>

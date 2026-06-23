@@ -47,7 +47,7 @@ const MENU = [
     label: "Industries",
     href: "#industries",
     items: [
-      { label: "Healthcare", href: "#industries" },
+      { label: "Healthcare", href: "/health-care" },
       { label: "Manufacturing", href: "#industries" },
       { label: "Logistics", href: "#industries" },
       { label: "Education", href: "#industries" },

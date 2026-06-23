@@ -871,7 +871,8 @@ function ModulesWheel({
     );
 }
 
-export const Modules = () => {
+export const Modules = ({title, description}) => {
+    
     const sectionRef = useRef(null);
 
     /*
@@ -1205,34 +1206,12 @@ export const Modules = () => {
                 style={panelStyle}
             >
                 <div
-                    className="
-                        relative
-                        w-full
-                        max-w-7xl
-                        mx-auto
-                        px-6
-                        sm:px-10
-                        lg:px-14
-                        xl:px-16
-                        py-8
-                    "
+                    className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 py-8"
                 >
                     <SectionHeading
                         // eyebrow="Modules Ecosystem"
-                        title={
-                            <>
-                                Eight modules.{" "}
-
-                                <span
-                                    className="
-                                        text-brand
-                                    "
-                                >
-                                    One nucleus.
-                                </span>
-                            </>
-                        }
-                        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+                        title={title}
+                        description={description}
                         align="center"
                         testId="modules-heading"
                     />

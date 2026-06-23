@@ -10,23 +10,30 @@ import ProcessFlow from "@/components/erp/ProcessFlow";
 import StarsBackground from "@/components/erp/StarsBackground";
 
 export default function ErpPage() {
-    return (
-        <Layout tint="blue">
-            <div className="theme-enterprise-systems relative min-h-screen overflow-x-hidden">
-                <StarsBackground
-                    className="!fixed inset-0 z-0 pointer-events-none"
-                    starColor="#0891B2"
-                />
+  return (
+    <Layout tint="blue">
+      <div className="theme-enterprise-systems relative min-h-screen overflow-x-hidden">
+        <StarsBackground
+          className="!fixed inset-0 z-0 pointer-events-none"
+          starColor="#0891B2"
+        />
 
-                <div className="relative z-[1]">
-                    <Hero />
-                    <Capabilities />
-                    <Modules />
-                    <ProcessFlow />
-                    <Integrations />
-                    <CTA />
-                </div>
-            </div>
-        </Layout>
-    );
+        <div className="relative z-[1]">
+          <Hero />
+          <Capabilities />
+          <Modules
+            title={
+              <>
+                Eight modules. <span className="text-brand">One nucleus.</span>
+              </>
+            }
+            description='An orbital architecture where every operational module is connected to the ERP core in real-time.'
+          />
+          <ProcessFlow />
+          <Integrations />
+          <CTA />
+        </div>
+      </div>
+    </Layout>
+  );
 }
