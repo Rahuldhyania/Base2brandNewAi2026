@@ -8,6 +8,7 @@ import GridBackground from "@/components/Industries/shared/GridBackground";
 import AnimatedCounter from "@/components/Industries/shared/AnimatedCounter";
 // import { INDUSTRY_PAGE } from "@/constants/Industries/testIds";
 import { ShieldCheck, BadgeCheck, Rocket } from "lucide-react";
+import Image from "next/image";
 
 export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSecondaryCta, id = "hero" }) {
   return (
@@ -99,7 +100,7 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
                   className="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest2 text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.025]"
                 >
                   <Icon className="w-3.5 h-3.5 text-brand" />
-                  {label}
+                  {label}  
                 </span>
               ))}
             </motion.div>
@@ -108,6 +109,15 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
           {/* Right: Orbital visual */}
           <div className="lg:col-span-5">
             <div className="relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <Image  
+                  src={'/images/b2blogo.png'}
+                  alt=""
+                  width={1000}
+                  height={500}
+                  className="max-w-25"
+                />
+              </div>
               <div className="absolute -inset-10 rounded-full bg-brand/[0.06] blur-3xl pointer-events-none" />
               <motion.div
                 initial={{ opacity: 0, scale: 0.92 }}
@@ -117,6 +127,7 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
                 <OrbitalNodes nodes={hero.nodes} />
               </motion.div>
             </div>
+
           </div>
         </div>
 

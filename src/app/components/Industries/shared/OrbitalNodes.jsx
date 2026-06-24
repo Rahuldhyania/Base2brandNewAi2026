@@ -41,10 +41,10 @@ export default function OrbitalNodes({
       {/* Core */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative">
-          <div className="w-24 h-24 rounded-full bg-brand/15 blur-2xl absolute inset-0" />
-          <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-brand to-brand-600 shadow-[0_0_60px_-10px_rgba(244,123,82,0.7)] flex items-center justify-center">
+          {/* <div className="w-24 h-24 rounded-full bg-white blur-2xl absolute inset-0 top-0" /> */}
+          {/* <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-brand to-brand-600 shadow-[0_0_60px_-10px_rgba(244,123,82,0.7)] flex items-center justify-center">
             <div className="w-3 h-3 rounded-full bg-white animate-pulse-soft" />
-          </div>
+          </div> */}
         </div>
       </div>
 
