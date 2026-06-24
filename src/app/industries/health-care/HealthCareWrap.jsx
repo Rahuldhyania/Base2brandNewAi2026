@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import IndustryHero from "@/components/Industries/industry/IndustryHero";
-import "./healthcare.css";
+import "../industries.css";
 import Narrative from "@/components/ai/Narrative";
 import IndustryChallenges from "@/components/Industries/industry/IndustryChallenges";
 import {
