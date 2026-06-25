@@ -18,7 +18,7 @@ export default function CTAButton({
     md: "",
     lg: "!px-7 !py-4 text-[15px]",
   };
-  const cls = `${variant === "primary" ? "btn-primary" : "btn-secondary"} ${sizes[size]} ${className}`;
+  const cls = `${variant === "primary" ? "btn-primary !bg-(--b2b-primary)" : "btn-secondary"} ${sizes[size]} ${className}`;
   const Icon = icon === "right" ? ArrowRight : ArrowUpRight;
 
   const inner = (

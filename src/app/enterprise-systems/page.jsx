@@ -24,7 +24,7 @@ export default function ErpPage() {
           <Modules
             title={
               <>
-                Eight modules. <span className="text-brand">One nucleus.</span>
+                Eight modules. <span className="text-(--b2b-primary)">One nucleus.</span>
               </>
             }
             description='An orbital architecture where every operational module is connected to the ERP core in real-time.'

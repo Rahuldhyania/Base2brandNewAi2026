@@ -414,6 +414,92 @@ const cta = {
   primary: { label: "Get Proposal", to: "#" },
   secondary: { label: "Talk to a Partner", to: "#" },
 };
+
+const EDUCATION_MODULES = [
+  {
+    id: "admissions",
+    label: "Admissions",
+    desc: "Applications, enquiries, enrollment",
+    iconName: "users",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "students",
+    label: "Students",
+    desc: "Profiles, records, progress",
+    iconName: "users",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "courses",
+    label: "Courses",
+    desc: "Programs, curriculum, batches",
+    iconName: "boxes",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "learning",
+    label: "Learning",
+    desc: "Classes, lessons, assignments",
+    iconName: "analytics",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "fees",
+    label: "Fees",
+    desc: "Payments, invoices, receipts",
+    iconName: "wallet",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "faculty",
+    label: "Faculty",
+    desc: "Teachers, schedules, workload",
+    iconName: "userCog",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "assessment",
+    label: "Assessment",
+    desc: "Exams, grades, performance",
+    iconName: "barChart",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    desc: "Reports, insights, outcomes",
+    iconName: "barChart",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const EDUCATION_MODULE_SCROLL_ORDER = [
+  "assessment",
+  "analytics",
+  "admissions",
+  "students",
+  "courses",
+  "learning",
+  "fees",
+  "faculty",
+];
 export default function EducationWrap() {
   return (
     <div>
@@ -456,10 +542,13 @@ export default function EducationWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Education ecosystem.{" "}
+            <span className="text-brand">One digital campus.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="Unify admissions, students, courses, learning, fees, faculty, assessments, and analytics into one connected education management system."
+        modules={EDUCATION_MODULES}
+        scrollOrder={EDUCATION_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Education"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

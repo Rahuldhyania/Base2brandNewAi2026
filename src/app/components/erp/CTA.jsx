@@ -41,7 +41,7 @@ export const CTA = () => {
                     data-testid="cta-headline"
                 >
                     Step into the{" "}
-                    <span className="text-brand">
+                    <span className="text-(--b2b-primary)">
                         command center
                     </span>{" "}
                     of your business.

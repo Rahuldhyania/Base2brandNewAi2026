@@ -302,110 +302,110 @@ const ITEMS = [
 ];
 
 const ecosystem = [
-    {
-      group: "Cloud",
-      items: ["AWS", "Azure", "GCP", "Sovereign cloud"],
-    },
-    {
-      group: "AI",
-      items: ["LLMs", "Document AI", "Voice AI", "Agent supervisors"],
-    },
-    {
-      group: "Data",
-      items: ["Lakehouse", "Consent ledger", "Lineage", "Causal ML"],
-    },
-    {
-      group: "Security",
-      items: ["GDPR", "DPDP", "Humanitarian principles", "ISO 27001"],
-    },
-    {
-      group: "CRM",
-      items: ["Salesforce NPSP", "Microsoft NFP", "Custom CRM", "Pega"],
-    },
-    {
-      group: "ERP",
-      items: ["NetSuite", "SAP", "Oracle", "Unit4"],
-    },
-    {
-      group: "Analytics",
-      items: ["Power BI", "Tableau", "Causal ML", "Open data"],
-    },
-    {
-      group: "Channels",
-      items: ["Mobile / PWA", "Voice IVR", "SMS / USSD", "Kiosk"],
-    },
+  {
+    group: "Cloud",
+    items: ["AWS", "Azure", "GCP", "Sovereign cloud"],
+  },
+  {
+    group: "AI",
+    items: ["LLMs", "Document AI", "Voice AI", "Agent supervisors"],
+  },
+  {
+    group: "Data",
+    items: ["Lakehouse", "Consent ledger", "Lineage", "Causal ML"],
+  },
+  {
+    group: "Security",
+    items: ["GDPR", "DPDP", "Humanitarian principles", "ISO 27001"],
+  },
+  {
+    group: "CRM",
+    items: ["Salesforce NPSP", "Microsoft NFP", "Custom CRM", "Pega"],
+  },
+  {
+    group: "ERP",
+    items: ["NetSuite", "SAP", "Oracle", "Unit4"],
+  },
+  {
+    group: "Analytics",
+    items: ["Power BI", "Tableau", "Causal ML", "Open data"],
+  },
+  {
+    group: "Channels",
+    items: ["Mobile / PWA", "Voice IVR", "SMS / USSD", "Kiosk"],
+  },
 ];
 
 const SERVICES = {
-    aiAutomation: {
-      slug: "ai-automation",
-      title: "AI & Automation",
-      description:
-        "Beneficiary copilots, donor reporting agents, document AI and field workflow automation deployed across mission operations.",
-      icon: BrainCircuit,
-    },
-  
-    softwareDevelopment: {
-      slug: "software-development",
-      title: "Software Development",
-      description:
-        "Beneficiary platforms, donor portals, field apps and program dashboards built for global NGO delivery.",
-      icon: Cpu,
-    },
-  
-    cloudData: {
-      slug: "cloud-data",
-      title: "Cloud, Data & DevSecOps",
-      description:
-        "Secure cloud foundations, mission data fabrics, consent ledgers and offline-ready pipelines for field operations.",
-      icon: Cloud,
-    },
-  
-    governanceRisk: {
-      slug: "governance-risk",
-      title: "Governance, Risk & Trust",
-      description:
-        "Humanitarian data protection, donor compliance, consent controls and audit-ready governance built into every system.",
-      icon: ShieldCheck,
-    },
+  aiAutomation: {
+    slug: "ai-automation",
+    title: "AI & Automation",
+    description:
+      "Beneficiary copilots, donor reporting agents, document AI and field workflow automation deployed across mission operations.",
+    icon: BrainCircuit,
+  },
+
+  softwareDevelopment: {
+    slug: "software-development",
+    title: "Software Development",
+    description:
+      "Beneficiary platforms, donor portals, field apps and program dashboards built for global NGO delivery.",
+    icon: Cpu,
+  },
+
+  cloudData: {
+    slug: "cloud-data",
+    title: "Cloud, Data & DevSecOps",
+    description:
+      "Secure cloud foundations, mission data fabrics, consent ledgers and offline-ready pipelines for field operations.",
+    icon: Cloud,
+  },
+
+  governanceRisk: {
+    slug: "governance-risk",
+    title: "Governance, Risk & Trust",
+    description:
+      "Humanitarian data protection, donor compliance, consent controls and audit-ready governance built into every system.",
+    icon: ShieldCheck,
+  },
 };
 
 const SOLUTIONS = {
-    enterpriseCopilot: {
-      slug: "enterprise-copilot",
-      title: "Beneficiary Copilot",
-      description:
-        "Multilingual, voice-first copilots for beneficiaries, field staff and program support workflows.",
-      metric: "62% deflection",
-      icon: Sparkles,
-    },
-  
-    unifiedDataFabric: {
-      slug: "unified-data-fabric",
-      title: "Mission Data Fabric",
-      description:
-        "One governed source of truth across beneficiary, donor, program, partner and consent data.",
-      metric: "11 sources unified",
-      icon: Database,
-    },
-  
-    agentOperations: {
-      slug: "agent-operations",
-      title: "Program Operations Agents",
-      description:
-        "Agentic workflows for case management, eligibility, partner coordination and donor reporting.",
-      metric: "24/7 cadence",
-      icon: Workflow,
-    },
-  
-    decisionIntelligence: {
-      slug: "decision-intelligence",
-      title: "Impact Decision Intelligence",
-      description:
-        "Closed-loop models for program impact, donor reporting, outcome attribution and evidence chains.",
-      metric: "4x outcome speed",
-      icon: BarChart3,
-    },
+  enterpriseCopilot: {
+    slug: "enterprise-copilot",
+    title: "Beneficiary Copilot",
+    description:
+      "Multilingual, voice-first copilots for beneficiaries, field staff and program support workflows.",
+    metric: "62% deflection",
+    icon: Sparkles,
+  },
+
+  unifiedDataFabric: {
+    slug: "unified-data-fabric",
+    title: "Mission Data Fabric",
+    description:
+      "One governed source of truth across beneficiary, donor, program, partner and consent data.",
+    metric: "11 sources unified",
+    icon: Database,
+  },
+
+  agentOperations: {
+    slug: "agent-operations",
+    title: "Program Operations Agents",
+    description:
+      "Agentic workflows for case management, eligibility, partner coordination and donor reporting.",
+    metric: "24/7 cadence",
+    icon: Workflow,
+  },
+
+  decisionIntelligence: {
+    slug: "decision-intelligence",
+    title: "Impact Decision Intelligence",
+    description:
+      "Closed-loop models for program impact, donor reporting, outcome attribution and evidence chains.",
+    metric: "4x outcome speed",
+    icon: BarChart3,
+  },
 };
 
 const cta = {
@@ -415,6 +415,92 @@ const cta = {
   primary: { label: "Get Proposal", to: "/contact" },
   secondary: { label: "Talk to a Partner", to: "/contact" },
 };
+
+const NGO_MODULES = [
+  {
+    id: "beneficiaries",
+    label: "Beneficiaries",
+    desc: "Profiles, cases, support history",
+    iconName: "users",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "programs",
+    label: "Programs",
+    desc: "Projects, campaigns, initiatives",
+    iconName: "boxes",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "volunteers",
+    label: "Volunteers",
+    desc: "Teams, schedules, participation",
+    iconName: "userCog",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "donations",
+    label: "Donations",
+    desc: "Funds, pledges, receipts",
+    iconName: "wallet",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "procurement",
+    label: "Procurement",
+    desc: "Supplies, vendors, distribution",
+    iconName: "shoppingCart",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "field",
+    label: "Field Work",
+    desc: "Outreach, visits, local operations",
+    iconName: "truck",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "compliance",
+    label: "Compliance",
+    desc: "Reports, audits, documentation",
+    iconName: "barChart",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "impact",
+    label: "Impact",
+    desc: "Outcomes, KPIs, transparency",
+    iconName: "barChart",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const NGO_MODULE_SCROLL_ORDER = [
+  "compliance",
+  "impact",
+  "beneficiaries",
+  "programs",
+  "volunteers",
+  "donations",
+  "procurement",
+  "field",
+];
 export default function NgoWrap() {
   return (
     <div>
@@ -457,10 +543,13 @@ export default function NgoWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Non-profit operations.{" "}
+            <span className="text-brand">One impact core.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="Connect beneficiaries, programs, volunteers, donations, procurement, field work, compliance, and impact reporting into one transparent NGO management system."
+        modules={NGO_MODULES}
+        scrollOrder={NGO_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"NGOs"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

@@ -5,12 +5,12 @@
         /* =============================================================================
    GLOBAL — resets, scroll, shared animations (not theme-specific)
    ============================================================================= */
-        
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 96px;
         }
-        
+
         body {
             margin: 0;
             font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -18,110 +18,121 @@
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
-        
+
         code {
             font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
+
         /* Shared keyframes — reused across themes */
-        
+
         @keyframes b2b-pulse {
+
             0%,
             100% {
                 transform: scale(1);
                 opacity: 0.8;
             }
+
             50% {
                 transform: scale(1.6);
                 opacity: 0;
             }
         }
-        
+
         @keyframes b2b-float {
+
             0%,
             100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-6px);
             }
         }
-        
+
         @keyframes b2b-spin-slow {
             to {
                 transform: rotate(360deg);
             }
         }
-        
+
         @keyframes b2b-orbit-slow {
             to {
                 transform: rotate(360deg);
             }
         }
-        
+
         .float-anim {
             animation: b2b-float 6s ease-in-out infinite;
         }
-        
+
         .spin-slow {
             animation: b2b-spin-slow 40s linear infinite;
         }
-        
+
         @keyframes b2b-fade-up {
             from {
                 opacity: 0;
                 transform: translateY(24px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes b2b-pulse-glow {
+
             0%,
             100% {
                 opacity: 0.4;
             }
+
             50% {
                 opacity: 0.9;
             }
         }
-        
+
         @keyframes b2b-marquee {
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
         }
-        
+
         *,
         *::before,
         *::after {
             box-sizing: border-box;
         }
+
         /* Scrollbar — follows active theme background */
-        
-         ::-webkit-scrollbar {
+
+        ::-webkit-scrollbar {
             width: 10px;
             height: 10px;
         }
-        
-         ::-webkit-scrollbar-track {
+
+        ::-webkit-scrollbar-track {
             background: var(--b2b-bg, #02030a);
         }
-        
-         ::-webkit-scrollbar-thumb {
+
+        ::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
         }
-        
-         ::-webkit-scrollbar-thumb:hover {
+
+        ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.15);
         }
-        
+
         @media (prefers-reduced-motion: reduce) {
+
             *,
             *::before,
             *::after {
@@ -130,10 +141,11 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
         /* =============================================================================
    SHARED TYPOGRAPHY — homepage fonts site-wide (Manrope)
    ============================================================================= */
-        
+
         .theme-home,
         .theme-ai,
         .theme-apple,
@@ -149,10 +161,11 @@
             --b2b-font-display: var(--font-manrope), sans-serif;
             --b2b-font-mono: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
+
         /* =============================================================================
    THEME: HOME — Manrope, orange brand, deep navy backgrounds
    ============================================================================= */
-        
+
         .theme-home {
             /* Brand palette */
             --b2b-bg: #02030a;
@@ -206,19 +219,20 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-home code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-home ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
+
         /* =============================================================================
    THEME: AI — purple brand, intelligence division
    ============================================================================= */
-        
+
         .theme-ai {
             --b2b-bg: #03030a;
             --b2b-bg-2: #0a0618;
@@ -269,17 +283,18 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-ai code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-ai ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
+
         /* AI card system (was missing from merged globals — restored for AI components) */
-        
+
         .theme-ai .b2b-card {
             border-radius: 1.25rem;
             border: 1px solid var(--b2b-line);
@@ -287,10 +302,11 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
+
         /* =============================================================================
    THEME: GEO — Growth & Visibility, #155DFC brand
    ============================================================================= */
-        
+
         .theme-geo {
             --b2b-bg: #030305;
             --b2b-bg-2: #060a18;
@@ -341,16 +357,16 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-geo code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-geo ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
-        
+
         .theme-geo .b2b-card {
             border-radius: 1.25rem;
             border: 1px solid var(--b2b-line);
@@ -358,10 +374,11 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
+
         /* =============================================================================
    THEME: SOCIAL MEDIA — Lime green brand (#C6FF3D), same dark surfaces as geo
    ============================================================================= */
-        
+
         .theme-social-media {
             --b2b-bg: #030305;
             --b2b-bg-2: #060a18;
@@ -411,16 +428,16 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-social-media code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-social-media ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
-        
+
         .theme-social-media .b2b-card {
             border-radius: 1.25rem;
             border: 1px solid var(--b2b-line);
@@ -428,10 +445,11 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
+
         /* =============================================================================
    THEME: EMERGING TECHNOLOGIES — Amber/Gold brand (#FFB800)
    ============================================================================= */
-        
+
         .theme-emerging-technologies {
             --b2b-bg: #030305;
             --b2b-bg-2: #0a0a14;
@@ -481,16 +499,16 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-emerging-technologies code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-emerging-technologies ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
-        
+
         .theme-emerging-technologies .b2b-card {
             border-radius: 1.25rem;
             border: 1px solid var(--b2b-line);
@@ -498,10 +516,11 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
+
         /* =============================================================================
    THEME: SOFTWARE DEVELOPMENT — Red brand (#FF3B30)
    ============================================================================= */
-        
+
         .theme-software-development {
             --b2b-bg: #030305;
             --b2b-bg-2: #0a0a14;
@@ -552,22 +571,22 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-software-development code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-software-development ::selection {
             background: var(--b2b-primary);
             color: var(--b2b-selection-fg);
         }
-        
+
         .theme-software-development .b2b-glow-red,
         .b2b-glow-red {
             box-shadow: 0 0 120px 40px rgba(255, 59, 48, 0.25);
             border-radius: 9999px;
         }
-        
+
         .theme-software-development .b2b-card {
             border-radius: 1.25rem;
             border: 1px solid var(--b2b-line);
@@ -575,10 +594,11 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
+
         /* =============================================================================
    THEME: APPLE — Apple Blue brand
    ============================================================================= */
-        
+
         .theme-apple {
             /* Core surface */
             --b2b-bg: #020408;
@@ -658,23 +678,24 @@
             color: var(--b2b-text);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-apple code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-apple ::selection {
             background: var(--apple-primary);
             color: var(--b2b-selection-fg);
         }
-        
+
         .theme-apple :focus-visible {
             outline: 2px solid var(--apple-primary);
             outline-offset: 3px;
             border-radius: 4px;
         }
+
         /* EnterPrise */
-        
+
         .theme-enterprise {
             /* Core surface */
             --b2b-bg: #020408;
@@ -755,8 +776,9 @@
             color: var(--b2b-text);
             font-family: var(--b2b-font-body);
         }
+
         /* Operations Excellence */
-        
+
         .theme-operations-excellence {
             /* Core surface */
             --b2b-bg: #020408;
@@ -823,8 +845,9 @@
             color: var(--b2b-text);
             font-family: var(--b2b-font-body);
         }
+
         /* Enterprise Systems — dark enterprise with graphite cyan accent */
-        
+
         .theme-enterprise-systems {
             /* Typography — Manrope (match ai-automation) */
             --b2b-font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -902,11 +925,11 @@
             color: var(--b2b-text);
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-enterprise-systems code {
             font-family: var(--b2b-font-body);
         }
-        
+
         .theme-enterprise-systems h1,
         .theme-enterprise-systems h2,
         .theme-enterprise-systems h3,
@@ -914,82 +937,86 @@
             font-family: var(--b2b-font-display);
             letter-spacing: -0.025em;
         }
+
         /* ERP page component helpers */
-        
+
         .theme-enterprise-systems .status-dot {
             background-color: var(--b2b-primary);
             box-shadow: 0 0 8px var(--b2b-primary-soft), 0 0 16px var(--b2b-glow-shadow);
         }
-        
+
         .theme-enterprise-systems .vignette {
             background: radial-gradient(ellipse at center, transparent 30%, var(--b2b-bg) 100%);
         }
-        
+
         .theme-enterprise-systems .btn-primary {
             background: var(--b2b-primary);
             color: var(--b2b-on-primary);
             box-shadow: 0 8px 30px -8px var(--b2b-shadow-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .theme-enterprise-systems .btn-primary:hover {
             background: #0e7490;
             transform: translateY(-1px);
             box-shadow: 0 14px 40px -10px var(--b2b-shadow-lg);
         }
-        
+
         .theme-enterprise-systems .btn-ghost {
             border: 1px solid var(--b2b-border-strong);
             background: var(--b2b-glass);
             color: var(--b2b-text);
             transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .theme-enterprise-systems .btn-ghost:hover {
             border-color: rgba(8, 145, 178, 0.35);
             color: var(--b2b-primary-2);
             box-shadow: 0 0 20px -6px var(--b2b-glow-shadow);
         }
-        
+
         .theme-enterprise-systems .cta-accent-glow {
             background: radial-gradient(ellipse at center, var(--b2b-accent-glow) 0%, transparent 60%);
         }
-        
+
         .theme-enterprise-systems .card-glow {
             box-shadow: 0 0 40px -12px var(--b2b-glow-shadow);
             transition: box-shadow 0.3s ease, border-color 0.3s ease;
         }
-        
+
         .theme-enterprise-systems .card-glow:hover {
             box-shadow: 0 0 50px -10px var(--b2b-shadow-md);
             border-color: rgba(8, 145, 178, 0.22);
         }
-        
+
         .theme-enterprise-systems .capability-hover-glow {
             background: radial-gradient(circle at center, var(--b2b-accent-glow) 0%, transparent 70%);
         }
-        
+
         @keyframes erp-core-pulse {
+
             0%,
             100% {
                 box-shadow: 0 0 0 1px rgba(8, 145, 178, 0.2), 0 0 50px var(--b2b-glow-ambient);
             }
+
             50% {
                 box-shadow: 0 0 0 1px var(--b2b-accent-glow-strong), 0 0 60px var(--b2b-glow-shadow);
             }
         }
-        
+
         .theme-enterprise-systems .erp-core-pulse {
             animation: erp-core-pulse 5s ease-in-out infinite;
         }
-        
+
         .theme-enterprise-systems .erp-surface-panel {
             background: color-mix(in srgb, var(--b2b-surface) 85%, transparent);
         }
+
         /* =============================================================================
    THEME: E-COMMERCE / SHOPIFY — Shopify green #95BF47
    ============================================================================= */
-        
+
         .theme-e-commerce-solution {
             /* Brand accent */
             --b2b-primary: #95BF47;
@@ -1063,6 +1090,7 @@
             color: var(--b2b-text);
             font-family: var(--b2b-font-body);
         }
+
         /* .theme-e-commerce-solution .shadow-bgb {
     background: radial-gradient(ellipse 68% 53% at 50% 72%, rgba(var(--b2b-primary-rgb), 0.52) 0%, rgba(var(--b2b-primary-rgb), 0.18) 36%, rgba(var(--b2b-primary-rgb), 0.06) 58%, transparent 76%);
     box-shadow: 0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.12) inset, 0 0 240px 90px rgba(var(--b2b-primary-rgb), 0.06);
@@ -1074,31 +1102,466 @@
     box-shadow: 0 0 150px 50px rgba(var(--b2b-primary-rgb), 0.14) inset, 0 0 240px 90px rgba(var(--b2b-primary-rgb), 0.07);
     filter: blur(3px);
 } */
+
+        .theme-health-care {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #00B8A9;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+
+        .theme-manufacturing {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #B96A1A;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
         
+        .theme-logistics {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #008CFF;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+        
+        .theme-education {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #7C3AED;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+
+        .theme-retails {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #EC4899;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+        
+        .theme-automotive {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #e10013;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+
+        .theme-governments {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #001e70;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
+
+        .theme-ngos {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #22C55E;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
         @keyframes onloadbgt {
             0% {
                 opacity: 0;
                 transform: translateY(-92%) scale(1.05);
             }
+
             100% {
                 opacity: 0.7;
                 transform: translateY(-70%) scale(1.25);
             }
         }
-        
+
         @keyframes onloadopacity {
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
         }
+
         /* =============================================================================
    TAILWIND BASE — border color follows active theme tokens
    ============================================================================= */
-        
+
         @layer base {
+
             .theme-home *,
             .theme-ai *,
             .theme-geo *,
@@ -1107,30 +1570,38 @@
             .theme-software-development * {
                 border-color: hsl(var(--border));
             }
+
             .theme-apple * {
                 border-color: hsl(var(--border));
             }
+
             .theme-enterprise-systems * {
                 border-color: hsl(var(--border));
             }
+
             .theme-e-commerce-solution * {
                 border-color: hsl(var(--border));
             }
+
             * {
                 @apply border-border outline-ring/50;
             }
+
             body {
                 @apply bg-background text-foreground;
             }
+
             html {
                 @apply font-sans;
             }
         }
+
         /* =============================================================================
    SHARED UTILITIES — variable-driven, adapt per theme automatically
    ============================================================================= */
-        
+
         @layer utilities {
+
             /* Homepage typography scale — use across all pages */
             .type-eyebrow {
                 font-size: 0.75rem;
@@ -1139,110 +1610,135 @@
                 text-transform: uppercase;
                 letter-spacing: 0.25em;
             }
+
             .type-h1 {
                 font-family: var(--b2b-font-display);
                 font-size: 1.875rem;
                 line-height: 2.25rem;
                 letter-spacing: -0.025em;
             }
+
             .type-h2 {
                 font-family: var(--b2b-font-display);
                 font-size: 1.875rem;
                 line-height: 2.25rem;
                 letter-spacing: -0.025em;
             }
+
             .type-h2-lg {
                 font-family: var(--b2b-font-display);
                 font-size: 2.25rem;
                 line-height: 2.5rem;
                 letter-spacing: -0.025em;
             }
+
             .type-h3 {
                 font-family: var(--b2b-font-display);
                 font-size: 1.25rem;
                 line-height: 1.75rem;
                 letter-spacing: -0.025em;
             }
+
             .type-h4 {
                 font-family: var(--b2b-font-display);
                 font-size: 1.125rem;
                 line-height: 1.75rem;
             }
+
             .type-body {
                 font-size: 0.875rem;
                 line-height: 1.625;
             }
+
             .type-body-lg {
                 font-size: 1rem;
                 line-height: 1.625;
             }
+
             @media (min-width: 640px) {
                 .type-h2 {
                     font-size: 2.25rem;
                     line-height: 2.5rem;
                 }
+
                 .type-body {
                     font-size: 1rem;
                 }
+
                 .type-body-lg {
                     font-size: 1.125rem;
                 }
             }
+
             @media (min-width: 1024px) {
                 .type-h1 {
                     font-size: 2.25rem;
                     line-height: 2.5rem;
                 }
+
                 .type-h2 {
                     font-size: 3rem;
                     line-height: 1.05;
                 }
+
                 .type-h2-lg {
                     font-size: 3.75rem;
                     line-height: 1.02;
                 }
+
                 .type-h3 {
                     font-size: 1.5rem;
                     line-height: 2rem;
                 }
             }
+
             .font-display {
                 font-family: var(--b2b-font-display);
                 letter-spacing: -0.025em;
             }
+
             .font-mono-display,
             .font-mono {
                 font-family: var(--b2b-font-body);
                 letter-spacing: 0;
             }
+
             /* Primary brand color utilities */
             .text-brand {
                 color: var(--b2b-primary);
             }
+
             .bg-brand {
                 background-color: var(--b2b-primary);
                 color: var(--b2b-on-primary, #ffffff);
             }
+
             /* Legacy home class names — now theme-variable driven */
             .text-orange-brand {
                 color: var(--b2b-orange);
             }
+
             .bg-orange-brand {
                 background-color: var(--b2b-orange);
                 color: var(--b2b-on-primary, #ffffff);
             }
+
             .text-on-brand {
                 color: var(--b2b-on-primary, #ffffff);
             }
+
             .border-line {
                 border-color: var(--b2b-line);
             }
+
             .border-line-strong {
                 border-color: var(--b2b-line-strong);
             }
+
             .text-mute {
                 color: var(--b2b-mute);
             }
+
             .grain {
                 background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
                 background-size: 220px 220px;
@@ -1250,45 +1746,56 @@
                 mix-blend-mode: overlay;
                 pointer-events: none;
             }
+
             .glass {
                 background: var(--b2b-glass-bg);
                 backdrop-filter: blur(18px) saturate(140%);
                 -webkit-backdrop-filter: blur(18px) saturate(140%);
                 border: 1px solid var(--b2b-line);
             }
+
             .glow-brand,
             .glow-orange {
                 box-shadow: 0 0 0 1px var(--b2b-glow-ring), 0 8px 30px -8px var(--b2b-glow-shadow), 0 0 60px -10px var(--b2b-glow-ambient);
             }
+
             .text-glow-brand,
             .text-glow-orange {
                 text-shadow: 0 0 18px var(--b2b-text-glow), 0 0 60px var(--b2b-text-glow-ambient);
             }
+
             .ring-orbit {
                 border: 1px dashed var(--b2b-ring-orbit);
             }
+
             .divider-line {
                 background: linear-gradient(90deg, transparent, var(--b2b-line-strong), transparent);
                 height: 1px;
             }
+
             .shadow-brand-dot {
                 box-shadow: 0 0 10px var(--b2b-primary);
             }
+
             .shadow-brand-dot-lg {
                 box-shadow: 0 0 12px var(--b2b-primary);
             }
+
             .bg-brand-radial-glow {
                 background: radial-gradient(600px circle at 20% 0%, var(--b2b-primary-soft), transparent 50%);
             }
+
             .scrollbar-hide::-webkit-scrollbar {
                 display: none;
             }
+
             .scrollbar-hide {
                 scrollbar-width: none;
             }
         }
+
         /* Theme-scoped component helpers */
-        
+
         .marker-pulse::after {
             content: "";
             position: absolute;
@@ -1297,10 +1804,11 @@
             background: var(--b2b-marker-pulse);
             animation: b2b-pulse 2.4s ease-out infinite;
         }
+
         /* =============================================================================
    APPLE ECOSYSTEM — page utilities (use Apple CSS variables)
    ============================================================================= */
-        
+
         .b2b-container {
             width: 100%;
             max-width: 1280px;
@@ -1309,32 +1817,32 @@
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
-        
+
         @media (min-width: 1024px) {
             .b2b-container {
                 padding-left: 2.5rem;
                 padding-right: 2.5rem;
             }
         }
-        
+
         .b2b-glass {
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.015) 100%);
             border: 1px solid var(--b2b-border);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
-        
+
         .b2b-glass-strong {
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
             border: 1px solid var(--b2b-border-strong);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
         }
-        
+
         .apple-glow {
             box-shadow: 0 0 60px -10px var(--apple-glow);
         }
-        
+
         .apple-text-gradient {
             background: linear-gradient(135deg, #ffffff 0%, #5ac8fa 50%, #0a84ff 100%);
             -webkit-background-clip: text;
@@ -1342,7 +1850,7 @@
             -webkit-text-fill-color: transparent;
             color: transparent;
         }
-        
+
         .orange-text-gradient {
             background: linear-gradient(135deg, #ffffff 0%, #ffa47a 50%, #ff6a2c 100%);
             -webkit-background-clip: text;
@@ -1350,30 +1858,30 @@
             -webkit-text-fill-color: transparent;
             color: transparent;
         }
-        
+
         .b2b-hairline {
             height: 1px;
             background: linear-gradient(90deg, transparent 0%, var(--b2b-border-strong) 50%, transparent 100%);
         }
-        
+
         .b2b-fade-up {
             animation: b2b-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
-        
+
         .b2b-pulse-glow {
             animation: b2b-pulse-glow 4s ease-in-out infinite;
         }
-        
+
         .b2b-stars {
             background-image: radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.6), transparent 50%), radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.4), transparent 50%), radial-gradient(1.5px 1.5px at 85% 15%, rgba(255, 255, 255, 0.5), transparent 50%), radial-gradient(1px 1px at 10% 80%, rgba(255, 255, 255, 0.3), transparent 50%), radial-gradient(2px 2px at 40% 50%, rgba(90, 200, 250, 0.4), transparent 50%), radial-gradient(1px 1px at 70% 90%, rgba(255, 255, 255, 0.4), transparent 50%), radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.3), transparent 50%);
             background-size: 1200px 800px;
             background-repeat: repeat;
         }
-        
+
         .b2b-grain {
             position: relative;
         }
-        
+
         .b2b-grain::before {
             content: "";
             position: absolute;
@@ -1383,15 +1891,15 @@
             mix-blend-mode: overlay;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
         }
-        
+
         .b2b-marquee {
             animation: b2b-marquee 60s linear infinite;
         }
-        
+
         [data-debug-wrapper="true"] {
             display: contents !important;
         }
-        
+
         [data-debug-wrapper="true"]>* {
             margin-left: inherit;
             margin-right: inherit;
@@ -1405,33 +1913,35 @@
             row-gap: inherit;
             gap: inherit;
         }
-        
+
         @keyframes marquee {
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-33.3333%);
             }
         }
-        
+
         @keyframes marquee-reverse {
             0% {
                 transform: translateX(-33.3333%);
             }
+
             100% {
                 transform: translateX(0);
             }
         }
-        
+
         .animate-marquee {
             animation: marquee 40s linear infinite;
         }
-        
+
         .animate-marquee-reverse {
             animation: marquee-reverse 50s linear infinite;
         }
-        
+
         @theme inline {
             --font-heading: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
             --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
@@ -1473,37 +1983,43 @@
             --radius-2xl: calc(var(--radius) * 1.8);
             --radius-3xl: calc(var(--radius) * 2.2);
             --radius-4xl: calc(var(--radius) * 2.6);
+
             @keyframes onloadopacity {
                 24% {
                     opacity: 0;
                 }
+
                 100% {
                     opacity: 1;
                 }
             }
+
             @keyframes onloadbgt {
                 0% {
                     translate: 0 -70%;
                     opacity: 0.3;
                 }
+
                 100% {
                     translate: 0 -64%;
                     opacity: 0.8;
                 }
             }
+
             @keyframes onloadbgb {
                 0% {
                     translate: 0 70%;
                     opacity: 0.3;
                 }
+
                 100% {
                     translate: 0 64%;
                     opacity: 0.8;
                 }
             }
         }
-        
-         :root {
+
+        :root {
             --background: oklch(1 0 0);
             --foreground: oklch(0.145 0 0);
             --card: oklch(1 0 0);
@@ -1537,7 +2053,7 @@
             --sidebar-border: oklch(0.922 0 0);
             --sidebar-ring: oklch(0.708 0 0);
         }
-        
+
         .dark {
             --background: oklch(0.145 0 0);
             --foreground: oklch(0.985 0 0);

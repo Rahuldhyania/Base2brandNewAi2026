@@ -58,7 +58,7 @@ export const Hero = () => {
                             data-testid="hero-headline"
                         >
                             From{" "}
-                            <span className="text-brand">
+                            <span className="text-(--b2b-primary)">
                                 operational chaos
                             </span>
                             <br />
@@ -95,7 +95,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.35,
                             }}
-                            className="mt-4 text-lg sm:text-xl text-brand/85 max-w-2xl"
+                            className="mt-4 text-lg sm:text-xl text-white max-w-2xl"
                             data-testid="hero-subheading"
                         >
                             Unify inventory, finance, procurement,
@@ -109,7 +109,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.5,
                             }}
-                            className="mt-4 text-base sm:text-lg text-brand/70 max-w-2xl"
+                            className="mt-4 text-base sm:text-lg text-white max-w-2xl"
                             data-testid="hero-description"
                         >
                             Most businesses operate through disconnected tools,

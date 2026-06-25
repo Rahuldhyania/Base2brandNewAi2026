@@ -37,11 +37,11 @@ export function MissionDossierFan({
         >
             <div
                 aria-hidden
-                className="absolute inset-0 pointer-events-none"
+                className="absolute inset-0 pointer-events-none "
                 style={{
                     background:
-                        "radial-gradient(700px circle at 50% 40%, var(--b2b-primary-soft), rgba(5,5,5,0) 55%)",
-                }}
+                      "radial-gradient(700px circle at 50% 40%, color-mix(in srgb, var(--b2b-primary) 60%, transparent), color-mix(in srgb, var(--b2b-primary) 20%, transparent), transparent 55%)",
+                  }}
             />
 
             <Container className="relative">

@@ -61,7 +61,7 @@ export function MissionDossierCard({
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.04] border border-white/10 px-2 py-0.5 min-w-0">
                     <span
                         aria-hidden
-                        className="h-1 w-1 rounded-full bg-[#95BF47] shrink-0"
+                        className="h-1 w-1 rounded-full bg-(--b2b-primary) shrink-0"
                         style={{
                             boxShadow: "0 0 8px rgba(149,191,71,0.55)",
                         }}

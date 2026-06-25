@@ -15,8 +15,8 @@ export const StatusChip = ({
     >
       <span
         aria-hidden
-        className="h-1.5 w-1.5 rounded-full"
-        style={{ backgroundColor: dotColor, boxShadow: `0 0 10px ${dotColor}` }}
+        className="h-1.5 w-1.5 rounded-full bg-(--b2b-primary)" 
+        style={{boxShadow: `0 0 10px ${dotColor}` }}
       />
       <span className="font-mono text-[10px] tracking-[0.20em] uppercase text-white/65">
         {children}

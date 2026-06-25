@@ -57,7 +57,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: "easeOut", delay: 0.1 }}
-          className="mt-8 font-display text-[44px] sm:text-[64px] md:text-[88px] lg:text-[104px] leading-[0.95] font-medium text-white"
+          className="mt-8 font-display text-[44px] sm:text-[64px]  leading-[0.95] font-medium text-white"
         >
           <span className="block">{titleupper}</span>{' '}
           <span className="block text-orange-gradient w-fit mx-auto">{titlelower}</span>

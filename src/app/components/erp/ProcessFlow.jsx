@@ -175,7 +175,7 @@ const ClarityVis = ({ labels }) => (
                 transition={{ duration: 0.6, delay: i * 0.08 }}
                 className="flex items-center gap-3 group"
             >
-                <span className="w-1 h-1 rounded-full bg-brand" />
+                <span className="w-1 h-1 rounded-full bg-(--b2b-primary)" />
                 <div className="h-px flex-1 bg-gradient-to-r from-white/25 via-white/10 to-transparent" />
                 <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-white/75">
                     {l}
@@ -216,7 +216,7 @@ const Stage = ({ stage, idx }) => {
                     } pl-16 md:pl-0`}
             >
                 <div className="p-4 sm:p-5 rounded-2xl border border-[color:var(--b2b-primary)]/25 hover:border-[color:var(--b2b-primary)]/45 erp-surface-panel backdrop-blur-sm transition-all duration-300 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_30px_80px_-40px_var(--b2b-glow-shadow)]">
-                    <div className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-brand">
+                    <div className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-(--b2b-primary)">
                         {stage.kicker}
                     </div>
 
@@ -253,7 +253,7 @@ export const ProcessFlow = () => {
                         title={
                             <>
                                 Three stages.{" "}
-                                <span className="text-brand">
+                                <span className="text-(--b2b-primary)">
                                     One trajectory.
                                 </span>
                             </>

@@ -6,7 +6,7 @@ export const FinalCTA = () => {
     <section
       id="final-cta"
       data-testid="final-cta"
-      className="relative py-24 md:py-36 overflow-hidden"
+      className="relative py-14 overflow-hidden"
     >
       <div className="absolute inset-0 bg-grid-dense radial-fade opacity-30 pointer-events-none" />
       <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-brand/20 blur-3xl pointer-events-none" />
@@ -19,7 +19,7 @@ export const FinalCTA = () => {
 
         <h2
           data-testid="final-cta-headline"
-          className="font-display font-bold uppercase text-balance leading-[0.92] tracking-tight text-[clamp(2.25rem,6vw,5.5rem)]"
+          className="font-display font-bold uppercase text-balance leading-[0.92] tracking-tight text-[clamp(2.25rem,6vw,4.5rem)]"
         >
           Let's Solve{" "}
           <span className="text-brand">Meaningful</span>

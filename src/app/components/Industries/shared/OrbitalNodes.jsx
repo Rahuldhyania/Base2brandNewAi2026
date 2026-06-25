@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
+
 // Floating ecosystem nodes — abstract SVG with orbital rings and pulsing dots.
 // Used in the industry hero and other accent areas.
 export default function OrbitalNodes({
@@ -23,6 +24,7 @@ export default function OrbitalNodes({
     });
   }, [nodes]);
 
+
   return (
     <div className={`relative aspect-square w-full max-w-[560px] mx-auto ${className}`} aria-hidden="true">
       {/* Rings */}
@@ -31,12 +33,24 @@ export default function OrbitalNodes({
           <motion.div
             key={size}
             className="absolute rounded-full border border-white/8"
-            style={{ width: size, height: size, borderColor: i === 1 ? "rgba(244,123,82,0.18)" : "rgba(255,255,255,0.07)" }}
+            style={{
+              width: size,
+              height: size,
+              borderColor:
+                i === 1
+                  ? "color-mix(in srgb, var(--b2b-primary) 18%, transparent)"
+                  : "rgba(255,255,255,0.07)",
+              boxShadow:
+                i === 1
+                  ? "0 0 0 1px color-mix(in srgb, var(--b2b-primary) 12%, transparent)"
+                  : "none",
+            }}
             animate={{ rotate: i % 2 === 0 ? 360 : -360 }}
             transition={{ duration: 80 + i * 22, ease: "linear", repeat: Infinity }}
           />
         ))}
       </div>
+
 
       {/* Core */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -47,6 +61,7 @@ export default function OrbitalNodes({
           </div> */}
         </div>
       </div>
+
 
       {/* Nodes */}
       <div className="absolute inset-0">
@@ -62,8 +77,18 @@ export default function OrbitalNodes({
               transition={{ delay: 0.2 + idx * 0.1, duration: 0.6, ease: "easeOut" }}
               className="relative group"
             >
-              <div className="absolute inset-0 rounded-full bg-brand/35 blur-md animate-pulse-soft" />
-              <div className="relative w-11 h-11 rounded-full bg-ink-900/85 border border-white/10 backdrop-blur-md flex items-center justify-center text-[10px] uppercase tracking-widest2 text-white/80">
+              <div
+                className="absolute inset-0 rounded-full blur-md animate-pulse-soft"
+                style={{ background: "color-mix(in srgb, var(--b2b-primary) 35%, transparent)" }}
+              />
+              <div
+                className="relative w-11 h-11 rounded-full bg-ink-900/85 border border-white/10 backdrop-blur-md flex items-center justify-center text-[10px] uppercase tracking-widest2 text-white/80"
+                style={{
+                  backgroundColor: "color-mix(in srgb, var(--b2b-primary) 10%, rgba(5,6,10,0.85))",
+                  borderColor: "color-mix(in srgb, var(--b2b-primary) 18%, rgba(255,255,255,0.10))",
+                  color: "rgba(255,255,255,0.82)",
+                }}
+              >
                 <span className="px-1">{n.label}</span>
               </div>
             </motion.div>

@@ -24,7 +24,14 @@ import {
   Building2,
   LineChart,
   GitBranch,
+  Boxes,
+  Wallet,
+  Factory,
+  ShoppingCart,
+  Truck,
+  UserCog,
 } from "lucide-react";
+
 import IndustryCapabilities from "@/components/Industries/industry/IndustryCapabilities";
 import MissionDossierFan from "@/components/ui/MissionDossierFan";
 import IndustrySolutions from "@/components/Industries/industry/IndustrySolutions";
@@ -437,11 +444,99 @@ const SOLUTIONS = {
 };
 
 const cta = {
-    headline: "Tell us the hardest clinical problem you've postponed.",
-    description: "A senior partner replies within 24 hours with a tangible plan, validated against your protocols, payers and regulators.",
-    primary:   { label: "Get Proposal",      to: "/contact" },
-    secondary: { label: "Talk to a Partner", to: "/contact" },
-  }
+  headline: "Tell us the hardest clinical problem you've postponed.",
+  description:
+    "A senior partner replies within 24 hours with a tangible plan, validated against your protocols, payers and regulators.",
+  primary: { label: "Get Proposal", to: "/contact" },
+  secondary: { label: "Talk to a Partner", to: "/contact" },
+};
+
+const DEFAULT_MODULES = [
+  {
+    id: "inventory",
+    label: "Patient Records",
+    desc: "EMR, history, documents",
+    icon: Boxes,
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "finance",
+    label: "Revenue Cycle",
+    desc: "Claims, billing, payments",
+    icon: Wallet,
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "crm",
+    label: "Patient CRM",
+    desc: "Leads, follow-ups, lifecycle",
+    icon: Users,
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "mfg",
+    label: "Clinical Workflow",
+    desc: "Orders, care plans, tasks",
+    icon: Factory,
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "procurement",
+    label: "Pharmacy & Supplies",
+    desc: "Inventory, vendors, POs",
+    icon: ShoppingCart,
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Clinical Analytics",
+    desc: "KPIs, cohorts, outcomes",
+    icon: BarChart3,
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "logistics",
+    label: "Care Logistics",
+    desc: "Appointments, routing, home care",
+    icon: Truck,
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "hr",
+    label: "Clinical Workforce",
+    desc: "Doctors, nurses, rosters",
+    icon: UserCog,
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1521737711862-e3b97375f902?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const DEFAULT_SCROLL_ORDER = [
+  "logistics",
+  "hr",
+  "inventory",
+  "finance",
+  "crm",
+  "mfg",
+  "procurement",
+  "analytics",
+];
+
 export default function HealthCareWrap() {
   return (
     <div>
@@ -485,14 +580,17 @@ export default function HealthCareWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Eight modules.{" "}
+            <span className="text-brand">One clinical nucleus.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="An orbital architecture where every clinical, operational and revenue module is connected to the healthcare core in real-time."
+        modules={DEFAULT_MODULES}
+        scrollOrder={DEFAULT_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Healthcare"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
-      <IndustryCTA cta={cta}/>
+      <IndustryCTA cta={cta} />
     </div>
   );
 }

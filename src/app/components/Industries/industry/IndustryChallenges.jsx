@@ -36,7 +36,7 @@ export default function IndustryChallenges({ challenges, name , id = "challenges
               <Reveal key={c.title} delay={i * 0.05} className="h-full">
                 <div className="card-surface h-full p-6 md:p-7 group">
                   <div className="flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-xl bg-brand/10 border border-brand/25 flex items-center justify-center text-brand">
+                    <div className="w-11 h-11 rounded-xl bg-brand/10 border border-(--b2b-primary)/25 flex items-center justify-center text-brand">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="text-[11px] tabular-nums text-white/30 uppercase tracking-widest2">

@@ -23,7 +23,7 @@ const ShiningText = ({
   const dotClass =
     tone === "white"
       ? "bg-white/80 shadow-[0_0_10px_1px_rgba(255,255,255,0.4)]"
-      : "bg-[var(--b2b-primary-2)] shadow-[0_0_10px_1px_rgba(var(--b2b-primary-rgb),0.45)]";
+      : "bg-[var(--b2b-primary)] shadow-[0_0_10px_1px_rgba(var(--b2b-primary-rgb),0.45)]";
 
   return (
     <span

@@ -313,126 +313,131 @@ const ITEMS = [
 ];
 
 const ecosystem = [
-    {
-      group: "Standards",
-      items: ["DPDP", "GDPR", "WCAG", "OpenAPI"],
-    },
-    {
-      group: "Cloud",
-      items: ["AWS GovCloud", "Azure Government", "GCP Sovereign", "Private Cloud"],
-    },
-    {
-      group: "AI",
-      items: ["Citizen LLMs", "Document AI", "Speech AI", "Agent supervisors"],
-    },
-    {
-      group: "Security",
-      items: ["Zero-Trust", "ISO 27001", "SOC 2 Type II", "Data Residency"],
-    },
-    {
-      group: "Gov Systems",
-      items: ["Identity", "Case Mgmt", "Eligibility", "Payments"],
-    },
-    {
-      group: "Data",
-      items: ["Lakehouse", "Semantic Graph", "Lineage", "Consent Ledger"],
-    },
-    {
-      group: "Analytics",
-      items: ["Power BI", "Tableau", "Causal ML", "Policy Simulators"],
-    },
-    {
-      group: "Channels",
-      items: ["Web", "Mobile", "Voice IVR", "WhatsApp"],
-    },
-  ];
+  {
+    group: "Standards",
+    items: ["DPDP", "GDPR", "WCAG", "OpenAPI"],
+  },
+  {
+    group: "Cloud",
+    items: [
+      "AWS GovCloud",
+      "Azure Government",
+      "GCP Sovereign",
+      "Private Cloud",
+    ],
+  },
+  {
+    group: "AI",
+    items: ["Citizen LLMs", "Document AI", "Speech AI", "Agent supervisors"],
+  },
+  {
+    group: "Security",
+    items: ["Zero-Trust", "ISO 27001", "SOC 2 Type II", "Data Residency"],
+  },
+  {
+    group: "Gov Systems",
+    items: ["Identity", "Case Mgmt", "Eligibility", "Payments"],
+  },
+  {
+    group: "Data",
+    items: ["Lakehouse", "Semantic Graph", "Lineage", "Consent Ledger"],
+  },
+  {
+    group: "Analytics",
+    items: ["Power BI", "Tableau", "Causal ML", "Policy Simulators"],
+  },
+  {
+    group: "Channels",
+    items: ["Web", "Mobile", "Voice IVR", "WhatsApp"],
+  },
+];
 
 const SERVICES = {
-    aiAutomation: {
-      slug: "ai-automation",
-      title: "AI & Automation",
-      description:
-        "Citizen-service copilots, document AI, case-routing agents and workflow automation deployed across public-sector operations.",
-      icon: BrainCircuit,
-    },
-  
-    softwareDevelopment: {
-      slug: "software-development",
-      title: "Software Development",
-      description:
-        "Citizen portals, case management systems, payment platforms and public-service dashboards built for secure government delivery.",
-      icon: Cpu,
-    },
-  
-    enterpriseSystems: {
-      slug: "enterprise-systems",
-      title: "Enterprise Systems",
-      description:
-        "ERP, CRM, document management, identity, eligibility and ITSM integrations for connected government operations.",
-      icon: Building2,
-    },
-  
-    growthVisibility: {
-      slug: "growth-visibility",
-      title: "Public Impact Visibility",
-      description:
-        "Performance analytics, service dashboards and outcome intelligence that help agencies measure delivery and citizen impact.",
-      icon: LineChart,
-    },
-  
-    cloudData: {
-      slug: "cloud-data",
-      title: "Cloud, Data & DevSecOps",
-      description:
-        "Sovereign cloud foundations, government lakehouses, secure pipelines and audit-ready observability for public systems.",
-      icon: Cloud,
-    },
-  
-    governanceRisk: {
-      slug: "governance-risk",
-      title: "Governance, Risk & Trust",
-      description:
-        "AI governance, data residency, privacy controls, compliance engineering and resilience built for public-sector scrutiny.",
-      icon: ShieldCheck,
-    },
+  aiAutomation: {
+    slug: "ai-automation",
+    title: "AI & Automation",
+    description:
+      "Citizen-service copilots, document AI, case-routing agents and workflow automation deployed across public-sector operations.",
+    icon: BrainCircuit,
+  },
+
+  softwareDevelopment: {
+    slug: "software-development",
+    title: "Software Development",
+    description:
+      "Citizen portals, case management systems, payment platforms and public-service dashboards built for secure government delivery.",
+    icon: Cpu,
+  },
+
+  enterpriseSystems: {
+    slug: "enterprise-systems",
+    title: "Enterprise Systems",
+    description:
+      "ERP, CRM, document management, identity, eligibility and ITSM integrations for connected government operations.",
+    icon: Building2,
+  },
+
+  growthVisibility: {
+    slug: "growth-visibility",
+    title: "Public Impact Visibility",
+    description:
+      "Performance analytics, service dashboards and outcome intelligence that help agencies measure delivery and citizen impact.",
+    icon: LineChart,
+  },
+
+  cloudData: {
+    slug: "cloud-data",
+    title: "Cloud, Data & DevSecOps",
+    description:
+      "Sovereign cloud foundations, government lakehouses, secure pipelines and audit-ready observability for public systems.",
+    icon: Cloud,
+  },
+
+  governanceRisk: {
+    slug: "governance-risk",
+    title: "Governance, Risk & Trust",
+    description:
+      "AI governance, data residency, privacy controls, compliance engineering and resilience built for public-sector scrutiny.",
+    icon: ShieldCheck,
+  },
 };
 
 const SOLUTIONS = {
-    enterpriseCopilot: {
-      slug: "enterprise-copilot",
-      title: "Citizen Copilot",
-      description:
-        "Multilingual, voice-first copilots for licensing, benefits, grievances, payments and service guidance.",
-      metric: "62% deflection",
-      icon: Sparkles,
-    },
-  
-    unifiedDataFabric: {
-      slug: "unified-data-fabric",
-      title: "Unified Citizen Fabric",
-      description:
-        "One governed source of truth across identity, eligibility, departments, cases, payments and consent data.",
-      metric: "11M records unified",
-      icon: Database,
-    },
-  
-    agentOperations: {
-      slug: "agent-operations",
-      title: "Public Service Automation",
-      description:
-        "Agentic workflows for case triage, document checks, decision routing, approvals and citizen follow-ups.",
-      metric: "24/7 cadence",
-      icon: Workflow,
-    },
-  
-    decisionIntelligence: {
-      slug: "decision-intelligence",
-      title: "Citizen Decision Intelligence",
-      description:
-        "Closed-loop models for program impact, fraud detection, resource allocation and policy outcomes.",
-      metric: "4x faster outcomes",
-      icon: BarChart3,
-    },
+  enterpriseCopilot: {
+    slug: "enterprise-copilot",
+    title: "Citizen Copilot",
+    description:
+      "Multilingual, voice-first copilots for licensing, benefits, grievances, payments and service guidance.",
+    metric: "62% deflection",
+    icon: Sparkles,
+  },
+
+  unifiedDataFabric: {
+    slug: "unified-data-fabric",
+    title: "Unified Citizen Fabric",
+    description:
+      "One governed source of truth across identity, eligibility, departments, cases, payments and consent data.",
+    metric: "11M records unified",
+    icon: Database,
+  },
+
+  agentOperations: {
+    slug: "agent-operations",
+    title: "Public Service Automation",
+    description:
+      "Agentic workflows for case triage, document checks, decision routing, approvals and citizen follow-ups.",
+    metric: "24/7 cadence",
+    icon: Workflow,
+  },
+
+  decisionIntelligence: {
+    slug: "decision-intelligence",
+    title: "Citizen Decision Intelligence",
+    description:
+      "Closed-loop models for program impact, fraud detection, resource allocation and policy outcomes.",
+    metric: "4x faster outcomes",
+    icon: BarChart3,
+  },
 };
 
 const cta = {
@@ -442,6 +447,92 @@ const cta = {
   primary: { label: "Get Proposal", to: "/contact" },
   secondary: { label: "Talk to a Partner", to: "/contact" },
 };
+
+const GOVERNMENT_MODULES = [
+  {
+    id: "citizens",
+    label: "Citizens",
+    desc: "Profiles, requests, public services",
+    iconName: "users",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "services",
+    label: "Services",
+    desc: "Applications, approvals, delivery",
+    iconName: "boxes",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "departments",
+    label: "Departments",
+    desc: "Teams, roles, workflows",
+    iconName: "userCog",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "procurement",
+    label: "Procurement",
+    desc: "Vendors, tenders, contracts",
+    iconName: "shoppingCart",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    desc: "Budgets, grants, payments",
+    iconName: "wallet",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "compliance",
+    label: "Compliance",
+    desc: "Policies, audits, reporting",
+    iconName: "barChart",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "field",
+    label: "Field Operations",
+    desc: "Inspections, assets, tracking",
+    iconName: "truck",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    desc: "Dashboards, KPIs, insights",
+    iconName: "barChart",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const GOVERNMENT_MODULE_SCROLL_ORDER = [
+  "field",
+  "analytics",
+  "citizens",
+  "services",
+  "departments",
+  "procurement",
+  "finance",
+  "compliance",
+];
 export default function GovernmentWrap() {
   return (
     <div>
@@ -483,10 +574,13 @@ export default function GovernmentWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Government services.{" "}
+            <span className="text-brand">One civic core.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="Connect citizens, departments, services, procurement, finance, compliance, field operations, and analytics into one secure public-sector management system."
+        modules={GOVERNMENT_MODULES}
+        scrollOrder={GOVERNMENT_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Government"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

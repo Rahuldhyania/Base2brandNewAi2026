@@ -24,6 +24,12 @@ import {
   Building2,
   LineChart,
   GitBranch,
+  Boxes,
+  Wallet,
+  Factory,
+  ShoppingCart,
+  Truck,
+  UserCog,
 } from "lucide-react";
 import IndustryCapabilities from "@/components/Industries/industry/IndustryCapabilities";
 import MissionDossierFan from "@/components/ui/MissionDossierFan";
@@ -445,6 +451,92 @@ const cta = {
   primary: { label: "Get Proposal", to: "/contact" },
   secondary: { label: "Talk to a Partner", to: "/contact" },
 };
+
+const DEFAULT_MODULES = [
+  {
+    id: "inventory",
+    label: "Inventory",
+    desc: "Stock, SKUs, warehouses",
+    icon: Boxes,
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    desc: "Ledger, costing, treasury",
+    icon: Wallet,
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "crm",
+    label: "Customer Ops",
+    desc: "Orders, accounts, lifecycle",
+    icon: Users,
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "mfg",
+    label: "Manufacturing",
+    desc: "BOMs, MRP, shop floor",
+    icon: Factory,
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "procurement",
+    label: "Procurement",
+    desc: "Vendors, RFQs, POs",
+    icon: ShoppingCart,
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Plant Analytics",
+    desc: "OEE, yield, downtime",
+    icon: BarChart3,
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "logistics",
+    label: "Logistics",
+    desc: "Fleet, routing, delivery",
+    icon: Truck,
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "hr",
+    label: "Workforce",
+    desc: "Shifts, teams, attendance",
+    icon: UserCog,
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1521737711862-e3b97375f902?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const DEFAULT_SCROLL_ORDER = [
+  "logistics",
+  "hr",
+  "inventory",
+  "finance",
+  "crm",
+  "mfg",
+  "procurement",
+  "analytics",
+];
 export default function ManufacturingWrap() {
   return (
     <div>
@@ -491,10 +583,13 @@ export default function ManufacturingWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Eight modules.{" "}
+            <span className="text-brand">One manufacturing nucleus.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="An orbital architecture where every plant, workforce, inventory, procurement, finance and analytics module is connected to the manufacturing core in real-time."
+        modules={DEFAULT_MODULES}
+        scrollOrder={DEFAULT_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Manufacturing "} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

@@ -24,6 +24,12 @@ import {
   Building2,
   LineChart,
   GitBranch,
+  Boxes,
+  Wallet,
+  Factory,
+  ShoppingCart,
+  Truck,
+  UserCog,
 } from "lucide-react";
 import IndustryCapabilities from "@/components/Industries/industry/IndustryCapabilities";
 import MissionDossierFan from "@/components/ui/MissionDossierFan";
@@ -416,6 +422,91 @@ const cta = {
   primary: { label: "Get Proposal", to: "#" },
   secondary: { label: "Talk to a Partner", to: "#" },
 };
+const LOGISTICS_MODULES = [
+  {
+    id: "warehouse",
+    label: "Warehouse",
+    desc: "Stock, bins, inventory flow",
+    iconName: "boxes",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "dispatch",
+    label: "Dispatch",
+    desc: "Orders, jobs, assignments",
+    iconName: "truck",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "fleet",
+    label: "Fleet",
+    desc: "Vehicles, drivers, maintenance",
+    iconName: "truck",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "routes",
+    label: "Routes",
+    desc: "Planning, routing, optimization",
+    iconName: "analytics",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "billing",
+    label: "Billing",
+    desc: "Freight cost, invoices, payments",
+    iconName: "wallet",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    desc: "KPIs, delays, performance",
+    iconName: "barChart",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "tracking",
+    label: "Tracking",
+    desc: "Live status, ETA, proof of delivery",
+    iconName: "truck",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "carriers",
+    label: "Carriers",
+    desc: "Partners, rates, contracts",
+    iconName: "users",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const LOGISTICS_MODULE_SCROLL_ORDER = [
+  "tracking",
+  "carriers",
+  "warehouse",
+  "dispatch",
+  "fleet",
+  "routes",
+  "billing",
+  "analytics",
+];
 export default function LogisticsWrap() {
   return (
     <div>
@@ -460,6 +551,8 @@ export default function LogisticsWrap() {
           </>
         }
         description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        modules={LOGISTICS_MODULES}
+        scrollOrder={LOGISTICS_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Logistics"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

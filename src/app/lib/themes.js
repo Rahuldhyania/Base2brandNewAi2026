@@ -92,6 +92,63 @@ export const THEMES = {
       pathname === "/e-commerce-solution" ||
       pathname.startsWith("/e-commerce-solution/"),
   },
+  // Indutries page 
+  healthCare : {
+    id : 'health-care',
+    className : 'theme-health-care',
+    match: (pathname) => 
+      pathname === '/industries/health-care' || 
+      pathname.startsWith('/industries/health-care/')
+  },
+  manufacturing : {
+    id : 'manufacturing',
+    className : 'theme-manufacturing',
+    match : (pathname) => 
+      pathname === '/industries/manufacturing' || 
+    pathname.startsWith('/industries/manufacturing/')
+  },
+  logistics : {
+    id : 'logistics',
+    className : 'theme-logistics',
+    match : (pathname) => 
+      pathname === '/industries/logistics' || 
+    pathname.startsWith('/industries/logistics/')
+  },
+  education : {
+    id : 'education',
+    className : 'theme-education',
+    match : (pathname) => 
+      pathname === '/industries/education' || 
+    pathname.startsWith('/industries/education/')
+  },
+  retail : {
+    id : 'retail',
+    className : 'theme-retails',
+    match : (pathname) => 
+      pathname === '/industries/retail' || 
+    pathname.startsWith('/industries/retail/')
+  },
+  automotive : {
+    id : 'automotive',
+    className : 'theme-automotive',
+    match : (pathname) => 
+      pathname === '/industries/automotive' || 
+    pathname.startsWith('/industries/automotive/')
+  },
+  government : {
+    id : 'government',
+    className : 'theme-governments',
+    match : (pathname) => 
+      pathname === '/industries/government' || 
+    pathname.startsWith('/industries/government/')
+  },
+  ngo : {
+    id : 'ngo',
+    className : 'theme-ngos',
+    match : (pathname) => 
+      pathname === '/industries/ngo' || 
+    pathname.startsWith('/industries/ngo/')
+  },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

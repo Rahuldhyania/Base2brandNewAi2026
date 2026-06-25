@@ -302,110 +302,110 @@ const ITEMS = [
 ];
 
 const ecosystem = [
-    {
-      group: "Cloud",
-      items: ["AWS", "Azure", "GCP", "CDN edge"],
-    },
-    {
-      group: "AI",
-      items: ["LLMs", "Recommender systems", "Causal ML", "Vision AI"],
-    },
-    {
-      group: "Data",
-      items: ["Lakehouse", "CDP", "Identity graph", "Lineage"],
-    },
-    {
-      group: "Security",
-      items: ["PCI-DSS", "ISO 27001", "Consent ledger", "Zero-Trust"],
-    },
-    {
-      group: "Commerce",
-      items: ["Composable / MACH", "OMS", "PIM", "Payments"],
-    },
-    {
-      group: "ERP / CRM",
-      items: ["SAP", "Oracle", "Salesforce", "Dynamics"],
-    },
-    {
-      group: "Analytics",
-      items: ["Power BI", "Tableau", "Looker", "dbt"],
-    },
-    {
-      group: "Automation",
-      items: ["UiPath", "n8n", "Camunda", "Temporal"],
-    },
+  {
+    group: "Cloud",
+    items: ["AWS", "Azure", "GCP", "CDN edge"],
+  },
+  {
+    group: "AI",
+    items: ["LLMs", "Recommender systems", "Causal ML", "Vision AI"],
+  },
+  {
+    group: "Data",
+    items: ["Lakehouse", "CDP", "Identity graph", "Lineage"],
+  },
+  {
+    group: "Security",
+    items: ["PCI-DSS", "ISO 27001", "Consent ledger", "Zero-Trust"],
+  },
+  {
+    group: "Commerce",
+    items: ["Composable / MACH", "OMS", "PIM", "Payments"],
+  },
+  {
+    group: "ERP / CRM",
+    items: ["SAP", "Oracle", "Salesforce", "Dynamics"],
+  },
+  {
+    group: "Analytics",
+    items: ["Power BI", "Tableau", "Looker", "dbt"],
+  },
+  {
+    group: "Automation",
+    items: ["UiPath", "n8n", "Camunda", "Temporal"],
+  },
 ];
 
 const SERVICES = {
-    aiAutomation: {
-      slug: "ai-automation",
-      title: "AI & Automation",
-      description:
-        "Demand forecasting, pricing copilots, customer support AI and back-office automation deployed across retail workflows.",
-      icon: BrainCircuit,
-    },
-  
-    softwareDevelopment: {
-      slug: "software-development",
-      title: "Software Development",
-      description:
-        "Unified commerce platforms, customer apps, store associate tools and loyalty systems built for omnichannel scale.",
-      icon: Cpu,
-    },
-  
-    enterpriseSystems: {
-      slug: "enterprise-systems",
-      title: "Enterprise Systems",
-      description:
-        "ERP, CRM, CDP, OMS and WMS integrations that connect stores, e-commerce, marketplaces and fulfillment operations.",
-      icon: Building2,
-    },
-  
-    growthVisibility: {
-      slug: "growth-visibility",
-      title: "Growth & Visibility",
-      description:
-        "Customer intelligence, conversion analytics, personalization systems and performance dashboards that improve retail growth.",
-      icon: LineChart,
-    },
+  aiAutomation: {
+    slug: "ai-automation",
+    title: "AI & Automation",
+    description:
+      "Demand forecasting, pricing copilots, customer support AI and back-office automation deployed across retail workflows.",
+    icon: BrainCircuit,
+  },
+
+  softwareDevelopment: {
+    slug: "software-development",
+    title: "Software Development",
+    description:
+      "Unified commerce platforms, customer apps, store associate tools and loyalty systems built for omnichannel scale.",
+    icon: Cpu,
+  },
+
+  enterpriseSystems: {
+    slug: "enterprise-systems",
+    title: "Enterprise Systems",
+    description:
+      "ERP, CRM, CDP, OMS and WMS integrations that connect stores, e-commerce, marketplaces and fulfillment operations.",
+    icon: Building2,
+  },
+
+  growthVisibility: {
+    slug: "growth-visibility",
+    title: "Growth & Visibility",
+    description:
+      "Customer intelligence, conversion analytics, personalization systems and performance dashboards that improve retail growth.",
+    icon: LineChart,
+  },
 };
 
 const SOLUTIONS = {
-    decisionIntelligence: {
-      slug: "decision-intelligence",
-      title: "Retail Decision Intelligence",
-      description:
-        "Closed-loop models for demand, pricing, promo, assortment, inventory and customer behaviour.",
-      metric: "22% conversion lift",
-      icon: BarChart3,
-    },
-  
-    enterpriseCopilot: {
-      slug: "enterprise-copilot",
-      title: "Customer Copilot",
-      description:
-        "Voice-first and multilingual copilots for customer support, product discovery and shopping assistance.",
-      metric: "38% deflection",
-      icon: Sparkles,
-    },
-  
-    unifiedDataFabric: {
-      slug: "unified-data-fabric",
-      title: "Customer 360 Fabric",
-      description:
-        "One governed customer view across e-commerce, stores, marketplace, CRM, loyalty and consent data.",
-      metric: "8 channels unified",
-      icon: Database,
-    },
-  
-    agentOperations: {
-      slug: "agent-operations",
-      title: "Merchandising Agents",
-      description:
-        "Agentic workflows across pricing, promotion, assortment planning and inventory actions with approval controls.",
-      metric: "4x decision speed",
-      icon: Workflow,
-    },
+  decisionIntelligence: {
+    slug: "decision-intelligence",
+    title: "Retail Decision Intelligence",
+    description:
+      "Closed-loop models for demand, pricing, promo, assortment, inventory and customer behaviour.",
+    metric: "22% conversion lift",
+    icon: BarChart3,
+  },
+
+  enterpriseCopilot: {
+    slug: "enterprise-copilot",
+    title: "Customer Copilot",
+    description:
+      "Voice-first and multilingual copilots for customer support, product discovery and shopping assistance.",
+    metric: "38% deflection",
+    icon: Sparkles,
+  },
+
+  unifiedDataFabric: {
+    slug: "unified-data-fabric",
+    title: "Customer 360 Fabric",
+    description:
+      "One governed customer view across e-commerce, stores, marketplace, CRM, loyalty and consent data.",
+    metric: "8 channels unified",
+    icon: Database,
+  },
+
+  agentOperations: {
+    slug: "agent-operations",
+    title: "Merchandising Agents",
+    description:
+      "Agentic workflows across pricing, promotion, assortment planning and inventory actions with approval controls.",
+    metric: "4x decision speed",
+    icon: Workflow,
+  },
 };
 
 const cta = {
@@ -416,6 +416,91 @@ const cta = {
   secondary: { label: "Talk to a Partner", to: "/contact" },
 };
 
+const RETAIL_MODULES = [
+  {
+    id: "pos",
+    label: "POS",
+    desc: "Sales, billing, checkout",
+    iconName: "wallet",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "inventory",
+    label: "Inventory",
+    desc: "Stock, SKUs, replenishment",
+    iconName: "boxes",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "orders",
+    label: "Orders",
+    desc: "Online, store, returns",
+    iconName: "shoppingCart",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "customers",
+    label: "Customers",
+    desc: "Profiles, loyalty, lifecycle",
+    iconName: "users",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "procurement",
+    label: "Procurement",
+    desc: "Vendors, buying, POs",
+    iconName: "shoppingCart",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    desc: "Margins, payments, ledger",
+    iconName: "wallet",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    desc: "Sales KPIs, demand, insights",
+    iconName: "barChart",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "fulfillment",
+    label: "Fulfillment",
+    desc: "Packing, shipping, delivery",
+    iconName: "truck",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const RETAIL_MODULE_SCROLL_ORDER = [
+  "analytics",
+  "fulfillment",
+  "pos",
+  "inventory",
+  "orders",
+  "customers",
+  "procurement",
+  "finance",
+];
 export default function RetailWrap() {
   return (
     <div>
@@ -456,10 +541,13 @@ export default function RetailWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Retail operations.{" "}
+            <span className="text-brand">One commerce core.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="Connect POS, inventory, orders, customers, procurement, finance, fulfillment, and analytics into one intelligent retail management system."
+        modules={RETAIL_MODULES}
+        scrollOrder={RETAIL_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Retail"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />

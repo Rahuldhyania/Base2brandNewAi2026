@@ -109,7 +109,7 @@ export const Capabilities = () => {
                         title={
                             <>
                                 The operating layer beneath{" "}
-                                <span className="text-brand">
+                                <span className="text-(--b2b-primary)">
                                     every department.
                                 </span>
                             </>

@@ -16,17 +16,29 @@ const logosList = [
   { slug: "/operations-excellence", logourl: "/images/aiLogo.png" },
   { slug: "/enterprise-systems", logourl: "/images/enterprise-logo.png" },
   { slug: "/e-commerce-solution", logourl: "/images/shopify-page.png" },
+  { slug: "/industries/health-care", logourl: "/images/health-carelogo.png" },
+  { slug: "/industries/manufacturing", logourl: "/images/manufacturing-logo.png" },
+  { slug: "/industries/logistics", logourl: "/images/logistics-logo.png" },
+  { slug: "/industries/education", logourl: "/images/education-logo.png" },
+  { slug: "/industries/retail", logourl: "/images/retail-logo.png" },
+  { slug: "/industries/automotive", logourl: "/images/automotive-logo.png" },
+  { slug: "/industries/government", logourl: "/images/governments-logo.png" },
+  { slug: "/industries/ngo", logourl: "/images/ngos-logo.png" },
 ];
 
 export function CurrentLogo({ className = "max-w-46" }) {
   const currentPath = usePathname();
+  console.log('currentPath currentlogo',currentPath);
+  
   const matched = logosList.find((logo) => logo.slug === currentPath);
+  console.log('matched currentlogo',matched);
   const [src, setSrc] = useState(matched?.logourl ?? DEFAULT_LOGO);
 
   useEffect(() => {
     setSrc(matched?.logourl ?? DEFAULT_LOGO);
   }, [matched?.logourl]);
-
+  console.log('logourlsrc', src);
+  
   useEffect(() => {
     if (currentPath !== "/social-media-services") return;
 

@@ -304,110 +304,110 @@ const ITEMS = [
 ];
 
 const ecosystem = [
-    {
-      group: "Cloud",
-      items: ["AWS Auto", "Azure Mobility", "GCP Auto", "Edge"],
-    },
-    {
-      group: "AI",
-      items: ["Vision AI", "Predictive ops", "LLMs", "Speech AI"],
-    },
-    {
-      group: "Data",
-      items: ["Vehicle Lakehouse", "Lineage", "Causal ML", "Streaming"],
-    },
-    {
-      group: "Security",
-      items: ["UN R155 / R156", "ISO 21434", "ISO 27001", "Zero-Trust"],
-    },
-    {
-      group: "DMS / ERP",
-      items: ["SAP", "Oracle", "Dynamics", "Custom DMS"],
-    },
-    {
-      group: "Service",
-      items: ["ServiceNow", "Salesforce", "Custom CRM", "Pega"],
-    },
-    {
-      group: "Analytics",
-      items: ["Power BI", "Tableau", "Looker", "Causal ML"],
-    },
-    {
-      group: "Channels",
-      items: ["Vehicle IVI", "Mobile", "Dealer apps", "Voice"],
-    },
+  {
+    group: "Cloud",
+    items: ["AWS Auto", "Azure Mobility", "GCP Auto", "Edge"],
+  },
+  {
+    group: "AI",
+    items: ["Vision AI", "Predictive ops", "LLMs", "Speech AI"],
+  },
+  {
+    group: "Data",
+    items: ["Vehicle Lakehouse", "Lineage", "Causal ML", "Streaming"],
+  },
+  {
+    group: "Security",
+    items: ["UN R155 / R156", "ISO 21434", "ISO 27001", "Zero-Trust"],
+  },
+  {
+    group: "DMS / ERP",
+    items: ["SAP", "Oracle", "Dynamics", "Custom DMS"],
+  },
+  {
+    group: "Service",
+    items: ["ServiceNow", "Salesforce", "Custom CRM", "Pega"],
+  },
+  {
+    group: "Analytics",
+    items: ["Power BI", "Tableau", "Looker", "Causal ML"],
+  },
+  {
+    group: "Channels",
+    items: ["Vehicle IVI", "Mobile", "Dealer apps", "Voice"],
+  },
 ];
 
 const SERVICES = {
-    aiAutomation: {
-      slug: "ai-automation",
-      title: "AI & Automation",
-      description:
-        "Predictive service agents, OTA copilots, warranty automation and customer support AI deployed across mobility workflows.",
-      icon: BrainCircuit,
-    },
-  
-    softwareDevelopment: {
-      slug: "software-development",
-      title: "Software Development",
-      description:
-        "Connected vehicle platforms, dealer portals, service apps and OEM cloud experiences built for software-defined mobility.",
-      icon: Cpu,
-    },
-  
-    enterpriseSystems: {
-      slug: "enterprise-systems",
-      title: "Enterprise Systems",
-      description:
-        "DMS, ERP, CRM, service and supplier integrations that connect vehicles, dealers, customers and OEM operations.",
-      icon: Building2,
-    },
-  
-    cloudData: {
-      slug: "cloud-data",
-      title: "Cloud, Data & DevSecOps",
-      description:
-        "Vehicle-to-cloud telemetry, mobility lakehouses, secure pipelines and observability for connected automotive platforms.",
-      icon: Cloud,
-    },
+  aiAutomation: {
+    slug: "ai-automation",
+    title: "AI & Automation",
+    description:
+      "Predictive service agents, OTA copilots, warranty automation and customer support AI deployed across mobility workflows.",
+    icon: BrainCircuit,
+  },
+
+  softwareDevelopment: {
+    slug: "software-development",
+    title: "Software Development",
+    description:
+      "Connected vehicle platforms, dealer portals, service apps and OEM cloud experiences built for software-defined mobility.",
+    icon: Cpu,
+  },
+
+  enterpriseSystems: {
+    slug: "enterprise-systems",
+    title: "Enterprise Systems",
+    description:
+      "DMS, ERP, CRM, service and supplier integrations that connect vehicles, dealers, customers and OEM operations.",
+    icon: Building2,
+  },
+
+  cloudData: {
+    slug: "cloud-data",
+    title: "Cloud, Data & DevSecOps",
+    description:
+      "Vehicle-to-cloud telemetry, mobility lakehouses, secure pipelines and observability for connected automotive platforms.",
+    icon: Cloud,
+  },
 };
 
 const SOLUTIONS = {
-    unifiedDataFabric: {
-      slug: "unified-data-fabric",
-      title: "Vehicle 360 Fabric",
-      description:
-        "One governed source of truth across telemetry, dealer, finance, service, customer and vehicle data.",
-      metric: "9 systems unified",
-      icon: Database,
-    },
-  
-    agentOperations: {
-      slug: "agent-operations",
-      title: "Service Operations Agents",
-      description:
-        "Multi-agent workflows for diagnostics, dispatch, parts availability, service updates and customer communication.",
-      metric: "32% TAT reduction",
-      icon: Workflow,
-    },
-  
-    decisionIntelligence: {
-      slug: "decision-intelligence",
-      title: "Mobility Decision Intelligence",
-      description:
-        "Closed-loop models for fleet health, warranty risk, dealer performance, customer LTV and mobility yield.",
-      metric: "26% yield lift",
-      icon: BarChart3,
-    },
-  
-    enterpriseCopilot: {
-      slug: "enterprise-copilot",
-      title: "Dealer / Customer Copilot",
-      description:
-        "Multilingual copilots for customers, dealers and service teams grounded in live vehicle and ownership context.",
-      metric: "47% deflection",
-      icon: Sparkles,
-    },
+  unifiedDataFabric: {
+    slug: "unified-data-fabric",
+    title: "Vehicle 360 Fabric",
+    description:
+      "One governed source of truth across telemetry, dealer, finance, service, customer and vehicle data.",
+    metric: "9 systems unified",
+    icon: Database,
+  },
+
+  agentOperations: {
+    slug: "agent-operations",
+    title: "Service Operations Agents",
+    description:
+      "Multi-agent workflows for diagnostics, dispatch, parts availability, service updates and customer communication.",
+    metric: "32% TAT reduction",
+    icon: Workflow,
+  },
+
+  decisionIntelligence: {
+    slug: "decision-intelligence",
+    title: "Mobility Decision Intelligence",
+    description:
+      "Closed-loop models for fleet health, warranty risk, dealer performance, customer LTV and mobility yield.",
+    metric: "26% yield lift",
+    icon: BarChart3,
+  },
+
+  enterpriseCopilot: {
+    slug: "enterprise-copilot",
+    title: "Dealer / Customer Copilot",
+    description:
+      "Multilingual copilots for customers, dealers and service teams grounded in live vehicle and ownership context.",
+    metric: "47% deflection",
+    icon: Sparkles,
+  },
 };
 
 const cta = {
@@ -417,6 +417,92 @@ const cta = {
   primary: { label: "Get Proposal", to: "/contact" },
   secondary: { label: "Talk to a Partner", to: "/contact" },
 };
+
+const AUTOMOTIVE_MODULES = [
+  {
+    id: "inventory",
+    label: "Vehicle Inventory",
+    desc: "Models, variants, stock",
+    iconName: "boxes",
+    angle: 0,
+    image:
+      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "sales",
+    label: "Sales",
+    desc: "Leads, deals, bookings",
+    iconName: "wallet",
+    angle: 45,
+    image:
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "crm",
+    label: "CRM",
+    desc: "Customers, follow-ups, lifecycle",
+    iconName: "users",
+    angle: 90,
+    image:
+      "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "service",
+    label: "Service",
+    desc: "Jobs, repairs, workshop flow",
+    iconName: "factory",
+    angle: 135,
+    image:
+      "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "parts",
+    label: "Parts",
+    desc: "Spare parts, SKUs, availability",
+    iconName: "shoppingCart",
+    angle: 180,
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    desc: "Invoices, payments, margins",
+    iconName: "wallet",
+    angle: 225,
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "logistics",
+    label: "Logistics",
+    desc: "Delivery, routing, tracking",
+    iconName: "truck",
+    angle: 270,
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    desc: "Sales KPIs, service insights",
+    iconName: "barChart",
+    angle: 315,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+  },
+];
+
+const AUTOMOTIVE_MODULE_SCROLL_ORDER = [
+  "logistics",
+  "analytics",
+  "inventory",
+  "sales",
+  "crm",
+  "service",
+  "parts",
+  "finance",
+];
 export default function AutomotiveWrap() {
   return (
     <div>
@@ -459,10 +545,13 @@ export default function AutomotiveWrap() {
       <Modules
         title={
           <>
-            Eight modules. <span className="text-brand">One nucleus.</span>
+            Automotive operations.{" "}
+            <span className="text-brand">One connected drive.</span>
           </>
         }
-        description="An orbital architecture where every operational module is connected to the ERP core in real-time."
+        description="Connect vehicle inventory, sales, CRM, service, spare parts, finance, logistics, and analytics into one intelligent automotive management system."
+        modules={AUTOMOTIVE_MODULES}
+        scrollOrder={AUTOMOTIVE_MODULE_SCROLL_ORDER}
       />
       <IndustryEcosystem ecosystem={ecosystem} name={"Automotive"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
