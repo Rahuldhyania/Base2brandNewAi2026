@@ -51,7 +51,7 @@ export const Problems = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="max-w-3xl mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-5">
+          <p className="text-xs uppercase tracking-[0.3em] text-(--b2b-primary) font-semibold mb-5">
             ▸ Challenges We Help Solve
           </p>
           <h2
@@ -59,7 +59,7 @@ export const Problems = () => {
             className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)] mb-6"
           >
             The Challenges{" "}
-            <span className="text-brand">Public Organizations</span>
+            <span className="text-(--b2b-primary)">Public Organizations</span>
             <br />
             Face Today.
           </h2>
@@ -78,8 +78,8 @@ export const Problems = () => {
                 data-testid={`problem-card-${i}`}
                 className="group relative p-7 md:p-8 border-r border-b border-border bg-background hover:bg-card transition-colors"
               >
-                <div className="absolute top-0 left-0 h-0.5 w-0 bg-brand transition-all duration-300 group-hover:w-full" />
-                <div className="w-10 h-10 rounded-lg border border-border bg-secondary/60 grid place-items-center mb-5 group-hover:border-brand group-hover:text-brand transition-colors">
+                <div className="absolute top-0 left-0 h-0.5 w-0 bg-(--b2b-primary) transition-all duration-300 group-hover:w-full" />
+                <div className="w-10 h-10 rounded-lg border border-border bg-secondary/60 grid place-items-center mb-5 group-hover:border-(--b2b-primary) group-hover:text-(--b2b-primary) transition-colors">
                   <Icon size={18} />
                 </div>
                 <h3 className="text-base md:text-lg font-semibold text-foreground leading-snug mb-2">

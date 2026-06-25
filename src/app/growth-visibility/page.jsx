@@ -60,45 +60,45 @@ const CAPS = [
 const ITEMS = [
   {
     icon: "Users",
-    title: "AI Workforce",
-    tagline: "Digital employees operating continuously.",
-    desc: "Always-on digital workers handling structured operations, ticketing, scheduling, qualification, and follow-through across 24/7 cycles.",
-    metrics: ["24/7 cadence", "0 onboarding ramp", "Audit-grade logs"],
+    title: "AI Visibility Workforce",
+    tagline: "Digital growth operators for AI-first search.",
+    desc: "Always-on AI visibility systems that monitor brand mentions, competitor presence, answer coverage, citation gaps and recommendation opportunities across AI search platforms.",
+    metrics: ["24/7 monitoring", "Mention tracking", "Competitor signals"],
   },
   {
     icon: "GitBranch",
-    title: "Multi-Agent Operations",
-    tagline: "AI teams collaborating autonomously.",
-    desc: "Coordinated agent networks that plan, delegate, validate, and execute multi-step workflows with shared memory and guardrails.",
-    metrics: ["Agent-to-agent", "Tool routing", "Policy-aware"],
+    title: "GEO Operations",
+    tagline: "Growth workflows for generative engines.",
+    desc: "Coordinated workflows that optimize your brand for ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews through structured signals, entity clarity and trusted content layers.",
+    metrics: ["GEO-ready", "Entity signals", "AI citations"],
   },
   {
     icon: "Briefcase",
-    title: "Enterprise Copilots",
-    tagline: "Department-specific intelligence systems.",
-    desc: "Copilots embedded in sales, ops, support, and engineering — trained on private context, integrated to systems of record.",
-    metrics: ["RAG-grounded", "RBAC native", "BYO models"],
+    title: "Answer Engine Optimization",
+    tagline: "Own the answers buyers now trust.",
+    desc: "AEO systems that map buyer questions, structure expert answers, improve topical authority and make your brand easier for AI engines to understand and recommend.",
+    metrics: ["Question mapping", "Answer coverage", "Authority lift"],
   },
   {
     icon: "BrainCircuit",
-    title: "Decision Intelligence",
-    tagline: "Systems that recommend and execute.",
-    desc: "Models that synthesize signals across data warehouses and act — with explainability, human review, and reversibility built-in.",
-    metrics: ["Explainable", "Reversible", "Outcome tracked"],
+    title: "AI Search Intelligence",
+    tagline: "Visibility decisions backed by live signals.",
+    desc: "Decision intelligence that analyzes AI search rankings, brand share of voice, citation quality, content gaps and competitor movement to guide growth actions.",
+    metrics: ["Share of voice", "Content gaps", "AI rankings"],
   },
   {
     icon: "PhoneCall",
-    title: "Voice Operations",
-    tagline: "Human-like voice for customer interactions.",
-    desc: "Production voice agents handling inbound, outbound, qualification, scheduling, and structured data capture at low latency.",
-    metrics: ["<350ms latency", "Telephony native", "Hand-off ready"],
+    title: "AI Buyer Journey Content",
+    tagline: "Content built for how buyers now search.",
+    desc: "AI-first content systems that turn buyer intent, FAQs, comparisons, service pages and thought leadership into structured assets ready for AI discovery.",
+    metrics: ["Intent-led", "Structured content", "Buyer-ready"],
   },
   {
     icon: "LayoutDashboard",
-    title: "AI Command Centers",
-    tagline: "Unified enterprise AI control planes.",
-    desc: "Single pane to deploy, observe, govern, and meter your entire AI estate — agents, models, prompts, costs, and outcomes.",
-    metrics: ["Observability", "Cost metering", "Governance"],
+    title: "AI Visibility Command Center",
+    tagline: "One dashboard for AI search growth.",
+    desc: "A unified control plane to track GEO, AEO, AI citations, brand recommendations, competitor visibility, content performance and growth opportunities.",
+    metrics: ["Visibility dashboard", "Citation tracking", "Growth insights"],
   },
 ];
 const steps = [
@@ -106,31 +106,31 @@ const steps = [
     n: "01",
     title: "AI Brand Audit",
     body: "We analyze how ChatGPT, Gemini, Claude and Perplexity currently perceive — or ignore — your brand.",
-    icon: 'ScanSearch',
+    icon: "ScanSearch",
   },
   {
     n: "02",
     title: "Knowledge Optimization",
     body: "We engineer your business knowledge graph: structured data, authority signals and entity relationships AI can trust.",
-    icon: 'Database',
+    icon: "Database",
   },
   {
     n: "03",
     title: "Content Intelligence",
     body: "We produce AI-readable, answer-shaped content tuned to the exact prompts buyers use in your category.",
-    icon: 'FileText',
+    icon: "FileText",
   },
   {
     n: "04",
     title: "Entity Authority Building",
     body: "We compound digital trust through citations, mentions, partnerships and recognition AI engines weigh heavily.",
-    icon: 'Award',
+    icon: "Award",
   },
   {
     n: "05",
     title: "AI Recommendation Positioning",
     body: "We monitor and lift the probability of your brand being recommended inside AI answers — month after month.",
-    icon: 'Sparkles',
+    icon: "Sparkles",
   },
 ];
 
@@ -138,21 +138,21 @@ const floatingMetrics = [
   {
     label: "AI visibility",
     value: "+340%",
-    icon: 'TrendingUp',
+    icon: "TrendingUp",
     pos: "top-6 -left-4 md:left-6",
     delay: 0.3,
   },
   {
     label: "ChatGPT mention rate",
     value: "8.2×",
-    icon: 'Bot',
+    icon: "Bot",
     pos: "bottom-16 -right-2 md:right-8",
     delay: 0.55,
   },
   {
     label: "Brand authority",
     value: "Enterprise",
-    icon: 'ShieldCheck',
+    icon: "ShieldCheck",
     pos: "top-1/2 -right-6 md:-right-10",
     delay: 0.75,
   },
@@ -163,15 +163,17 @@ export default function page() {
       data-testid="geo-page"
       className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
     >
-      <Hero 
-        highlightTag={'GEO · AEO · AI Search Optimization'}
-        titleUpper={'Dominate'}
-        titleMiddle={'AI Search'}
-        titleLower={'competitors do.'}
-        description={'We get your brand recommended inside ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and the next generation of search — through Generative Engine Optimization (GEO), Answer Engine Optimization (AEO) and AI visibility strategies.'}
-        leftCTA='Book Free Strategy Call'
-        rightCTA={'Get AI Visibility Audit'}
-        primaryColor='rgb(21 93 252)'
+      <Hero
+        highlightTag={"GEO · AEO · AI Search Optimization"}
+        titleUpper={"Dominate"}
+        titleMiddle={"AI Search"}
+        titleLower={"competitors do."}
+        description={
+          "We get your brand recommended inside ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and the next generation of search — through Generative Engine Optimization (GEO), Answer Engine Optimization (AEO) and AI visibility strategies."
+        }
+        leftCTA="Book Free Strategy Call"
+        rightCTA={"Get AI Visibility Audit"}
+        primaryColor="rgb(21 93 252)"
         floatingMetrics={floatingMetrics}
       />
       <Narrative
@@ -197,9 +199,9 @@ export default function page() {
       />
       <BuildingNow
         highlightTag={"CURRENTLY IN PRODUCTION"}
-        title={"What we are building right now"}
+        title={"What we are building for AI-first growth"}
         description={
-          "Six categories of intelligent systems, shipped into production — discovered as you scroll."
+          "Six categories of AI visibility systems, shipped into production — helping brands get discovered, cited and recommended across the new search landscape."
         }
         ITEMS={ITEMS}
       />
@@ -209,10 +211,12 @@ export default function page() {
           "Models, frameworks, and infrastructure — composed deliberately."
         }
       />
-      <Framework 
+      <Framework
         highlightTag={"· Methodology"}
         title={"The Base2Brand GEO Framework"}
-        description={"A five-step operating system for turning your brand into the answer AI engines recommend."}
+        description={
+          "A five-step operating system for turning your brand into the answer AI engines recommend."
+        }
         steps={steps}
       />
       <Services />

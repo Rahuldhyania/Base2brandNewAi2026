@@ -73,7 +73,7 @@ export const THEMES = {
   },
   operationsExcellence: {
     id: "operations-excellence",
-    className: "theme-operations-excellence",
+    className: "theme-operations-excellences",
     match: (pathname) =>
       pathname === "/operations-excellence" ||
       pathname.startsWith("/operations-excellence/"),

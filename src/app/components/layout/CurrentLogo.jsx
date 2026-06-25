@@ -14,7 +14,7 @@ const logosList = [
   { slug: "/social-media-services", logourl: "/images/socialmedialogo.png" },
   { slug: "/emerging-technologies", logourl: "/images/emerging-technologiesLOGO.png" },
   { slug: "/operations-excellence", logourl: "/images/aiLogo.png" },
-  { slug: "/enterprise-systems", logourl: "/images/enterprise-logo.png" },
+  { slug: "/enterprise-systems", logourl: "/images/enterprise-logonew.png" },
   { slug: "/e-commerce-solution", logourl: "/images/shopify-page.png" },
   { slug: "/industries/health-care", logourl: "/images/health-carelogo.png" },
   { slug: "/industries/manufacturing", logourl: "/images/manufacturing-logo.png" },

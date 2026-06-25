@@ -9,8 +9,29 @@ import AnimatedCounter from "@/components/Industries/shared/AnimatedCounter";
 // import { INDUSTRY_PAGE } from "@/constants/Industries/testIds";
 import { ShieldCheck, BadgeCheck, Rocket } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSecondaryCta, id = "hero" }) {
+
+  const pathname = usePathname();
+
+  const currentLogo = pathname === '/industries/health-care' 
+                  ? '/health-care-b2b.png' 
+                  : pathname === '/industries/manufacturing' 
+                  ? '/manufacturing-b2b.png' 
+                  : pathname === '/industries/logistics'
+                  ? '/logistics-b2b.png'
+                  : pathname === '/industries/education' 
+                  ? '/education-b2blogo.png'
+                  : pathname === '/industries/retail'
+                  ? '/retail-b2b.png'
+                  : pathname === '/industries/automotive'
+                  ? '/automotive-b2b.png'
+                  : pathname === '/industries/government'
+                  ? '/government-b2blogo.png'
+                  : pathname === '/industries/ngo'
+                  ? '/ngo-b2b-logo.png'
+                  :  '/images/b2blogo.png'
   return (
     <section
       id={id}
@@ -111,7 +132,7 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
             <div className="relative">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <Image  
-                  src={'/images/b2blogo.png'}
+                  src={`/images${currentLogo}`}
                   alt=""
                   width={1000}
                   height={500}
