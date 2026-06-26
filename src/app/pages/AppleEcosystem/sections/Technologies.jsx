@@ -51,19 +51,19 @@ const CATEGORY_COLOR = {
 
 export default function Technologies() {
   return (
-    <section className="b2b-container py-12">
-      <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8">
+    <section className="b2b-container py-8 sm:py-12">
+      <div className="grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-8">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Modern Apple Technologies
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
             The current Apple stack —{" "}
             <span className="apple-text-gradient">
               used like it was designed to be.
             </span>
           </h2>
-          <p className="mt-6 text-white/60 leading-relaxed max-w-md">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/60 leading-relaxed max-w-md">
             We ship on Apple's modern frameworks, not generation-old patterns.
             SwiftUI first. App Intents for intelligence. Swift Concurrency for
             async. Swift Data for local persistence. RealityKit for spatial.
@@ -71,8 +71,8 @@ export default function Technologies() {
           </p>
         </div>
 
-        <div className="flex items-center">
-          <div className="flex flex-wrap gap-2.5 content-start">
+        <div className="flex items-center justify-start">
+          <div className="flex flex-wrap gap-2 sm:gap-2.5 content-start">
             {TECHNOLOGIES.map((t, i) => (
               <motion.span
                 key={t.name}
@@ -80,7 +80,7 @@ export default function Technologies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.02, ease: "easeOut" }}
-                className="group inline-flex items-center gap-2 px-3.5 py-2 rounded-full border bg-white/[0.02] hover:bg-white/[0.06] transition cursor-default"
+                className="group inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-full border bg-white/[0.02] hover:bg-white/[0.06] transition cursor-default"
                 style={{ borderColor: "rgba(255,255,255,0.08)" }}
               >
                 <span
@@ -90,10 +90,10 @@ export default function Technologies() {
                     boxShadow: `0 0 6px ${CATEGORY_COLOR[t.category] || "#5AC8FA"}`,
                   }}
                 />
-                <span className="text-sm text-white/90 font-medium">
+                <span className="text-xs sm:text-sm text-white/90 font-medium">
                   {t.name}
                 </span>
-                <span className="text-xs font-mono uppercase tracking-[0.16em] text-white/40 hidden sm:inline">
+                <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.14em] sm:tracking-[0.16em] text-white/40 hidden sm:inline">
                   {t.category}
                 </span>
               </motion.span>

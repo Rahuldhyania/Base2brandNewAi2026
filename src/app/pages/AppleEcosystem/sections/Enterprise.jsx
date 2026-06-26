@@ -34,24 +34,24 @@ export default function Enterprise() {
   return (
     <>
       {/* ENTERPRISE MOBILITY */}
-      <section className="b2b-container py-12">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
+      <section className="b2b-container py-8 sm:py-12">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-20">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Enterprise Mobility Solutions
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
               Apple at enterprise scale —{" "}
               <span className="apple-text-gradient">engineered to deploy, secure and govern.</span>
             </h2>
-            <p className="mt-6 text-white/60 leading-relaxed max-w-md">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/60 leading-relaxed max-w-md">
               Most Apple development agencies stop at App Store delivery. We continue —
               MDM, identity, telemetry, audit, configuration and lifecycle — because
               enterprise software lives or dies in the operational layer.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-1 gap-5">
+          <div className="grid sm:grid-cols-1 gap-4 sm:gap-5">
             {PILLARS.map((p, i) => {
               const Icon = p.icon;
               return (
@@ -61,14 +61,14 @@ export default function Enterprise() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.5, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                  className="b2b-glass rounded-2xl p-6 flex gap-5"
+                  className="b2b-glass rounded-2xl p-4 sm:p-6 flex gap-4 sm:gap-5"
                 >
-                  <span className="flex-shrink-0 inline-flex w-11 h-11 rounded-xl items-center justify-center self-start" style={{ background: "rgba(10,132,255,0.13)", border: "1px solid rgba(10,132,255,0.32)" }}>
+                  <span className="flex-shrink-0 inline-flex w-10 h-10 sm:w-11 sm:h-11 rounded-xl items-center justify-center self-start" style={{ background: "rgba(10,132,255,0.13)", border: "1px solid rgba(10,132,255,0.32)" }}>
                     <Icon size={18} color="#64D2FF" strokeWidth={1.8} />
                   </span>
                   <div>
-                    <h3 className="font-display text-xl leading-tight">{p.title}</h3>
-                    <p className="mt-2 text-sm text-white/60 leading-relaxed">{p.body}</p>
+                    <h3 className="font-display text-lg sm:text-xl leading-tight">{p.title}</h3>
+                    <p className="mt-2 text-xs sm:text-sm text-white/60 leading-relaxed">{p.body}</p>
                   </div>
                 </motion.div>
               );
@@ -78,17 +78,17 @@ export default function Enterprise() {
       </section>
       <Outcomes />
       {/* INDUSTRY APPLICATIONS */}
-      <section className="b2b-container pb-12">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+      <section className="b2b-container pb-8 sm:pb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Industry Applications
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
             Built for the industries Apple devices already operate in.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
           {INDUSTRIES.map((ind, i) => {
             const Icon = ind.icon;
             return (
@@ -98,14 +98,14 @@ export default function Enterprise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                className="b2b-glass rounded-2xl p-7"
+                className="b2b-glass rounded-2xl p-5 sm:p-7"
                 data-testid={`apple-industry-card-${ind.title.toLowerCase().replace(/[^a-z]+/g, "-")}`}
               >
-                <span className="inline-flex w-11 h-11 rounded-xl items-center justify-center" style={{ background: "rgba(10,132,255,0.12)", border: "1px solid rgba(10,132,255,0.32)" }}>
+                <span className="inline-flex w-10 h-10 sm:w-11 sm:h-11 rounded-xl items-center justify-center" style={{ background: "rgba(10,132,255,0.12)", border: "1px solid rgba(10,132,255,0.32)" }}>
                   <Icon size={18} color="#64D2FF" strokeWidth={1.8} />
                 </span>
-                <h3 className="mt-5 font-display text-2xl leading-tight">{ind.title}</h3>
-                <p className="mt-3 text-sm text-white/60 leading-relaxed">{ind.body}</p>
+                <h3 className="mt-4 sm:mt-5 font-display text-xl sm:text-2xl leading-tight">{ind.title}</h3>
+                <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-white/60 leading-relaxed">{ind.body}</p>
               </motion.div>
             );
           })}

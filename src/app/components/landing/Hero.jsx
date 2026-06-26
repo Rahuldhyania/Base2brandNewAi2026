@@ -42,7 +42,7 @@ export default function Hero({
     <section
       id="top"
       data-testid="hero-section"
-      className="relative pt-16 lg:pt-28  pb-12 overflow-hidden"
+      className="relative pt-22 lg:pt-28  md:pb-12 overflow-hidden"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid pointer-events-none opacity-60" />
@@ -51,14 +51,14 @@ export default function Hero({
       <div className="absolute inset-0 noise pointer-events-none mix-blend-overlay" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-12 gap-2 md:gap-12 lg:gap-8 items-center">
           {/* Left */}
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs md:text-sm"
+              className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs md:text-sm"
               data-testid="hero-eyebrow"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
@@ -80,7 +80,7 @@ export default function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.18 }}
-              className="mt-8 max-w-xl text-base md:text-lg text-zinc-400 leading-relaxed"
+              className="mt-2 md:mt-8 max-w-xl text-base md:text-lg text-zinc-400 leading-relaxed"
               data-testid="hero-subhead"
             >
               {description}

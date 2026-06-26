@@ -20,7 +20,7 @@ export default function PlatformSwitcher({
       data-testid={testId}
       role="tablist"
       aria-label="Apple platform"
-      className="relative inline-flex p-1.5 rounded-full overflow-hidden"
+      className="relative inline-flex p-1 sm:p-1.5 rounded-full overflow-hidden"
       style={{
         background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)",
         border: "1px solid rgba(90,200,250,0.18)",
@@ -40,7 +40,7 @@ export default function PlatformSwitcher({
             aria-selected={active}
             data-testid={`apple-platform-option-${p.id}`}
             onClick={() => onChange(p.id)}
-            className="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-colors duration-200 z-10"
+            className="relative inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-medium transition-colors duration-200 z-10"
             style={{
               color: active ? "#fff" : "rgba(255,255,255,0.62)",
             }}
@@ -57,8 +57,8 @@ export default function PlatformSwitcher({
                 }}
               />
             )}
-            <span className="relative inline-flex items-center gap-2 cursor-grab">
-              {Icon && <Icon size={14} className={active ? "text-[#64D2FF]" : "text-white/55"} />}
+            <span className="relative inline-flex items-center gap-1.5 sm:gap-2 cursor-grab">
+              {Icon && <Icon size={13} className={active ? "text-[#64D2FF]" : "text-white/55"} />}
               <span className="whitespace-nowrap">{p.label}</span>
             </span>
           </button>

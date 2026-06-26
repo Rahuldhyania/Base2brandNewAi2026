@@ -14,7 +14,7 @@ export function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative min-h-screen w-full overflow-hidden"
+      className="relative md:min-h-screen w-full overflow-hidden"
     >
       <StarsBackground className="absolute inset-0" />
       {/* orbit rings */}
@@ -35,7 +35,7 @@ export function Hero() {
       <div className="absolute inset-0 grain" />
 
       {/* Hero content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-24 sm:pt-28 pb-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-24 sm:pt-28 pb-10 md:pb-16">
         {/* eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -134,11 +134,11 @@ export function Hero() {
             { k: "120+", v: "Enterprise engagements" },
             { k: "14 yrs", v: "Engineering DNA" },
           ].map((s) => (
-            <div key={s.v} className="bg-[#02030a] p-5 xl:p-6">
-              <div className="font-display text-4xl xl:text-5xl text-white">
+            <div key={s.v} className="bg-[#02030a] p-3 md:p-5 xl:p-6">
+              <div className="font-display text-2xl md:text-4xl xl:text-5xl text-white">
                 {s.k}
               </div>
-              <div className="mt-1 text-xs sm:text-sm text-mute uppercase tracking-wider">
+              <div className="mt-1 text-[10px] md:text-sm text-mute uppercase tracking-wider">
                 {s.v}
               </div>
             </div>

@@ -30,9 +30,9 @@ const SIGNALS = [
 
 export default function VisionPro() {
   return (
-    <section className="relative b2b-container py-12">
+    <section className="relative b2b-container py-8 sm:py-12">
       <div
-        className="absolute -top-20 left-1/2 -translate-x-1/2 w-[80%] h-[420px] pointer-events-none"
+        className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-[80%] h-[350px] sm:h-[420px] pointer-events-none"
         style={{ background: "radial-gradient(ellipse, rgba(10,132,255,0.18) 0%, transparent 70%)" }}
       />
 
@@ -40,11 +40,11 @@ export default function VisionPro() {
         <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
           Vision Pro & Spatial Computing
         </p>
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
+        <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
           A new computing surface.{" "}
           <span className="apple-text-gradient">We were ready on day one.</span>
         </h2>
-        <p className="mt-6 text-white/65 leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/65 leading-relaxed">
           Vision Pro is the most ambitious computing platform Apple has shipped in fifteen
           years — and the first that meaningfully changes what enterprise software is for.
           Base2Brand was among the first agencies to ship production visionOS work, and we
@@ -53,21 +53,21 @@ export default function VisionPro() {
         </p>
       </div>
 
-      <div className="relative mt-16 grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
+      <div className="relative mt-10 sm:mt-16 grid lg:grid-cols-[1fr_1.2fr] gap-6 sm:gap-10 lg:gap-16 items-start">
         {/* Visual stage */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="b2b-glass-strong rounded-[40px] aspect-square p-10 flex items-center justify-center relative overflow-hidden"
+          className="b2b-glass-strong rounded-[32px] sm:rounded-[40px] aspect-square p-6 sm:p-10 flex items-center justify-center relative overflow-hidden"
         >
           <div
             className="absolute inset-0"
             style={{ background: "radial-gradient(circle at 30% 30%, rgba(100,210,255,0.22), transparent 60%), radial-gradient(circle at 70% 70%, rgba(10,132,255,0.18), transparent 60%)" }}
           />
           {/* Stylised vision pro */}
-          <svg viewBox="0 0 400 280" className="relative w-full max-w-[340px] drop-shadow-[0_24px_60px_rgba(10,132,255,0.45)]">
+          <svg viewBox="0 0 400 280" className="relative w-full max-w-[280px] sm:max-w-[340px] drop-shadow-[0_24px_60px_rgba(10,132,255,0.45)]">
             <defs>
               <linearGradient id="vp-grad" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#0F172A" />
@@ -102,8 +102,8 @@ export default function VisionPro() {
               transition={{ duration: 0.5, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
               className="b2b-glass rounded-2xl p-6"
             >
-              <h3 className="font-display text-xl leading-tight">{a.title}</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">{a.body}</p>
+              <h3 className="font-display text-lg sm:text-xl leading-tight">{a.title}</h3>
+              <p className="mt-2 text-xs sm:text-sm text-white/60 leading-relaxed">{a.body}</p>
             </motion.div>
           ))}
         </div>
@@ -111,9 +111,9 @@ export default function VisionPro() {
 
       <div className="relative mt-4 grid sm:grid-cols-3 gap-px b2b-glass rounded-2xl overflow-hidden">
         {SIGNALS.map((s) => (
-          <div key={s.label} className="bg-[rgba(10,12,18,0.5)] p-6">
-            <p className="text-sm font-semibold text-white">{s.label}</p>
-            <p className="mt-1 text-xs text-white/50">{s.sub}</p>
+          <div key={s.label} className="bg-[rgba(10,12,18,0.5)] p-4 sm:p-6">
+            <p className="text-xs sm:text-sm font-semibold text-white">{s.label}</p>
+            <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-white/50">{s.sub}</p>
           </div>
         ))}
       </div>

@@ -14,7 +14,7 @@ const ECOSYSTEM_APPS = [
   { id: "tv",       name: "Apple TV",        icon: <Tv strokeWidth={1.6} />,         bg: "linear-gradient(135deg,#020617 0%, #1E40AF 100%)" },
   { id: "carplay",  name: "CarPlay",         icon: <Car strokeWidth={1.6} />,        bg: "linear-gradient(135deg,#0A84FF 0%, #40C8E0 100%)" },
   { id: "mac",      name: "Mac",             icon: <Laptop strokeWidth={1.6} />,     bg: "linear-gradient(135deg,#334155 0%, #94A3B8 100%)" },
-  { id: "intel",    name: "Apple Intelligence", icon: <Brain strokeWidth={1.6} />,   bg: "linear-gradient(135deg,#5AC8FA 0%, #FFFFFF 100%)" },
+  // { id: "intel",    name: "Apple Intelligence", icon: <Brain strokeWidth={1.6} />,   bg: "linear-gradient(135deg,#5AC8FA 0%, #FFFFFF 100%)" },
 ];
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative  pt-16 lg:pt-28 pb-12">
+    <section className="relative  pt-22 md:pt-16 lg:pt-28 pb-8 sm:pb-12">
       {/* Warp shader background — Apple Blue palette, contained to hero only */}
       <div
         aria-hidden="true"
@@ -55,7 +55,7 @@ export default function Hero() {
             "hsl(220, 80%, 4%)",   // near-black navy (matches --b2b-bg)
             "hsl(212, 100%, 42%)", // Apple primary #0A84FF zone
             "hsl(196, 92%, 60%)",  // Apple secondary #5AC8FA zone
-            "hsl(192, 100%, 78%)", // Apple highlight #64D2FF zone
+            "hsl(192, 100%, 78%)", // Apple highlight #64D2FF zone 
           ]}
         />
         {/* Vignette + dark wash so text/UI remain legible */}
@@ -69,20 +69,19 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 b2b-container" >
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]"
       >
         Apple Ecosystem Division · From Idea to Orbit
-      </motion.p>
-
+      </motion.p> */} 
       <motion.h1
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-        className="font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-5xl"
+        className="font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight md:mt-4 max-w-5xl"
       >
         Build experiences across the{" "}
         <span className="apple-text-gradient">entire Apple ecosystem.</span>
@@ -92,11 +91,11 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="mt-2 text-lg sm:text-xl text-white/65 max-w-2xl leading-relaxed"
+        className="mt-2 text-base sm:text-lg lg:text-xl text-white/65 max-w-2xl leading-relaxed"
       >
         Base2Brand is an Apple-first engineering partner. We design, develop and operate
         native applications for iPhone, iPad, Apple Watch, Apple TV, Vision Pro, CarPlay
-        and Mac — engineered to Apple-grade craft, secured for the enterprise, and shipped
+        and Mac — engineered to Apple-grade craft, secured for the enterprise, and shipped  
         at production velocity.
       </motion.p>
 
@@ -104,19 +103,19 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.25 }}
-        className="mt-10 flex flex-wrap items-center gap-3"
+        className="mt-6 sm:mt-10 flex flex-wrap items-center gap-3"
       >
         <a
           href="#contact"
           data-testid={APPLE.heroCtaPrimary}
-          className="inline-flex items-center gap-2 h-12 px-6 rounded-full text-sm font-semibold text-white bg-[#0A84FF] hover:bg-[#3CA0FF] transition shadow-[0_10px_36px_-10px_rgba(10,132,255,0.7)]"
+          className="inline-flex items-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-full text-sm font-semibold text-white bg-[#0A84FF] hover:bg-[#3CA0FF] transition shadow-[0_10px_36px_-10px_rgba(10,132,255,0.7)]"
         >
           Start an Apple engagement <ArrowUpRight size={16} />
         </a>
         <a
           href="#capabilities"
           data-testid={APPLE.heroCtaSecondary}
-          className="inline-flex items-center gap-2 h-12 px-6 rounded-full text-sm font-semibold text-white/85 hover:text-white border border-white/15 hover:border-white/30 transition"
+          className="inline-flex items-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-full text-sm font-semibold text-white/85 hover:text-white border border-white/15 hover:border-white/30 transition"
         >
           Explore capabilities
         </a>
@@ -127,25 +126,25 @@ export default function Hero() {
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-14 flex flex-col items-center"
+        className="mt-10 sm:mt-14 flex flex-col items-center"
         data-testid={APPLE.heroDock}
       >
         {/* Reflective stage */}
-        <div className="relative w-full max-w-5xl">
+        <div className="relative w-full max-w-4xl sm:max-w-5xl">
           <div className="absolute inset-x-0 -bottom-10 h-40 mx-auto rounded-full opacity-60 pointer-events-none"
                style={{ background: "radial-gradient(ellipse at center, rgba(10,132,255,0.28) 0%, transparent 70%)", filter: "blur(20px)" }} />
           <div className="flex flex-col items-center">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-white/40 mb-4">
+            <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.28em] text-white/40 mb-3 sm:mb-4">
               ↓ Hover. Tap. Explore the surface area we engineer for.
             </p>
-            <div className="flex justify-center w-full  pb-2 -mx-4 px-4">
+            <div className="flex justify-center w-full  pb-2 -mx-2 sm:-mx-4 px-2 sm:px-4">
               <MacOSDock apps={ECOSYSTEM_APPS} onAppClick={handleAppClick} openApps={active} />
             </div>
           </div>
         </div>
 
         {/* Active app readout */}
-        <div className="mt-8 flex flex-wrap items-center gap-2 text-xs text-white/55">
+        <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 text-[10px] sm:text-xs text-white/55">
           <span className="font-mono uppercase tracking-[0.18em] text-white/35">Open:</span>
           {active.length === 0 ? (
             <span className="font-mono text-white/35">— tap a surface to begin</span>

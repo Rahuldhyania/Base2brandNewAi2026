@@ -98,12 +98,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3 }}
-              className="mt-12 flex flex-wrap gap-4"
+              className="mt-6 md:mt-12 flex flex-wrap gap-4"
             >
               <a
                 href="#contact"
                 data-testid="hero-cta-primary"
-                className="group inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#A855F7] text-white px-6 py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_30px_-10px_rgba(139,92,246,0.55)]"
+                className="group inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#A855F7] text-white px-6 py-3 md:py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_30px_-10px_rgba(139,92,246,0.55)]"
               >
                 <Sparkles className="w-4 h-4" />
                 Start An AI Transformation
@@ -112,7 +112,7 @@ const Hero = () => {
               <a
                 href="#capabilities"
                 data-testid="hero-cta-secondary"
-                className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-6 py-4 rounded-full text-sm font-medium transition-all"
+                className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-6 py-3 md:py-4 rounded-full text-sm font-medium transition-all"
               >
                 Explore AI Capabilities
                 <ArrowUpRight className="w-4 h-4" />

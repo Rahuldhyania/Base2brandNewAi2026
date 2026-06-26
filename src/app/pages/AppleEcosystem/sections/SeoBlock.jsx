@@ -21,15 +21,15 @@ const SEO_PARAS = [
 
 export default function SeoBlock() {
   return (
-    <section className="b2b-container py-12">
-      <p className="font-mono text-xs uppercase tracking-[0.24em] text-white/45 mb-4">
+    <section className="b2b-container py-8 sm:py-12">
+      <p className="font-mono text-xs uppercase tracking-[0.24em] text-white/45 mb-3 sm:mb-4">
         Apple Ecosystem Development · Engineering perspective
       </p>
-      <div className="grid lg:grid-cols-2 gap-x-6 gap-y-6">
+      <div className="grid lg:grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-4 sm:gap-y-6">
         {SEO_PARAS.map((s) => (
           <div key={s.h}>
-            <h3 className="font-display text-xl sm:text-2xl leading-snug text-white/90">{s.h}</h3>
-            <p className="mt-2 text-sm text-white/55 leading-relaxed">{s.p}</p>
+            <h3 className="font-display text-lg sm:text-xl lg:text-2xl leading-snug text-white/90">{s.h}</h3>
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-white/55 leading-relaxed">{s.p}</p>
           </div>
         ))}
       </div>

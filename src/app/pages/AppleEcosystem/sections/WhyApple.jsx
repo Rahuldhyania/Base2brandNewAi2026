@@ -32,24 +32,24 @@ const PILLARS = [
 
 export default function WhyApple() {
   return (
-    <section className="b2b-container py-12">
-      <div className="grid lg:grid-cols-[1fr_2fr] gap-6">
+    <section className="b2b-container py-8 sm:py-12">
+      <div className="grid lg:grid-cols-[1fr_2fr] gap-4 sm:gap-6">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Why Apple
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl  leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
             Why Apple still defines{" "}
             <span className="apple-text-gradient">premium digital experiences.</span>
           </h2>
-          <p className="mt-6 text-white/60 leading-relaxed max-w-md">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/60 leading-relaxed max-w-md">
             For enterprises whose customers, executives and field teams live on Apple hardware,
             the platform is not a UI choice — it is the operating substrate. Four reasons
             Apple-first remains the highest-leverage place to invest in product engineering.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-5"> 
           {PILLARS.map((p, i) => {
             const Icon = p.icon;
             return (
@@ -59,7 +59,7 @@ export default function WhyApple() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                className="b2b-glass rounded-2xl p-6 hover:bg-white/[0.05] transition"
+                className="b2b-glass rounded-2xl p-4 sm:p-6 hover:bg-white/[0.05] transition"
               >
                 <span
                   className="inline-flex w-10 h-10 rounded-xl items-center justify-center"
@@ -67,8 +67,8 @@ export default function WhyApple() {
                 >
                   <Icon size={18} color="#64D2FF" strokeWidth={1.8} />
                 </span>
-                <h3 className="mt-5 font-display text-xl leading-tight">{p.title}</h3>
-                <p className="mt-2.5 text-sm text-white/60 leading-relaxed">{p.body}</p>
+                <h3 className="mt-3 sm:mt-5 font-display text-lg sm:text-xl leading-tight">{p.title}</h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed">{p.body}</p>
               </motion.div>
             );
           })}

@@ -6,65 +6,65 @@ import { APPLE } from "@/constants/testIds";
 
 export default function FinalCta() {
   return (
-    <section id="contact" className="relative b2b-container py-12">
+    <section id="contact" className="relative b2b-container py-8 sm:py-12">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden rounded-[40px] b2b-glass-strong p-10 lg:p-16"
+        className="relative overflow-hidden rounded-2xl sm:rounded-[40px] b2b-glass-strong p-6 sm:p-10 lg:p-16"
       >
         <div
-          className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full pointer-events-none"
+          className="absolute -top-24 sm:-top-32 -right-24 sm:-right-32 w-[400px] sm:w-[520px] h-[400px] sm:h-[520px] rounded-full pointer-events-none"
           style={{ background: "radial-gradient(circle, rgba(10,132,255,0.28) 0%, transparent 70%)" }}
         />
         <div
-          className="absolute -bottom-40 -left-32 w-[520px] h-[520px] rounded-full pointer-events-none"
+          className="absolute -bottom-32 sm:-bottom-40 -left-24 sm:-left-32 w-[400px] sm:w-[520px] h-[400px] sm:h-[520px] rounded-full pointer-events-none"
           style={{ background: "radial-gradient(circle, rgba(90,200,250,0.18) 0%, transparent 70%)" }}
         />
 
-        <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+        <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-6 sm:gap-10 items-center">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Start an Apple engagement
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.04] tracking-tight mt-4 max-w-2xl">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.04] tracking-tight mt-4 max-w-2xl">
               Bring an Apple-grade product team to your roadmap.
             </h2>
-            <p className="mt-5 text-white/65 leading-relaxed max-w-xl">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/65 leading-relaxed max-w-xl">
               Share a brief, a deadline or just a question. We respond inside one business
               day with a point of view, a delivery plan and the team that would build it.
             </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">
               <a
                 href="mailto:apple@base2brand.com"
                 data-testid={APPLE.finalCtaPrimary}
-                className="inline-flex items-center gap-2 h-12 px-6 rounded-full text-sm font-semibold text-white bg-[#0A84FF] hover:bg-[#3CA0FF] transition shadow-[0_12px_36px_-10px_rgba(10,132,255,0.7)]"
+                className="inline-flex items-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-full text-sm font-semibold text-white bg-[#0A84FF] hover:bg-[#3CA0FF] transition shadow-[0_12px_36px_-10px_rgba(10,132,255,0.7)]"
               >
                 Send a brief <ArrowUpRight size={16} />
               </a>
               <a
                 href="#"
                 data-testid={APPLE.finalCtaSecondary}
-                className="inline-flex items-center gap-2 h-12 px-6 rounded-full text-sm font-semibold text-white/85 hover:text-white border border-white/15 hover:border-white/30 transition"
+                className="inline-flex items-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-full text-sm font-semibold text-white/85 hover:text-white border border-white/15 hover:border-white/30 transition"
               >
                 <Calendar size={16} /> Book a 30-min architecture call
               </a>
             </div>
           </div>
 
-          <div className="b2b-glass rounded-2xl p-6 lg:p-7">
+          <div className="b2b-glass rounded-2xl p-5 sm:p-6 lg:p-7">
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
               What you get back
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/75">
+            <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/75">
               <li className="flex gap-3"><Bullet /> A scoped engagement plan with team shape & timelines</li>
               <li className="flex gap-3"><Bullet /> A surface decision matrix (iPhone, iPad, Watch, Vision, etc.)</li>
               <li className="flex gap-3"><Bullet /> A point of view on Apple Intelligence integration</li>
               <li className="flex gap-3"><Bullet /> Indicative pricing & a release milestone map</li>
             </ul>
-            <p className="mt-6 text-xs text-white/45">
+            <p className="mt-4 sm:mt-6 text-[10px] sm:text-xs text-white/45">
               Mutual NDA available on request. We respond within one business day.
             </p>
           </div>

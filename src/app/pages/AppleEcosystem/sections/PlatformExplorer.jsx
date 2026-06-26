@@ -88,15 +88,15 @@ function PlatformDetailCard({ platform, detail }) {
 
   return (
   <div
-    className="relative b2b-glass-strong rounded-3xl p-6 sm:p-8 overflow-hidden"
+    className="relative b2b-glass-strong rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 overflow-hidden"
     data-testid={APPLE.platformDetail}
   >
     <div
       className="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(circle, rgba(10,132,255,0.22) 0%, transparent 70%)" }}
     />
-    <div className="relative grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-10 items-start">
-      <div className="relative min-h-[280px] sm:min-h-[300px]">
+    <div className="relative grid lg:grid-cols-[1.6fr_1fr] gap-6 lg:gap-10 items-start">
+      <div className="relative min-h-[240px] sm:min-h-[280px] lg:min-h-[300px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={`left-${platform}`}
@@ -110,18 +110,18 @@ function PlatformDetailCard({ platform, detail }) {
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#64D2FF]">
               {label}
             </p>
-            <h3 className="mt-2 font-display text-2xl sm:text-xl sm:text-2xl leading-tight max-w-2xl">
+            <h3 className="mt-2 font-display text-xl sm:text-2xl leading-tight max-w-2xl">
               {detail.headline}
             </h3>
-            <p className="mt-5 text-white/65 leading-relaxed max-w-xl">
+            <p className="mt-3 sm:mt-5 text-sm sm:text-base text-white/65 leading-relaxed max-w-xl">
               {detail.body}
             </p>
-            <motion.div layout className="mt-7 flex flex-wrap gap-2">
+            <motion.div layout className="mt-5 sm:mt-7 flex flex-wrap gap-2">
               {detail.tags.map((t) => (
                 <motion.span
                   layout
                   key={t}
-                  className="text-xs font-mono uppercase tracking-[0.16em] text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03]"
+                  className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.14em] sm:tracking-[0.16em] text-white/65 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 bg-white/[0.03]"
                 >
                   {t}
                 </motion.span>
@@ -131,7 +131,7 @@ function PlatformDetailCard({ platform, detail }) {
         </AnimatePresence>
       </div>
 
-      <div className="relative min-h-[260px]">
+      <div className="relative min-h-[220px] sm:min-h-[260px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={`right-${platform}`}
@@ -141,16 +141,16 @@ function PlatformDetailCard({ platform, detail }) {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.48, ease: EASE, delay: 0.07 }}
-            className="b2b-glass rounded-2xl p-6 lg:p-7 h-full"
+            className="b2b-glass rounded-2xl p-4 sm:p-6 lg:p-7 h-full"
           >
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/45">
               Engineering bar
             </p>
-            <p className="mt-3 font-display text-4xl sm:text-5xl apple-text-gradient">
+            <p className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl apple-text-gradient">
               {detail.stat.value}
             </p>
-            <p className="mt-1.5 text-sm text-white/55">{detail.stat.label}</p>
-            <div className="mt-7 pt-5 border-t border-white/10 space-y-2 text-xs text-white/55">
+            <p className="mt-1 text-xs sm:text-sm text-white/55">{detail.stat.label}</p>
+            <div className="mt-5 sm:mt-7 pt-4 sm:pt-5 border-t border-white/10 space-y-2 text-[10px] sm:text-xs text-white/55">
               <p>· Native Apple frameworks only — no cross-platform shims.</p>
               <p>· TestFlight CI, App Store Connect API, automated phased releases.</p>
               <p>· Crash-free sessions tracked against an internal SLA.</p>
@@ -165,7 +165,7 @@ function PlatformDetailCard({ platform, detail }) {
 
 export default function PlatformExplorer() {
   const sectionRef = useRef(null);
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotion() || typeof window !== 'undefined' && window.innerWidth < 1024;
   const [activeIndex, setActiveIndex] = useState(0);
   const [pinPhase, setPinPhase] = useState("before");
 
@@ -263,21 +263,21 @@ export default function PlatformExplorer() {
 
   if (reduce) {
     return (
-      <section className="b2b-container py-12">
-        <div className="flex flex-col items-center text-center mb-12">
+      <section className="b2b-container py-8 sm:py-12">
+        <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Ecosystem Explorer
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
             Every device. Same engineering team. One coherent product.
           </h2>
-          <p className="mt-5 text-white/60 max-w-2xl leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/60 max-w-2xl leading-relaxed">
             Pick a surface to see how we approach it — the technologies, the design constraints,
             and what we consider the engineering bar for production quality.
           </p>
         </div>
 
-        <div className="flex justify-center mb-12 overflow-x-auto px-2">
+        <div className="flex justify-center mb-8 sm:mb-12 overflow-x-auto px-2">
           <PlatformSwitcher
             platforms={PLATFORMS}
             value={platform}
@@ -315,21 +315,21 @@ export default function PlatformExplorer() {
           />
         </motion.div>
 
-        <div className="relative w-full b2b-container py-8 md:py-10 cursor-grab">
-          <div className="flex flex-col items-center text-center mb-8 md:mb-10">
+        <div className="relative w-full b2b-container py-6 sm:py-8 md:py-10 cursor-grab">
+          <div className="flex flex-col items-center text-center mb-6 sm:mb-8 md:mb-10">
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
               Ecosystem Explorer
             </p>
-            <h2 className="font-display text-3xl sm:text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
               Every device. Same engineering team. One coherent product.
             </h2>
-            <p className="mt-4 md:mt-5 text-white/60 max-w-2xl leading-relaxed text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 md:mt-5 text-white/60 max-w-2xl leading-relaxed text-xs sm:text-sm md:text-base">
               Scroll through each surface to see how we approach it — the technologies,
               the design constraints, and what we consider the engineering bar.
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-4 mb-8 md:mb-10">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10">
             <div className="flex justify-center overflow-x-auto px-2 max-w-full">
               <PlatformSwitcher
                 platforms={PLATFORMS}

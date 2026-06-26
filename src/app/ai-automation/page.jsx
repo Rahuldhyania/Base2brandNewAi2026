@@ -150,7 +150,7 @@ export default function page() {
         features={features}
         highlightTag={"THE NEW OPERATING MODEL"}
         tagList={["01 — Thesis"]}
-      />
+      />  
       <Capabilities
         title={"Six practices. One intelligence layer."}
         description={`We don't sell features. We engineer the AI capability stack your operations depend on — designed, governed, and measured end-to-end.`}

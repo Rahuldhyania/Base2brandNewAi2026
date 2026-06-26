@@ -110,7 +110,7 @@ const Capabilities = ({title, description, highlightTag, capsData}) => {
     <section
       id="capabilities"
       data-testid="capabilities-section"
-      className="relative py-12 md:py-16"
+      className="relative pt-4 pb-12 md:pt-16 md:pb-16"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-14">

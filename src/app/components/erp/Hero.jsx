@@ -29,8 +29,8 @@ export const Hero = () => {
             />
 
             {/* Content */}
-            <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 pt-32 sm:pt-40 pb-18 lg:pb-18">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+            <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 pt-24 md:pt-40 md:pb-18 lg:pb-18">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 lg:gap-10 items-center">
                     {/* Left: content */}
                     <div className="max-w-xl">
                         <motion.div
@@ -95,7 +95,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.35,
                             }}
-                            className="mt-4 text-lg sm:text-xl text-white max-w-2xl"
+                            className="mt-4 text-base md:text-lg text-white max-w-2xl"
                             data-testid="hero-subheading"
                         >
                             Unify inventory, finance, procurement,
@@ -109,7 +109,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.5,
                             }}
-                            className="mt-4 text-base sm:text-lg text-white max-w-2xl"
+                            className="mt-4 text-base md:text-lg text-white max-w-2xl"
                             data-testid="hero-description"
                         >
                             Most businesses operate through disconnected tools,
@@ -163,7 +163,7 @@ export const Hero = () => {
                                 ...fadeUp.transition,
                                 delay: 0.85,
                             }}
-                            className="mt-14 grid grid-cols-3 gap-6 max-w-[520px] border-t border-white/[0.06] pt-7"
+                            className="mt-8 md:mt-14 grid grid-cols-3 gap-6 max-w-[520px] border-t border-white/[0.06] pt-7"
                             data-testid="hero-stats"
                         >
                             {[

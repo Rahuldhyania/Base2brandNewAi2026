@@ -29,7 +29,7 @@ export default function Framework({ highlightTag, title, description, steps}) {
           />
         </div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-8 md:mt-20">
           {/* Center line */}
           <div
             className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px"

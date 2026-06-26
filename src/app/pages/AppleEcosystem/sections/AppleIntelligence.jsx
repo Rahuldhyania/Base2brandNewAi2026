@@ -90,13 +90,13 @@ function IslandShow() {
   return (
     <div className="relative w-full flex flex-col items-center" data-testid={APPLE.intelligenceIsland}>
       {/* Phone frame illusion */}
-      <div className="relative w-full max-w-[760px] aspect-[16/10] rounded-[44px] b2b-glass overflow-hidden">
+      <div className="relative w-full max-w-[760px] aspect-[16/10] sm:aspect-[16/10] rounded-[32px] sm:rounded-[44px] b2b-glass overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse at top, rgba(10,132,255,0.18) 0%, transparent 70%)" }}
         />
         <DynamicIslandProvider initialSize={SIZE_PRESETS.COMPACT}>
-          <div className="absolute top-6 left-0 right-0 flex justify-center">
+          <div className="absolute top-4 sm:top-6 left-0 right-0 flex justify-center">
             <DynamicIsland id="apple-intelligence-island">
               <IslandContent index={index} />
             </DynamicIsland>
@@ -104,7 +104,7 @@ function IslandShow() {
         </DynamicIslandProvider>
 
         {/* Caption strip */}
-        <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center text-center px-6">
+        <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex flex-col items-center text-center px-4 sm:px-6">
           <AnimatePresence mode="wait">
             <motion.p
               key={index}
@@ -137,29 +137,29 @@ function IslandShow() {
 
 export default function AppleIntelligence() {
   return (
-    <section className="b2b-container py-12">
-      <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 items-center">
+    <section className="b2b-container py-8 sm:py-12">
+      <div className="grid lg:grid-cols-[1fr_1.2fr] gap-6 lg:gap-8 items-center">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Apple Intelligence
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
             Intelligence that respects the user —{" "}
             <span className="apple-text-gradient">designed for the enterprise.</span>
           </h2>
-          <p className="mt-6 text-white/65 leading-relaxed max-w-md">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/65 leading-relaxed max-w-md">
             Apple Intelligence brings a new substrate to product engineering: on-device
             foundation models, App Intents, contextual actions, system-wide writing tools,
             and private cloud compute that audits like a regulated workload should.
           </p>
-          <p className="mt-5 text-white/55 leading-relaxed max-w-md text-sm">
+          <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-white/55 leading-relaxed max-w-md">
             We help product and security teams design intelligence that ships in real apps —
             integrated through App Intents, exposed in the right surface (Siri, Spotlight,
             Shortcuts, the Dynamic Island, Live Activities) and governed by the privacy
             posture your CISO already trusts.
           </p>
 
-          <ul className="mt-8 space-y-3 text-sm text-white/70">
+          <ul className="mt-6 sm:mt-8 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/70">
             <li className="flex gap-3"><Dot /> Custom App Intents that expose your domain to Siri and system search.</li>
             <li className="flex gap-3"><Dot /> On-device intelligence with Foundation Models — no data leaves the phone.</li>
             <li className="flex gap-3"><Dot /> Contextual experiences via Live Activities, Widgets and the Dynamic Island.</li>
@@ -171,15 +171,15 @@ export default function AppleIntelligence() {
       </div>
 
       {/* Intelligence features Message Dock */}
-      <div className="mt-24 lg:mt-32">
-        <div className="text-center mb-12">
+      <div className="mt-16 sm:mt-20 lg:mt-32">
+        <div className="text-center mb-8 sm:mb-12">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]">
             Intelligence Features
           </p>
-          <h3 className="font-display text-xl sm:text-2xl leading-tight mt-3 max-w-3xl mx-auto">
+          <h3 className="font-display text-lg sm:text-xl lg:text-2xl leading-tight mt-3 max-w-3xl mx-auto">
             Smart Actions. Context Awareness. Private Processing. Intelligent Workflows.
           </h3>
-          <p className="mt-4 text-white/55 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-white/55 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
             Tap a feature to compose a brief — explore how each capability shows up inside
             the products we build.
           </p>
@@ -196,7 +196,7 @@ export default function AppleIntelligence() {
           />
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div className="mt-8 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {[
             { icon: "⚡", title: "Smart Actions", body: "Surface the right action at the right moment via App Intents and predictive surfaces." },
             { icon: "🧠", title: "Context Awareness", body: "Models that understand the screen, the calendar, the task — without compromising privacy." },
@@ -205,8 +205,8 @@ export default function AppleIntelligence() {
           ].map((f) => (
             <div key={f.title} className="b2b-glass rounded-2xl p-5">
               <span className="text-2xl">{f.icon}</span>
-              <h4 className="mt-3 font-display text-lg leading-tight">{f.title}</h4>
-              <p className="mt-1.5 text-sm text-white/55 leading-relaxed">{f.body}</p>
+              <h4 className="mt-2 sm:mt-3 font-display text-base sm:text-lg leading-tight">{f.title}</h4>
+              <p className="mt-1 text-xs sm:text-sm text-white/55 leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>

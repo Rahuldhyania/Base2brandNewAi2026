@@ -122,7 +122,7 @@ export function FinalCTA() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
           data-testid="contact-form"
-          className="relative rounded-3xl border border-line-strong bg-[#04061a]/80 p-7 sm:p-9 backdrop-blur-md glow-orange"
+          className="relative rounded-3xl border border-line-strong bg-[#04061a]/80 p-4 md:p-9 backdrop-blur-md glow-orange"
         >
           <div className="grid sm:grid-cols-2 gap-4">
             <Field

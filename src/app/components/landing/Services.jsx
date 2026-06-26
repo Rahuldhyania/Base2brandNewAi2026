@@ -79,7 +79,7 @@ export default function Services() {
       className="relative py-12 bg-[#06060A] border-y border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="gap-6 mb-16 text-center mx-auto">
+        <div className="gap-6 mb-10 md:mb-16 text-center mx-auto">
           <div>
             <div className="label-mono">· Capabilities</div>
             <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">

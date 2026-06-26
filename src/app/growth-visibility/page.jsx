@@ -101,6 +101,7 @@ const ITEMS = [
     metrics: ["Visibility dashboard", "Citation tracking", "Growth insights"],
   },
 ];
+
 const steps = [
   {
     n: "01",
