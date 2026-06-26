@@ -8,14 +8,14 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
       data-testid="narrative-section"
       className="relative py-12 md:py-16"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10">
           <div className="lg:col-span-3">
             <Reveal>
               <ShiningText testId="narrative-eyebrow">
                 {highlightTag}
               </ShiningText>
-              <div className="mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/60 space-y-2">
+              <div className="mt-4 lg:mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/60 space-y-2">
                 {tagList.map((item) => (
                   <p key={item}>{item}</p>
                 ))}
@@ -35,14 +35,14 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
             <Reveal delay={0.15}>
               <div className="mt-5 max-w-3xl space-y-3 text-white/55 text-base md:text-lg leading-relaxed">
                 {description.map((item) => (
-                  <p>{item}</p>
+                  <p key={item}>{item}</p>
                 ))}
               </div>
             </Reveal>
 
             {features && (
               <Reveal delay={0.25}>
-                <div className="mt-12 grid sm:grid-cols-3 gap-4">
+                <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4">
                   {features.map((p) => (
                     <div
                       key={p.l}

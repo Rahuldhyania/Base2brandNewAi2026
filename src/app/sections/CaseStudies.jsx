@@ -120,7 +120,7 @@ export function CaseStudies() {
           </div>
         </div>  */}
 
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-8 md:mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {CASES.map((c, i) => (
             <CaseCard key={c.title} c={c} i={i} />
           ))}

@@ -119,9 +119,9 @@ const Architecture = () => {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-[radial-gradient(ellipse,rgba(109,40,217,0.08),rgba(3,3,10,0)_70%)]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start">
+          <div className="">
             <Reveal>
               <ShiningText testId="architecture-eyebrow">
                 ENTERPRISE AI ARCHITECTURE
@@ -177,9 +177,9 @@ const Architecture = () => {
           </div>
 
           {/* Right: data-driven capability chart */}
-          <div className="lg:col-span-7 lg:sticky lg:top-24">
+          <div className="lg:sticky lg:top-24">
             <Reveal delay={0.1}>
-              <div className="b2b-card p-6 md:p-8 relative overflow-hidden">
+              <div className="b2b-card p-5 sm:p-6 md:p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#8B5CF6]/10 blur-[100px] pointer-events-none" />
                 <div className="relative">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
@@ -201,7 +201,7 @@ const Architecture = () => {
 
                   <ArchitectureChart />
 
-                  <div className="mt-6 pt-6 border-t border-white/5 grid grid-cols-3 gap-4 text-center">
+                  <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/5 grid grid-cols-3 gap-2 sm:gap-4 text-center">
                     {[
                       ["+38%", "deployments YoY"],
                       ["5", "layers integrated"],
@@ -211,7 +211,7 @@ const Architecture = () => {
                         <div className="font-display text-xl sm:text-2xl font-medium tracking-tight bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
                           {v}
                         </div>
-                        <div className="mt-1 font-mono text-xs tracking-[0.2em] uppercase text-white/40">
+                        <div className="mt-1 font-mono text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-white/40 leading-snug">
                           {l}
                         </div>
                       </div>

@@ -21,7 +21,7 @@ const PARTNERS = [
 function Pill({ label }) {
   return (
     <div
-      className="px-5 py-3 rounded-full border border-line text-mute font-mono-display text-xs sm:text-sm uppercase tracking-[0.18em] whitespace-nowrap hover:text-white hover:border-line-strong transition"
+      className="px-3 xl:px-5 py-2 xl:py-3 rounded-full border border-line text-mute font-mono-display text-xs sm:text-sm uppercase tracking-[0.18em] whitespace-nowrap hover:text-white hover:border-line-strong transition"
       data-testid={`trust-pill-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
     >
       {label}
@@ -42,7 +42,7 @@ export function Trust() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-center mb-12"
+          className="grid md:grid-cols-[1fr_2fr] gap-5 md:gap-16 items-center mb-8"
         >
           <div>
             <div className="text-xs font-mono-display uppercase tracking-[0.25em] text-mute">

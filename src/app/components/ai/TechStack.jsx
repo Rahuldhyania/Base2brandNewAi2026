@@ -92,7 +92,7 @@ const LogoBadge = ({ item }) => {
       data-testid={`techstack-item-${item.label
         .toLowerCase()
         .replace(/\s+/g, "-")}`}
-      className="group flex items-center gap-3 py-2 px-3 -mx-3 rounded-lg hover:bg-white/3 transition-colors"
+      className="group flex items-center gap-3 py-1 md:py-2 px-3 -mx-3 rounded-lg hover:bg-white/3 transition-colors"
     >
       <span className="flex items-center justify-center w-8 h-8 rounded-md bg-white/5 border border-white/10 text-white/85 group-hover:bg-[rgba(var(--b2b-primary-rgb),0.15)] group-hover:border-[rgba(var(--b2b-primary-rgb),0.4)] group-hover:text-white transition-all shrink-0">
         <Icon className="w-4 h-4" />
@@ -110,7 +110,7 @@ const TechStack = ({title, highlightTag}) => {
       data-testid="techstack-section"
       className="relative py-12 md:py-16 border-y border-white/5 bg-(--b2b-bg-2)"
     >
-      <div className=" mx-auto px-6 md:px-10 text-center">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 text-center">
         <Reveal>
           <ShiningText testId="techstack-eyebrow">
             {highlightTag}
@@ -121,17 +121,17 @@ const TechStack = ({title, highlightTag}) => {
           />
         </Reveal>
 
-        <div className="mt-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
+        <div className="mt-8 sm:mt-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5 rounded-xl sm:rounded-2xl overflow-hidden">
           {STACK.map((group, i) => (
             <Reveal key={group.cat} delay={i * 0.05} className="bg-(--b2b-bg)">
-              <div data-testid={`techstack-group-${i}`} className="p-8 h-full">
+              <div data-testid={`techstack-group-${i}`} className="p-5 sm:p-6 md:p-8 h-full text-start">
                 <div className="font-mono text-xs tracking-[0.25em] uppercase text-[rgba(var(--b2b-primary-2-rgb),0.8)]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="mt-3 font-display text-lg font-medium">
+                <h3 className=" md:mt-3 font-display text-lg font-medium">
                   {group.cat}
                 </h3>
-                <ul className="mt-6 space-y-1">
+                <ul className="mt-2 md:mt-6 space-y-1">
                   {group.items.map((item) => (
                     <LogoBadge key={item.label} item={item} />
                   ))}
@@ -142,7 +142,7 @@ const TechStack = ({title, highlightTag}) => {
         </div>
 
         {/* Marquee of partner logos */}
-        <div className="mt-12 relative overflow-hidden">
+        <div className="mt-8 sm:mt-12 relative overflow-hidden -mx-2 sm:mx-0">
           <Marquee>
             {[...MARQUEE, ...MARQUEE].map((Icon, i) => (
               <span

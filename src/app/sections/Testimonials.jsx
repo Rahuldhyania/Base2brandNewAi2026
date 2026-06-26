@@ -1,6 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 /**
  * Testimonials — sits between Solutions and Industries.
@@ -139,7 +140,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl"
+          className="md:max-w-3xl"
         >
           <div className="flex items-center gap-3 text-xs sm:text-sm font-mono-display text-mute uppercase tracking-[0.25em]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand shadow-[0_0_12px_#ff6a00]" />
@@ -161,14 +162,14 @@ export function Testimonials() {
         </motion.div>
 
         {/* Grid */}
-        <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 xl:mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map(({ name, role, company, quote, image }, index) => (
             <motion.div
               key={name}
-              initial={{ filter: "blur(4px)", y: -8, opacity: 0 }}
-              whileInView={{ filter: "blur(0px)", y: 0, opacity: 1 }}
+              initial={{ y: 16, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: 0.06 * index + 0.05, duration: 0.7 }}
+              transition={{ delay: 0.04 * index + 0.05, duration: 0.5 }}
               data-testid={`testimonial-card-${index}`}
               className="group relative grid grid-cols-[auto_1fr] gap-x-4 overflow-hidden border border-dashed border-white/15 bg-white/[0.015] p-5 sm:p-6 hover:border-orange-brand/50 hover:bg-white/[0.03] transition-colors"
             >
@@ -187,9 +188,11 @@ export function Testimonials() {
                 </div>
               </div>
 
-              <img
+              <Image
                 alt={name}
                 src={image}
+                width={40}
+                height={40}
                 loading="lazy"
                 className="relative z-10 size-10 rounded-full border border-white/15 object-cover"
               />

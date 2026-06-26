@@ -14,13 +14,13 @@ const MetricsBar = () => {
       data-testid="metrics-bar"
       className="relative border-y border-white/5 bg-[#06040D]"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {METRICS.map((m, i) => (
             <Reveal
               key={m.l}
               delay={i * 0.05}
-              className={`py-8 md:py-10 px-2 md:px-6 ${
+              className={`py-6 sm:py-8 md:py-10 px-3 sm:px-4 md:px-6 ${
                 i !== 0 ? "md:border-l border-white/5" : ""
               } ${i === 2 ? "border-t md:border-t-0 md:border-l border-white/5" : ""} ${
                 i === 3 ? "border-t md:border-t-0 border-l border-white/5" : ""
@@ -34,7 +34,7 @@ const MetricsBar = () => {
                   {m.v}
                 </span>
               </div>
-              <div className="mt-3 text-xs uppercase tracking-[0.25em] font-mono text-white/40">
+              <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-mono text-white/40 leading-snug">
                 {m.l}
               </div>
             </Reveal>

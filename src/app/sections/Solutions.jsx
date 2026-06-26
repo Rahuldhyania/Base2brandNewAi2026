@@ -71,7 +71,7 @@ export function Solutions() {
           intro="Pre-engineered solution stacks let us start mid-flight. You get to value in weeks, with a clean path to scale."
         />
 
-        <div className="mt-14 grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-10">
+        <div className="mt-8 xl:mt-14 grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-10">
           {/* Tabs */}
           <div className="flex flex-col gap-2">
             {SOLUTIONS.map((s) => {
@@ -114,7 +114,7 @@ export function Solutions() {
           </div>
 
           {/* Detail panel */}
-          <div className="relative rounded-3xl border border-line bg-[#04061a]/60 overflow-hidden min-h-[420px]">
+          <div className="relative rounded-3xl border border-line bg-[#04061a]/60 overflow-hidden md:min-h-[420px]">
             <div className="absolute inset-0 opacity-40 pointer-events-none"
                  style={{ background: "radial-gradient(800px circle at 100% 0%, rgba(255,106,0,0.18), transparent 50%)" }} />
             <AnimatePresence mode="wait">
@@ -124,7 +124,7 @@ export function Solutions() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4 }}
-                className="relative p-8 sm:p-12 h-full flex flex-col"
+                className="relative p-4 md:p-8 xl:p-12 h-full flex flex-col"
                 data-testid={`solution-detail-${current.id}`}
               >
                 <div className="flex items-center gap-4">
@@ -135,14 +135,14 @@ export function Solutions() {
                     Productized solution
                   </div>
                 </div>
-                <h3 className="mt-6 font-display text-white text-2xl sm:text-4xl leading-tight tracking-tight">
+                <h3 className="mt-4 md:mt-6 font-display text-white text-xl md:text-2xl sm:text-4xl leading-tight tracking-tight">
                   {current.name}
                 </h3>
-                <p className="mt-4 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
+                <p className="mt-2 md:mt-4 text-mute text-sm md:text-base xl:text-lg max-w-xl leading-relaxed">
                   {current.body}
                 </p>
 
-                <div className="mt-auto pt-10 flex flex-wrap items-end gap-8">
+                <div className="mt-auto pt-4 md:pt-10 flex flex-wrap items-end gap-8">
                   <div>
                     <div className="font-display text-orange-brand text-4xl sm:text-5xl leading-none">
                       {current.stat[0]}

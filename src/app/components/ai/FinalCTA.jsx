@@ -39,7 +39,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
         <div className="grain" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
+      <div className="relative max-w-5xl mx-auto px-5 sm:px-6 md:px-10 text-center">
         <Reveal>
           <ShiningText
             testId="final-cta-eyebrow"
@@ -52,7 +52,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
         <Reveal delay={0.1}>
           <h2
             data-testid="final-cta-headline"
-            className="mt-8 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-[-0.04em] font-medium text-balance"
+            className="mt-6 sm:mt-8 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.0] tracking-[-0.04em] font-medium text-balance"
           >
             {titleUpper} {" "}
             <span className=" text-(--b2b-primary) bg-clip-text">
@@ -71,11 +71,11 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <a
               href="mailto:hello@base2brand.com?subject=AI%20Transformation"
               data-testid="final-cta-primary"
-              className="group inline-flex items-center gap-2 bg-(--b2b-primary)/80 hover:bg-(--b2b-primary) text-white px-7 py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
+              className="group inline-flex items-center justify-center gap-2 bg-(--b2b-primary)/80 hover:bg-(--b2b-primary) text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
             >
               <Sparkles className="w-4 h-4" />
               {CTALeft}
@@ -84,7 +84,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
             <a
               href="mailto:hello@base2brand.com?subject=Talk%20to%20AI%20Architects"
               data-testid="final-cta-secondary"
-              className="inline-flex items-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-7 py-4 rounded-full text-sm font-medium transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm font-medium transition-all"
             >
               {CTARight}
               <ArrowUpRight className="w-4 h-4" />
@@ -93,15 +93,18 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
         </Reveal>
 
         <Reveal delay={0.3}>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] font-mono text-white/35">
-            {features.map((item, index) => (
-              <div key={item}>
-                {index > 0 && (
-                  <span className="h-1 w-1 rounded-full bg-(--b2b-primary)" />
-                )}
-                <span>{item}</span>
-              </div>
-            ))}
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-mono text-white/35">
+            {features.flatMap((item, index) =>
+              index === 0
+                ? [<span key={item}>{item}</span>]
+                : [
+                    <span
+                      key={`dot-${index}`}
+                      className="w-1 h-1 rounded-full bg-(--b2b-primary)"
+                    />,
+                    <span key={item}>{item}</span>,
+                  ]
+            )}
           </div>
         </Reveal>
       </div>

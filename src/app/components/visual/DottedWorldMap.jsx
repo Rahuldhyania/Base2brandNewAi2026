@@ -1,5 +1,5 @@
 'use client';
-import React, { useMemo, useState, useEffect, useRef } from "react";
+import React, { useMemo, useState, useRef, useEffect } from "react";
 import DottedMap from "dotted-map";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
@@ -63,9 +63,22 @@ export function DottedWorldMap({
   const others = points.filter((_, i) => i !== originIndex);
 
   const [hoverIdx, setHoverIdx] = useState(null);
+  const [visible, setVisible] = useState(false);
+  const rootRef = useRef(null);
+
+  useEffect(() => {
+    if (!rootRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry?.isIntersecting ?? false),
+      { rootMargin: "120px" },
+    );
+    observer.observe(rootRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
+      ref={rootRef}
       className={cn("relative w-full", className)}
       data-testid="dotted-world-map"
     >
@@ -110,20 +123,21 @@ export function DottedWorldMap({
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 1.4, delay: 0.2 + i * 0.18, ease: "easeInOut" }}
                 />
-                {/* travelling pulse along arc */}
-                <motion.circle
-                  r="2.4"
-                  fill="#ff6a00"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                >
-                  <animateMotion
-                    dur={`${5 + i * 0.4}s`}
-                    repeatCount="indefinite"
-                    path={d}
-                  />
-                </motion.circle>
+                {visible && (
+                  <motion.circle
+                    r="2.4"
+                    fill="#ff6a00"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                  >
+                    <animateMotion
+                      dur={`${5 + i * 0.4}s`}
+                      repeatCount="indefinite"
+                      path={d}
+                    />
+                  </motion.circle>
+                )}
               </g>
             );
           })}
@@ -147,8 +161,12 @@ export function DottedWorldMap({
               transition={{ delay: 0.4 + i * 0.08, type: "spring" }}
             />
             <circle r="6" fill="none" stroke={pinColor} strokeOpacity="0.5" strokeWidth="0.8">
-              <animate attributeName="r" values="3;9;3" dur="2.6s" repeatCount="indefinite" />
-              <animate attributeName="stroke-opacity" values="0.7;0;0.7" dur="2.6s" repeatCount="indefinite" />
+              {visible && (
+                <>
+                  <animate attributeName="r" values="3;9;3" dur="2.6s" repeatCount="indefinite" />
+                  <animate attributeName="stroke-opacity" values="0.7;0;0.7" dur="2.6s" repeatCount="indefinite" />
+                </>
+              )}
             </circle>
             {/* label */}
             <g transform="translate(8 -8)">

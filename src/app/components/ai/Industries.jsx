@@ -205,7 +205,7 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
           x: isActive ? 0 : -8,
         }}
         transition={{ duration: 0.3 }}
-        className="ml-auto inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-[#C084FC]"
+        className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-[#C084FC]"
       >
         Use case <ArrowUpRight className="w-3 h-3" />
       </motion.span>
@@ -236,8 +236,8 @@ const Industries = () => {
       data-testid="industries-section"
       className="relative py-12 md:py-16"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
           <Reveal>
             <ShiningText testId="industries-eyebrow">INDUSTRIES</ShiningText>
             <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
@@ -252,7 +252,7 @@ const Industries = () => {
           </Reveal>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-8 sm:gap-10 lg:gap-16">
           {/* Photo grid */}
           <div className="flex gap-2.5 md:gap-3 flex-shrink-0 overflow-x-auto pb-2 lg:pb-0 max-w-full">
             <div className="flex flex-col gap-2.5 md:gap-3">

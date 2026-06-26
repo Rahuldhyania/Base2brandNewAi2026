@@ -53,7 +53,7 @@ const ResearchLab = () => {
     <section
       id="research"
       data-testid="research-section"
-      className="relative py-16"
+      className="relative py-12 md:py-16"
     >
       <div className="absolute inset-0 pointer-events-none">
         <BackgroundPaths opacity={0.01} />
@@ -87,8 +87,8 @@ const ResearchLab = () => {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-10">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10">
           <div className="lg:col-span-4">
             <Reveal>
               <ShiningText testId="research-eyebrow">
@@ -126,22 +126,22 @@ const ResearchLab = () => {
                     onClick={() => setOpen(isOpen ? -1 : i)}
                     aria-expanded={isOpen}
                     aria-controls={`research-panel-${i}`}
-                    className="w-full py-3 flex items-center justify-between gap-6 text-left group"
+                    className="w-full py-4 sm:py-3 flex items-center justify-between gap-3 sm:gap-6 text-left group"
                   >
-                    <div className="flex items-center gap-6">
-                      <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/30 w-8">
+                    <div className="flex items-center gap-3 sm:gap-6 min-w-0">
+                      <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/30 w-7 sm:w-8 shrink-0">
                         R{String(i + 1).padStart(2, "0")}
                       </span>
-                      <div>
-                        <div className="font-display text-xl sm:text-2xl font-medium tracking-tight">
+                      <div className="min-w-0">
+                        <div className="font-display text-lg sm:text-xl md:text-2xl font-medium tracking-tight">
                           {t.title}
                         </div>
-                        <div className="text-sm text-white/40 mt-1">
+                        <div className="text-xs sm:text-sm text-white/40 mt-1">
                           {t.sub}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 group-hover:border-[#8B5CF6]/40 group-hover:bg-[#8B5CF6]/10 transition-all">
+                    <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/10 group-hover:border-[#8B5CF6]/40 group-hover:bg-[#8B5CF6]/10 transition-all shrink-0">
                       {isOpen ? (
                         <Minus className="w-4 h-4 text-[#C084FC]" />
                       ) : (
@@ -159,7 +159,7 @@ const ResearchLab = () => {
                         transition={{ duration: 0.35 }}
                         className="overflow-hidden"
                       >
-                        <div className="pb-7 pl-14 pr-12 text-white/55 leading-relaxed">
+                        <div className="pb-6 sm:pb-7 pl-10 sm:pl-14 pr-4 sm:pr-12 text-sm sm:text-base text-white/55 leading-relaxed">
                           {t.desc}
                         </div>
                       </motion.div>

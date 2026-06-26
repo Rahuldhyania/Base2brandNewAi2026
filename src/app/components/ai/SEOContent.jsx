@@ -88,7 +88,7 @@ const SEOContent = () => {
       data-testid="seo-content-section"
       className="relative py-12 md:py-16"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
           <Reveal>
             <ShiningText
@@ -97,7 +97,7 @@ const SEOContent = () => {
             >
               ENTERPRISE AI · NOTES FROM THE FIELD
             </ShiningText>
-            <h2 className="mt-5 font-display text-xl sm:text-2xl lg:text-5xl leading-[1.1] tracking-[-0.03em] font-medium text-balance">
+            <h2 className="mt-4 sm:mt-5 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-[-0.03em] font-medium text-balance">
               Enterprise AI Solutions, Agentic AI, and the New Operating Model.
             </h2>
             <p className="mt-5 text-white/55 leading-relaxed">
@@ -108,7 +108,7 @@ const SEOContent = () => {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 [column-fill:_balance] items-start">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 [column-fill:_balance] items-start">
           {POSTS.map((p, i) => (
             <Reveal key={p.handle + i} delay={i * 0.04}>
               <TweetCard

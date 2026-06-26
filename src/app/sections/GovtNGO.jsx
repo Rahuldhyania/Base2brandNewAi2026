@@ -34,19 +34,19 @@ export function GovtNGO() {
       data-testid="govt-ngo-section"
       className="relative py-12  border-t border-line"
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1fr_1.2fr] gap-12">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1fr_1.2fr] gap-6 md:gap-12">
         <div>
           <SectionHeader
             eyebrow="Govt & Public Sector"
             title="When the workload is public and the stakes are personal."
             intro="A dedicated practice for governments, regulators and international NGOs — engineered to the highest bars of trust, transparency and sovereignty."
           />
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-3 md:mt-10 flex flex-wrap gap-3">
             {["G2C platforms", "Smart Cities", "Welfare delivery", "Health systems", "Citizen AI"].map((tag) => (
               <span
                 key={tag}
                 data-testid={`govt-tag-${tag.toLowerCase().replace(/\s/g, "-")}`}
-                className="px-4 py-2 rounded-full border border-line text-xs font-mono-display uppercase tracking-[0.18em] text-mute hover:text-white hover:border-orange-brand/40 transition"
+                className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-line text-[10px] md:text-xs font-mono-display uppercase tracking-[0.18em] text-mute hover:text-white hover:border-orange-brand/40 transition"
               >
                 {tag}
               </span>
@@ -54,7 +54,7 @@ export function GovtNGO() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4 pt-4 md:pt-10">
           {PROGRAMS.map((p, i) => {
             const I = p.icon;
             return (

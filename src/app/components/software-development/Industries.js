@@ -54,7 +54,7 @@ const Industries = () => {
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.05)}
-          className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
           {INDUSTRIES.map((ind) => {
             const Icon = ind.icon;
@@ -63,12 +63,12 @@ const Industries = () => {
                 key={ind.name}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
-                className="p-6 group border border-white/50 rounded-2xl transition-all duration-300"
+                className="p-4 md:p-6 group border border-white/50 rounded-2xl transition-all duration-300"
               >
                 <div className="w-11 h-11 rounded-xl border border-white/10 bg-white/[0.02] group-hover:border-[color:var(--b2b-red)]/40 group-hover:bg-[color:var(--b2b-red)]/10 grid place-items-center transition-all">
                   <Icon className="w-5 h-5 text-white/70 group-hover:text-[color:var(--b2b-red)] transition-colors" />
                 </div>
-                <div className="mt-5 text-[15px] font-medium text-white">{ind.name}</div>
+                <div className="mt-2 md:mt-5 text-[15px] font-medium text-white">{ind.name}</div>
                 <div className="mt-1 text-[12.5px] text-white/50">{ind.note}</div>
               </motion.div>
             );

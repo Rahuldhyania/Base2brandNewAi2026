@@ -56,7 +56,7 @@ export function Innovation() {
           intro="Our labs don't publish PDFs and walk away. Every research output is tested against a live customer workload before it's called done."
         />
 
-        <div className="mt-14 grid lg:grid-cols-2 gap-5">
+        <div className="mt-8 md:mt-14 grid lg:grid-cols-2 gap-5">
           {PILLARS.map((p, i) => {
             const I = p.icon;
             return (
@@ -67,7 +67,7 @@ export function Innovation() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.08 }}
                 data-testid={`innovation-pillar-${i}`}
-                className="relative p-7 sm:p-9 rounded-3xl border border-line bg-[#04061a]/70 overflow-hidden group"
+                className="relative p-6 xl:p-9 rounded-3xl border border-line bg-[#04061a]/70 overflow-hidden group"
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="grid place-items-center h-12 w-12 rounded-xl bg-orange-brand/10 border border-orange-brand/30 text-orange-brand">
@@ -82,7 +82,7 @@ export function Innovation() {
                     </div>
                   </div>
                 </div>
-                <h3 className="mt-8 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
+                <h3 className="mt-4 md:mt-8 font-display text-white text-lg md:text-xl sm:text-2xl leading-tight tracking-tight">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-mute text-sm sm:text-base leading-relaxed max-w-xl">

@@ -46,7 +46,7 @@ const WhyBase2Brand = () => {
             <span className="b2b-text-gradient">Why modern software products require </span>
             <span className="text-(--b2b-primary)">engineering discipline.</span>
           </h2>
-          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+          <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             Real software products are continuously operated, evolved, and scaled — not just launched. Our engineering approach is built around that reality.
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ const WhyBase2Brand = () => {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5"
+          className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5"
         >
           {CARDS.map((c, idx) => {
             const Icon = c.icon; 
@@ -65,9 +65,9 @@ const WhyBase2Brand = () => {
                 key={c.title}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
-                className="b2b-card p-8 lg:p-9 group"
+                className="b2b-card p-5 sm:p-6 lg:p-9 group"
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-2 md:gap-5">
                   <div className="shrink-0 w-12 h-12 rounded-xl border border-[color:var(--b2b-primary)]/30 bg-[color:var(--b2b-primary)]/10 grid place-items-center group-hover:scale-105 transition-transform">
                     <Icon className="w-5 h-5 text-[color:var(--b2b-primary)]" />
                   </div>
@@ -76,7 +76,7 @@ const WhyBase2Brand = () => {
                     <p className="mt-3 text-[15px] leading-relaxed text-white/65">{c.desc}</p>
                   </div>
                 </div>
-                <div className="mt-7 pt-5 border-t border-white/[0.06] flex items-center justify-between">
+                <div className="mt-2 md:mt-7 pt-2 md:pt-5 border-t border-white/[0.06] flex items-center justify-between">
                   <span className="text-[11px] uppercase tracking-[0.22em] text-white/40">
                     Principle 0{idx + 1}
                   </span>

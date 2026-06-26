@@ -42,7 +42,7 @@ export function ClientFootprint() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl"
+          className="md:max-w-3xl"
         >
           <div className="flex items-center gap-3 text-xs sm:text-sm font-mono-display text-mute uppercase tracking-[0.25em]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand shadow-[0_0_12px_#ff6a00]" />
@@ -73,7 +73,7 @@ export function ClientFootprint() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.1 }}
-            className="relative mx-auto w-full max-w-[520px]"
+            className="relative mx-auto w-full md:max-w-[520px]"
             data-testid="footprint-globe"
           >
             {/* outer orbit ring */}
@@ -107,7 +107,7 @@ export function ClientFootprint() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.55, delay: i * 0.06 }}
-                className="group relative flex items-center justify-between gap-6 rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
+                className="group relative flex items-center justify-between gap-3 md:gap-6 rounded-lg md:rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-2 md:py-5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
                 data-testid={`footprint-region-${r.region.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* index */}
@@ -118,7 +118,7 @@ export function ClientFootprint() {
                   <div className="font-display text-white text-lg sm:text-xl tracking-tight">
                     {r.region}
                   </div>
-                  <div className="mt-1 text-sm text-mute truncate">
+                  <div className="md:mt-1 text-sm text-mute truncate">
                     {r.note}
                   </div>
                 </div>

@@ -34,7 +34,7 @@ const PRINCIPLES = [
 
 const EngineeringPrinciples = () => {
   return (
-    <section id="principles" className="pb-12 relative">
+    <section id="principles" className=" pt-12 md:pt-0 pb-12 relative">
       <div className="b2b-container">
         <motion.div
           initial="hidden"
@@ -62,7 +62,7 @@ const EngineeringPrinciples = () => {
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
-          className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
         >
           {PRINCIPLES.map((p, idx) => {
             const Icon = p.icon;
@@ -71,7 +71,7 @@ const EngineeringPrinciples = () => {
                 key={p.title}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
-                className="b2b-card p-4 group"
+                className="b2b-card p-4 sm:p-5 group"
               >
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-10 h-10 rounded-xl border border-[color:var(--b2b-red)]/30 bg-[color:var(--b2b-red)]/8 grid place-items-center">

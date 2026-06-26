@@ -14,11 +14,13 @@ export function GlobeHero({
   size = 600,
 }) {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
   const pointerInteracting = useRef(null);
   const dragOffset = useRef({ phi: 0, theta: 0 });
   const phiOffsetRef = useRef(0);
   const thetaOffsetRef = useRef(0);
   const isPausedRef = useRef(false);
+  const isVisibleRef = useRef(false);
 
   const handlePointerDown = useCallback((e) => {
     pointerInteracting.current = { x: e.clientX, y: e.clientY };
@@ -60,20 +62,21 @@ export function GlobeHero({
     let globe = null;
     let animationId;
     let phi = 0;
+    let intersectionObserver;
 
     function init() {
       const width = canvas.offsetWidth || size;
       if (width === 0 || globe) return;
 
       globe = createGlobe(canvas, {
-        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
         width: width * 2,
         height: width * 2,
         phi: 0,
         theta: 0.25,
         dark: 1,
         diffuse: 1.2,
-        mapSamples: 18000,
+        mapSamples: 9000,
         mapBrightness: 5,
         baseColor: [0.18, 0.22, 0.35],
         markerColor: [1.0, 0.42, 0.0],
@@ -83,16 +86,26 @@ export function GlobeHero({
       });
 
       function animate() {
+        animationId = requestAnimationFrame(animate);
+        if (!isVisibleRef.current) return;
         if (!isPausedRef.current) phi += speed;
         globe.update({
           phi: phi + phiOffsetRef.current + dragOffset.current.phi,
           theta: 0.25 + thetaOffsetRef.current + dragOffset.current.theta,
         });
-        animationId = requestAnimationFrame(animate);
       }
       animate();
       setTimeout(() => canvas && (canvas.style.opacity = "1"));
     }
+
+    const observeTarget = containerRef.current ?? canvas;
+    intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry?.isIntersecting ?? false;
+      },
+      { rootMargin: "120px" },
+    );
+    intersectionObserver.observe(observeTarget);
 
     if (canvas.offsetWidth > 0) {
       init();
@@ -107,24 +120,27 @@ export function GlobeHero({
     }
 
     return () => {
+      intersectionObserver?.disconnect();
       if (animationId) cancelAnimationFrame(animationId);
       if (globe) globe.destroy();
     };
   }, [markers, speed, size]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      onPointerDown={handlePointerDown}
-      data-testid="globe-hero-canvas"
-      className={cn("aspect-square w-full", className)}
-      style={{
-        cursor: "grab",
-        opacity: 0,
-        transition: "opacity 1.4s ease",
-        touchAction: "none",
-      }}
-    />
+    <div ref={containerRef} className={cn("relative aspect-square w-full", className)}>
+      <canvas
+        ref={canvasRef}
+        onPointerDown={handlePointerDown}
+        data-testid="globe-hero-canvas"
+        className="aspect-square w-full h-full"
+        style={{
+          cursor: "grab",
+          opacity: 0,
+          transition: "opacity 1.4s ease",
+          touchAction: "none",
+        }}
+      />
+    </div>
   );
 }
 

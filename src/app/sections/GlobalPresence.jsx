@@ -57,7 +57,7 @@ export function GlobalPresence() {
         </motion.div>
 
         {/* Office grid + stats */}
-        <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-8">
+        <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8">
           <div className="grid sm:grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line">
             {LOCATIONS.map((l, i) => (
               <motion.div
@@ -67,7 +67,7 @@ export function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
                 data-testid={`office-${l.city.toLowerCase().replace(/\s/g, "-")}`}
-                className="bg-[#02030a] p-5 sm:p-6 flex items-center justify-between gap-3 group hover:bg-[#05081a] transition"
+                className="bg-[#02030a] py-3 px-4 md:px-6 md:py-6 flex items-center justify-between gap-3 group hover:bg-[#05081a] transition"
               >
                 <div>
                   <div className="font-display text-white text-base sm:text-lg leading-tight">
@@ -82,14 +82,16 @@ export function GlobalPresence() {
                     {l.role}
                   </div>
                   <div className="mt-1 inline-block relative h-2 w-2 rounded-full bg-orange-brand">
-                    <span className="absolute inset-0 rounded-full bg-orange-brand/60 animate-ping" />
+                    {i === 0 && (
+                      <span className="absolute inset-0 rounded-full bg-orange-brand/60 animate-ping" />
+                    )}
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-2 md:gap-4">
             {STATS.map((s, i) => (
               <motion.div
                 key={s.v}
@@ -97,10 +99,10 @@ export function GlobalPresence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="rounded-2xl border border-line bg-[#04061a]/60 p-6"
+                className="rounded-lg md:rounded-2xl border border-line bg-[#04061a]/60 p-4 md:p-6"
                 data-testid={`global-stat-${i}`}
               >
-                <div className="font-display text-white text-3xl sm:text-4xl leading-none">
+                <div className="font-display text-white text-2xl md:text-4xl leading-none">
                   {s.k}
                 </div>
                 <div className="mt-2 text-xs text-mute uppercase tracking-[0.2em]">

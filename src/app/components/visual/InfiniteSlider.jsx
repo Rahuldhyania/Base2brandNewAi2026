@@ -18,6 +18,17 @@ export function InfiniteSlider({
   const trackRef = useRef(null);
   const controls = useAnimationControls();
   const [trackWidth, setTrackWidth] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry?.isIntersecting ?? false),
+      { rootMargin: "80px" },
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!trackRef.current) return;
@@ -32,17 +43,20 @@ export function InfiniteSlider({
   }, [children]);
 
   useEffect(() => {
-    if (!trackWidth) return;
+    if (!trackWidth || !visible) {
+      controls.stop();
+      return;
+    }
     const from = reverse ? -trackWidth : 0;
     const to = reverse ? 0 : -trackWidth;
     controls.start({
       x: [from, to],
       transition: { duration: speed, ease: "linear", repeat: Infinity },
     });
-  }, [trackWidth, speed, reverse, controls]);
+  }, [trackWidth, speed, reverse, controls, visible]);
 
   const onEnter = () => {
-    if (!speedOnHover || !trackWidth) return;
+    if (!speedOnHover || !trackWidth || !visible) return;
     const from = reverse ? -trackWidth : 0;
     const to = reverse ? 0 : -trackWidth;
     controls.start({
@@ -51,7 +65,7 @@ export function InfiniteSlider({
     });
   };
   const onLeave = () => {
-    if (!speedOnHover || !trackWidth) return;
+    if (!speedOnHover || !trackWidth || !visible) return;
     const from = reverse ? -trackWidth : 0;
     const to = reverse ? 0 : -trackWidth;
     controls.start({

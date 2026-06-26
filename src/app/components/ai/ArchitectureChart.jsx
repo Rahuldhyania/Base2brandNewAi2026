@@ -108,7 +108,7 @@ const InnerChart = ({ width, height }) => {
     <div className="relative w-full h-full">
       <svg
         ref={containerRef}
-        width={width}
+        width="100% "
         height={height}
         role="img"
         aria-label="Enterprise AI capability deployment by layer over time"
@@ -247,7 +247,7 @@ const ArchitectureChart = () => {
           Illustrative · indexed units
         </div>
       </div>
-      <div className="w-full" style={{ height: 320 }}>
+      <div className="w-full h-[220px] sm:h-[280px] md:h-[320px]">
         <ParentSize>
           {({ width, height }) => (
             <InnerChart width={width} height={height} />

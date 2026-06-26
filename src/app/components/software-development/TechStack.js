@@ -48,7 +48,7 @@ const TechStack = () => {
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
+          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-2 md:mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-primary)]" />
             Technology Stack
           </motion.div>
@@ -56,7 +56,7 @@ const TechStack = () => {
             <span className="b2b-text-gradient">The modern software stack — </span>
             <span className="text-(--b2b-primary)">engineered deliberately.</span>
           </h2>
-          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3 mt-6">
+          <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed md:pt-3 mt-4 sm:mt-6">
             We choose tools to match the problem, not the trend. Every layer of the stack is
             selected for fit, durability, and operational maturity.
           </p>
@@ -67,13 +67,13 @@ const TechStack = () => {
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.07)}
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           {CATEGORIES.map((cat) => (
             <motion.div
               key={cat.label}
               variants={fadeUp}
-              className=" hover:shadow-[inset_0_1px_0_rgba(255,90,77,0.15),0_30px_80px_-40px_rgba(255,59,48,0.45)] p-7 group border-2 border-var(--b2b-primary)/60 rounded-2xl hover:border-var(--b2b-primary)"
+              className=" hover:shadow-[inset_0_1px_0_rgba(255,90,77,0.15),0_30px_80px_-40px_rgba(255,59,48,0.45)] p-4 md:p-6 lg:p-7 group border-2 border-[color:var(--b2b-primary)]/60 rounded-2xl hover:border-[color:var(--b2b-primary)]"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -86,9 +86,9 @@ const TechStack = () => {
                   {cat.tags.length} tools
                 </span>
               </div>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-2 md:mt-6 flex flex-wrap gap-2">
                 {cat.tags.map((t) => (
-                  <span key={t} className="py-1.5 px-3.5 rounded-xl border-white hover:border-(--b2b-primary) border-2 text-[13px] font-medium text-white/65 transition-all duration-300 hover:bg-(--b2b-primary)/10">{t}</span>
+                  <span key={t} className="py-[2px] md:py-1.5 px-3.5 rounded-xl border-white hover:border-[color:var(--b2b-primary)] border-2 text-[13px] font-medium text-white/65 transition-all duration-300 hover:bg-[color:var(--b2b-primary)]/10">{t}</span>
                 ))}
               </div>
             </motion.div>

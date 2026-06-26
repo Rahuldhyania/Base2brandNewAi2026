@@ -24,7 +24,7 @@ const Node = ({ icon: Icon, label, x, y, accent }) => (
         accent
           ? "border-[color:var(--b2b-primary)]/50 bg-[color:var(--b2b-primary)]/10 text-white"
           : "border-white/10 bg-white/[0.03] text-white/85"
-      } px-3 py-1.5 text-[11.5px] font-medium`}
+      } px-3 py-1.5 text-[8px] md:text-[11.5px] font-medium`}
     >
       <Icon className={`w-3.5 h-3.5 ${accent ? "text-[color:var(--b2b-primary)]" : "text-white/70"}`} />
       {label}
@@ -34,7 +34,7 @@ const Node = ({ icon: Icon, label, x, y, accent }) => (
 
 const HeroVisual = () => {
   return (
-    <div className="relative aspect-square w-full max-w-[520px] mx-auto">
+    <div className="relative aspect-square w-full max-w-[300px] md:max-w-[520px] mx-auto">
       {/* Glow */}
       <div className="absolute inset-10 b2b-glow-red opacity-70" />
 
@@ -78,8 +78,8 @@ const HeroVisual = () => {
       </svg>
 
       {/* Center hub */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24">
-        <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-[#ff5a4d] to-[#ff3b30] grid place-items-center shadow-[0_30px_60px_-20px_rgba(255,59,48,0.5)]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 flex justify-center items-center">
+        <div className="relative w-18 md:w-24 h-18 md:h-24 rounded-2xl bg-gradient-to-br from-[#ff5a4d] to-[#ff3b30] grid place-items-center shadow-[0_30px_60px_-20px_rgba(255,59,48,0.5)]">
           <div className="absolute inset-0 rounded-2xl ring-1 ring-white/30" />
           <Layers className="w-9 h-9 text-white" />
         </div>

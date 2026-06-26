@@ -77,7 +77,7 @@ export function Hero() {
         </h1> */}
 
         {/* tagline + CTAs */}
-        <div className="mt-8 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-end">
+        <div className="mt-8 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8 lg:gap-12 items-end">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export function Hero() {
             <a
               href="#contact"
               data-testid="hero-cta-primary"
-              className="group inline-flex items-center justify-between gap-4 rounded-full bg-orange-brand font-semibold px-6 py-4 hover:brightness-110 transition glow-orange"
+              className="group inline-flex items-center justify-between gap-4 rounded-full bg-orange-brand font-semibold px-4 md:px-6 py-2 md:py-4 hover:brightness-110 transition glow-orange"
             >
               Start a transformation
               <span className="grid place-items-center h-7 w-7 rounded-full bg-black/15 group-hover:translate-x-0.5 transition">
@@ -113,7 +113,7 @@ export function Hero() {
             <a
               href="#services"
               data-testid="hero-cta-secondary"
-              className="inline-flex items-center gap-3 rounded-full border border-line-strong text-white font-medium px-6 py-4 hover:bg-white/5 transition"
+              className="inline-flex items-center gap-3 rounded-full border border-line-strong text-white font-medium px-4 md:px-6 py-2 md:py-4 hover:bg-white/5 transition"
             >
               Explore capabilities
             </a>
@@ -125,7 +125,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
+          className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
           data-testid="hero-stats"
         >
           {[
@@ -134,8 +134,8 @@ export function Hero() {
             { k: "120+", v: "Enterprise engagements" },
             { k: "14 yrs", v: "Engineering DNA" },
           ].map((s) => (
-            <div key={s.v} className="bg-[#02030a] p-5 sm:p-6">
-              <div className="font-display text-4xl sm:text-5xl text-white">
+            <div key={s.v} className="bg-[#02030a] p-5 xl:p-6">
+              <div className="font-display text-4xl xl:text-5xl text-white">
                 {s.k}
               </div>
               <div className="mt-1 text-xs sm:text-sm text-mute uppercase tracking-wider">

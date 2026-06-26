@@ -184,7 +184,7 @@
             --b2b-orange-2: var(--b2b-primary-2);
             --b2b-orange-soft: var(--b2b-primary-soft);
             /* Effect tokens */
-            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glass-bg: #080c1ef5;
             --b2b-glow-ring: rgba(255, 106, 0, 0.35);
             --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
             --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
@@ -1750,7 +1750,7 @@
             }
 
             .glass {
-                background: var(--b2b-glass-bg);
+                background: #080c1ef7 !important;
                 backdrop-filter: blur(18px) saturate(140%);
                 -webkit-backdrop-filter: blur(18px) saturate(140%);
                 border: 1px solid var(--b2b-line);
@@ -1816,8 +1816,8 @@
             max-width: 1280px;
             margin-left: auto;
             margin-right: auto;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
         @media (min-width: 1024px) {

@@ -57,7 +57,7 @@ export function Industries() {
           title="Built for the sectors that can't afford to get it wrong."
           intro="Each practice is staffed with engineers and consultants who have shipped the same systems you operate — under the same scrutiny."
         />
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-3xl overflow-hidden border border-line">
+        <div className="mt-8 xl:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-3xl overflow-hidden border border-line">
           {INDUSTRIES.map((ind, i) => {
             const I = ind.icon;
             return (
@@ -68,7 +68,7 @@ export function Industries() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.55, delay: i * 0.05 }}
                 data-testid={`industry-card-${ind.name.toLowerCase().split(" ")[0]}`}
-                className="group relative bg-[#02030a] p-7 sm:p-8 hover:bg-[#05081a] transition-colors"
+                className="group relative bg-[#02030a] p-6 xl:p-8 hover:bg-[#05081a] transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <div className="grid place-items-center h-11 w-11 rounded-xl bg-white/5 border border-line text-orange-brand group-hover:bg-orange-brand/10 group-hover:border-orange-brand/40 transition">
@@ -78,13 +78,13 @@ export function Industries() {
                     0{i + 1}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-white text-lg sm:text-xl leading-tight">
+                <h3 className="mt-4 xl:mt-6 font-display text-white text-lg sm:text-xl leading-tight">
                   {ind.name}
                 </h3>
                 <p className="mt-2 text-sm text-mute leading-relaxed">
                   {ind.note}
                 </p>
-                <div className="mt-6 inline-flex items-center gap-2 text-xs font-mono-display uppercase tracking-[0.2em] text-orange-brand opacity-0 group-hover:opacity-100 transition">
+                <div className="mt-4 md:mt-6 inline-flex items-center gap-2 text-xs font-mono-display uppercase tracking-[0.2em] text-(--b2b-primary)  group-hover:opacity-100 transition">
                   Explore sector →
                 </div>
               </motion.div>

@@ -52,7 +52,7 @@ export function Insights() {
           </a>
         </div>
 
-        <div className="mt-6 grid md:grid-cols-3 gap-5">
+        <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {POSTS.map((p, i) => (
             <motion.article
               key={p.title}
@@ -61,7 +61,7 @@ export function Insights() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               data-testid={`insight-card-${i}`}
-              className="group relative rounded-3xl border border-line bg-[#04061a]/60 p-7 sm:p-8 flex flex-col overflow-hidden"
+              className="group relative rounded-3xl border border-line bg-[#04061a]/60 p-4 xl:p-8 flex flex-col overflow-hidden"
             >
               {/* visual header — abstract geometric, no stock photo */}
               <div className="relative h-32 rounded-2xl overflow-hidden border border-line mb-6 bg-gradient-to-br from-[#0a1030] via-[#06091f] to-[#02030a]">

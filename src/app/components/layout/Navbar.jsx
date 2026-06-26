@@ -176,7 +176,7 @@ export function Navbar() {
         scrolled ? "py-3" : "py-5"
       )}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 relative">
         <div
           className={cn(
             "flex items-center justify-between rounded-full transition-all duration-500",
@@ -378,14 +378,14 @@ export function Navbar() {
                         >
                           {m.items.map((it) => (
                             <li key={it.label}>
-                              <a
+                              <Link
                                 href={it.href}
                                 onClick={(e) => handleAnchor(e, it.href)}
                                 className="flex items-center gap-3 px-4 py-2.5 text-sm text-mute hover:text-white"
                               >
                                 <span className="h-1 w-1 rounded-full bg-orange-brand/70" />
                                 {it.label}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </motion.ul>

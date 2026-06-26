@@ -59,7 +59,7 @@ function ServiceCard({ s, index }) {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay: index * 0.06 }}
       data-testid={`service-card-${s.title.toLowerCase().split(" ")[0]}`}
-      className="group relative p-6 sm:p-7 rounded-2xl border border-line bg-[#04061a]/60 hover:border-orange-brand/40 transition-colors overflow-hidden"
+      className="group relative p-4 xl:p-7 rounded-2xl border border-line bg-[#04061a]/60 hover:border-orange-brand/40 transition-colors overflow-hidden"
     >
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
            style={{ background: "radial-gradient(600px circle at var(--x,50%) var(--y,0%), rgba(255,106,0,0.10), transparent 40%)" }} />
@@ -71,13 +71,13 @@ function ServiceCard({ s, index }) {
           0{index + 1}
         </div>
       </div>
-      <h3 className="mt-6 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
+      <h3 className="mt-3 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
         {s.title}
       </h3>
-      <p className="mt-3 text-mute text-sm sm:text-base leading-relaxed">
+      <p className="mt-3 text-mute text-sm xl:text-base leading-relaxed">
         {s.desc}
       </p>
-      <ul className="mt-5 space-y-1.5">
+      <ul className="mt-3 xl:mt-5 space-y-1.5">
         {s.points.map((p) => (
           <li key={p} className="text-sm text-white/85 flex items-center gap-2">
             <span className="inline-block h-1 w-1 rounded-full bg-orange-brand" />

@@ -69,7 +69,7 @@ const Capabilities = () => {
   return (
     <section id="capabilities" className="b2b-section relative py-12">
       {/* subtle red glow */}
-      <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] b2b-glow-red opacity-50" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-full md:w-[700px] h-full md:h-[700px] b2b-glow-red opacity-50" />
 
       <div className="b2b-container relative">
         <motion.div
@@ -89,7 +89,7 @@ const Capabilities = () => {
               <span className="text-(--b2b-primary)">Every digital surface.</span>
             </h2>
           </div>
-          <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+          <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             From product foundations to platform-scale systems — a single engineering team owning the entire stack and lifecycle.
           </p>
         </motion.div>
@@ -99,7 +99,7 @@ const Capabilities = () => {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           {CAPABILITIES.map((cap) => {
             const Icon = cap.icon;
@@ -108,7 +108,7 @@ const Capabilities = () => {
                 key={cap.n}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
-                className="b2b-card p-7 group relative overflow-hidden"
+                className="b2b-card p-5 sm:p-6 lg:p-7 group relative overflow-hidden"
                 data-testid={`capability-card-${cap.n}`}
               >
                 {/* corner number */}
