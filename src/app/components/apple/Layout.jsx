@@ -12,7 +12,7 @@ import Starfield from "./Starfield";
  */
 export default function Layout({ tint = "orange", children }) {
   return (
-    <div className="relative min-h-screen bg-[#020408] text-white">
+    <div className="relative md:min-h-screen bg-[#020408] text-white">
       {/* Cosmic background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(10,132,255,0.08)_0%,transparent_60%)]" />

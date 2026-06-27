@@ -124,7 +124,7 @@ const Capabilities = ({title, description, highlightTag, capsData}) => {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="max-w-md text-white/50 leading-relaxed">
+            <p className="max-w-md text-white/50 leading-relaxed text-sm md:text-lg" >
               {description}
             </p>
           </Reveal>

@@ -48,7 +48,7 @@ export default function CaseStudies() {
       className="relative py-12 border-t border-white/[0.05]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 mb-16">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-5 md:gap-12 mb-10 md:mb-16">
           <div>
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-4">
               · Outcomes
@@ -91,7 +91,7 @@ export default function CaseStudies() {
               </div>
 
               <div className="flex items-baseline gap-3 mb-3">
-                <span className="font-display text-[#FFB800] text-5xl tracking-tight">
+                <span className="font-display text-[#FFB800] text-3xl md:text-5xl tracking-tight">
                   {c.metric}
                 </span>
                 <span className="text-[11px] uppercase tracking-[0.18em] text-white/50">

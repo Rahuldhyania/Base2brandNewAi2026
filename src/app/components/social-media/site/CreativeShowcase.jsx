@@ -162,12 +162,12 @@ export default function CreativeShowcase() {
           <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
             Creative engineered to convert.
           </h2>
-          <p className="mt-2 text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-2 text-zinc-400 text-sm md:text-lg max-w-2xl mx-auto">
             A modern in-house studio producing performance creative, brand films, and conversion-grade landing experiences at enterprise scale.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-8 md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SHOWCASE.map((card, i) => (
             <FlipCard key={card.title} data={card} index={i} />
           ))}

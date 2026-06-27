@@ -227,17 +227,17 @@ export function IlluminatedHero({ onOpenLeadForm }) {
         <div
             id="top"
             data-testid="hero-section"
-            className="relative w-full flex h-screen flex-wrap items-center justify-center overflow-hidden text-[calc(var(--size)*0.022)] text-white [--factor:min(1000px,100vh)] [--size:min(var(--factor),100vw)]">
+            className="relative w-full flex md:h-screen flex-wrap items-center justify-center overflow-hidden text-[calc(var(--size)*0.022)] text-white [--factor:min(1000px,100vh)] [--size:min(var(--factor),100vw)]">
             <div className="absolute h-full w-full max-w-[50em]">
                 <div className="shadow-bgt absolute size-full animate-[onloadbgb_1s_ease-in-out_forwards] max-w-[90%] mx-auto" />
 
                 <div className="shadow-bgb absolute size-full animate-[onloadbgbreverse_1s_ease-in-out_forwards]" />
             </div>
 
-            <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-5 sm:px-6 lg:px-8 py-20 sm:py-24 2xl:py-10 pointer-events-none">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-5 sm:px-6 lg:px-8 py-20 sm:py-24 2xl:py-10 pointer-events-none gap-y-4">
 
                 <div
-                    className="text-center text-4xl sm:text-5xl font-semibold leading-[1.04] tracking-[-0.035em] max-w-[1100px]"
+                    className="text-center text-3xl md:text-5xl font-semibold leading-[1.04] tracking-[-0.035em] max-w-[1100px]"
                     aria-hidden="true"
                 >
                     <span
@@ -247,7 +247,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
 
                         data-text="Built Around Shopify."
                     >
-                        Built Around Shopify.{' '}
+                        Built Around Shopify. {' '}
                     </span>
                     <span
                         className={cn(
@@ -263,7 +263,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                 </div>
 
                 <h1 className="sr-only">
-                    Built Around Shopify. Engineered For Growth.
+                    Built Around Shopify. {' '} Engineered For Growth.
                 </h1>
 
                 <div
@@ -375,7 +375,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                         onClick={onOpenLeadForm}
                         data-testid="hero-start-project-button"
                         className={cn(
-                            "inline-flex items-center gap-2 h-12 px-6 rounded-xl text-sm font-medium",
+                            "inline-flex items-center gap-2 py-2 md:h-12 px-3 md:px-6 rounded-xl text-xs md:text-sm font-medium",
                             "bg-[#95BF47] text-[#071006] hover:bg-[#B7E36A] active:bg-[#7FA83C]",
                             "active:translate-y-px transition-colors duration-200",
                             "shadow-[0_0_0_1px_rgba(149,191,71,0.30),0_18px_60px_rgba(0,0,0,0.55),0_0_56px_rgba(149,191,71,0.32)]",
@@ -390,7 +390,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                         onClick={scrollToWork}
                         data-testid="hero-view-work-button"
                         className={cn(
-                            "inline-flex items-center gap-2 h-12 px-5 rounded-xl text-sm",
+                            "inline-flex items-center gap-2 py-2 md:h-12 px-3 md:px-5 rounded-xl text-xs md:text-sm",
                             "bg-white/[0.06] text-white border border-white/15 backdrop-blur-md",
                             "hover:border-white/25 hover:bg-white/[0.10]",
                             "transition-colors duration-200",

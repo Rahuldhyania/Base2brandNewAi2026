@@ -28,7 +28,7 @@ export default function Industries() {
   return (
     <section
       data-testid={SPATIAL.industriesSection}
-      className="relative py-12 border-t border-white/[0.05]"
+      className="relative py-3 md:py-12 border-t border-white/[0.05]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="gap-12 mb-10">
@@ -58,7 +58,7 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: (i % 4) * 0.05 }}
-                className="group relative bg-[#050814] p-7 lg:p-9 min-h-[200px] flex flex-col justify-between transition-colors duration-300 hover:bg-[#FFB800]/[0.04]"
+                className="group relative bg-[#050814] p-4 md:p-7 lg:p-9 gap-y-4 md:min-h-[200px] flex flex-col justify-between transition-colors duration-300 hover:bg-[#FFB800]/[0.04]"
               >
                 <div className="flex items-center justify-between">
                   <Icon

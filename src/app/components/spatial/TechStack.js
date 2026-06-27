@@ -52,7 +52,7 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-5 md:space-y-10">
           {techGroups.map((group, gi) => (
             <motion.div
               key={group.title}
@@ -60,7 +60,7 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: gi * 0.05 }}
-              className="grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start border-b border-white/[0.05] last:border-b-0"
+              className="grid lg:grid-cols-[260px_1fr] gap-3 md:gap-6 lg:gap-12 items-start border-b border-white/[0.05] last:border-b-0"
             >
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[11px] text-[#FFB800]/70">
@@ -75,7 +75,7 @@ export default function TechStack() {
                   <span
                     key={t}
                     data-testid={SPATIAL.techPill(offsets[gi] + ti)}
-                    className="tech-pill px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-sm text-white/80"
+                    className="tech-pill px-2 md:px-4 py-1 md:py-2 rounded-full border border-white/10 bg-white/[0.03] text-xs md:text-sm text-white/80"
                   >
                     {t}
                   </span>

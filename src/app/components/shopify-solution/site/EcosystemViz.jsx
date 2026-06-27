@@ -60,7 +60,7 @@ const LogoChip = ({ item, active, onHover, onLeave }) => {
       onFocus={() => onHover?.(item.name)}
       onBlur={onLeave}
       className={cn(
-        "group relative h-16 w-full rounded-2xl bg-white/[0.04] border border-white/12 backdrop-blur-xl",
+        "group relative h-10 md:h-16 w-full rounded-lg md:rounded-2xl bg-white/[0.04] border border-white/12 backdrop-blur-xl",
         "flex items-center justify-center gap-2.5 transition-colors duration-200",
         "hover:border-white/22 hover:bg-white/[0.06]",
         active && "border-[#95BF47]/45",
@@ -194,7 +194,7 @@ const CategoryBlock = ({ category, align = "left", onHover, onLeave, active }) =
   <Reveal>
     <div
       className={cn(
-        "rounded-2xl bg-white/[0.025] border border-white/10 p-4",
+        "rounded-lg md:rounded-2xl bg-white/[0.025] border border-white/10 p-4", 
         "backdrop-blur-md",
       )}
     >

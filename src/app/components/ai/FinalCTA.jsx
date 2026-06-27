@@ -14,7 +14,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0 pointer-events-none">
         <BackgroundPaths opacity={0.4} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-[radial-gradient(ellipse,rgba(139,92,246,0.18),rgba(3,3,10,0)_70%)]" />
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-[radial-gradient(ellipse,rgba(139,92,246,0.18),rgba(3,3,10,0)_70%)] hidden md:block" /> */}
         <svg
           className="absolute inset-0 w-full h-full opacity-30"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
             <pattern
               id="cta-grid"
               width="80"
-              height="80"
+              height="80" 
               patternUnits="userSpaceOnUse"
             >
               <path

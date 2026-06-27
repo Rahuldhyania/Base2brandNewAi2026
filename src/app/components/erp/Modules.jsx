@@ -2099,10 +2099,10 @@ function ModulesWheel({
             className="
               absolute
               z-20
-              w-[3.75rem]
-              h-[3.75rem]
-              sm:w-16
-              sm:h-16
+              w-[2.75rem]
+              h-[2.75rem]
+              md:w-16
+              md:h-16
               -translate-x-1/2
               -translate-y-1/2
               rounded-full

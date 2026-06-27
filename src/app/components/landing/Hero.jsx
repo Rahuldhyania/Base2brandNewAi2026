@@ -71,7 +71,7 @@ export default function Hero({
                 {titleMiddle}{" "}
               </span>
               <br />
-              <span className="text-zinc-400 font-light">before your</span>
+              <span className="text-zinc-400 font-light">before your{' '}</span>
               <br />
               {titleLower}
             </h1>
@@ -90,7 +90,7 @@ export default function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+              className="mt-6 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
             >
               <a
                 href="#final-cta"

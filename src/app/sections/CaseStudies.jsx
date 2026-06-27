@@ -48,8 +48,8 @@ function CaseCard({ c, i }) {
         <span>{c.tag}</span>
         <span className="text-orange-brand">CASE 0{i + 1}</span>
       </div>
-      <div className="mt-5 text-xs font-mono-display text-mute">{c.sector}</div>
-      <h3 className="mt-3 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
+      <div className="mt-1 md:mt-5 text-xs font-mono-display text-mute">{c.sector}</div>
+      <h3 className="mt-1 md:mt-3 font-display text-white text-xl sm:text-2xl leading-tight tracking-tight">
         {c.title}
       </h3>
       <div className="mt-6 divider-line" />

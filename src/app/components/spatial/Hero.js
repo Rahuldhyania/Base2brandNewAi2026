@@ -22,29 +22,29 @@ export default function Hero() {
   return (
     <section
       data-testid={SPATIAL.heroSection}
-      className="relative pb-18 pt-24 sm:pt-28"
+      className="relative pb-6 md:pb-18 pt-24 sm:pt-28"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* From-base label */}
-        <motion.div {...fadeIn} className="flex items-center gap-3 mb-10">
+        <motion.div {...fadeIn} className="flex items-center gap-3 mb-3 md:mb-10">
           <span className="w-2 h-2 rounded-full bg-[#FFB800] animate-pulse-amber" />
-          <span className="text-[11px] tracking-[0.28em] uppercase text-white/60 font-medium">
+          <span className="text-[8px] md:text-[11px] tracking-[0.28em] uppercase text-white/60 font-medium">
             From base — to brand · Spatial Computing Practice
           </span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-6 md:gap-12 lg:gap-16 items-center">
           {/* Left — copy */}
           <div>
             <motion.h1
               {...fadeIn}
               transition={{ duration: 0.7, ease: "easeOut" }}
               data-testid={SPATIAL.heroHeadline}
-              className="font-display font-medium text-white text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight"
+              className="font-display font-medium text-white text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight"
             >
-              Engineer
+              Engineer{' '}
               <br />
-              experiences
+              experiences{' '}  
               <br />
               <span className="text-white/85">
                 beyond the{" "}
@@ -60,7 +60,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               data-testid={SPATIAL.heroSubheadline}
-              className="mt-8 text-base lg:text-lg text-white/65 max-w-[600px] leading-relaxed"
+              className="mt-2 md:mt-8 text-base lg:text-lg text-white/65 max-w-[600px] leading-relaxed"
             >
               Base2Brand designs and engineers enterprise spatial computing
               experiences across Vision Pro, XR platforms, digital twins,
@@ -72,7 +72,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.32 }}
-              className="mt-10 flex flex-wrap gap-3"
+              className="mt-3 md:mt-10 flex flex-wrap gap-3"
             >
               <a
                 href="#cta"
@@ -116,7 +116,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-10 grid grid-cols-2 lg:grid-cols-4 border-t border-white/[0.08]"
+          className="mt-4 md:mt-10 grid grid-cols-2 lg:grid-cols-4 border-t border-white/[0.08]"
         >
           {metrics.map((m, i) => (
             <div
@@ -128,10 +128,10 @@ export default function Hero() {
                   : ""
               } ${i < 2 ? "border-b lg:border-b-0 border-white/[0.08]" : ""}`}
             >
-              <div className="font-display text-white text-4xl sm:text-5xl tracking-tight">
+              <div className="font-display text-white text-3xl sm:text-5xl tracking-tight">
                 {m.value}
               </div>
-              <div className="mt-2 text-[11px] tracking-[0.2em] uppercase text-white/45">
+              <div className="mt-2 text-[8px] md:text-[11px] tracking-[0.2em] uppercase text-white/45">
                 {m.label}
               </div>
             </div>

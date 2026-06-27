@@ -33,8 +33,13 @@ export default function SlotText({
   }, [idx]);
 
   return (
-    <span className={`flex items-baseline gap-[0.18em] flex-wrap ${ClassName}`}>
-      <span>{default_text}</span>
+    <span className={`flex flex-col md:flex-row items-baseline gap-[0.18em] flex-wrap ${ClassName}`}>
+      <div>
+      
+      {/* <span className="block md:hidden">GROW {' '} {default_text}</span> */}
+      <p className=""> <span className="block md:hidden">GROW {' '}</span>  <span>{default_text}</span> </p>
+
+      </div>
 
       <motion.span
         animate={{ width }}
@@ -59,7 +64,7 @@ export default function SlotText({
             exit={{ y: "-60%", opacity: 0, filter: "blur(8px)" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 flex items-center justify-center italic text-(--b2b-primary)"
-            style={{ textShadow: "0 0 40px rgba(243,115,53,0.6)" }}
+            // style={{ textShadow: "0 0 40px rgba(243,115,53,0.6)" }}
           >
             {items_text[idx]}
           </motion.span>

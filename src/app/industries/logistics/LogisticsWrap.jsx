@@ -422,6 +422,7 @@ const cta = {
   primary: { label: "Get Proposal", to: "#" },
   secondary: { label: "Talk to a Partner", to: "#" },
 };
+
 const LOGISTICS_MODULES = [
   {
     id: "warehouse",

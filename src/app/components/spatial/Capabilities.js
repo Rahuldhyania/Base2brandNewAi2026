@@ -72,7 +72,7 @@ export default function Capabilities() {
       className="relative py-12 border-t border-white/[0.05]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-8 mb-10">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-10">
           <div>
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-4">
               · Capabilities

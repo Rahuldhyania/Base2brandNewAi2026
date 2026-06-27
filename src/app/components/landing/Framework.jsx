@@ -88,10 +88,10 @@ export default function Framework({ highlightTag, title, description, steps}) {
                         STEP {s.n}
                       </span>
                     </div>
-                    <h3 className="font-display mt-5 text-2xl md:text-3xl font-medium tracking-tight">
+                    <h3 className="font-display mt-2 md:mt-5 text-2xl md:text-3xl font-medium tracking-tight">
                       {s.title}
                     </h3>
-                    <p className="mt-4 text-zinc-400 leading-relaxed max-w-md md:max-w-none">
+                    <p className="mt-2 md:mt-4 text-zinc-400 leading-relaxed max-w-md md:max-w-none">
                       {s.body}
                     </p>
                   </div>
@@ -106,7 +106,7 @@ export default function Framework({ highlightTag, title, description, steps}) {
                           background: "rgba(var(--b2b-primary-rgb), 0.1)",
                         }}
                       />
-                      <div className="font-display text-7xl md:text-8xl font-extralight tracking-tighter leading-none">
+                      <div className="font-display text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tighter leading-none">
                         {s.n}
                       </div>
                       <div className="mt-4 grid grid-cols-3 gap-2">

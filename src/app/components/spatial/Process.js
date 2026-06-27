@@ -48,13 +48,13 @@ export default function Process() {
       data-testid={SPATIAL.processSection}
       className="relative py-12 border-t border-white/[0.05]"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="gap-12 mb-10 md:mb-16">
           <div>
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-4">
               · Process
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
               From concept to deployment —{" "} <br />
               <span className="text-white/55">
                 one continuous engagement.
@@ -79,7 +79,7 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="relative grid grid-cols-[56px_1fr] sm:grid-cols-[72px_1fr] lg:grid-cols-[72px_1fr_1fr] gap-x-6 lg:gap-x-16 items-start"
+                className="relative grid grid-cols-[56px_1fr] sm:grid-cols-[72px_1fr] lg:grid-cols-[72px_1fr_1fr] gap-x-4 md:gap-x-6 lg:gap-x-16 items-start"
               >
                 <div className="relative flex flex-col items-center">
                   <div className="w-[52px] h-[52px] sm:w-[68px] sm:h-[68px] rounded-full border border-[#FFB800]/30 bg-[#050814] flex items-center justify-center font-mono text-[#FFB800] text-sm sm:text-base shadow-[0_0_30px_rgba(255,184,0,0.15)]">
@@ -91,7 +91,7 @@ export default function Process() {
                   <h3 className="font-display text-2xl sm:text-3xl text-white leading-tight mb-3">
                     {s.title}
                   </h3>
-                  <p className="text-white/65 text-base leading-relaxed max-w-[560px]">
+                  <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-[560px]">
                     {s.body}
                   </p>
                 </div>

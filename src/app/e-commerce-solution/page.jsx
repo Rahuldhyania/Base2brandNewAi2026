@@ -7,7 +7,7 @@ import "./ecommerce.css";
 export default function EcommerceSolutionPage() {
   return (
     <Layout tint="green">
-      <div className="theme-e-commerce-solution relative min-h-screen overflow-x-hidden">
+      <div className="theme-e-commerce-solution relative md:min-h-screen overflow-x-hidden">
         <StarsBackground
           className="!fixed inset-0 z-0 pointer-events-none"
           starColor="#95BF47"

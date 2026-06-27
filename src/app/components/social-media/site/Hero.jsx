@@ -83,12 +83,12 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden"
+      className="relative md:min-h-screen overflow-hidden"
       style={{ background: "#08080A" }}
     >
       {/* glow blobs */}
       <div
-        className="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full blur-[120px] opacity-60"
+        className="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full blur-[120px] opacity-60 hidden md:block" 
         style={{ background: "#F37335" }}
       />
       <div
@@ -96,11 +96,11 @@ export default function Hero() {
         style={{ background: "#FF2D87" }}
       />
       <div
-        className="absolute bottom-0 right-1/3 w-[600px] h-[600px] rounded-full blur-[140px] opacity-40"
+        className="absolute bottom-0 right-1/3 w-[600px] h-[600px] rounded-full blur-[140px] opacity-40 hidden md:block"
         style={{ background: "#6C5CE7" }}
       />
       <div
-        className="absolute top-1/4 right-10 w-[420px] h-[420px] rounded-full blur-[120px] opacity-30"
+        className="absolute top-1/4 right-10 w-[420px] h-[420px] rounded-full blur-[120px] opacity-30 hidden md:block"
         style={{ background: "#C6FF3D" }}
       />
 
@@ -130,7 +130,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center">
+      <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center hidden md:block">
         <p
           className="text-[11px] tracking-[0.28em] text-zinc-500"
         >
@@ -144,13 +144,13 @@ export default function Hero() {
       ))}
 
       {/* Hero content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20">
+      <div className="relative z-10 md:min-h-screen flex flex-col items-center justify-center px-3 md:px-6 pt-24 md:pt-32 pb-20">
         <div
-          className="mb-6 px-4 py-1.5 rounded-full border border-white/10"
+          className="mb-6 px-2 md:px-4 py-1.5 rounded-full border border-white/10"
           style={{ background: "rgba(20,20,22,0.5)" }}
         >
           <span
-            className="text-[10px] tracking-[0.28em] text-zinc-400 flex items-center gap-2"
+            className="text-[8px] md:text-[10px] tracking-[0.28em] text-zinc-400 flex items-center gap-2"
           >
             <span
               className="w-1.5 h-1.5 rounded-full"
@@ -164,26 +164,23 @@ export default function Hero() {
         </div>
 
         <h1
-          className="text-center font-black text-white leading-[0.9] tracking-tight"
-          style={{
-            fontSize: "clamp(56px, 9vw, 150px)",
-          }}
+          className="text-center font-black text-white leading-[0.9] tracking-tight text-[40px] md:text-[100px] lg:text-[156px]"
         >
-          <span className="block">GROW.</span>
+          <span className="hidden md:block">GROW.</span>
           <SlotText
             default_text="RANK."
             items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
-            ClassName="justify-center"
+            ClassName="items-center justify-center"
           />
         </h1>
 
-        <p className="mt-10 max-w-2xl text-center text-zinc-400 text-[16px] leading-relaxed">
+        <p className="mt-4 md:mt-10 max-w-2xl text-center text-zinc-400 text-sm md:text-[16px] md:leading-relaxed">
           Digital marketing services built to drive business growth — boost
           online visibility, attract targeted audiences and increase
           conversions. Tailored strategies for lasting success.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-4 md:mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#contact"
             className="group flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-transform hover:scale-[1.03] bg-(--b2b-primary)"
@@ -211,30 +208,30 @@ export default function Hero() {
         </div>
 
         {/* Trust badges */}
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-4 text-zinc-500">
+        <div className="mt-4 md:mt-14 flex flex-wrap items-center justify-center gap-1 md:gap-4 text-zinc-500">
           <div className="flex items-center gap-2">
             <span className="text-amber-400">★★★★★</span>
             <span
-              className="text-[12px] tracking-[0.18em]"
+              className="text-[10px] md:text-[12px] tracking-[0.18em]"
             >
               4.9 / 5 (89+ REVIEWS)
             </span>
           </div>
           <span className="w-1 h-1 rounded-full bg-zinc-600" />
           <span
-            className="text-[12px] tracking-[0.18em]"
+            className="text-[10px] md:text-[12px] tracking-[0.18em]"
           >
             TRUSTED BY 200+ BRANDS
           </span>
           <span className="w-1 h-1 rounded-full bg-zinc-600" />
           <span
-            className="text-[12px] tracking-[0.18em]"
+            className="text-[10px] md:text-[12px] tracking-[0.18em]"
           >
             A DECADE OF EXPERIENCE
           </span>
         </div>
 
-        <div className="mt-14 flex items-center gap-3">
+        <div className="mt-4 md:mt-14 flex items-center gap-3">
           <span className="w-10 h-px bg-zinc-700" />
           <span
             className="text-[10px] tracking-[0.28em] text-zinc-500"

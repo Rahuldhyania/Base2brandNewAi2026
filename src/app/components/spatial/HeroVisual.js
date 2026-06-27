@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // Pure CSS — no external images.
 export default function HeroVisual() {
   return (
-    <div className="relative aspect-square w-full max-w-[560px] mx-auto">
+    <div className="relative aspect-square w-full md:max-w-[560px] mx-auto">
       {/* Backdrop subtle radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,184,0,0.18),transparent_60%)]" />
 
@@ -142,7 +142,7 @@ export default function HeroVisual() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55 }}
-        className="absolute top-[28%] right-[0%] w-52 rounded-2xl glass-panel p-4 animate-float-soft-2"
+        className="absolute top-[28%] right-[0%] w-44 md:w-52 rounded-2xl glass-panel p-2 md:p-4 animate-float-soft-2"
       >
         <div className="flex items-center gap-2 mb-3">
           <div className="w-6 h-6 rounded-md bg-[#FFB800]/15 border border-[#FFB800]/30 flex items-center justify-center">
@@ -152,7 +152,7 @@ export default function HeroVisual() {
             visionOS Module
           </span>
         </div>
-        <div className="text-white font-display text-base leading-tight">
+        <div className="text-white font-display text-sm md:text-base leading-tight">
           Maintenance Procedure 04
         </div>
         <div className="mt-2 h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
@@ -169,7 +169,7 @@ export default function HeroVisual() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="absolute bottom-[6%] left-[10%] w-56 rounded-2xl glass-panel p-4 animate-float-soft"
+        className="absolute bottom-[6%] left-0 md:left-[10%] w-56 rounded-2xl glass-panel p-4 animate-float-soft"
       >
         <div className="flex items-center justify-between mb-3">
           <span className="text-[10px] tracking-[0.2em] uppercase text-white/60">

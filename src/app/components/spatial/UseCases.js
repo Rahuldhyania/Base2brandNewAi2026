@@ -105,10 +105,10 @@ export default function UseCases() {
   return (
     <section
       data-testid={SPATIAL.useCasesSection}
-      className="relative py-12 border-t border-white/[0.05]"
+      className="relative py-4 md:py-12 border-t border-white/[0.05]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-12 mb-8 md:mb-16">
           <div>
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-4">
               · Use Cases

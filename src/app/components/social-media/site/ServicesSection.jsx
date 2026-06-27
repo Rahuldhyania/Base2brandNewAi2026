@@ -23,7 +23,7 @@ function ServiceCard({ service, index }) {
   return (
     <div
       id={service.id}
-      className="relative grid md:grid-cols-2 gap-x-14 items-center py-14"
+      className="relative grid md:grid-cols-2 gap-y-3 gap-x-14 items-center py-4 md:py-14"
     >
       <div
         className={`md:col-span-2 ${
@@ -41,10 +41,10 @@ function ServiceCard({ service, index }) {
 
       <div className={`${isEven ? "md:order-2" : ""}`}>
         <div
-          className="relative aspect-[5/4] w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden"
+          className={`relative aspect-[5/4] w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden ${isEven ? "md:rotate-[3deg]" : "md:-rotate-[3deg]"}`}
           style={{
             background: service.cardGradient,
-            transform: `rotate(${isEven ? "3deg" : "-3deg"})`,
+            // transform: `rotate(${isEven ? "3deg" : "-3deg"})`
             boxShadow:
               "0 30px 80px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.4)",
           }}
@@ -100,7 +100,7 @@ function ServiceCard({ service, index }) {
           <div>
             <h2
               className="font-black tracking-tight text-white"
-              style={{                fontSize: "clamp(36px, 4.5vw, 64px)",
+              style={{fontSize: "clamp(26px, 4.5vw, 64px)",
                 lineHeight: "0.95",
                 letterSpacing: "-0.02em",
               }}
@@ -108,7 +108,7 @@ function ServiceCard({ service, index }) {
               {service.title.toUpperCase()}
             </h2>
             <p
-              className="text-white mt-1 text-[12px] tracking-[0.18em]"
+              className="text-white mt-1 text-[10px] md:text-[12px] tracking-[0.18em]"
             >
               {service.fullName.toUpperCase()}
             </p>
@@ -124,18 +124,18 @@ function ServiceCard({ service, index }) {
         >
           {service.headline}
         </h3>
-        <p className="text-white max-w-md leading-relaxed mb-6 text-[15px]">
+        <p className="text-white max-w-md leading-relaxed mb-6 text-sm md:text-[15px]">
           {service.description}
         </p>
 
-        <ul className="divide-y divide-zinc-200 border-t border-zinc-200 mb-8">
+        <ul className="divide-y divide-zinc-200 border-t border-zinc-200 mb-2 md:mb-8">
           {service.items.map((it, i) => {
             const num = String(i + 1).padStart(2, "0");
             const active = hover === i;
             return (
               <li
                 key={it}
-                className="group flex items-center gap-4 py-3.5 cursor-pointer"
+                className="group flex items-center gap-4 py-2.5 md:py-3.5 cursor-pointer"
                 onMouseEnter={() => setHover(i)}
                 onMouseLeave={() => setHover(null)}
               >
@@ -171,8 +171,8 @@ function ServiceCard({ service, index }) {
 
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-800 transition-colors"
-          style={{            letterSpacing: "0.08em",
+          className="inline-flex items-center gap-2 px-3 md:px-5 py-2 md:py-3 rounded-full bg-zinc-900 text-white text-[12px] md:text-sm font-semibold hover:bg-zinc-800 transition-colors"
+          style={{letterSpacing: "0.08em",
           }}
         >
           {service.cta.toUpperCase()}
@@ -229,7 +229,7 @@ export default function ServicesSection() {
       className="relative"
       // style={{ background: "#F4F2EE" }}
     >
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
+      <div className="max-w-7xl mx-auto px-6 pt-10 md:pt-16 pb-10">
         <div className="mb-3">
           <span
             className="inline-flex items-center gap-2 text-[11px] tracking-[0.28em] text-white"
@@ -238,10 +238,10 @@ export default function ServicesSection() {
             OUR DIGITAL MARKETING SERVICES
           </span>
         </div>
-        <div className="grid lg:grid-cols-2 gap-10 items-end">
+        <div className="grid lg:grid-cols-2 gap-5 md:gap-10 items-end">
           <h2
             className="font-black text-white leading-[0.92] tracking-tight"
-            style={{              fontSize: "clamp(56px, 8vw, 120px)",
+            style={{              fontSize: "clamp(40px, 8vw, 120px)",
               letterSpacing: "-0.03em",
             }}
           >
@@ -261,7 +261,7 @@ export default function ServicesSection() {
               ].map((c) => (
                 <span
                   key={c.l}
-                  className="px-3 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-700 text-[11px] tracking-[0.18em] flex items-center gap-2"
+                  className="px-2 md:px-3 py-1 md:py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-700 text-[10px] md:text-[11px] tracking-[0.18em] flex items-center gap-2"
                 >
                   <span
                     className="w-1.5 h-1.5 rounded-full"

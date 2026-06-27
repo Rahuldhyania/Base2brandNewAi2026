@@ -37,12 +37,12 @@ export default function CtaSection() {
             className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_90%_100%,rgba(255,184,0,0.10),transparent_60%)]"
           />
 
-          <div className="relative grid lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-16 p-8">
+          <div className="relative grid lg:grid-cols-[1.6fr_1fr] gap-4 md:gap-10 lg:gap-16 p-4 md:p-8">
             <div>
               <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-5">
                 · Start the conversation
               </div>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
+              <h2 className="font-display text-3xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
                 Bring spatial computing
                 <br />
                 into your roadmap.
@@ -74,7 +74,7 @@ export default function CtaSection() {
                 </a>
               </div>
 
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] tracking-[0.18em] uppercase text-white/40">
+              <div className="mt-6 md:mt-10 flex flex-wrap items-center gap-x-2 md:gap-x-8 gap-y-3 text-[11px] tracking-[0.18em] uppercase text-white/40">
                 <span>Mumbai · HQ</span>
                 <span>New York</span>
                 <span>London</span>
@@ -85,7 +85,7 @@ export default function CtaSection() {
 
             {/* Sidebar — what you'll get back */}
             <div className="lg:border-l lg:border-white/[0.08] lg:pl-12">
-              <div className="text-[11px] tracking-[0.28em] uppercase text-white/45 mb-6">
+              <div className="text-[11px] tracking-[0.28em] uppercase text-white/45 mb-3 md:mb-6">
                 What you’ll get back
               </div>
               <ul className="space-y-4">
@@ -101,7 +101,7 @@ export default function CtaSection() {
                 ))}
               </ul>
 
-              <div className="mt-10 pt-6 border-t border-white/[0.08]">
+              <div className="mt-4 md:mt-10 pt-3 md:pt-6 border-t border-white/[0.08]">
                 <div className="text-[11px] tracking-[0.18em] uppercase text-white/40 mb-2">
                   Response time
                 </div>
