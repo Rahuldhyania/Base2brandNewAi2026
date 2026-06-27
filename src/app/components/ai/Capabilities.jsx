@@ -76,11 +76,11 @@ const CapCard = ({cap, idx }) => {
           </span>
         </div>
 
-        <h3 className="mt-5 sm:mt-7 font-display text-lg sm:text-xl md:text-2xl font-medium tracking-tight">
+        <h3 className="mt-2 md:mt-7 font-display text-lg sm:text-xl md:text-2xl font-medium tracking-tight">
           {cap.title}
         </h3>
 
-        <ul className="mt-4 md:mt-6 space-y-2.5">
+        <ul className="mt-4 md:mt-6 space-y-1.5 md:space-y-2.5">
           {cap.items.map((item) => (
             <li
               key={item}
@@ -119,7 +119,7 @@ const Capabilities = ({title, description, highlightTag, capsData}) => {
               {highlightTag}
             </ShiningText>
             <h2
-              className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance"
+              className="mt-3 md:mt-6 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance"
               dangerouslySetInnerHTML={{ __html: title }}
             />
           </Reveal>

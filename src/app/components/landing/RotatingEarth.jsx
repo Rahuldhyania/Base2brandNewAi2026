@@ -2,18 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 
-/**
- * RotatingEarth
- * A premium dotted-halftone rotating globe rendered to <canvas> via D3.
- * Themed for Base2Brand: electric blue land dots on deep black ocean,
- * with violet outline glow and faint graticule.
- *
- * Props:
- *  - width / height: max desktop dimensions (auto-shrinks responsively)
- *  - autoRotate: whether to rotate by default
- *  - interactive: enable drag-to-rotate (zoom is disabled to avoid hijacking page scroll)
- */
-// Major AI-search activity hotspots (lng, lat, label)
+
 const DEFAULT_HOTSPOTS = [
   { lng: -74.006, lat: 40.7128, label: "New York" },
   { lng: -122.4194, lat: 37.7749, label: "San Francisco" },
@@ -158,9 +147,9 @@ export default function RotatingEarth({
         cy,
         currentScale * 1.5,
       );
-      aura.addColorStop(0, "rgba(59, 130, 246, 0.18)");
-      aura.addColorStop(0.5, "rgba(139, 92, 246, 0.08)");
-      aura.addColorStop(1, "rgba(0,0,0,0)");
+      // aura.addColorStop(0, "rgba(255, 255, 255)");
+      // aura.addColorStop(0.5, "rgba(255, 255, 255)");
+      // aura.addColorStop(1, "rgba(0,0,0,0)");
       context.beginPath();
       context.arc(cx, cy, currentScale * 1.5, 0, 2 * Math.PI);
       context.fillStyle = aura;

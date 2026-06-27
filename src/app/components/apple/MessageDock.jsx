@@ -118,7 +118,7 @@ export default function MessageDock({
       variants={enableAnimations ? containerVariants : {}}
     >
       <motion.div
-        className="rounded-full px-4 py-2 border"
+        className="rounded-full px-4 py-2 border mx-auto   max-w-[360px] md:max-w-[520px]"
         animate={{
           width: isExpanded ? expandedWidth : collapsedWidth,
           background: isExpanded && selected
@@ -226,7 +226,7 @@ export default function MessageDock({
                   if (e.key === "Escape" && closeOnEscape) { setExpanded(null); setMessageInput(""); onDockToggle?.(false); }
                 }}
                 placeholder={inputLabel || placeholder(selected?.name || "")}
-                className="w-[300px] absolute left-14 right-0 bg-transparent border-none outline-none text-sm font-medium z-50 text-white placeholder-white/55"
+                className="w-[150px] md:w-[300px] absolute left-14 right-0 bg-transparent border-none outline-none text-sm font-medium z-50 text-white placeholder-white/55"
                 autoFocus={autoFocus}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0, transition: { delay: 0.2, type: "spring", stiffness: 400, damping: 30 } }}

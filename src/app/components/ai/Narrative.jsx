@@ -42,7 +42,7 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
 
             {features && (
               <Reveal delay={0.25}>
-                <div className="mt-3 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4">
+                <div className="mt-3 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                   {features.map((p) => (
                     <div
                       key={p.l}

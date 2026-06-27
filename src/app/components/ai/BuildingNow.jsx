@@ -270,11 +270,11 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
         </div>
       )}
     </div>
-  );
+  ); 
 
   const sectionHeader = (
     <Reveal>
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-4 md:mb-10">
         <div>
           <ShiningText testId="building-now-eyebrow">{highlightTag}</ShiningText>
           <h2

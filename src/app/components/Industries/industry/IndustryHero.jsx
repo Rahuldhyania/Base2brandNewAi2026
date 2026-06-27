@@ -28,7 +28,7 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
                   : pathname === '/industries/automotive'
                   ? '/automotive-b2b.png'
                   : pathname === '/industries/government'
-                  ? '/government-b2blogo.png'
+                  ? '/government-b2blogo2.png'
                   : pathname === '/industries/ngo'
                   ? '/ngo-b2b-logo.png'
                   :  '/images/b2blogo.png'

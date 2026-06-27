@@ -22,7 +22,7 @@ const logosList = [
   { slug: "/industries/education", logourl: "/images/education-logo.png" },
   { slug: "/industries/retail", logourl: "/images/retail-logo.png" },
   { slug: "/industries/automotive", logourl: "/images/automotive-logo.png" },
-  { slug: "/industries/government", logourl: "/images/governments-logo.png" },
+  { slug: "/industries/government", logourl: "/images/governments-logo233.png" },
   { slug: "/industries/ngo", logourl: "/images/ngos-logo.png" },
 ];
 

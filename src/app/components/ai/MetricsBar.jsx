@@ -20,7 +20,7 @@ const MetricsBar = () => {
             <Reveal
               key={m.l}
               delay={i * 0.05}
-              className={`py-6 sm:py-8 md:py-10 px-3 sm:px-4 md:px-6 ${
+              className={`py-4 md:py-10 px-3 sm:px-4 md:px-6 ${
                 i !== 0 ? "md:border-l border-white/5" : ""
               } ${i === 2 ? "border-t md:border-t-0 md:border-l border-white/5" : ""} ${
                 i === 3 ? "border-t md:border-t-0 border-l border-white/5" : ""
@@ -28,13 +28,13 @@ const MetricsBar = () => {
             >
               <div
                 data-testid={`metric-${i}`}
-                className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-[-0.04em]"
+                className="font-display text-2xl sm:text-4xl lg:text-5xl font-light tracking-[-0.04em]"
               >
                 <span className="bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
                   {m.v}
                 </span>
               </div>
-              <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-mono text-white/40 leading-snug">
+              <div className="mt-1 md:mt-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-mono text-white/40 leading-snug">
                 {m.l}
               </div>
             </Reveal>
