@@ -36,7 +36,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
         style={{ width: 500, height: 500, bottom: 80, right: -150, opacity: 0.25 }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -52,7 +52,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-6 font-display text-[32px] sm:text-[40px] md:text-[52px] leading-[1.05] font-medium text-white"
+            className="mt-6 font-display text-[32px] sm:text-[40px] lg:text-[52px] leading-[1.05] font-medium text-white"
           >
             {titleUpper}{' '}
             <br />
@@ -70,7 +70,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
         </div>
 
         <div
-          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="mt-4 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           data-testid="challenges-grid"
         >
           {challengesData.map((c, i) => {
@@ -82,7 +82,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="glass-card p-7 relative group"
+                className="glass-card p-4 md:p-7 relative group"
                 data-testid={`challenge-card-${c.id}`}
               >
                 <span className="card-corner-mark card-corner-mark--tl" />

@@ -24,8 +24,8 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
       />
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-          <div className="md:col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 2xl:gap-16">
+          <div className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="mt-6 font-display text-[36px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium tracking-tight text-white"
+              className="mt-6 font-display text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-medium tracking-tight text-white"
             >
               {titleUpper}{' '}
               <br />
@@ -53,7 +53,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-8 h-px bg-gradient-to-r from-[var(--b2b-primary)] to-transparent origin-left"
+              className="mt-4 md:mt-8 h-px bg-gradient-to-r from-[var(--b2b-primary)] to-transparent origin-left"
             />
           </div>
 
@@ -62,7 +62,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:col-span-7 space-y-3 text-[17px] md:text-[18px] leading-[1.7] text-zinc-300"
+            className="lg:col-span-7 space-y-1 md:space-y-3 text-[16px] md:text-[18px] leading-[1.7] text-zinc-300"
           >
             {
               description.map((item, index) => (

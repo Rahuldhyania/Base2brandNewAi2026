@@ -8,7 +8,7 @@ const focusAreas = [
 
 export const TrustBar = () => {
   return (
-    <section data-testid="trust-bar" className="py-12 bg-secondary/30">
+    <section data-testid="trust-bar" className="pb-12 md:pt-12 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <p
           data-testid="trust-bar-title"

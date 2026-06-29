@@ -42,7 +42,7 @@ export default function FinalCTA() {
         <div className="absolute inset-0 bg-grid-fine opacity-40" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="rounded-[28px] md:rounded-[36px] border border-white/10 glass-strong p-8 md:p-14 grid lg:grid-cols-2 gap-12 lg:gap-16 relative overflow-hidden">
           <div className="absolute -top-32 -left-24 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl pointer-events-none" />
           <div className="absolute -bottom-32 -right-24 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl pointer-events-none" />

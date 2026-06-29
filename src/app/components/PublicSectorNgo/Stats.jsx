@@ -59,13 +59,13 @@ export const Stats = () => {
     <section
       id="expertise"
       data-testid="expertise-grid"
-      className="relative py-16 overflow-hidden"
+      className="relative py-12 md:py-16 overflow-hidden"
     >
       <div className="absolute inset-0 bg-grid-dense radial-fade opacity-40 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-brand/10 blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="max-w-3xl mb-14">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
+        <div className="max-w-3xl mb-8 md:mb-14">
           <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-5">
             ▸ Expertise Grid
           </p>
@@ -91,7 +91,7 @@ export const Stats = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.04 }}
                 data-testid={`expertise-card-${i}`}
-                className="group border border-(--b2b-primary)/30 rounded-2xl p-7 md:p-8 bg-card/40 backdrop-blur hover:border-brand/40 transition-colors relative overflow-hidden"
+                className="group border border-(--b2b-primary)/30 rounded-2xl p-4 xl:p-8 bg-card/40 backdrop-blur hover:border-brand/40 transition-colors relative overflow-hidden"
               >
                 <div className="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-brand/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">

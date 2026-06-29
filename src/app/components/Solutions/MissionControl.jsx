@@ -103,7 +103,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -119,7 +119,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-6 font-display text-[34px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium text-white"
+            className="mt-6 font-display text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-medium text-white"
           >
             {titleUpper} {" "}
             <span className="text-orange-gradient">{titleLower}</span>
@@ -180,7 +180,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.06 }}
-                  className="group relative flex items-center gap-4 px-5 sm:px-8 py-5 border-b border-white/5 hover:bg-(--b2b-primary)/[0.03] transition-colors"
+                  className="group relative flex items-center gap-2 md:gap-4 px-4 sm:px-8 py-3 md:py-5 border-b border-white/5 hover:bg-(--b2b-primary)/[0.03] transition-colors"
                   data-testid={`mc-module-${m.id}`}
                 >
                   {/* Index/code */}
@@ -198,7 +198,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
 
                   {/* Label + dotted line */}
                   <div className="flex-1 min-w-0 flex items-center">
-                    <span className="font-mono text-[13px] sm:text-[14px] tracking-[0.18em] uppercase text-white">
+                    <span className="font-mono text-[11px] sm:text-[14px] tracking-[0.18em] uppercase text-white">
                       {m.label}
                     </span>
                     <span className="dotted-fill" />

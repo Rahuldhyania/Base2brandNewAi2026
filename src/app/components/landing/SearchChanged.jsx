@@ -47,7 +47,7 @@ export default function SearchChanged() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#030305] via-transparent to-[#030305]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <motion.div
@@ -135,7 +135,7 @@ export default function SearchChanged() {
                   <div className="mt-4 font-display text-lg font-medium">
                     {s.title}
                   </div>
-                  <div className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  <div className="mt-2 text-sm text-zinc-400 md:leading-relaxed">
                     {s.body}
                   </div>
                 </motion.div>

@@ -179,7 +179,7 @@ export const Services = () => {
             </p>
             <h2
               data-testid="services-headline"
-              className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)]"
+              className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             >
               Growth-Focused
               <br />

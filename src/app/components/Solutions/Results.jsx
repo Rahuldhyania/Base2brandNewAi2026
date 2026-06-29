@@ -41,7 +41,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -57,7 +57,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-6 font-display text-[34px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium text-white"
+            className="mt-6 font-display text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-medium text-white"
           >
             {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
@@ -86,7 +86,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.06 }}
-                className="glass-card p-7 relative overflow-hidden"
+                className="glass-card p-3 md:p-7 relative overflow-hidden"
                 data-testid={`result-card-${r.id}`}
               >
                 <span className="card-corner-mark card-corner-mark--tl" />
@@ -103,7 +103,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
                     <Icon className="w-5 h-5 text-(--b2b-primary)" />
                   </div>
                   <div className="text-right">
-                    <div className="text-orange-gradient font-display text-2xl font-medium leading-none">
+                    <div className="text-orange-gradient font-display text-xl md:text-2xl font-medium leading-none">
                       {r.stat}
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.22em] uppercase text-zinc-500">
@@ -115,12 +115,12 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
                 <h3 className="mt-2 text-[20px] font-medium text-white">
                   {r.title}
                 </h3>
-                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                <p className="mt-2 text-sm text-zinc-400 md:leading-relaxed">
                   {r.desc}
                 </p>
 
                 {/* progress line */}
-                <div className="mt-6 h-1 bg-white/5 rounded-full overflow-hidden">
+                <div className="mt-3 md:mt-6 h-1 bg-white/5 rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${65 + (i * 5)}%` }}

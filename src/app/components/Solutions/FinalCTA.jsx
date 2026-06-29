@@ -28,7 +28,7 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 md:px-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}

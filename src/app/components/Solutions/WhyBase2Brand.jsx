@@ -19,7 +19,7 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
       className="relative py-10 overflow-hidden"
       data-testid="why-section"
     >
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -35,7 +35,7 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-6 font-display text-[32px] sm:text-[44px] md:text-[52px] leading-[1.05] font-medium text-white"
+            className="mt-6 font-display text-[30px] sm:text-[44px] lg:text-[52px] leading-[1.05] font-medium text-white"
           >
             {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
@@ -52,7 +52,7 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.07 }}
-                className="glass-card p-8 relative flex gap-5"
+                className="glass-card p-4 md:p-8 relative flex gap-3 md:gap-5"
                 data-testid={`why-card-${r.id}`}
               >
                 <span className="card-corner-mark card-corner-mark--tl" />
@@ -69,10 +69,10 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
                     </span>
                     <span className="h-px w-10 bg-white/10" />
                   </div>
-                  <h3 className="mt-2 text-[22px] font-medium text-white">
+                  <h3 className="mt-2 text-xl md:text-[22px] font-medium text-white">
                     {r.title}
                   </h3>
-                  <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  <p className="mt-2 text-sm text-zinc-400 md:leading-relaxed">
                     {r.desc}
                   </p>
                 </div>

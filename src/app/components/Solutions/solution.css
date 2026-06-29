@@ -102,12 +102,10 @@
 .glow-orange {
     position: absolute;
     border-radius: 9999px;
-    background: radial-gradient(
-        circle,
-        color-mix(in srgb, var(--b2b-primary) 35%, transparent) 0%,
-        color-mix(in srgb, var(--b2b-primary) 5%, transparent) 45%,
-        transparent 75%
-    );
+    background: radial-gradient(circle,
+            color-mix(in srgb, var(--b2b-primary) 35%, transparent) 0%,
+            color-mix(in srgb, var(--b2b-primary) 5%, transparent) 45%,
+            transparent 75%);
     filter: blur(40px);
     pointer-events: none;
 }
@@ -220,11 +218,9 @@
     position: relative;
     border: 1px solid color-mix(in srgb, var(--b2b-primary) 18%, transparent);
 
-    background: linear-gradient(
-        180deg,
-        color-mix(in srgb, var(--b2b-primary) 6%, #0D0D12) 0%,
-        color-mix(in srgb, var(--b2b-primary) 4%, #07070A) 100%
-    );
+    background: linear-gradient(180deg,
+            color-mix(in srgb, var(--b2b-primary) 6%, #0D0D12) 0%,
+            color-mix(in srgb, var(--b2b-primary) 4%, #07070A) 100%);
 
     border-radius: 16px;
     overflow: hidden;
@@ -239,12 +235,10 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        color-mix(in srgb, var(--b2b-primary) 8%, transparent) 50%,
-        transparent 100%
-      );
+    background: linear-gradient(180deg,
+            transparent 0%,
+            color-mix(in srgb, var(--b2b-primary) 8%, transparent) 50%,
+            transparent 100%);
     height: 35%;
     animation: scan-line 7s linear infinite;
     mix-blend-mode: screen;
@@ -277,8 +271,8 @@
     border-radius: 9999px;
     background: var(--b2b-primary);
     box-shadow:
-    0 0 0 0 color-mix(in srgb, var(--b2b-primary) 60%, transparent),
-    0 0 10px color-mix(in srgb, var(--b2b-primary) 90%, transparent);
+        0 0 0 0 color-mix(in srgb, var(--b2b-primary) 60%, transparent),
+        0 0 10px color-mix(in srgb, var(--b2b-primary) 90%, transparent);
     animation: pulse-orange 1.8s ease-in-out infinite;
     flex-shrink: 0;
 }
@@ -566,11 +560,9 @@
 .core-tech-visual-card {
     border: 1px solid rgba(255, 255, 255, 0.06);
     background:
-        radial-gradient(
-            ellipse at 50% 42%,
+        radial-gradient(ellipse at 50% 42%,
             color-mix(in srgb, var(--b2b-primary) 7%, transparent) 0%,
-            transparent 58%
-        ),
+            transparent 58%),
         linear-gradient(180deg, #0c0c10 0%, #07070a 100%);
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.05),
@@ -596,12 +588,10 @@
     width: 220px;
     height: 220px;
     border-radius: 9999px;
-    background: radial-gradient(
-        circle,
-        color-mix(in srgb, var(--b2b-primary) 28%, transparent) 0%,
-        color-mix(in srgb, var(--b2b-primary) 8%, transparent) 42%,
-        transparent 72%
-    );
+    background: radial-gradient(circle,
+            color-mix(in srgb, var(--b2b-primary) 28%, transparent) 0%,
+            color-mix(in srgb, var(--b2b-primary) 8%, transparent) 42%,
+            transparent 72%);
     filter: blur(2px);
 }
 
@@ -665,4 +655,26 @@
 
 .text-mute {
     color: #9c9ca8;
+}
+
+@media screen and (max-width : 768px) {
+    .industry-tag {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .btn-secondary {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .tick-row,.dotted-fill {
+        display: none;
+    }
+
 }

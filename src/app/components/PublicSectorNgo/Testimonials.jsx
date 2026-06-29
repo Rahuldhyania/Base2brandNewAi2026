@@ -16,17 +16,17 @@ export const Testimonials = () => {
     <section
       id="experience"
       data-testid="experience-section"
-      className="relative py-16 border-y border-border bg-secondary/30"
+      className="relative py-12 md:py-16 border-y border-border bg-secondary/30"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-4 md:gap-12 items-start">
           <div className="lg:col-span-5">
             <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-5">
               ▸ Collaborative Experience
             </p>
             <h2
               data-testid="experience-headline"
-              className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)]"
+              className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             >
               Experience That{" "}
               <span className="text-brand">Shapes Our</span>

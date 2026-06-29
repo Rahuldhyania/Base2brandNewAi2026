@@ -114,7 +114,7 @@ export const Industries = () => {
           </p>
           <h2
             data-testid="industries-headline"
-            className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)]"
+            className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
             Solutions Built{" "}
             <span className="text-brand">Around Your</span>
@@ -123,7 +123,7 @@ export const Industries = () => {
           </h2>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-10" data-testid="industry-tablist">
+        <div className="flex flex-wrap gap-2 mb-4 md:mb-10" data-testid="industry-tablist">
           {industries.map((ind) => {
             const isActive = ind.id === active;
             return (
@@ -131,7 +131,7 @@ export const Industries = () => {
                 key={ind.id}
                 data-testid={`industry-tab-${ind.id}`}
                 onClick={() => setActive(ind.id)}
-                className={`relative px-4 md:px-5 py-2.5 rounded-full text-sm font-semibold transition-colors ${
+                className={`relative px-3 md:px-5 py-1.5 md:py-2.5 rounded-full text-sm font-semibold transition-colors ${
                   isActive
                     ? "text-white"
                     : "text-muted-foreground hover:text-foreground"
@@ -152,7 +152,7 @@ export const Industries = () => {
 
         <div className="hairline rounded-3xl bg-background overflow-hidden">
           <div className="grid lg:grid-cols-12 border border-white/40">
-            <div className="lg:col-span-7 p-8 md:p-12 lg:p-14 rounded-[50px]">
+            <div className="lg:col-span-7 p-4 md:p-8 xl:p-14 rounded-[50px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
@@ -175,7 +175,7 @@ export const Industries = () => {
                     {current.desc}
                   </p>
 
-                  <div className="mt-8 grid md:grid-cols-2 gap-6">
+                  <div className="mt-4 md:mt-8 grid md:grid-cols-2 gap-3 md:gap-6">
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-brand font-semibold mb-4">
                         Outcomes

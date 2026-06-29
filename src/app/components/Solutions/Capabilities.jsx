@@ -69,9 +69,9 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
     >
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--b2b-primary)/40 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-2xl">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2 lg:gap-8">
+          <div className="lg:max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="mt-6 font-display text-[34px] sm:text-[44px] md:text-[56px] leading-[1.05] font-medium text-white"
+              className="mt-6 font-display text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-medium text-white"
             >
               {titleUpper} {" "}
               <span className="text-orange-gradient">{titleLower}</span>
@@ -97,7 +97,7 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:max-w-sm text-zinc-400 text-base leading-relaxed"
+            className="lg:max-w-sm text-zinc-400 text-base leading-relaxed"
           >
             {description}
           </motion.p>
@@ -116,7 +116,7 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.06 }}
-                className="glass-card p-7 relative group flex flex-col"
+                className="glass-card p-4 md:p-7 relative group flex flex-col"
                 data-testid={`capability-card-${cap.id}`}
               >
                 <span className="card-corner-mark card-corner-mark--tl" />
@@ -137,7 +137,7 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
                   </div>
                 </div>
 
-                <h3 className="mt-7 text-[22px] md:text-[24px] font-medium text-white leading-tight">
+                <h3 className="mt-3 2xl:mt-7 text-[22px] md:text-[24px] font-medium text-white leading-tight">
                   {cap.title}
                 </h3>
                 <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
@@ -156,7 +156,7 @@ export default function Capabilities({highlightTag, titleUpper, titleLower, desc
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center justify-between text-zinc-500 text-[12px] font-mono tracking-[0.15em] uppercase">
+                <div className="mt-2 md:mt-6 flex items-center justify-between text-zinc-500 text-[12px] font-mono tracking-[0.15em] uppercase">
                   <span>System {String(i + 1).padStart(2, "0")} / 06</span>
                   <ArrowUpRight
                     size={16}

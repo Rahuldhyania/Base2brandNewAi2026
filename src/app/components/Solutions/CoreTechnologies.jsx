@@ -141,7 +141,7 @@ export default function CoreTechnologies({
     >
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--b2b-primary)/35 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+      <div className="relative mx-auto max-w-7xl px-4 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function CoreTechnologies({
           </p>
         </motion.div>
 
-        <div className="mt-16 md:mt-20 space-y-20 md:space-y-28">
+        <div className="mt-10 md:mt-16 lg:mt-20 space-y-12 md:space-y-20 lg:space-y-28">
           {items.map((item, index) => (
             <CoreTechnologyRow key={item.id} item={item} index={index} />
           ))}

@@ -39,16 +39,16 @@ export const Process = () => {
     <section
       id="process"
       data-testid="process-timeline"
-      className="relative py-16 border-y border-border bg-secondary/30"
+      className="relative py-12 md:py-16 border-y border-border bg-secondary/30"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="max-w-3xl mb-12">
+        <div className="max-w-3xl mb-8 md:mb-12">
           <p className="text-xs uppercase tracking-[0.3em] text-brand font-semibold mb-5">
             ▸ Process Timeline
           </p>
           <h2
             data-testid="process-headline"
-            className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-[clamp(2rem,5vw,4.25rem)]"
+            className="font-display font-bold uppercase text-balance leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
             From Discovery{" "}
             <span className="text-brand">To Community</span>
@@ -60,7 +60,7 @@ export const Process = () => {
         <div className="relative">
           <div className="hidden xl:block absolute top-12 left-0 right-0 h-px bg-border" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 xl:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-8 xl:gap-6">
             {steps.map((s, i) => (
               <motion.div
                 key={s.n}

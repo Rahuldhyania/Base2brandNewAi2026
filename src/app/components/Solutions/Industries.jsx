@@ -32,8 +32,8 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
       className="relative py-10 overflow-hidden"
       data-testid="industries-section"
     >
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 lg:gap-8">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -49,7 +49,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="mt-6 font-display text-[32px] sm:text-[42px] md:text-[52px] leading-[1.05] font-medium text-white"
+              className="mt-3 md:mt-6 font-display text-[30px] sm:text-[42px] lg:text-[52px] leading-[1.05] font-medium text-white"
             >
               {titleUpper}{" "}
               {titleLower}
@@ -60,7 +60,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:max-w-sm text-zinc-400 leading-relaxed"
+            className="lg:max-w-sm text-zinc-400 leading-relaxed"
           >
             {description}
           </motion.p>
@@ -94,7 +94,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
         </motion.div>
 
         {/* Ticker */}
-        <div className="mt-10 border-y border-white/5 py-5 overflow-hidden">
+        <div className="mt-4 lg:mt-10 border-y border-white/5 py-5 overflow-hidden">
           <div className="ticker font-mono text-[11px] tracking-[0.3em] uppercase text-zinc-500">
             {Array.from({ length: 2 }).map((_, k) => (
               <span key={k} className="inline-flex items-center gap-8 mr-8">

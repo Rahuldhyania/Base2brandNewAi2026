@@ -24,15 +24,15 @@ export default function CoreTechnologyRow({ item, index }) {
         {item.eyebrow}
       </p>
 
-      <h3 className="mt-4 font-display text-[32px] sm:text-[38px] lg:text-[42px] leading-[1.08] font-medium tracking-tight text-white">
+      <h3 className="mt-4 font-display text-[30px] sm:text-[38px] lg:text-[42px] leading-[1.08] font-medium tracking-tight text-white">
         {item.title}
       </h3>
 
-      <p className="mt-5 text-[16px] sm:text-[17px] leading-[1.7] text-zinc-400 max-w-xl">
+      <p className="mt-3 md:mt-5 text-[16px] sm:text-[17px] leading-[1.7] text-zinc-400 max-w-xl">
         {item.description}
       </p>
 
-      <ul className="mt-7 space-y-3.5">
+      <ul className="mt-3 md:mt-7 space-y-2 md:space-y-3.5">
         {item.features.map((feature) => (
           <li
             key={feature}
@@ -44,7 +44,7 @@ export default function CoreTechnologyRow({ item, index }) {
         ))}
       </ul>
 
-      <div className="mt-9 inline-flex w-fit max-w-full items-center gap-3 rounded-full border border-brand/25 bg-brand/[0.06] px-5 py-3.5 text-sm leading-snug text-zinc-300">
+      <div className="mt-9 inline-flex w-fit max-w-full items-center gap-3 rounded-lg md:rounded-full border border-brand/25 bg-brand/[0.06] px-2 md:px-5 py-3.5 text-sm leading-snug text-zinc-300">
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand/15">
           <ArrowRight className="h-3.5 w-3.5 text-brand" strokeWidth={2} />
         </span>
@@ -62,7 +62,7 @@ export default function CoreTechnologyRow({ item, index }) {
       className="relative"
       data-testid={`core-tech-visual-${index}`}
     >
-      <div className="core-tech-visual-card relative aspect-[5/4] min-h-[300px] sm:min-h-[340px] overflow-hidden rounded-[20px]">
+      <div className="core-tech-visual-card relative w-full aspect-[5/4] md:min-h-[300px] md:min-h-[340px] overflow-hidden rounded-[20px]">
         <div className="core-tech-corner core-tech-corner--tr" aria-hidden />
         <div className="core-tech-corner core-tech-corner--bl" aria-hidden />
 
@@ -81,21 +81,32 @@ export default function CoreTechnologyRow({ item, index }) {
   );
 
   return (
-    <article
-      className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20"
-      data-testid={`core-tech-row-${index}`}
-    >
-      {visualFirst ? (
-        <>
-          {visual}
-          {copy}
-        </>
-      ) : (
-        <>
-          {copy}
-          {visual}
-        </>
-      )}
+    <article>
+      <div
+        className="hidden lg:grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20"
+        data-testid={`core-tech-row-${index}`}
+      >
+        {visualFirst ? (
+          <>
+            {visual}
+            {copy}
+          </>
+        ) : (
+          <>
+            {copy}
+            {visual}
+          </>
+        )}
+      </div>
+      <div
+        className="grid lg:hidden grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20"
+        data-testid={`core-tech-row-${index}`}
+      >
+          <>
+            {copy}
+            {visual}
+          </>
+      </div>
     </article>
   );
 }

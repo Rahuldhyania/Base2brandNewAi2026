@@ -43,7 +43,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050507] to-transparent z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-10 text-center pt-28 pb-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-10 text-center pt-24 md:pt-28 pb-10 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: "easeOut", delay: 0.1 }}
-          className="mt-8 font-display text-[44px] sm:text-[64px]  leading-[0.95] font-medium text-white"
+          className="mt-4 md:mt-8 font-display text-[34px] md:text-[44px] lg:text-[64px]  leading-[0.95] font-medium text-white"
         >
           <span className="block">{titleupper}</span>{' '}
           <span className="block text-orange-gradient w-fit mx-auto">{titlelower}</span>
@@ -67,7 +67,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
-          className="mt-6 text-base md:text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed"
+          className="mt-3 md:mt-6 text-sm md:text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed"
         >
           {description}
         </motion.p>
@@ -76,7 +76,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mt-8 flex flex-wrap items-center justify-center gap-2 md:gap-4"
         >
 
           {

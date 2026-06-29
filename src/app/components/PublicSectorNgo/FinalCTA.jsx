@@ -6,12 +6,12 @@ export const FinalCTA = () => {
     <section
       id="final-cta"
       data-testid="final-cta"
-      className="relative py-14 overflow-hidden"
+      className="relative pb-14 md:pt-14 overflow-hidden"
     >
       <div className="absolute inset-0 bg-grid-dense radial-fade opacity-30 pointer-events-none" />
       <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-brand/20 blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 md:px-10 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full hairline bg-secondary/50 backdrop-blur text-xs font-medium text-muted-foreground mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
           Building Better Systems for Stronger Communities
@@ -19,7 +19,7 @@ export const FinalCTA = () => {
 
         <h2
           data-testid="final-cta-headline"
-          className="font-display font-bold uppercase text-balance leading-[0.92] tracking-tight text-[clamp(2.25rem,6vw,4.5rem)]"
+          className="font-display font-bold uppercase text-balance xl:leading-[0.92] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
         >
           Let's Solve{" "}
           <span className="text-brand">Meaningful</span>
@@ -27,7 +27,7 @@ export const FinalCTA = () => {
           Challenges Together.
         </h2>
 
-        <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+        <p className="mt-4 md:mt-8 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
           Whether you're a nonprofit organization, educational institution, or
           public sector agency seeking innovative technology solutions,
           Base2Brand is ready to collaborate.
@@ -36,7 +36,7 @@ export const FinalCTA = () => {
           Together, we can build systems that create lasting impact.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-4 md:mt-10 flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href="mailto:hello@base2brand.com?subject=Discuss%20Your%20Initiative"
             data-testid="final-cta-primary"

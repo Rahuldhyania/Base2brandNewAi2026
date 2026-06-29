@@ -50,7 +50,7 @@ export default function Hero({
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute inset-0 noise pointer-events-none mix-blend-overlay" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="grid lg:grid-cols-12 gap-2 md:gap-12 lg:gap-8 items-center">
           {/* Left */}
           <div className="lg:col-span-7">
