@@ -18,7 +18,7 @@ export default function IndustryCTA({ cta, id = "cta" }) {
     <section
       id={id}
       data-testid={`${id}-cta`}
-      className="relative py-14 border-t border-white/5 overflow-hidden"
+      className="relative py-12 md:py-14 border-t border-white/5 overflow-hidden"
     >
       <GridBackground intensity={0.85} /> 
       <div className="relative container-edge">
@@ -30,13 +30,13 @@ export default function IndustryCTA({ cta, id = "cta" }) {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 text-white/65 text-[17px] md:text-[18px] max-w-2xl mx-auto text-pretty">
+            <p className="mt-4 md:mt-6 text-white/65 text-[17px] md:text-[18px] max-w-2xl mx-auto text-pretty">
               {cta.description}
             </p>
           </Reveal>
 
           <Reveal delay={0.18}>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-6 md:mt-10 flex flex-wrap items-center justify-center gap-4">
               <CTAButton
                 to={cta.primary.to}
                 variant="primary"
@@ -57,11 +57,11 @@ export default function IndustryCTA({ cta, id = "cta" }) {
           </Reveal>
 
           <Reveal delay={0.26}>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-2.5">
+            <div className="mt-6 md:mt-12 flex flex-wrap items-center justify-center gap-2.5">
               {TAGS.map(({ icon: Icon, label }) => (
                 <span
                   key={label}
-                  className="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest2 text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.025]"
+                  className="inline-flex items-center gap-2 text-[8px] md:text-[11px] uppercase tracking-widest2 text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.025]"
                 >
                   <Icon className="w-3.5 h-3.5 text-brand" />
                   {label}

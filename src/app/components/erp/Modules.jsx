@@ -1860,7 +1860,7 @@ function ModulesWheel({
       className="
         relative
         aspect-square
-        w-full
+        w-[80%] md:w-full
         max-w-[min(620px,94vw)]
         mx-auto
         p-5
@@ -2007,10 +2007,10 @@ function ModulesWheel({
             border-white/12
             erp-surface-panel
             backdrop-blur-xl
-            px-6
-            py-4
+            px-2  md:px-6
+            py-2 md:py-4
             text-center
-            min-w-[148px]
+            md:min-w-[148px]
           "
         >
           <div
@@ -2047,7 +2047,7 @@ function ModulesWheel({
             className="
               mt-1.5
               font-display
-              text-[18px]
+              text-[12px] md:text-[18px]
               font-medium
               tracking-tight
               text-white
@@ -2059,6 +2059,7 @@ function ModulesWheel({
           <div
             className="
               mt-0.5
+              hidden md:block
               font-mono
               text-[8.5px]
               uppercase
@@ -2172,7 +2173,7 @@ function ModulesWheel({
                 pointer-events-none
                 min-w-[90px]
                 sm:min-w-[104px]
-                max-w-[118px]
+                max-w-[90px] md:max-w-[118px]
                 ${labelPositionClass}
               `}
             >

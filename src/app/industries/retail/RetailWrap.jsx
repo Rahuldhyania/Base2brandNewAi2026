@@ -538,6 +538,7 @@ export default function RetailWrap() {
         }
         ITEMS={ITEMS}
       />
+      <div className="hidden md:block">
       <Modules
         title={
           <>
@@ -549,6 +550,7 @@ export default function RetailWrap() {
         modules={RETAIL_MODULES}
         scrollOrder={RETAIL_MODULE_SCROLL_ORDER}
       />
+      </div>
       <IndustryEcosystem ecosystem={ecosystem} name={"Retail"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
       <IndustryCTA cta={cta} />

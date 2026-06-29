@@ -540,17 +540,19 @@ export default function NgoWrap() {
         }
         ITEMS={ITEMS}
       />
-      <Modules
-        title={
-          <>
-            Non-profit operations.{" "}
-            <span className="text-brand">One impact core.</span>
-          </>
-        }
-        description="Connect beneficiaries, programs, volunteers, donations, procurement, field work, compliance, and impact reporting into one transparent NGO management system."
-        modules={NGO_MODULES}
-        scrollOrder={NGO_MODULE_SCROLL_ORDER}
-      />
+      <div className="hidden md:block">
+        <Modules
+          title={
+            <>
+              Non-profit operations.{" "}
+              <span className="text-brand">One impact core.</span>
+            </>
+          }
+          description="Connect beneficiaries, programs, volunteers, donations, procurement, field work, compliance, and impact reporting into one transparent NGO management system."
+          modules={NGO_MODULES}
+          scrollOrder={NGO_MODULE_SCROLL_ORDER}
+        />
+      </div>
       <IndustryEcosystem ecosystem={ecosystem} name={"NGOs"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
       <IndustryCTA cta={cta} />

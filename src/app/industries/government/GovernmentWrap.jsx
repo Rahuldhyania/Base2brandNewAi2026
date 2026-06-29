@@ -571,17 +571,19 @@ export default function GovernmentWrap() {
         }
         ITEMS={ITEMS}
       />
-      <Modules
-        title={
-          <>
-            Government services.{" "}
-            <span className="text-brand">One civic core.</span>
-          </>
-        }
-        description="Connect citizens, departments, services, procurement, finance, compliance, field operations, and analytics into one secure public-sector management system."
-        modules={GOVERNMENT_MODULES}
-        scrollOrder={GOVERNMENT_MODULE_SCROLL_ORDER}
-      />
+      <div className="hidden md:block">
+        <Modules
+          title={
+            <>
+              Government services.{" "}
+              <span className="text-brand">One civic core.</span>
+            </>
+          }
+          description="Connect citizens, departments, services, procurement, finance, compliance, field operations, and analytics into one secure public-sector management system."
+          modules={GOVERNMENT_MODULES}
+          scrollOrder={GOVERNMENT_MODULE_SCROLL_ORDER}
+        />
+      </div>
       <IndustryEcosystem ecosystem={ecosystem} name={"Government"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
       <IndustryCTA cta={cta} />

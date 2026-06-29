@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
+import MobileCardCarousel from "./mobile-card-carousel";
 
 const MAX_VISIBLE = 7;
 const HALF = 3;
@@ -149,6 +150,9 @@ export default function CardFanCarousel({
     const directionRef = useRef(null);
     const prevVisible = useRef(new Set());
     const [isInView, setIsInView] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(
+        typeof window !== "undefined" ? window.innerWidth : 1024,
+    );
 
     const totalCards = cards.length;
     const needsPagination = totalCards > MAX_VISIBLE;
@@ -209,6 +213,15 @@ export default function CardFanCarousel({
 
         observer.observe(section);
         return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     useEffect(() => {
@@ -486,6 +499,11 @@ export default function CardFanCarousel({
 
     if (!totalCards) return null;
 
+    // Use mobile carousel on screens < 768px
+    if (windowWidth < 768) {
+        return <MobileCardCarousel cards={cards} renderCard={renderCard} className={className} />;
+    }
+
     const renderCardContent = (card, index) => {
         const isCenter = index === centerIndex;
         const meta = { isCenter, centerIndex };
@@ -516,7 +534,7 @@ export default function CardFanCarousel({
         >
             <div
                 ref={containerRef}
-                className="relative mx-auto w-full overflow-visible h-[30rem] sm:h-[34rem] md:h-[36rem] lg:h-[40rem]"
+                className="relative mx-auto w-full overflow-visible h-[25rem] sm:h-[34rem] md:h-[36rem] lg:h-[40rem]"
             >
                 {cards.map((card, index) => {
                     const content = renderCardContent(card, index);

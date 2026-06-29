@@ -21,7 +21,7 @@ export function MissionDossierCard({
                 "relative h-full w-full rounded-3xl text-left",
                 "bg-gradient-to-b from-[#0F1112] to-[#0A0B0C]",
                 "border shadow-[0_18px_60px_rgba(0,0,0,0.55)]",
-                "overflow-hidden p-6",
+                "overflow-hidden p-4 md:p-6",
                 active ? "border-white/22" : "border-white/10",
                 className,
             )}

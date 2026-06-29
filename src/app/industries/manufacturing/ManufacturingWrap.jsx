@@ -40,6 +40,7 @@ import Modules from "@/components/erp/Modules";
 import IndustryEcosystem from "@/components/Industries/industry/IndustryEcosystem";
 import IndustryRelated from "@/components/Industries/industry/IndustryRelated";
 import IndustryCTA from "@/components/Industries/industry/IndustryCTA";
+import MobileCardCarousel from "@/components/ui/mobile-card-carousel";
 // import IndustrySolutions from "@/components/Industries/industry/IndustrySolutions";
 
 const hero = {
@@ -580,7 +581,8 @@ export default function ManufacturingWrap() {
         }
         ITEMS={ITEMS}
       />
-      <Modules
+      <div className="hidden md:block">
+        <Modules
         title={
           <>
             Eight modules.{" "}
@@ -591,6 +593,31 @@ export default function ManufacturingWrap() {
         modules={DEFAULT_MODULES}
         scrollOrder={DEFAULT_SCROLL_ORDER}
       />
+      </div>
+
+      {/* <div className="md:hidden">
+        <MobileCardCarousel
+          cards={DEFAULT_MODULES}
+          renderCard={(module, index) => (
+            <div className="h-full w-full rounded-3xl overflow-hidden relative">
+              <img
+                src={module.image}
+                alt={module.label}
+                className="h-full w-full object-cover"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <module.icon className="w-8 h-8 text-brand" />
+                  <h3 className="text-xl font-semibold text-white">{module.label}</h3>
+                </div>
+                <p className="text-sm text-white/70">{module.desc}</p>
+              </div>
+            </div>
+          )}
+        />
+      </div> */}
       <IndustryEcosystem ecosystem={ecosystem} name={"Manufacturing "} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
       <IndustryCTA cta={cta} />

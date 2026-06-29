@@ -9,19 +9,19 @@ function RelatedCard({ entry, hrefPrefix, testId }) {
   return (
     <Link
       href={`${hrefPrefix}/${entry.slug}`}
-      className="card-surface block p-6 md:p-7 group h-full"
+      className="card-surface block p-5 sm:p-6 md:p-7 group h-full"
       data-testid={testId}
     >
       <div className="flex items-center justify-between">
-        <div className="w-11 h-11 rounded-xl bg-brand/10 border border-brand/25 text-brand flex items-center justify-center">
-          <Icon className="w-5 h-5" />
+        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand/10 border border-brand/25 text-brand flex items-center justify-center">
+          <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
-        <ArrowUpRight className="w-5 h-5  text-white/40 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+        <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/40 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
       </div>
-      <h3 className="font-display text-[19px] md:text-[20px] text-white mt-4">
+      <h3 className="font-display text-[17px] sm:text-[19px] md:text-[20px] text-white mt-2 md:mt-4">
         {entry.title}
       </h3>
-      <p className="mt-2.5 text-[14px] text-white/65 leading-relaxed text-pretty">
+      <p className="mt-2.5 text-[13px] sm:text-[14px] text-white/65 leading-relaxed text-pretty">
         {entry.description}
       </p>
     </Link>
@@ -38,9 +38,9 @@ export default function IndustryRelated({
     <section
       id={id}
       data-testid={`${id}-section`}
-      className="relative py-14 border-t border-white/5"
+      className="relative py-12 md:py-14 border-t border-white/5"
     >
-      <div className="container-edge space-y-20">
+      <div className="container-edge space-y-12 md:space-y-20">
         {/* {servicesList.length > 0 && ( */}
         <div>
           <div className="flex items-end justify-between flex-wrap gap-6">
@@ -63,7 +63,7 @@ export default function IndustryRelated({
               </Link>
             </Reveal>
           </div>
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+          <div className="mt-6 md:mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {servicesList.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.04}>
                 <RelatedCard entry={s} hrefPrefix="/services" />
@@ -95,7 +95,7 @@ export default function IndustryRelated({
                 </Link>
               </Reveal>
             </div>
-            <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            <div className="mt-6 md:mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
               {solutionsList.slice(0, 4).map((s, i) => (
                 <Reveal key={s.slug + i} delay={i * 0.04}>
                   <RelatedCard entry={s} hrefPrefix="/solutions" />

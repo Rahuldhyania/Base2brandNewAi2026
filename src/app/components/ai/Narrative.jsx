@@ -27,7 +27,7 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
             <Reveal delay={0.05}>
               <h2
                 data-testid="narrative-headline"
-                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance"
+                className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl md:leading-[1.02] tracking-[-0.035em] font-medium text-balance"
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             </Reveal>

@@ -542,17 +542,19 @@ export default function AutomotiveWrap() {
         }
         ITEMS={ITEMS}
       />
-      <Modules
-        title={
-          <>
-            Automotive operations.{" "}
-            <span className="text-brand">One connected drive.</span>
-          </>
-        }
-        description="Connect vehicle inventory, sales, CRM, service, spare parts, finance, logistics, and analytics into one intelligent automotive management system."
-        modules={AUTOMOTIVE_MODULES}
-        scrollOrder={AUTOMOTIVE_MODULE_SCROLL_ORDER}
-      />
+      <div className="hidden md:block">
+        <Modules
+          title={
+            <>
+              Automotive operations.{" "}
+              <span className="text-brand">One connected drive.</span>
+            </>
+          }
+          description="Connect vehicle inventory, sales, CRM, service, spare parts, finance, logistics, and analytics into one intelligent automotive management system."
+          modules={AUTOMOTIVE_MODULES}
+          scrollOrder={AUTOMOTIVE_MODULE_SCROLL_ORDER}
+        />
+      </div>
       <IndustryEcosystem ecosystem={ecosystem} name={"Automotive"} />
       <IndustryRelated services={SERVICES} solutions={SOLUTIONS} />
       <IndustryCTA cta={cta} />

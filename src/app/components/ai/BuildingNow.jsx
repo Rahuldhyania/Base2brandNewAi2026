@@ -274,11 +274,11 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
   const sectionHeader = (
     <Reveal>
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-4 md:mb-10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 sm:gap-6 mb-4 md:mb-10">
         <div>
           <ShiningText testId="building-now-eyebrow">{highlightTag}</ShiningText>
           <h2
-            className="mt-3 sm:mt-4 font-display text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance"
+            className="mt-2 sm:mt-4 font-display text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>

@@ -26,7 +26,7 @@ export const SectionHeader = ({
       <Reveal delay={0.05}>
         <h2
           className={cn(
-            "font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-3xl",
+            "font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-2 md:mt-4 max-w-3xl",
             titleClassName,
           )}
         >
@@ -37,7 +37,7 @@ export const SectionHeader = ({
         <Reveal delay={0.1}>
           <p
             className={cn(
-              "mt-4 text-base md:text-lg text-white/65 leading-relaxed",
+              "mt-2 md:mt-4 text-base md:text-lg text-white/65 leading-relaxed",
               align === "center" && "mx-auto",
             )}
           >

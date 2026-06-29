@@ -16,13 +16,13 @@ function Layer({ layer, index, total, inView }) {
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       className="relative"
     >
-      <div className="card-surface relative p-5 md:p-6 group">
+      <div className="card-surface relative p-4 md:p-6 group">
         <div className="flex items-center gap-4">
           <div className="shrink-0 w-12 h-12 rounded-xl bg-brand/10 border border-brand/25 text-brand flex items-center justify-center">
             <Icon className="w-5 h-5" />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="flex items-baseline gap-3">
+            <div className="flex items-baseline gap-1.5 md:gap-3">
               <span className="text-[10px] tabular-nums text-white/30 uppercase tracking-widest2">
                 L{String(total - index).padStart(2, "0")}
               </span>
@@ -54,7 +54,7 @@ function Layer({ layer, index, total, inView }) {
           className="flex flex-col items-center my-2"
           aria-hidden="true"
         >
-          <div className="w-px h-6 bg-gradient-to-b from-brand/70 to-brand/0" />
+          <div className="w-px h-6 bg-gradient-to-b from-brand/70 to-brand/0 hidden md:block" />
           <ArrowDown className="w-3.5 h-3.5 text-brand -mt-1" />
         </motion.div>
       )}
@@ -76,34 +76,34 @@ export default function IndustryArchitecture({
       id={id}
       data-testid={architecture}
       ref={ref}
-      className="relative py-14 border-t border-white/5 overflow-hidden"
+      className="relative py-12 md:py-14 border-t border-white/5 overflow-hidden"
     >
       <div className="absolute inset-0 grid-bg-fine opacity-[0.15] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent" />
       <div className="relative container-edge">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-5 h-full relative">
             <div className="lg:sticky lg:top-1">
               <Reveal>
                 <SectionLabel>Industry Architecture</SectionLabel>
               </Reveal>
               <Reveal delay={0.05}>
-                <h2 className="display text-[32px] md:text-[44px] lg:text-[52px] mt-5 leading-[1.06] text-balance">
+                <h2 className="display text-[28px] sm:text-[32px] md:text-[44px] lg:text-[52px] mt-3 md:mt-5 leading-[1.06] text-balance">
                   A reference architecture for {name.toLowerCase()}.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="mt-5 text-white/70 text-[16px] md:text-[17px] leading-relaxed text-pretty">
+                <p className="mt-2 md:mt-5 text-white/70 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed text-pretty">
                   {architecture.description}
                 </p>
               </Reveal>
               <Reveal delay={0.16}>
-                <div className="mt-7 flex flex-wrap gap-2">
+                <div className="mt-6 sm:mt-7 flex flex-wrap gap-2">
                   {["Composable", "Observable", "Replaceable", "Auditable"].map(
                     (tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] uppercase tracking-widest2 text-white/65 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.025]"
+                        className="text-[10px] sm:text-[11px] uppercase tracking-widest2 text-white/65 px-2.5 sm:px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.025]"
                       >
                         {tag}
                       </span>

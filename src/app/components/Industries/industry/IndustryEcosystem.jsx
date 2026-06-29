@@ -9,10 +9,10 @@ export default function IndustryEcosystem({ ecosystem,name, id = "ecosystem" }) 
     <section
       id={id}
       data-testid={ecosystem}
-      className="relative py-14 border-t border-white/5"
+      className="relative py-12 md:py-14 border-t border-white/5"
     >
       <div className="container-edge">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+        <div className="grid lg:grid-cols-12 gap-4 md:gap-10 lg:gap-16 items-end">
           <div className="lg:col-span-6">
             <Reveal><SectionLabel>Technology Ecosystem</SectionLabel></Reveal>
             <Reveal delay={0.05}>
@@ -28,21 +28,21 @@ export default function IndustryEcosystem({ ecosystem,name, id = "ecosystem" }) 
           </Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden border border-white/8">
+        <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden border border-white/8">
           {ecosystem.map((g, i) => (
             <Reveal key={g.group} delay={i * 0.04} className="bg-ink-950/95">
-              <div className="p-6 md:p-7 h-full">
+              <div className="p-5 sm:p-6 md:p-7 h-full">
                 <div className="flex items-center justify-between">
-                  <h4 className="text-[12px] uppercase tracking-widest2 text-brand">
+                  <h4 className="text-[11px] sm:text-[12px] uppercase tracking-widest2 text-brand">
                     {g.group}
                   </h4>
-                  <span className="text-[10px] tabular-nums text-white/30 uppercase tracking-widest2">
+                  <span className="text-[9px] sm:text-[10px] tabular-nums text-white/30 uppercase tracking-widest2">
                     L{String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <ul className="mt-5 space-y-2">
+                <ul className="mt-4 sm:mt-5 space-y-1.5 sm:space-y-2">
                   {g.items.map((item) => (
-                    <li key={item} className="text-[14px] text-white/72">
+                    <li key={item} className="text-[13px] sm:text-[14px] text-white/72">
                       — {item}
                     </li>
                   ))}
