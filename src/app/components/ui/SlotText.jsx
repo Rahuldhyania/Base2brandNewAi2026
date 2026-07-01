@@ -13,7 +13,8 @@ export default function SlotText({
   default_text = "RANK.",
   items_text = ["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."],
   interval = 2600,
-  ClassName
+  ClassName,
+  BLOCK_GROW_TEXT = false
 }) {
   const [idx, setIdx] = useState(0);
   const [width, setWidth] = useState(0);
@@ -37,7 +38,7 @@ export default function SlotText({
       <div>
       
       {/* <span className="block md:hidden">GROW {' '} {default_text}</span> */}
-      <p className=""> <span className="block md:hidden">GROW {' '}</span>  <span>{default_text}</span> </p>
+      <p className=""> <span className={`${BLOCK_GROW_TEXT ? 'hidden' : 'block md:hidden'}`}>GROW {' '}</span>  <span>{default_text}</span> </p>
 
       </div>
 

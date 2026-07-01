@@ -2580,17 +2580,7 @@ export const Modules = ({
               {layoutPhase === "split" && (
                 <>
                   <div
-                    className="
-                      mt-10
-                      relative
-                      h-px
-                      rounded-full
-                      bg-white/8
-                      overflow-hidden
-                      max-w-[640px]
-                      lg:ml-auto
-                      lg:w-full
-                    "
+                    className="mt-2 md:mt-10 relative h-px rounded-full bg-white/8 overflow-hidden max-w-[640px] lg:ml-auto lg:w-full"
                   >
                     <motion.div
                       className="
@@ -2609,16 +2599,7 @@ export const Modules = ({
                   </div>
 
                   <div
-                    className="
-                      mt-4
-                      flex
-                      items-center
-                      justify-between
-                      gap-2
-                      max-w-[640px]
-                      lg:ml-auto
-                      lg:w-full
-                    "
+                   className="mt-4 flex items-center justify-between gap-2 max-w-[640px] lg:ml-auto lg:w-full"
                   >
                     {modulesScroll.map((module, index) => (
                       <button

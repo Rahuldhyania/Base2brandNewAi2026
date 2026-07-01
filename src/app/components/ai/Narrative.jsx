@@ -33,7 +33,7 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <div className="mt-5 max-w-3xl space-y-3 text-white/55 text-sm md:text-lg md:leading-relaxed">
+              <div className="mt-3 md:mt-5 max-w-3xl space-y-3 text-white/55 text-sm md:text-lg md:leading-relaxed">
                 {description.map((item) => (
                   <p key={item}>{item}</p>
                 ))}

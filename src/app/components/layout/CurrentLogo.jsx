@@ -1,7 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const DEFAULT_LOGO = "/images/homelogo.png";
 
@@ -24,27 +25,41 @@ const logosList = [
   { slug: "/industries/automotive", logourl: "/images/automotive-logo.png" },
   { slug: "/industries/government", logourl: "/images/governments-logo233.png" },
   { slug: "/industries/ngo", logourl: "/images/ngos-logo.png" },
+  { slug: "/portfolio", logourl: "/images/portfolio-logo.png" },
 ];
+
+function getMatchedLogo(pathname) {
+  if (!pathname) return { slug: "/", logourl: DEFAULT_LOGO };
+
+  const exactMatch = logosList.find((logo) => logo.slug === pathname);
+  if (exactMatch) return exactMatch;
+
+  const prefixMatch = logosList
+    .filter((logo) => logo.slug !== "/")
+    .sort((a, b) => b.slug.length - a.slug.length)
+    .find((logo) => pathname.startsWith(`${logo.slug}/`));
+
+  return prefixMatch ?? logosList.find((logo) => logo.slug === "/") ?? { slug: "/", logourl: DEFAULT_LOGO };
+}
 
 export function CurrentLogo({ className = "max-w-46" }) {
   const currentPath = usePathname();
-  console.log('currentPath currentlogo',currentPath);
-  
-  const matched = logosList.find((logo) => logo.slug === currentPath);
-  console.log('matched currentlogo',matched);
-  const [src, setSrc] = useState(matched?.logourl ?? DEFAULT_LOGO);
+
+  const matched = useMemo(() => getMatchedLogo(currentPath), [currentPath]);
+  const [src, setSrc] = useState(DEFAULT_LOGO);
 
   useEffect(() => {
     setSrc(matched?.logourl ?? DEFAULT_LOGO);
-  }, [matched?.logourl]);
-  console.log('logourlsrc', src);
-  
+  }, [matched]);
+
   useEffect(() => {
     if (currentPath !== "/social-media-services") return;
 
     const handler = (e) => {
-      if (e.detail.logoUrl) setSrc(e.detail.logoUrl);
+      const nextLogo = e?.detail?.logoUrl;
+      if (nextLogo) setSrc(nextLogo);
     };
+
     window.addEventListener("serviceActive", handler);
     return () => window.removeEventListener("serviceActive", handler);
   }, [currentPath]);
@@ -57,6 +72,7 @@ export function CurrentLogo({ className = "max-w-46" }) {
       height={100}
       className={`${className} transition-all duration-500`}
       onError={() => setSrc(matched?.logourl ?? DEFAULT_LOGO)}
+      priority
     />
   );
 }

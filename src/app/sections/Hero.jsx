@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { StarsBackground } from "../components/visual/StarsBackground";
 import { OfficialLogo } from "../components/visual/OfficialLogo";
+import SlotText from "@/components/ui/SlotText";
 
 /**
  * Premium hero — clean Base2Brand wordmark lockup (BASE + orange 2 with rocket + BRAND)
@@ -14,7 +15,7 @@ export function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative md:min-h-screen w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
     >
       <StarsBackground className="absolute inset-0" />
       {/* orbit rings */}
@@ -35,7 +36,7 @@ export function Hero() {
       <div className="absolute inset-0 grain" />
 
       {/* Hero content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-24 sm:pt-28 pb-10 md:pb-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-34 pb-10 md:pb-22">
         {/* eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -49,35 +50,19 @@ export function Hero() {
         </motion.div>
 
         {/* Wordmark lockup */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, delay: 0.15 }}
-          className="relative mt-4 sm:mt-6"
-          data-testid="hero-wordmark"
-          style={{ filter: "drop-shadow(0 18px 60px rgba(255,106,0,0.18))" }}
-        >
-          <OfficialLogo
-            className="block w-full h-auto"
-            accent="#ff6a00"
-            letterColor="#ffffff"
-          />
-        </motion.div>
 
-        {/* <h1
-          className="text-start font-black text-white leading-[0.9] tracking-tight pt-8"
-          style={{            fontSize: "clamp(56px, 9vw, 100px)",
-          }}
-        >
+
+        <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
           <SlotText
             default_text="RANK."
             items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
             ClassName="justify-start"
+            BLOCK_GROW_TEXT={true}
           />
-        </h1> */}
+        </h1>
 
         {/* tagline + CTAs */}
-        <div className="mt-8 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8 lg:gap-12 items-end">
+        <div className="mt-4 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8 lg:gap-12 items-end">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,7 +110,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
+          className="mt-4 md:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
           data-testid="hero-stats"
         >
           {[

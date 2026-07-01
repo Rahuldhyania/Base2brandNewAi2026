@@ -43,7 +43,7 @@ export const SectionHeading = ({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
-                    className="mt-5 text-[15px] leading-[1.6] text-white/55 max-w-2xl"
+                    className="mt-5 text-[15px] leading-[1.6] text-white/55 max-w-2xl mx-auto"
                 >
                     {description}
                 </motion.p>
