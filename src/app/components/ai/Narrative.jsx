@@ -9,7 +9,7 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
       className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-3 sm:gap-10">
+        <div className="grid lg:grid-cols-12 gap-3 sm:gap-4">
           <div className="lg:col-span-3">
             <Reveal>
               <ShiningText testId="narrative-eyebrow">

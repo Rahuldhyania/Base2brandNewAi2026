@@ -5,7 +5,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import StarsBackground from "./StarsBackground";
 import OrbitalBackground from "./OrbitalBackground";
 
-export default function Hero({ highlightTag, titleupper, titlelower, description, buttonLeft, buttonRight }) {
+export default function Hero({ highlightTag, titleupper, titlelower, description, buttonLeft, buttonRight, Starlayer }) {
   return (
     <section
       id="top"
@@ -13,9 +13,15 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
       data-testid="hero-section"
     >
       {/* Star layer */}
-      <div className="absolute inset-0 z-0">
-        <StarsBackground starColor="#ffffff" speed={80} />
-      </div>
+      {
+        Starlayer === false ?
+          null
+          :
+          <div className="absolute inset-0 z-0">
+            <StarsBackground starColor="#ffffff" speed={80} />
+          </div>
+      }
+
 
       {/* Orbital rings */}
       <OrbitalBackground
@@ -40,7 +46,12 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
       {/* Top fade */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#050507] to-transparent z-10 pointer-events-none" />
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050507] to-transparent z-10 pointer-events-none" />
+      {
+        Starlayer === false ?
+          null
+          :
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050507] to-transparent z-10 pointer-events-none" />
+      }
 
       {/* Content */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-10 text-center pt-24 md:pt-28 pb-10 md:pb-20">

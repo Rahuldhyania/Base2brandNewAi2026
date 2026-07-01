@@ -1,6 +1,6 @@
-import Hero from "@/components/Solutions/Hero";
 import React from "react";
 import "../components/Solutions/solution.css";
+import Hero from "@/components/Solutions/Hero";
 import Philosophy from "@/components/Solutions/Philosophy";
 import Challenges from "@/components/Solutions/Challenges";
 import Capabilities from "@/components/Solutions/Capabilities";
@@ -311,49 +311,49 @@ const page = () => {
         }
         challengesData={CHALLENGES}
       />
-      <Capabilities 
+      <Capabilities
         highlightTag="Capabilities"
         titleUpper={'The Growth Stack,'}
         titleLower={'Engineered.'}
         description={'Six interconnected systems built to attract the right audience, convert opportunities, and compound revenue.'}
         capabilitiesData={CAPABILITIES}
       />
-      <MissionControl 
+      <MissionControl
         highlightTag="Growth Command Center"
         titleUpper={'Monitor The Systems'}
         titleLower={'Driving Revenue.'}
         description={'Every growth channel, every signal, every outcome — visible in one operational view.'}
         modulesData={MODULES}
       />
-      <WhyBase2Brand 
+      <WhyBase2Brand
         highlightTag="Why Base2Brand"
         titleUpper="Built For Owners. "
         titleLower="Built For Outcomes."
         description="We focus on sustainable growth, not short-term wins."
         reasonsData={REASONS}
       />
-      <Process 
-       highlightTag={'Process'}
-       titleUpper={'Six Steps.'}
-       titleLower={'One Growth System.'}
-       description={'We focus on sustainable growth, not short-term wins.'}
-       StepsData={Steps}
+      <Process
+        highlightTag={'Process'}
+        titleUpper={'Six Steps.'}
+        titleLower={'One Growth System.'}
+        description={'We focus on sustainable growth, not short-term wins.'}
+        StepsData={Steps}
       />
-      <Industries 
-       highlightTag={'Industries'}
-       titleUpper={'Where We'}
-       titleLower={'Move Markets.'}
-       description={'Vertical depth across the categories where engineered growth compounds fastest.'}
-       industriesData={INDUSTRIES}
+      <Industries
+        highlightTag={'Industries'}
+        titleUpper={'Where We'}
+        titleLower={'Move Markets.'}
+        description={'Vertical depth across the categories where engineered growth compounds fastest.'}
+        industriesData={INDUSTRIES}
       />
       <Results
-       highlightTag={'Results'} 
-       titleUpper={'Growth Backed By '}
-       titleLower={'Execution.'}
-       description={'Outcomes that show up in pipelines, dashboards, and quarterly reviews — not in vanity reports.'}
-       resultsData={RESULTS}
+        highlightTag={'Results'}
+        titleUpper={'Growth Backed By '}
+        titleLower={'Execution.'}
+        description={'Outcomes that show up in pipelines, dashboards, and quarterly reviews — not in vanity reports.'}
+        resultsData={RESULTS}
       />
-      <FinalCTA 
+      <FinalCTA
         highlightTag="Initiate Growth Sequence"
         titleUpper="Ready To Build A"
         titleLower="Predictable Growth Engine?"

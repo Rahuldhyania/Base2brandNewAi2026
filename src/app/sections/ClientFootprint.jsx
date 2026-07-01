@@ -77,17 +77,17 @@ export function ClientFootprint() {
             data-testid="footprint-globe"
           >
             {/* outer orbit ring */}
-            <div className="pointer-events-none absolute inset-[-6%] rounded-full border border-white/5" />
-            <div className="pointer-events-none absolute inset-[-14%] rounded-full border border-white/[0.04]" />
+            {/* <div className="pointer-events-none absolute inset-[-6%] rounded-full border border-white/5" />
+            <div className="pointer-events-none absolute inset-[-14%] rounded-full border border-white/[0.04]" /> */}
             {/* halo */}
-            <div
+            {/* <div
               className="pointer-events-none absolute inset-[5%] rounded-full opacity-70"
               style={{
                 background:
                   "radial-gradient(circle, rgba(255,106,0,0.18) 0%, transparent 65%)",
                 filter: "blur(20px)",
               }}
-            />
+            /> */}
             <div className="relative aspect-square">
               <GlobeHero className="w-full h-full" />
             </div>
@@ -107,7 +107,7 @@ export function ClientFootprint() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.55, delay: i * 0.06 }}
-                className="group relative flex items-center justify-between gap-3 md:gap-6 rounded-lg md:rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-2 md:py-5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
+                className="group relative flex items-center justify-between gap-3 md:gap-6 rounded-lg md:rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-2.5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
                 data-testid={`footprint-region-${r.region.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* index */}

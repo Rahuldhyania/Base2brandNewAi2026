@@ -62,7 +62,7 @@ const MENU = [
     href: "#cases",
     items: [
       { label: "Case Studies", href: "#cases" },
-      { label: "Portfolio", href: "#cases" },
+      { label: "Portfolio", href: "/portfolio" },
       { label: "Success Stories", href: "#voices" },
     ],
   },
@@ -254,7 +254,7 @@ export function Navbar() {
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.22, ease: "easeOut" }}
                   data-testid={`nav-panel-${activeMenu.label.toLowerCase()}`}
-                  className="relative rounded-3xl border border-line-strong bg-[#04061a]/95 backdrop-blur-xl p-7 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
+                  className="relative rounded-3xl border border-line-strong bg-[#04061a]/95 backdrop-blur-xl p-5 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
                 >
                   <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-60 bg-brand-radial-glow" />
                   <div className="relative grid grid-cols-[1fr_2fr] gap-8">
@@ -289,7 +289,7 @@ export function Navbar() {
                             data-testid={`nav-item-${it.label
                               .toLowerCase()
                               .replace(/[^a-z0-9]+/g, "-")}`}
-                            className="group flex items-start gap-3 rounded-2xl px-4 py-3 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
+                            className="group flex items-start gap-3 rounded-2xl px-4 py-1.5 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
                           >
                             <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-orange-brand/70 group-hover:bg-orange-brand transition shrink-0" />
                             <div>

@@ -32,7 +32,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-[1.5fr_2fr] gap-8">
           <div>
             <CurrentLogo />
-            <p className="mt-6 text-mute max-w-md text-sm sm:text-base leading-relaxed">
+            <p className="mt-2 text-mute max-w-md text-sm sm:text-base leading-relaxed">
               From base — to brand. From idea — to orbit. Base2Brand is the digital transformation, AI and enterprise software partner for organisations that build for the public good and the global stage.
             </p>
 

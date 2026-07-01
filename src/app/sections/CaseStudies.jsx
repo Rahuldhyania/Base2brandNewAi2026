@@ -102,7 +102,7 @@ export function CaseStudies() {
           intro="Three engagements — anonymised under NDA — where the brief was hard, the stakes were public, and the metrics moved."
         />
 
-         {/* <div
+        {/* <div
           data-testid="landing-zone"
           className="relative overflow-hidden w-full bg-[radial-gradient(ellipse_at_top,_#0a0e2a_0%,_#02030a_60%,_#000000_100%)]"
         >
@@ -120,7 +120,7 @@ export function CaseStudies() {
           </div>
         </div>  */}
 
-        <div className="mt-8 md:mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {CASES.map((c, i) => (
             <CaseCard key={c.title} c={c} i={i} />
           ))}
