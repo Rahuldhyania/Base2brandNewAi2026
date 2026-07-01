@@ -4,6 +4,7 @@ import Modules from '@/components/erp/Modules';
 import Hero from "@/components/Solutions/Hero";
 import StarsBackground from "@/components/erp/StarsBackground";
 import WhyBase2Brand from "@/components/software-development/WhyBase2Brand";
+import MobileCardCarousel from '@/components/ui/mobile-card-carousel';
 
 const PORTFOLIO_MODULES = [
     {
@@ -137,20 +138,45 @@ const PortfolioSubpages = () => {
                     description={'Real software products are continuously operated, evolved, and scaled — not just launched. Our engineering approach is built around that reality.'}
                     cardsdata={CARDS}
                 />
-                <div className='py-12'>
-                <Modules
-                    title={
-                     <>
-                           Powering Commerce. <span className="text-(--b2b-primary)">{' '} Accelerating Growth.</span>
-                        </>
-                    }
-                    description='A unified Shopify ecosystem built to deliver seamless shopping experiences, streamlined operations, and scalable eCommerce growth across every customer touchpoint'
-                    modules={PORTFOLIO_MODULES}
-                    scrollOrder={PORTFOLIO_MODULE_SCROLL_ORDER}
-                    gridorder_reverce={true}
-                 // wheelcenterImage={'/images/shopify-new-white.png'}
-                 />
+                <div className='py-12 hidden md:block'>
+                    <Modules
+                        title={
+                            <>
+                                Powering Commerce. <span className="text-(--b2b-primary)">{' '} Accelerating Growth.</span>
+                            </>
+                        }
+                        description='A unified Shopify ecosystem built to deliver seamless shopping experiences, streamlined operations, and scalable eCommerce growth across every customer touchpoint'
+                        modules={PORTFOLIO_MODULES}
+                        scrollOrder={PORTFOLIO_MODULE_SCROLL_ORDER}
+                        gridorder_reverce={true}
+                    // wheelcenterImage={'/images/shopify-new-white.png'}
+                    />
                 </div>
+                <div className='block md:hidden pb-10'>
+                    <MobileCardCarousel
+                        cards={PORTFOLIO_MODULES}
+                        renderCard={(module, index) => (
+                            <div className="h-full w-full rounded-3xl overflow-hidden relative">
+                                <img
+                                    src={module?.image}
+                                    alt={module?.label}
+                                    className="h-full w-full object-cover"
+                                    draggable={false}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <module.iconName className="w-8 h-8 text-brand" />
+                                        <h3 className="text-xl font-semibold text-white">{module?.label}</h3>
+                                    </div>
+                                    <p className="text-sm text-white/70">{module?.desc}</p>
+                                </div>
+                            </div>
+                        )}
+                    />
+                </div>
+
+
             </div>
         </div>
     )
