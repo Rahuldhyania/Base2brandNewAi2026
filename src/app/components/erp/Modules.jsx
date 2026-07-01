@@ -872,7 +872,7 @@
 // }
 
 // export const Modules = ({title, description}) => {
-    
+
 //     const sectionRef = useRef(null);
 
 //     /*
@@ -1201,7 +1201,7 @@
 //                     flex
 //                     items-center
 //                     overflow-hidden
-                   
+
 //                 `}
 //                 style={panelStyle}
 //             >
@@ -1838,6 +1838,7 @@ function ModulesWheel({
   activeId,
   onSelectModule,
   scrollProgress,
+  wheelcenterImage 
 }) {
   const reduceMotion = useReducedMotion();
 
@@ -2030,45 +2031,46 @@ function ModulesWheel({
               "
             />
 
-            <span
-              className="
-                font-mono
-                text-[9px]
-                uppercase
-                tracking-[0.28em]
-                text-white/50
-              "
-            >
-              Core
-            </span>
+            {
+              wheelcenterImage ?
+                null
+                :
+                <span
+                  className="text-[9px] uppercase tracking-[0.28em] text-white/50"
+                >
+                  Core
+                </span>
+            }
           </div>
 
-          <div
-            className="
-              mt-1.5
-              font-display
-              text-[12px] md:text-[18px]
-              font-medium
-              tracking-tight
-              text-white
-            "
-          >
-            ERP NUCLEUS
-          </div>
 
-          <div
-            className="
-              mt-0.5
-              hidden md:block
-              font-mono
-              text-[8.5px]
-              uppercase
-              tracking-[0.18em]
-              text-white/35
-            "
-          >
-            {modules.length} modules · 1 ledger
-          </div>
+          {
+            wheelcenterImage ?
+              <div>
+                <Image
+                  src={wheelcenterImage}
+                  alt=""
+                  width={1000}
+                  height={500}
+                  className="max-w-[138px]"
+                />
+              </div>
+              :
+              <>
+                <div
+                  className="mt-1.5 font-display text-[12px] md:text-[18px] font-medium tracking-tight text-white"
+                >
+                  ERP NUCLEUS
+                </div>
+
+                <div
+                  className="mt-0.5 hidden md:block font-mono text-[8.5px] uppercase tracking-[0.18em] text-white/35 "
+                >
+                  {modules.length} modules · 1 ledger
+                </div>
+              </>
+          }
+
         </div>
       </div>
 
@@ -2149,10 +2151,9 @@ function ModulesWheel({
                 justify-center
                 transition-colors
                 duration-300
-                ${
-                  isActive
-                    ? "text-white shadow-[0_0_24px_-4px_rgba(255,255,255,0.35)]"
-                    : "text-white/75 group-hover:border-white/28 group-hover:text-brand"
+                ${isActive
+                  ? "text-white shadow-[0_0_24px_-4px_rgba(255,255,255,0.35)]"
+                  : "text-white/75 group-hover:border-white/28 group-hover:text-brand"
                 }
               `}
             >
@@ -2187,12 +2188,11 @@ function ModulesWheel({
                   leading-tight
                   transition-colors
                   duration-300
-                  ${
-                    isActive
-                      ? "text-white"
-                      : isPast
-                        ? "text-white/52"
-                        : "text-white/40"
+                  ${isActive
+                    ? "text-white"
+                    : isPast
+                      ? "text-white/52"
+                      : "text-white/40"
                   }
                 `}
               >
@@ -2227,6 +2227,8 @@ export const Modules = ({
   description,
   modules = [],
   scrollOrder = [],
+  gridorder_reverce,
+  wheelcenterImage
 }) => {
   const sectionRef = useRef(null);
   const activeRef = useRef(0);
@@ -2419,9 +2421,8 @@ export const Modules = ({
     return null;
   }
 
-  const scrollTrackHeight = `${
-    (modulesScroll.length + 1) * SCROLL_PER_STAGE_VH
-  }vh`;
+  const scrollTrackHeight = `${(modulesScroll.length + 1) * SCROLL_PER_STAGE_VH
+    }vh`;
 
   const panelTop = layoutPhase === "split" ? SPLIT_PANEL_TOP : NAV_HEIGHT;
 
@@ -2437,12 +2438,12 @@ export const Modules = ({
   const panelStyle =
     pinPhase === "pinned"
       ? {
-          top: panelTop,
-          height: panelHeight,
-        }
+        top: panelTop,
+        height: panelHeight,
+      }
       : {
-          height: panelHeight,
-        };
+        height: panelHeight,
+      };
 
   const activeModule = modulesScroll[active];
 
@@ -2491,10 +2492,9 @@ export const Modules = ({
               mt-8
               lg:mt-12
               items-center
-              ${
-                layoutPhase === "intro"
-                  ? "flex flex-col justify-center"
-                  : "grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-12 lg:gap-16 xl:gap-24"
+              ${layoutPhase === "intro"
+                ? "flex flex-col justify-center"
+                : "grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-12 lg:gap-16 xl:gap-24"
               }
             `}
           >
@@ -2503,7 +2503,7 @@ export const Modules = ({
               className={
                 layoutPhase === "intro"
                   ? "w-full flex flex-col items-center justify-center"
-                  : "flex justify-center lg:justify-start xl:pl-2"
+                  : `flex justify-center lg:justify-start xl:pl-2 ${gridorder_reverce ? 'order-2' : 'order-1'} `
               }
               transition={{
                 duration: reduceMotion ? 0 : 0.42,
@@ -2517,6 +2517,7 @@ export const Modules = ({
                 activeId={layoutPhase === "split" ? activeModule?.id : null}
                 onSelectModule={jumpToModule}
                 scrollProgress={smoothScrollProgress}
+                wheelcenterImage={wheelcenterImage}
               />
 
               {layoutPhase === "intro" && (
@@ -2541,7 +2542,7 @@ export const Modules = ({
               className={
                 layoutPhase === "intro"
                   ? "hidden"
-                  : "relative min-h-[300px] sm:min-h-[360px] lg:min-h-[420px] flex flex-col justify-center"
+                  : `relative min-h-[300px] sm:min-h-[360px] lg:min-h-[420px] flex flex-col justify-center ${gridorder_reverce ? 'order-1' : 'order-2'}`
               }
               style={{
                 opacity: layoutPhase === "split" ? panelOpacity : 0,
@@ -2637,10 +2638,9 @@ export const Modules = ({
                           transition-colors
                           duration-300
                           py-1
-                          ${
-                            index <= active
-                              ? "text-white/72"
-                              : "text-white/26"
+                          ${index <= active
+                            ? "text-white/72"
+                            : "text-white/26"
                           }
                           hover:text-white
                         `}
