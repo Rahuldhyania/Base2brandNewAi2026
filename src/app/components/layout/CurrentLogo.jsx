@@ -26,6 +26,8 @@ const logosList = [
   { slug: "/industries/government", logourl: "/images/governments-logo233.png" },
   { slug: "/industries/ngo", logourl: "/images/ngos-logo.png" },
   { slug: "/portfolio", logourl: "/images/portfolio-logo.png" },
+  { slug: "/intelligent-solutions", logourl: "/images/intelligent-solutionslogo.png" },
+  { slug: "/software-development", logourl: "/images/software-developmentLogo.png" },
 ];
 
 function getMatchedLogo(pathname) {

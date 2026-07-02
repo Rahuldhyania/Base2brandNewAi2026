@@ -5,7 +5,7 @@ import ShiningText from "@/components/site/ShiningText";
 const Narrative = ({ title, description, features, highlightTag, tagList }) => {
   return (
     <section
-      data-testid="narrative-section"
+      id="narrative-section"
       className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">

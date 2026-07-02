@@ -16,7 +16,7 @@ function Layer({ layer, index, total, inView }) {
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       className="relative"
     >
-      <div className="card-surface relative p-4 md:p-6 group">
+      <div className="card-surface relative p-4 group">
         <div className="flex items-center gap-4">
           <div className="shrink-0 w-12 h-12 rounded-xl bg-brand/10 border border-brand/25 text-brand flex items-center justify-center">
             <Icon className="w-5 h-5" />
@@ -54,7 +54,7 @@ function Layer({ layer, index, total, inView }) {
           className="flex flex-col items-center my-2"
           aria-hidden="true"
         >
-          <div className="w-px h-6 bg-gradient-to-b from-brand/70 to-brand/0 hidden md:block" />
+          {/* <div className="w-px h-6 bg-gradient-to-b from-brand/70 to-brand/0 hidden md:block" /> */}
           <ArrowDown className="w-3.5 h-3.5 text-brand -mt-1" />
         </motion.div>
       )}

@@ -61,7 +61,7 @@ export function Insights() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               data-testid={`insight-card-${i}`}
-              className="group relative rounded-3xl border border-line bg-[#04061a]/60 p-4 xl:p-8 flex flex-col overflow-hidden"
+              className="group relative rounded-3xl border border-line bg-[#04061a]/60 p-4 flex flex-col overflow-hidden"
             >
               {/* visual header — abstract geometric, no stock photo */}
               <div className="relative h-32 rounded-2xl overflow-hidden border border-line mb-6 bg-gradient-to-br from-[#0a1030] via-[#06091f] to-[#02030a]">

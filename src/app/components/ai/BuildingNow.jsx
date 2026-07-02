@@ -293,7 +293,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
   if (!isScrollMode) {
     return (
       <section
-        data-testid="building-now-section"
+        id="building-now-section"
         className="relative border-y border-white/5 bg-(--b2b-bg) py-12 md:py-16"
       >
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -330,7 +330,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
   return (
     <section
       ref={sectionRef}
-      data-testid="building-now-section"
+      id="building-now-section"
       className="relative border-y border-white/5 bg-(--b2b-bg)"
       style={{ height: scrollTrackHeight }}
     >

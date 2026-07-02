@@ -60,13 +60,29 @@ const LandingZone = dynamic(
   { loading: () => <SectionFallback minHeight={640} /> },
 );
 
+const SECTIONS = [
+  { id: "top", label: "Welcome to Base2Brand" },
+  { id: "trust", label: "How We Do Things" },
+  { id: "footprint", label: "Clients Network" },
+  { id: "services", label: "What We Build" },
+  { id: "solutions", label: "Solutions in Motion" },
+  { id: "voices", label: "Voices of Success" },
+  { id: "industries", label: "Industries We Power" },
+  { id: "innovation", label: "Innovation Lab" },
+  { id: "case-studies", label: "Proof in Action" },
+  { id: "govt", label: "Public Impact" },
+  { id: "global", label: "Global Footprint" },
+  { id: "insights", label: "Signals & Insights" },
+  { id: "contact", label: "Let's Build Together" },
+];
+
 export default function page() {
   return (
     <main
       className="App relative bg-[#02030a] text-white min-h-screen overflow-x-hidden"
       data-testid="app-root"
     >
-      <DeferredRocketScrollNavigator />
+      <DeferredRocketScrollNavigator sections={SECTIONS} />
       <main>
         <Hero />
         <Trust />

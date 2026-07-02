@@ -1562,7 +1562,59 @@
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
         }
-        
+        .theme-intelligent-solution {
+            /* Brand palette */
+            --b2b-bg: #02030a;
+            --b2b-bg-2: #060a1f;
+            --b2b-ink: #f5f7ff;
+            --b2b-mute: #9aa0b4;
+            --b2b-line: rgba(255, 255, 255, 0.08);
+            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-primary: #25c847;
+            --b2b-primary-rgb: 255, 106, 0;
+            --b2b-primary-2: #f47b52;
+            --b2b-primary-2-rgb: 244, 123, 82;
+            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
+            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-orange: var(--b2b-primary);
+            --b2b-orange-2: var(--b2b-primary-2);
+            --b2b-orange-soft: var(--b2b-primary-soft);
+            /* Effect tokens */
+            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
+            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
+            --b2b-text-glow: rgba(255, 106, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-marker-pulse: var(--b2b-primary);
+            --b2b-selection-fg: #000000;
+            --b2b-on-primary: #000000;
+            /* Tailwind / shadcn HSL tokens */
+            --background: 230 60% 3%;
+            --foreground: 230 30% 96%;
+            --card: 230 50% 5%;
+            --card-foreground: 230 30% 96%;
+            --popover: 230 50% 5%;
+            --popover-foreground: 230 30% 96%;
+            --primary: 22 100% 50%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 230 30% 12%;
+            --secondary-foreground: 230 30% 96%;
+            --muted: 230 30% 12%;
+            --muted-foreground: 230 10% 65%;
+            --accent: 22 100% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 230 20% 18%;
+            --input: 230 20% 18%;
+            --ring: 22 100% 50%;
+            --radius: 0.75rem;
+            background: var(--b2b-bg);
+            color: var(--b2b-ink);
+            font-family: var(--b2b-font-body);
+        }
         @keyframes onloadbgt {
             0% {
                 opacity: 0;

@@ -51,15 +51,31 @@ export function Hero() {
 
         {/* Wordmark lockup */}
 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0, delay: 0.15 }}
+          className="relative mt-4 sm:mt-6"
+          data-testid="hero-wordmark"
+          style={{ filter: "drop-shadow(0 18px 60px rgba(255,106,0,0.18))" }}
+        >
+          <OfficialLogo
+            className="block w-full h-auto"
+            accent="#ff6a00"
+            letterColor="#ffffff"
+          />
+        </motion.div>
 
-        <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
+        {/* <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
           <SlotText
             default_text="RANK."
             items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
             ClassName="justify-start"
             BLOCK_GROW_TEXT={true}
           />
-        </h1>
+        </h1> */}
+
+
 
         {/* tagline + CTAs */}
         <div className="mt-4 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8 lg:gap-12 items-end">

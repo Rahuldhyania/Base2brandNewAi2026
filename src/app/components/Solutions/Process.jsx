@@ -69,7 +69,7 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
               `,
             }}
           />
-          <div className="flex flex-col gap-3 md:gap-10">
+          <div className="flex flex-col gap-3 md:gap-6">
             {StepsData.map((s, i) => {
               const Icon = Icons[s.icon];
               const isLeft = i % 2 === 0;

@@ -35,6 +35,7 @@ import IndustryEcosystem from "@/components/Industries/industry/IndustryEcosyste
 import IndustryRelated from "@/components/Industries/industry/IndustryRelated";
 import IndustryCTA from "@/components/Industries/industry/IndustryCTA";
 import MobileCardCarousel from "@/components/ui/mobile-card-carousel";
+import { DeferredRocketScrollNavigator } from "@/components/layout/DeferredRocketScrollNavigator";
 // import IndustrySolutions from "@/components/Industries/industry/IndustrySolutions";
 
 const hero = {
@@ -501,9 +502,26 @@ const EDUCATION_MODULE_SCROLL_ORDER = [
   "fees",
   "faculty",
 ];
+
+const SECTIONS_ROCKET = [
+  { id: "hero", label: "Education & Skilling" },
+  { id: "narrative-section", label: "Industry Thesis " },
+  { id: "challenges", label: "Challenges" },
+  { id: "mission-dossier", label: "Mission Dossier" },
+  { id: "solutions", label: "Solutions" },
+  { id: "voices", label: "Voices of Success" },
+  { id: "architecture", label: "Architecture" },
+  { id: "building-now-section", label: "Building Now Section" },
+  { id: "wheel-ring", label: "Modules" },
+  { id: "ecosystem", label: "Technology Ecosystem" },
+  { id: "related", label: "Related Services" },
+  { id: "cta", label: "Start a Transformation" },
+];
 export default function EducationWrap() {
   return (
     <div>
+      <DeferredRocketScrollNavigator sections={SECTIONS_ROCKET } />
+      
       <IndustryHero
         hero={hero}
         name="Education"
@@ -540,7 +558,7 @@ export default function EducationWrap() {
         }
         ITEMS={ITEMS}
       />
-      <div className="hidden md:block">
+      <div className="hidden md:block" id="wheel-ring">
         <Modules
           title={
             <>

@@ -33,7 +33,7 @@ export function MissionDossierFan({
                 "relative py-12 md:py-16 overflow-visible border-t border-white/[0.06]",
                 className,
             )}
-            data-testid="mission-dossier-fan-section"
+            id="mission-dossier"
         >
             <div
                 aria-hidden

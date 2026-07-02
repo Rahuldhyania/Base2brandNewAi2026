@@ -157,7 +157,15 @@ export const THEMES = {
         match: (pathname) =>
             pathname === '/portfolio' ||
             pathname.startsWith('/portfolio/')
-    }
+    },
+
+    intelligentSolutions: {
+    id: 'intelligentSolutions',
+    className: 'theme-intelligent-solution',
+     match: (pathname) =>
+          pathname === '/intelligent-solutions' ||
+           pathname.startsWith('/intelligent-solutions/')
+    },
 };
 
 /** All theme class names — used to strip previous theme on route change. */
