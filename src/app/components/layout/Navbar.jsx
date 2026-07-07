@@ -70,7 +70,7 @@ const MENU = [
     label: "Resources",
     href: "#insights",
     items: [
-      { label: "Blog", href: "#insights" },
+      { label: "Blog", href: "/resources-catgeories" },
       { label: "AI Insights", href: "#insights" },
       { label: "GEO Insights", href: "#insights" },
       { label: "Industry Reports", href: "#insights" },

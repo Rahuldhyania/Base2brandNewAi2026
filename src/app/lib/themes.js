@@ -171,7 +171,7 @@ export const THEMES = {
     className: 'theme-resources',
      match: (pathname) =>
           pathname === '/resources-catgeories' ||
-           pathname.startsWith('/resources-catgeories/')
+           pathname.startsWith('/blog/')
     },
 };
 

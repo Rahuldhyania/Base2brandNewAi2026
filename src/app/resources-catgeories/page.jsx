@@ -94,100 +94,7 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
     </div>
 );
 
-const BLOGS = [
-    {
-        id: "blog-1",
-        slug: "ai-agents-changing-commerce",
-        title: "How AI Agents Are Quietly Rewriting Commerce",
-        excerpt:
-            "A deep field study on autonomous AI agents transforming Shopify Plus and enterprise commerce with intelligent automation.",
-        category: "AI",
-        readingTime: "18 min read",
-        date: "Dec 04, 2025",
-        author: { name: "Aarav Menon", role: "Principal Engineer" },
-        cover: "https://picsum.photos/seed/ai/1200/800",
-        tags: ["AI Agents", "Shopify Plus", "RAG"],
-    },
-    {
-        id: "blog-2",
-        slug: "future-of-shopify-headless-commerce",
-        title: "The Future of Headless Commerce with Shopify",
-        excerpt:
-            "Discover how Shopify Hydrogen is redefining modern commerce experiences.",
-        category: "Shopify",
-        readingTime: "12 min read",
-        date: "Nov 28, 2025",
-        author: { name: "Riya Kapoor", role: "Shopify Architect" },
-        cover: "https://picsum.photos/seed/shopify/1200/800",
-        tags: ["Shopify", "Hydrogen", "Headless"],
-    },
-    {
-        id: "blog-3",
-        slug: "nextjs-performance-optimization-guide",
-        title: "Next.js Performance Optimization Guide",
-        excerpt:
-            "Improve Core Web Vitals and create blazing-fast web applications.",
-        category: "Web Development",
-        readingTime: "14 min read",
-        date: "Nov 21, 2025",
-        author: { name: "Kabir Sharma", role: "Frontend Lead" },
-        cover: "https://picsum.photos/seed/nextjs/1200/800",
-        tags: ["Next.js", "Performance", "SEO"],
-    },
-    {
-        id: "blog-4",
-        slug: "enterprise-ai-automation-workflows",
-        title: "Enterprise AI Automation Beyond Chatbots",
-        excerpt:
-            "How enterprises are automating complex workflows using LLM-powered systems.",
-        category: "AI",
-        readingTime: "16 min read",
-        date: "Nov 15, 2025",
-        author: { name: "Meera Joshi", role: "AI Consultant" },
-        cover: "https://picsum.photos/seed/automation/1200/800",
-        tags: ["Automation", "LLM", "Enterprise"],
-    },
-    {
-        id: "blog-5",
-        slug: "cloud-native-development",
-        title: "Cloud-Native Development for Modern Apps",
-        excerpt:
-            "Learn how Kubernetes and microservices power scalable applications.",
-        category: "Cloud",
-        readingTime: "11 min read",
-        date: "Nov 08, 2025",
-        author: { name: "Rohan Gupta", role: "Cloud Engineer" },
-        cover: "https://picsum.photos/seed/cloud/1200/800",
-        tags: ["Cloud", "Kubernetes", "DevOps"],
-    },
-    {
-        id: "blog-6",
-        slug: "ai-powered-user-experience",
-        title: "Designing AI-Powered User Experiences",
-        excerpt:
-            "Build smarter interfaces with predictive UX and AI-driven personalization.",
-        category: "UI/UX",
-        readingTime: "10 min read",
-        date: "Oct 30, 2025",
-        author: { name: "Ananya Singh", role: "Product Designer" },
-        cover: "https://picsum.photos/seed/design/1200/800",
-        tags: ["UX", "AI", "Design"],
-    },
-    {
-        id: "blog-7",
-        slug: "cybersecurity-best-practices",
-        title: "Cybersecurity Best Practices for Businesses",
-        excerpt:
-            "Protect applications with zero-trust security and proactive monitoring.",
-        category: "Security",
-        readingTime: "13 min read",
-        date: "Oct 24, 2025",
-        author: { name: "Vikram Desai", role: "Security Specialist" },
-        cover: "https://picsum.photos/seed/security/1200/800",
-        tags: ["Security", "Zero Trust", "Cloud"],
-    },
 
-];
 
 const industries = [
     {
@@ -330,7 +237,7 @@ const page = () => {
                     title="Featured Resource"
                     description="One study every fortnight — chosen for depth, honesty and the impact we've measured with our own clients."
                 />
-                <FeaturedResource blogData={BLOGS} />
+                <FeaturedResource />
             </section>
 
             {/* Library grid + filters */}

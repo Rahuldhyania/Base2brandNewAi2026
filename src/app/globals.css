@@ -1646,57 +1646,76 @@
         }
 
         .theme-resources {
-            /* Brand palette */
-            --b2b-bg: #02030a;
-            --b2b-bg-2: #060a1f;
+            --b2b-bg: #030305;
+            --b2b-bg-2: #0a0a14;
             --b2b-ink: #f5f7ff;
             --b2b-mute: #9aa0b4;
             --b2b-line: rgba(255, 255, 255, 0.08);
-            --b2b-line-strong: rgba(255, 255, 255, 0.16);
+            --b2b-line-strong: rgba(255, 255, 255, 0.14);
             --b2b-primary: #42d4ffe6;
-            --b2b-primary-rgb: 255, 106, 0;
-            --b2b-primary-2: #f47b52;
-            --b2b-primary-2-rgb: 244, 123, 82;
-            --b2b-primary-soft: rgba(255, 106, 0, 0.18);
-            /* Legacy aliases — existing components reference --b2b-orange */
+            --b2b-primary-rgb: 255, 184, 0;
+            --b2b-primary-2: #ffd166;
+            --b2b-primary-2-rgb: 255, 209, 102;
+            --b2b-primary-soft: rgba(255, 184, 0, 0.18);
             --b2b-orange: var(--b2b-primary);
             --b2b-orange-2: var(--b2b-primary-2);
             --b2b-orange-soft: var(--b2b-primary-soft);
-            /* Effect tokens */
-            --b2b-glass-bg: rgba(8, 12, 30, 0.55);
-            --b2b-glow-ring: rgba(255, 106, 0, 0.35);
-            --b2b-glow-shadow: rgba(255, 106, 0, 0.55);
-            --b2b-glow-ambient: rgba(255, 106, 0, 0.35);
-            --b2b-text-glow: rgba(255, 106, 0, 0.55);
-            --b2b-text-glow-ambient: rgba(255, 106, 0, 0.25);
-            --b2b-ring-orbit: rgba(255, 106, 0, 0.25);
+            --b2b-glass-bg: rgba(10, 10, 20, 0.55);
+            --b2b-glow-ring: rgba(255, 184, 0, 0.35);
+            --b2b-glow-shadow: rgba(255, 184, 0, 0.55);
+            --b2b-glow-ambient: rgba(255, 184, 0, 0.35);
+            --b2b-text-glow: rgba(255, 184, 0, 0.55);
+            --b2b-text-glow-ambient: rgba(255, 184, 0, 0.25);
+            --b2b-ring-orbit: rgba(255, 184, 0, 0.25);
             --b2b-marker-pulse: var(--b2b-primary);
             --b2b-selection-fg: #000000;
             --b2b-on-primary: #000000;
-            /* Tailwind / shadcn HSL tokens */
-            --background: 230 60% 3%;
-            --foreground: 230 30% 96%;
-            --card: 230 50% 5%;
-            --card-foreground: 230 30% 96%;
-            --popover: 230 50% 5%;
-            --popover-foreground: 230 30% 96%;
-            --primary: 22 100% 50%;
-            --primary-foreground: 0 0% 100%;
-            --secondary: 230 30% 12%;
-            --secondary-foreground: 230 30% 96%;
-            --muted: 230 30% 12%;
-            --muted-foreground: 230 10% 65%;
-            --accent: 22 100% 50%;
-            --accent-foreground: 0 0% 100%;
+            --background: 43 100% 2%;
+            --foreground: 43 20% 96%;
+            --card: 43 50% 4%;
+            --card-foreground: 43 20% 96%;
+            --popover: 43 50% 4%;
+            --popover-foreground: 43 20% 96%;
+            --primary: 43 100% 50%;
+            --primary-foreground: 0 0% 0%;
+            --secondary: 43 20% 12%;
+            --secondary-foreground: 43 20% 96%;
+            --muted: 43 20% 12%;
+            --muted-foreground: 43 10% 65%;
+            --accent: 43 100% 50%;
+            --accent-foreground: 0 0% 0%;
             --destructive: 0 84.2% 60.2%;
             --destructive-foreground: 0 0% 98%;
-            --border: 230 20% 18%;
-            --input: 230 20% 18%;
-            --ring: 22 100% 50%;
+            --border: 43 15% 18%;
+            --input: 43 15% 18%;
+            --ring: 43 100% 50%;
             --radius: 0.75rem;
             background: var(--b2b-bg);
             color: var(--b2b-ink);
             font-family: var(--b2b-font-body);
+        }
+
+        .blog_description span,
+        .blog_description p {
+            color: #ffffffbf !important;
+            font-size: 17px;
+            font-family: Inter, system-ui, sans-serif;
+        }
+
+        .blog_description a {
+            color: rgb(59, 59, 231) !important;
+        }
+
+        .blog_description h2 {
+            font-size: 30px;
+            margin-top: 15px;
+        }
+
+        .blog_description h2 strong {
+            color: #42d4ffe6 !important;
+        }
+        .blog_description strong {
+            color: rgb(59, 59, 231) !important;
         }
 
         @keyframes onloadbgt {

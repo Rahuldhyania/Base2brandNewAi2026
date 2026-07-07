@@ -61,7 +61,7 @@ export function MissionDossierFan({
                 <div
                     className={
                         showHeader
-                            ? "relative left-1/2 mt-10 md:mt-12 w-screen -translate-x-1/2"
+                            ? "relative left-1/2 mt-4 w-screen -translate-x-1/2"
                             : "relative left-1/2 w-screen -translate-x-1/2"
                     }
                 >
