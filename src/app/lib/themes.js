@@ -166,6 +166,13 @@ export const THEMES = {
           pathname === '/intelligent-solutions' ||
            pathname.startsWith('/intelligent-solutions/')
     },
+    resources: {
+    id: 'resources',
+    className: 'theme-resources',
+     match: (pathname) =>
+          pathname === '/resources-catgeories' ||
+           pathname.startsWith('/resources-catgeories/')
+    },
 };
 
 /** All theme class names — used to strip previous theme on route change. */

@@ -1,0 +1,46 @@
+.masonry {
+  column-count: 1;
+  column-gap: 1.75rem;
+}
+@media (min-width: 640px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glow-primary {
+  box-shadow:
+    0 0 30px rgba(123, 77, 255, 0.35),
+    0 0 60px rgba(66, 212, 255, 0.15);
+}
+
+.text-shadow-glow {
+  text-shadow:
+    0 0 30px rgba(123, 77, 255, 0.5),
+    0 0 60px rgba(66, 212, 255, 0.25);
+}

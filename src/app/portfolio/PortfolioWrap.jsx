@@ -1,11 +1,14 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import PortfolioSection from './PortfolioSection';
 import "../components/Solutions/solution.css";
 import Hero from "@/components/Solutions/Hero";
 import Narrative from "@/components/ai/Narrative";
 import FinalCTA from "@/components/ai/FinalCTA";
 import StarsBackground from "@/components/erp/StarsBackground";
+import Work from '@/components/portfolio-animation/sections/Work';
+// import RocketNavigator from '@/components/portfolio/RocketNavigator';
+// import Work from '@/components/portfolio/Work';
 
 const features = [
     { l: "Strategic", d: "Purpose-built solutions" },
@@ -15,8 +18,13 @@ const features = [
 
 
 const PortfolioWrap = () => {
+    // const isMobile = useMedia("(max-width: 768px)");
+    const containerRef = useRef(null);
     return (
-        <div className="relative md:min-h-screen overflow-x-hidden">
+        <div className="relative md:min-h-screen overflow-x-hidden" ref={containerRef}>
+
+            {/* <RocketNavigator containerRef={containerRef} mobile={false} /> */}
+
             <StarsBackground
                 className="!fixed inset-0 z-0 pointer-events-none"
                 starColor="#00e6ff"
@@ -43,6 +51,7 @@ const PortfolioWrap = () => {
                     tagList={["01 — Portfolio"]}
                 />
                 <PortfolioSection />
+                <Work />
                 <FinalCTA
                     highlightTag={"LET'S BUILD SOMETHING IMPACTFUL"}
                     titleUpper={"Have a project in mind?"}

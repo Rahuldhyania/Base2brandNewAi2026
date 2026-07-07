@@ -1,0 +1,409 @@
+@import "tailwindcss";
+
+
+/* ==========================================================================
+   Base2Brand — Mission Navigation
+   Deep space aesthetic • orange accents • enterprise premium
+   ========================================================================== */
+
+:root {
+    /* Palette */
+    --b2b-void: #05060A;
+    --b2b-space: #0A0B12;
+    --b2b-deep: #10111A;
+    --b2b-panel: rgba(255, 255, 255, 0.03);
+    --b2b-border: rgba(255, 255, 255, 0.08);
+    --b2b-border-strong: rgba(255, 255, 255, 0.16);
+    --b2b-text: #F4F4F5;
+    --b2b-text-muted: #8B8B95;
+    --b2b-text-dim: #5C5C66;
+    --b2b-orange: #F47B52;
+    --b2b-orange-bright: #FF915C;
+    --b2b-orange-deep: #C55A34;
+    --b2b-orange-glow: rgba(244, 123, 82, 0.45);
+    --b2b-orange-mist: rgba(244, 123, 82, 0.08);
+    --b2b-nebula-a: rgba(244, 123, 82, 0.12);
+    --b2b-nebula-b: rgba(89, 60, 180, 0.08);
+    --b2b-nebula-c: rgba(30, 120, 180, 0.06);
+    --font-display: "Bricolage Grotesque", "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+@layer base {
+     :root {
+        --background: 240 15% 4%;
+        --foreground: 240 5% 96%;
+        --card: 240 15% 6%;
+        --card-foreground: 240 5% 96%;
+        --popover: 240 15% 4%;
+        --popover-foreground: 240 5% 96%;
+        --primary: 17 88% 64%;
+        --primary-foreground: 240 15% 4%;
+        --secondary: 240 10% 12%;
+        --secondary-foreground: 240 5% 96%;
+        --muted: 240 10% 12%;
+        --muted-foreground: 240 5% 62%;
+        --accent: 17 88% 64%;
+        --accent-foreground: 240 15% 4%;
+        --destructive: 0 62% 45%;
+        --destructive-foreground: 240 5% 96%;
+        --border: 240 5% 15%;
+        --input: 240 5% 15%;
+        --ring: 17 88% 64%;
+        --radius: 0.5rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+::selection {
+    background: var(--b2b-orange);
+    color: var(--b2b-void);
+}
+
+
+/* Typography ---------------------------------------------------------------*/
+
+.font-display {
+    /* font-family: var(--font-display); */
+    letter-spacing: -0.03em;
+    font-weight: 700;
+}
+
+.font-mono {
+    /* font-family: var(--font-mono); */
+    letter-spacing: 0.02em;
+}
+
+.eyebrow {
+    /* font-family: var(--font-mono); */
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--b2b-orange);
+    font-weight: 500;
+}
+
+.eyebrow-muted {
+    /* font-family: var(--font-mono); */
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--b2b-text-muted);
+    font-weight: 500;
+}
+
+
+/* Global chrome ------------------------------------------------------------*/
+
+.b2b-glass {
+    background: rgba(10, 11, 18, 0.55);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid var(--b2b-border);
+}
+
+.b2b-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.005));
+    border: 1px solid var(--b2b-border);
+}
+
+.b2b-hairline {
+    border: 1px solid var(--b2b-border);
+}
+
+.b2b-glow-orange {
+    box-shadow: 0 0 0 1px rgba(244, 123, 82, 0.25), 0 0 40px rgba(244, 123, 82, 0.35), 0 0 80px rgba(244, 123, 82, 0.15);
+}
+
+.b2b-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    background: var(--b2b-orange);
+    color: var(--b2b-void);
+    border: 1px solid var(--b2b-orange);
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), background 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    text-decoration: none;
+}
+
+.b2b-btn-primary:hover {
+    background: var(--b2b-orange-bright);
+    box-shadow: 0 0 0 4px rgba(244, 123, 82, 0.12), 0 10px 40px rgba(244, 123, 82, 0.28);
+    transform: translateY(-1px);
+}
+
+.b2b-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    background: transparent;
+    color: var(--b2b-text);
+    border: 1px solid var(--b2b-border-strong);
+    border-radius: 999px;
+    /* font-family: var(--font-body); */
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 220ms cubic-bezier(0.22, 1, 0.36, 1), background 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    text-decoration: none;
+}
+
+.b2b-btn-ghost:hover {
+    border-color: var(--b2b-orange);
+    background: var(--b2b-orange-mist);
+}
+
+
+/* Rocket exhaust animation --------------------------------------------------*/
+
+@keyframes flame-flicker {
+    0%,
+    100% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scaleY(1.15) scaleX(0.92);
+        opacity: 1;
+    }
+}
+
+@keyframes exhaust-particle {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(var(--tx, 0), var(--ty, 30px)) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes waypoint-pulse {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+@keyframes star-twinkle {
+    0%,
+    100% {
+        opacity: var(--twinkle-base, 0.6);
+    }
+    50% {
+        opacity: var(--twinkle-peak, 1);
+    }
+}
+
+@keyframes orbit-glow {
+    0%,
+    100% {
+        stroke-opacity: 0.28;
+    }
+    50% {
+        stroke-opacity: 0.65;
+    }
+}
+
+@keyframes planet-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: translate(0, 0) rotate(20deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(400px, 140px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bob {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes noise-shift {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-2%, 1%);
+    }
+    50% {
+        transform: translate(1%, -2%);
+    }
+    75% {
+        transform: translate(-1%, 2%);
+    }
+}
+
+.grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='240' height='240' filter='url(%23n)' opacity='1'/></svg>");
+    animation: noise-shift 12s steps(4) infinite;
+}
+
+
+/* Waypoint marker ----------------------------------------------------------*/
+
+.waypoint {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--b2b-void);
+    border: 1.5px solid var(--b2b-orange);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.waypoint::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--b2b-orange);
+    opacity: 0;
+}
+
+.waypoint.active::before {
+    animation: waypoint-pulse 1.6s ease-out infinite;
+    opacity: 1;
+}
+
+.waypoint.active {
+    background: var(--b2b-orange);
+    box-shadow: 0 0 24px var(--b2b-orange-glow);
+}
+
+
+/* Orbital path dotted stroke ------------------------------------------------*/
+
+.orbital-path {
+    fill: none;
+    stroke: rgba(244, 123, 82, 0.34);
+    stroke-width: 1.5;
+    stroke-dasharray: 2 8;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 6px rgba(244, 123, 82, 0.25));
+}
+
+.orbital-path-glow {
+    fill: none;
+    stroke: rgba(244, 123, 82, 0.08);
+    stroke-width: 8;
+    stroke-linecap: round;
+    filter: blur(4px);
+}
+
+
+/* Section anchor helpers ---------------------------------------------------*/
+
+section[data-section] {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Scrollbar ----------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+
+/* Hairline dividers --------------------------------------------------------*/
+
+.divider-hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--b2b-border-strong) 20%, var(--b2b-border-strong) 80%, transparent);
+}
+
+
+/* Cursor-selection removals inside interactive canvases --------------------*/
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Reduced motion -----------------------------------------------------------*/
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* Utility ------------------------------------------------------------------*/
+
+.text-orange {
+    color: var(--b2b-orange);
+}
+
+.bg-orange {
+    background: var(--b2b-orange);
+}
+
+.border-orange {
+    border-color: var(--b2b-orange);
+}
+
+.text-muted {
+    color: var(--b2b-text-muted);
+}
+
+.text-dim {
+    color: var(--b2b-text-dim);
+}

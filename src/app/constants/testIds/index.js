@@ -15,3 +15,4 @@ export * from './auth';
 export * from './home';
 export * from './apple';
 export * from './spatial';
+export * from './extraData';
