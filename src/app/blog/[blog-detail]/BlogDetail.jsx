@@ -83,7 +83,7 @@ export default async function BlogDetailPage({ slug }) {
       </div>
 
       <section className="relative mx-auto w-full max-w-[980px] px-4 pt-28 sm:px-6 lg:px-8">
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
@@ -91,7 +91,7 @@ export default async function BlogDetailPage({ slug }) {
             <ArrowLeft className="h-4 w-4" />
             Back to the nebula
           </Link>
-        </div>
+        </div> */}
 
         <div className="mx-auto max-w-[940px]">
           <div className="mb-6 flex flex-wrap items-center gap-2">
@@ -105,7 +105,7 @@ export default async function BlogDetailPage({ slug }) {
             ))}
           </div>
 
-          <h1 className="max-w-[820px] bg-[linear-gradient(180deg,#dff7ff_0%,#68d7ff_44%,#7f8cff_78%,#b28dff_100%)] bg-clip-text text-[48px] font-medium leading-[0.98] tracking-[-0.06em] text-transparent text-[60px]">
+          <h1 className="max-w-[820px] bg-[linear-gradient(180deg,#dff7ff_0%,#68d7ff_44%,#7f8cff_78%,#b28dff_100%)] bg-clip-text text-[48px] font-medium leading-[1.2] tracking-[-0.06em] text-transparent text-[60px]">
             {blog?.heading || blog?.title}
           </h1>
 

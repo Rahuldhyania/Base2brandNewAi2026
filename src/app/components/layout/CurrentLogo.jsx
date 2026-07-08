@@ -30,6 +30,7 @@ const logosList = [
   { slug: "/software-development", logourl: "/images/software-developmentLogo.png" },
   { slug: "/resources-catgeories", logourl: "/images/resources-logo.png"},
   { slug: "/blog", logourl: "/images/resources-logo.png"},
+  { slug: "/about-us", logourl: "/images/aboutus-logo.png"},
 ];
 
 function getMatchedLogo(pathname) {

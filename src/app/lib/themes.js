@@ -160,18 +160,25 @@ export const THEMES = {
     },
 
     intelligentSolutions: {
-    id: 'intelligentSolutions',
-    className: 'theme-intelligent-solution',
-     match: (pathname) =>
-          pathname === '/intelligent-solutions' ||
-           pathname.startsWith('/intelligent-solutions/')
+        id: 'intelligentSolutions',
+        className: 'theme-intelligent-solution',
+        match: (pathname) =>
+            pathname === '/intelligent-solutions' ||
+            pathname.startsWith('/intelligent-solutions/')
     },
     resources: {
-    id: 'resources',
-    className: 'theme-resources',
-     match: (pathname) =>
-          pathname === '/resources-catgeories' ||
-           pathname.startsWith('/blog/')
+        id: 'resources',
+        className: 'theme-resources',
+        match: (pathname) =>
+            pathname === '/resources-catgeories' ||
+            pathname.startsWith('/blog/')
+    },
+    aboutus: {
+        id: 'aboutus',
+        className: 'theme-aboutus',
+        match: (pathname) =>
+            pathname === '/about-us' ||
+            pathname.startsWith('/about-us/')
     },
 };
 
