@@ -4,6 +4,8 @@ import { Trust } from "./sections/Trust";
 import { SectionFallback } from "./components/layout/SectionFallback";
 import { DeferredRocketScrollNavigator } from "./components/layout/DeferredRocketScrollNavigator";
 import { Toaster } from "./components/ui/toaster";
+import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+
 
 const ClientFootprint = dynamic(
   () => import("./sections/ClientFootprint").then((m) => m.ClientFootprint),
@@ -88,12 +90,13 @@ export default function page() {
         <Trust />
         <ClientFootprint />
         <Services />
-        <Solutions />
-        <Testimonials />
-        <Industries />
-        <Innovation />
+        {/* <Solutions /> */}
         <CaseStudies />
+        <Industries />
+        <Testimonials />
+        {/* <Innovation /> */}
         <GovtNGO />
+        <CommandCenter />
         <GlobalPresence />
         <Insights />
         <LandingZone />

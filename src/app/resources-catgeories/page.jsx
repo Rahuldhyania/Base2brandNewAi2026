@@ -279,11 +279,11 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 py-12">
+            <section className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
                 <LatestMeteors items={RESOURCES} />
             </section>
 
-            <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 py-12">
+            <section className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
                 <IndustryReports industries={industries} />
             </section>
 
@@ -296,7 +296,7 @@ const page = () => {
             />
 
             {/* Popular Topics constellation */}
-            <section id="constellation" className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 py-12">
+            <section id="constellation" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
                 <SectionHeader
                     eyebrow="Popular topics"
                     title="Chart the constellation of ideas"

@@ -142,9 +142,8 @@ function ProjectCase({ project, index }) {
         <motion.div
           data-testid={extraData.work.browserExpand(project.id)}
           style={{ scale, rotate, y }}
-          className="relative"
+          className="relative ddff"
         >
-          {/* Docking glow — appears as rocket "docks" */}
           <motion.div
             aria-hidden
             style={{ opacity: glow }}

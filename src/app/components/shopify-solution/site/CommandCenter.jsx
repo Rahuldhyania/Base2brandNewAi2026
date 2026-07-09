@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Container from "@/components/shopify-solution/site/Container";
 import SectionHeader from "@/components/shopify-solution/site/SectionHeader";

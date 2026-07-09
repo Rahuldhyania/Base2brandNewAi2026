@@ -125,14 +125,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="mt-4 md:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
+          className="mt-4 md:mt-10 grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
           data-testid="hero-stats"
         >
           {[
             { k: "300+", v: "Projects Delivered" },
             { k: "250+", v: "Brands Scaled" },
             { k: "12+ yrs", v: "Digital Excellence" },
-            { k: "$2M +", v: "Ad Spend Managed" },
+            // { k: "$2M +", v: "Ad Spend Managed" },
           ].map((s) => (
             <div key={s.v} className="bg-[#02030a] p-3 md:p-5 xl:p-6">
               <div className="font-display text-2xl md:text-4xl xl:text-5xl text-white">

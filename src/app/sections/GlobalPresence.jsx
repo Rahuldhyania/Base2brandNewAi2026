@@ -5,14 +5,14 @@ import { SectionHeader } from "../components/layout/SectionHeader";
 import { DottedWorldMap } from "../components/visual/DottedWorldMap";
 
 const LOCATIONS = [
-  { city: "New Delhi", country: "India", lat: 28.6139, lng: 77.209, role: "Global HQ" },
-  { city: "Chandigarh", country: "India", lat: 30.7333, lng: 76.7794, role: "Engineering Hub" },
-  { city: "Bengaluru", country: "India", lat: 12.9716, lng: 77.5946, role: "AI Studio" },
+  { city: "Pune", country: "India", lat: 5.6139, lng: 81.209, role: "Global HQ" },
+  { city: "Chandigarh", country: "India", lat: 8.7333, lng: 81.7794, role: "Engineering Hub" },
+  { city: "Bengaluru", country: "India", lat: 2.9716, lng: 80.5946, role: "AI Studio" },
   { city: "Utah", country: "United States", lat: 40.7608, lng: -111.891, role: "Americas Delivery" },
   { city: "Toronto", country: "Canada", lat: 43.6532, lng: -79.3832, role: "North America" },
   { city: "Leicester", country: "United Kingdom", lat: 52.6369, lng: -1.1398, role: "EMEA HQ" },
   { city: "Sydney", country: "Australia", lat: -33.8688, lng: 151.2093, role: "APAC" },
-  { city: "Lagos", country: "Nigeria", lat: 6.5244, lng: 3.3792, role: "Africa" },
+  { city: "Kenya", country: "Kenya", lat: 6.5244, lng: 3.3792, role: "Africa" },
 ];
 
 const STATS = [

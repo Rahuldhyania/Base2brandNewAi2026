@@ -18,7 +18,7 @@ export default function IndustryReports({ industries }) {
                         Intelligence Center
                     </span>
 
-                    <h2 className="mt-5  text-2xl lg:text-3xl xl:text-5xl font-bold text-white">
+                    <h2 className="md:mt-5  text-2xl lg:text-3xl xl:text-5xl font-bold text-white">
                         Industry Reports
                     </h2>
 
