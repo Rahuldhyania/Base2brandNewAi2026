@@ -88,21 +88,17 @@ export function FinalCTA() {
             Start a transformation
           </div>
           <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
-            Tell us the problem you've{" "}
-            <span className="text-orange-brand text-glow-orange">been putting off</span>{' '}
-            {' '}We'll send back a 1-page plan.
+            Tell us where growth is stuck. We’ll show you how to unlock it.
           </h2>
           <p className="mt-5 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
-            No discovery deck. No 6-week scoping. A senior partner reads your
-            brief and replies within 24 hours with a tangible, opinionated
-            engagement design.
+            Need better leads, ROAS, conversions, CRO, automation or a digital product? We’ll map the growth system your brand needs next.
           </p>
 
           <ul className="mt-3 space-y-2 text-white/85 text-sm sm:text-base">
             {[
-              "Senior partner response in < 24 hours",
-              "Mutual NDA on request, before any data is shared",
-              "Fixed-outcome pilots, not open-ended retainers",
+              "No generic proposal.",
+              "No confusing discovery process.",
+              "Just a clear, practical plan built around your business goals.",
             ].map((p) => (
               <li key={p} className="flex items-center gap-3">
                 <span className="grid place-items-center h-5 w-5 rounded-full bg-orange-brand/15 text-orange-brand">

@@ -8,30 +8,30 @@ const PILLARS = [
   {
     icon: Atom,
     title: "Base2Brand Labs",
-    body: "Applied research in agentic systems, retrieval, and small-model engineering. Patents pending across 4 jurisdictions.",
+    body: "Applied research in marketing automation, AI workflows, customer journeys, conversion intelligence, and business process automation.",
     metric: "12",
-    metricLabel: "active research streams",
+    metricLabel: "active growth experiments",
   },
   {
     icon: Beaker,
-    title: "Foundry — Joint R&D",
-    body: "Co-engineered with enterprise clients and university partners. Real problems, peer-reviewed outcomes, shared IP frameworks.",
-    metric: "9",
-    metricLabel: "academic partners",
+    title: "AI + CRO Intelligence",
+    body: "We combine analytics, user behavior, funnel data, and AI insights to improve how users move from attention to action.",
+    metric: "100%",
+    metricLabel: "conversion-focused thinking",
   },
   {
     icon: Rocket,
-    title: "Orbit Accelerator",
-    body: "An internal venture studio incubating productized AI tools that graduate into customer deployments within two quarters.",
+    title: "Automation Studio",
+    body: "Internal automation frameworks built to reduce repetitive workflows across marketing, sales, support, and operations.",
     metric: "4",
-    metricLabel: "products in market",
+    metricLabel: "growth systems in market",
   },
   {
     icon: Cpu,
-    title: "Edge & Sovereign AI",
-    body: "On-prem, air-gapped and on-device inference stacks for regulated and defense-aligned workloads.",
-    metric: "100%",
-    metricLabel: "data residency control",
+    title: "Data-Backed Delivery",
+    body: "Every decision is connected to performance tracking, customer behavior, campaign data, and measurable business outcomes.",
+    metric: "360°",
+    metricLabel: "growth visibility",
   },
 ];
 
@@ -52,8 +52,8 @@ export function Innovation() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Innovation"
-          title="A research arm wired directly into delivery."
-          intro="Our labs don't publish PDFs and walk away. Every research output is tested against a live customer workload before it's called done."
+          title="AI is not another service. It is built into the way we deliver."
+          intro="Tomorrow’s advantage will not come from doing more manual work. It will come from building systems that learn, improve, and scale."
         />
 
         <div className="mt-8 md:mt-14 grid lg:grid-cols-2 gap-5">

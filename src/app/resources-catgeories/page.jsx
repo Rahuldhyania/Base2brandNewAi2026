@@ -90,7 +90,7 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
             >
                 {description}
             </motion.p>
-        )}
+        )}              
     </div>
 );
 

@@ -12,44 +12,49 @@ import {
 
 const SOLUTIONS = [
   {
-    id: "copilot",
+    id: "growth-engine",
     icon: Sparkles,
-    name: "Enterprise Copilots",
-    tagline: "AI assistants grounded in your data",
-    body: "Domain-specific copilots for sales, ops, legal and engineering — RAG over your private corpus, evaluated against your KPIs, deployed inside your VPC.",
-    stat: ["38%", "avg. handle-time reduction"],
+    name: "AI Growth Engine",
+    tagline: "Every campaign becomes smarter.",
+    body: "An integrated system combining paid media, customer data, automation, CRM, and predictive intelligence to make campaigns smarter, leads more valuable, and decisions data-backed.",
+    stat: ["38%", "average reduction in acquisition cost"],
+    cta: "Request a growth audit →",
   },
   {
-    id: "datafabric",
+    id: "cro-lab",
     icon: Database,
-    name: "Unified Data Fabric",
-    tagline: "One source of truth across silos",
-    body: "Lakehouse + semantic layer + governance — so every dashboard, model and agent reads the same numbers. Lineage and policy in one plane.",
-    stat: ["10x", "faster data-to-insight"],
+    name: "CRO Conversion Lab",
+    tagline: "Every decision becomes data-backed.",
+    body: "A focused optimization framework for landing pages, ecommerce stores, funnels, forms, and checkout journeys. We identify what stops users from converting and rebuild the experience around action.",
+    stat: ["41%", "average improvement in conversion rates"],
+    cta: "Improve conversions →",
   },
   {
-    id: "agentops",
+    id: "shopify-scale",
     icon: Bot,
-    name: "Agent Operations",
-    tagline: "Multi-agent workflows in production",
-    body: "Compose, observe and govern fleets of agents that act inside your systems — with guardrails, eval suites and audit trails on every step.",
-    stat: ["24/7", "autonomous back-office"],
+    name: "Shopify Scale System",
+    tagline: "Every campaign becomes smarter.",
+    body: "A commerce growth framework for Shopify brands ready to improve speed, UX, product discovery, checkout, retention, and repeat revenue.",
+    stat: ["5.2X", "average ROAS on scaled ecommerce campaigns"],
+    cta: "Scale ecommerce →",
   },
   {
-    id: "modernize",
+    id: "ai-sales-assistant",
     icon: Layers,
-    name: "Legacy Modernization",
-    tagline: "From mainframe to micro-services",
-    body: "Strangler-fig migrations, AI-assisted code transforms, and platform engineering that ship value every sprint — not in a 3-year megabang.",
-    stat: ["−47%", "TCO over 24 months"],
+    name: "AI Sales Assistant",
+    tagline: "Every lead becomes more valuable.",
+    body: "An AI-powered assistant that qualifies leads, answers customer queries, connects with CRM, and helps sales teams respond faster. Built for websites, WhatsApp, landing pages, and lead-generation funnels.",
+    stat: ["61%", "faster response time"],
+    cta: "Automate lead handling →",
   },
   {
-    id: "intel",
+    id: "performance-media",
     icon: Radar,
-    name: "Decision Intelligence",
-    tagline: "From dashboards to decisions",
-    body: "Forecasting, simulation and causal models packaged into decision apps your leadership actually uses — every Monday morning.",
-    stat: ["6 wks", "from PoC to revenue"],
+    name: "Performance Media System",
+    tagline: "Every campaign becomes smarter.",
+    body: "A structured growth model for brands investing in Google, Meta, LinkedIn, YouTube, and marketplace ads with clear performance tracking and scalable campaign execution.",
+    stat: ["18M+", "qualified leads generated"],
+    cta: "Build performance system →",
   },
 ];
 
@@ -66,9 +71,9 @@ export function Solutions() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
-          eyebrow="Solutions"
-          title="Productized accelerators — shipped, not shelfware."
-          intro="Pre-engineered solution stacks let us start mid-flight. You get to value in weeks, with a clean path to scale."
+          eyebrow="Bring us your growth challenge."
+          title="We’ll engineer the way forward."
+          intro="No generic proposal. No long discovery process. Just a practical, outcome-focused plan built around your business goals."
         />
 
         <div className="mt-8 xl:mt-14 grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-10">

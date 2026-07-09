@@ -6,31 +6,37 @@ import { ArrowUpRight } from "lucide-react";
 
 const CASES = [
   {
-    sector: "Tier-1 BFSI · Asia-Pacific",
-    title: "Reimagining underwriting with a multi-agent decision stack.",
+    sector: "Ecommerce Growth",
+    title:
+      "From store experience to paid campaigns, we rebuilt the growth engine around conversion and repeat sales.",
     impact: [
-      { k: "61%", v: "drop in turnaround" },
-      { k: "$28M", v: "annualised lift" },
+      { k: "5.2X", v: "ROAS" },
+      { k: "+41%", v: "revenue growth" },
     ],
-    tag: "Applied AI · Risk",
+    tag: "Shopify + Performance Marketing + CRO",
+    cta: "Request the growth breakdown →",
   },
   {
-    sector: "Public Healthcare Authority · EU",
-    title: "An AI-native citizen services platform across 11 regions.",
+    sector: "Healthcare Lead Automation",
+    title:
+      "We connected campaign traffic, lead capture, WhatsApp follow-up, and CRM automation into one faster patient acquisition system.",
     impact: [
-      { k: "9.4M", v: "citizens onboarded" },
-      { k: "−42%", v: "case backlog" },
+      { k: "61%", v: "faster response time" },
+      { k: "+39%", v: "qualified leads" },
     ],
-    tag: "GovTech · Modernization",
+    tag: "AI + CRM + Paid Media",
+    cta: "Request the growth breakdown →",
   },
   {
-    sector: "Global Manufacturer · NA + EMEA",
-    title: "Digital twin of the entire supply chain, decision-graph-driven.",
+    sector: "Enterprise SaaS Demand Generation",
+    title:
+      "We redesigned the funnel from audience targeting to landing page conversion and sales-qualified lead quality.",
     impact: [
-      { k: "17%", v: "OEE improvement" },
-      { k: "−$54M", v: "inventory carry" },
+      { k: "3X", v: "sales pipeline" },
+      { k: "47%", v: "lower CAC" },
     ],
-    tag: "Industry 4.0 · Data",
+    tag: "LinkedIn + Google Ads + CRO",
+    cta: "Request the growth breakdown →",
   },
 ];
 
@@ -98,8 +104,8 @@ export function CaseStudies() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Proof"
-          title="Outcomes, not optics."
-          intro="Three engagements — anonymised under NDA — where the brief was hard, the stakes were public, and the metrics moved."
+          title="Outcomes, Growth backed by numbers"
+          intro="We do not sell activity. We build systems that create measurable movement."
         />
 
         {/* <div

@@ -14,33 +14,39 @@ import {
 const INDUSTRIES = [
   {
     icon: Landmark,
-    name: "Banking & Financial Services",
-    note: "Real-time risk, regulatory tech, intelligent operations.",
+    name: "Retail & Ecommerce",
+    note: "Shopify, CRO, performance marketing, retention, and revenue-focused customer journeys.",
+    cta: "Explore sector →",
   },
   {
     icon: HeartPulse,
-    name: "Healthcare & Life Sciences",
-    note: "Clinical AI, patient experience, payer-provider platforms.",
+    name: "Healthcare & Wellness",
+    note: "Lead generation, patient journeys, booking funnels, WhatsApp automation, and trust-led digital experiences.",
+    cta: "Explore sector →",
   },
   {
     icon: Factory,
-    name: "Manufacturing & Industry 4.0",
-    note: "Connected factories, predictive maintenance, supply chain twins.",
+    name: "Education & Training",
+    note: "Student lead generation, landing pages, course funnels, CRM automation, and campaign systems.",
+    cta: "Explore sector →",
   },
   {
     icon: Radio,
-    name: "Telecom & Media",
-    note: "BSS/OSS modernization, network AI, content intelligence.",
+    name: "Real Estate",
+    note: "High-intent lead funnels, paid media campaigns, landing pages, WhatsApp automation, and sales pipeline systems.",
+    cta: "Explore sector →",
   },
   {
     icon: ShoppingBag,
-    name: "Retail & Consumer",
-    note: "Unified commerce, demand forecasting, personalization at scale.",
+    name: "SaaS & Technology",
+    note: "Demand generation, product positioning, website conversion, onboarding journeys, and AI-enabled growth systems.",
+    cta: "Explore sector →",
   },
   {
     icon: Zap,
-    name: "Energy & Utilities",
-    note: "Grid intelligence, ESG analytics, asset performance management.",
+    name: "Professional Services",
+    note: "Authority-building websites, performance campaigns, content systems, lead funnels, and conversion-led digital strategy.",
+    cta: "Explore sector →",
   },
 ];
 
@@ -54,8 +60,8 @@ export function Industries() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Industries"
-          title="Built for the sectors that can't afford to get it wrong."
-          intro="Each practice is staffed with engineers and consultants who have shipped the same systems you operate — under the same scrutiny."
+          title="Built for businesses that want serious growth."
+          intro="Every industry needs different customer journeys, different trust signals, different funnels, and different conversion paths."
         />
         <div className="mt-8 xl:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-3xl overflow-hidden border border-line">
           {INDUSTRIES.map((ind, i) => {

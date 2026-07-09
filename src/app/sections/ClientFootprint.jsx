@@ -10,12 +10,11 @@ import { GlobeHero } from "../components/visual/GlobeHero";
  */
 
 const TOP_REGIONS = [
-  { region: "India", note: "HQ + 3 delivery centers", count: "60+ clients" },
-  { region: "United States", note: "Utah hub · enterprise SaaS", count: "28 clients" },
-  { region: "United Kingdom", note: "Leicester · BFSI & retail", count: "14 clients" },
-  { region: "Canada", note: "Toronto · public sector & AI", count: "9 clients" },
-  { region: "Australia", note: "Sydney · cloud modernization", count: "7 clients" },
-  { region: "Nigeria", note: "Lagos · fintech & telco", count: "5 clients" },
+  { region: "India", note: "HQ + delivery teams", count: "200+ Brands" },
+  { region: "United States", note: "Performance, SaaS & ecommerce projects", count: "60+ Projects" },
+  { region: "United Kingdom", note: " Retail, healthcare & digital platforms", count: "30+ Projects" },
+  { region: "Canada", note: "Lead generation & enterprise solutions", count: "20+ Projects" },
+  { region: "Australia", note: "Marketing, Shopify & automation systems", count: "25+ Projects" },
 ];
 
 export function ClientFootprint() {
@@ -46,22 +45,19 @@ export function ClientFootprint() {
         >
           <div className="flex items-center gap-3 text-xs sm:text-sm font-mono-display text-mute uppercase tracking-[0.25em]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand shadow-[0_0_12px_#ff6a00]" />
-            Where we've shipped
+            Where We’ve Delivered
           </div>
           <h2
             className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight"
             data-testid="footprint-heading"
           >
-            120+ enterprise engagements,
+            300+ digital engagements,
             <span className="block text-orange-brand text-glow-orange">
-              orbiting four continents.
+            built across industries and growth stages.
             </span>
           </h2>
           <p className="mt-5 text-mute text-base sm:text-lg max-w-2xl">
-            Our delivery footprint follows our clients — from BFSI desks in
-            London and Toronto to AI labs in Bengaluru and modernization teams
-            in Sydney. Drag the globe to explore where Base2Brand has launched
-            its most ambitious programs.
+             Our delivery footprint follows business outcomes — from ecommerce stores and performance campaigns to AI automation, mobile applications, CRM systems, and enterprise platforms.
           </p>
         </motion.div>
 

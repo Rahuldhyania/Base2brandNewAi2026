@@ -40,8 +40,8 @@ export function GlobalPresence() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Global Presence"
-          title="Eight cities. One operating system."
-          intro="A follow-the-sun delivery model wired across India, the Americas, EMEA, APAC and Africa — with senior engineering in every node."
+          title="One team. One operating system. Built for modern growth."
+          intro="Base2Brand works with brands across India and global markets through a connected delivery model covering strategy, design, development, marketing, AI, and optimization."
         />
 
         {/* Map */}

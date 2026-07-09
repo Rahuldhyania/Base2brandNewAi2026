@@ -6,25 +6,30 @@ import { ArrowUpRight } from "lucide-react";
 
 const POSTS = [
   {
-    tag: "AI Engineering",
-    read: "9 min",
-    title: "Why most enterprise GenAI pilots stall — and the blueprint that ships.",
-    excerpt:
-      "A field guide from 40+ production deployments: eval harnesses, data contracts, agent supervisors and the missing role nobody hires.",
-  },
-  {
-    tag: "Cloud & Data",
-    read: "11 min",
-    title: "The Lakehouse is not enough: building decision-graphs over your data.",
-    excerpt:
-      "Why the next layer above your lakehouse is a governed semantic + causal graph — and how to ship one without a megabang program.",
-  },
-  {
-    tag: "Industry POV",
+    tag: "Performance Marketing",
     read: "7 min",
-    title: "AI risk frameworks that actually pass an audit (and don't kill velocity).",
+    title:
+      "Why most ad accounts stop scaling — and how to rebuild them for profitable growth.",
     excerpt:
-      "An NIST × EU AI Act × DPDP-aligned operating model designed for product teams, not just second-line functions.",
+      "A practical breakdown of audience quality, creative testing, tracking, landing pages and CRO systems that turn campaigns into revenue engines.",
+    cta: "Read insight →",
+  },
+  {
+    tag: "CRO & Ecommerce",
+    read: "6 min",
+    title: "Traffic is not the problem. Your conversion journey is.",
+    excerpt:
+      "How Shopify brands can improve product pages, checkout flows, offers and retention systems to convert more visitors without increasing ad spend.",
+    cta: "Read insight →",
+  },
+  {
+    tag: "AI & Automation",
+    read: "8 min",
+    title:
+      "AI should not replace your team. It should remove the work slowing them down.",
+    excerpt:
+      "From lead qualification to WhatsApp automation, CRM workflows and AI sales assistants — here’s how brands can automate growth without losing control.",
+    cta: "Read insight →",
   },
 ];
 
@@ -39,8 +44,8 @@ export function Insights() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <SectionHeader
             eyebrow="Insights"
-            title="What we're publishing this quarter."
-            intro="Field notes from the engineers, scientists and partners doing the work — not from a marketing desk."
+            title="What we’re building and scaling this quarter."
+            intro="Sharp insights on marketing, AI, Shopify, CRO and technology — built for brands ready to grow smarter."
           />
           <a
             href="#"

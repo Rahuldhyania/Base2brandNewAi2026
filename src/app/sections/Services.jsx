@@ -14,39 +14,39 @@ import {
 const SERVICES = [
   {
     icon: Brain,
-    title: "Applied AI & GenAI Engineering",
-    desc: "From RAG copilots to multi-agent workflows. Production AI grounded in your data, with eval pipelines and observability.",
-    points: ["LLM apps & agents", "Vision & speech", "MLOps + LLMOps"],
+    title: "Performance Marketing",
+    desc: "Growth campaigns engineered around revenue, not reach. We plan, launch, optimize, and scale paid media campaigns across high-intent channels with clear performance accountability.",
+    points: ["Google Ads", "Meta Ads", "LinkedIn Ads"],
   },
   {
     icon: Cpu,
-    title: "Enterprise Software & Platforms",
-    desc: "Mission-critical custom software, ERP/CRM extensions, integration backbones — built for compliance, scale and 99.99% SLAs.",
-    points: ["Composable architectures", "API platforms", "Legacy modernization"],
+    title: "Shopify & Ecommerce",
+    desc: "Commerce experiences designed to convert traffic into revenue. We build Shopify stores, custom ecommerce experiences, product pages, checkout journeys, and retention systems focused on higher sales and smoother buying experiences.",
+    points: ["Shopify Development", "Shopify Plus", "Custom Themes"],
   },
   {
     icon: Cloud,
-    title: "Cloud, Data & DevSecOps",
-    desc: "Multi-cloud foundations, data lakehouses and shift-left security. Automated, observable, cost-optimized.",
-    points: ["AWS · Azure · GCP", "Data platforms", "Zero-trust security"],
+    title: "CRO & Growth Optimization",
+    desc: "More conversions from the traffic you already have. We improve landing pages, funnels, user journeys, forms, product pages, checkout flows, and lead-generation systems using data-backed CRO strategies.",
+    points: ["Landing Page CRO", "A/B Testing", "Heatmap Analysis"],
   },
   {
     icon: Workflow,
-    title: "Hyperautomation & RPA",
-    desc: "Process intelligence + RPA + AI to remove the back-office bottlenecks and free your teams for strategic work.",
-    points: ["Process mining", "Intelligent document AI", "Workflow orchestration"],
+    title: "AI Solutions & Automation",
+    desc: "AI systems that reduce manual work and improve business efficiency. We build intelligent automations that help brands qualify leads, support customers, personalize journeys, and improve decision-making.",
+    points: ["AI Chatbots", "AI Sales Assistants", "Lead Scoring"],
   },
   {
     icon: ShieldCheck,
-    title: "Governance, Risk & Trust",
-    desc: "AI governance, regulatory engineering, and resilience baked into every deliverable — from sandbox to scale.",
-    points: ["AI risk frameworks", "Audit-ready by design", "Privacy & data residency"],
+    title: "Mobile Apps & Enterprise Platforms",
+    desc: "Digital products customers and teams rely on every day. We design and develop mobile apps, portals, CRM systems, ERP workflows, cloud applications, and custom business platforms built for speed, scale, and usability.",
+    points: ["Android Apps", "iOS Apps", "CRM Systems"],
   },
   {
     icon: LineChart,
-    title: "Digital Strategy & Experience",
-    desc: "Outcome-led roadmaps, value architecture and human-centred product design for transformations that actually land.",
-    points: ["Value engineering", "Service & UX design", "Change adoption"],
+    title: "Brand, Creative & Experience",
+    desc: "Brands people remember. Experiences customers trust. We create brand identities, social media systems, UI/UX experiences, campaign creatives, content frameworks, and design systems that make growth look as strong as it performs.",
+    points: ["Brand Identity", "Creative Campaigns", "UI/UX Design"],
   },
 ];
 
@@ -99,9 +99,9 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           id="services"
-          eyebrow="Capabilities"
-          title="Six practices. One orbit of execution."
-          intro="From discovery to scale, each engagement is staffed by senior engineers, AI scientists and domain leads — accountable for outcomes, not slides."
+          eyebrow="Core Practices"
+          title="Six practices One growth system"
+          intro="From discovery to scale, every engagement is shaped by strategy, creative thinking, engineering, analytics, AI, media buying, and conversion optimization."
         />
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {SERVICES.map((s, i) => (

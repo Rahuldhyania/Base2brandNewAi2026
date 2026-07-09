@@ -14,14 +14,12 @@ export default function NewsletterDome() {
   };
 
   return (
-    <div className="relative flex justify-center pt-18" data-testid="newsletter-dome">
+    <div className="relative flex justify-center pt-12 md:pt-18" data-testid="newsletter-dome">
       <div className="relative w-full max-w-3xl">
         {/* Dome — top rounded observatory shape */}
         <div
-          className="relative overflow-hidden text-center px-8 pt-12 pb-12relative z-10 mx-auto max-w-6xl px-6 md:px-10 -mt-6 md:-mt-10 mb-12 md:pt-24"
+          className="relative overflow-hidden text-center  md:[border-top-left-radius:50%_100%] md:[border-top-right-radius:50%_100%] px-4 md:px-8 pt-6 pt-6 md:pt-12 md:pb-12 relative z-10 mx-auto max-w-6xl -mt-6 md:-mt-10 mb-12 md:pt-24"
           style={{
-            borderTopLeftRadius: "50% 100%",
-            borderTopRightRadius: "50% 100%",
             border: "1px solid rgba(255,255,255,0.1)",
             borderBottom: "none",
             background:
@@ -38,13 +36,13 @@ export default function NewsletterDome() {
               filter: "blur(4px)",
             }}
           />
-          <p className="relative uppercase tracking-[0.35em] text-[11px] text-white/50 mb-4">
+          <p className="relative uppercase tracking-[0.35em] text-[11px] text-white/50 md:mb-4">
             Signal from the Observatory
           </p>
           <h2 className="relative font-display text-3xl md:text-5xl leading-tight tracking-tight">
             <span className="gradient-text">Stay Connected To <br /> The Universe</span>
           </h2>
-          <p className="relative mt-4 max-w-lg mx-auto text-white/60">
+          <p className="relative mt-2 md:mt-4 max-w-lg mx-auto text-white/60 text-sm md:text-base">
             One thoughtful dispatch every fortnight — new research, prompt drops and
             case studies. No noise. Unsubscribe anytime.
           </p>

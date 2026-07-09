@@ -86,12 +86,11 @@ export function Hero() {
             className="font-display text-white text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl"
             data-testid="hero-headline"
           >
-            We architect the digital{" "}
-            <span className="text-orange-brand text-glow-orange">backbone</span>{" "}
-            for enterprises ready to leave gravity behind.
+            We architect digital growth systems for{' '}
+            <span className="text-orange-brand text-glow-orange">brands</span>{" "}
+            ready to scale beyond limits.
             <span className="block text-mute mt-4 text-lg sm:text-xl font-normal max-w-2xl">
-              AI systems, enterprise software, cloud and intelligent automation
-              — engineered end-to-end from 8 cities across 4 continents.
+              AI automation, performance marketing, Shopify Plus, CRO, apps and software — built together to turn brands into growth engines.
             </span>
           </motion.h1>
 
@@ -106,7 +105,7 @@ export function Hero() {
               data-testid="hero-cta-primary"
               className="group inline-flex items-center justify-between gap-4 rounded-full bg-orange-brand font-semibold px-4 md:px-6 py-2 md:py-4 hover:brightness-110 transition glow-orange"
             >
-              Start a transformation
+              Start Your Growth Journey
               <span className="grid place-items-center h-7 w-7 rounded-full bg-black/15 group-hover:translate-x-0.5 transition">
                 →
               </span>
@@ -130,10 +129,10 @@ export function Hero() {
           data-testid="hero-stats"
         >
           {[
-            { k: "8", v: "Global offices" },
-            { k: "4", v: "Continents" },
-            { k: "120+", v: "Enterprise engagements" },
-            { k: "14 yrs", v: "Engineering DNA" },
+            { k: "300+", v: "Projects Delivered" },
+            { k: "250+", v: "Brands Scaled" },
+            { k: "12+ yrs", v: "Digital Excellence" },
+            { k: "$2M +", v: "Ad Spend Managed" },
           ].map((s) => (
             <div key={s.v} className="bg-[#02030a] p-3 md:p-5 xl:p-6">
               <div className="font-display text-2xl md:text-4xl xl:text-5xl text-white">

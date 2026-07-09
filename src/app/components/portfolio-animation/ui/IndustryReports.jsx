@@ -18,7 +18,7 @@ export default function IndustryReports({ industries }) {
                         Intelligence Center
                     </span>
 
-                    <h2 className="mt-5 text-5xl font-bold text-white">
+                    <h2 className="mt-5  text-2xl lg:text-3xl xl:text-5xl font-bold text-white">
                         Industry Reports
                     </h2>
 
@@ -30,7 +30,7 @@ export default function IndustryReports({ industries }) {
 
                 {/* Dashboard */}
 
-                <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#080C16]/80 backdrop-blur-xl">
+                <div className="overflow-hidden rounded-xl md:rounded-[32px] border border-white/10 bg-[#080C16]/80 backdrop-blur-xl">
 
                     {/* Header */}
 
@@ -82,22 +82,22 @@ export default function IndustryReports({ industries }) {
                                 className={`absolute inset-0 opacity-0 bg-gradient-to-r ${item.color}`}
                             />
 
-                            <div className="relative grid grid-cols-1 items-center gap-5 px-4 py-2 md:grid-cols-[3.5fr_1fr_1fr_1fr_auto]">
+                            <div className="relative grid  items-center gap-2 md:gap-5 px-4 py-1 md:py-2 grid-cols-[3.5fr_1fr_1fr_1fr_auto]">
 
                                 {/* Industry */}
 
                                 <div className="flex items-center gap-4">
 
-                                    <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-xl">
+                                    <div className="flex h-3 md:h-9 w-3 md:w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-sm md:text-xl">
                                         {item.icon}
                                     </div>
 
                                     <div>
-                                        <p className="text-[10px] uppercase tracking-[0.28em] text-white/30">
+                                        <p className="text-[8px] md:text-[10px] uppercase tracking-[0.28em] text-white/30">
                                             {item.code}
                                         </p>
 
-                                        <h3 className="mt-1 text-[18px] leading-4 font-semibold text-white">
+                                        <h3 className=" md:mt-1 text-sm md:text-base lg:text-[18px] leading-4 md:font-semibold text-white">
                                             {item.title}
                                         </h3>
                                     </div>
@@ -108,11 +108,11 @@ export default function IndustryReports({ industries }) {
 
                                 <div className="text-center">
 
-                                    <h4 className="text-xl leading-6 font-semibold text-white">
+                                    <h4 className="text-sm md:text-xl md:leading-6 font-semibold text-white">
                                         {item.reports}
                                     </h4>
 
-                                    <p className="mt-1 text-[11px] text-white/40">
+                                    <p className="md:mt-1 text-[11px] text-white/40">
                                         Reports
                                     </p>
 
@@ -122,7 +122,7 @@ export default function IndustryReports({ industries }) {
 
                                 <div className="flex justify-center">
 
-                                    <span className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
+                                    <span className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-1 md:px-3 md:py-1 text-xs font-medium text-emerald-300">
                                         {item.growth}
                                     </span>
 
@@ -132,7 +132,7 @@ export default function IndustryReports({ industries }) {
 
                                 <div className="flex justify-center">
 
-                                    <div className="flex h-8 items-end gap-[2px]">
+                                    <div className="flex h-6 md:h-8 items-end gap-[2px]">
 
                                         {item.trend.map((bar, i) => (
                                             <motion.div
@@ -145,7 +145,7 @@ export default function IndustryReports({ industries }) {
                                                     delay: i * 0.03,
                                                     duration: 0.45,
                                                 }}
-                                                className="w-1 rounded-full bg-gradient-to-t from-cyan-500 to-sky-400"
+                                                className="w-[2px] md:w-1 rounded-full bg-gradient-to-t from-cyan-500 to-sky-400"
                                             />
                                         ))}
 
@@ -166,8 +166,7 @@ export default function IndustryReports({ industries }) {
                                         }}
                                     >
                                         <ArrowUpRight
-                                            size={22}
-                                            className="text-cyan-400 transition-colors group-hover:text-white"
+                                            className="text-cyan-400 transition-colors group-hover:text-white text-base md:text-xl lg:text-[22px]"
                                         />
                                     </motion.div>
 
@@ -185,7 +184,7 @@ export default function IndustryReports({ industries }) {
                             <span className="text-cyan-400">●</span> {industries.length} Industries
                         </div>
 
-                        <button className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-cyan-300 transition hover:bg-cyan-500/20">
+                        <button className="rounded-full text-xs md:text-sm border border-cyan-500/20 bg-cyan-500/10 px-2 md:px-4 py-1 md:py-2 text-cyan-300 transition hover:bg-cyan-500/20">
                             View All Reports
                         </button>
 

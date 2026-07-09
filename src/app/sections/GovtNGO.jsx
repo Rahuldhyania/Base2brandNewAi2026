@@ -7,23 +7,23 @@ import { ShieldCheck, Globe2, HandHeart, FileLock2 } from "lucide-react";
 const PROGRAMS = [
   {
     icon: ShieldCheck,
-    title: "Sovereign-grade engineering",
-    body: "Air-gapped builds, classified-data SOPs, security-cleared engineers across delivery.",
+    title: "Secure Digital Systems",
+    body: "Web platforms, portals, apps, and workflows built with performance, stability, and data protection in mind.",
   },
   {
     icon: Globe2,
-    title: "Multi-lateral programs",
-    body: "Delivery for UN-affiliated agencies, donor-funded initiatives and pan-regional regulators.",
+    title: "Lead & Customer Automation",
+    body: "CRM, WhatsApp, AI assistant, and marketing automation systems designed to reduce response time and improve conversions.",
   },
   {
     icon: HandHeart,
-    title: "NGO digital backbone",
-    body: "Beneficiary management, donor intelligence, and program impact analytics — at scale.",
+    title: "Compliance-Friendly Experiences",
+    body: "Clear user journeys, proper tracking setup, consent-based flows, and structured data handling for better digital operations.",
   },
   {
     icon: FileLock2,
-    title: "Compliance by design",
-    body: "GDPR, HIPAA, ISO 27001, SOC 2 Type II, India DPDP, IRAP-aligned engineering.",
+    title: "Performance With Accountability",
+    body: "Campaigns, CRO, analytics, and reporting connected to real business outcomes — not vanity metrics.",
   },
 ];
 
@@ -37,9 +37,9 @@ export function GovtNGO() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1fr_1.2fr] gap-6 md:gap-12">
         <div>
           <SectionHeader
-            eyebrow="Govt & Public Sector"
-            title="When the workload is public and the stakes are personal."
-            intro="A dedicated practice for governments, regulators and international NGOs — engineered to the highest bars of trust, transparency and sovereignty."
+            eyebrow="Public Sector / High-Trust Work"
+            title="When trust, scale, and performance matter together."
+            intro="For businesses in regulated, sensitive, or high-stakes industries, digital growth must be built with clarity, compliance, and reliability."
           />
           <div className="mt-3 md:mt-10 flex flex-wrap gap-3">
             {["G2C platforms", "Smart Cities", "Welfare delivery", "Health systems", "Citizen AI"].map((tag) => (

@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { InfiniteSlider } from "../components/visual/InfiniteSlider";
 
 const PARTNERS = [
-  "Fortune 500 BFSI",
-  "Govt. of India · MeitY",
-  "Tier-1 Telecom Operator",
-  "ASX-listed Manufacturer",
-  "NHS Trust",
-  "GCC Sovereign Fund",
-  "Nordic Energy Major",
-  "Global Health NGO",
-  "Tier-1 Retailer · NA",
-  "Smart-City Authority",
-  "UN Affiliated Agency",
-  "Pan-African Fintech",
+  "D2C Brands",
+  "Shopify Stores",
+  "Healthcare Businesses",
+  "Education Platforms",
+  "SaaS Companies",
+  "Real Estate Brands",
+  "Manufacturing Firms",
+  "Professional Services",
+  "Retail & Ecommerce",
+  "Enterprise Teams",
+  "Lead Generation Brands",
+  "App-Based Businesses",
 ];
 
 function Pill({ label }) {
@@ -50,14 +50,12 @@ export function Trust() {
               Trusted across sectors
             </div>
             <h2 className="mt-4 font-display text-white text-2xl sm:text-3xl tracking-tight">
-              A confidential roster.
-              <span className="block text-mute">Public results.</span>
+              Confidential partners
+              <span className="block text-mute">Public outcomes</span>
             </h2>
           </div>
           <p className="text-mute text-base sm:text-lg max-w-2xl">
-            We partner with regulated enterprises, sovereign programs, and
-            global NGOs. Under NDA, we surface impact — not logos. Below is the
-            shape of our client base.
+            We work with ambitious startups, growing D2C brands, enterprises, healthcare companies, education businesses, SaaS platforms, and service-led organizations.
           </p>
         </motion.div>
 

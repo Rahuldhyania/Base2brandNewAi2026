@@ -12,75 +12,67 @@ import Image from "next/image";
 const TESTIMONIALS = [
   {
     quote:
-      "Base2Brand re-platformed our entire claims stack on AWS in under nine months. Their AI-assisted triage now resolves 38% of cases without human touch.",
-    name: "Aarav Mehta",
-    role: "Chief Digital Officer",
-    company: "MetroLife Insurance",
+      "Base2Brand helped us strengthen our online presence with a strategy that connected design, marketing and user experience. Their team focused on practical improvements that made our digital channels more effective and easier to scale.",
+    name: "Ronald Martin",
+    role: "Founder & Operator",
+    company: "Prorevv and IFS · United States",
     image: "https://randomuser.me/api/portraits/men/41.jpg",
   },
   {
     quote:
-      "They didn't just deliver an ERP migration — they re-architected how our finance, supply chain, and BI teams collaborate. The ROI showed up in quarter two.",
-    name: "Sneha Iyer",
-    role: "Group CIO",
-    company: "Vantage Retail Holdings",
+      "From the first discussion to the final delivery, Base2Brand stayed focused on results. They refined our website, improved customer journeys and created a stronger digital foundation that reflects our business professionally.",
+    name: "Jen Paidosh",
+    role: "Founder & CEO",
+    company: "JDP Electric",
     image: "https://randomuser.me/api/portraits/women/42.jpg",
   },
   {
     quote:
-      "Their AI lab embedded with our product team for 16 weeks. We shipped a production-grade copilot that our brokers genuinely use every day.",
-    name: "Daniel Okafor",
-    role: "Head of Product Engineering",
-    company: "ArcCapital Markets",
+      "What impressed me most was how Base2Brand combined creativity with performance. They understood our brand, delivered impactful digital solutions and ensured every improvement supported long-term business growth.",
+    name: "Jahn Brazil",
+    role: "CEO & Owner",
+    company: "The Indie Collab",
     image: "https://randomuser.me/api/portraits/men/43.jpg",
   },
   {
     quote:
-      "From discovery to go-live, the cadence was crisp. Weekly demos, real metrics, no smoke. Easily the most senior consulting team we've worked with.",
-    name: "Priya Bansal",
-    role: "VP, Enterprise Architecture",
-    company: "NorthStar Logistics",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    quote:
-      "Our public-sector portal serves 11M citizens. Base2Brand handled the modernization with a security-first posture and zero unplanned downtime.",
-    name: "Rohan Verma",
-    role: "Director of Technology",
-    company: "State Digital Mission",
+      "Base2Brand has been a valuable growth partner for our VIP mobile number business. Their expertise in SEO, paid campaigns, content strategy and website optimization helped us reach the right audience while improving conversions across multiple channels.",
+    name: "Deepak Dhingra",
+    role: "Managing Director & CEO",
+    company: "VIP Number Shop",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
     quote:
-      "What I appreciate most is intellectual honesty. They push back, propose better paths, and own outcomes. That's a partner, not a vendor.",
-    name: "Maya Sullivan",
-    role: "Chief Operating Officer",
-    company: "Helios BioTech",
+      "The team approached every project with a clear strategy and attention to detail. From website improvements to marketing execution, Base2Brand consistently delivered solutions that supported stronger engagement and measurable business outcomes.",
+    name: "Seda Hos Bas",
+    role: "Head of Marketing & Sales",
+    company: "Coconut Stock",
     image: "https://randomuser.me/api/portraits/women/46.jpg",
   },
   {
     quote:
-      "Their data platform on Snowflake unified 14 disparate sources. Marketing now runs personalization models that lift conversion 22% quarter over quarter.",
-    name: "Yusuf Khan",
-    role: "SVP, Growth & Analytics",
-    company: "Skylark Telecom",
+      "Base2Brand understood the complexity of our business and translated it into a clear digital experience. Their work across branding, website development and lead generation created a more scalable platform for future growth.",
+    name: "Kevin Gada",
+    role: "Founder & CEO",
+    company: "SaaS Integration · Australia",
     image: "https://randomuser.me/api/portraits/men/47.jpg",
   },
   {
     quote:
-      "The Base2Brand team treats craft like an act of trust. Documentation, observability, handover — everything you wish more partners did, they do by default.",
-    name: "Elena Rodríguez",
-    role: "Head of Platform",
-    company: "Atlas Mobility",
-    image: "https://randomuser.me/api/portraits/women/48.jpg",
+      "Working with Base2Brand felt like having an extension of our own team. They aligned our website, messaging and digital campaigns into one cohesive strategy that improved visibility, lead quality and overall performance.",
+    name: "Paul Singh",
+    role: "Managing Director",
+    company: "Scanfluence Software Inc",
+    image: "https://randomuser.me/api/portraits/men/49.jpg",
   },
   {
     quote:
-      "We came in with a modernization brief and left with a five-year operating model. Strategic depth that's rare in delivery houses.",
-    name: "Kabir Anand",
-    role: "Managing Director",
-    company: "Crescent Energy Group",
-    image: "https://randomuser.me/api/portraits/men/49.jpg",
+      "Base2Brand brought structure and clarity to our digital marketing efforts. Their ability to combine creative execution with data-driven optimization helped us attract better leads and build a stronger online presence.",
+    name: "Naim Haroon",
+    role: "Director",
+    company: "Match Creatorz",
+    image: "https://randomuser.me/api/portraits/men/50.jpg",
   },
 ];
 
@@ -144,7 +136,7 @@ export function Testimonials() {
         >
           <div className="flex items-center gap-3 text-xs sm:text-sm font-mono-display text-mute uppercase tracking-[0.25em]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand shadow-[0_0_12px_#ff6a00]" />
-            Voices from the bridge
+            VOICES FROM THE BRIDGE
           </div>
           <h2
             className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight"
@@ -152,12 +144,11 @@ export function Testimonials() {
           >
             Real outcomes,
             <span className="block text-orange-brand text-glow-orange">
-              from the people who shipped them.
+              from businesses who scaled with us.
             </span>
           </h2>
           <p className="mt-5 text-mute text-base sm:text-lg max-w-2xl">
-            Operators, CIOs and product leaders on what changed after they
-            launched a transformation program with Base2Brand.
+           Business owners, marketing heads and product leaders from the UK and US on what changed after Base2Brand connected strategy, performance, AI, CRO and technology into one growth system.
           </p>
         </motion.div>
 
