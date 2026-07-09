@@ -185,7 +185,7 @@ export default function FeaturedResource() {
 
   return (
     <div>
-      <div className="pt-10">
+      <div className="pt-3 md:pt-10">
         {loading ? (
           <div className="text-center text-white/60 py-10">
             Loading blogs...
@@ -218,9 +218,9 @@ export default function FeaturedResource() {
                   <div className="absolute inset-[2px] rounded-[calc(1.5rem-2px)] bg-[#050609]" />
                 </div>
 
-                <div className="relative glass rounded-3xl overflow-hidden">
+                <div className="relative glass rounded-lg md:rounded-3xl overflow-hidden">
                   <div className="grid md:grid-cols-5 gap-0">
-                    <div className="relative md:col-span-3 aspect-[16/10] md:aspect-auto overflow-hidden min-h-100">
+                    <div className="relative md:col-span-3 md:aspect-[16/10] md:aspect-auto overflow-hidden min-h-60 md:min-h-100">
                       <img
                         src={blog?.imageUrl}
                         alt={blog?.heading}
@@ -245,9 +245,9 @@ export default function FeaturedResource() {
                       </div>
                     </div>
 
-                    <div className="md:col-span-2 p-6 flex flex-col justify-center">
+                    <div className="md:col-span-2 p-4 md:p-6 flex flex-col justify-center">
                       <div>
-                        <div className="flex items-center gap-4 text-white/50 text-xs mb-5">
+                        <div className="flex items-center gap-4 text-white/50 text-xs mb-2 md:mb-5">
                           <span className="inline-flex items-center gap-1.5">
                             <Clock className="h-3.5 w-3.5" /> {"8 min"}
                           </span>
@@ -266,12 +266,12 @@ export default function FeaturedResource() {
                           </span>
                         </div>
 
-                        <h3 className="font-display text-3xl tracking-tight text-white line-clamp-3">
+                        <h3 className="font-display text-xl md:text-2xl lg:text-3xl tracking-tight text-white line-clamp-2 md:line-clamp-3">
                           {blog?.heading}
                         </h3>
 
                         <p
-                          className="mt-1 !text-white leading-relaxed line-clamp-3 blog_description"
+                          className="mt-1 text-sm md:text-base !text-white leading-relaxed line-clamp-2 md:line-clamp-3 blog_description"
                           dangerouslySetInnerHTML={{ __html: blog?.description }}
                         />
 
@@ -296,7 +296,7 @@ export default function FeaturedResource() {
       </div>
 
       {!loading && (
-        <div className="grid grid-cols-2 gap-4 pt-10">
+        <div className="grid md:grid-cols-2 gap-4 pt-8 md:pt-10">
           {blogData.slice(1).map((blog, index) => (
             <motion.div
               key={blog?._id || blog?.id || index}
@@ -321,9 +321,9 @@ export default function FeaturedResource() {
                   <div className="absolute inset-[2px] rounded-[calc(1.5rem-2px)] bg-[#050609]" />
                 </div>
 
-                <div className="relative glass rounded-3xl overflow-hidden">
+                <div className="relative glass rounded-lg md:rounded-3xl overflow-hidden">
                   <div className="grid gap-0">
-                    <div className="py-6 px-6 flex flex-col justify-between">
+                    <div className="py-4 md:py-6 px-4 md:px-6 flex flex-col justify-between">
                       <div>
                         <img
                           src={blog?.imageUrl}
@@ -335,7 +335,7 @@ export default function FeaturedResource() {
                       </div>
 
                       <div className="mt-3">
-                        <div className="flex items-center gap-4 text-white/50 text-xs mb-5">
+                        <div className="flex items-center gap-4 text-white/50 text-xs mb-2 md:mb-5">
                           <span className="inline-flex items-center gap-1.5">
                             <Clock className="h-3.5 w-3.5" /> {"8 min"}
                           </span>
@@ -354,12 +354,12 @@ export default function FeaturedResource() {
                           </span>
                         </div>
 
-                        <h3 className="font-display text-2xl text-white line-clamp-1">
+                        <h3 className="font-display text-lg md:text-2xl text-white line-clamp-1">
                           {blog?.heading}
                         </h3>
 
                         <p
-                          className="mt-1 !text-white leading-relaxed line-clamp-2 blog_description"
+                          className="mt-1 text-white! leading-relaxed line-clamp-2 blog_description"
                           dangerouslySetInnerHTML={{ __html: blog?.description }}
                         />
                       </div>

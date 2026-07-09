@@ -7,7 +7,7 @@ import Link from "next/link";
 function ResourceCard({ r, index }) {
   const heightClass =
     r.span === "tall"
-      ? "aspect-[4/5]"
+      ? "aspect-[2/2] md:aspect-[4/5]"
       : r.span === "wide"
         ? "aspect-[16/10]"
         : "aspect-[4/3]";
@@ -21,7 +21,7 @@ function ResourceCard({ r, index }) {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, delay: (index % 6) * 0.06, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -6 }}
-      className="group relative glass rounded-2xl overflow-hidden cursor-pointer"
+      className="group relative glass rounded-lg md:rounded-2xl overflow-hidden cursor-pointer"
       data-testid={`resource-card-${r.id}`}
       style={{ transition: "box-shadow 400ms ease, border-color 400ms ease" }}
     >
@@ -77,7 +77,7 @@ function ResourceCard({ r, index }) {
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-4 md:p-6">
           <div className="flex items-center gap-4 text-white/45 text-[11px]">
             <span className="inline-flex items-center gap-1.5">
               <Clock className="h-3 w-3" /> {r.readingTime}
@@ -87,13 +87,13 @@ function ResourceCard({ r, index }) {
             </span>
             <span className="text-white/50">· {r.author.name}</span>
           </div>
-          <h3 className="mt-3 font-display text-xl md:text-2xl leading-snug tracking-tight text-white group-hover:text-white">
+          <h3 className="mt-3 font-display text-xl md:text-2xl line-clamp-1 md:line-clamp-2 leading-snug tracking-tight text-white group-hover:text-white">
             {r.title}
           </h3>
-          <p className="mt-3 text-sm text-white/60 leading-relaxed line-clamp-3">
+          <p className="mt-2 md:mt-3 text-sm text-white/60 leading-relaxed line-clamp-2 md:line-clamp-3">
             {r.excerpt}
           </p>
-          <div className="mt-5 inline-flex items-center gap-1.5 text-xs text-white/70 group-hover:text-[#42D4FF] transition-colors">
+          <div className="mt-2 md:mt-5 inline-flex items-center gap-1.5 text-xs text-white/70 group-hover:text-[#42D4FF] transition-colors">
             Read article
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </div>

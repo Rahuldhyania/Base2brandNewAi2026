@@ -13,18 +13,18 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative z-10 min-h-[100svh] w-full overflow-hidden bg-[linear-gradient(0deg,rgba(34,193,195,0)_0%,rgba(0,0,0,0.81)_100%)]" data-testid="hero-section">
+    <section className="relative z-10 md:min-h-[100svh] w-full overflow-hidden bg-[linear-gradient(0deg,rgba(34,193,195,0)_0%,rgba(0,0,0,0.81)_100%)]" data-testid="hero-section">
       <CategoryOrbits onSelect={onSelectCategory} />
 
       {/* Entrance dust — particles converging on the center */}
       {!reduce && <EntranceDust />}
 
-      <div className="relative z-20 mx-auto max-w-6xl px-6 md:px-10 pt-32 md:pt-40 pb-24 md:pb-32 text-center">
+      <div className="relative z-20 mx-auto max-w-6xl px-4 md:px-10 pt-24 md:pt-28 lg:pt-34 xl:pt-40 pb-4 md:pb-24 lg:pb-32 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 1.2 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs text-white/70 mb-8"
+          className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs text-white/70 mb-3 md:mb-8"
         >
           <Sparkles className="h-3.5 w-3.5" style={{ color: "#42D4FF" }} />
           <span className="tracking-widest uppercase">The Base2Brand Knowledge Nebula</span>
@@ -34,7 +34,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           initial={{ opacity: 0, y: 24, filter: "blur(24px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 2.1, duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.98] tracking-tight text-shadow-glow"
+          className="font-display text-5xl md:text-6xl lg:text-7xl 2xl:text-[88px] leading-[0.98] tracking-tight text-shadow-glow"
         >
           <span className="gradient-text">Discover the Future</span>
           <br />
@@ -45,7 +45,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.9, duration: 1 }}
-          className="mt-6 md:mt-8 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
+          className="mt-3 md:mt-8 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
         >
           Explore premium insights, AI research, Shopify guides, case studies,
           industry reports, prompt libraries and engineering resources — created to
@@ -56,7 +56,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.3, duration: 0.9 }}
-          className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="mt-3 md:mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <button
             type="button"
@@ -97,7 +97,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.6, duration: 0.9 }}
-          className="mt-14"
+          className="mt-6 md:mt-8 lg:mt-14"
         >
           <CosmicSearch value={query} onChange={setQuery} />
         </motion.div>
@@ -106,7 +106,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 4.4, duration: 1.2 }}
-          className="mt-16 flex flex-col items-center gap-2 text-white/40"
+          className="mt-5 md:mt-8 lg:mt-16 flex flex-col items-center gap-2 text-white/40"
         >
           <span className="text-[10px] uppercase tracking-[0.35em]">Scroll to discover</span>
           <motion.span

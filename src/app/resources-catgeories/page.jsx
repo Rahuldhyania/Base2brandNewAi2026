@@ -61,7 +61,7 @@ const DEFAULT_DOSSIER_CARDS = [
 
 
 const SectionHeader = ({ eyebrow, title, description, id }) => (
-    <div id={id} className="mb-10 max-w-3xl">
+    <div id={id} className="mb-2 md:mb-10 max-w-3xl">
         <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="mt-4 text-white/60 max-w-2xl leading-relaxed"
+                className="mt-2 md:mt-4 text-white/60 max-w-2xl leading-relaxed"
             >
                 {description}
             </motion.p>
@@ -231,7 +231,7 @@ const page = () => {
                 onExplore={scrollToLibrary}
             />
             {/* Featured */}
-            <section id="featured" className="relative z-10 mx-auto max-w-6xl px-6 md:px-10 -mt-6 md:-mt-10 mb-14">
+            <section id="featured" className="relative z-10 mx-auto max-w-6xl px-4 md:px-10 mb-14 mt-6 md:mt-0">
                 <SectionHeader
                     eyebrow="Emerging from the nebula"
                     title="Featured Resource"
@@ -244,7 +244,7 @@ const page = () => {
             <section
                 ref={libraryRef}
                 id="library"
-                className="relative z-10 mx-auto max-w-7xl px-6 md:px-10"
+                className="relative z-10 mx-auto max-w-7xl px-4 md:px-10"
             >
                 <SectionHeader
                     eyebrow="The Knowledge Nebula"

@@ -1766,6 +1766,7 @@
         .blog_description strong {
             color: rgb(59, 59, 231) !important;
         }
+       
 
         @keyframes onloadbgt {
             0% {
@@ -2325,4 +2326,12 @@
             br {
                 display: none;
             }
+                    .blog_description span,
+        .blog_description p {
+            font-size: 14px;
+        }
+
+        .blog_description h2 {
+            font-size: 30px
+        }
         }

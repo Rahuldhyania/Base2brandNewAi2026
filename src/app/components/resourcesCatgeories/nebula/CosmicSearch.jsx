@@ -23,7 +23,7 @@ export default function CosmicSearch({ value, onChange, testId = "cosmic-search"
             : "0 0 0 1px rgba(255,255,255,0.08), 0 8px 32px rgba(0,0,0,0.35)",
         }}
         transition={{ type: "spring", stiffness: 260, damping: 22 }}
-        className="relative flex items-center gap-3 rounded-full glass-strong px-5 py-4"
+        className="relative flex items-center gap-3 rounded-full glass-strong px-5 py-2 md:py-4"
       >
         <SearchIcon
           className="h-5 w-5 shrink-0"

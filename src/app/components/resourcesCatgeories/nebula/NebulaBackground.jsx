@@ -71,8 +71,8 @@ function Nebula() {
       return g;
     };
     return [
-      build(1400, 3.0, "#7B4DFF", "#42D4FF"),
-      build(1000, 4.6, "#A855F7", "#2b1f6b"),
+      build(1400, 3.0, "#4A2A8F", "#3A5B8F"),
+      build(1000, 4.6, "#6835A7", "#1a0f4b"),
     ];
   }, []);
 
@@ -92,7 +92,7 @@ function Nebula() {
     }
     if (disk.current) {
       disk.current.rotation.z = t * 0.02;
-      disk.current.material.opacity = 0.4 + Math.sin(t * 0.6) * 0.06;
+      disk.current.material.opacity = 0.15 + Math.sin(t * 0.6) * 0.03;
     }
   });
 
@@ -106,9 +106,9 @@ function Nebula() {
           depthWrite={false}
           blending={THREE.AdditiveBlending}
           uniforms={{
-            uColorA: { value: new THREE.Color("#7B4DFF") },
-            uColorB: { value: new THREE.Color("#42D4FF") },
-            uColorC: { value: new THREE.Color("#A855F7") },
+            uColorA: { value: new THREE.Color("#4A2A8F") },
+            uColorB: { value: new THREE.Color("#3A5B8F") },
+            uColorC: { value: new THREE.Color("#6835A7") },
           }}
           vertexShader={`
             varying vec2 vUv;
@@ -130,8 +130,8 @@ function Nebula() {
               float ring = smoothstep(0.5, 0.15, d) - smoothstep(0.15, 0.02, d);
               vec3 col = mix(uColorA, uColorB, smoothstep(0.0, 0.35, d));
               col = mix(col, uColorC, smoothstep(0.2, 0.45, d));
-              col += vec3(1.0) * pow(1.0 - d * 2.0, 6.0) * 0.6; // white core
-              gl_FragColor = vec4(col, glow * 0.85 + ring * 0.35);
+              col += vec3(1.0) * pow(1.0 - d * 2.0, 6.0) * 0.3; // white core
+              gl_FragColor = vec4(col, glow * 0.6 + ring * 0.25);
             }
           `}
         />
@@ -144,7 +144,7 @@ function Nebula() {
           alphaMap={circleTex}
           vertexColors
           transparent
-          opacity={0.85}
+          opacity={0.3}
           depthWrite={false}
           blending={THREE.AdditiveBlending}
           sizeAttenuation
@@ -158,7 +158,7 @@ function Nebula() {
           alphaMap={circleTex}
           vertexColors
           transparent
-          opacity={1}
+          opacity={0.25}
           depthWrite={false}
           blending={THREE.AdditiveBlending}
           sizeAttenuation
@@ -269,15 +269,15 @@ export default function NebulaBackground({ intensity = 1, showNebula = true, bas
             <color attach="background" args={["#040507"]} />
             <fog attach="fog" args={["#040507", 8, 22]} />
 
-            <ambientLight intensity={0.35} />
-            <pointLight position={[0, 0, 2]} intensity={2 * intensity} color="#7B4DFF" />
-            <pointLight position={[3, 2, 1]} intensity={1.4 * intensity} color="#42D4FF" />
+            <ambientLight intensity={0.05} />
+            <pointLight position={[0, 0, 2]} intensity={0.3 * intensity} color="#3A1A7F" />
+            <pointLight position={[3, 2, 1]} intensity={0.15 * intensity} color="#2A4B7F" />
 
             <Stars
               radius={90}
               depth={60}
               count={3500}
-              factor={3.5}
+              factor={2.0}
               saturation={0}
               fade
               speed={0.6}
