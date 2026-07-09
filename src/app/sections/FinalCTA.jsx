@@ -87,19 +87,18 @@ export function FinalCTA() {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
             Start a transformation
           </div>
-          <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight">
-            Tell us the hardest problem you've{" "}
-            <span className="text-orange-brand text-glow-orange">postponed</span>.
-            <br />
-            We'll send back a 1-page plan.
+          <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
+            Tell us the problem you've{" "}
+            <span className="text-orange-brand text-glow-orange">been putting off</span>{' '}
+            {' '}We'll send back a 1-page plan.
           </h2>
-          <p className="mt-6 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
+          <p className="mt-5 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
             No discovery deck. No 6-week scoping. A senior partner reads your
             brief and replies within 24 hours with a tangible, opinionated
             engagement design.
           </p>
 
-          <ul className="mt-8 space-y-3 text-white/85 text-sm sm:text-base">
+          <ul className="mt-3 space-y-2 text-white/85 text-sm sm:text-base">
             {[
               "Senior partner response in < 24 hours",
               "Mutual NDA on request, before any data is shared",
@@ -122,7 +121,7 @@ export function FinalCTA() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.1 }}
           data-testid="contact-form"
-          className="relative rounded-3xl border border-line-strong bg-[#04061a]/80 p-4 md:p-9 backdrop-blur-md glow-orange"
+          className="relative rounded-3xl border border-line-strong bg-[#04061a]/80 px-6 py-10 backdrop-blur-md glow-orange"
         >
           <div className="grid sm:grid-cols-2 gap-4">
             <Field

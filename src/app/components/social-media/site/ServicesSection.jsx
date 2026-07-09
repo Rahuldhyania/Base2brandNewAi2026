@@ -10,12 +10,11 @@ import {
   ArrowRight,
   ArrowUpRight,
 } from "lucide-react";
-import { SERVICES } from "../site/mock";
+import Link from "next/link";
 
 const ICONS = { Search, Target, ThumbsUp, Youtube, ShieldCheck, PenLine };
-const TOTAL = SERVICES.length.toString().padStart(2, "0");
 
-function ServiceCard({ service, index }) {
+function ServiceCard({ service, index, TOTAL }) {
   const Icon = ICONS[service.icon];
   const isEven = index % 2 === 1;
   const [hover, setHover] = useState(null);
@@ -169,15 +168,15 @@ function ServiceCard({ service, index }) {
           })}
         </ul>
 
-        <a
-          href="#contact"
+        <Link
+          href={`${service.link ? service.link : '#'}`}
           className="inline-flex items-center gap-2 px-3 md:px-5 py-2 md:py-3 rounded-full bg-zinc-900 text-white text-[12px] md:text-sm font-semibold hover:bg-zinc-800 transition-colors"
           style={{letterSpacing: "0.08em",
           }}
         >
           {service.cta.toUpperCase()}
           <ArrowUpRight size={16} />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -186,7 +185,9 @@ function ServiceCard({ service, index }) {
 const SOCIAL_MEDIA_DEFAULT_LOGO = "/images/socialmedialogo.png";
 const TRIGGER_OFFSET = 10; // px from top of viewport
 
-export default function ServicesSection() {
+export default function ServicesSection({highlightTag, title, description, SERVICES}) {
+const TOTAL = SERVICES.length.toString().padStart(2, "0");
+
   useEffect(() => {
     const dispatch = (logoUrl, color) =>
       window.dispatchEvent(
@@ -235,7 +236,7 @@ export default function ServicesSection() {
             className="inline-flex items-center gap-2 text-[11px] tracking-[0.28em] text-white"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
-            OUR DIGITAL MARKETING SERVICES
+            {highlightTag}
           </span>
         </div>
         <div className="grid lg:grid-cols-2 gap-5 md:gap-10 items-end">
@@ -245,13 +246,11 @@ export default function ServicesSection() {
               letterSpacing: "-0.03em",
             }}
           >
-            Built To Drive Growth
+            {title}
           </h2>
           <div>
             <p className="text-white text-[16px] leading-relaxed max-w-lg mb-6">
-              Six disciplines, one engine — turn your brand into a measurable
-              growth machine. Every service works alone or together to deliver
-              traffic, leads and revenue.
+              {description}
             </p>
             <div className="flex flex-wrap gap-2">
               {[
@@ -277,7 +276,7 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {SERVICES.map((s, i) => (
-          <ServiceCard key={s.id} service={s} index={i} />
+          <ServiceCard key={s.id} service={s} index={i} TOTAL={TOTAL} />
         ))}
 
         <div id="services-end" className="flex justify-center items-center py-1">

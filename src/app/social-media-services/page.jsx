@@ -7,7 +7,6 @@ import BuildingNow from "@/components/ai/BuildingNow";
 import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
 import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
-
 const features = [
   {
     l: "Search Behaviour Evolution",
@@ -173,11 +172,153 @@ const steps = [
     icon: 'Sparkles',
   },
 ];
+
+const services = [
+  {
+    id: "seo",
+    index: "01",
+    title: "SEO",
+    fullName: "Search Engine Optimization",
+    icon: "Search",
+    logoUrl: "/images/seocardlogo.png",
+    tagColor: "#FF2D87",
+    cardGradient: "linear-gradient(135deg, #FF2D87 0%, #C61E62 100%)",
+    headline: "Rank where it matters. Get found first.",
+    description:
+      "Enhance online visibility with our SEO expertise. 93% of online experiences begin with a search engine. Our strategies elevate your rankings and boost organic traffic.",
+    items: [
+      "On-page optimization",
+      "Off-page SEO & link building",
+      "Technical SEO audits",
+      "Local SEO & Google Business",
+      "Keyword research & strategy",
+      "Content optimization",
+      "Monthly reporting & insights",
+    ],
+    cta: "Explore SEO",
+  },
+  {
+    id: "ads",
+    index: "02",
+    title: "Paid Ads",
+    fullName: "Google & Meta Ads",
+    icon: "Target",
+    logoUrl: "/images/adscardlogo.png",
+    tagColor: "#C6FF3D",
+    cardGradient: "linear-gradient(135deg, #D7FF3D 0%, #8FBF00 100%)",
+    headline: "Generate $2 for every $1 spent.",
+    description:
+      "Maximize reach, drive targeted traffic and crush ROI with our expert Google & Meta Ads team. Performance-grade results, always.",
+    items: [
+      "Google Search & Display Ads",
+      "Meta (Facebook & Instagram) Ads",
+      "Shopping & Performance Max",
+      "Remarketing campaigns",
+      "Landing page optimization",
+      "A/B testing & creative iteration",
+      "ROI tracking & analytics",
+    ],
+    cta: "Explore Paid Ads",
+  },
+  {
+    id: "smo",
+    index: "03",
+    title: "SMO",
+    fullName: "Social Media Optimization",
+    icon: "ThumbsUp",
+    logoUrl: "/images/smocardlogo.png",
+    tagColor: "#6C5CE7",
+    cardGradient: "linear-gradient(135deg, #7C6CFF 0%, #4A3DCC 100%)",
+    headline: "Be the brand people actually follow.",
+    description:
+      "We optimize social platforms to enhance brand visibility and engagement, tailored to your business goals — Instagram, Facebook, LinkedIn, X and beyond.",
+    items: [
+      "Social media strategy",
+      "Content calendar & creation",
+      "Community management",
+      "Influencer collaborations",
+      "Hashtag & trend research",
+      "Performance analytics",
+    ],
+    cta: "Explore SMO",
+  },
+  {
+    id: "youtube",
+    index: "04",
+    title: "YouTube",
+    fullName: "YouTube Marketing",
+    icon: "Youtube",
+    logoUrl: "/images/youtubecardlogo.png",
+    tagColor: "#FF0000",
+    cardGradient: "linear-gradient(135deg, #ff1e1eab  0%, #ff0000d9 100%)",
+    headline: "Turn views into customers.",
+    description:
+      "Leverage engaging video content to drive business profits from YouTube's vast audience — channel growth, SEO and monetization, end to end.",
+    items: [
+      "Channel strategy & setup",
+      "Video SEO & thumbnails",
+      "Shorts & long-form production",
+      "YouTube Ads (TrueView, Bumper)",
+      "Audience growth tactics",
+      "Performance reporting",
+    ],
+    cta: "Explore YouTube",
+  },
+  {
+    id: "orm",
+    index: "05",
+    title: "ORM",
+    fullName: "Online Reputation Management",
+    icon: "ShieldCheck",
+    logoUrl: "/images/ormcardlogo.png",
+    tagColor: "#F37335",
+    cardGradient: "linear-gradient(135deg, #FF8A2B 0%, #D44E00 100%)",
+    headline: "Protect, repair, amplify your reputation.",
+    description:
+      "We safeguard your brand reputation, address negative feedback, and foster positive sentiment across every channel that matters.",
+    items: [
+      "Brand monitoring 24/7",
+      "Review management",
+      "Crisis response",
+      "Sentiment analysis",
+      "Search result cleanup",
+      "Proactive reputation building",
+    ],
+    cta: "Explore ORM",
+  },
+  {
+    id: "content",
+    index: "06",
+    title: "Content",
+    fullName: "Content Writing",
+    icon: "PenLine",
+    logoUrl: "/images/contentcardlogo.png",
+    tagColor: "#0EA5E9",
+    cardGradient: "linear-gradient(135deg, #38BDF8 0%, #0369A1 100%)",
+    headline: "Words that rank. Stories that sell.",
+    description:
+      "Engaging, SEO-friendly content tailored to your brand — blog posts, website copy, social captions and email sequences that actually convert.",
+    items: [
+      "Blog & article writing",
+      "Website & landing copy",
+      "Social media copy",
+      "Email & newsletter writing",
+      "Product descriptions",
+      "SEO content strategy",
+    ],
+    cta: "Explore Content",
+  },
+];
 export default function page() {
   return (
     <div>
       <Hero />
-      <ServicesSection />
+      <ServicesSection
+        highlightTag={'OUR DIGITAL MARKETING SERVICES'}
+        title={'Built To Drive Growth'}
+        description={'Six disciplines, one engine — turn your brand into a measurable growth machine. Every service works alone or together to deliver traffic, leads and revenue.'}
+        SERVICES={services}
+      />
       <MarqueeStrip />
       <Narrative
         highlightTag={"Why Growth Has Changed"}

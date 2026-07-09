@@ -51,7 +51,7 @@ export function Hero() {
 
         {/* Wordmark lockup */}
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, delay: 0.15 }}
@@ -64,16 +64,16 @@ export function Hero() {
             accent="#ff6a00"
             letterColor="#ffffff"
           />
-        </motion.div> */}
+        </motion.div>
 
-        <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
+        {/* <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
           <SlotText
             default_text="RANK."
             items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
             ClassName="justify-start"
             BLOCK_GROW_TEXT={true}
           />
-        </h1>
+        </h1> */}
 
 
 
