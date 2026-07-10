@@ -7,6 +7,9 @@ import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
 import Services from "@/components/landing/Services";
 import WhyUs from "@/components/landing/WhyUs";
+import Work from "@/components/portfolio-animation/sections/Work";
+import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import Industries from "@/components/ai/Industries";
 
 const features = [
   {
@@ -158,6 +161,72 @@ const floatingMetrics = [
     delay: 0.75,
   },
 ];
+
+const PROJECTS = [
+  {
+    id: "case-01",
+    n: "CASE 01",
+    tag: "GEO Strategy · AI Search Visibility",
+    title: "Improving brand visibility across AI search engines.",
+    metrics: [
+      { v: "+340%", l: "AI visibility lift" },
+      { v: "8.2x", l: "recommendation growth" },
+    ],
+    url: "geo-strategy.b2b/case",
+    preview: {
+      accent: "#2F6BFF",
+      title: "GEO Strategy — AI Visibility Console",
+      lines: [
+        { label: "AI mentions tracked", value: "14,820" },
+        { label: "Visibility lift", value: "+340%" },
+        { label: "Recommendation growth", value: "8.2x" },
+      ],
+      chart: [18, 24, 31, 39, 48, 56, 63, 71, 79, 86, 93, 98],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "AEO Implementation · Answer Engines",
+    title: "Structuring content for answer engine discovery.",
+    metrics: [
+      { v: "94%", l: "answer coverage" },
+      { v: "10x", l: "topic authority growth" },
+    ],
+    url: "answer-engine.b2b/live",
+    preview: {
+      accent: "#3B82F6",
+      title: "AEO Implementation — Answer Layer",
+      lines: [
+        { label: "Question clusters mapped", value: "620" },
+        { label: "Answer coverage", value: "94%" },
+        { label: "Authority signals improved", value: "10x" },
+      ],
+      chart: [20, 25, 33, 42, 50, 59, 67, 74, 81, 87, 92, 96],
+    },
+  },
+  {
+    id: "case-03",
+    n: "CASE 03",
+    tag: "AI Visibility Optimization · Brand Authority",
+    title: "Building authority signals for AI recommendations.",
+    metrics: [
+      { v: "20+", l: "verticals optimized" },
+      { v: "24/7", l: "visibility monitoring" },
+    ],
+    url: "ai-visibility.b2b/app",
+    preview: {
+      accent: "#2563EB",
+      title: "AI Visibility — Brand Authority Dashboard",
+      lines: [
+        { label: "Sources monitored", value: "1,240" },
+        { label: "Verticals optimized", value: "20+" },
+        { label: "Citation gaps closed", value: "76%" },
+      ],
+      chart: [26, 32, 37, 45, 54, 62, 69, 75, 82, 88, 94, 99],
+    },
+  },
+];
 export default function page() {
   return (
     <main
@@ -198,6 +267,11 @@ export default function page() {
         highlightTag={"The Stack"}
         capsData={CAPS}
       />
+      <Work
+        title="Growth visibility cases."
+        titleLower="AI search outcomes."
+        cardsData={PROJECTS}
+      />
       <BuildingNow
         highlightTag={"CURRENTLY IN PRODUCTION"}
         title={"What we are building for AI-first growth"}
@@ -220,6 +294,8 @@ export default function page() {
         }
         steps={steps}
       />
+      <Industries />
+      <CommandCenter />
       <Services />
       <WhyUs />
     </main>

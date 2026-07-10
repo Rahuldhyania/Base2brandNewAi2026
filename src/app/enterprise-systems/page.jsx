@@ -1,5 +1,6 @@
 "use client";
 
+import Industries from "@/components/ai/Industries";
 import Layout from "@/components/apple/Layout";
 import Capabilities from "@/components/erp/Capabilities";
 import CTA from "@/components/erp/CTA";
@@ -8,6 +9,8 @@ import Integrations from "@/components/erp/Integrations";
 import Modules from "@/components/erp/Modules";
 import ProcessFlow from "@/components/erp/ProcessFlow";
 import StarsBackground from "@/components/erp/StarsBackground";
+import Work from "@/components/portfolio-animation/sections/Work";
+import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 
 const LOGISTICS_MODULES = [
   {
@@ -94,6 +97,72 @@ const LOGISTICS_MODULE_SCROLL_ORDER = [
   "billing",
   "analytics",
 ];
+
+const PROJECTS = [
+  {
+    id: "case-01",
+    n: "CASE 01",
+    tag: "ERP Ecosystem · Operations Visibility",
+    title: "Unifying operations into one ERP command layer.",
+    metrics: [
+      { v: "98%", l: "process visibility" },
+      { v: "12x", l: "faster reporting" },
+    ],
+    url: "erp-command.b2b/case",
+    preview: {
+      accent: "#22D3EE",
+      title: "ERP Command Center — Operations Layer",
+      lines: [
+        { label: "Departments connected", value: "8" },
+        { label: "Process visibility", value: "98%" },
+        { label: "Reporting speed", value: "12x" },
+      ],
+      chart: [22, 30, 38, 46, 55, 63, 70, 78, 84, 89, 94, 98],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "Workflow Automation · Connected Departments",
+    title: "Automating workflows across finance and operations.",
+    metrics: [
+      { v: "-64%", l: "manual work reduced" },
+      { v: "1x", l: "single source of truth" },
+    ],
+    url: "workflow-automation.b2b/live",
+    preview: {
+      accent: "#06B6D4",
+      title: "Workflow Automation — Department Sync",
+      lines: [
+        { label: "Automated workflows", value: "42" },
+        { label: "Manual effort reduced", value: "-64%" },
+        { label: "Data conflicts resolved", value: "1 source" },
+      ],
+      chart: [62, 58, 53, 49, 43, 38, 32, 27, 22, 18, 14, 10],
+    },
+  },
+  {
+    id: "case-03",
+    n: "CASE 03",
+    tag: "Enterprise Governance · Data Control",
+    title: "Building governed systems for real-time decisions.",
+    metrics: [
+      { v: "24/7", l: "business visibility" },
+      { v: "100+", l: "integrations supported" },
+    ],
+    url: "enterprise-governance.b2b/app",
+    preview: {
+      accent: "#0891B2",
+      title: "Enterprise Governance — Visibility Dashboard",
+      lines: [
+        { label: "Integrations connected", value: "100+" },
+        { label: "Live business modules", value: "8" },
+        { label: "Governance alerts", value: "Real-time" },
+      ],
+      chart: [28, 34, 41, 49, 57, 65, 72, 79, 85, 91, 96, 100],
+    },
+  },
+];
 export default function ErpPage() {
   return (
     <Layout tint="blue">
@@ -106,6 +175,11 @@ export default function ErpPage() {
         <div className="relative z-[1]">
           <Hero />
           <Capabilities />
+          <Work
+            title="Enterprise systems cases."
+            titleLower="Operational clarity."
+            cardsData={PROJECTS}
+          />
           <Modules
             title={
               <>
@@ -117,6 +191,8 @@ export default function ErpPage() {
             scrollOrder={LOGISTICS_MODULE_SCROLL_ORDER}
           />
           <ProcessFlow />
+          <Industries />
+          <CommandCenter />
           <Integrations />
           <CTA />
         </div>

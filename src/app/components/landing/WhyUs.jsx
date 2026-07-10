@@ -30,7 +30,7 @@ export default function WhyUs() {
   return (
     <section
       data-testid="why-us-section"
-      className="relative pb-12"
+      className="relative py-12"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12">

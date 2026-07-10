@@ -1,12 +1,7 @@
-'use client'
+'use client';
+
 import { useRef, useState, useLayoutEffect } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-  useSpring,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import {
@@ -29,90 +24,133 @@ const icons = {
   LayoutDashboard,
 };
 
-const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
+const clamp = (value, min, max) => {
+  return Math.min(Math.max(value, min), max);
+};
+
+const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
   const sectionRef = useRef(null);
+  const rafRef = useRef(null);
+
   const [active, setActive] = useState(0);
   const [pinPhase, setPinPhase] = useState("before");
   const [isScrollMode, setIsScrollMode] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: [`start ${NAV_HEIGHT}px`, "end end"],
-  });
-  const smoothed = useSpring(scrollYProgress, {
-    stiffness: 80,
-    damping: 22,
-    mass: 0.5,
-  });
-  const progressWidth = useTransform(smoothed, [0, 1], ["0%", "100%"]);
-
-  useMotionValueEvent(smoothed, "change", (v) => {
-    const next = Math.min(
-      ITEMS.length - 1,
-      Math.max(0, Math.floor(v * ITEMS.length))
-    );
-    setActive((prev) => (prev === next ? prev : next));
-  });
+  const [progress, setProgress] = useState(0);
 
   useLayoutEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
-    const updateScrollMode = () => setIsScrollMode(mq.matches);
+
+    const updateScrollMode = () => {
+      setIsScrollMode(mq.matches);
+    };
+
     updateScrollMode();
     mq.addEventListener("change", updateScrollMode);
-    return () => mq.removeEventListener("change", updateScrollMode);
+
+    return () => {
+      mq.removeEventListener("change", updateScrollMode);
+    };
   }, []);
 
   useLayoutEffect(() => {
     if (!isScrollMode) {
       setPinPhase("before");
+      setProgress(0);
+      setActive(0);
       return;
     }
 
-    const section = sectionRef.current;
-    if (!section) return;
+    const updateScroll = () => {
+      const section = sectionRef.current;
+      if (!section || !ITEMS?.length) return;
 
-    const updatePin = () => {
       const rect = section.getBoundingClientRect();
+      const sectionTop = window.scrollY + rect.top;
+      const sectionHeight = section.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      if (rect.top > NAV_HEIGHT) {
+      const start = sectionTop - NAV_HEIGHT;
+      const end = sectionTop + sectionHeight - viewportHeight;
+
+      const total = Math.max(end - start, 1);
+      const current = clamp((window.scrollY - start) / total, 0, 1);
+
+      if (window.scrollY < start) {
         setPinPhase("before");
-      } else if (rect.bottom <= viewportHeight) {
+      } else if (window.scrollY >= end) {
         setPinPhase("after");
       } else {
         setPinPhase("pinned");
       }
+
+      setProgress(current);
+
+      const next = Math.min(
+        ITEMS.length - 1,
+        Math.max(0, Math.floor(current * ITEMS.length))
+      );
+
+      setActive((prev) => (prev === next ? prev : next));
     };
 
-    updatePin();
-    window.addEventListener("scroll", updatePin, { passive: true });
-    window.addEventListener("resize", updatePin);
-    return () => {
-      window.removeEventListener("scroll", updatePin);
-      window.removeEventListener("resize", updatePin);
+    const onScroll = () => {
+      if (rafRef.current) return;
+
+      rafRef.current = window.requestAnimationFrame(() => {
+        updateScroll();
+        rafRef.current = null;
+      });
     };
-  }, [isScrollMode]);
+
+    updateScroll();
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", updateScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", updateScroll);
+
+      if (rafRef.current) {
+        window.cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, [isScrollMode, ITEMS]);
+
+  if (!ITEMS?.length) return null;
 
   const jumpTo = (i) => {
     if (!isScrollMode) {
       setActive(i);
       return;
     }
-    const el = sectionRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const target =
-      window.scrollY +
-      rect.top -
-      NAV_HEIGHT +
-      ((i + 0.5) / ITEMS.length) * (rect.height - window.innerHeight);
-    window.scrollTo({ top: target, behavior: "smooth" });
+
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+    const sectionTop = window.scrollY + rect.top;
+    const sectionHeight = section.offsetHeight;
+    const viewportHeight = window.innerHeight;
+
+    const start = sectionTop - NAV_HEIGHT;
+    const end = sectionTop + sectionHeight - viewportHeight;
+    const total = Math.max(end - start, 1);
+
+    const targetProgress = (i + 0.5) / ITEMS.length;
+    const target = start + targetProgress * total;
+
+    window.scrollTo({
+      top: target,
+      behavior: "smooth",
+    });
   };
 
   const it = ITEMS[active];
-  const Icon = icons[it.icon];
+  const Icon = icons[it.icon] || LayoutDashboard;
   const primaryStroke = "var(--b2b-primary)";
   const secondaryStroke = "var(--b2b-primary)";
+  const progressWidth = `${progress * 100}%`;
 
   const detailCard = (
     <motion.div
@@ -123,6 +161,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
       className="b2b-card p-5 sm:p-7 md:p-10 h-full relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-(--b2b-primary)/20 blur-[100px] pointer-events-none" />
+
       <svg
         className="absolute -top-8 -right-8 w-44 h-44 opacity-50 pointer-events-none"
         viewBox="0 0 100 100"
@@ -152,6 +191,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
         <span className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-(--b2b-primary)/20 border border-(--b2b-primary) text-(--b2b-primary) shrink-0">
           <Icon className="w-5 h-5" />
         </span>
+
         <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase text-white/40 leading-snug">
           {it.tagline}
         </span>
@@ -181,7 +221,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
         transition={{ delay: 0.22, duration: 0.45 }}
         className="relative mt-6 sm:mt-8 flex flex-wrap gap-2"
       >
-        {it.metrics.map((m) => (
+        {it.metrics?.map((m) => (
           <span
             key={m}
             className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/4 border border-white/10 text-white/70"
@@ -195,6 +235,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
         <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
           Program {String(active + 1).padStart(2, "0")} / {ITEMS.length}
         </span>
+
         <a
           href="#contact"
           data-testid={`building-now-cta-${active}`}
@@ -209,8 +250,9 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
   const tabList = (
     <div className="lg:col-span-5 space-y-1 sm:space-y-1.5">
       {ITEMS.map((item, i) => {
-        const ItemIcon = icons[item.icon];
+        const ItemIcon = icons[item.icon] || LayoutDashboard;
         const isActive = i === active;
+
         return (
           <button
             key={item.title}
@@ -233,6 +275,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
             >
               <ItemIcon className="w-4 h-4" />
             </motion.span>
+
             <span className="flex-1 min-w-0">
               <span
                 className={`block font-mono text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase ${
@@ -241,6 +284,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
+
               <span
                 className={`block font-display font-medium text-sm sm:text-base md:text-lg truncate ${
                   isActive ? "text-white" : "text-white/55"
@@ -249,6 +293,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
                 {item.title}
               </span>
             </span>
+
             <motion.span
               animate={{
                 height: isActive ? 32 : 0,
@@ -263,25 +308,29 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
       {isScrollMode && (
         <div className="mt-4 sm:mt-6 relative h-0.5 rounded-full bg-white/8 overflow-hidden">
-          <motion.div
+          <div
             className="absolute inset-y-0 left-0 bg-linear-to-r from-(--b2b-primary) via-[rgba(var(--b2b-primary-rgb),0.8)] to-(--b2b-primary)"
             style={{ width: progressWidth }}
           />
         </div>
       )}
     </div>
-  ); 
+  );
 
   const sectionHeader = (
     <Reveal>
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 sm:gap-6 mb-4 md:mb-10">
         <div>
-          <ShiningText testId="building-now-eyebrow">{highlightTag}</ShiningText>
+          <ShiningText testId="building-now-eyebrow">
+            {highlightTag}
+          </ShiningText>
+
           <h2
             className="mt-2 sm:mt-4 font-display text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl text-balance"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>
+
         <p
           className="max-w-md text-sm sm:text-base text-white/50 leading-relaxed"
           dangerouslySetInnerHTML={{ __html: description }}
@@ -293,6 +342,7 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
   if (!isScrollMode) {
     return (
       <section
+        ref={sectionRef}
         id="building-now-section"
         className="relative border-y border-white/5 bg-(--b2b-bg) py-12 md:py-16"
       >
@@ -303,16 +353,20 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
         <div className="relative w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
           {sectionHeader}
+
           <div className="grid gap-6 lg:grid-cols-12 lg:gap-10 items-start">
             {tabList}
-            <div className="lg:col-span-7 relative">{detailCard}</div>
+
+            <div className="lg:col-span-7 relative">
+              {detailCard}
+            </div>
           </div>
         </div>
       </section>
     );
   }
 
-  const scrollTrackHeight = `${ITEMS.length * 50}vh`;
+  const scrollTrackHeight = `${ITEMS.length * 110}vh`;
   const panelHeight = `calc(100vh - ${NAV_HEIGHT}px)`;
 
   const panelClass =
@@ -324,8 +378,13 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
   const panelStyle =
     pinPhase === "pinned"
-      ? { top: NAV_HEIGHT, height: panelHeight }
-      : { height: panelHeight };
+      ? {
+          top: `${NAV_HEIGHT}px`,
+          height: panelHeight,
+        }
+      : {
+          height: panelHeight,
+        };
 
   return (
     <section
@@ -345,8 +404,10 @@ const BuildingNow = ({title, description, highlightTag, ITEMS}) => {
 
         <div className="relative w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-10 py-6 lg:py-0">
           {sectionHeader}
+
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             {tabList}
+
             <div className="lg:col-span-7 relative min-h-[280px] sm:min-h-[340px] lg:min-h-[380px]">
               {detailCard}
             </div>

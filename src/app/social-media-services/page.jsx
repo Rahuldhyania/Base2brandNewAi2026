@@ -7,6 +7,7 @@ import BuildingNow from "@/components/ai/BuildingNow";
 import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
 import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
+import Industries from "@/components/ai/Industries";
 const features = [
   {
     l: "Search Behaviour Evolution",
@@ -362,6 +363,7 @@ export default function page() {
         }
         steps={steps}
       />
+      <Industries />
       <CreativeShowcase />
     </div>
   );

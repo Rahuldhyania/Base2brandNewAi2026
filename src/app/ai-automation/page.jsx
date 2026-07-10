@@ -10,6 +10,8 @@ import MaturityFramework from "@/components/ai/MaturityFramework";
 import ResearchLab from "@/components/ai/ResearchLab";
 import SEOContent from "@/components/ai/SEOContent";
 import FinalCTA from "@/components/ai/FinalCTA";
+import Work from "@/components/portfolio-animation/sections/Work";
+import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 
 const features = [
   { l: "Architected", d: "Not patched" },
@@ -133,11 +135,77 @@ const ITEMS = [
     metrics: ["Observability", "Cost metering", "Governance"],
   },
 ];
+
+const PROJECTS = [
+  {
+    id: "case-01",
+    n: "CASE 01",
+    tag: "AI Workforce · Enterprise Operations",
+    title: "Automating repetitive business operations with AI.",
+    metrics: [
+      { v: "24/7", l: "autonomous operations" },
+      { v: "120+", l: "enterprise workflows automated" },
+    ],
+    url: "ai-workforce.b2b/case",
+    preview: {
+      accent: "#7B4DFF",
+      title: "AI Workforce — Operations Console",
+      lines: [
+        { label: "Tasks processed today", value: "8,426" },
+        { label: "Auto-resolved workflows", value: "72.8%" },
+        { label: "Human review required", value: "11.4%" },
+      ],
+      chart: [24, 30, 36, 42, 48, 55, 61, 68, 74, 79, 84, 91],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "Multi-Agent Operations · Workflow Automation",
+    title: "Coordinating multi-agent workflow execution.",
+    metrics: [
+      { v: "61%", l: "faster response cycles" },
+      { v: "38%", l: "efficiency lift" },
+    ],
+    url: "agent-ops.b2b/live",
+    preview: {
+      accent: "#C084FC",
+      title: "Multi-Agent Operations — Workflow Map",
+      lines: [
+        { label: "Active agent runs", value: "1,248" },
+        { label: "Policy checks passed", value: "96.2%" },
+        { label: "Escalations prevented", value: "38%" },
+      ],
+      chart: [18, 24, 29, 36, 40, 47, 54, 59, 66, 73, 81, 88],
+    },
+  },
+  {
+    id: "case-03",
+    n: "CASE 03",
+    tag: "Enterprise Copilots · Knowledge Intelligence",
+    title: "Building private enterprise AI copilots.",
+    metrics: [
+      { v: "250+", l: "AI deployments supported" },
+      { v: "15+", l: "industries served" },
+    ],
+    url: "enterprise-copilot.b2b/app",
+    preview: {
+      accent: "#42D4FF",
+      title: "Enterprise Copilot — Knowledge Layer",
+      lines: [
+        { label: "Knowledge sources indexed", value: "46" },
+        { label: "Verified answers", value: "89.7%" },
+        { label: "Avg. response time", value: "2.4 sec" },
+      ],
+      chart: [32, 38, 41, 48, 53, 57, 63, 69, 72, 78, 84, 90],
+    },
+  },
+];
 export default function page() {
   return (
     <main
       data-testid="ai-page"
-      className="relative bg-(--b2b-bg) text-white overflow-x-hidden"
+      className="relative bg-(--b2b-bg) text-white"
     >
       <Hero />
       <MetricsBar />
@@ -150,7 +218,7 @@ export default function page() {
         features={features}
         highlightTag={"THE NEW OPERATING MODEL"}
         tagList={["01 — Thesis"]}
-      />  
+      />
       <Capabilities
         title={"Six practices. One intelligence layer."}
         description={`We don't sell features. We engineer the AI capability stack your operations depend on — designed, governed, and measured end-to-end.`}
@@ -166,6 +234,11 @@ export default function page() {
         ITEMS={ITEMS}
       />
       <Architecture />
+      <Work
+        title="Selected AI automation cases."
+        titleLower="Systems that shipped outcomes."
+        cardsData={PROJECTS}
+      />
       <TechStack
         highlightTag={'BUILT ON THE LATEST AI STACK'}
         title={"Models, frameworks, and infrastructure — composed deliberately."}
@@ -173,6 +246,7 @@ export default function page() {
       <Industries />
       <MaturityFramework />
       <ResearchLab />
+      <CommandCenter />
       {/* <EngagementModels /> */}
       <SEOContent />
       <FinalCTA

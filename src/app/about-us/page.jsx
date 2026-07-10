@@ -214,10 +214,10 @@ function Hero() {
   const dotBlur = useTransform(scrollYProgress, [0, 0.35], ['0px', '40px'])
 
   return (
-    <section ref={ref} className="relative h-[100vh]">
+    <section ref={ref} className="relative md:h-[100vh]">
       <motion.div
         style={{ opacity, y }}
-        className="sticky top-0 h-screen flex items-center justify-center"
+        className="sticky top-0 h-[80vh] md:h-screen flex items-center justify-center"
       >
         <div className="relative w-full max-w-6xl px-6 text-center">
           {/* Central pulsing singularity */}
@@ -304,11 +304,11 @@ function YearSection({ item, index, total }) {
   const isLeft = index % 2 === 0
 
   return (
-    <section ref={ref} className="relative min-h-screen py-16 flex items-center">
+    <section ref={ref} className="relative md:min-h-screen py-6 md:py-16 flex items-center">
       {/* Glow blob */}
       <motion.div
         style={{ scale: glowScale, opacity }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full pointer-events-none"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] md:h-[900px] rounded-full pointer-events-none"
       >
         <div
           className="nebula w-full h-full"
@@ -390,7 +390,7 @@ function YearSection({ item, index, total }) {
         </div>
 
         {/* Milestone card + orbiting stats */}
-        <div className="relative mt-16 grid md:grid-cols-3 gap-4">
+        <div className="relative mt-4 md:mt-16 grid md:grid-cols-3 gap-4">
           {/* Achievements card */}
           <motion.div
             // initial={{ opacity: 0, y: 40 }}
@@ -398,7 +398,7 @@ function YearSection({ item, index, total }) {
             // viewport={{ once: false, margin: '-20% 0px -10% 0px' }}
             // transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             // whileHover={{ y: -4 }}
-            className="glass-panel rounded-2xl p-6 md:col-span-2 relative overflow-hidden group"
+            className="glass-panel rounded-2xl p-4 md:p-6 md:col-span-2 relative overflow-hidden group"
           >
             <div
               className="absolute -top-24 -right-24 w-64 h-64 rounded-full blur-3xl opacity-40 transition-opacity group-hover:opacity-70"
@@ -408,7 +408,7 @@ function YearSection({ item, index, total }) {
               <div className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-4">
                 Milestones
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-1 md:space-y-3">
                 {item.achievements.map((a, i) => (
                   <motion.li
                     key={a}
@@ -422,7 +422,7 @@ function YearSection({ item, index, total }) {
                       className="w-1.5 h-1.5 rounded-full"
                       style={{ background: item.accent, boxShadow: `0 0 12px ${item.accent}` }}
                     />
-                    <span className="font-display text-[17px] font-light">{a}</span>
+                    <span className="font-display text-sm md:text-[17px] font-light">{a}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -436,12 +436,12 @@ function YearSection({ item, index, total }) {
             // viewport={{ once: false, margin: '-20% 0px -10% 0px' }}
             // transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             // whileHover={{ y: -4 }}
-            className="glass-panel rounded-2xl p-6 relative overflow-hidden group"
+            className="glass-panel rounded-2xl p-4 md:p-6 relative overflow-hidden group"
           >
-            <div className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-5">
+            <div className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-1 md:mb-5">
               Orbit
             </div>
-            <div className="space-y-4">
+            <div className="space-y-1 md:space-y-4">
               {item.stats.map((s) => (
                 <div key={s.label} className="flex items-baseline justify-between border-b border-white/5 pb-2">
                   <span className="text-[11px] tracking-[0.15em] uppercase text-white/45">
@@ -493,8 +493,8 @@ function Constellation({ dept, index }) {
         </span>
       </div>
 
-      <div className="relative" style={{ height: h }}>
-        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="w-full h-auto">
+      <div className="relative">
+        <svg width={w} height="auto" viewBox={`0 0 ${w} ${h}`} className="w-full h-25 md:h-55">
           <defs>
             <linearGradient id={`line-${dept.name}`} x1="0" x2="1" y1="0" y2="1">
               <stop offset="0%" stopColor="#7B4DFF" stopOpacity="0.8" />
@@ -554,14 +554,14 @@ function Constellation({ dept, index }) {
 
 function TeamSection() {
   return (
-    <section className="relative py-40">
+    <section className="relative py-2 md:py-20 lg:py-32 xl:py-40">
       <div className="container mx-auto px-6 md:px-10 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
           transition={{ duration: 1 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
           <div className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-4">
             Our Constellations
@@ -594,53 +594,72 @@ const VALUES = [
 
 function OrbitValues() {
   const [active, setActive] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const ref = useRef(null)
   const inView = useInView(ref, { margin: '-30% 0px -30% 0px' })
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
+
   return (
-    <section ref={ref} className="relative py-40 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-10 max-w-6xl">
+    <section
+      ref={ref}
+      className="relative py-12 md:py-20 lg:py-32 xl:py-40 overflow-hidden"
+    >
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
           transition={{ duration: 1 }}
-          className="text-center mb-24"
+          className="text-center mb-10 md:mb-24"
         >
           <div className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-4">
             Core Values
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-light tracking-tight">
+
+          <h2 className="font-display text-3xl md:text-6xl font-light tracking-tight">
             Planets in <span className="italic">our system.</span>
           </h2>
         </motion.div>
 
-        <div className="relative h-[560px] md:h-[620px] mx-auto max-w-[720px]">
+        <div className="relative h-[430px] sm:h-[500px] md:h-[620px] mx-auto w-full max-w-[340px] sm:max-w-[480px] md:max-w-[720px]">
           {/* Central sun */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40">
+          <div className="absolute left-1/2 top-[45%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7B4DFF] via-[#C084FC] to-[#42D4FF] blur-2xl opacity-70" />
-            <div className="absolute inset-3 rounded-full bg-gradient-to-br from-white via-[#C084FC] to-[#42D4FF] shadow-[0_0_80px_rgba(123,77,255,0.7)]" />
-            <div className="absolute inset-6 rounded-full bg-[#040507] flex items-center justify-center">
+            <div className="absolute inset-2 md:inset-3 rounded-full bg-gradient-to-br from-white via-[#C084FC] to-[#42D4FF] shadow-[0_0_80px_rgba(123,77,255,0.7)]" />
+
+            <div className="absolute inset-5 md:inset-6 rounded-full bg-[#040507] flex items-center justify-center">
               <Image
-                src='/images/b2blogo.png'
-                alt=''
+                src="/images/b2blogo.png"
+                alt=""
                 width={100}
                 height={100}
-                className='object-contain max-w-16'
+                className="object-contain max-w-12 md:max-w-16"
               />
             </div>
           </div>
 
           {/* Orbits + planets */}
           {VALUES.map((v, i) => {
-            const orbitRadius = 150 + i * 40
+            const orbitRadius = isMobile ? 55 + i * 24 : 150 + i * 40
             const duration = 40 + i * 12
             const startAngle = (i * 360) / VALUES.length
 
             return (
               <div
                 key={v.name}
-                className="absolute left-1/2 top-1/2 rounded-full border border-white/40"
+                className="absolute left-1/2 top-[45%] md:top-1/2 rounded-full border border-white/25 md:border-white/40"
                 style={{
                   width: orbitRadius * 2,
                   height: orbitRadius * 2,
@@ -659,9 +678,15 @@ function OrbitValues() {
                 >
                   <motion.div
                     onMouseEnter={() => setActive(i)}
+                    onClick={() => setActive(i)}
                     className="absolute cursor-pointer group"
-                    style={{ left: '100%', top: '50%', transform: 'translate(-50%, -50%)' }}
+                    style={{
+                      left: '100%',
+                      top: '50%',
+                      transform: 'translate(-50%, -50%)',
+                    }}
                     whileHover={{ scale: 1.4 }}
+                    whileTap={{ scale: 1.25 }}
                   >
                     {/* Counter-rotate so label stays upright */}
                     <motion.div
@@ -670,15 +695,17 @@ function OrbitValues() {
                       className="relative flex flex-col items-center"
                     >
                       <div
-                        className="w-4 h-4 rounded-full"
+                        className="w-3 h-3 md:w-4 md:h-4 rounded-full"
                         style={{
                           background: v.color,
                           boxShadow: `0 0 20px ${v.color}, 0 0 40px ${v.color}66`,
                         }}
                       />
+
                       <span
-                        className={`absolute top-6 whitespace-nowrap font-display text-[11px] tracking-[0.15em] uppercase transition-opacity ${active === i ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'
-                          }`}
+                        className={`hidden md:block absolute top-6 whitespace-nowrap font-display text-[11px] tracking-[0.15em] uppercase transition-opacity ${
+                          active === i ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'
+                        }`}
                         style={{ color: v.color }}
                       >
                         {v.name}
@@ -698,12 +725,18 @@ function OrbitValues() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 text-center max-w-md"
+              className="absolute bottom-2 md:bottom-[-15%] left-1/2 -translate-x-1/2 text-center max-w-[280px] md:max-w-md px-3"
             >
-              <div className="font-display text-2xl md:text-3xl font-light" style={{ color: VALUES[active].color }}>
+              <div
+                className="font-display text-2xl md:text-3xl font-light"
+                style={{ color: VALUES[active].color }}
+              >
                 {VALUES[active].name}
               </div>
-              <p className="text-white/60 text-[14px]">{VALUES[active].desc}</p>
+
+              <p className="text-white/60 text-[13px] md:text-[14px] leading-relaxed">
+                {VALUES[active].desc}
+              </p>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -714,7 +747,7 @@ function OrbitValues() {
 
 function FounderMessage() {
   return (
-    <section className="relative py-40">
+    <section className="relative py-10 md:py-20 lg:py-32 xl:py-40">
       <div className="container mx-auto px-6 md:px-10 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 40, rotateX: -8 }}
@@ -785,7 +818,7 @@ function Ending() {
   const galaxyOpacity = useTransform(scrollYProgress, [0.4, 1], [0, 0.7])
 
   return (
-    <section ref={ref} className="relative min-h-[90vh] py-40 flex items-center">
+    <section ref={ref} className="relative md:min-h-[90vh] py-10 md:py-20 lg:py-32 xl:py-40 flex items-center">
       {/*   <motion.div
         style={{ scale: galaxyScale, opacity: galaxyOpacity }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-175 rounded-full pointer-events-none"
@@ -817,7 +850,7 @@ function Ending() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="mt-8 text-white/60 max-w-xl mx-auto text-[15px] md:text-[17px] leading-relaxed font-light"
+          className="mt-4 md:mt-8 text-white/60 max-w-xl mx-auto text-[15px] md:text-[17px] leading-relaxed font-light"
         >
           Every great chapter needs a co-author. Let&rsquo;s bend time together.
         </motion.p>
@@ -827,7 +860,7 @@ function Ending() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="mt-4 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <button className="group relative rounded-full px-7 py-3.5 text-[14px] font-medium bg-white text-[#040507] hover:bg-white/90 transition inline-flex items-center gap-2">
             Start Your Journey With Base2Brand
@@ -844,7 +877,7 @@ function Ending() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, margin: '-20% 0px' }}
           transition={{ duration: 1.5, delay: 0.9 }}
-          className="mt-24 text-[10px] tracking-[0.4em] uppercase text-white/60"
+          className="mt-5 md:mt-24 text-[10px] tracking-[0.4em] uppercase text-white/60"
         >
           Base2Brand · Building tomorrow’s technology today
         </motion.div>

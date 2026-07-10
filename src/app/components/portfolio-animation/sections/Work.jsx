@@ -4,72 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 
 // Portfolio uses static screenshots that expand fullscreen — no live iframes.
-const PROJECTS = [
-  {
-    id: "case-01",
-    n: "CASE 01",
-    tag: "Applied AI risk · Tier‑1 BFSI, Asia‑Pacific",
-    title: "Reimagining underwriting with a multi‑agent decision stack.",
-    metrics: [
-      { v: "61%", l: "drop in turnaround" },
-      { v: "$28M", l: "annualised lift" },
-    ],
-    url: "orbit-underwriting.b2b/case",
-    // Rich fake browser preview
-    preview: {
-      accent: "#F47B52",
-      title: "Orbit Decision Fabric — Underwriting Console",
-      lines: [
-        { label: "Applicants scored today", value: "12,481" },
-        { label: "Auto‑approved", value: "76.3%" },
-        { label: "Escalated to underwriter", value: "9.1%" },
-      ],
-      chart: [22, 34, 30, 42, 38, 55, 60, 58, 66, 70, 68, 78],
-    },
-  },
-  {
-    id: "case-02",
-    n: "CASE 02",
-    tag: "Govtech modernization · Public Healthcare Authority EU",
-    title: "An AI‑native citizen services platform across 11 regions.",
-    metrics: [
-      { v: "9.4M", l: "citizens onboarded" },
-      { v: "-42%", l: "case backlog" },
-    ],
-    url: "citizens.hs‑eu.gov/live",
-    preview: {
-      accent: "#7BC5D9",
-      title: "Citizen Services — Regional Overview",
-      lines: [
-        { label: "Live requests", value: "3,204" },
-        { label: "Median resolution", value: "38 min" },
-        { label: "Backlog vs. Q2", value: "‑42%" },
-      ],
-      chart: [50, 48, 44, 42, 40, 38, 36, 32, 30, 28, 27, 25],
-    },
-  },
-  {
-    id: "case-03",
-    n: "CASE 03",
-    tag: "Industry 4.0 data · Global Manufacturer",
-    title: "Digital twin of the entire supply chain, decision‑graph driven.",
-    metrics: [
-      { v: "17%", l: "OEE improvement" },
-      { v: "-$54M", l: "inventory carry" },
-    ],
-    url: "twin.acme‑global.io",
-    preview: {
-      accent: "#F47B52",
-      title: "SupplyGraph Twin — Global Ops",
-      lines: [
-        { label: "Nodes online", value: "1,204 / 1,206" },
-        { label: "Throughput (24h)", value: "+17.4%" },
-        { label: "Alerts", value: "6 active" },
-      ],
-      chart: [40, 44, 48, 46, 52, 58, 62, 64, 70, 74, 78, 82],
-    },
-  },
-];
+
 
 /**
  * ProjectCase — a single browser card that expands towards viewport as user
@@ -251,8 +186,77 @@ function BrowserWindow({ project }) {
     </div>
   );
 }
-
-export default function Work() {
+const PROJECTS = [
+  {
+    id: "case-01",
+    n: "CASE 01",
+    tag: "Applied AI risk · Tier‑1 BFSI, Asia‑Pacific",
+    title: "Reimagining underwriting with a multi‑agent decision stack.",
+    metrics: [
+      { v: "61%", l: "drop in turnaround" },
+      { v: "$28M", l: "annualised lift" },
+    ],
+    url: "orbit-underwriting.b2b/case",
+    // Rich fake browser preview
+    preview: {
+      accent: "#F47B52",
+      title: "Orbit Decision Fabric — Underwriting Console",
+      lines: [
+        { label: "Applicants scored today", value: "12,481" },
+        { label: "Auto‑approved", value: "76.3%" },
+        { label: "Escalated to underwriter", value: "9.1%" },
+      ],
+      chart: [22, 34, 30, 42, 38, 55, 60, 58, 66, 70, 68, 78],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "Govtech modernization · Public Healthcare Authority EU",
+    title: "An AI‑native citizen services platform across 11 regions.",
+    metrics: [
+      { v: "9.4M", l: "citizens onboarded" },
+      { v: "-42%", l: "case backlog" },
+    ],
+    url: "citizens.hs‑eu.gov/live",
+    preview: {
+      accent: "#7BC5D9",
+      title: "Citizen Services — Regional Overview",
+      lines: [
+        { label: "Live requests", value: "3,204" },
+        { label: "Median resolution", value: "38 min" },
+        { label: "Backlog vs. Q2", value: "‑42%" },
+      ],
+      chart: [50, 48, 44, 42, 40, 38, 36, 32, 30, 28, 27, 25],
+    },
+  },
+  {
+    id: "case-03",
+    n: "CASE 03",
+    tag: "Industry 4.0 data · Global Manufacturer",
+    title: "Digital twin of the entire supply chain, decision‑graph driven.",
+    metrics: [
+      { v: "17%", l: "OEE improvement" },
+      { v: "-$54M", l: "inventory carry" },
+    ],
+    url: "twin.acme‑global.io",
+    preview: {
+      accent: "#F47B52",
+      title: "SupplyGraph Twin — Global Ops",
+      lines: [
+        { label: "Nodes online", value: "1,204 / 1,206" },
+        { label: "Throughput (24h)", value: "+17.4%" },
+        { label: "Alerts", value: "6 active" },
+      ],
+      chart: [40, 44, 48, 46, 52, 58, 62, 64, 70, 74, 78, 82],
+    },
+  },
+];
+export default function Work({
+  title='Selected anonymised cases.',
+  titleLower='Outcomes, not optics.',
+  cardsData={PROJECTS}
+}) {
   return (
     <section
       id="work"
@@ -264,12 +268,12 @@ export default function Work() {
         <div className="max-w-[1180px] mx-auto">
           <div className="eyebrow mb-4">Proof</div>
           <h2 className="font-display text-white text-[38px] md:text-[56px] leading-[0.98] tracking-[-0.035em] max-w-[820px]">
-            Selected anonymised cases.<br />
-            <span className="text-[var(--b2b-text-muted)]">Outcomes, not optics.</span>
+            {title} <br />
+            <span className="text-[var(--b2b-text-muted)]">{titleLower}</span>
           </h2>
         </div>
       </div>
-      {PROJECTS.map((p, i) => (
+      {cardsData.map((p, i) => (
         <ProjectCase key={p.id} project={p} index={i} />
       ))}
     </section>

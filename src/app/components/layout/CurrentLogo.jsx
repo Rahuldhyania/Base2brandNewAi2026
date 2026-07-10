@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
-const DEFAULT_LOGO = "/images/homelogo.png";
+const DEFAULT_LOGO = "/images/homelogov2.png";
 
 const logosList = [
   { slug: "/", logourl: DEFAULT_LOGO },

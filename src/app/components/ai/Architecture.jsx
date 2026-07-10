@@ -17,10 +17,10 @@ const LAYERS = [
   { label: "Business Outcomes", sub: "Measured impact and revenue", accent: true },
   { label: "Decision Layer", sub: "Recommend, act, reverse" },
   { label: "Workflow Layer", sub: "Orchestration & policy" },
-  { label: "Enterprise Systems", sub: "CRM, ERP, ITSM, data lake" },
-  { label: "Knowledge Layer", sub: "RAG, graphs, retrieval" },
-  { label: "Agent Layer", sub: "Multi-agent operations" },
-  { label: "Foundation Models", sub: "GPT-5 · Claude · Gemini · Llama" },
+  // { label: "Enterprise Systems", sub: "CRM, ERP, ITSM, data lake" },
+  // { label: "Knowledge Layer", sub: "RAG, graphs, retrieval" },
+  // { label: "Agent Layer", sub: "Multi-agent operations" },
+  // { label: "Foundation Models", sub: "GPT-5 · Claude · Gemini · Llama" },
 ];
 
 /**

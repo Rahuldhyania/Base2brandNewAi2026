@@ -8,7 +8,9 @@ import StatusChip from "@/components/shopify-solution/site/StatusChip";
 const DASHBOARD_IMAGE =
   "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&h=900&q=85";
 
-export const CommandCenter = () => {
+export const CommandCenter = ({
+  dashboardImage = DASHBOARD_IMAGE,
+}) => {
   return (
     <section
       data-testid="command-center"
@@ -51,7 +53,7 @@ export const CommandCenter = () => {
                 <div className="flex min-w-0 items-center gap-3">
                   <span
                     aria-hidden="true"
-                    className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#95BF47]"
+                    className="h-2.5 w-2.5 shrink-0 rounded-full bg-(--b2b-primary)"
                     style={{
                       boxShadow: "0 0 12px rgba(149,191,71,0.6)",
                     }}
@@ -71,7 +73,7 @@ export const CommandCenter = () => {
               {/* Full-width image */}
               <div className="relative h-[220px] w-full overflow-hidden bg-[#070808] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[560px]">
                 <Image
-                  src={DASHBOARD_IMAGE}
+                  src={dashboardImage}
                   alt="Commerce mission console dashboard preview"
                   fill
                   className="object-cover object-center"

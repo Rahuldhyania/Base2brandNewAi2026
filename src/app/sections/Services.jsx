@@ -3,53 +3,52 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import {
-  Brain,
-  Cpu,
-  Cloud,
-  Workflow,
-  ShieldCheck,
-  LineChart,
+  Megaphone,
+  ShoppingCart,
+  TrendingUp,
+  Bot,
+  Smartphone,
+  Palette,
 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: Brain,
+    icon: Megaphone,
     title: "Performance Marketing",
     desc: "Growth campaigns engineered around revenue, not reach. We plan, launch, optimize, and scale paid media campaigns across high-intent channels with clear performance accountability.",
     points: ["Google Ads", "Meta Ads", "LinkedIn Ads"],
   },
   {
-    icon: Cpu,
+    icon: ShoppingCart,
     title: "Shopify & Ecommerce",
     desc: "Commerce experiences designed to convert traffic into revenue. We build Shopify stores, custom ecommerce experiences, product pages, checkout journeys, and retention systems focused on higher sales and smoother buying experiences.",
     points: ["Shopify Development", "Shopify Plus", "Custom Themes"],
   },
   {
-    icon: Cloud,
+    icon: TrendingUp,
     title: "CRO & Growth Optimization",
     desc: "More conversions from the traffic you already have. We improve landing pages, funnels, user journeys, forms, product pages, checkout flows, and lead-generation systems using data-backed CRO strategies.",
     points: ["Landing Page CRO", "A/B Testing", "Heatmap Analysis"],
   },
   {
-    icon: Workflow,
+    icon: Bot,
     title: "AI Solutions & Automation",
     desc: "AI systems that reduce manual work and improve business efficiency. We build intelligent automations that help brands qualify leads, support customers, personalize journeys, and improve decision-making.",
     points: ["AI Chatbots", "AI Sales Assistants", "Lead Scoring"],
   },
   {
-    icon: ShieldCheck,
+    icon: Smartphone,
     title: "Mobile Apps & Enterprise Platforms",
     desc: "Digital products customers and teams rely on every day. We design and develop mobile apps, portals, CRM systems, ERP workflows, cloud applications, and custom business platforms built for speed, scale, and usability.",
     points: ["Android Apps", "iOS Apps", "CRM Systems"],
   },
   {
-    icon: LineChart,
+    icon: Palette,
     title: "Brand, Creative & Experience",
     desc: "Brands people remember. Experiences customers trust. We create brand identities, social media systems, UI/UX experiences, campaign creatives, content frameworks, and design systems that make growth look as strong as it performs.",
     points: ["Brand Identity", "Creative Campaigns", "UI/UX Design"],
   },
 ];
-
 function ServiceCard({ s, index }) {
   const Icon = s.icon;
   return (

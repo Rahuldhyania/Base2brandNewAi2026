@@ -133,7 +133,7 @@ const ResearchLab = () => {
                         R{String(i + 1).padStart(2, "0")}
                       </span>
                       <div className="min-w-0">
-                        <div className="font-display text-lg sm:text-xl md:text-2xl font-medium tracking-tight">
+                        <div className="font-display text-lg sm:text-xl font-medium tracking-tight">
                           {t.title}
                         </div>
                         <div className="text-xs sm:text-sm text-white/40 mt-1">

@@ -10,6 +10,7 @@ import MissionControlTimeline from "@/components/shopify-solution/site/MissionCo
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 import FinalCTA from "@/components/ai/FinalCTA";
 import { IlluminatedHero } from "@/components/illuminated-hero";
+import Industries from "@/components/ai/Industries";
 
 
 
@@ -93,6 +94,7 @@ const EcommerceSolution = () => {
        badgeLabel={DEFAULT_DOSSIER_CARDS.length}
        eyebrow="PLAYBOOKS · MISSION DOSSIERS"
       />
+      <Industries />
       <MissionControlTimeline />
       <CommandCenter />
       <FinalCTA

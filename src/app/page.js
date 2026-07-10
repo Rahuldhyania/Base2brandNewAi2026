@@ -5,6 +5,7 @@ import { SectionFallback } from "./components/layout/SectionFallback";
 import { DeferredRocketScrollNavigator } from "./components/layout/DeferredRocketScrollNavigator";
 import { Toaster } from "./components/ui/toaster";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import Industries from "@/components/ai/Industries";
 
 
 const ClientFootprint = dynamic(
@@ -27,10 +28,10 @@ const Testimonials = dynamic(
   { loading: () => <SectionFallback minHeight={720} /> },
 );
 
-const Industries = dynamic(
-  () => import("./sections/Industries").then((m) => m.Industries),
-  { loading: () => <SectionFallback minHeight={520} /> },
-);
+// const Industries = dynamic(
+//   () => import("./sections/Industries").then((m) => m.Industries),
+//   { loading: () => <SectionFallback minHeight={520} /> },
+// );
 
 const Innovation = dynamic(
   () => import("./sections/Innovation").then((m) => m.Innovation),
@@ -92,6 +93,7 @@ export default function page() {
         <Services />
         {/* <Solutions /> */}
         <CaseStudies />
+        {/* <Industries /> */}
         <Industries />
         <Testimonials />
         {/* <Innovation /> */}

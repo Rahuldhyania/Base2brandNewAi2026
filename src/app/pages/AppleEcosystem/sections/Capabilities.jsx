@@ -66,11 +66,11 @@ export default function Capabilities() {
             One engineering team. Every Apple surface.
           </h2>
         </div>
-        <p className="text-white/55 max-w-md text-xs sm:text-sm lg:text-base leading-relaxed">
+        {/* <p className="text-white/55 max-w-md text-xs sm:text-sm lg:text-base leading-relaxed">
           Apple Ecosystem Development at Base2Brand is delivered by a single cross-platform
           team — so design language, data layers and intelligence behave consistently across
           every device your customer or workforce uses.
-        </p>
+        </p> */}
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">

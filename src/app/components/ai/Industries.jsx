@@ -106,7 +106,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
           opacity: isActive ? 0.12 : 0.55,
         }}
         transition={{ duration: 0.55 }}
-        className="absolute inset-0 bg-gradient-to-br from-[#6D28D9] via-[#4C1D95] to-[#1E1B4B] mix-blend-color"
+        className="absolute inset-0 bg-gradient-to-br from-[color-mix(in_srgb,var(--b2b-primary)_20%,transparent)] via-[color-mix(in_srgb,var(--b2b-primary)_30%,transparent)] to-[color-mix(in_srgb,var(--b2b-primary)_10%,transparent)] mix-blend-color"
       />
 
       {/* Top vignette */}
@@ -183,10 +183,10 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
         animate={{
           width: isActive ? 26 : 16,
           backgroundColor: isActive
-            ? "#C084FC"
+            ? "var(--b2b-primary)"
             : "rgba(255,255,255,0.25)",
           boxShadow: isActive
-            ? "0 0 14px 2px rgba(192,132,252,0.5)"
+            ? "0 0 14px 2px var(--b2b-primary)"
             : "0 0 0 0 rgba(0,0,0,0)",
         }}
         transition={{ duration: 0.35 }}
@@ -205,7 +205,7 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
           x: isActive ? 0 : -8,
         }}
         transition={{ duration: 0.3 }}
-        className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-[#C084FC]"
+        className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-(--b2b-primary)"
       >
         Use case <ArrowUpRight className="w-3 h-3" />
       </motion.span>
@@ -221,7 +221,10 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
   </motion.button>
 );
 
-const Industries = () => {
+const Industries = ({
+  title='Deployed across regulated, ops-heavy environments.',
+  description='Real production engagements where AI is integrated into systems of record — not pinned on top.'
+}) => {
   const [hovered, setHovered] = useState(INDUSTRIES[0].id);
 
   const cols = [
@@ -237,17 +240,16 @@ const Industries = () => {
       className="relative py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
           <Reveal>
             <ShiningText testId="industries-eyebrow">INDUSTRIES</ShiningText>
             <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium max-w-2xl text-balance">
-              Deployed across regulated, ops-heavy environments.
+              {title}
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-white/50 leading-relaxed">
-              Real production engagements where AI is integrated into systems
-              of record — not pinned on top.
+              {description} 
             </p>
           </Reveal>
         </div>

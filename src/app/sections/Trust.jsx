@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Smartphone,
 } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 const PARTNERS = [
   {
@@ -74,7 +75,7 @@ function Pill({ item }) {
 
   return (
     <div
-      className="px-3 xl:px-5 py-2 xl:py-3 rounded-full border border-line text-mute font-mono-display text-xs sm:text-sm uppercase tracking-[0.18em] whitespace-nowrap hover:text-white hover:border-line-strong transition flex items-center gap-2"
+      className="mx-3 px-3 xl:px-5 py-2 xl:py-3 rounded-full border border-line text-mute font-mono-display text-xs sm:text-sm uppercase tracking-[0.18em] whitespace-nowrap hover:text-white hover:border-line-strong transition flex items-center gap-2"
       data-testid={`trust-pill-${item.text.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
     >
       <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-orange-brand shrink-0" strokeWidth={1.8} />
@@ -121,19 +122,19 @@ export function Trust() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#02030a] to-transparent z-10" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#02030a] to-transparent z-10" />
 
-          <InfiniteSlider gap={16} speed={55} speedOnHover={120}>
+          <Marquee gap={16} speed={55} speedOnHover={120}>
             {PARTNERS.map((item) => (
               <Pill key={item.text} item={item} />
             ))}
-          </InfiniteSlider>
+          </Marquee>
 
           <div className="h-4" />
 
-          <InfiniteSlider gap={16} speed={70} speedOnHover={140} reverse>
+          <Marquee gap={16} speed={70} speedOnHover={140} direction="rtl">
             {[...PARTNERS].reverse().map((item) => (
               <Pill key={`r-${item.text}`} item={item} />
             ))}
-          </InfiniteSlider>
+          </Marquee>
         </div>
       </div>
     </section>

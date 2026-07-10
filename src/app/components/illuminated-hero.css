@@ -146,7 +146,7 @@
 .glow-left {
     position: absolute;
     width: 1800px;
-    height: 788px;
+    height: 1500px;
     border-radius: 9999px;
     pointer-events: none;
     background: radial-gradient(ellipse 53% 68% at 0% 50%, rgba(var(--b2b-primary-rgb), 0.55) 0%, rgba(var(--b2b-primary-rgb), 0.22) 36%, rgba(var(--b2b-primary-rgb), 0.08) 58%, transparent 76%);
@@ -162,7 +162,7 @@
 .glow-right {
     position: absolute;
     width: 1800px;
-    height: 788px;
+    height: 1500px;
     border-radius: 9999px;
     pointer-events: none;
     background: radial-gradient(ellipse 53% 68% at 100% 50%, rgba(var(--b2b-primary-rgb), 0.55) 0%, rgba(var(--b2b-primary-rgb), 0.22) 36%, rgba(var(--b2b-primary-rgb), 0.08) 58%, transparent 76%);

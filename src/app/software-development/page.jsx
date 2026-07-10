@@ -6,10 +6,12 @@ import DevelopmentProcess from "@/components/software-development/DevelopmentPro
 import EngineeringPrinciples from "@/components/software-development/EngineeringPrinciples";
 import FinalCTA from "@/components/software-development/FinalCTA";
 import Hero from "@/components/software-development/Hero";
-import Industries from "@/components/software-development/Industries";
 import ProductsWeBuild from "@/components/software-development/ProductsWeBuild";
 import TechStack from "@/components/software-development/TechStack";
 import WhyBase2Brand from "@/components/software-development/WhyBase2Brand";
+import Work from "@/components/portfolio-animation/sections/Work";
+import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import Industries from "@/components/ai/Industries";
 
 const CARDS = [
   {
@@ -33,12 +35,78 @@ const CARDS = [
     desc: "Shipping consistently is more valuable than endless planning. We move with engineering velocity and rigor.",
   },
 ];
+
+const PROJECTS = [
+  {
+    id: "case-01",
+    n: "CASE 01",
+    tag: "SaaS Engineering · Product Platform",
+    title: "Scaling a SaaS platform for faster onboarding.",
+    metrics: [
+      { v: "-45%", l: "onboarding time" },
+      { v: "Daily", l: "deployment frequency" },
+    ],
+    url: "saas-platform.b2b/case",
+    preview: {
+      accent: "#FF3B30",
+      title: "SaaS Platform — Product Console",
+      lines: [
+        { label: "Active workspaces", value: "4,820" },
+        { label: "Avg. onboarding time", value: "-45%" },
+        { label: "Release frequency", value: "Daily" },
+      ],
+      chart: [28, 34, 39, 45, 52, 58, 64, 69, 73, 78, 84, 91],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "Enterprise Platform · Workforce Systems",
+    title: "Building a workforce platform for distributed teams.",
+    metrics: [
+      { v: "93%", l: "platform adoption" },
+      { v: "42", l: "business workflows" },
+    ],
+    url: "workforce-platform.b2b/live",
+    preview: {
+      accent: "#FF4A3D",
+      title: "Enterprise Workforce — Operations Hub",
+      lines: [
+        { label: "Teams onboarded", value: "42" },
+        { label: "Platform adoption", value: "93%" },
+        { label: "Open workflow issues", value: "18" },
+      ],
+      chart: [22, 27, 33, 41, 49, 57, 63, 71, 76, 82, 88, 93],
+    },
+  },
+  {
+    id: "case-03",
+    n: "CASE 03",
+    tag: "Ecommerce Engineering · Modernization",
+    title: "Modernizing ecommerce for speed and conversion.",
+    metrics: [
+      { v: "3x", l: "transaction throughput" },
+      { v: "+14%", l: "conversion lift" },
+    ],
+    url: "ecommerce-modernization.b2b/app",
+    preview: {
+      accent: "#FF3B30",
+      title: "Ecommerce Modernization — Revenue Layer",
+      lines: [
+        { label: "Transaction throughput", value: "3x" },
+        { label: "Conversion lift", value: "+14%" },
+        { label: "Checkout latency", value: "-62%" },
+      ],
+      chart: [35, 38, 44, 49, 55, 61, 68, 74, 79, 86, 92, 98],
+    },
+  },
+];
 const page = () => {
   return (
     <div className="theme-software-development">
       <main>
         <Hero />
-        <WhyBase2Brand 
+        <WhyBase2Brand
           hightlighttag={'Why Base2Brand '}
           titleUpper={'Why modern software products require'}
           titleLower={'engineering discipline.'}
@@ -46,6 +114,11 @@ const page = () => {
           cardsdata={CARDS}
         />
         <Capabilities />
+        <Work
+          title="Selected software cases."
+          titleLower="Outcomes, not deployments."
+          cardsData={PROJECTS}
+        />
         <ProductsWeBuild />
         <TechStack />
 
@@ -53,6 +126,7 @@ const page = () => {
         <Industries />
         <DevelopmentProcess />
         <CaseStudies />
+        <CommandCenter />
         <EngineeringPrinciples />
         <FinalCTA />
       </main>
