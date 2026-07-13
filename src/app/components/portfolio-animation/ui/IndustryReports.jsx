@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function IndustryReports({ industries }) {
     return (
-        <section className="relative overflow-hidden">
+        <section  className="relative overflow-hidden">
             {/* Background */}
             {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,.08),transparent_65%)]" /> */}
 

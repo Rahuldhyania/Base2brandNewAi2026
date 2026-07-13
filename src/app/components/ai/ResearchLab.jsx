@@ -11,38 +11,38 @@ import { Plus, Minus } from "lucide-react";
 const TOPICS = [
   {
     title: "Agentic Systems",
-    sub: "Architectures for goal-directed AI",
-    desc: "Designing planners, tool routers, and policy boundaries for production agent systems that operate inside enterprise constraints.",
+    sub: "Architectures for goal-directed AI.",
+    desc: "Designing planners, tool routers and policy boundaries for production agent systems that operate inside business constraints.",
   },
   {
     title: "AI Infrastructure",
-    sub: "Composable, governable AI platforms",
-    desc: "Reference architectures, evaluation harnesses, observability primitives, and cost metering for enterprise AI estates.",
+    sub: "Composable, governable AI platforms.",
+    desc: "Building infrastructure that lets businesses deploy, monitor and improve AI systems without locking themselves into one model or workflow.",
   },
   {
     title: "Voice Intelligence",
-    sub: "Low-latency conversational systems",
-    desc: "Streaming ASR/TTS pipelines, dialog policy, telephony bridges, and high-fidelity voice agents for customer operations.",
+    sub: "Low-latency conversational systems.",
+    desc: "Researching voice agents for sales calls, service support, appointment booking, customer intake and real-time assistance.",
   },
   {
     title: "Enterprise Retrieval",
-    sub: "Knowledge graphs and hybrid RAG",
-    desc: "Hybrid retrieval combining vector, graph, and structured stores for grounded, citable, and permissioned answers at scale.",
+    sub: "Knowledge graphs and hybrid RAG.",
+    desc: "Improving how AI systems search, understand and respond using internal documents, product data, policies and customer information.",
   },
   {
     title: "Autonomous Operations",
-    sub: "Closed-loop decision systems",
-    desc: "Systems that observe, decide, and act with explainability, reversibility, and continuous outcome measurement.",
+    sub: "Closed-loop decision systems.",
+    desc: "Designing workflows where AI can recommend, trigger, execute and report actions while keeping human control where it matters.",
   },
   {
     title: "Digital Twins + AI",
-    sub: "Simulation-coupled intelligence",
-    desc: "Coupling operational digital twins with agentic decisioning for industrial and supply-chain environments.",
+    sub: "Simulation-coupled intelligence.",
+    desc: "Exploring how businesses can model processes, forecast outcomes and test decisions before pushing them into production.",
   },
   {
     title: "Industrial AI",
-    sub: "Edge, telemetry, and physical operations",
-    desc: "Applied AI for plants, fleets, and field operations — bridging predictive models with autonomous workflows.",
+    sub: "Edge, telemetry and physical operations.",
+    desc: "Researching AI automation for operational environments where speed, monitoring and real-world constraints matter.",
   },
 ];
 
@@ -98,8 +98,7 @@ const ResearchLab = () => {
                 What we&apos;re researching.
               </h2>
               <p className="mt-6 text-white/55 leading-relaxed">
-                Active research lines feeding our enterprise engagements. Where
-                we&apos;re investing engineering and design capital this year.
+                Active research lines feeding our enterprise AI engagements — where we are investing engineering, automation and design capital this year.
               </p>
               <div
                 data-testid="research-thinking"
@@ -110,7 +109,7 @@ const ResearchLab = () => {
                   <span className="absolute inset-0 w-2 h-2 rounded-full bg-[#A855F7] animate-ping" />
                 </span>
                 <ShiningText dot={false} className="text-xs">
-                  Base2Brand AI is thinking
+                 Base2Brand AI is thinking
                 </ShiningText>
               </div>
             </Reveal>

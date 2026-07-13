@@ -2,10 +2,10 @@
 import Reveal from "@/components/site/Reveal";
 
 const METRICS = [
-  { v: "250+", l: "AI Deployments" },
-  { v: "120+", l: "Enterprise Integrations" },
+  { v: "250+", l: "AI Workflows Designed" },
+  { v: "120+", l: "Business Integrations" },
   { v: "15+", l: "Industries Served" },
-  { v: "24/7", l: "Autonomous Operations" },
+  { v: "24/7", l: "AI-Powered Operations" },
 ];
 
 const MetricsBar = () => {

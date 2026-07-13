@@ -30,7 +30,7 @@ function ProjectCase({ project, index }) {
       data-testid={extraData.work.project(project.id)}
       className="relative flex items-center px-6 md:px-12 py-12"
     >
-      <div className="max-w-[1180px] mx-auto w-full grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 md:gap-16 items-center">
+      <div className="max-w-[1180px] mx-auto w-full grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-8 items-center">
         {/* Copy side */}
         <div className={index % 2 === 1 ? "md:order-2" : ""}>
           <div className="flex items-center gap-3 mb-6">

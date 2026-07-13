@@ -61,9 +61,9 @@ const MENU = [
     label: "Work",
     href: "#cases",
     items: [
-      { label: "Case Studies", href: "#cases" },
+      { label: "Case Studies", href: "/case-study" },
       { label: "Portfolio", href: "/portfolio" },
-      { label: "Success Stories", href: "#voices" },
+      { label: "Success Stories", href: "/success-stories" },
     ],
   },
   {
@@ -71,10 +71,10 @@ const MENU = [
     href: "#insights",
     items: [
       { label: "Blog", href: "/resources-catgeories" },
-      { label: "AI Insights", href: "#insights" },
-      { label: "GEO Insights", href: "#insights" },
-      { label: "Industry Reports", href: "#insights" },
-      { label: "RFP & Tender Insights", href: "#insights" },
+      { label: "AI Insights", href: "/resources-catgeories#library" },
+      { label: "GEO Insights", href: "/resources-catgeories#geoinsights" },
+      { label: "Industry Reports", href: "/resources-catgeories#library" },
+      { label: "RFP & Tender Insights", href: "/resources-catgeories#library" },
     ],
   },
   {

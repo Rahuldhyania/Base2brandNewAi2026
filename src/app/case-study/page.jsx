@@ -1,11 +1,9 @@
-import React from 'react'
+import CaseStudyWrap from "./CaseStudyWrap";
 
 const page = () => {
     return (
-        <div>
-            hello
-        </div>
-    )
-}
+        <CaseStudyWrap />
+    );
+};
 
-export default page
+export default page;

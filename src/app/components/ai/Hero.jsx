@@ -75,8 +75,8 @@ const Hero = () => {
               transition={{ duration: 0.9, delay: 0.1 }}
               className="mt-4 font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance"
             >
-              We engineer AI systems that{" "}
-              <span className="text-white/95">operate businesses,</span>{" "}
+              We engineer AI automation systems 
+              <span className="text-white/95">that run workflows,</span>{" "}
               <span className="bg-gradient-to-br from-[#C084FC] via-[#A855F7] to-[#6D28D9] bg-clip-text text-transparent">
                 not demos.
               </span>
@@ -89,9 +89,7 @@ const Hero = () => {
               transition={{ duration: 0.9, delay: 0.2 }}
               className="mt-4 text-lg sm:text-xl text-white/55 max-w-2xl"
             >
-              Agentic workflows, enterprise copilots, voice intelligence,
-              decision systems, and autonomous operations — designed for
-              measurable outcomes at scale.
+             Base2Brand delivers AI automation services, AI agent development, enterprise AI solutions and generative AI solutions built to improve operations, qualify leads, support customers, automate decisions and scale business performance.
             </motion.p>
 
             <motion.div
@@ -127,9 +125,11 @@ const Hero = () => {
             >
               <span>Enterprise Grade</span>
               <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
-              <span>SOC 2 Ready</span>
+              <span>Workflow-Ready </span>
               <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
               <span>Production Deployments</span>
+              <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
+               <span>Outcome-Focused</span>
             </motion.div>
           </div>
 

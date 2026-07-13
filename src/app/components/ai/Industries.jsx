@@ -9,42 +9,42 @@ const INDUSTRIES = [
   {
     id: "automotive",
     name: "Automotive",
-    use: "Dealer ops copilots, inventory intelligence, voice qualification.",
+    use: "Dealer operations copilots, inventory intelligence, lead qualification and voice-based customer follow-up.",
     image:
       "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=70",
   },
   {
     id: "manufacturing",
     name: "Manufacturing",
-    use: "Predictive ops, digital twins, agentic quality workflows.",
+    use: "Predictive workflows, quality checks, document automation, supplier coordination and operational reporting.",
     image:
       "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=70",
   },
   {
     id: "healthcare",
     name: "Healthcare",
-    use: "Clinical knowledge retrieval, patient intake, compliance automation.",
+    use: "Patient intake automation, appointment workflows, knowledge retrieval, compliance-friendly support and CRM-connected follow-up.",
     image:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=70",
   },
   {
     id: "logistics",
     name: "Logistics",
-    use: "Network optimization, shipment exceptions, autonomous dispatch.",
+    use: "Shipment updates, dispatch workflows, exception handling, customer communication and operational intelligence.",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=70",
   },
   {
     id: "retail",
-    name: "Retail",
-    use: "Conversational commerce, merchandising agents, fraud copilots.",
+    name: "Retail & Ecommerce",
+    use: "Conversational commerce, Shopify automation, product recommendation systems, support agents, CRO insights and retention workflows.",
     image:
       "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&q=70",
   },
   {
     id: "finserv",
     name: "Financial Services",
-    use: "Underwriting assistants, KYC automation, advisor copilots.",
+    use: "Lead qualification, document intelligence, KYC workflow support, advisor copilots and risk-aware automation.",
     image:
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=70",
   },
@@ -58,7 +58,7 @@ const INDUSTRIES = [
   {
     id: "education",
     name: "Education",
-    use: "Adaptive learning, faculty copilots, research retrieval.",
+    use: "Student inquiry automation, course recommendation, admission workflows, learning support and CRM follow-up systems.",
     image:
       "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=70",
   },
@@ -222,8 +222,8 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
 );
 
 const Industries = ({
-  title='Deployed across regulated, ops-heavy environments.',
-  description='Real production engagements where AI is integrated into systems of record — not pinned on top.'
+  title='Deployed across growth-heavy and operations-heavy environments.',
+  description='Base2Brand builds AI automation services and enterprise AI solutions for industries where speed, accuracy and conversion matter.'
 }) => {
   const [hovered, setHovered] = useState(INDUSTRIES[0].id);
 

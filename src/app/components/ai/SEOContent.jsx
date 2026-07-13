@@ -13,70 +13,70 @@ import TweetCard from "@/components/site/TweetCard";
 
 const POSTS = [
   {
-    name: "Base2Brand AI",
-    handle: "base2brand_ai",
+    name: "Sophia Turner",
+    handle: "sophia_turner",
     avatar:
       "https://customer-assets.emergentagent.com/job_2bd3e011-646d-42cd-a500-e99bb7156ca2/artifacts/i1n9v7zu_image.png",
     verified: true,
     body:
-      "Enterprise AI solutions are moving past isolated copilots.\n\nThe shift is from features → infrastructure: an intelligence layer integrated into systems of record, governed end-to-end, measured by business outcomes — not pilots.\n\nThis is the new operating model.",
-    date: "Mon Oct 14 14:30:00 +0000 2025",
+      "Chief Growth Officer · UK D2C Brand\n\nWe had tools everywhere — CRM, Shopify, ads, support, email — but nothing worked as one system.\n\nBase2Brand brought the intelligence layer together with AI automation services that connected our growth workflows, improved response speed and helped the team focus on decisions instead of repetitive tasks.\n\nThat is when AI started feeling useful.",
+    date: "Tue Oct 14 20:00:00 +0000 2025",
     likes: 4280,
     url: "https://x.com/",
   },
   {
-    name: "Sara Mitchell",
-    handle: "sara_architects",
+    name: "James Walker",
+    handle: "james_walker",
     avatar: "https://i.pravatar.cc/96?img=47",
     verified: true,
     body:
-      "Modern **AI agent development** is past the function-calling demo era.\n\nProduction agents need: explicit planners, tool routing, retrieval grounding, and policy boundaries.\n\nCompose them into **multi-agent systems** with shared memory + governance — and software starts to *plan*, not just respond.",
-    date: "Tue Oct 22 09:12:00 +0000 2025",
+      "Founder · UK Ecommerce Brand\n\nBase2Brand helped us move from basic automation to a proper AI-led growth system.\n\nTheir AI automation services connected our Shopify store, customer support and marketing workflows — giving our team faster responses, better insights and cleaner execution.\n\nIt felt practical, not experimental.",
+    date: "Wed Oct 22 14:42:00 +0000 2025",
     likes: 1830,
     url: "https://x.com/",
   },
   {
-    name: "Dr. Marcus Chen",
-    handle: "marcus_rag",
+    name: "Emily Carter",
+    handle: "emily_carter",
     avatar: "https://i.pravatar.cc/96?img=12",
     verified: true,
     body:
-      "Reliable enterprise agents need grounded knowledge.\n\n**RAG development** at scale is not just vector search — it's hybrid retrieval (vector + graph + structured) with rerankers and strict permissioning.\n\nPaired with **MCP integration**, agents access tools/data through governed interfaces. Capability compounds.",
-    date: "Thu Nov 06 17:48:00 +0000 2025",
+      "Marketing Director · US Healthcare Brand\n\nWe needed more than a chatbot. We needed a system that could qualify inquiries, support follow-ups and reduce manual work.\n\nBase2Brand built a clear generative AI solution around our customer journey — structured, measurable and easy for our team to use daily.",
+    date: "Mon Nov 03 11:15:00 +0000 2025",
     likes: 2412,
     url: "https://x.com/",
   },
   {
-    name: "Priya Patel",
-    handle: "priya_voice_ops",
+    name: "Daniel Harris",
+    handle: "daniel_harris",
     avatar: "https://i.pravatar.cc/96?img=44",
     verified: true,
     body:
-      "**Voice AI development** for the enterprise demands low-latency streaming pipelines, telephony bridges, dialog policy, and graceful hand-offs.\n\nCombined with **AI automation services** orchestrating cross-system workflows, voice moves from contact-center pilots → production revenue + service systems.",
-    date: "Mon Nov 18 11:05:00 +0000 2025",
+      "Product Lead · US SaaS Company\n\nTheir approach to AI agent development was refreshingly serious.\n\nNo demo-first thinking. They mapped the workflow, defined guardrails, connected the tools and built agents that actually support sales and customer success operations.\n\nThat made adoption much easier.",
+    date: "Tue Nov 11 16:20:00 +0000 2025",
     likes: 1576,
     url: "https://x.com/",
   },
   {
-    name: "James Okonkwo",
-    handle: "james_copilots",
+    name: "Olivia Bennett",
+    handle: "olivia_bennett",
     avatar: "https://i.pravatar.cc/96?img=33",
     verified: false,
     body:
-      "**Enterprise copilots** are department-specific intelligence systems: sales, ops, support, engineering, finance.\n\nGrounded in private context. Gated by role. Instrumented for outcomes.\n\nWhen commercial tools can't match specificity or governance — **custom AI software** wins on economics + control.",
-    date: "Fri Nov 29 15:20:00 +0000 2025",
+      "Head of Operations · UK Retail Brand\n\nBase2Brand understood the operational side of AI.\n\nThey helped us automate repetitive support tasks, improve internal knowledge access and create faster handoffs between teams using AI automation services designed around real business pressure.\n\nLess noise. More execution.",
+    date: "Wed Nov 19 18:10:00 +0000 2025",
     likes: 3104,
     url: "https://x.com/",
   },
   {
-    name: "Base2Brand AI",
-    handle: "base2brand_ai",
+    name: "Michael Anderson",
+    handle: "michael_anderson",
     avatar:
       "https://customer-assets.emergentagent.com/job_2bd3e011-646d-42cd-a500-e99bb7156ca2/artifacts/i1n9v7zu_image.png",
     verified: true,
     body:
-      "The most consequential **generative AI solutions** are not the loudest demos.\n\nThey are engagements where **AI consulting**, software engineering, and operational design are delivered as one practice — strategy → architecture → build → deployment → governance → continuous optimization.\n\nThat's our model.",
-    date: "Wed Dec 11 08:45:00 +0000 2025",
+      "CEO · US Professional Services Firm\n\nWhat stood out was how clearly they connected AI to business outcomes.\n\nTheir enterprise AI solutions helped us improve lead handling, automate internal workflows and use generative AI solutions without losing control of quality or process.\n\nThat is the difference between AI hype and AI that works.",
+    date: "Tue Dec 02 09:35:00 +0000 2025",
     likes: 5621,
     url: "https://x.com/",
   },
@@ -95,15 +95,13 @@ const SEOContent = () => {
               testId="seo-eyebrow"
               className="justify-center mx-auto"
             >
-              ENTERPRISE AI · NOTES FROM THE FIELD
+              AI MARKET SIGNALS 
             </ShiningText>
             <h2 className="mt-4 sm:mt-5 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-[-0.03em] font-medium text-balance">
-              Enterprise AI Solutions, Agentic AI, and the New Operating Model.
+              What leaders are saying about AI that actually works.
             </h2>
             <p className="mt-5 text-white/55 leading-relaxed">
-              Short reads from our architects on building enterprise AI as
-              infrastructure — agentic systems, RAG, voice, copilots, custom AI
-              software, and the consulting model that wraps it.
+            Real transformation does not come from adding AI as a feature. It happens when AI automation services, AI agent development, enterprise AI solutions and generative AI solutions are connected to the workflows, data, teams and systems that already run the business.
             </p>
           </Reveal>
         </div>

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { Send, CheckCircle2 } from "lucide-react";
+import ProjectContactForm from "@/components/ui/ProjectContactForm";
+import Image from "next/image";
 
 const INITIAL = { name: "", email: "", company: "", message: "" };
 
@@ -76,118 +78,57 @@ export function FinalCTA() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1.05fr_1fr] gap-6 md:gap-12 lg:gap-20 items-start">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-xs font-mono-display uppercase tracking-[0.25em] text-mute">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
-            Start a transformation
-          </div>
-          <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
-            Tell us where growth is stuck. We’ll show you how to unlock it.
-          </h2>
-          <p className="mt-5 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
-            Need better leads, ROAS, conversions, CRO, automation or a digital product? We’ll map the growth system your brand needs next.
-          </p>
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1.05fr_1fr] gap-6 items-start">
 
-          <ul className="mt-3 space-y-2 text-white/85 text-sm sm:text-base">
-            {[
-              "No generic proposal.",
-              "No confusing discovery process.",
-              "Just a clear, practical plan built around your business goals.",
-            ].map((p) => (
-              <li key={p} className="flex items-center gap-3">
-                <span className="grid place-items-center h-5 w-5 rounded-full bg-orange-brand/15 text-orange-brand">
-                  <CheckCircle2 size={14} />
-                </span>
-                {p}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        <motion.form
-          onSubmit={onSubmit}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          data-testid="contact-form"
-          className="relative rounded-3xl border border-line-strong bg-[#04061a]/80 px-6 py-10 backdrop-blur-md glow-orange"
-        >
-          <div className="grid sm:grid-cols-2 gap-4">
-            <Field
-              label="Your name"
-              value={form.name}
-              onChange={update("name")}
-              testId="contact-name"
-              placeholder="Alex Morgan"
-            />
-            <Field
-              label="Work email"
-              value={form.email}
-              onChange={update("email")}
-              testId="contact-email"
-              placeholder="alex@company.com"
-              type="email"
-            />
-          </div>
-          <div className="mt-4">
-            <Field
-              label="Company"
-              value={form.company}
-              onChange={update("company")}
-              testId="contact-company"
-              placeholder="Acme Industries"
-            />
-          </div>
-          <div className="mt-4">
-            <label className="block text-xs font-mono-display uppercase tracking-[0.22em] text-mute mb-2">
-              Your brief
-            </label>
-            <textarea
-              value={form.message}
-              onChange={update("message")}
-              data-testid="contact-message"
-              rows={5}
-              placeholder="What's broken, what's possible, what 'good' looks like in 6 months."
-              className="w-full bg-[#02030a] border border-line rounded-2xl px-4 py-3 text-white placeholder:text-mute/60 focus:border-orange-brand/60 focus:outline-none focus:ring-1 focus:ring-orange-brand/40 transition resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={submitting || sent}
-            data-testid="contact-submit"
-            className="mt-6 w-full inline-flex items-center justify-center gap-3 rounded-full bg-orange-brand font-semibold px-6 py-4 hover:brightness-110 transition disabled:opacity-60 disabled:cursor-not-allowed"
+        <div className="h-full flex items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8 }}
           >
-            {sent ? (
-              <>
-                <CheckCircle2 size={18} /> Brief received
-              </>
-            ) : submitting ? (
-              "Sending..."
-            ) : (
-              <>
-                Send brief <Send size={16} />
-              </>
-            )}
-          </button>
+            <div className="text-xs font-mono-display uppercase tracking-[0.25em] text-mute">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
+              Start a transformation
+            </div>
+            <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
+              Tell us where growth is stuck. We’ll show you how to unlock it.
+            </h2>
+            <p className="mt-5 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
+              Need better leads, ROAS, conversions, CRO, automation or a digital product? We’ll map the growth system your brand needs next.
+            </p>
 
-          <p className="mt-4 text-xs text-mute text-center">
-            Or write to{" "}
-            <a
-              href="mailto:hello@base2brand.com"
-              className="text-white hover:text-orange-brand transition"
-            >
-              hello@base2brand.com
-            </a>
-          </p>
-        </motion.form>
+            <ul className="mt-3 space-y-2 text-white/85 text-sm sm:text-base">
+              {[
+                "No generic proposal.",
+                "No confusing discovery process.",
+                "Just a clear, practical plan built around your business goals.",
+              ].map((p) => (
+                <li key={p} className="flex items-center gap-3">
+                  <span className="grid place-items-center h-5 w-5 rounded-full bg-orange-brand/15 text-orange-brand">
+                    <CheckCircle2 size={14} />
+                  </span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+
+            {/* <div>
+            <Image
+             src={'/images/contact-us-image.png'}
+             alt="Contact us"
+             width={500}
+             height={500}
+            />
+          </div> */}
+          </motion.div>
+        </div>
+
+
+
+        <div>
+          <ProjectContactForm />
+        </div>
       </div>
     </section>
   );

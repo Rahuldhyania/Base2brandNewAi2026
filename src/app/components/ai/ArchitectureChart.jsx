@@ -241,7 +241,7 @@ const ArchitectureChart = () => {
     <div className="w-full">
       <div className="flex items-center justify-between mb-4">
         <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/40">
-          Capability deployment — last 8 quarters
+         AI CAPABILITY DEPLOYMENT — LAST 8 QUARTERS
         </div>
         <div className="font-mono text-xs tracking-[0.25em] uppercase text-white/30 hidden sm:block">
           Illustrative · indexed units

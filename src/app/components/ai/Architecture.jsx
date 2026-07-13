@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useRef } from "react";
 import {
   motion,
@@ -14,9 +14,19 @@ import BackgroundPaths from "@/components/site/BackgroundPaths";
 import ArchitectureChart from "@/components/ai/ArchitectureChart";
 
 const LAYERS = [
-  { label: "Business Outcomes", sub: "Measured impact and revenue", accent: true },
-  { label: "Decision Layer", sub: "Recommend, act, reverse" },
-  { label: "Workflow Layer", sub: "Orchestration & policy" },
+  {
+    label: "L07 — Business Outcomes",
+    sub: "Revenue, efficiency, speed and customer experience.",
+    accent: true,
+  },
+  {
+    label: "L06 — Decision Layer",
+    sub: "Recommendations, actions and workflow intelligence.",
+  },
+  {
+    label: "L05 — Workflow Layer",
+    sub: "Task orchestration, approvals and automation logic.",
+  },
   // { label: "Enterprise Systems", sub: "CRM, ERP, ITSM, data lake" },
   // { label: "Knowledge Layer", sub: "RAG, graphs, retrieval" },
   // { label: "Agent Layer", sub: "Multi-agent operations" },
@@ -39,17 +49,17 @@ const LayerCard = ({ layer, index, total, scrollProgress }) => {
   const opacity = useTransform(
     scrollProgress,
     [activationStart - 0.05, activationStart, 1],
-    [0.55, 1, 1]
+    [0.55, 1, 1],
   );
   const glow = useTransform(
     scrollProgress,
     [activationStart - 0.05, activationStart, activationEnd, 1],
-    [0, 1, 0.35, 0.35]
+    [0, 1, 0.35, 0.35],
   );
   const x = useTransform(
     scrollProgress,
     [activationStart, activationEnd],
-    [-8, 0]
+    [-8, 0],
   );
 
   return (
@@ -130,16 +140,26 @@ const Architecture = () => {
                 A stack built for systems that operate the business.
               </h2>
               <p className="mt-6 text-white/55 leading-relaxed">
-                Each layer is independently observable, governable, and
-                replaceable — so your enterprise compounds capability across
-                models, agents, knowledge, and decisioning.
+                AI becomes powerful when every layer is connected, controlled
+                and measurable. Our enterprise AI solutions are built across
+                models, agents, data, workflows and business systems — so your
+                AI automation services can scale without becoming fragile.
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  ["Composable", "Swap models, agents, or retrievers without rewiring."],
-                  ["Governed", "Policies, audit, RBAC, and observability native."],
-                  ["Measurable", "Outcome metrics tied to workflows, not vanity."],
+                  [
+                    "Composable",
+                    "Swap models, agents, prompts, tools or retrievers without rebuilding the entire system.",
+                  ],
+                  [
+                    "Governed",
+                    "Policies, approvals, user roles, audit trails and observability built into the workflow.",
+                  ],
+                  [
+                    "Measurable",
+                    "Every automation is tied to business outcomes — leads qualified, hours saved, response time reduced, revenue influenced.",
+                  ],
                 ].map(([k, v], i) => (
                   <motion.div
                     key={k}
