@@ -1,11 +1,14 @@
 import dynamic from "next/dynamic";
 import { Hero } from "./sections/Hero";
-import { Trust } from "./sections/Trust";
 import { SectionFallback } from "./components/layout/SectionFallback";
 import { DeferredRocketScrollNavigator } from "./components/layout/DeferredRocketScrollNavigator";
 import { Toaster } from "./components/ui/toaster";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 import Industries from "@/components/ai/Industries";
+import TrustSection from "./sections/Trust";
+import GrowthSystem from "./sections/GrowthSystem";
+import ClientFeedback from "./sections/ClientFeedback";
+import FAQ from "./sections/FAQ";
 
 
 const ClientFootprint = dynamic(
@@ -76,6 +79,7 @@ const SECTIONS = [
   { id: "govt", label: "Public Impact" },
   { id: "global", label: "Global Footprint" },
   { id: "insights", label: "Signals & Insights" },
+  { id: "faq", label: "FAQ" },
   { id: "contact", label: "Let's Build Together" },
 ];
 
@@ -88,17 +92,20 @@ export default function page() {
       <DeferredRocketScrollNavigator sections={SECTIONS} />
       <main>
         <Hero />
-        <Trust />
+        <TrustSection />
+        <GrowthSystem />
         <ClientFootprint />
+        <ClientFeedback />
         <Services />
-        {/* <Solutions /> */}
+                 {/* <Solutions /> */}
         <CaseStudies />
-        {/* <Industries /> */}
+                 {/* <Industries /> */}
         <Industries />
-        <Testimonials />
-        {/* <Innovation /> */}
+        {/* <Testimonials /> */}
+                   {/* <Innovation /> */}
         <GovtNGO />
         <CommandCenter />
+        <FAQ />
         <GlobalPresence />
         <Insights />
         <LandingZone />

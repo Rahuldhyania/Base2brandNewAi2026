@@ -1,0 +1,117 @@
+import React from "react";
+import Image from "next/image";
+
+const practices = [
+  {
+    title: "Performance Marketing",
+    description:
+      "Growth campaigns engineered around revenue, not reach. We plan, launch, optimize, and scale paid media campaigns across high-intent channels with clear performance accountability.",
+    points: ["Google Ads", "Meta Ads", "LinkedIn Ads"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+  {
+    title: "Shopify & Ecommerce",
+    description:
+      "Commerce experiences designed to convert traffic into revenue. We build Shopify stores, custom ecommerce experiences, product pages, checkout journeys, and retention systems focused on higher sales and smoother buying experiences.",
+    points: ["Shopify Development", "Shopify Plus", "Custom Themes"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+  {
+    title: "CRO & Growth Optimization",
+    description:
+      "More conversions from the traffic you already have. We improve landing pages, funnels, user journeys, forms, product pages, checkout flows, and lead-generation systems using data-backed CRO strategies.",
+    points: ["Landing Page CRO", "A/B Testing", "Heatmap Analysis"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+  {
+    title: "AI Solutions & Automation",
+    description:
+      "AI systems that reduce manual work and improve business efficiency. We build intelligent automations that help brands qualify leads, support customers, personalize journeys, and improve decision-making.",
+    points: ["AI Chatbots", "AI Sales Assistants", "Lead Scoring"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+  {
+    title: "Mobile Apps & Enterprise Platforms",
+    description:
+      "Digital products customers and teams rely on every day. We design and develop mobile apps, portals, CRM systems, ERP workflows, cloud applications, and custom business platforms built for speed, scale, and usability.",
+    points: ["Android Apps", "iOS Apps", "CRM Systems"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+  {
+    title: "Brand, Creative & Experience",
+    description:
+      "Brands people remember. Experiences customers trust. We create brand identities, social media systems, UI/UX experiences, campaign creatives, content frameworks, and design systems that make growth look as strong as it performs.",
+    points: ["Brand Identity", "Creative Campaigns", "UI/UX Design"],
+    icon: "/images/growthcard_backimage1.png",
+  },
+];
+
+const GrowthSystem = () => {
+  return (
+    <section className="py-20 px-5 sm:px-8 bg-[#02030a]">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight">
+            SIX PRACTICES
+            <span className="block text-orange-brand">ONE GROWTH SYSTEM</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {practices.map((practice, index) => (
+            <div
+              key={index}
+              className="border-2 border-white/10 rounded-t-4xl rounded-b-[45px] p-3"
+            >
+              <div
+                className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end"
+                style={{ backgroundImage: `url(/images/growth_card_bg.png)` }}
+              >
+                <div className="absolute top-4 left-0 w-full flex justify-center">
+                  <div>
+                    <Image
+                      src={practice.icon}
+                      alt="growthCard_icon"
+                      width={280}
+                      height={160}
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="relative h-[72%]">
+                  <div className="relative z-20 p-4">
+                    <h3 className="text-[#FF9041] text-[25px] leading-[1.08] font-medium max-w-[180px]">
+                      {practice.title}
+                    </h3>
+                    <p className="text-[15px] text-white pt-3">
+                      {practice.description}
+                    </p>
+
+                    <div className="pt-2">
+                      {practice.points.map((item, pointIndex) => (
+                        <div key={pointIndex}>
+                          <span className="text-white text-[17px] ">
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <Image
+                    src={"/images/growthCard_poligun.png"}
+                    alt="growthCard_poligun"
+                    width={1000}
+                    height={500}
+                    className="object-cover absolute -bottom-px right-0 z-10"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GrowthSystem;

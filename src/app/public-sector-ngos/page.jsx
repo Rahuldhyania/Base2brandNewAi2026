@@ -9,6 +9,7 @@ import { Stats } from "@/components/PublicSectorNgo/Stats";
 import { Testimonials } from "@/components/PublicSectorNgo/Testimonials";
 import { WhyUs } from "@/components/PublicSectorNgo/WhyUs";
 import { FinalCTA } from "@/components/PublicSectorNgo/FinalCTA";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -35,6 +36,15 @@ const page = () => {
       <Testimonials />
       <WhyUs />
       <FinalCTA />
+      <div>
+        <Image
+         src={'/images/base2brandLLC.png'}
+         alt="base2brandLLC"
+         width={1500}
+         height={1500}
+         className="object-contain mx-auto"
+        />
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { SectionHeader } from "../components/layout/SectionHeader";
 import { DottedWorldMap } from "../components/visual/DottedWorldMap";
 
 const LOCATIONS = [
-  { city: "Pune", country: "India", lat: -1.6139, lng: 84.209, role: "Global HQ" },
+  { city: "Pune", country: "India", lat: -1.6139, lng: 83.209, role: "Global HQ" },
   { city: "Chandigarh", country: "India", lat: 8.7333, lng: 81.7794, role: "Engineering Hub" },
   // { city: "Bengaluru", country: "India", lat: -2.9716, lng: 83.5946, role: "AI Studio" },
   { city: "Utah", country: "United States", lat: 40.7608, lng: -111.891, role: "Americas Delivery" },
