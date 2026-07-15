@@ -19,7 +19,7 @@ const page = () => {
 
   return (
     <>
-      <StarField density={isMobile ? "med" : "high"} />
+      {/* <StarField density={isMobile ? "med" : "high"} />
       <main
         ref={containerRef}
         className="relative overflow-hidden"
@@ -39,8 +39,8 @@ const page = () => {
         <Work />
         <Resources />
         <About />
-        <Contact />
-      </main>
+        <Contact /> 
+      </main>*/}
     </>
   );
 };
