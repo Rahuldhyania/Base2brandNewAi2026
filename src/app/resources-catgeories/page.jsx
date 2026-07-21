@@ -14,6 +14,7 @@ import AsteroidBelt from '@/components/resourcesCatgeories/nebula/AsteroidBelt';
 import NewsletterDome from '@/components/resourcesCatgeories/nebula/NewsletterDome';
 import IndustryReports from '@/components/portfolio-animation/ui/IndustryReports';
 import MissionDossierFan from '@/components/ui/MissionDossierFan';
+import { industriesWithSlug } from '@/components/portfolio-animation/data/industriesData';
 
 
 const DEFAULT_DOSSIER_CARDS = [
@@ -96,96 +97,7 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
 
 
 
-const industries = [
-    {
-        id: 1,
-        code: "IND-01",
-        title: "Healthcare",
-        icon: "🏥",
-        reports: 48,
-        growth: "+12%",
-        status: "Active",
-        color: "from-cyan-500/10 via-cyan-500/5 to-transparent",
-        trend: [30, 42, 55, 48, 65, 82, 95],
-    },
-    {
-        id: 2,
-        code: "IND-02",
-        title: "Finance",
-        icon: "💳",
-        reports: 36,
-        growth: "+8%",
-        status: "Growing",
-        color: "from-violet-500/10 via-violet-500/5 to-transparent",
-        trend: [22, 34, 48, 58, 52, 70, 82],
-    },
-    {
-        id: 3,
-        code: "IND-03",
-        title: "Retail",
-        icon: "🛍️",
-        reports: 29,
-        growth: "+15%",
-        status: "Trending",
-        color: "from-emerald-500/10 via-emerald-500/5 to-transparent",
-        trend: [18, 28, 36, 48, 62, 78, 88],
-    },
-    {
-        id: 4,
-        code: "IND-04",
-        title: "Manufacturing",
-        icon: "🏭",
-        reports: 18,
-        growth: "+5%",
-        status: "Active",
-        color: "from-orange-500/10 via-orange-500/5 to-transparent",
-        trend: [12, 18, 28, 36, 42, 55, 66],
-    },
-    {
-        id: 5,
-        code: "IND-05",
-        title: "Education",
-        icon: "🎓",
-        reports: 24,
-        growth: "+9%",
-        status: "Growing",
-        color: "from-sky-500/10 via-sky-500/5 to-transparent",
-        trend: [20, 32, 46, 54, 63, 76, 86],
-    },
-    {
-        id: 6,
-        code: "IND-06",
-        title: "Logistics",
-        icon: "🚚",
-        reports: 21,
-        growth: "+7%",
-        status: "Monitoring",
-        color: "from-amber-500/10 via-amber-500/5 to-transparent",
-        trend: [16, 22, 34, 46, 54, 60, 72],
-    },
-    {
-        id: 7,
-        code: "IND-07",
-        title: "Real Estate",
-        icon: "🏢",
-        reports: 17,
-        growth: "+6%",
-        status: "Active",
-        color: "from-pink-500/10 via-pink-500/5 to-transparent",
-        trend: [10, 18, 28, 36, 42, 50, 60],
-    },
-    {
-        id: 8,
-        code: "IND-08",
-        title: "Travel",
-        icon: "✈️",
-        reports: 14,
-        growth: "+10%",
-        status: "Trending",
-        color: "from-indigo-500/10 via-indigo-500/5 to-transparent",
-        trend: [15, 25, 34, 44, 58, 70, 84],
-    },
-];
+const industries = industriesWithSlug;
 const page = () => {
     const [query, setQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
@@ -283,7 +195,7 @@ const page = () => {
                 <LatestMeteors items={RESOURCES} />
             </section>
 
-            <section className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
+            <section id="industry-reports" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
                 <IndustryReports industries={industries} />
             </section>
 

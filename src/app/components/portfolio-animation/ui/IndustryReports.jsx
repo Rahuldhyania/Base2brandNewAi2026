@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { slugify } from "../data/industriesData";
 
 
 export default function IndustryReports({ industries }) {
@@ -82,7 +84,10 @@ export default function IndustryReports({ industries }) {
                                 className={`absolute inset-0 opacity-0 bg-gradient-to-r ${item.color}`}
                             />
 
-                            <div className="relative grid  items-center gap-2 md:gap-5 px-4 py-1 md:py-2 grid-cols-[3.5fr_1fr_1fr_1fr_auto]">
+                            <Link
+                                href={`/resources-catgeories/industries/${item.slug || slugify(item.title)}`}
+                                className="relative grid items-center gap-2 md:gap-5 px-4 py-1 md:py-2 grid-cols-[3.5fr_1fr_1fr_1fr_auto]"
+                            >
 
                                 {/* Industry */}
 
@@ -172,7 +177,7 @@ export default function IndustryReports({ industries }) {
 
                                 </div>
 
-                            </div>
+                            </Link>
                         </motion.div>
                     ))}
 
