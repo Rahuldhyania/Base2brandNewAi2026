@@ -4,10 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
     SiSap,
-    SiSalesforce,
     SiSnowflake,
     SiStripe,
-    SiSlack,
     SiHubspot,
     SiZoho,
     SiQuickbooks,
@@ -20,18 +18,19 @@ import {
     SiMongodb,
     SiDatadog,
     SiZendesk,
-    SiTwilio,
     SiNotion,
     SiSage,
 } from "react-icons/si";
+import { FaSalesforce, FaSlack } from "react-icons/fa6";
+import { TbBrandTwilio } from "react-icons/tb";
 import { SectionHeading } from "./SectionHeading";
 
 const LOGOS = [
     { Icon: SiSap, label: "SAP" },
-    { Icon: SiSalesforce, label: "Salesforce" },
+    { Icon: FaSalesforce, label: "Salesforce" },
     { Icon: SiSnowflake, label: "Snowflake" },
     { Icon: SiStripe, label: "Stripe" },
-    { Icon: SiSlack, label: "Slack" },
+    { Icon: FaSlack, label: "Slack" },
     { Icon: SiHubspot, label: "HubSpot" },
     { Icon: SiZoho, label: "Zoho" },
     { Icon: SiQuickbooks, label: "QuickBooks" },
@@ -44,7 +43,7 @@ const LOGOS = [
     { Icon: SiMongodb, label: "MongoDB" },
     { Icon: SiDatadog, label: "Datadog" },
     { Icon: SiZendesk, label: "Zendesk" },
-    { Icon: SiTwilio, label: "Twilio" },
+    { Icon: TbBrandTwilio, label: "Twilio" },
     { Icon: SiNotion, label: "Notion" },
     { Icon: SiSage, label: "Sage" },
 ];
