@@ -96,7 +96,7 @@ export default function page() {
         <GrowthSystem />
         <ClientFootprint />
         <ClientFeedback />
-        <Services />
+        {/* <Services /> */}
                  {/* <Solutions /> */}
         <CaseStudies />
                  {/* <Industries /> */}

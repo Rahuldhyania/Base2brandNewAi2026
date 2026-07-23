@@ -166,14 +166,14 @@ const TrustSection = () => {
         <div className="relative ">
           <Marquee gap={0}>
             <Image
-              src="/images/home_marquee_imagelistv2.png"
+              src="/images/home_marquee_imagelistv3.png"
               alt=""
               className="w-auto h-full"
               width={1000}
               height={500}
             />
             <Image
-              src="/images/home_marquee_imagelistv2.png"
+              src="/images/home_marquee_imagelistv3.png"
               alt=""
               className="w-auto h-full"
               width={1000}

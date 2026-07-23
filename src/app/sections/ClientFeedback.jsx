@@ -9,40 +9,40 @@ import "swiper/css/scrollbar";
 
 const TESTIMONIALS = [
   {
-    name: "Jen Paidosh",
-    role: "Founder & CEO",
-    company: "JDP Electric · United States",
+    name: "BROOKLYNSTOKELY",
+    role: "E-COMMERCE STORE OWNER",
+    company: null,
     quote:
-      "From the first discussion to the final delivery, Base2Brand stayed focused on results. They refined our website, improved customer journeys and created a stronger digital foundation that reflects our business professionally.",
+      "So I got my Shopify website built on Base2Brand. I'm, I'm glad to have contacted these guys as they helped me in identifying and understanding different aspects of, e-commerce, which I was totally unaware of. Now, I'm, getting a good amount of conversions through the website, which they designed and developed for me. So, I totally recommend everyone to get their e-commerce store designed by these guys. Kudos to their team.",
     avatar: "https://randomuser.me/api/portraits/women/42.jpg",
-    video: "/videos/client_YoYo1.mp4",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706041/Base2brandNew2026/Video-two_1_gampmt.mp4",
   },
   {
     name: "Jahn Brazil",
     role: "CEO & Owner",
-    company: "The Indie Collab · United States",
+    company: null,
     quote:
-      "What impressed me most was how Base2Brand combined creativity with performance. They understood our brand, delivered impactful digital solutions and ensured every improvement supported long-term business growth.",
+      "Congratulations on 6 years in business. On behalf of Mara Lang, Nikki and I and everybody else, we want to wish you guys a very happy 6 years of being in business. Special thanks to Arti, Rakesh, Sara, Rahul, and Sam. Thank you guys.",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg",
-    video: "/videos/client_YoYo1.mp4",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706418/Base2brandNew2026/VID-20260721-WA0011_2_gg5rsu.mp4",
   },
   {
     name: "Ronald Martin",
     role: "Founder & Operator",
-    company: "Prorevv and IFS · United States",
+    company: null,
     quote:
-      "Base2Brand helped us strengthen our online presence with a strategy that connected design, marketing and user experience. Their team focused on practical improvements that made our digital channels more effective and easier to scale.",
+      "We have worked with Base2Brand for about 6 months now, from everything from social media to SEO. They've been unbelievably helpful, and also extremely responsive, which has been a huge priority for us, because obviously. Sometimes you need something done on very, very short notice, and they've always been able to provide, so we're very happy to recommend them.",
     avatar: "https://randomuser.me/api/portraits/men/41.jpg",
-    video: "/videos/client_YoYo1.mp4",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706626/Base2brandNew2026/Video_one_1_eyzvxq.mp4",
   },
   {
     name: "Deepak Dhingra",
     role: "Managing Director & CEO",
-    company: "VIP Number Shop · India",
+    company: null,
     quote:
-      "Base2Brand has been a valuable growth partner for our VIP mobile number business. Their expertise in SEO, paid campaigns, content strategy and website optimization helped us reach the right audience.",
+      "Working with Base2Brand was a really great experience from start to finish. The communication was on point, the team was really communicative and able to deliver an exceptional branded sales orientated website.",
     avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-    video: "/videos/client_YoYo1.mp4",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706867/Base2brandNew2026/video-three_1_1_zvurvo.mp4",
   },
   {
     name: "Seda Hos Bas",
@@ -87,6 +87,7 @@ function QuoteFace({ card, light = true }) {
         height={52}
         className="h-[52px] w-[52px] shrink-0 rounded-full object-cover border border-black/10"
       />
+
       <blockquote className="mt-5 flex-1">
         <p
           className={`text-sm sm:text-[15px] leading-relaxed ${
@@ -96,6 +97,7 @@ function QuoteFace({ card, light = true }) {
           “{card.quote}”
         </p>
       </blockquote>
+
       <div className="mt-auto pt-5">
         <p
           className={`text-base sm:text-lg font-display font-semibold ${
@@ -104,6 +106,7 @@ function QuoteFace({ card, light = true }) {
         >
           {card.name}
         </p>
+
         <p
           className={`mt-1 text-xs leading-snug ${
             light ? "text-black/50" : "text-white/70"
@@ -121,17 +124,20 @@ function FeedbackCard({ card, isActive, isInView, onVideoEnd }) {
   const [hovering, setHovering] = useState(false);
   const hasVideo = Boolean(card.video);
 
-  // Active + in-view card with video → play. Hover → show text instead.
   const showVideo = isActive && isInView && hasVideo && !hovering;
 
   useEffect(() => {
     const video = videoRef.current;
+
     if (!video || !hasVideo) return;
 
-    // Only play when section is visible AND this slide is active
     if (!isInView || !isActive) {
       video.pause();
-      if (!isActive) video.currentTime = 0;
+
+      if (!isActive) {
+        video.currentTime = 0;
+      }
+
       return;
     }
 
@@ -142,24 +148,32 @@ function FeedbackCard({ card, isActive, isInView, onVideoEnd }) {
     }
   }, [isActive, isInView, hovering, hasVideo]);
 
-  // Leave hover when slide becomes inactive
   useEffect(() => {
-    if (!isActive) setHovering(false);
+    if (!isActive) {
+      setHovering(false);
+    }
   }, [isActive]);
 
   const handleEnded = () => {
-    // Don't advance while section is off-screen
     if (!isInView) return;
+
     setHovering(false);
+
     const video = videoRef.current;
-    if (video) video.currentTime = 0;
+
+    if (video) {
+      video.currentTime = 0;
+    }
+
     onVideoEnd?.();
   };
 
   return (
     <div
       onMouseEnter={() => {
-        if (isActive && hasVideo) setHovering(true);
+        if (isActive && hasVideo) {
+          setHovering(true);
+        }
       }}
       onMouseLeave={() => setHovering(false)}
       className={`relative h-full w-full overflow-hidden rounded-[22px] transition-shadow duration-300 ${
@@ -171,7 +185,6 @@ function FeedbackCard({ card, isActive, isInView, onVideoEnd }) {
         .toLowerCase()
         .replace(/\s+/g, "-")}`}
     >
-      {/* Quote / text face — inactive cards always, active card on hover */}
       <div
         className={`absolute inset-0 transition-opacity duration-400 ${
           showVideo ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -180,7 +193,6 @@ function FeedbackCard({ card, isActive, isInView, onVideoEnd }) {
         <QuoteFace card={card} light />
       </div>
 
-      {/* Video face — only on active slide, default (not hovering) */}
       {hasVideo && (
         <div
           className={`absolute inset-0 transition-opacity duration-400 ${
@@ -199,11 +211,14 @@ function FeedbackCard({ card, isActive, isInView, onVideoEnd }) {
             className="h-full w-full object-cover"
             data-testid="client-feedback-video"
           />
+
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 px-6 pt-6 pb-3 sm:px-7 sm:pb-3.5">
             <p className="text-lg font-display font-semibold text-white">
               {card.name}
             </p>
+
             <p className="mt-1 text-xs text-white/70 leading-snug">
               {card.role} · {card.company}
             </p>
@@ -222,12 +237,14 @@ const INITIAL_SLIDE = Math.max(
 const ClientFeedback = () => {
   const sectionRef = useRef(null);
   const swiperRef = useRef(null);
+
   const [scrollbarEl, setScrollbarEl] = useState(null);
   const [activeIndex, setActiveIndex] = useState(INITIAL_SLIDE);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
+
     if (!section) return undefined;
 
     const observer = new IntersectionObserver(
@@ -235,19 +252,21 @@ const ClientFeedback = () => {
         setIsInView(entry.isIntersecting);
       },
       {
-        // Play only when a solid chunk of the section is on screen
         threshold: 0.35,
         rootMargin: "0px 0px -10% 0px",
       },
     );
 
     observer.observe(section);
+
     return () => observer.disconnect();
   }, []);
 
   const handleVideoEnd = () => {
     const swiper = swiperRef.current;
+
     if (!swiper) return;
+
     if (swiper.isEnd) {
       swiper.slideTo(0);
     } else {
@@ -267,6 +286,7 @@ const ClientFeedback = () => {
           <div className="text-xs sm:text-sm font-mono-display text-orange-brand uppercase tracking-[0.25em]">
             VOICES FROM THE BRIDGE
           </div>
+
           <h2
             className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.10] uppercase tracking-tight"
             data-testid="client-feedback-heading"
@@ -278,17 +298,19 @@ const ClientFeedback = () => {
         </div>
       </div>
 
-      {/* Full-bleed track so edge cards don't clip during slide change */}
       <div className="relative z-10 mt-10 xl:mt-14 client-feedback-swiper w-full px-5 sm:px-8">
         {scrollbarEl && (
           <Swiper
             modules={[Scrollbar]}
             initialSlide={INITIAL_SLIDE}
+            centeredSlides
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setActiveIndex(swiper.realIndex);
             }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            onSlideChange={(swiper) => {
+              setActiveIndex(swiper.realIndex);
+            }}
             spaceBetween={24}
             slidesPerView="auto"
             grabCursor
@@ -329,36 +351,40 @@ const ClientFeedback = () => {
           background: #fff;
           border-radius: 0;
         }
-        /*
-          Keep slide box size fixed for Swiper math.
-          Active card grows via scale (~8%) so sides don't clip mid-transition.
-        */
+
         .client-feedback-swiper {
           overflow: visible;
         }
+
         .client-feedback-swiper-track {
           overflow: visible !important;
           padding: 18px 0;
         }
+
         .client-feedback-swiper-track .swiper-wrapper {
           align-items: center;
         }
+
         .client-feedback-swiper-track .client-feedback-slide {
           width: 300px !important;
           height: 420px !important;
           transition: transform 0.4s ease;
           transform: scale(1);
         }
-        .client-feedback-swiper-track .client-feedback-slide.swiper-slide-active {
+
+        .client-feedback-swiper-track
+          .client-feedback-slide.swiper-slide-active {
           transform: scale(1.08);
           z-index: 2;
         }
+
         @media (min-width: 640px) {
           .client-feedback-swiper-track .client-feedback-slide {
             width: 340px !important;
             height: 460px !important;
           }
         }
+
         @media (min-width: 1024px) {
           .client-feedback-swiper-track .client-feedback-slide {
             width: 380px !important;

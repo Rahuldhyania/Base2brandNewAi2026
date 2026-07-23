@@ -4,6 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { ArrowUpRight } from "lucide-react";
 import { extraData } from "@/constants/testIds/extraData";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import { Autoplay, Navigation } from 'swiper/modules';
+import Image from "next/image";
 
 const CASES = [
   {
@@ -160,9 +166,11 @@ const PROJECTS = [
     },
   },
 ];
-function BrowserWindow({ project }) {
+function BrowserWindow({ project, projectId }) {
   const { preview } = project;
   const maxChart = Math.max(...preview.chart);
+  const prevClass = `custom-swiper-prev-${projectId}`;
+  const nextClass = `custom-swiper-next-${projectId}`;
 
   return (
     <div className="relative rounded-[20px] overflow-hidden border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgba(244,123,82,0.35)]">
@@ -186,8 +194,8 @@ function BrowserWindow({ project }) {
       </div>
 
       {/* Body */}
-      <div className="p-6 md:p-8 relative overflow-hidden">
-        <div className="flex items-center justify-between mb-6">
+      <div className=" relative overflow-hidden">
+        {/* <div className="flex items-center justify-between mb-6">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
               {preview.title}
@@ -206,39 +214,47 @@ function BrowserWindow({ project }) {
               <path d="M7 2v10M2 7h10" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
             </svg>
           </div>
-        </div>
+        </div> */}
 
-        {/* KPIs */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          {preview.lines.map((l) => (
-            <div key={l.label} className="rounded-lg border border-white/5 bg-white/[0.02] p-3">
-              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/40 mb-1">
-                {l.label}
-              </div>
-              <div className="font-display text-[18px] text-white tracking-[-0.02em]">
-                {l.value}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Chart bars */}
-        <div className="rounded-lg border border-white/5 bg-white/[0.02] p-4">
-          <div className="flex items-end gap-1.5 h-24">
-            {preview.chart.map((v, i) => (
-              <div
-                key={i}
-                className="flex-1 rounded-t-sm"
-                style={{
-                  height: `${(v / maxChart) * 100}%`,
-                  background: `linear-gradient(180deg, ${preview.accent}, ${preview.accent}55)`,
-                  boxShadow: `0 0 8px ${preview.accent}44`,
-                }}
-              />
+        {/* Swiper Slider */}
+        <div>
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            loop={true}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // }}
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation={{
+              nextEl: `.${nextClass}`,
+              prevEl: `.${prevClass}`,
+            }}
+            pagination={false}
+            className="w-full"
+          >
+            {Array(4).fill(null).map((_, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src="/images/ghfgh 2.png"
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-auto rounded-lg"
+                  width={1000}
+                  height={500}
+                />
+              </SwiperSlide>
             ))}
+          </Swiper>
+          <div className={`${prevClass} absolute top-1/2 left-0 -translate-y-1/2 z-10 cursor-pointer rounded-full p-2 bg-black/50`}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
           </div>
-          <div className="mt-2 flex justify-between font-mono text-[9px] text-white/30">
-            <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Now</span>
+          <div className={`${nextClass} absolute top-1/2 right-0 -translate-y-1/2 z-10 cursor-pointer rounded-full p-2 bg-black/50`}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ pointerEvents: 'none' }}>
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </div>
         </div>
       </div>
@@ -246,15 +262,15 @@ function BrowserWindow({ project }) {
   );
 }
 export function CaseStudies() {
-    const ref = useRef(null);  
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: ["start end", "end start"],  
-    });
-    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1.02, 0.94]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [3, -3]);
-    const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
-    const glow = useTransform(scrollYProgress, [0.35, 0.55], [0, 1]);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1.02, 0.94]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [3, -3]);
+  const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const glow = useTransform(scrollYProgress, [0.35, 0.55], [0, 1]);
   return (
     <section
       id="case-studies"
@@ -292,7 +308,7 @@ export function CaseStudies() {
           ))} */}
           {PROJECTS.map((project, i) => (
             <motion.div
-             key={i}
+              key={i}
               data-testid={extraData.work.browserExpand(project.id)}
               style={{ scale, rotate, y }}
               className="relative ddff"
@@ -312,7 +328,7 @@ export function CaseStudies() {
                 />
               </motion.div>
 
-              <BrowserWindow project={project} />
+              <BrowserWindow project={project} projectId={project.id} />
             </motion.div>
           ))}
 
