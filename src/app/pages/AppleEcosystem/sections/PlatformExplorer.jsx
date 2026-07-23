@@ -24,45 +24,45 @@ const PLATFORMS = [
 
 const DETAILS = {
   iphone: {
-    headline: "The flagship surface — and your highest-leverage canvas.",
+    headline: "The flagship surface and your highest-leverage customer canvas.",
     body:
-      "Most enterprise mobile journeys start (and end) on iPhone. We design and engineer iPhone apps in Swift and SwiftUI with App Intents, WidgetKit, Live Activities and Apple Intelligence built in — so the experience feels native, contextual and trustworthy from the first tap.",
-    tags: ["Swift", "SwiftUI", "App Intents", "WidgetKit", "Live Activities"],
+      "Most digital journeys start or end on iPhone. Our iPhone app development team builds native iOS apps with clean UX, strong performance, secure architecture and conversion-focused user flows.",
+    tags: ["Swift", "SwiftUI", "App Intents", "WidgetKit", "Live Activities", "UIKit"],
     stat: { value: "60fps", label: "Native interaction floor" },
   },
   ipad: {
-    headline: "A productivity surface, engineered for power workflows.",
+    headline: "Designed for productivity, content and field workflows.",
     body:
-      "iPad is where complex enterprise work happens — multi-column layouts, drag and drop, Pencil input, Stage Manager and external display support. We build iPad apps as first-class citizens, not stretched phone UI, so field operators, clinicians and creators get real tools.",
-    tags: ["iPadOS", "Pencil & Scribble", "Stage Manager", "Drag & Drop"],
+      "iPad experiences need space, clarity and stronger task flows. We build iPad apps for sales teams, operations, healthcare, education, training, dashboards and assisted workflows.",
+    tags: ["iPadOS", "Split View", "Stage Manager", "Apple Pencil", "Multitasking"],
     stat: { value: "12.9″", label: "Designed for the canvas" },
   },
   watch: {
-    headline: "Glanceable, contextual, always on the wrist.",
+    headline: "Built for instant action and glanceable value.",
     body:
-      "Apple Watch is the most intimate surface in computing. We build watchOS apps and complications around the only metric that matters on the wrist — time-to-information. HealthKit-backed workflows, Smart Stack widgets, Double Tap interactions and on-wrist payments.",
-    tags: ["watchOS", "Complications", "Smart Stack", "HealthKit"],
+      "We design Apple Watch experiences that reduce friction — alerts, approvals, health signals, task updates, field notifications and companion actions.",
+    tags: ["watchOS", "HealthKit", "WidgetKit", "Complications", "Watch Connectivity"],
     stat: { value: "<1s", label: "Glance-to-action target" },
   },
   vision: {
-    headline: "Spatial computing for serious enterprise work.",
+    headline: "Spatial computing for products that need depth, training and immersion.",
     body:
-      "Vision Pro is not a gimmick — it is the new high-end workstation. We build immersive applications for product visualization, simulation, surgical planning, remote inspection, training and spatial collaboration using SwiftUI, RealityKit and ARKit.",
-    tags: ["visionOS", "RealityKit", "ARKit", "Shared Space"],
+      "Our Vision Pro app development practice helps businesses create immersive applications for product visualization, enterprise training, medical education, simulation, collaboration and spatial dashboards.",
+    tags: ["VisionOS", "RealityKit", "ARKit", "Spatial workflows", "Reality Composer Pro"],
     stat: { value: "Spatial", label: "First-class design language" },
   },
   tv: {
-    headline: "The shared screen — content, dashboards, and signage.",
+    headline: "Large-screen experiences built for clarity and control.",
     body:
-      "tvOS apps for premium media products, broadcast operations centres, retail signage, hospitality experiences and conference-room collaboration. Built around the focus engine and Siri Remote, not a touch screen.",
-    tags: ["tvOS", "Focus Engine", "TVMLKit", "Top Shelf"],
+      "We create Apple TV applications for content, training, enterprise dashboards, hospitality, retail experiences and internal communication systems.",
+    tags: ["tvOS", "SwiftUI", "AVKit", "TVML", "Focus Engine"],
     stat: { value: "4K HDR", label: "Render target" },
   },
   carplay: {
-    headline: "The hands-on-wheel surface for mobility and logistics.",
+    headline: "Vehicle-ready interfaces designed for safety and speed.",
     body:
-      "CarPlay extensions for navigation, EV charging, fleet operations, delivery logistics, parking and audio. Engineered to Apple's strict CarPlay guidelines so the experience clears review and stays safe.",
-    tags: ["CarPlay", "Templates", "Sirius / Audio", "EV Charging"],
+      "CarPlay experiences need focus, simplicity and operational reliability. We build CarPlay interfaces for mobility, logistics, transport, navigation-linked workflows and service platforms.",
+    tags: ["CarPlay", "MapKit", "SiriKit", "Core Location", "SwiftUI"],
     stat: { value: "Hands-free", label: "Designed for safety" },
   },
 };
@@ -269,11 +269,10 @@ export default function PlatformExplorer() {
             Ecosystem Explorer
           </p>
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
-            Every device. Same engineering team. One coherent product.
+            Every device your users touch, engineered under one product vision
           </h2>
           <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/60 max-w-2xl leading-relaxed">
-            Pick a surface to see how we approach it — the technologies, the design constraints,
-            and what we consider the engineering bar for production quality.
+            Apple products perform best when every surface feels connected. We design each device experience around its actual role — not by copying the same interface everywhere.
           </p>
         </div>
 

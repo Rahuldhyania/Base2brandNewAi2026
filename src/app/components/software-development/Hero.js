@@ -14,10 +14,10 @@ const SUPPORTING_LABELS = [
 ];
 
 const METRICS = [
-  { value: "120+", label: "Software Engagements" },
-  { value: "30+", label: "Engineers & Architects" },
-  { value: "8", label: "Global Offices" },
-  { value: "24/7", label: "Operational Support" },
+  { value: "120+", label: "Software Projects Delivered" },
+  { value: "30+", label: "Product Engineers & Architects" },
+  { value: "8", label: "Industries Served" },
+  { value: "24/7", label: "Product Support Mindset" },
 ];
 
 const Hero = () => {
@@ -48,16 +48,13 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="font-display font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-              <span className="b2b-text-gradient">Engineer products that </span>
-              <span className="b2b-text-gradient"> scale with your </span>
-              <span className="text-(--b2b-primary)"> ambition. </span>
+              <span className="b2b-text-gradient">Build software that </span>
+              <span className="b2b-text-gradient"> that scale with your </span>
+              <span className="text-(--b2b-primary)"> business. </span>
             </motion.h1>
 
             <motion.p variants={fadeUp} className="b2b-lead mt-5 sm:mt-7 text-sm md:text-base">
-              Base2Brand designs and engineers digital products, cloud-native platforms, and
-              mobile applications that power businesses across industries. From SaaS products
-              to enterprise applications, we build software designed for measurable business
-              outcomes.
+              Base2Brand delivers software development services for businesses that need more than code. We design and engineer scalable platforms, SaaS products, mobile applications, cloud-native systems and enterprise software solutions built around measurable business outcomes.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">

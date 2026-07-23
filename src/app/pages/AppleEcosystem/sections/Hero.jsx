@@ -93,10 +93,7 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.15 }}
         className="mt-2 text-base sm:text-lg lg:text-xl text-white/65 max-w-2xl leading-relaxed"
       >
-        Base2Brand is an Apple-first engineering partner. We design, develop and operate
-        native applications for iPhone, iPad, Apple Watch, Apple TV, Vision Pro, CarPlay
-        and Mac — engineered to Apple-grade craft, secured for the enterprise, and shipped  
-        at production velocity.
+        Base2Brand designs, develops and operates native Apple applications for businesses that need more than another mobile app. From iPhone app development and enterprise iOS app development to Vision Pro, Apple Watch, iPad, CarPlay, Apple TV and Mac experiences, we engineer products that feel native, perform fast and scale securely.
       </motion.p>
 
       <motion.div

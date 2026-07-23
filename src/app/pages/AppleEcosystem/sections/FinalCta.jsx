@@ -32,8 +32,7 @@ export default function FinalCta() {
               Bring an Apple-grade product team to your roadmap.
             </h2>
             <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/65 leading-relaxed max-w-xl">
-              Share a brief, a deadline or just a question. We respond inside one business
-              day with a point of view, a delivery plan and the team that would build it.
+              Whether you need iPhone app development, enterprise iOS app development or Vision Pro app development, we will help you define the right Apple surface, the right architecture and the right release path.
             </p>
 
             <div className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">
@@ -60,7 +59,8 @@ export default function FinalCta() {
             </p>
             <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/75">
               <li className="flex gap-3"><Bullet /> A scoped engagement plan with team shape & timelines</li>
-              <li className="flex gap-3"><Bullet /> A surface decision matrix (iPhone, iPad, Watch, Vision, etc.)</li>
+              <li className="flex gap-3"><Bullet /> A surface decision matrix for iPhone, iPad, Watch, Vision Pro, CarPlay or Mac.
+</li>
               <li className="flex gap-3"><Bullet /> A point of view on Apple Intelligence integration</li>
               <li className="flex gap-3"><Bullet /> Indicative pricing & a release milestone map</li>
             </ul>

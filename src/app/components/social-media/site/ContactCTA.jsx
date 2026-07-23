@@ -244,8 +244,8 @@ export default function ContactCTA() {
                   <option value="youtube" className="bg-zinc-900">
                     YouTube Marketing
                   </option>
-                  <option value="orm" className="bg-zinc-900">
-                    ORM
+                  <option value="cro" className="bg-zinc-900">
+                    CRO
                   </option>
                   <option value="content" className="bg-zinc-900">
                     Content Writing

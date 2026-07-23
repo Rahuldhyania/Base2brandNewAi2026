@@ -2,7 +2,14 @@
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 
-const Narrative = ({ title, description, features, highlightTag, tagList }) => {
+const Narrative = ({
+  title,
+  description,
+  features,
+  highlightTag,
+  tagList,
+  hideTagColumn = false,
+}) => {
   return (
     <section
       id="narrative-section"
@@ -10,20 +17,22 @@ const Narrative = ({ title, description, features, highlightTag, tagList }) => {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
         <div className="grid lg:grid-cols-12 gap-3 sm:gap-4">
-          <div className="lg:col-span-3">
-            <Reveal>
-              <ShiningText testId="narrative-eyebrow">
-                {highlightTag}
-              </ShiningText>
-              <div className="mt-4 lg:mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/60 space-y-2">
-                {tagList.map((item) => (
-                  <p key={item}>{item}</p>
-                ))}
-              </div>
-            </Reveal>
-          </div>
+          {!hideTagColumn && (
+            <div className="lg:col-span-3">
+              <Reveal>
+                <ShiningText testId="narrative-eyebrow">
+                  {highlightTag}
+                </ShiningText>
+                <div className="mt-4 lg:mt-8 font-mono text-xs tracking-[0.3em] uppercase text-white/60 space-y-2">
+                  {tagList.map((item) => (
+                    <p key={item}>{item}</p>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          )}
 
-          <div className="lg:col-span-9">
+          <div className={hideTagColumn ? "lg:col-span-12" : "lg:col-span-9"}>
             <Reveal delay={0.05}>
               <h2
                 data-testid="narrative-headline"

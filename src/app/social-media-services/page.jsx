@@ -8,22 +8,75 @@ import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
 import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
 import Industries from "@/components/ai/Industries";
+
+const SOCIAL_INDUSTRIES = [
+  {
+    id: "automotive",
+    name: "Automotive",
+    use: "Lead generation campaigns, local SEO, paid ads, remarketing and customer follow-up systems.",
+    image:
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "manufacturing",
+    name: "Manufacturing",
+    use: "Technical SEO, B2B lead generation, LinkedIn campaigns, content marketing and inquiry funnel optimization.",
+    image:
+      "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    use: "Patient acquisition campaigns, local SEO, Google Ads management, landing pages and trust-building content.",
+    image:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "logistics",
+    name: "Logistics",
+    use: "Search visibility, lead generation, CRM-connected campaigns and performance tracking across service areas.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "retail",
+    name: "Retail & Ecommerce",
+    use: "Shopify growth, SEO, shopping campaigns, Meta Ads, retention content and CRO.",
+    image:
+      "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "finserv",
+    name: "Financial Services",
+    use: "Authority content, compliant ad funnels, lead generation, SEO services and conversion-focused landing pages.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "education",
+    name: "Education",
+    use: "Student lead generation, social media marketing, YouTube campaigns, search ads and admission funnel optimization.",
+    image:
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=70",
+  },
+];
+
 const features = [
   {
     l: "Search Behaviour Evolution",
-    d: "Customers no longer travel a single funnel — they bounce between AI assistants, classic search, social, and communities. Visibility is now multi-modal.",
+    d: "Customers no longer follow one funnel. They compare brands across Google, AI assistants, reviews, social feeds and communities before deciding who earns trust and attention.",
   },
   {
     l: "AI Discovery Platforms",
-    d: "ChatGPT, Gemini and Perplexity answer commercial queries directly. Being cited as an authoritative source is the new top-of-funnel.",
+    d: "ChatGPT, Gemini and Perplexity now influence brand research, competitor comparisons and provider shortlists, making AI visibility essential for high-intent discovery across modern buyer journeys.",
   },
   {
     l: "Creative-Led Advertising",
-    d: "Media buying is commoditized. Performance is increasingly decided by the creative — motion, hooks, formats, and message-market fit.",
+    d: "Campaign performance depends on creative quality. Strong hooks, formats, visuals, motion and messaging decide whether audiences stop, engage and convert before competitors earn attention first.",
   },
   {
     l: "Trust & Reputation Signals",
-    d: "Reviews, sentiment, and brand mentions shape conversion across every channel — and feed the AI models that decide who gets recommended.",
+    d: "Reviews, sentiment, brand mentions and credibility signals shape conversions across search, social, AI platforms and ads, strengthening confidence before customers inquire, compare and buy online.",
   },
 ];
 
@@ -32,6 +85,7 @@ const CAPS = [
     icon: "Network",
     title: "SEO & Technical SEO",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Build organic visibility through technical strength, content depth and authority signals.",
     items: [
       "Technical audits",
       "On-page SEO",
@@ -42,11 +96,12 @@ const CAPS = [
   },
   {
     icon: "Workflow",
-    title: "Generative Engine Optimization",
+    title: "AI Search & GEO",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Prepare your brand for AI-led discovery across ChatGPT, Gemini, Perplexity and Google AI Overviews.",
     items: [
-      "ChatGPT visibility",
-      "AI answer optimization",
+      "AI visibility",
+      "Answer optimization",
       "Entity optimization",
       "Citation management",
     ],
@@ -55,13 +110,14 @@ const CAPS = [
     icon: "AudioLines",
     title: "Performance Marketing",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Launch and scale campaigns built around qualified leads, sales and measurable ROI.",
     items: ["Google Ads", "Meta Ads", "LinkedIn Ads", "Retargeting systems"],
   },
-
   {
     icon: "Network",
     title: "Creative Studio",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Produce scroll-stopping assets designed for performance across ads, social and landing pages.",
     items: [
       "Ad creatives",
       "Motion graphics",
@@ -74,70 +130,60 @@ const CAPS = [
     icon: "Workflow",
     title: "Growth Analytics",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Track what matters — attribution, CAC, ROAS, conversions, pipeline and performance insights.",
     items: ["Attribution", "Dashboard reporting", "Performance insights"],
   },
   {
     icon: "AudioLines",
     title: "Social Media Marketing",
     span: "md:col-span-6 lg:col-span-4",
+    desc: "Build brand visibility, trust and engagement across the platforms your audience uses daily.",
     items: ["Content strategy", "Community growth", "Platform management"],
-  },
-  {
-    icon: "Shield",
-    title: "Online Reputation Management",
-    span: "md:col-span-6 lg:col-span-4",
-    items: ["Review management", "Brand monitoring", "Sentiment tracking"],
-  },
-  {
-    icon: "Target",
-    title: "Conversion Rate Optimization",
-    span: "md:col-span-6 lg:col-span-4",
-    items: ["Landing pages", "Funnel optimization", "A/B testing"],
   },
 ];
 
 const ITEMS = [
   {
-    icon: "Users",
-    title: "AI Workforce",
-    tagline: "Digital employees operating continuously.",
-    desc: "Always-on digital workers handling structured operations, ticketing, scheduling, qualification, and follow-through across 24/7 cycles.",
-    metrics: ["24/7 cadence", "0 onboarding ramp", "Audit-grade logs"],
+    icon: "Compass",
+    title: "Growth Strategy Engine",
+    tagline: "Roadmap before execution.",
+    desc: "A clear roadmap for channels, audiences, offers, messaging and KPIs.",
+    metrics: ["Market clarity", "ICP mapping", "Growth thesis"],
   },
   {
-    icon: "GitBranch",
-    title: "Multi-Agent Operations",
-    tagline: "AI teams collaborating autonomously.",
-    desc: "Coordinated agent networks that plan, delegate, validate, and execute multi-step workflows with shared memory and guardrails.",
-    metrics: ["Agent-to-agent", "Tool routing", "Policy-aware"],
+    icon: "Megaphone",
+    title: "Google Ads Management System",
+    tagline: "Profitable acquisition, engineered.",
+    desc: "Campaign structures, keyword strategy, conversion tracking and optimization cycles built around profitable acquisition.",
+    metrics: ["Search intent", "ROAS tracking", "Conversion-led"],
   },
   {
-    icon: "Briefcase",
-    title: "Enterprise Copilots",
-    tagline: "Department-specific intelligence systems.",
-    desc: "Copilots embedded in sales, ops, support, and engineering — trained on private context, integrated to systems of record.",
-    metrics: ["RAG-grounded", "RBAC native", "BYO models"],
+    icon: "Search",
+    title: "SEO Visibility Layer",
+    tagline: "Built for long-term visibility.",
+    desc: "Technical SEO, content clusters, keyword architecture and authority building to strengthen long-term visibility.",
+    metrics: ["Organic growth", "Technical SEO", "Content depth"],
   },
   {
-    icon: "BrainCircuit",
-    title: "Decision Intelligence",
-    tagline: "Systems that recommend and execute.",
-    desc: "Models that synthesize signals across data warehouses and act — with explainability, human review, and reversibility built-in.",
-    metrics: ["Explainable", "Reversible", "Outcome tracked"],
+    icon: "Share2",
+    title: "Social Growth System",
+    tagline: "Where content meets community.",
+    desc: "Platform strategy, social storytelling, community engagement and performance creative working together.",
+    metrics: ["Social media marketing", "Engagement", "Brand trust"],
   },
   {
-    icon: "PhoneCall",
-    title: "Voice Operations",
-    tagline: "Human-like voice for customer interactions.",
-    desc: "Production voice agents handling inbound, outbound, qualification, scheduling, and structured data capture at low latency.",
-    metrics: ["<350ms latency", "Telephony native", "Hand-off ready"],
+    icon: "FlaskConical",
+    title: "Creative Testing Lab",
+    tagline: "Performance creative, tested.",
+    desc: "Performance creatives tested across hooks, visuals, formats, offers and audience segments.",
+    metrics: ["Ad creatives", "Motion", "UGC testing"],
   },
   {
     icon: "LayoutDashboard",
-    title: "AI Command Centers",
-    tagline: "Unified enterprise AI control planes.",
-    desc: "Single pane to deploy, observe, govern, and meter your entire AI estate — agents, models, prompts, costs, and outcomes.",
-    metrics: ["Observability", "Cost metering", "Governance"],
+    title: "Growth Command Center",
+    tagline: "One view. Every metric.",
+    desc: "A reporting layer that connects campaigns, leads, revenue, traffic, conversions and ROI into one view.",
+    metrics: ["Analytics", "Attribution", "Performance clarity"],
   },
 ];
 
@@ -145,53 +191,126 @@ const steps = [
   {
     n: "01",
     title: "Discovery & Audit",
-    body: "Diagnose current marketing performance, technical SEO, brand sentiment, paid efficiency, and competitive landscape.",
+    body: "We diagnose your current marketing performance, technical SEO, brand positioning, paid efficiency, tracking setup and competitive landscape.",
     icon: 'ScanSearch',
   },
   {
     n: "02",
     title: "Growth Strategy",
-    body: "Identify high-leverage channels, define ICPs, build a quarterly growth thesis and the metrics that decide success.",
+    body: "We identify high-leverage channels, define ICPs, build audience segments and create a quarterly growth plan with clear success metrics.",
     icon: 'Database',
   },
   {
     n: "03",
     title: "Creative & Campaign Production",
-    body: "Develop the assets — ad creatives, video, landing pages, and content — engineered to perform against the thesis.",
+    body: "We develop performance assets — ad creatives, videos, landing pages, content and copy — engineered to perform against the strategy.",
     icon: 'FileText',
   },
   {
     n: "04",
     title: "Launch & Optimization",
-    body: "Deploy campaigns, instrument attribution, run rigorous experimentation, and improve unit economics weekly.",
+    body: "We deploy campaigns, improve tracking, test creatives, optimize bids, refine audiences and improve conversion quality weekly.",
     icon: 'Award',
   },
   {
     n: "05",
     title: "Scale & Expansion",
-    body: "Compound winners — expand to new geographies, channels, and audience segments without sacrificing efficiency.",
+    body: "We compound winners across new geographies, channels, audiences and funnel stages without sacrificing efficiency.",
     icon: 'Sparkles',
   },
+];
+
+const SOCIAL_TECHSTACK = [
+  {
+    cat: "Search & Ads",
+    items: [
+      { label: "Google Ads", icon: "SiGoogleads" },
+      { label: "Google Merchant Center", icon: "ShoppingBag" },
+      { label: "Google Search Console", icon: "SiGooglesearchconsole" },
+      { label: "Bing Ads", icon: "TbBrandBing" },
+      { label: "YouTube Ads", icon: "SiYoutube" },
+    ],
+  },
+  {
+    cat: "Social Platforms",
+    items: [
+      { label: "Meta", icon: "SiMeta" },
+      { label: "Instagram", icon: "SiInstagram" },
+      { label: "LinkedIn", icon: "FaLinkedin" },
+      { label: "X", icon: "SiX" },
+      { label: "TikTok", icon: "SiTiktok" },
+      { label: "Pinterest", icon: "SiPinterest" },
+    ],
+  },
+  {
+    cat: "Analytics & Tracking",
+    items: [
+      { label: "GA4", icon: "SiGoogleanalytics" },
+      { label: "Google Tag Manager", icon: "SiGoogletagmanager" },
+      { label: "Looker Studio", icon: "SiLooker" },
+      { label: "Hotjar", icon: "SiHotjar" },
+      { label: "Clarity", icon: "Eye" },
+      { label: "CRM attribution", icon: "BarChart3" },
+    ],
+  },
+  {
+    cat: "Content & SEO",
+    items: [
+      { label: "WordPress", icon: "SiWordpress" },
+      { label: "Shopify", icon: "SiShopify" },
+      { label: "Semrush", icon: "SiSemrush" },
+      { label: "Ahrefs", icon: "Search" },
+      { label: "Surfer SEO", icon: "BarChart3" },
+      { label: "Schema tools", icon: "Braces" },
+    ],
+  },
+  {
+    cat: "Automation & CRM",
+    items: [
+      { label: "HubSpot", icon: "SiHubspot" },
+      { label: "Zoho", icon: "SiZoho" },
+      { label: "Salesforce", icon: "FaSalesforce" },
+      { label: "Mailchimp", icon: "SiMailchimp" },
+      { label: "Klaviyo", icon: "Mail" },
+      { label: "WhatsApp workflows", icon: "SiWhatsapp" },
+    ],
+  },
+];
+
+const SOCIAL_MARQUEE = [
+  "SiGoogleads",
+  "SiMeta",
+  "SiInstagram",
+  "FaLinkedin",
+  "SiX",
+  "SiTiktok",
+  "SiPinterest",
+  "SiGoogleanalytics",
+  "SiWordpress",
+  "SiShopify",
+  "SiHubspot",
+  "FaSalesforce",
+  "SiWhatsapp",
 ];
 
 const services = [
   {
     id: "seo",
     index: "01",
-    title: "SEO",
+    title: "SEO Services",
     fullName: "Search Engine Optimization",
     icon: "Search",
     logoUrl: "/images/seocardlogo.png",
     tagColor: "#FF2D87",
     cardGradient: "linear-gradient(135deg, #FF2D87 0%, #C61E62 100%)",
-    headline: "Rank where it matters. Get found first.",
+    headline: "Rank in AI search, outperform the competition.",
     description:
-      "Enhance online visibility with our SEO expertise. 93% of online experiences begin with a search engine. Our strategies elevate your rankings and boost organic traffic.",
+      "Our SEO services help your brand show up when buyers are actively searching. We do not chase rankings for vanity. We build search presence that supports leads, trust and long-term growth.",
     items: [
       "On-page optimization",
       "Off-page SEO & link building",
       "Technical SEO audits",
-      "Local SEO & Google Business",
+      "LLM SEO",
       "Keyword research & strategy",
       "Content optimization",
       "Monthly reporting & insights",
@@ -207,12 +326,12 @@ const services = [
     logoUrl: "/images/adscardlogo.png",
     tagColor: "#C6FF3D",
     cardGradient: "linear-gradient(135deg, #D7FF3D 0%, #8FBF00 100%)",
-    headline: "Generate $2 for every $1 spent.",
+    headline: "Turn ad spend into measurable pipeline.",
     description:
-      "Maximize reach, drive targeted traffic and crush ROI with our expert Google & Meta Ads team. Performance-grade results, always.",
+      "Our Google Ads management and paid media systems are built around performance, not guesswork. From Google Search and Display to Meta Ads, every campaign is optimized around business outcomes.",
     items: [
       "Google Search & Display Ads",
-      "Meta (Facebook & Instagram) Ads",
+      "Meta Ads",
       "Shopping & Performance Max",
       "Remarketing campaigns",
       "Landing page optimization",
@@ -230,9 +349,9 @@ const services = [
     logoUrl: "/images/smocardlogo.png",
     tagColor: "#6C5CE7",
     cardGradient: "linear-gradient(135deg, #7C6CFF 0%, #4A3DCC 100%)",
-    headline: "Be the brand people actually follow.",
+    headline: "Be the brand people remember, follow and trust.",
     description:
-      "We optimize social platforms to enhance brand visibility and engagement, tailored to your business goals — Instagram, Facebook, LinkedIn, X and beyond.",
+      "Our social media marketing approach connects content, community and performance. We help brands build stronger visibility across Instagram, Facebook, LinkedIn, X and other platforms where customers discover, compare and engage.",
     items: [
       "Social media strategy",
       "Content calendar & creation",
@@ -254,43 +373,44 @@ const services = [
     cardGradient: "linear-gradient(135deg, #ff1e1eab  0%, #ff0000d9 100%)",
     headline: "Turn views into customers.",
     description:
-      "Leverage engaging video content to drive business profits from YouTube's vast audience — channel growth, SEO and monetization, end to end.",
+      "YouTube is more than a video platform. It is a search engine, trust channel and conversion touchpoint. We help brands grow through channel strategy, video SEO, thumbnails, shorts, long-form content, YouTube Ads and performance reporting.",
     items: [
       "Channel strategy & setup",
       "Video SEO & thumbnails",
       "Shorts & long-form production",
-      "YouTube Ads (TrueView, Bumper)",
+      "YouTube Ads",
       "Audience growth tactics",
       "Performance reporting",
     ],
     cta: "Explore YouTube",
   },
   {
-    id: "orm",
+    id: "cro",
     index: "05",
-    title: "ORM",
-    fullName: "Online Reputation Management",
-    icon: "ShieldCheck",
+    title: "CRO",
+    fullName: "Conversion Rate Optimization",
+    icon: "TrendingUp",
     logoUrl: "/images/ormcardlogo.png",
     tagColor: "#F37335",
     cardGradient: "linear-gradient(135deg, #FF8A2B 0%, #D44E00 100%)",
-    headline: "Protect, repair, amplify your reputation.",
+    headline: "More conversions from the traffic you already have.",
     description:
-      "We safeguard your brand reputation, address negative feedback, and foster positive sentiment across every channel that matters.",
+      "Growth does not always need more traffic. Sometimes it needs a better journey. We improve landing pages, forms, funnels, product pages and checkout flows so paid and organic traffic converts at a higher rate.",
     items: [
-      "Brand monitoring 24/7",
-      "Review management",
-      "Crisis response",
-      "Sentiment analysis",
-      "Search result cleanup",
-      "Proactive reputation building",
+      "Landing page CRO",
+      "Funnel analysis",
+      "A/B testing",
+      "Heatmap insights",
+      "Form optimization",
+      "Conversion tracking",
+      "Analytics dashboards",
     ],
-    cta: "Explore ORM",
+    cta: "Explore CRO",
   },
   {
     id: "content",
     index: "06",
-    title: "Content",
+    title: "Content Marketing",
     fullName: "Content Writing",
     icon: "PenLine",
     logoUrl: "/images/contentcardlogo.png",
@@ -298,7 +418,7 @@ const services = [
     cardGradient: "linear-gradient(135deg, #38BDF8 0%, #0369A1 100%)",
     headline: "Words that rank. Stories that sell.",
     description:
-      "Engaging, SEO-friendly content tailored to your brand — blog posts, website copy, social captions and email sequences that actually convert.",
+      "We create SEO-friendly blogs, website copy, landing page content, social captions, email sequences and product descriptions built for discovery and conversion.",
     items: [
       "Blog & article writing",
       "Website & landing copy",
@@ -317,15 +437,15 @@ export default function page() {
       <ServicesSection
         highlightTag={'OUR DIGITAL MARKETING SERVICES'}
         title={'Built To Drive Growth'}
-        description={'Six disciplines, one engine — turn your brand into a measurable growth machine. Every service works alone or together to deliver traffic, leads and revenue.'}
+        description={'Every service works alone or together to help your brand win more traffic, generate better leads and convert more customers with measurable ROI.'}
         SERVICES={services}
       />
       <MarqueeStrip />
       <Narrative
         highlightTag={"Why Growth Has Changed"}
-        title={"Attention has fragmented. Growth strategies should too."}
+        title={"Attention is scattered, Your marketing cannot be"}
         description={[
-          "Customers discover brands through AI assistants, search engines, social feeds, videos, communities, and recommendations. Winning brands engineer visibility across every touchpoint.",
+          "Customers no longer discover brands from one channel alone. They move across Google, AI search, social feeds, YouTube, reviews, ads, communities and websites before making a decision. Winning brands connect every touchpoint into one clear growth system — built to attract, engage and convert.",
         ]}
         features={features}
         tagList={[
@@ -336,34 +456,41 @@ export default function page() {
         ]}
       />
       <Capabilities
-        title={"A new layer of growth built for AI-first buyers."}
-        description={`Three disciplines, one outcome — your brand cited, recommended and chosen inside every AI surface that matters.`}
+        title={"A modern growth system for brands that want more than visibility."}
+        description={`Three goals, One operating model get discovered, earn trust and convert demand into revenue. Our performance marketing stack connects strategy, SEO, paid ads, content, social, analytics and conversion optimization into one growth engine.
+`}
         highlightTag={"The Stack"}
         capsData={CAPS}
       />
       <BuildingNow
-        highlightTag={"CURRENTLY IN PRODUCTION"}
+        highlightTag={"GROWTH SYSTEMS IN MOTION"}
         title={"What we are building right now"}
         description={
-          "Six categories of intelligent systems, shipped into production — discovered as you scroll."
+          "Six categories of intelligent growth systems — designed to help brands attract better traffic, improve conversion quality and scale with clarity."
         }
         ITEMS={ITEMS}
       />
       <TechStack
         highlightTag={"BUILT ON THE LATEST AI STACK"}
         title={
-          "Models, frameworks, and infrastructure — composed deliberately."
+          "Platforms, signals and systems — connected deliberately"
         }
+        stackData={SOCIAL_TECHSTACK}
+        marqueeIcons={SOCIAL_MARQUEE}
       />
       <Framework
-        highlightTag={"· Methodology"}
-        title={"The Base2Brand GEO Framework"}
+        highlightTag={"· GROWTH OPERATING MODEL"}
+        title={"Base2Brand’s performance framework"}
         description={
-          "A five-step operating system for turning your brand into the answer AI engines recommend."
+          "A five-step operating system for turning marketing activity into measurable business growth."
         }
         steps={steps}
       />
-      <Industries />
+      <Industries
+        title="Built for industries where visibility and conversion decide growth."
+        description="Base2Brand's digital marketing services are built for businesses that need stronger traffic, better leads and measurable revenue impact."
+        industriesData={SOCIAL_INDUSTRIES}
+      />
       <CreativeShowcase />
     </div>
   );

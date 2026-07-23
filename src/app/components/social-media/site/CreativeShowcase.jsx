@@ -7,31 +7,37 @@ const SHOWCASE = [
   {
     title: "Video Ads",
     tag: "Performance Creative",
+    desc: "Short-form and long-form video ads built for hooks, retention and action.",
     image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80",
   },
   {
     title: "Social Media Creatives",
     tag: "Static & Reels",
+    desc: "Platform-native creatives for Instagram, Facebook, LinkedIn and YouTube campaigns.",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80",
   },
   {
     title: "Motion Graphics",
-    tag: "Brand Films",
+    tag: "Explainer & Motion",
+    desc: "Animated visuals that simplify complex offers and improve ad engagement.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
   },
   {
-    title: "Display Campaigns",
-    tag: "Programmatic",
+    title: "Landing Page Experiences",
+    tag: "Conversion",
+    desc: "Conversion-focused landing pages designed around campaign intent and buyer action.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
-    title: "Landing Pages",
-    tag: "Conversion",
+    title: "UGC Ads",
+    tag: "Creator Content",
+    desc: "Human-led content built to create trust, relatability and faster audience connection.",
     image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=800&q=80",
   },
   {
-    title: "Brand Campaigns",
+    title: "Brand Films",
     tag: "Editorial",
+    desc: "Premium storytelling for launches, campaigns, positioning and trust-building.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
   },
 ];
@@ -133,8 +139,7 @@ function FlipCard({ data, index }) {
               {data.title}
             </h3>
             <p className="mt-4 text-sm text-b2b-text-2 max-w-[260px] mx-auto">
-              Concepted, produced, and optimised by a dedicated creative pod working
-              alongside our growth strategists.
+              {data.desc}
             </p>
             <a
               href="#"
@@ -163,7 +168,7 @@ export default function CreativeShowcase() {
             Creative engineered to convert.
           </h2>
           <p className="mt-2 text-zinc-400 text-sm md:text-lg max-w-2xl mx-auto">
-            A modern in-house studio producing performance creative, brand films, and conversion-grade landing experiences at enterprise scale.
+            A modern performance studio producing ad creatives, brand films, videos, social assets and landing page experiences built for measurable campaign results.
           </p>
         </div>
 

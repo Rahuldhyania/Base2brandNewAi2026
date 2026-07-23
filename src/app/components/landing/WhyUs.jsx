@@ -7,22 +7,22 @@ const cards = [
   {
     icon: Rocket,
     title: "Future-First Strategy",
-    body: "We don't chase search — we engineer for where it's going. AI-native from day one.",
+    body: "We don’t chase old rankings. We build visibility for where search is moving — AI-native from day one.",
   },
   {
     icon: BarChart3,
     title: "Full-Funnel Growth",
-    body: "AI visibility, qualified leads and brand authority — measured across the whole funnel.",
+    body: "We connect AI visibility, qualified leads, brand authority and conversion strategy across the complete growth funnel.",
   },
   {
     icon: Cpu,
     title: "Technical + Marketing Expertise",
-    body: "Deep craft across web, content engineering, growth and applied AI — under one roof.",
+    body: "SEO, content engineering, website structure, analytics, growth and applied AI — handled as one connected system.",
   },
   {
     icon: Building2,
     title: "Enterprise Ready",
-    body: "Battle-tested with startups, SMBs and enterprise — governance, scale and speed.",
+    body: "Built for startups, SMBs and enterprise teams that need governance, speed, scale and measurable execution.",
   },
 ];
 
@@ -44,16 +44,14 @@ export default function WhyUs() {
               </span>
             </h2>
             <p className="mt-6 text-zinc-400 max-w-md text-lg">
-              An AI-first agency built for the next decade of discovery —
-              combining strategic depth, technical rigor and a relentless bias
-              for outcomes.
+              Base2Brand is built for the next decade of discovery — combining strategy, content engineering, technical SEO, AI systems, analytics and growth execution under one roof. We treat AI SEO as the next operating layer of search.
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
               {[
-                { v: "20+", l: "Verticals shipped" },
-                { v: "94%", l: "Client retention" },
-                { v: "10×", l: "Avg AI share-of-voice" },
+                { v: "90 Days", l: "AI visibility roadmap." },
+                { v: "4+ AI Engines", l: "ChatGPT, Gemini, Perplexity & Google AI." },
+                { v: "100+ Prompts", l: "Tested for AI visibility." },
               ].map((s) => (
                 <div
                   key={s.l}

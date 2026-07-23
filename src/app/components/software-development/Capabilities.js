@@ -5,10 +5,9 @@ import {
   Code2,
   Boxes,
   Smartphone,
-  Layers,
+  Building2,
   Network,
   CloudCog,
-  RefreshCcw,
   ArrowUpRight,
 } from "lucide-react";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
@@ -17,51 +16,96 @@ const CAPABILITIES = [
   {
     n: "01",
     icon: Code2,
-    title: "Web Application Development",
-    desc: "Modern applications engineered using scalable architectures.",
-    tags: ["React", "Next.js", "Angular", "Vue", "TypeScript"],
+    title: "Custom Web Application Development",
+    desc: "Modern web applications engineered for speed, usability and scale with the use of perfect solutions.",
+    tags: [
+      "Admin Dashboards",
+      "Customer Portals",
+      "Internal Business Applications",
+      "Workflow Automation Platforms",
+      "SaaS Applications",
+      "Enterprise Web Portals",
+    ],
   },
   {
     n: "02",
     icon: Boxes,
     title: "SaaS Product Development",
-    desc: "Subscription platforms designed for growth.",
-    tags: ["Multi-tenancy", "Auth", "Billing", "Analytics", "Admin"],
+    desc: "Subscription-based platforms built for growth, monetization and operational control.",
+    tags: [
+      "Multi-Tenant Architecture",
+      "User Authentication & Authorization",
+      "Subscription & Billing",
+      "Plan & Pricing Management",
+      "Admin Dashboards",
+      "Usage Analytics",
+      "Role-Based Access Control",
+      "Customer Workspaces",
+    ],
   },
   {
     n: "03",
-    icon: Smartphone,
-    title: "Android Development",
-    desc: "Native Android experiences built for reliability and performance.",
-    tags: ["Kotlin", "Jetpack Compose", "Material 3", "Enterprise Android"],
+    icon: Building2,
+    title: "Enterprise Software Solutions",
+    desc: "Our enterprise software solutions help teams manage data, users, workflows, approvals, reporting, automation and integrations across departments.",
+    tags: [
+      "Enterprise portals",
+      "Internal tools",
+      "Workflow systems",
+      "Role-based access",
+      "Approval engines",
+      "Audit trails",
+      "Reporting dashboards",
+      "System integrations",
+    ],
   },
   {
     n: "04",
-    icon: Layers,
-    title: "Cross-Platform Development",
-    desc: "Accelerate delivery across devices.",
-    tags: ["Flutter", "React Native", "Shared Logic", "Unified UX"],
+    icon: Smartphone,
+    title: "Mobile App Development",
+    desc: "We build Android, iOS and cross-platform apps connected to secure APIs, backend systems and business workflows.",
+    tags: [
+      "Android Apps",
+      "iOS Apps",
+      "Cross-Platform Apps",
+      "API Integration",
+      "Push Notifications",
+      "Offline Support",
+      "Secure Authentication",
+      "Real-time Sync",
+    ],
   },
   {
     n: "05",
     icon: Network,
     title: "API & Microservices Engineering",
-    desc: "Composable architectures powering modern software.",
-    tags: ["REST", "GraphQL", "Event-Driven", "Service Orchestration"],
+    desc: "Composable backend systems that power modern software products.",
+    tags: [
+      "Custom API Development",
+      "Microservices Architecture",
+      "Third-party Integrations",
+      "Secure Authentication",
+      "API Gateway Management",
+      "Service Orchestration",
+      "High-performance APIs",
+      "Scalable Backend Systems",
+    ],
   },
   {
     n: "06",
     icon: CloudCog,
     title: "Cloud & DevOps Engineering",
-    desc: "Infrastructure designed for scale.",
-    tags: ["AWS", "Azure", "Kubernetes", "CI/CD", "IaC"],
-  },
-  {
-    n: "07",
-    icon: RefreshCcw,
-    title: "Legacy Modernization",
-    desc: "Transform outdated systems into modern platforms.",
-    tags: ["Monolith Decomp", "Cloud Migration", "Modernization", "Debt Reduction"],
+    desc: "Cloud infrastructure built for secure deployment, scale and operational visibility.",
+    tags: [
+      "Cloud Infrastructure",
+      "Containerization",
+      "Kubernetes Orchestration",
+      "Infrastructure as Code",
+      "CI/CD Automation",
+      "Monitoring & Observability",
+      "Secure Deployments",
+      "Auto Scaling & High Availability",
+    ],
   },
 ];
 
@@ -82,15 +126,15 @@ const Capabilities = () => {
           <div className="max-w-2xl mx-auto">
             <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-(--b2b-primary)" />
-              Capabilities
+              SOFTWARE DEVELOPMENT CAPABILITIES
             </motion.div>
             <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-              <span className="b2b-text-gradient">One engineering team.</span>{" "} <br />
-              <span className="text-(--b2b-primary)">Every digital surface.</span>
+              <span className="b2b-text-gradient">Everything Your Digital Product Needs,</span>{" "} <br />
+              <span className="text-(--b2b-primary)">One Team Delivers.</span>
             </h2>
           </div>
           <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
-            From product foundations to platform-scale systems — a single engineering team owning the entire stack and lifecycle.
+            We build custom web apps, SaaS platforms, and enterprise software with performance, scalability, and business value.
           </p>
         </motion.div>
 

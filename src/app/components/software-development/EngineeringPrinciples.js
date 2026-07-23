@@ -8,27 +8,27 @@ const PRINCIPLES = [
   {
     icon: Boxes,
     title: "Composable",
-    desc: "Systems evolve without complete rewrites — new capability lands as new modules, not new monoliths.",
+    desc: "Systems should evolve without full rewrites. We build modular software so new capabilities can be added without creating fragile monoliths.",
   },
   {
     icon: Eye,
     title: "Observable",
-    desc: "Production visibility is built in — logs, metrics, traces, and runtime hypotheses on every release.",
+    desc: "Production visibility is built in — logs, metrics, traces, alerts and runtime insights from the start.",
   },
   {
     icon: ShieldCheck,
     title: "Secure",
-    desc: "Security is integrated from the start — identity, secrets, supply chain, and runtime hardening by default.",
+    desc: "Security is engineered into identity, access, data flow, dependencies, infrastructure and deployment.",
   },
   {
     icon: TrendingUp,
     title: "Scalable",
-    desc: "Architecture grows with demand — capacity, cost, and reliability are explicit engineering targets.",
+    desc: "Architecture grows with demand. Capacity, cost and reliability are part of the engineering plan.",
   },
   {
     icon: Wrench,
     title: "Maintainable",
-    desc: "Engineering decisions optimize for long-term sustainability — not just the next sprint.",
+    desc: "The best software can be improved without fear. We write systems your team can understand, operate and extend.",
   },
 ];
 
@@ -45,15 +45,14 @@ const EngineeringPrinciples = () => {
         >
           <motion.div variants={fadeUp} className="text-(--b2b-primary) ">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
-            Engineering Principles
+            Built With Discipline
           </motion.div>
           <motion.h2 variants={fadeUp} className="mt-2 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">How we </span>
-            <span className="text-(--b2b-primary)">build software.</span>
+            <span className="text-(--b2b-primary)">build software that lasts.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-2">
-            Five principles shape every decision — from architecture sketches to production
-            runbooks.
+            Five principles shape every decision — from architecture sketches to production runbooks.
           </motion.p>
         </motion.div>
 

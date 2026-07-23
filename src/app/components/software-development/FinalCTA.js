@@ -41,8 +41,7 @@ const FinalCTA = () => {
                 <span className="text-(--b2b-primary)">into production.</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
-                Share your goals, technical challenges, or opportunities. Our engineers will
-                provide an implementation perspective focused on measurable business outcomes.
+                Whether you need software development services, custom web application development, enterprise software solutions or a long-term software development agency, Base2Brand can help you define, build and scale the right product.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">

@@ -20,7 +20,6 @@ const TECHNOLOGIES = [
   { name: "Combine", category: "Reactive" },
   { name: "Metal", category: "Graphics" },
   { name: "AVFoundation", category: "Media" },
-  { name: "Vision", category: "Perception" },
   { name: "Live Activities", category: "Surface" },
   { name: "Server-side Swift", category: "Backend" },
   { name: "Xcode Cloud", category: "DevOps" },
@@ -42,7 +41,6 @@ const CATEGORY_COLOR = {
   Reactive: "#64D2FF",
   Graphics: "#5AC8FA",
   Media: "#0A84FF",
-  Perception: "#40C8E0",
   DevOps: "#5AC8FA",
   Release: "#64D2FF",
   Visualization: "#0A84FF",
@@ -58,16 +56,15 @@ export default function Technologies() {
             Modern Apple Technologies
           </p>
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
-            The current Apple stack —{" "}
+            Modern Apple engineering,{" "}
             <span className="apple-text-gradient">
-              used like it was designed to be.
+              built for products that scale. 
             </span>
           </h2>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/60 leading-relaxed max-w-md">
-            We ship on Apple's modern frameworks, not generation-old patterns.
-            SwiftUI first. App Intents for intelligence. Swift Concurrency for
-            async. Swift Data for local persistence. RealityKit for spatial.
-            This is what production Apple software looks like today.
+            We ship on Apple’s modern engineering stack, not outdated patterns.
+SwiftUI first. Swift for performance. App Intents for intelligent actions. CloudKit and secure APIs for sync. RealityKit for spatial experiences. This is how modern enterprise iOS app development and iPhone app development should be delivered.
+
           </p>
         </div>
 

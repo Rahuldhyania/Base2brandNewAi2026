@@ -11,6 +11,11 @@ import {
   BrainCircuit,
   PhoneCall,
   LayoutDashboard,
+  Compass,
+  Megaphone,
+  Search,
+  Share2,
+  FlaskConical,
 } from "lucide-react";
 
 const NAV_HEIGHT = 96;
@@ -22,6 +27,11 @@ const icons = {
   BrainCircuit,
   PhoneCall,
   LayoutDashboard,
+  Compass,
+  Megaphone,
+  Search,
+  Share2,
+  FlaskConical,
 };
 
 const clamp = (value, min, max) => {

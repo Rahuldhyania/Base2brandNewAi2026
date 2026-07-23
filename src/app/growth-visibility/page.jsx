@@ -14,15 +14,15 @@ import Industries from "@/components/ai/Industries";
 const features = [
   {
     l: "AI search is exploding",
-    d: "Conversational AI is replacing 10-blue-links for high-intent commercial queries.",
+    d: "Conversational search is replacing traditional search journeys for high-intent questions.",
   },
   {
     l: "Behaviour is shifting",
-    d: "Buyers now ask AI assistants before they ever open a search tab.",
+    d: "Customers now ask AI assistants before they open a search tab, browse a website or contact sales.",
   },
   {
     l: "Invisibility costs revenue",
-    d: "Brands not surfaced inside AI answers are quietly losing pipeline.",
+    d: "If AI engines do not cite, explain or recommend your brand, your competitors become the answer.",
   },
 ];
 
@@ -32,9 +32,12 @@ const CAPS = [
     title: "Generative Engine Optimization",
     span: "md:col-span-7",
     items: [
+      "Make your brand readable, credible and recommendable for generative AI engines.",
       "Entity-first content modelling",
       "AI-readable brand graphs",
       "Prompt-targeted authority",
+      "LLM-friendly page structure",
+      "Source and citation alignment",
     ],
     accent: true,
   },
@@ -43,9 +46,12 @@ const CAPS = [
     title: "Answer Engine Optimization",
     span: "md:col-span-5",
     items: [
+      "Structure your content so AI systems can pull clean, confident answers from your website.",
       "Question intent mapping",
       "Structured answer blocks",
       "Citation-grade signals",
+      "FAQ architecture",
+      "Schema-led content design",
     ],
   },
   {
@@ -53,9 +59,12 @@ const CAPS = [
     title: "AI Search Optimization",
     span: "md:col-span-5",
     items: [
+      "Build cross-platform visibility across ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews.",
       "Cross-platform presence",
       "Recommendation positioning",
       "Topical depth at scale",
+      "AI visibility tracking",
+      "Competitor answer analysis",
     ],
   },
 ];
@@ -65,8 +74,8 @@ const ITEMS = [
     icon: "Users",
     title: "AI Visibility Workforce",
     tagline: "Digital growth operators for AI-first search.",
-    desc: "Always-on AI visibility systems that monitor brand mentions, competitor presence, answer coverage, citation gaps and recommendation opportunities across AI search platforms.",
-    metrics: ["24/7 monitoring", "Mention tracking", "Competitor signals"],
+    desc: "A dedicated operating layer for monitoring where your brand appears, where it is missing and what AI engines currently understand about your business.",
+    metrics: ["Brand visibility checks", "Prompt testing", "AI search monitoring"],
   },
   {
     icon: "GitBranch",
@@ -79,29 +88,29 @@ const ITEMS = [
     icon: "Briefcase",
     title: "Answer Engine Optimization",
     tagline: "Own the answers buyers now trust.",
-    desc: "AEO systems that map buyer questions, structure expert answers, improve topical authority and make your brand easier for AI engines to understand and recommend.",
-    metrics: ["Question mapping", "Answer coverage", "Authority lift"],
+    desc: "Content architecture that helps AI engines extract direct, accurate and citation-ready answers from your pages",
+    metrics: ["FAQ blocks", "Schema structure", "Answer-ready content"],
   },
   {
     icon: "BrainCircuit",
     title: "AI Search Intelligence",
     tagline: "Visibility decisions backed by live signals.",
-    desc: "Decision intelligence that analyzes AI search rankings, brand share of voice, citation quality, content gaps and competitor movement to guide growth actions.",
-    metrics: ["Share of voice", "Content gaps", "AI rankings"],
+    desc: "AI search marketing intelligence that shows how buyers ask, what engines recommend and which competitors already own the answer.",
+    metrics: ["Prompt research", "Competitor analysis", "Share-of-answer tracking"],
   },
   {
     icon: "PhoneCall",
     title: "AI Buyer Journey Content",
     tagline: "Content built for how buyers now search.",
-    desc: "AI-first content systems that turn buyer intent, FAQs, comparisons, service pages and thought leadership into structured assets ready for AI discovery.",
-    metrics: ["Intent-led", "Structured content", "Buyer-ready"],
+    desc: "Content designed around real AI prompts, buyer questions, comparison searches and decision-stage queries.",
+    metrics: ["Buyer intent", "Commercial questions", "LLM SEO content"],
   },
   {
     icon: "LayoutDashboard",
     title: "AI Visibility Command Center",
     tagline: "One dashboard for AI search growth.",
-    desc: "A unified control plane to track GEO, AEO, AI citations, brand recommendations, competitor visibility, content performance and growth opportunities.",
-    metrics: ["Visibility dashboard", "Citation tracking", "Growth insights"],
+    desc: "A reporting system that tracks mentions, citations, sentiment, competitor visibility and recommendation frequency across AI engines.",
+    metrics: ["AI visibility analytics ", "Brand mentions", "Recommendation tracking"],
   },
 ];
 
@@ -109,31 +118,31 @@ const steps = [
   {
     n: "01",
     title: "AI Brand Audit",
-    body: "We analyze how ChatGPT, Gemini, Claude and Perplexity currently perceive — or ignore — your brand.",
+    body: "We test buyer prompts across ChatGPT, Gemini, Claude and Perplexity to benchmark AI visibility for brands and uncover missed recommendations.",
     icon: "ScanSearch",
   },
   {
     n: "02",
     title: "Knowledge Optimization",
-    body: "We engineer your business knowledge graph: structured data, authority signals and entity relationships AI can trust.",
+    body: "We structure brand entities, content signals and knowledge graphs so LLM SEO helps AI engines understand, trust and cite you.",
     icon: "Database",
   },
   {
     n: "03",
     title: "Content Intelligence",
-    body: "We produce AI-readable, answer-shaped content tuned to the exact prompts buyers use in your category.",
+    body: "We build answer-ready pages around buyer questions, using AI SEO and AI search marketing to improve retrieval, citations and intent.",
     icon: "FileText",
   },
   {
     n: "04",
     title: "Entity Authority Building",
-    body: "We compound digital trust through citations, mentions, partnerships and recognition AI engines weigh heavily.",
+    body: "We build trust signals across your website, profiles, mentions, citations, partnerships, thought leadership and external references. AI engines do not only read your website. They look for confidence across the web.",
     icon: "Award",
   },
   {
     n: "05",
     title: "AI Recommendation Positioning",
-    body: "We monitor and lift the probability of your brand being recommended inside AI answers — month after month.",
+    body: "We monitor and increase the probability of your brand being recommended inside AI answers — month after month. This is AI search marketing with a measurable outcome.",
     icon: "Sparkles",
   },
 ];
@@ -235,11 +244,11 @@ export default function page() {
     >
       <Hero
         highlightTag={"GEO · AEO · AI Search Optimization"}
-        titleUpper={"Dominate"}
+        titleUpper={"Own"}
         titleMiddle={"AI Search"}
         titleLower={"competitors do."}
         description={
-          "We get your brand recommended inside ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews and the next generation of search — through Generative Engine Optimization (GEO), Answer Engine Optimization (AEO) and AI visibility strategies."
+          "Base2Brand uses AI SEO, AI search marketing, LLM SEO, Generative Engine Optimization and Answer Engine Optimization to help your brand get discovered, cited and recommended faster across ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews."
         }
         leftCTA="Book Free Strategy Call"
         rightCTA={"Get AI Visibility Audit"}
@@ -247,23 +256,17 @@ export default function page() {
         floatingMetrics={floatingMetrics}
       />
       <Narrative
-        title={"Search has changed. <br /> Your marketing should too."}
+        title={"Search has changed. <br /> Google isn't the only search engine anymore."}
         description={[
-          "People don't only ask Google anymore. They ask ChatGPT, Gemini, Perplexity and Claude — and AI decides which brand gets recommended.",
-          "85% of high-intent buyers consult an AI assistant before talking to your sales team.",
+          "People are no longer only searching through blue links. They are asking AI assistants what to buy, who to trust, which agency to hire, which software to compare and which brand deserves attention.",
+          "That is why AI search marketing are becoming a new growth layer built to improve AI visibility for brands across every answer engine that matters.",
         ]}
         features={features}
-        highlightTag={"How customers ask today"}
-        tagList={[
-          "Best CRM software for B2B SaaS",
-          "Top digital marketing agency in 2026",
-          "Best HRMS company for mid-market",
-          "Who should I hire for web development?",
-        ]}
+        hideTagColumn
       />
       <Capabilities
-        title={"A new layer of growth built for AI-first buyers."}
-        description={`Three disciplines, one outcome — your brand cited, recommended and chosen inside every AI surface that matters.`}
+        title={"From search rankings to AI recommendations"}
+        description={`Our Growth Visibility practice combines AI SEO, AEO and GEO into one operating system for modern discovery.`}
         highlightTag={"The Stack"}
         capsData={CAPS}
       />
@@ -273,22 +276,22 @@ export default function page() {
         cardsData={PROJECTS}
       />
       <BuildingNow
-        highlightTag={"CURRENTLY IN PRODUCTION"}
-        title={"What we are building for AI-first growth"}
+        highlightTag={"AI SEARCH GROWTH SYSTEMS "}
+        title={"What we are building for AI-first growth."}
         description={
           "Six categories of AI visibility systems, shipped into production — helping brands get discovered, cited and recommended across the new search landscape."
         }
         ITEMS={ITEMS}
       />
       <TechStack
-        highlightTag={"BUILT ON THE LATEST AI STACK"}
+        highlightTag={"THE AI VISIBILITY STACK"}
         title={
-          "Models, frameworks, and infrastructure — composed deliberately."
+          "Models, signals and systems built to make brands easier to recommend."
         }
       />
       <Framework
-        highlightTag={"· Methodology"}
-        title={"The Base2Brand GEO Framework"}
+        highlightTag={"· OUR AI SEARCH ROADMAP "}
+        title={"A practical system for getting cited, trusted and chosen."}
         description={
           "A five-step operating system for turning your brand into the answer AI engines recommend."
         }
