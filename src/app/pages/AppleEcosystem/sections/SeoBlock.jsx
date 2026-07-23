@@ -2,20 +2,20 @@ import React from "react";
 
 const SEO_PARAS = [
   {
-    h: "An Apple App Development Company built around modern Apple engineering.",
-    p: "Base2Brand is an Apple App Development Company that designs and ships native software across the entire Apple ecosystem. Our practice is built around current Apple engineering — SwiftUI, Swift Concurrency, App Intents, Swift Data and the modern Foundation Models — not legacy patterns. Whether you need iOS app development, iPhone app development, iPad applications, watchOS or visionOS engineering, we operate with the same studio, the same craft and the same production discipline.",
+    h: "An Apple app development company built around modern Apple engineering.",
+    p: "Base2Brand is an Apple ecosystem development company that designs and ships native software across iPhone, iPad, Apple Watch, Vision Pro, Apple TV, CarPlay and Mac. Whether you need iPhone app development, enterprise iOS app development or Vision Pro app development, we operate with the same product discipline: clear strategy, strong UX, production-grade engineering and long-term evolution.",
   },
   {
     h: "Swift, SwiftUI and native iOS development at production scale.",
-    p: "Our Swift development and SwiftUI development teams ship iOS apps for fintechs, healthcare networks, logistics operators and consumer brands. We treat native iOS development as an engineering discipline first — modular Swift targets, dependency injection, snapshot tests, performance budgets and Xcode Cloud pipelines — so the apps remain easy to evolve as Apple's platform evolves each WWDC.",
+    p: "Our native Apple engineering team builds iOS applications for startups, enterprises, healthcare platforms, logistics operators, ecommerce brands and internal business systems. We treat enterprise iOS app development as more than app screens. It includes modular architecture, secure authentication, scalable backends, performance testing, accessibility, analytics, release management and ongoing product improvement.",
   },
   {
     h: "Apple Watch app development, Vision Pro development and the rest of the surface area.",
-    p: "Beyond iPhone app development, our Apple Watch app development team builds glanceable, complication-driven experiences powered by HealthKit and the Smart Stack. Our Vision Pro development practice is one of the early production cohorts for visionOS — building spatial enterprise workflows, immersive training and product visualization. We also ship CarPlay, Apple TV and Mac applications when the ecosystem strategy calls for them.",
+    p: "Beyond iPhone app development, we build companion and ecosystem experiences across Apple Watch, iPad, Mac, CarPlay and Apple TV. Our Vision Pro app development practice is built for brands and enterprises exploring spatial computing for training, product visualization, remote collaboration, healthcare, education and immersive customer experiences.",
   },
   {
     h: "Why enterprises choose Base2Brand for Apple development.",
-    p: "Customers don't choose us as a generic iOS development agency. They engage us because they need an Apple App Development Company that pairs craft with enterprise discipline — security questionnaires answered, MDM and configuration profiles honoured, accessibility shipped, App Store review navigated calmly, and a release management cadence that actually maps to the rest of the business.",
+    p: "Clients do not choose Base2Brand as a generic app vendor. They choose us when the product needs to be secure, scalable, premium and connected to business outcomes. We bring strategy, design, engineering, Apple ecosystem thinking, enterprise deployment, privacy-aware architecture and post-launch operation into one team.",
   },
 ];
 

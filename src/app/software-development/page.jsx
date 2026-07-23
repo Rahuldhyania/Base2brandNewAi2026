@@ -16,23 +16,27 @@ import Industries from "@/components/ai/Industries";
 const CARDS = [
   {
     icon: 'Wrench',
-    title: "Production engineering over prototypes.",
-    desc: "Products are built to operate, evolve, and scale — not just to demo. We engineer for production from day one.",
+    title: "Production-first engineering",
+    desc: "We build software for real users, real traffic and real operational pressure — not just demo screens.",
+    outcome: "Products that are stable, scalable and ready for daily business use.",
   },
   {
     icon: 'Cloud',
-    title: "Cloud-native foundations from day one.",
-    desc: "Security, resilience, and observability are engineered into every layer of the platform, not bolted on later.",
+    title: "Cloud-native from the beginning",
+    desc: "Modern software needs infrastructure that can scale. Our enterprise software solutions are designed with secure cloud architecture, continuous delivery, reliable deployments, and proactive monitoring from day one.",
+    outcome: "Faster releases, better reliability and lower operational friction.",
   },
   {
     icon: 'Layers3',
-    title: "Cross-platform product thinking.",
-    desc: "Web, Android, APIs, and infrastructure work as a unified ecosystem with shared logic and consistent UX.",
+    title: "Cross-platform product thinking",
+    desc: "Web apps, mobile apps, APIs, dashboards and admin systems should feel like one connected product ecosystem.",
+    outcome: "Consistent UX, shared logic and stronger product control.",
   },
   {
     icon: 'Rocket',
-    title: "Execution matters.",
-    desc: "Shipping consistently is more valuable than endless planning. We move with engineering velocity and rigor.",
+    title: "Execution with accountability",
+    desc: "Ideas only matter when they ship. We move from roadmap to release with clear ownership, measurable milestones and engineering velocity.",
+    outcome: "Less confusion, faster progress and software that actually reaches users.",
   },
 ];
 
@@ -40,15 +44,36 @@ const PROJECTS = [
   {
     id: "case-01",
     n: "CASE 01",
-    tag: "SaaS Engineering · Product Platform",
+    tag: "CRM Development · Sales Operations",
+    title: "Building a CRM layer for faster lead movement.",
+    metrics: [
+      { v: "61%", l: "faster response" },
+      { v: "+39%", l: "qualified leads" },
+    ],
+    url: "crm-layer.b2b/case",
+    preview: {
+      accent: "#FF3B30",
+      title: "CRM Layer — Sales Console",
+      lines: [
+        { label: "Avg. response time", value: "-61%" },
+        { label: "Qualified leads", value: "+39%" },
+        { label: "Active pipelines", value: "1,120" },
+      ],
+      chart: [26, 31, 36, 42, 47, 53, 58, 64, 69, 75, 80, 86],
+    },
+  },
+  {
+    id: "case-02",
+    n: "CASE 02",
+    tag: "SaaS Product Development · Product Platform",
     title: "Scaling a SaaS platform for faster onboarding.",
     metrics: [
       { v: "-45%", l: "onboarding time" },
-      { v: "Daily", l: "deployment frequency" },
+      { v: "Daily", l: "release frequency" },
     ],
     url: "saas-platform.b2b/case",
     preview: {
-      accent: "#FF3B30",
+      accent: "#FF4A3D",
       title: "SaaS Platform — Product Console",
       lines: [
         { label: "Active workspaces", value: "4,820" },
@@ -59,48 +84,108 @@ const PROJECTS = [
     },
   },
   {
-    id: "case-02",
-    n: "CASE 02",
-    tag: "Enterprise Platform · Workforce Systems",
-    title: "Building a workforce platform for distributed teams.",
+    id: "case-03",
+    n: "CASE 03",
+    tag: "Custom Software Development · Business Systems",
+    title: "Turning manual operations into one connected software system.",
+    metrics: [
+      { v: "12x", l: "faster reporting" },
+      { v: "98%", l: "process visibility" },
+    ],
+    url: "business-systems.b2b/live",
+    preview: {
+      accent: "#FF3B30",
+      title: "Business Systems — Operations Console",
+      lines: [
+        { label: "Reporting speed", value: "12x" },
+        { label: "Process visibility", value: "98%" },
+        { label: "Connected workflows", value: "36" },
+      ],
+      chart: [24, 29, 35, 40, 46, 53, 60, 67, 74, 81, 88, 95],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
+    tag: "App Development · Mobile Experience",
+    title: "Launching a mobile app built for adoption and repeat use.",
     metrics: [
       { v: "93%", l: "platform adoption" },
       { v: "42", l: "business workflows" },
     ],
-    url: "workforce-platform.b2b/live",
+    url: "mobile-experience.b2b/app",
     preview: {
       accent: "#FF4A3D",
-      title: "Enterprise Workforce — Operations Hub",
+      title: "Mobile Experience — Adoption Console",
       lines: [
-        { label: "Teams onboarded", value: "42" },
         { label: "Platform adoption", value: "93%" },
-        { label: "Open workflow issues", value: "18" },
+        { label: "Business workflows", value: "42" },
+        { label: "Daily active users", value: "8,340" },
       ],
       chart: [22, 27, 33, 41, 49, 57, 63, 71, 76, 82, 88, 93],
     },
   },
+];
+
+const SOFTWARE_INDUSTRIES = [
   {
-    id: "case-03",
-    n: "CASE 03",
-    tag: "Ecommerce Engineering · Modernization",
-    title: "Modernizing ecommerce for speed and conversion.",
-    metrics: [
-      { v: "3x", l: "transaction throughput" },
-      { v: "+14%", l: "conversion lift" },
-    ],
-    url: "ecommerce-modernization.b2b/app",
-    preview: {
-      accent: "#FF3B30",
-      title: "Ecommerce Modernization — Revenue Layer",
-      lines: [
-        { label: "Transaction throughput", value: "3x" },
-        { label: "Conversion lift", value: "+14%" },
-        { label: "Checkout latency", value: "-62%" },
-      ],
-      chart: [35, 38, 44, 49, 55, 61, 68, 74, 79, 86, 92, 98],
-    },
+    id: "finserv",
+    name: "Financial Services",
+    use: "Lead qualification, document workflows, KYC support, advisor portals, reporting systems and secure customer platforms.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    use: "Patient portals, appointment workflows, internal dashboards, compliance-friendly data systems and operational tools.",
+    image:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "retail",
+    name: "Retail & Ecommerce",
+    use: "Commerce platforms, product systems, inventory workflows, customer dashboards, CRO-focused applications and integrations.",
+    image:
+      "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "manufacturing",
+    name: "Manufacturing",
+    use: "Production dashboards, quality systems, supplier portals, field reporting and operational workflow platforms.",
+    image:
+      "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "logistics",
+    name: "Logistics",
+    use: "Dispatch systems, shipment dashboards, driver apps, route workflows and customer communication tools.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "education",
+    name: "Education",
+    use: "Learning platforms, student portals, admission workflows, course dashboards and CRM-connected systems.",
+    image:
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "real-estate",
+    name: "Real Estate",
+    use: "Lead management platforms, property portals, booking systems, CRM integrations and sales workflow tools.",
+    image:
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "professional-services",
+    name: "Professional Services",
+    use: "Client portals, document workflows, internal dashboards, scheduling systems and automation-backed operations.",
+    image:
+      "https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=70",
   },
 ];
+
 const page = () => {
   return (
     <div className="theme-software-development">
@@ -108,24 +193,28 @@ const page = () => {
         <Hero />
         <WhyBase2Brand
           hightlighttag={'Why Base2Brand '}
-          titleUpper={'Why modern software products require'}
+          titleUpper={'Modern software needs more than development, It needs'}
           titleLower={'engineering discipline.'}
-          description={'Real software products are continuously operated, evolved, and scaled — not just launched. Our engineering approach is built around that reality.'}
+          description={'That is why our software development services are built around product thinking, engineering quality and long-term scalability.'}
           cardsdata={CARDS}
         />
         <Capabilities />
         <Work
-          title="Selected software cases."
-          titleLower="Outcomes, not deployments."
+          title="Software cases"
+          titleLower="that moved the numbers."
           cardsData={PROJECTS}
         />
         <ProductsWeBuild />
         <TechStack />
 
         <Architecture />
-        <Industries />
-        <DevelopmentProcess />
-        <CaseStudies />
+        <Industries
+          title="Built for growth-heavy and operations-heavy businesses."
+          description="Base2Brand builds software development services for industries where speed, reliability, security and conversion matter. Our systems are designed around the workflows your teams actually run — not generic templates."
+          industriesData={SOFTWARE_INDUSTRIES}
+        />
+        {/* <DevelopmentProcess /> */}
+        {/* <CaseStudies /> */}
         <CommandCenter />
         <EngineeringPrinciples />
         <FinalCTA />

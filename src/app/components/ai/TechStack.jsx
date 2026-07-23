@@ -2,7 +2,6 @@
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import {
-  SiOpenai,
   SiAnthropic,
   SiGooglegemini,
   SiMeta,
@@ -13,10 +12,45 @@ import {
   SiNvidia,
   SiDatabricks,
   SiHuggingface,
+  SiGoogleads,
+  SiGooglesearchconsole,
+  SiYoutube,
+  SiInstagram,
+  SiX,
+  SiTiktok,
+  SiPinterest,
+  SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiLooker,
+  SiHotjar,
+  SiWordpress,
+  SiShopify,
+  SiSemrush,
+  SiHubspot,
+  SiZoho,
+  SiMailchimp,
+  SiWhatsapp,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa6";
+import { BsOpenai } from "react-icons/bs";
+import { FaAws, FaLinkedin, FaSalesforce } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
-import { Users, Layers, Network, Workflow, Database } from "lucide-react";
+import { TbBrandBing } from "react-icons/tb";
+import {
+  Users,
+  Layers,
+  Network,
+  Workflow,
+  Database,
+  Eye,
+  Search,
+  Braces,
+  Boxes,
+  BrainCircuit,
+  BarChart3,
+  LayoutDashboard,
+  ShoppingBag,
+  Mail,
+} from "lucide-react";
 import Marquee from "react-fast-marquee";
 
 /**
@@ -25,68 +59,126 @@ import Marquee from "react-fast-marquee";
  * mark get a contextual lucide icon.
  */
 
+const ICONS = {
+  BsOpenai,
+  SiAnthropic,
+  SiGooglegemini,
+  SiMeta,
+  Eye,
+  SiLangchain,
+  Users,
+  Search,
+  Layers,
+  Network,
+  Workflow,
+  Braces,
+  Database,
+  SiNeo4J,
+  SiSnowflake,
+  Boxes,
+  BrainCircuit,
+  FaAws,
+  VscAzure,
+  SiGooglecloud,
+  BarChart3,
+  LayoutDashboard,
+  SiNvidia,
+  SiDatabricks,
+  SiHuggingface,
+  SiGoogleads,
+  ShoppingBag,
+  SiGooglesearchconsole,
+  TbBrandBing,
+  SiYoutube,
+  SiInstagram,
+  FaLinkedin,
+  SiX,
+  SiTiktok,
+  SiPinterest,
+  SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiLooker,
+  SiHotjar,
+  SiWordpress,
+  SiShopify,
+  SiSemrush,
+  FaSalesforce,
+  SiHubspot,
+  SiZoho,
+  SiMailchimp,
+  Mail,
+  SiWhatsapp,
+};
+
 const STACK = [
   {
     cat: "Foundation Models",
     items: [
-      { label: "GPT-5", icon: SiOpenai },
-      { label: "Claude", icon: SiAnthropic },
-      { label: "Gemini", icon: SiGooglegemini },
-      { label: "Llama", icon: SiMeta },
+      { label: "ChatGPT", icon: "BsOpenai" },
+      { label: "Claude", icon: "SiAnthropic" },
+      { label: "Gemini", icon: "SiGooglegemini" },
+      { label: "Llama", icon: "SiMeta" },
+      { label: "Google AI Overviews", icon: "Eye" },
     ],
   },
   {
     cat: "Agent Frameworks",
     items: [
-      { label: "LangGraph", icon: SiLangchain },
-      { label: "CrewAI", icon: Users },
-      { label: "OpenAI Agents", icon: SiOpenai },
+      { label: "LangGraph", icon: "SiLangchain" },
+      { label: "CrewAI", icon: "Users" },
+      { label: "OpenAI Agents", icon: "BsOpenai" },
+      { label: "AI retrieval workflows", icon: "Search" },
     ],
   },
   {
     cat: "Protocols",
     items: [
-      { label: "MCP", icon: Layers },
-      { label: "Agent-to-Agent", icon: Network },
-      { label: "Function Calling", icon: Workflow },
+      { label: "MCP", icon: "Layers" },
+      { label: "Agent-to-Agent", icon: "Network" },
+      { label: "Function Calling", icon: "Workflow" },
+      { label: "Structured data signals", icon: "Braces" },
     ],
   },
   {
     cat: "Data Layer",
     items: [
-      { label: "Pinecone", icon: Database },
-      { label: "Knowledge Graphs", icon: SiNeo4J },
-      { label: "Snowflake", icon: SiSnowflake },
+      { label: "Pinecone", icon: "Database" },
+      { label: "Knowledge Graphs", icon: "SiNeo4J" },
+      { label: "Snowflake", icon: "SiSnowflake" },
+      { label: "Entity databases", icon: "Boxes" },
+      { label: "Brand knowledge systems", icon: "BrainCircuit" },
     ],
   },
   {
     cat: "Infrastructure",
     items: [
-      { label: "AWS", icon: FaAws },
-      { label: "Azure", icon: VscAzure },
-      { label: "Google Cloud", icon: SiGooglecloud },
+      { label: "AWS", icon: "FaAws" },
+      { label: "Azure", icon: "VscAzure" },
+      { label: "Google Cloud", icon: "SiGooglecloud" },
+      { label: "Analytics pipelines", icon: "BarChart3" },
+      { label: "AI visibility dashboards", icon: "LayoutDashboard" },
     ],
   },
 ];
 
 const MARQUEE = [
-  SiOpenai,
-  SiAnthropic,
-  SiGooglegemini,
-  SiMeta,
-  FaAws,
-  VscAzure,
-  SiGooglecloud,
-  SiNvidia,
-  SiSnowflake,
-  SiDatabricks,
-  SiNeo4J,
-  SiLangchain,
-  SiHuggingface,
+  "BsOpenai",
+  "SiAnthropic",
+  "SiGooglegemini",
+  "SiMeta",
+  "FaAws",
+  "VscAzure",
+  "SiGooglecloud",
+  "SiNvidia",
+  "SiSnowflake",
+  "SiDatabricks",
+  "SiNeo4J",
+  "SiLangchain",
+  "SiHuggingface",
 ];
 
 const LogoBadge = ({ item }) => {
-  const Icon = item.icon;
+  const Icon = ICONS[item.icon];
   return (
     <li
       data-testid={`techstack-item-${item.label
@@ -104,7 +196,7 @@ const LogoBadge = ({ item }) => {
   );
 };
 
-const TechStack = ({title, highlightTag}) => {
+const TechStack = ({title, highlightTag, stackData = STACK, marqueeIcons = MARQUEE}) => {
   return (
     <section
       data-testid="techstack-section"
@@ -122,7 +214,7 @@ const TechStack = ({title, highlightTag}) => {
         </Reveal>
 
         <div className="mt-8 sm:mt-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5 rounded-xl sm:rounded-2xl overflow-hidden">
-          {STACK.map((group, i) => (
+          {stackData.map((group, i) => (
             <Reveal key={group.cat} delay={i * 0.05} className="bg-(--b2b-bg)">
               <div data-testid={`techstack-group-${i}`} className="p-5 sm:p-6 md:p-8 h-full text-start">
                 <div className="font-mono text-xs tracking-[0.25em] uppercase text-[rgba(var(--b2b-primary-2-rgb),0.8)]">
@@ -144,14 +236,17 @@ const TechStack = ({title, highlightTag}) => {
         {/* Marquee of partner logos */}
         <div className="mt-8 sm:mt-12 relative overflow-hidden -mx-2 sm:mx-0">
           <Marquee>
-            {[...MARQUEE, ...MARQUEE].map((Icon, i) => (
-              <span
-                key={`m-${i}`}
-                className="text-white/45 hover:text-white/80 transition-colors"
-              >
-                <Icon className="w-6 h-6 mx-8" />
-              </span>
-            ))}
+            {[...marqueeIcons, ...marqueeIcons].map((iconKey, i) => {
+              const Icon = ICONS[iconKey];
+              return (
+                <span
+                  key={`m-${i}`}
+                  className="text-white/45 hover:text-white/80 transition-colors"
+                >
+                  <Icon className="w-6 h-6 mx-8" />
+                </span>
+              );
+            })}
          </Marquee>
           </div>
       </div>

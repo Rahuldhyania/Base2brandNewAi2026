@@ -5,12 +5,12 @@ import { Monitor, Briefcase, ShieldCheck, Boxes, Database, Cloud, ChevronDown } 
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
 const LAYERS = [
-  { icon: Monitor, title: "Presentation Layer", desc: "Web, Android, design systems & client SDKs." },
-  { icon: Briefcase, title: "Business Services", desc: "Domain logic, workflows, validation & policies." },
-  { icon: ShieldCheck, title: "API Gateway", desc: "Routing, auth, rate-limits, observability & contracts." },
-  { icon: Boxes, title: "Microservices Layer", desc: "Composable services with clear ownership boundaries." },
-  { icon: Database, title: "Data Layer", desc: "Transactional, analytical, cache & search stores." },
-  { icon: Cloud, title: "Cloud Infrastructure", desc: "Compute, networking, identity, IaC & cost controls." },
+  { icon: Monitor, title: "Presentation Layer", desc: "Web, mobile, dashboards and user-facing interfaces built for clarity and speed." },
+  { icon: Briefcase, title: "Business Services", desc: "The logic layer where workflows, policies, rules and validations live." },
+  { icon: ShieldCheck, title: "API Gateway", desc: "Routing, authentication, permissions, rate limits, observability and API contracts." },
+  { icon: Boxes, title: "Microservices Layer", desc: "Composable services with clear ownership and independent scalability." },
+  { icon: Database, title: "Data Layer", desc: "Transactional databases, analytics stores, caching, search and reporting systems." },
+  { icon: Cloud, title: "Cloud Infrastructure", desc: "Compute, networking, identity, deployment pipelines, monitoring and cost controls." },
 ];
 
 const Architecture = () => {
@@ -31,19 +31,19 @@ const Architecture = () => {
             </motion.div>
             <h2 className="mt-2 md:mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
               <span className="b2b-text-gradient">Systems designed to </span>
-              <span className="text-(--b2b-primary)">evolve.</span>
+              <span className="text-(--b2b-primary)">evolve, not collapse.</span>
             </h2>
             <motion.p variants={fadeUp} className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed md:pt-3 mt-4 sm:mt-6">
-              Modern software products are built as adaptable systems. Base2Brand engineers
-              composable architectures that evolve with changing business needs.
+              Our enterprise software solutions are built with clear layers, secure access, scalable data models and operational visibility from the beginning.
+
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 max-w-md">
               {[
-                { k: "Layers", v: "6" },
-                { k: "Avg. p95 latency", v: "180ms" },
-                { k: "Deploy frequency", v: "Daily" },
-                { k: "Recovery (MTTR)", v: "<15m" },
+                { k: " System Layers", v: "6" },
+                { k: " Target P95 Latency", v: "180ms" },
+                { k: " Release Capability", v: "Daily" },
+                { k: "Recovery Target", v: "<15m" },
               ].map((s) => (
                 <div key={s.k} className="rounded-xl border border-white/[0.06] bg-white/[0.015] p-4">
                   <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">{s.k}</div>

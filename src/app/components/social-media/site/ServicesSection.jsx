@@ -7,12 +7,13 @@ import {
   Youtube,
   ShieldCheck,
   PenLine,
+  TrendingUp,
   ArrowRight,
   ArrowUpRight,
 } from "lucide-react";
 import Link from "next/link";
 
-const ICONS = { Search, Target, ThumbsUp, Youtube, ShieldCheck, PenLine };
+const ICONS = { Search, Target, ThumbsUp, Youtube, ShieldCheck, PenLine, TrendingUp };
 
 function ServiceCard({ service, index, TOTAL }) {
   const Icon = ICONS[service.icon];

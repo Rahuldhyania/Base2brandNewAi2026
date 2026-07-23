@@ -245,6 +245,12 @@ export default function Work({
       {cardsData.map((p, i) => (
         <ProjectCase key={p.id} project={p} index={i} />
       ))}
+
+      {/* <div className="flex flex-col gap-4">
+        {cardsData.slice(0, 1).map((p, i) => (
+          <ProjectCaseDmPreview key={p.id} project={p} index={i} />
+        ))}
+      </div> */}
     </section>
   );
 }

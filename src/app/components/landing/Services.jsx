@@ -17,56 +17,56 @@ import {
 const services = [
   {
     title: "GEO Strategy",
-    desc: "End-to-end roadmap for generative engine visibility.",
+    desc: "End-to-end roadmap for generative engine visibility across ChatGPT, Gemini, Claude, Perplexity and AI search surfaces.",
     icon: Target,
     span: "md:col-span-2",
     big: true,
   },
   {
     title: "AEO Implementation",
-    desc: "Answer-shaped content, schema and structure.",
+    desc: "Answer-shaped content, schema, FAQ systems and structured response blocks built for AI extraction.",
     icon: MessageSquare,
   },
   {
     title: "AI Visibility Optimization",
-    desc: "Lift mentions across ChatGPT, Gemini, Claude.",
+    desc: "Lift brand mentions across ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews.",
     icon: Eye,
   },
   {
     title: "Brand Entity Optimization",
-    desc: "A coherent entity AI engines can trust.",
+    desc: "A coherent brand entity AI engines can understand, connect and trust.",
     icon: Fingerprint,
   },
   {
     title: "Knowledge Graph Improvement",
-    desc: "Structured signals at machine-readable depth.",
+    desc: "Structured signals that give your brand machine-readable depth and authority.",
     icon: Network,
   },
   {
     title: "AI Content Structuring",
-    desc: "Modular, citation-ready content blocks.",
+    desc: "Modular, citation-ready content blocks that help AI engines retrieve and recommend your brand.",
     icon: LayoutGrid,
   },
   {
     title: "Authority Signal Building",
-    desc: "Compounding trust across the open web.",
+    desc: "Compounding trust across your website, third-party mentions, citations and open-web references.",
     icon: Signal,
   },
   {
     title: "AI Search Analytics",
-    desc: "Track presence, share-of-answer, sentiment.",
+    desc: "Track AI visibility, share-of-answer, sentiment, citation frequency and competitor presence.",
     icon: BarChart3,
     span: "md:col-span-2",
     big: true,
   },
   {
     title: "Competitor AI Analysis",
-    desc: "Decode why rivals get recommended (and beat it).",
+    desc: "Decode why rivals get recommended — and build the system to outperform them.",
     icon: Users,
   },
   {
     title: "Citation & Mention Optimization",
-    desc: "Land in sources AI engines actually cite.",
+    desc: "Land in the sources, pages and answer patterns AI engines actually cite.",
     icon: Quote,
   },
 ];
@@ -81,18 +81,17 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="gap-6 mb-10 md:mb-16 text-center mx-auto">
           <div>
-            <div className="label-mono">· Capabilities</div>
+            <div className="label-mono">· Our Growth Visibility Capabilities</div>
             <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
-              Everything you need to be
+              The visibility toolkit for
               
               <span className="text-gradient-blue-violet font-medium">
-                the <br /> recommended brand.
+                the <br /> AI search era.
               </span>
             </h2>
           </div>
           <p className="text-zinc-400 mx-auto pt-3">
-            A complete AI-first growth practice — built to make your brand the
-            obvious answer in any AI conversation.
+            A complete AI-first growth practice, built to make your brand the obvious answer in any AI conversation.
           </p>
         </div>
 

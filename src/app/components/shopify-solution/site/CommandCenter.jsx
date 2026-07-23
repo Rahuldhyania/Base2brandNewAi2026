@@ -32,8 +32,8 @@ export const CommandCenter = ({
             <div className="w-full min-w-0 flex-1">
               <SectionHeader
                 eyebrow="COMMAND CENTER"
-                title="Every store. Every signal. One mission console."
-                subtitle="We operate your commerce stack like mission control — storefronts, integrations, deploys, and revenue signals on one console."
+                title="Every product. Every signal. One engineering console."
+                subtitle="We operate your software ecosystem like mission control — applications, APIs, deployments, cloud infrastructure, performance data and user activity visible in one connected view."
               />
             </div>
 

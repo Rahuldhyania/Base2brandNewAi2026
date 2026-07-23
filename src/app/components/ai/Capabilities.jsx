@@ -80,6 +80,12 @@ const CapCard = ({cap, idx }) => {
           {cap.title}
         </h3>
 
+        {cap.desc && (
+          <p className="mt-2 md:mt-3 text-sm text-white/55 leading-relaxed">
+            {cap.desc}
+          </p>
+        )}
+
         <ul className="mt-4 md:mt-6 space-y-1.5 md:space-y-2.5">
           {cap.items.map((item) => (
             <li

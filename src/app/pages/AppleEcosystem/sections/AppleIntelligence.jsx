@@ -144,26 +144,27 @@ export default function AppleIntelligence() {
             Apple Intelligence
           </p>
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
-            Intelligence that respects the user —{" "}
-            <span className="apple-text-gradient">designed for the enterprise.</span>
+            Intelligent Workflows That Honor{" "}
+            <span className="apple-text-gradient">User Autonomy and Trust.</span>
           </h2>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/65 leading-relaxed max-w-md">
-            Apple Intelligence brings a new substrate to product engineering: on-device
-            foundation models, App Intents, contextual actions, system-wide writing tools,
-            and private cloud compute that audits like a regulated workload should.
+            Apple intelligence features are strongest when they feel invisible, useful and
+            private. We help product and security teams design intelligent Apple experiences
+            that improve workflows without compromising trust — from App Intents and
+            contextual actions to smart summaries, private automation and AI-supported user
+            journeys.
           </p>
           <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-white/55 leading-relaxed max-w-md">
-            We help product and security teams design intelligence that ships in real apps —
-            integrated through App Intents, exposed in the right surface (Siri, Spotlight,
-            Shortcuts, the Dynamic Island, Live Activities) and governed by the privacy
-            posture your CISO already trusts.
+            For businesses investing in enterprise iOS app development, intelligence is not
+            just a feature. It becomes part of how users search, act, decide and complete work.
           </p>
 
           <ul className="mt-6 sm:mt-8 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/70">
-            <li className="flex gap-3"><Dot /> Custom App Intents that expose your domain to Siri and system search.</li>
-            <li className="flex gap-3"><Dot /> On-device intelligence with Foundation Models — no data leaves the phone.</li>
-            <li className="flex gap-3"><Dot /> Contextual experiences via Live Activities, Widgets and the Dynamic Island.</li>
-            <li className="flex gap-3"><Dot /> Audit-ready privacy: data minimisation, ATT, Private Cloud Compute.</li>
+            <li className="flex gap-3"><Dot /> Custom App Intents that expose your product actions to system-level experiences.</li>
+            <li className="flex gap-3"><Dot /> Context-aware workflows through widgets, Live Activities and device surfaces.</li>
+            <li className="flex gap-3"><Dot /> Privacy-conscious intelligence design for regulated business environments.</li>
+            <li className="flex gap-3"><Dot /> On-device and private-cloud-aligned architecture where required.</li>
+            <li className="flex gap-3"><Dot /> AI-assisted workflows connected to your app, backend and business logic.</li>
           </ul>
         </div>
 
@@ -180,8 +181,7 @@ export default function AppleIntelligence() {
             Smart Actions. Context Awareness. Private Processing. Intelligent Workflows.
           </h3>
           <p className="mt-3 sm:mt-4 text-white/55 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
-            Tap a feature to compose a brief — explore how each capability shows up inside
-            the products we build.
+           Apple apps should not just display information. They should help users act faster.
           </p>
         </div>
 
@@ -198,10 +198,10 @@ export default function AppleIntelligence() {
 
         <div className="mt-8 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {[
-            { icon: "⚡", title: "Smart Actions", body: "Surface the right action at the right moment via App Intents and predictive surfaces." },
-            { icon: "🧠", title: "Context Awareness", body: "Models that understand the screen, the calendar, the task — without compromising privacy." },
-            { icon: "🔒", title: "Private Processing", body: "On-device inference and Private Cloud Compute keep regulated data inside trust boundaries." },
-            { icon: "🌀", title: "Intelligent Workflows", body: "Multi-step flows that chain App Intents into agentic, auditable enterprise routines." },
+            { icon: "⚡", title: "Smart Actions", body: "Surface the right action at the right moment through App Intents, shortcuts, widgets, notifications and predictive surfaces." },
+            { icon: "🧠", title: "Context Awareness", body: "Use device context, user journeys, app state and workflow signals to create experiences that feel timely and relevant." },
+            { icon: "🔒", title: "Private Processing", body: "Engineer data handling around trust, consent, secure storage and privacy-first architecture." },
+            { icon: "🌀", title: "Intelligent Workflows", body: "Connect app actions, backend systems, AI logic and business workflows into one measurable operating layer." },
           ].map((f) => (
             <div key={f.title} className="b2b-glass rounded-2xl p-5">
               <span className="text-2xl">{f.icon}</span>

@@ -169,15 +169,13 @@ export default function Hero() {
           <span className="hidden md:block">GROW.</span>
           <SlotText
             default_text="RANK."
-            items_text={["CONVERT.", "DOMINATE.", "PERFORM.", "SCALE.", "WIN."]}
+            items_text={[ "WIN.", "SCALE.", "CONVERT.", "LEAD.", "EXPAND."]}
             ClassName="items-center justify-center"
           />
         </h1>
 
         <p className="mt-4 md:mt-10 max-w-2xl text-center text-zinc-400 text-sm md:text-[16px] md:leading-relaxed">
-          Digital marketing services built to drive business growth — boost
-          online visibility, attract targeted audiences and increase
-          conversions. Tailored strategies for lasting success.
+          Base2Brand delivers digital marketing services built to help ambitious brands increase visibility, attract high-intent customers and convert attention into measurable revenue.
         </p>
 
         <div className="mt-4 md:mt-10 flex flex-wrap items-center justify-center gap-3">

@@ -5,14 +5,20 @@ import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
 const CATEGORIES = [
   {
-    label: "Frontend",
+    label: "Modern Frontend",
     color: "#FF3B30",
     tags: ["React", "Next.js", "Angular", "Vue", "TypeScript"],
   },
   {
     label: "Backend",
     color: "#FF5A4D",
-    tags: ["Node.js", "Python", "Java", ".NET", "Go"],
+    tags: [
+      "Node.js (Express, NestJS)",
+      "Python (Django, FastAPI)",
+      "Java (Spring Boot)",
+      "ASP.NET Core",
+      "Go",
+    ],
   },
   {
     label: "Mobile",
@@ -27,7 +33,7 @@ const CATEGORIES = [
   {
     label: "DevOps",
     color: "#FF3B30",
-    tags: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    tags: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD pipelines"],
   },
   {
     label: "Databases",
@@ -54,11 +60,11 @@ const TechStack = () => {
           </motion.div>
           <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">The modern software stack — </span>
-            <span className="text-(--b2b-primary)">engineered deliberately.</span>
+            <span className="text-(--b2b-primary)">chosen for the problem, not the trend.</span>
           </h2>
           <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed md:pt-3 mt-4 sm:mt-6">
-            We choose tools to match the problem, not the trend. Every layer of the stack is
-            selected for fit, durability, and operational maturity.
+            A strong software development agency does not pick tools because they are popular. It picks tools because they fit the product, the users, the business model and the scale required.
+
           </p>
         </motion.div>
 

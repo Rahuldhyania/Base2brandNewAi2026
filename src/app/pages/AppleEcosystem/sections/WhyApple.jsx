@@ -8,25 +8,25 @@ const PILLARS = [
     icon: Zap,
     title: "Native performance is non-negotiable",
     body:
-      "Apple silicon is the most efficient consumer hardware on the planet. Native apps tap into Metal, the Neural Engine and Apple's media stack — delivering 60fps interactions, instant launches and battery life cross-platform frameworks simply cannot match.",
+      "Apple users expect speed, fluidity and precision. We build native Apple experiences that respect the platform — fast launches, responsive gestures, clean animations and stable performance across real devices.",
   },
   {
     icon: Lock,
     title: "Privacy is engineered, not promised",
     body:
-      "On-device processing, Secure Enclave, App Tracking Transparency and Apple's privacy review process raise the floor for trust. We build to that floor on day one — so privacy reviews, enterprise security questionnaires and regulated workloads clear without surprises.",
+      "Enterprise Apple products need security from day one. We design data flows, permissions, authentication, app tracking, storage and user consent with privacy built into the product architecture.",
   },
   {
     icon: Layers,
     title: "Ecosystem continuity multiplies value",
     body:
-      "A single Apple engagement compounds across iPhone, iPad, Watch, Mac, CarPlay and Vision Pro. Handoff, Continuity, iCloud sync and Universal Purchase make every additional surface cheaper to ship and more sticky for the customer.",
+      "One Apple engagement can extend across iPhone, iPad, Apple Watch, Vision Pro, CarPlay and Mac. We design continuity across devices so users move naturally between surfaces without friction.",
   },
   {
     icon: Sparkles,
     title: "Craft is still the competitive advantage",
     body:
-      "Apple users notice the difference between an app and an Apple app. We engineer to that bar — type, spacing, motion, haptics, sound and accessibility — because it is the most durable moat enterprise software has left.",
+      "Premium is not decoration. It is how the product feels, responds and earns trust. We engineer Apple apps with the detail users expect — from spacing and motion to accessibility and reliability.",
   },
 ];
 
@@ -39,13 +39,11 @@ export default function WhyApple() {
             Why Apple
           </p>
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4">
-            Why Apple still defines{" "}
-            <span className="apple-text-gradient">premium digital experiences.</span>
+            Built for users who notice speed,{" "}
+            <span className="apple-text-gradient">trust and design in every tap.</span>
           </h2>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-white/60 leading-relaxed max-w-md">
-            For enterprises whose customers, executives and field teams live on Apple hardware,
-            the platform is not a UI choice — it is the operating substrate. Four reasons
-            Apple-first remains the highest-leverage place to invest in product engineering.
+            For modern brands and enterprises, Apple is not just a device ecosystem. It is a premium customer environment where performance, privacy, design quality and continuity matter from the first tap.
           </p>
         </div>
 

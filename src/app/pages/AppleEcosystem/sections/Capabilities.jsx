@@ -6,51 +6,51 @@ import { Code2, ShieldCheck, Cloud, Smartphone, Cpu, Workflow, Eye, Compass } fr
 const CAPABILITIES = [
   {
     icon: Smartphone,
-    title: "Native iOS & iPadOS",
-    body: "Production-grade applications in Swift and SwiftUI — from greenfield products to large-scale modernisations of legacy iOS portfolios.",
-    keywords: "iOS App Development · iPhone · iPad",
+    title: "Native iOS & iPadOS Development",
+    body: "Production-grade iPhone app development and iPad applications built with modern Apple frameworks. We build native iOS products for customer apps, internal platforms, field teams, ecommerce journeys, healthcare workflows, logistics operations and enterprise mobility.",
+    keywords: "Swift · SwiftUI · UIKit · App Intents · Widgets · Live Activities · StoreKit · Secure local storage",
   },
   {
     icon: Eye,
-    title: "VisionOS & spatial computing",
-    body: "Immersive applications for Vision Pro: enterprise training, product visualization, mixed-reality field operations and spatial collaboration.",
-    keywords: "Vision Pro · RealityKit · ARKit",
+    title: "VisionOS & Spatial Computing",
+    body: "Vision Pro app development for immersive product experiences, enterprise training, healthcare visualization, field operations, spatial dashboards and next-generation collaboration. We design spatial interfaces that feel useful, not gimmicky — built around business value, user context and real-world workflows.",
+    keywords: "VisionOS · RealityKit · ARKit · Spatial UI · Immersive training · Product visualization · Mixed-reality workflows",
   },
   {
     icon: Cpu,
-    title: "Apple Watch & wearables",
-    body: "WatchOS applications optimised for glanceable interactions, complications, workouts and HealthKit-grade longitudinal data.",
-    keywords: "watchOS · HealthKit · Complications",
+    title: "Apple Watch & Wearables",
+    body: "Apple Watch apps built for fast, glanceable, high-value moments. We create wearable experiences for health, fitness, logistics, field operations, alerts, task completion and companion app workflows.",
+    keywords: "WatchOS · HealthKit · Notifications · Glanceable actions · Wearable workflows",
   },
   {
     icon: Compass,
     title: "Apple TV, CarPlay & Mac",
-    body: "tvOS apps, CarPlay extensions and macOS desktop applications — built around the unique input model of each surface.",
-    keywords: "tvOS · CarPlay · macOS · Catalyst",
+    body: "Apple ecosystem experiences for larger screens, vehicles and desktop environments. We build tvOS apps, CarPlay extensions and Mac applications that support content, operations, mobility and enterprise workflows.",
+    keywords: "tvOS · CarPlay · macOS · Catalyst · Desktop workflows · Vehicle interfaces",
   },
   {
     icon: Cpu,
-    title: "Apple Intelligence integration",
-    body: "Leverage on-device Foundation Models, App Intents and private cloud compute to embed contextual, secure intelligence into your product.",
-    keywords: "Apple Intelligence · Foundation Models · App Intents",
+    title: "Apple Intelligence Integration",
+    body: "Intelligence built into the experience, not bolted on later. We help businesses design contextual actions, smart workflows, App Intents, search surfaces and AI-assisted product experiences that respect privacy and improve user productivity.",
+    keywords: "App Intents · Contextual actions · Private workflows · AI-assisted experiences · On-device intelligence patterns",
   },
   {
     icon: Workflow,
-    title: "Backend, CloudKit & sync",
-    body: "Production backends with CloudKit, server-side Swift, GraphQL gateways and resilient sync engines for offline-first Apple apps.",
-    keywords: "CloudKit · Server Swift · Sync",
+    title: "Backend, CloudKit & Sync",
+    body: "Apple apps need reliable data, sync and backend systems to work in real-world environments. We build backend architecture for Apple applications using secure APIs, CloudKit, server-side Swift, GraphQL, offline-first sync and resilient data flows.",
+    keywords: "CloudKit · Server-side Swift · GraphQL · Offline sync · API integrations · Secure data flow",
   },
   {
     icon: ShieldCheck,
-    title: "Enterprise security & MDM",
-    body: "App Transport Security hardening, Keychain, biometric auth, MDM-aware configuration and SOC 2-aligned delivery.",
-    keywords: "MDM · Keychain · Compliance",
+    title: "Enterprise Security & MDM",
+    body: "For enterprise Apple products, deployment is only half the job. Our enterprise iOS app development approach includes authentication, app hardening, MDM awareness, device configuration, role-based access and secure release workflows.",
+    keywords: "MDM readiness · Keychain · SSO · Biometric authentication · Data protection · Audit-ready architecture",
   },
   {
     icon: Code2,
-    title: "Modernisation & SwiftUI migration",
-    body: "We bring UIKit, AppKit and React Native portfolios forward — incrementally migrating to SwiftUI without freezing your roadmap.",
-    keywords: "SwiftUI Migration · UIKit · Modernisation",
+    title: "Modernisation & SwiftUI Migration",
+    body: "We help teams modernise existing iOS portfolios without breaking product momentum. From UIKit to SwiftUI, legacy code cleanup, performance improvement and release pipeline upgrades — we move Apple products forward with control.",
+    keywords: "SwiftUI migration · UIKit modernisation · Architecture refactor · Performance improvement · Release stabilisation",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Capabilities() {
             Capabilities
           </p>
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4 max-w-3xl">
-            One engineering team. Every Apple surface.
+            One ecosystem team. From iPhone to Vision Pro. 
           </h2>
         </div>
         {/* <p className="text-white/55 max-w-md text-xs sm:text-sm lg:text-base leading-relaxed">

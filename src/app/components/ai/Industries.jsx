@@ -223,14 +223,15 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
 
 const Industries = ({
   title='Deployed across growth-heavy and operations-heavy environments.',
-  description='Base2Brand builds AI automation services and enterprise AI solutions for industries where speed, accuracy and conversion matter.'
+  description='Base2Brand builds AI automation services and enterprise AI solutions for industries where speed, accuracy and conversion matter.',
+  industriesData = INDUSTRIES,
 }) => {
-  const [hovered, setHovered] = useState(INDUSTRIES[0].id);
+  const [hovered, setHovered] = useState(industriesData[0].id);
 
   const cols = [
-    INDUSTRIES.filter((_, i) => i % 3 === 0),
-    INDUSTRIES.filter((_, i) => i % 3 === 1),
-    INDUSTRIES.filter((_, i) => i % 3 === 2),
+    industriesData.filter((_, i) => i % 3 === 0),
+    industriesData.filter((_, i) => i % 3 === 1),
+    industriesData.filter((_, i) => i % 3 === 2),
   ];
 
   return (
@@ -300,7 +301,7 @@ const Industries = ({
 
           {/* List */}
           <div className="flex-1 w-full divide-y divide-white/5 border-y border-white/5">
-            {INDUSTRIES.map((ind, i) => (
+            {industriesData.map((ind, i) => (
               <Row
                 key={ind.id}
                 industry={ind}

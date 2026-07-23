@@ -59,6 +59,12 @@ const WhyBase2Brand = ({ hightlighttag, titleUpper, titleLower, description, car
                   <div>
                     <h3 className="b2b-h3">{c.title}</h3>
                     <p className="mt-3 text-[15px] leading-relaxed text-white/65">{c.desc}</p>
+                    {c.outcome && (
+                      <p className="mt-3 text-[15px] leading-relaxed">
+                        <span className="text-white/85 font-medium">Outcome: </span>
+                        <span className="text-white/65">{c.outcome}</span>
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div className="mt-2 md:mt-7 pt-2 md:pt-5 border-t border-white/[0.06] flex items-center justify-between">
