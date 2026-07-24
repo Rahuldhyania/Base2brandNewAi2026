@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Clock, Calendar, Bookmark, Share2, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-function ResourceCard({ r, index }) {
+function ResourceCard({ r, index, hrefPrefix = "/resources" }) {
   const heightClass =
     r.span === "tall"
       ? "aspect-[2/2] md:aspect-[4/5]"
@@ -25,7 +25,7 @@ function ResourceCard({ r, index }) {
       data-testid={`resource-card-${r.id}`}
       style={{ transition: "box-shadow 400ms ease, border-color 400ms ease" }}
     >
-      <Link href={`/resources/${r.slug}`} className="block">
+      <Link href={`${hrefPrefix}/${r.slug}`} className="block">
         <div className={`relative ${heightClass} overflow-hidden`}>
           <motion.img
             src={r.cover}
@@ -112,11 +112,11 @@ function ResourceCard({ r, index }) {
   );
 }
 
-export default function ResourceGrid({ items }) {
+export default function ResourceGrid({ items, hrefPrefix = "/resources" }) {
   return (
     <div className="masonry" data-testid="resource-grid">
       {items.map((r, i) => (
-        <ResourceCard key={r.id} r={r} index={i} />
+        <ResourceCard key={r.id} r={r} index={i} hrefPrefix={hrefPrefix} />
       ))}
       {items.length === 0 && (
         <div className="col-span-full text-center py-16 text-white/50">

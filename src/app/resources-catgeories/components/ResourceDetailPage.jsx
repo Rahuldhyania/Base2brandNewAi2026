@@ -1,8 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import {
-  ArrowLeft,
   Calendar,
   Clock,
   Eye,
@@ -10,29 +8,32 @@ import {
   Bookmark,
   Share2,
 } from "lucide-react";
-import { getBlogBySlug, cleanDescription, formatResourceDate } from "@/resources-catgeories/lib/resourcesApi";
+import { cleanDescription, formatResourceDate } from "../lib/resourcesApi";
 
-export { getBlogBySlug, cleanDescription };
+function getExcerpt(description, subTitle) {
+  if (subTitle) return subTitle;
 
-function getExcerpt(description) {
   const text = cleanDescription(description);
   if (!text) return "";
   return text.length > 230 ? `${text.slice(0, 230)}...` : text;
 }
 
-export default async function BlogDetailPage({ slug }) {
-  const blog = await getBlogBySlug(slug);
-
-  if (!blog) {
+export default function ResourceDetailPage({
+  resource,
+  resourceType = "Article",
+  viewsField,
+}) {
+  if (!resource) {
     notFound();
   }
 
-  const excerpt = getExcerpt(blog?.description);
-
+  const excerpt = getExcerpt(resource?.description, resource?.sub_title);
   const displayTags =
-    Array.isArray(blog?.tags) && blog.tags.length > 0
-      ? blog.tags.slice(0, 4)
-      : [blog?.category || "Blog", "Insights", "Research"].filter(Boolean);
+    Array.isArray(resource?.tags) && resource.tags.length > 0
+      ? resource.tags.slice(0, 4)
+      : [resource?.category || resourceType, "Insights", "Research"].filter(Boolean);
+
+  const views = viewsField ? resource?.[viewsField] : resource?.views;
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#02050b] text-white">
@@ -45,18 +46,8 @@ export default async function BlogDetailPage({ slug }) {
         <div className="absolute inset-0 opacity-[0.16] bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:120px_120px]" />
       </div>
 
-      <section className="relative mx-auto w-full max-w-[1140px] px-4 pt-28 sm:px-6 lg:px-8">
-        {/* <div className="mb-6">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to the nebula
-          </Link>
-        </div> */}
-
-        <div className="mx-auto max-w-[1100px]">
+      <section className="relative mx-auto w-full max-w-[980px] px-4 pt-28 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[940px]">
           <div className="mb-6 flex flex-wrap items-center gap-2">
             {displayTags.map((tag, index) => (
               <span
@@ -68,12 +59,12 @@ export default async function BlogDetailPage({ slug }) {
             ))}
           </div>
 
-          <h1 className="bg-[linear-gradient(180deg,#dff7ff_0%,#68d7ff_44%,#7f8cff_78%,#b28dff_100%)] bg-clip-text text-[48px] font-medium leading-[1.2] tracking-[-0.06em] text-transparent">
-            {blog?.heading || blog?.title}
+          <h1 className="max-w-[820px] bg-[linear-gradient(180deg,#dff7ff_0%,#68d7ff_44%,#7f8cff_78%,#b28dff_100%)] bg-clip-text text-[48px] font-medium leading-[1.2] tracking-[-0.06em] text-transparent text-[60px]">
+            {resource?.title}
           </h1>
 
           {excerpt && (
-            <p className="mt-8 max-w-[1024px] text-lg leading-8 text-white/75 sm:text-xl">
+            <p className="mt-8 max-w-[920px] text-lg leading-8 text-white/75 sm:text-xl">
               {excerpt}
             </p>
           )}
@@ -83,12 +74,12 @@ export default async function BlogDetailPage({ slug }) {
               <div className="flex flex-wrap items-center gap-5 text-white/55">
                 <div className="inline-flex items-center gap-2.5 text-sm">
                   <User className="h-4 w-4" />
-                  <span>{blog?.author?.name || "Base2Brand Editorial"}</span>
+                  <span>{resource?.author?.name || "Base2Brand Editorial"}</span>
                 </div>
 
                 <div className="inline-flex items-center gap-2.5 text-sm">
                   <Calendar className="h-4 w-4" />
-                  <span>{formatResourceDate(blog?.createdAt)}</span>
+                  <span>{formatResourceDate(resource?.createdAt)}</span>
                 </div>
 
                 <div className="inline-flex items-center gap-2.5 text-sm">
@@ -96,10 +87,12 @@ export default async function BlogDetailPage({ slug }) {
                   <span>18 min read</span>
                 </div>
 
-                <div className="inline-flex items-center gap-2.5 text-sm">
-                  <Eye className="h-4 w-4" />
-                  <span>{blog?.blogViews || 0}</span>
-                </div>
+                {views !== undefined && (
+                  <div className="inline-flex items-center gap-2.5 text-sm">
+                    <Eye className="h-4 w-4" />
+                    <span>{views || 0}</span>
+                  </div>
+                )}
               </div>
 
               <div className="flex items-center gap-3">
@@ -121,14 +114,14 @@ export default async function BlogDetailPage({ slug }) {
           </div>
         </div>
 
-        {blog?.imageUrl && (
+        {resource?.image_poster && (
           <div className="relative mx-auto mt-8 max-w-[1120px]">
             <div className="absolute -inset-[1px] rounded-[34px] bg-[linear-gradient(135deg,rgba(97,218,251,0.24),rgba(124,58,237,0.22),rgba(255,255,255,0.06))]" />
 
             <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[#050912]/90 p-2 shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
               <img
-                src={blog.imageUrl}
-                alt={blog?.heading || blog?.title || "Blog image"}
+                src={resource.image_poster}
+                alt={resource?.title || `${resourceType} image`}
                 className="h-auto max-h-[700px] w-full rounded-[26px] object-cover"
               />
 
@@ -143,7 +136,7 @@ export default async function BlogDetailPage({ slug }) {
           <div
             className="blog_description !text-white"
             dangerouslySetInnerHTML={{
-              __html: blog?.description || "",
+              __html: resource?.description || "",
             }}
           />
         </article>
@@ -151,3 +144,5 @@ export default async function BlogDetailPage({ slug }) {
     </main>
   );
 }
+
+export { cleanDescription, getExcerpt };

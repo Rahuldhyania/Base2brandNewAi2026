@@ -7,7 +7,6 @@ import StarsBackground from "@/components/erp/StarsBackground";
 import Work from '@/components/portfolio-animation/sections/Work';
 import CaseStudyHero from './CaseStudyHero';
 import CaseStudyIntro from './CaseStudyIntro';
-import { CASE_STUDIES } from "./data/caseStudiesData";
 
 const CaseStudyWrap = () => {
     const containerRef = useRef(null);
@@ -25,7 +24,7 @@ const CaseStudyWrap = () => {
                 <Work
                     title="Selected anonymised cases."
                     titleLower="Outcomes, not optics."
-                    cardsData={CASE_STUDIES}
+                    fetchFromApi
                 />
                 <FinalCTA
                     highlightTag={"READY TO BUILD YOUR CASE STUDY?"}

@@ -7,7 +7,11 @@ import Link from "next/link";
  * Latest articles enter the screen as meteor trails — each card slides in
  * diagonally with a soft trail behind it.
  */
-export default function LatestMeteors({ items }) {
+export default function LatestMeteors({
+  items,
+  hrefPrefix = "/resources",
+  viewAllHref = "/resources",
+}) {
   return (
     <div className="relative" data-testid="latest-meteors">
       <div className="flex items-end justify-between mb-8">
@@ -16,11 +20,11 @@ export default function LatestMeteors({ items }) {
             Newest signals
           </p>
           <h3 className="font-display text-3xl md:text-4xl tracking-tight">
-            Latest Articles
+            Latest Insights
           </h3>
         </div>
         <Link
-          href="/resources"
+          href={viewAllHref}
           className="hidden md:inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors"
         >
           All articles <ArrowUpRight className="h-4 w-4" />
@@ -28,7 +32,7 @@ export default function LatestMeteors({ items }) {
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {items.slice(0, 3).map((r, i) => (
+        {items.map((r, i) => (
           <motion.div
             key={r.id}
             className="relative"
@@ -45,7 +49,7 @@ export default function LatestMeteors({ items }) {
               }}
             />
             <Link
-              href={`/resources/${r.slug}`}
+              href={`${hrefPrefix}/${r.slug}`}
               className="block glass rounded-2xl overflow-hidden group hover:border-white/20 transition-colors"
               data-testid={`latest-meteor-${r.id}`}
             >

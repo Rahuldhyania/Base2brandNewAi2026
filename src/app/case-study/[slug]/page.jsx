@@ -1,37 +1,51 @@
-import { notFound } from "next/navigation";
 import CaseStudyDetail from "./CaseStudyDetail";
-import { CASE_STUDIES, getCaseStudyBySlug } from "../data/caseStudiesData";
-
-export function generateStaticParams() {
-  return CASE_STUDIES.map((study) => ({ slug: study.slug }));
-}
+import { CASE_STUDY_API_BASE } from "../lib/caseStudyApi";
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
-  const study = getCaseStudyBySlug(resolvedParams.slug);
+  const slug = resolvedParams?.slug;
 
-  if (!study) {
+  if (!slug) {
     return { title: "Case Study Not Found" };
   }
 
-  return {
-    title: `${study.title} | Base2Brand Case Study`,
-    description: study.subtitle,
-    openGraph: {
-      title: study.title,
+  try {
+    const response = await fetch(
+      `${CASE_STUDY_API_BASE}/case-studies/slug/${encodeURIComponent(slug)}`,
+      {
+        cache: "no-store",
+      },
+    );
+
+    if (!response.ok) {
+      return { title: "Case Study Not Found" };
+    }
+
+    const data = await response.json();
+    const study = data.caseStudy || data.data || data;
+
+    if (!study?.title) {
+      return { title: "Case Study Not Found" };
+    }
+
+    return {
+      title: `${study.title} | Base2Brand Case Study`,
       description: study.subtitle,
-      images: study.detail.heroImage ? [study.detail.heroImage] : [],
-    },
-  };
+      openGraph: {
+        title: study.title,
+        description: study.subtitle,
+        images: study.detail?.heroImage ? [study.detail.heroImage] : [],
+      },
+    };
+  } catch {
+    return {
+      title: "Case Study | Base2Brand",
+    };
+  }
 }
 
 export default async function CaseStudyDetailPage({ params }) {
   const resolvedParams = await params;
-  const study = getCaseStudyBySlug(resolvedParams.slug);
-
-  if (!study) {
-    notFound();
-  }
 
   return <CaseStudyDetail slug={resolvedParams.slug} />;
 }

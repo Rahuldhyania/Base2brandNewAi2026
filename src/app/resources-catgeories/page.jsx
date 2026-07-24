@@ -1,21 +1,18 @@
 'use client';
-import React, { useMemo, useRef, useState } from 'react';
+
+import React, { useRef, useState } from 'react';
 import HeroSection from '@/components/resourcesCatgeories/nebula/HeroSection';
-import { CATEGORIES, FEATURED, RESOURCES } from '@/components/resourcesCatgeories/data/resources';
 import NebulaBackground from '@/components/resourcesCatgeories/nebula/NebulaBackground';
 import { motion } from "framer-motion";
-import FeaturedResource from '@/components/resourcesCatgeories/nebula/FeaturedResource';
-import StickyFilters from '@/components/resourcesCatgeories/nebula/StickyFilters';
-import ResourceGrid from '@/components/resourcesCatgeories/nebula/ResourceGrid';
 import './resources.css';
-import LatestMeteors from '@/components/resourcesCatgeories/nebula/LatestMeteors';
 import ConstellationTopics from '@/components/resourcesCatgeories/nebula/ConstellationTopics';
 import AsteroidBelt from '@/components/resourcesCatgeories/nebula/AsteroidBelt';
 import NewsletterDome from '@/components/resourcesCatgeories/nebula/NewsletterDome';
-import IndustryReports from '@/components/portfolio-animation/ui/IndustryReports';
 import MissionDossierFan from '@/components/ui/MissionDossierFan';
-import { industriesWithSlug } from '@/components/portfolio-animation/data/industriesData';
-
+import BlogsSection from './blogs/BlogsSection';
+import ArticlesSection from './articles/ArticlesSection';
+import InsightsSection from './insights/InsightsSection';
+import IndustriesSection from './industries/IndustriesSection';
 
 const DEFAULT_DOSSIER_CARDS = [
   {
@@ -60,182 +57,138 @@ const DEFAULT_DOSSIER_CARDS = [
   },
 ];
 
-
 const SectionHeader = ({ eyebrow, title, description, id }) => (
-    <div id={id} className="mb-2 md:mb-10 max-w-3xl">
-        <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-[11px] tracking-[0.35em] uppercase text-white/45 mb-3"
-        >
-            {eyebrow}
-        </motion.p>
-        <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight"
-        >
-            {title}
-        </motion.h2>
-        {description && (
-            <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="mt-2 md:mt-4 text-white/60 max-w-2xl leading-relaxed"
-            >
-                {description}
-            </motion.p>
-        )}              
-    </div>
+  <div id={id} className="mb-2 md:mb-10 max-w-3xl">
+    <motion.p
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-[11px] tracking-[0.35em] uppercase text-white/45 mb-3"
+    >
+      {eyebrow}
+    </motion.p>
+    <motion.h2
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight"
+    >
+      {title}
+    </motion.h2>
+    {description && (
+      <motion.p
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="mt-2 md:mt-4 text-white/60 max-w-2xl leading-relaxed"
+      >
+        {description}
+      </motion.p>
+    )}
+  </div>
 );
 
+export default function ResourcesCategoriesPage() {
+  const [query, setQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeTopic, setActiveTopic] = useState(null);
+  const libraryRef = useRef(null);
+  const blogsSectionRef = useRef(null);
 
+  const scrollToLibrary = () => {
+    libraryRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-const industries = industriesWithSlug;
-const page = () => {
-    const [query, setQuery] = useState("");
-    const [activeCategory, setActiveCategory] = useState("All");
-    const [activeTopic, setActiveTopic] = useState(null);
-    const libraryRef = useRef(null);
+  const selectTopic = (topic) => {
+    setActiveTopic((prev) => (prev === topic ? null : topic));
+    setTimeout(scrollToLibrary, 100);
+  };
 
-    const filtered = useMemo(() => {
-        const q = query.trim().toLowerCase();
-        return RESOURCES.filter((r) => {
-            if (activeCategory !== "All" && r.category !== activeCategory) return false;
-            if (activeTopic) {
-                const hay = [r.category, ...(r.tags || []), r.title].join(" ").toLowerCase();
-                if (!hay.includes(activeTopic.toLowerCase())) return false;
-            }
-            if (!q) return true;
-            const hay = [r.title, r.excerpt, r.category, r.author.name, ...(r.tags || [])]
-                .join(" ")
-                .toLowerCase();
-            return hay.includes(q);
-        });
-    }, [query, activeCategory, activeTopic]);
+  return (
+    <div>
+      <NebulaBackground />
 
-    const scrollToLibrary = () => {
-        libraryRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+      <HeroSection
+        query={query}
+        setQuery={setQuery}
+        onSelectCategory={(category) => {
+          setActiveCategory(category);
+          scrollToLibrary();
+        }}
+        onExplore={scrollToLibrary}
+      />
 
-    const selectTopic = (topic) => {
-        setActiveTopic((prev) => (prev === topic ? null : topic));
-        setTimeout(scrollToLibrary, 100);
-    };
-    return (
-        <div className="" >
-            <NebulaBackground />
+      <section
+        id="featured"
+        ref={blogsSectionRef}
+        className="relative z-10 mx-auto max-w-6xl px-4 md:px-10 mb-14 mt-6 md:mt-0 scroll-mt-24 md:scroll-mt-28"
+      >
+        <SectionHeader
+          eyebrow="Emerging from the nebula"
+          title="Featured Resource"
+          description="One study every fortnight — chosen for depth, honesty and the impact we've measured with our own clients."
+        />
+        <BlogsSection sectionRef={blogsSectionRef} />
+      </section>
 
-            {/* Hero */}
-            <HeroSection
-                query={query}
-                setQuery={setQuery}
-                onSelectCategory={(c) => {
-                    setActiveCategory(c);
-                    scrollToLibrary();
-                }}
-                onExplore={scrollToLibrary}
-            />
-            {/* Featured */}
-            <section id="featured" className="relative z-10 mx-auto max-w-6xl px-4 md:px-10 mb-14 mt-6 md:mt-0">
-                <SectionHeader
-                    eyebrow="Emerging from the nebula"
-                    title="Featured Resource"
-                    description="One study every fortnight — chosen for depth, honesty and the impact we've measured with our own clients."
-                />
-                <FeaturedResource />
-            </section>
+      <section className="relative z-10 mx-auto max-w-7xl px-4 md:px-10">
+        <SectionHeader
+          eyebrow="The Knowledge Nebula"
+          title="A living library, always in orbit"
+          description="Every guide, playbook and case study — organised as galaxies. Filter by discipline or search the universe."
+        />
+      </section>
 
-            {/* Library grid + filters */}
-            <section
-                ref={libraryRef}
-                id="library"
-                className="relative z-10 mx-auto max-w-7xl px-4 md:px-10"
-            >
-                <SectionHeader
-                    eyebrow="The Knowledge Nebula"
-                    title="A living library, always in orbit"
-                    description="Every guide, playbook and case study — organised as galaxies. Filter by discipline or search the universe."
-                />
-                <StickyFilters
-                    active={activeCategory}
-                    onChange={(c) => {
-                        setActiveCategory(c);
-                        setActiveTopic(null);
-                    }}
-                    categories={CATEGORIES}
-                />
+      <ArticlesSection
+        query={query}
+        activeCategory={activeCategory}
+        activeTopic={activeTopic}
+        libraryRef={libraryRef}
+        onCategoryChange={(category) => {
+          setActiveCategory(category);
+          setActiveTopic(null);
+        }}
+        onClearTopic={() => setActiveTopic(null)}
+      />
 
-                {activeTopic && (
-                    <div className="mt-4 mb-2 text-sm text-white/60 flex items-center gap-2">
-                        <span>Filtered by topic:</span>
-                        <button
-                            type="button"
-                            data-testid="clear-topic"
-                            onClick={() => setActiveTopic(null)}
-                            className="rounded-full glass px-3 py-1 text-white/85 hover:text-white"
-                        >
-                            {activeTopic} ×
-                        </button>
-                    </div>
-                )}
+      <InsightsSection />
 
-                <div className="mt-8">
-                    <ResourceGrid items={filtered} />
-                </div>
-            </section>
+      <IndustriesSection />
 
-            <section id='geoinsights' className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
-                <LatestMeteors items={RESOURCES} />
-            </section>
+      <MissionDossierFan
+        cards={DEFAULT_DOSSIER_CARDS}
+        title="Six dossiers. One Shopify mission."
+        subtitle="How we run a Shopify engagement — from discovery to growth operations — as a fan of focused dossiers."
+        badgeLabel={DEFAULT_DOSSIER_CARDS.length}
+        eyebrow="PLAYBOOKS · MISSION DOSSIERS"
+      />
 
-            <section id="industry-reports" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
-                <IndustryReports industries={industries} />
-            </section>
+      <section id="constellation" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
+        <SectionHeader
+          eyebrow="Popular topics"
+          title="Chart the constellation of ideas"
+          description="Every glowing node is a topic. Trace the connections — click any node to filter the library below."
+        />
+        <ConstellationTopics activeTopic={activeTopic} onSelect={selectTopic} />
+      </section>
 
-            <MissionDossierFan
-                cards={DEFAULT_DOSSIER_CARDS}
-                title="Six dossiers. One Shopify mission."
-                subtitle="How we run a Shopify engagement — from discovery to growth operations — as a fan of focused dossiers."
-                badgeLabel={DEFAULT_DOSSIER_CARDS.length}
-                eyebrow="PLAYBOOKS · MISSION DOSSIERS"
-            />
-
-            {/* Popular Topics constellation */}
-            <section id="constellation" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
-                <SectionHeader
-                    eyebrow="Popular topics"
-                    title="Chart the constellation of ideas"
-                    description="Every glowing node is a topic. Trace the connections — click any node to filter the library below."
-                />
-                <ConstellationTopics activeTopic={activeTopic} onSelect={selectTopic} />
-            </section>
-
-            {/* Downloads asteroid belt */}
-            <section id="downloads" className="relative z-10 pb-12">
-                <div className="mx-auto max-w-7xl px-6 md:px-10">
-                    <SectionHeader
-                        eyebrow="Downloads"
-                        title="Free tools drifting through space"
-                        description="Prompt packs, playbooks, frameworks and templates — orbit past and grab what's useful."
-                    />
-                </div>
-                <AsteroidBelt />
-            </section>
-
-
-            {/* Newsletter observatory dome */}
-            <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
-                <NewsletterDome />
-            </section>
+      <section id="downloads" className="relative z-10 pb-12">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <SectionHeader
+            eyebrow="Downloads"
+            title="Free tools drifting through space"
+            description="Prompt packs, playbooks, frameworks and templates — orbit past and grab what's useful."
+          />
         </div>
-    )
-}
+        <AsteroidBelt />
+      </section>
 
-export default page
+      <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
+        <NewsletterDome />
+      </section>
+    </div>
+  );
+}
