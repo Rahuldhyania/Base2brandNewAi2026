@@ -58,40 +58,40 @@ function TiltCard({ children, index }) {
 
 const useCases = [
   {
-    tag: "Operations",
-    title: "Digital Twin Operations",
+    tag: "AI",
+    title: "AI-Powered Business Operations",
     description:
-      "Visualize factories, assets and workflows in real time with connected operational intelligence.",
+      "Automate repetitive business tasks, generate insights, support teams and improve decision-making with production-ready AI systems.",
   },
   {
-    tag: "visionOS",
-    title: "Vision Pro Enterprise Apps",
+    tag: "Automation",
+    title: "Smart Automation Workflows",
     description:
-      "Native spatial experiences for design, executive review and shop-floor productivity.",
+      "Connect CRM, websites, WhatsApp, email, sales tools and internal platforms so every process moves faster and cleaner.",
   },
   {
-    tag: "Training",
-    title: "Training Simulations",
+    tag: "IoT",
+    title: "IoT Operations & Monitoring",
     description:
-      "Reduce risk and improve readiness through scenario rehearsal that adapts to each learner.",
+      "Track assets, devices, field activity, industrial workflows and operational performance in real time.",
   },
   {
-    tag: "Field Service",
-    title: "Remote Expert Assistance",
+    tag: "Blockchain",
+    title: "Blockchain Trust Systems",
     description:
-      "Connect field teams with the right specialist on the right asset — visually, in real time.",
+      "Build secure, transparent systems for ownership, transactions, verification and traceability.",
   },
   {
-    tag: "Commerce",
-    title: "Immersive Product Visualization",
+    tag: "Metaverse",
+    title: "Metaverse Product Experiences",
     description:
-      "Interactive 3D product experiences that compress sales cycles and reduce return rates.",
+      "Create immersive environments for product demos, virtual stores, training spaces and brand engagement.",
   },
   {
-    tag: "AI + XR",
-    title: "AI + XR Experiences",
+    tag: "Cloud",
+    title: "Cloud & Data Infrastructure",
     description:
-      "Intelligent immersive environments where agents, voice and computer vision guide every action.",
+      "Modernize servers, data centres, storage, cloud systems and business-critical applications for secure scaling.",
   },
 ];
 
@@ -114,15 +114,16 @@ export default function UseCases() {
               · Use Cases
             </div>
              <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-             Where spatial computing
+             Where emerging technology
               <br />
               <span className="text-white/55">earns its place.</span>
              </h2>
           </div>
           <p className="text-white/65 text-base lg:text-lg max-w-[640px] self-end leading-relaxed">
-            Production deployments across operations, training, sales and field
-            service — each one engineered around an outcome our clients can put
-            on a board slide.
+            Base2Brand applies AI technology solutions, automation technology
+            solutions and next-gen business technology where they create
+            measurable impact — faster teams, smarter systems, safer data and
+            better customer experiences.
           </p>
         </div>
 

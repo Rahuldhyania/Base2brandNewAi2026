@@ -5,20 +5,87 @@ import { SPATIAL } from "@/constants/testIds";
 
 const techGroups = [
   {
-    title: "Spatial platforms",
-    items: ["visionOS", "ARKit", "RealityKit", "Meta Quest SDK", "OpenXR"],
+    title: "AI & Data Intelligence",
+    items: [
+      "OpenAI",
+      "Claude",
+      "Gemini",
+      "Custom AI models",
+      "Machine learning",
+      "Predictive analytics",
+      "Computer vision",
+      "Natural language processing",
+      "Business intelligence",
+    ],
   },
   {
-    title: "Real-time engines",
-    items: ["Unity", "Unreal Engine 5", "NVIDIA Omniverse", "Blender", "Maya", "Substance Painter"],
+    title: "Automation Platforms",
+    items: [
+      "Zapier",
+      "Make",
+      "n8n",
+      "HubSpot",
+      "Salesforce",
+      "Zoho",
+      "WhatsApp API",
+      "CRM automation",
+      "Workflow orchestration",
+      "Custom automation engines",
+    ],
   },
   {
-    title: "Industrial & cloud",
-    items: ["Azure Digital Twins", "IoT Integration", "Spatial Anchors"],
+    title: "Cloud Technology",
+    items: [
+      "AWS",
+      "Microsoft Azure",
+      "Google Cloud",
+      "Cloudflare",
+      "Serverless architecture",
+      "Containerization",
+      "Kubernetes",
+      "DevOps pipelines",
+      "Cloud monitoring",
+    ],
   },
   {
-    title: "Intelligence layer",
-    items: ["OpenAI", "Computer Vision", "Voice AI"],
+    title: "IoT & Connected Devices",
+    items: [
+      "IoT sensors",
+      "MQTT",
+      "Edge devices",
+      "Device APIs",
+      "Telemetry dashboards",
+      "Asset tracking",
+      "Industrial monitoring",
+      "Smart device integrations",
+    ],
+  },
+  {
+    title: "Blockchain & Web3",
+    items: [
+      "Ethereum",
+      "Polygon",
+      "Smart contracts",
+      "Wallet integrations",
+      "Token systems",
+      "Web3 authentication",
+      "Decentralized apps",
+      "Blockchain APIs",
+    ],
+  },
+  {
+    title: "Metaverse & Immersive Technology",
+    items: [
+      "Unity",
+      "Unreal Engine",
+      "WebXR",
+      "ARKit",
+      "RealityKit",
+      "3D environments",
+      "Virtual showrooms",
+      "Digital twins",
+      "Interactive product visualization",
+    ],
   },
 ];
 
@@ -43,12 +110,12 @@ export default function TechStack() {
               · Technology Stack
             </div>
             <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-              The Spatial Computing Stack —{" "} <br />
-              <span className="text-white/55">engineered deliberately.</span>
+              The emerging technology stack —{" "} <br />
+              <span className="text-white/55">managed deliberately.</span>
             </h2>
           </div>
           <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed text-center pt-3">
-            No accidental tooling. Each component is selected for production readiness, enterprise governance and a long-term maintenance horizon that suits regulated environments.
+            Our stack supports AI technology solutions, automation technology solutions, cloud technology, cybersecurity, IoT, blockchain and next-gen business technology from strategy to production.
           </p>
         </div>
 

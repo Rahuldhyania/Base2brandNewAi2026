@@ -10,6 +10,9 @@ const DASHBOARD_IMAGE =
 
 export const CommandCenter = ({
   dashboardImage = DASHBOARD_IMAGE,
+  eyebrow = "COMMAND CENTER",
+  title = "Every product. Every signal. One engineering console.",
+  subtitle = "We operate your software ecosystem like mission control — applications, APIs, deployments, cloud infrastructure, performance data and user activity visible in one connected view.",
 }) => {
   return (
     <section
@@ -31,9 +34,9 @@ export const CommandCenter = ({
           <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
             <div className="w-full min-w-0 flex-1">
               <SectionHeader
-                eyebrow="COMMAND CENTER"
-                title="Every product. Every signal. One engineering console."
-                subtitle="We operate your software ecosystem like mission control — applications, APIs, deployments, cloud infrastructure, performance data and user activity visible in one connected view."
+                eyebrow={eyebrow}
+                title={title}
+                subtitle={subtitle}
               />
             </div>
 

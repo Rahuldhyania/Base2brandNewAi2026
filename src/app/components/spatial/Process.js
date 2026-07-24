@@ -6,39 +6,45 @@ import { SPATIAL } from "@/constants/testIds";
 const steps = [
   {
     n: "01",
-    title: "Discovery & XR Strategy",
-    body: "Business objectives, workflows, operating context and a technology assessment that grounds every later decision.",
-    deliverables: ["Stakeholder interviews", "Workflow audit", "Technology fit map"],
+    title: "Discovery & Technology Strategy",
+    body: "We study your business model, workflows, tools, data, risks and growth goals.",
+    outcome: "A clear technology roadmap based on business value, not hype.",
+    deliverables: ["Stakeholder interviews", "Workflow audit", "Technology fit map", "Opportunity roadmap"],
   },
   {
     n: "02",
-    title: "Experience Architecture",
-    body: "Journey mapping, interaction models, immersion planning and a defensible architecture before a single line of code.",
-    deliverables: ["Interaction model", "Immersion blueprint", "Surface selection"],
+    title: "Experience & System Architecture",
+    body: "We design how users, teams, tools, data and automation will work together.",
+    outcome: "A clear blueprint before engineering begins.",
+    deliverables: ["User journey map", "System architecture", "Data flow plan", "Integration strategy"],
   },
   {
     n: "03",
     title: "Prototype & Validation",
-    body: "Rapid spatial prototyping with real users, real workflows and measurable validation criteria — fast, cheap and honest.",
-    deliverables: ["Live prototype", "Field tests", "Validation report"],
+    body: "We test the highest-value use case before scaling the full system.",
+    outcome: "Fast proof, real feedback and clear validation criteria.",
+    deliverables: ["Working prototype", "Pilot workflow", "User testing", "Validation report"],
   },
   {
     n: "04",
     title: "Production Engineering",
-    body: "Enterprise-grade XR development against your security, performance and accessibility baselines.",
-    deliverables: ["Production codebase", "Test coverage", "Performance budget"],
+    body: "We build secure, scalable and production-ready systems using the right technology stack.",
+    outcome: "Technology that moves from concept to operational use.",
+    deliverables: ["Production codebase", "API integrations", "Security baseline", "Performance testing"],
   },
   {
     n: "05",
     title: "Deployment & Governance",
-    body: "Security review, MDM enrollment and rollout strategy designed for regulated, multi-region environments.",
-    deliverables: ["MDM playbook", "Security review", "Phased rollout"],
+    body: "We launch with proper monitoring, access control, documentation and operational readiness.",
+    outcome: "A system your team can trust, manage and improve.",
+    deliverables: ["Deployment plan", "Security review", "User access setup", "Governance framework"],
   },
   {
     n: "06",
     title: "Operate, Scale & Evolve",
-    body: "24/7 support, telemetry-driven optimisation and a roadmap that compounds value across the install base.",
-    deliverables: ["Operational SLAs", "Telemetry & insights", "Roadmap reviews"],
+    body: "We continue improving performance, automation, security and business impact after launch.",
+    outcome: "Technology that keeps compounding value.",
+    deliverables: ["Operational support", "Analytics reporting", "Roadmap reviews", "Optimization cycles"],
   },
 ];
 
@@ -57,7 +63,7 @@ export default function Process() {
             <h2 className="font-display text-3xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
               From concept to deployment —{" "} <br />
               <span className="text-white/55">
-                one continuous engagement.
+                one continuous technology engagement.
               </span>
             </h2>
           </div>
@@ -94,6 +100,14 @@ export default function Process() {
                   <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-[560px]">
                     {s.body}
                   </p>
+                  {s.outcome && (
+                    <p className="mt-3 text-sm md:text-base leading-relaxed max-w-[560px]">
+                      <span className="text-[11px] tracking-[0.2em] uppercase text-white/40 mr-2">
+                        Outcome:
+                      </span>
+                      <span className="text-white/80">{s.outcome}</span>
+                    </p>
+                  )}
                 </div>
 
                 <div className="hidden lg:block pl-2">

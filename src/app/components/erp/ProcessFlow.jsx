@@ -23,14 +23,14 @@ const STAGES = [
     {
         index: "01",
         kicker: "Ingestion",
-        title: "Operational chaos enters the singularity.",
-        body: "Disconnected tools, spreadsheets, manual processes and silos are pulled into the ERP gravitational field — every signal, every record, every transaction.",
+        title: "Operational chaos enters the system.",
+        body: "Disconnected tools, spreadsheets, manual processes and departmental silos are pulled into one ERP gravitational field. Every signal, record and transaction starts moving toward a unified structure.",
         labels: [
             { label: "Spreadsheets", Icon: FileSpreadsheet },
             { label: "Email approvals", Icon: MailCheck },
             { label: "Manual entry", Icon: Keyboard },
-            { label: "Disconnected SaaS", Icon: CloudOff },
             { label: "Reconciliation", Icon: ArrowLeftRight },
+            { label: "Disconnected SaaS", Icon: CloudOff },
             { label: "Stale reports", Icon: FileWarning },
         ],
         side: "left",
@@ -38,30 +38,30 @@ const STAGES = [
     {
         index: "02",
         kicker: "Synthesis",
-        title: "The core synthesises one source of truth.",
-        body: "Inside the ERP nucleus, data is normalised, reconciled and joined across departments — finance to inventory to logistics — in real time.",
+        title: "The core creates one source of truth.",
+        body: "This is where Enterprise software development turns scattered information into reliable operational intelligence.",
         labels: [
-            { label: "Normalise", Icon: SlidersHorizontal },
-            { label: "Reconcile", Icon: GitMerge },
-            { label: "Govern", Icon: ShieldCheck },
             { label: "Validate", Icon: BadgeCheck },
             { label: "Enrich", Icon: Sparkles },
+            { label: "Govern", Icon: ShieldCheck },
             { label: "Audit", Icon: ClipboardCheck },
+            { label: "Normalize", Icon: SlidersHorizontal },
+            { label: "Reconcile", Icon: GitMerge },
         ],
         side: "center",
     },
     {
         index: "03",
         kicker: "Emission",
-        title: "Clarity emerges from the white hole.",
-        body: "Unified operations, real-time reporting, automated workflows and business intelligence — emitted continuously across every team and decision.",
+        title: "Clarity reaches every team.",
+        body: "Unified operations, live reporting, workflow automation, inventory control and business intelligence are delivered continuously across every department.",
         labels: [
-            "Unified ops",
-            "Live reporting",
+            "Unified Ops",
+            "Live Reporting",
             "Automation",
             "Forecasting",
-            "Inventory control",
-            "BI",
+            "Inventory Control",
+            "Business Intelligence",
         ],
         side: "right",
     },
@@ -249,7 +249,7 @@ export const ProcessFlow = () => {
             <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                     <SectionHeading
-                        eyebrow="Transformation Sequence"
+                        eyebrow="Operating Model"
                         title={
                             <>
                                 Three stages.{" "}
@@ -258,7 +258,7 @@ export const ProcessFlow = () => {
                                 </span>
                             </>
                         }
-                        description="The journey from operational chaos to enterprise clarity — modelled on space-time physics."
+                        description="The journey from operational chaos to enterprise clarity does not happen by adding another tool. It happens when your systems, workflows and data move into one controlled business layer."
                         testId="process-heading"
                     />
                     <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/35 lg:pb-2">

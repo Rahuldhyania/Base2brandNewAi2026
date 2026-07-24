@@ -2,57 +2,75 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Headset,
-  Boxes,
-  Glasses,
-  Wrench,
+  Brain,
+  Workflow,
   Network,
-  Sparkles,
+  Blocks,
+  Glasses,
+  Cloud,
 } from "lucide-react";
 import { SPATIAL } from "@/constants/testIds";
 
 const capabilities = [
   {
-    icon: Headset,
-    title: "Enterprise Training Simulations",
+    icon: Brain,
+    title: "AI Technology Solutions",
     description:
-      "Safety programs, equipment operation, onboarding and certification rehearsed in fully simulated environments.",
-    bullets: ["Scenario branching", "Performance analytics", "LMS / SCORM hand-off"],
+      "Our AI technology solutions are built around real workflows — sales, support, marketing, operations, data, reporting and customer experience.",
+    bullets: [
+      "AI assistants",
+      "AI chatbots",
+      "Predictive analytics",
+      "Generative AI workflows",
+      "AI-powered dashboards",
+    ],
   },
   {
-    icon: Boxes,
-    title: "Digital Twin Engineering",
+    icon: Workflow,
+    title: "Automation Technology Solutions",
     description:
-      "Connected operations dashboards that mirror factories, energy assets and supply chains in real time.",
-    bullets: ["IoT data fabric", "Predictive overlays", "Operator workstations"],
-  },
-  {
-    icon: Glasses,
-    title: "Vision Pro Development",
-    description:
-      "Native visionOS experiences with spatial interfaces engineered for executive, design and operations workflows.",
-    bullets: ["RealityKit", "SwiftUI + Reality Composer Pro", "MDM-ready deployments"],
-  },
-  {
-    icon: Wrench,
-    title: "Industrial XR Solutions",
-    description:
-      "Maintenance procedures, assembly guidance and field-service tools designed for shop-floor adoption.",
-    bullets: ["Step-by-step procedures", "Work order integration", "Offline-first"],
+      "Our automation technology solutions help teams reduce delays, improve response time and scale operations without adding unnecessary manual effort.",
+    bullets: [
+      "CRM automation",
+      "Workflow automation",
+      "Marketing automation",
+      "Sales process automation",
+      "WhatsApp automation",
+    ],
   },
   {
     icon: Network,
-    title: "Immersive Collaboration",
+    title: "IoT & Connected Systems",
     description:
-      "Shared spatial workspaces for distributed design reviews, war-rooms and executive briefings.",
-    bullets: ["Cross-device sessions", "Persistent rooms", "Recording & playback"],
+      "We help businesses build connected systems for monitoring, tracking, asset visibility, field operations and industrial workflows.",
+    bullets: ["IoT dashboards", "Device monitoring", "Sensor data integration", "Asset tracking"],
   },
   {
-    icon: Sparkles,
-    title: "AI-Powered XR Experiences",
+    icon: Blocks,
+    title: "Blockchain & Web3 Systems",
     description:
-      "Intelligent NPCs, adaptive learning systems and voice interfaces that personalise every spatial moment.",
-    bullets: ["Conversational agents", "Adaptive scenarios", "Computer-vision overlays"],
+      "We build blockchain systems where verification, ownership, auditability and decentralized workflows create real business value.",
+    bullets: ["Tokenized systems", "Web3 platforms", "NFT utility systems", "Blockchain integrations"],
+  },
+  {
+    icon: Glasses,
+    title: "Metaverse Development & Spatial Experiences",
+    description:
+      "Our metaverse development practice helps brands create interactive 3D spaces that go beyond presentation and support real business outcomes.",
+    bullets: [
+      "Virtual showrooms",
+      "3D product experiences",
+      "Immersive training",
+      "VR/AR environments",
+      "Digital twins",
+    ],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Technology & Data Centre Modernization",
+    description:
+      "We help businesses move from outdated infrastructure to cloud-ready, secure and scalable technology systems.",
+    bullets: ["Cloud migration", "Cloud-native applications", "Data centre modernization", "DevOps"],
   },
 ];
 
@@ -75,18 +93,19 @@ export default function Capabilities() {
         <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-10">
           <div>
             <div className="text-[11px] tracking-[0.28em] uppercase text-[#FFB800]/90 mb-4">
-              · Capabilities
+              · Emerging Technology Capabilities
             </div>
             <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-              One engineering team.
+              One technology partner,
               <br />
-              <span className="text-white/55">Every immersive surface.</span>
+              <span className="text-white/55">Every future-ready layer.</span>
             </h2>
           </div>
           <p className="text-white/65 text-base lg:text-lg max-w-[640px] self-end leading-relaxed">
-            From visionOS to industrial digital twins — our practice covers the
-            full spatial computing stack with a single accountable team, applied
-            to outcomes your business actually measures.
+            From AI and automation to cloud, IoT, blockchain and cybersecurity,
+            Base2Brand builds the technology layers that help businesses operate
+            smarter. We turn emerging tech trends into practical systems your
+            teams can use, measure and scale.
           </p>
         </div>
 

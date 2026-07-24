@@ -157,7 +157,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
   );
 };
 
-const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
+const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
   <motion.button
     type="button"
     data-testid={`industry-card-${idx}`}
@@ -207,17 +207,19 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover }) => (
         transition={{ duration: 0.3 }}
         className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-(--b2b-primary)"
       >
-        Use case <ArrowUpRight className="w-3 h-3" />
+        {ctaLabel} <ArrowUpRight className="w-3 h-3" />
       </motion.span>
     </motion.div>
-    <motion.p
-      animate={{ opacity: isDimmed ? 0.3 : 1 }}
-      className={`mt-1.5 pl-9 text-xs md:text-sm transition-colors duration-300 ${
-        isActive ? "text-white/70" : "text-white/35"
-      }`}
-    >
-      {industry.use}
-    </motion.p>
+    {industry.use && (
+      <motion.p
+        animate={{ opacity: isDimmed ? 0.3 : 1 }}
+        className={`mt-1.5 pl-9 text-xs md:text-sm transition-colors duration-300 ${
+          isActive ? "text-white/70" : "text-white/35"
+        }`}
+      >
+        {industry.use}
+      </motion.p>
+    )}
   </motion.button>
 );
 
@@ -225,6 +227,7 @@ const Industries = ({
   title='Deployed across growth-heavy and operations-heavy environments.',
   description='Base2Brand builds AI automation services and enterprise AI solutions for industries where speed, accuracy and conversion matter.',
   industriesData = INDUSTRIES,
+  ctaLabel = "Use case",
 }) => {
   const [hovered, setHovered] = useState(industriesData[0].id);
 
@@ -309,6 +312,7 @@ const Industries = ({
                 isActive={hovered === ind.id}
                 isDimmed={hovered !== null && hovered !== ind.id}
                 onHover={setHovered}
+                ctaLabel={ctaLabel}
               />
             ))}
           </div>

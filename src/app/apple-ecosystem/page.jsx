@@ -28,6 +28,7 @@ const PROJECTS = [
     preview: {
       accent: "#42A5FF",
       title: "Native iOS Platform — Workflow Console",
+      screenshot: "/images/AEcase1.svg",
       lines: [
         { label: "Active app sessions", value: "18,420" },
         { label: "Interaction performance", value: "60fps" },
@@ -49,6 +50,7 @@ const PROJECTS = [
     preview: {
       accent: "#00B8FF",
       title: "Vision Pro — Spatial Experience Layer",
+      screenshot: "/images/AEcase2.svg",
       lines: [
         { label: "Spatial sessions", value: "6,814" },
         { label: "Average rating", value: "4.7★" },
@@ -70,6 +72,29 @@ const PROJECTS = [
     preview: {
       accent: "#1E90FF",
       title: "Apple Enterprise — Deployment Dashboard",
+      screenshot: "/images/AEcase3.svg",
+      lines: [
+        { label: "Managed devices", value: "12,600" },
+        { label: "Platform uptime", value: "99.95%" },
+        { label: "Security posture", value: "SOC 2" },
+      ],
+      chart: [40, 44, 49, 55, 61, 66, 72, 78, 83, 89, 94, 99],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
+    tag: "AI Workflow Engine — Enterprise Dashboard",
+    title: "Creating intelligent automation for enterprise workflows.",
+    metrics: [
+      { v: "95%", l: "Decision accuracy" },
+      { v: "<150ms", l: "Average execution time" },
+    ],
+    url: "apple-enterprise.b2b/app",
+    preview: {
+      accent: "#1E90FF",
+      title: "Apple Enterprise — Deployment Dashboard",
+      screenshot: "/images/AEcase4.svg",
       lines: [
         { label: "Managed devices", value: "12,600" },
         { label: "Platform uptime", value: "99.95%" },
@@ -90,6 +115,7 @@ export default function page() {
           title="Apple ecosystem cases."
           titleLower="Premium outcomes."
           cardsData={PROJECTS}
+          imageBorderColor="#1E90FF"
         />
         <PlatformExplorer />
         <Technologies />

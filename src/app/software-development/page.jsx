@@ -54,6 +54,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF3B30",
       title: "CRM Layer — Sales Console",
+      screenshot: "/images/case1.svg",
       lines: [
         { label: "Avg. response time", value: "-61%" },
         { label: "Qualified leads", value: "+39%" },
@@ -75,6 +76,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF4A3D",
       title: "SaaS Platform — Product Console",
+      screenshot: "/images/case2.svg",
       lines: [
         { label: "Active workspaces", value: "4,820" },
         { label: "Avg. onboarding time", value: "-45%" },
@@ -96,6 +98,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF3B30",
       title: "Business Systems — Operations Console",
+      screenshot: "/images/case3.svg",
       lines: [
         { label: "Reporting speed", value: "12x" },
         { label: "Process visibility", value: "98%" },
@@ -117,6 +120,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF4A3D",
       title: "Mobile Experience — Adoption Console",
+      screenshot: "/images/case4.svg",
       lines: [
         { label: "Platform adoption", value: "93%" },
         { label: "Business workflows", value: "42" },
@@ -203,6 +207,7 @@ const page = () => {
           title="Software cases"
           titleLower="that moved the numbers."
           cardsData={PROJECTS}
+          imageBorderColor="#FF3B30"
         />
         <ProductsWeBuild />
         <TechStack />

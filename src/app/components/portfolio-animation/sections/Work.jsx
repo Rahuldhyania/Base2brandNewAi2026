@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { extraData } from "@/constants/testIds/extraData";
 import { CASE_STUDIES } from "@/case-study/data/caseStudiesData";
@@ -12,25 +13,13 @@ import { CASE_STUDIES } from "@/case-study/data/caseStudiesData";
  * scrolls into it. Uses useScroll to drive scale/translate/opacity.
  * When the rocket "docks", we crossfade the card into a full‑bleed preview.
  */
-function ProjectCase({ project, index }) {
+function ProjectCase({ project, index, imageBorderColor }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  const scale = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1.02, 0.94]), {
-    stiffness: 90,
-    damping: 22,
-  });
-  const rotate = useSpring(useTransform(scrollYProgress, [0, 1], [3, -3]), {
-    stiffness: 90,
-    damping: 22,
-  });
-  const y = useSpring(useTransform(scrollYProgress, [0, 1], [40, -40]), {
-    stiffness: 90,
-    damping: 22,
-  });
   const glow = useTransform(scrollYProgress, [0.35, 0.55], [0, 1]);
 
   return (
@@ -87,7 +76,6 @@ function ProjectCase({ project, index }) {
         {/* Browser side */}
         <motion.div
           data-testid={extraData.work.browserExpand(project.id)}
-          style={{ scale, rotate, y }}
           className={`relative ddff ${index % 2 === 1 ? "md:order-1" : ""}`}
         >
           <motion.div
@@ -105,17 +93,15 @@ function ProjectCase({ project, index }) {
             />
           </motion.div>
 
-          <BrowserWindow project={project} scrollYProgress={scrollYProgress} />
+          <BrowserWindow project={project} imageBorderColor={imageBorderColor} />
         </motion.div>
       </div>
     </div>
   );
 }
 
-function BrowserWindow({ project, scrollYProgress }) {
+function BrowserWindow({ project, imageBorderColor }) {
   const { preview } = project;
-  const imageScale = useTransform(scrollYProgress, [0.15, 0.5, 0.85], [1.12, 1, 1.06]);
-  const imageY = useTransform(scrollYProgress, [0, 1], [18, -18]);
 
   return (
     <div className="relative rounded-[20px] overflow-hidden border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgba(244,123,82,0.35)]">
@@ -154,68 +140,37 @@ function BrowserWindow({ project, scrollYProgress }) {
         </span>
       </div>
 
-      {/* Body */}
-      <div className="p-6 md:p-8 relative overflow-hidden">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
-              {preview.title}
-            </div>
-            <div className="font-display text-[22px] md:text-[26px] text-white mt-1 leading-tight">
-              Live telemetry
-            </div>
-          </div>
+      {/* Screenshot — top attached, sides + bottom padded, bottom corners rounded */}
+      <div className="px-4 pb-4 md:px-5 md:pb-5">
+        {preview.screenshot ? (
           <div
-            className="w-9 h-9 rounded-full flex items-center justify-center"
-            style={{
-              background: `linear-gradient(135deg, ${preview.accent} 0%, rgba(255,255,255,0.05) 100%)`,
-            }}
+            className="overflow-hidden rounded-b-3xl bg-[#0c101a]"
+            style={
+              imageBorderColor
+                ? {
+                    borderLeft: `1px solid ${imageBorderColor}`,
+                    borderRight: `1px solid ${imageBorderColor}`,
+                    borderBottom: `1px solid ${imageBorderColor}`,
+                  }
+                : undefined
+            }
           >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path
-                d="M7 2v10M2 7h10"
-                stroke="white"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-        </div>
-
-        {/* KPIs */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          {preview.lines.map((l) => (
-            <div
-              key={l.label}
-              className="rounded-lg border border-white/5 bg-white/[0.02] p-3"
-            >
-              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/40 mb-1">
-                {l.label}
-              </div>
-              <div className="font-display text-[18px] text-white tracking-[-0.02em]">
-                {l.value}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="rounded-lg border border-white/5 bg-white/[0.02] p-2 overflow-hidden">
-          {preview.screenshot ? (
-            <motion.img
+            <Image
               src={preview.screenshot}
               alt={`${project.title} dashboard preview`}
-              style={{ scale: imageScale, y: imageY }}
-              className="w-full h-[220px] md:h-[250px] rounded-md object-cover will-change-transform"
+              width={1022}
+              height={758}
+              className="block w-full h-auto"
               loading="lazy"
             />
-          ) : (
-            <div className="h-[220px] md:h-[250px] rounded-md border border-dashed border-white/20 bg-[#0c101a] flex items-center justify-center text-center px-6">
-              <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-white/45">
-                Screenshot will appear here
-              </span>
-            </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="aspect-[16/10] rounded-b-xl bg-[#0c101a] border border-dashed border-white/20 border-t-0 flex items-center justify-center text-center px-6">
+            <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-white/45">
+              Screenshot will appear here
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -225,6 +180,7 @@ export default function Work({
   title = "Selected anonymised cases.",
   titleLower = "Outcomes, not optics.",
   cardsData = CASE_STUDIES,
+  imageBorderColor,
 }) {
   return (
     <section
@@ -243,7 +199,7 @@ export default function Work({
         </div>
       </div>
       {cardsData.map((p, i) => (
-        <ProjectCase key={p.id} project={p} index={i} />
+        <ProjectCase key={p.id} project={p} index={i} imageBorderColor={imageBorderColor} />
       ))}
 
       {/* <div className="flex flex-col gap-4">

@@ -245,9 +245,9 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "relative inline-block pointer-events-auto",
                         )}
 
-                        data-text="Built Around Shopify."
+                        data-text="Shopify stores built to sell,"
                     >
-                        Built Around Shopify. {' '}
+                       Shopify stores built to sell, {' '}
                     </span>
                     <span
                         className={cn(
@@ -256,9 +256,9 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "before:bg-[linear-gradient(0deg,#dfe5ee_0%,#fffaf6_50%)] before:bg-clip-text before:text-[#fffaf6]",
                         )}
                         // style={{ filter: "url(#glow-4)" }}
-                        data-text="Engineered For Growth."
+                        data-text="Ecommerce systems built to scale."
                     >
-                        {' '}Engineered For Growth.
+                        {' '}Ecommerce systems built to scale.
                     </span>
                 </div>
 

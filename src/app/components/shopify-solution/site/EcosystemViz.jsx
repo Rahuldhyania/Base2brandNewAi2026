@@ -9,7 +9,6 @@ import {
   ShopifyLogo,
   ShopifyPlusLogo,
   KlaviyoLogo,
-  RechargeLogo,
   MetaLogo,
   GoogleLogo,
 } from "@/components/shopify-solution/site/Logos";
@@ -21,12 +20,9 @@ const CATEGORIES = [
     items: [
       { name: "Shopify", Logo: ShopifyLogo, official: true },
       { name: "Shopify Plus", Logo: ShopifyPlusLogo, official: true },
+      { name: "Custom Shopify apps", monogram: "Ca", official: false },
+      { name: "Headless commerce", monogram: "Hc", official: false },
     ],
-  },
-  {
-    key: "subscription",
-    label: "Subscription",
-    items: [{ name: "Recharge", Logo: RechargeLogo, official: true }],
   },
   {
     key: "marketing",
@@ -35,6 +31,7 @@ const CATEGORIES = [
       { name: "Klaviyo", Logo: KlaviyoLogo, official: true },
       { name: "Meta", Logo: MetaLogo, official: true },
       { name: "Google", Logo: GoogleLogo, official: true },
+      { name: "Email flows", monogram: "Ef", official: false },
     ],
   },
   {
@@ -45,6 +42,16 @@ const CATEGORIES = [
       { name: "EasyEcom", monogram: "Ee", official: false },
       { name: "Unicommerce", monogram: "Uc", official: false },
       { name: "Increff", monogram: "In", official: false },
+    ],
+  },
+  {
+    key: "analytics",
+    label: "Analytics & Tracking",
+    items: [
+      { name: "GA4", monogram: "Ga", official: false },
+      { name: "GTM", monogram: "Gt", official: false },
+      { name: "Meta Pixel", Logo: MetaLogo, official: true },
+      { name: "Server-side tracking", monogram: "St", official: false },
     ],
   },
 ];
@@ -110,11 +117,11 @@ export const EcosystemViz = () => {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <SectionHeader
             eyebrow="INTEGRATIONS · ECOSYSTEM"
-            title="Shopify at the core. Every system that matters wired in."
-            subtitle="From marketing automation to ERP and inventory — we orchestrate a unified commerce stack with Shopify as the source of truth."
+            title="Shopify at the center, every growth system connected."
+            subtitle="This is where ecommerce website development becomes bigger than the storefront. It becomes a full commerce operating system."
           />
           <Reveal delay={0.1}>
-            <StatusChip>12 INTEGRATIONS LIVE</StatusChip>
+            <StatusChip>16 INTEGRATIONS LIVE</StatusChip>
           </Reveal>
         </div>
 

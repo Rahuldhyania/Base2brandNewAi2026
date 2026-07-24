@@ -8,42 +8,72 @@ const PHASES = [
   {
     code: "01",
     timestamp: "T+00:00",
-    title: "Discovery & Systems Audit",
+    title: "Discovery & Commerce Audit",
     desc:
-      "We audit storefront, integrations, performance, analytics, and ops to identify the highest-leverage moves.",
-    deliverables: ["Stack map", "Opportunity scoring", "Mission brief"],
+      "We audit your storefront, analytics, checkout, theme, product pages, apps, SEO, campaigns and integrations.",
+    deliverables: [
+      "Store audit",
+      "Stack map",
+      "Conversion review",
+      "Performance analysis",
+      "Opportunity scoring",
+    ],
   },
   {
     code: "02",
     timestamp: "T+00:14",
-    title: "Architecture & UX Blueprint",
+    title: "UX & Ecommerce Blueprint",
     desc:
-      "Information architecture, content model, integration topology, and a Shopify-native UX direction.",
-    deliverables: ["IA + UX", "Tech architecture", "Design system v0"],
+      "We define your store structure, product journey, content model, app requirements, integration flow and CRO direction.",
+    deliverables: [
+      "Information architecture",
+      "UX wireframes",
+      "Product page strategy",
+      "Section plan",
+      "Integration map",
+    ],
   },
   {
     code: "03",
     timestamp: "T+00:28",
-    title: "Build & Integrations",
+    title: "Shopify Build & Integrations",
     desc:
-      "Theme/Hydrogen engineering, Plus configuration, integration build-outs, and end-to-end test orchestration.",
-    deliverables: ["Build sprints", "Integrations live", "QA hardening"],
+      "We engineer the storefront, theme, tracking, apps and system integrations with speed and scalability in mind.",
+    deliverables: [
+      "Shopify theme build",
+      "Custom sections",
+      "App configuration",
+      "ERP / OMS integration",
+      "Tracking setup",
+    ],
   },
   {
     code: "04",
     timestamp: "T+00:42",
-    title: "QA, Launch, Stabilize",
+    title: "QA, Launch & Stabilize",
     desc:
-      "Controlled cutover, SEO preservation, observability online, and a 14-day stabilization window.",
-    deliverables: ["Cutover plan", "Observability", "Stabilization"],
+      "We validate checkout, redirects, products, speed, analytics, payments, apps and operational workflows before going live.",
+    deliverables: [
+      "QA checklist",
+      "SEO redirect plan",
+      "Checkout testing",
+      "Analytics validation",
+      "Launch support",
+    ],
   },
   {
     code: "05",
     timestamp: "T+00:56",
-    title: "Growth Ops & Iteration",
+    title: "Ecommerce Growth Ops",
     desc:
-      "Continuous experimentation — lifecycle, paid, CRO, and analytics — tied to revenue outcomes.",
-    deliverables: ["Experiment cadence", "Lifecycle ops", "Quarterly OKRs"],
+      "We continue improving the store through CRO, landing pages, speed, retention flows, campaign learnings and revenue reporting.",
+    deliverables: [
+      "CRO roadmap",
+      "Experiment cadence",
+      "Klaviyo optimization",
+      "Landing pages",
+      "Growth reporting",
+    ],
   },
 ];
 
@@ -124,8 +154,8 @@ export const MissionControlTimeline = () => {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <SectionHeader
             eyebrow="PROCESS · MISSION CONTROL"
-            title="A precise process. Engineered for launch — and for the long arc."
-            subtitle="Five phases, each instrumented with deliverables, SLAs, and review gates. We don't ship and disappear — we operate alongside you."
+            title="A Shopify process built for launch, growth and scale."
+            subtitle="Our process moves from audit to architecture, build, launch and growth operations with clear deliverables, review gates and measurable outcomes."
           />
           <Reveal delay={0.1}>
             <StatusChip>5 PHASES · ALL READY</StatusChip>
