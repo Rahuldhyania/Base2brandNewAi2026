@@ -10,6 +10,7 @@ import WhyUs from "@/components/landing/WhyUs";
 import Work from "@/components/portfolio-animation/sections/Work";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 import Industries from "@/components/ai/Industries";
+import { LandingZone } from "@/sections/LandingZone";
 
 const features = [
   {
@@ -327,6 +328,7 @@ export default function page() {
       <CommandCenter />
       <Services />
       <WhyUs />
+      <LandingZone />
     </main>
   );
 }

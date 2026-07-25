@@ -61,14 +61,14 @@ const GrowthSystem = () => {
           {practices.map((practice, index) => (
             <div
               key={index}
-              className="border-2 border-white/10 rounded-t-4xl rounded-b-[45px] p-3"
+              className="border-2 border-white/10 rounded-t-4xl rounded-b-[45px] p-3 max-h-[380px]"
             >
               <div
-                className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end"
+                className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end max-h-[360px]"
                 style={{ backgroundImage: `url(/images/growth_card_bg.png)` }}
               >
-                <div className="absolute top-4 left-0 w-full flex justify-center">
-                  <div>
+                <div className="absolute top-8 left-0 w-full flex justify-center">
+                  <div className="ps-14">
                     <Image
                       src={practice.icon}
                       alt="growthCard_icon"
@@ -78,19 +78,19 @@ const GrowthSystem = () => {
                     />
                   </div>
                 </div>
-                <div className="relative h-[72%]">
-                  <div className="relative z-20 p-4">
+                <div className="relative h-[68%]">
+                  <div className="relative z-20 py-4 px-6">
                     <h3 className="text-[#FF9041] text-[25px] leading-[1.08] font-medium max-w-[180px]">
                       {practice.title}
                     </h3>
-                    <p className="text-[15px] text-white pt-3">
+                    <p className="text-[15px] text-white pt-2">
                       {practice.description}
                     </p>
 
                     <div className="pt-2">
-                      <ul>
+                      <ul className="flex items-center gap-3">
                         {practice.points.map((item, pointIndex) => (
-                          <li key={pointIndex} className="text-white text-[16px]" style={{listStyle:'inside'}}>
+                          <li key={pointIndex} className="text-white text-[12px]" style={{ listStyle: 'inside' }}>
                             {item}
                           </li>
                         ))}
@@ -98,11 +98,11 @@ const GrowthSystem = () => {
                     </div>
                   </div>
                   <Image
-                    src={"/images/growthCard_poligun.png"}
-                    alt="growthCard_poligun"
+                    src={"/images/growthCard_poligunv2.png"}
+                    alt="growthCard_poligunv2"
                     width={1000}
                     height={500}
-                    className="object-cover absolute -bottom-px right-0 z-10"
+                    className="object-cover absolute bottom-[2%] max-w-[98%] right-[1%] z-10 "
                   />
                 </div>
               </div>

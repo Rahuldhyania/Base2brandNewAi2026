@@ -2335,3 +2335,48 @@
             font-size: 30px
         }
         }
+
+        .phone-input-wrap .PhoneInput {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.phone-input-wrap .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding-right: 0.75rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phone-input-wrap .PhoneInputCountrySelect {
+  background: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+.phone-input-wrap .PhoneInputCountrySelect option {
+  background: #05070D;
+  color: white;
+}
+
+.phone-input-wrap .PhoneInputCountryIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  box-shadow: none;
+}
+
+.phone-input-wrap .PhoneInputInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.875rem 0;
+}
+.phone-input-wrap .PhoneInputInput::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}

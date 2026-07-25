@@ -15,9 +15,9 @@ export function LandingZone() {
         className="absolute inset-0 z-0 bg-transparent"
         starColor="#ffffff"
       />
-      <div className="absolute inset-x-0 bottom-[260px] sm:bottom-[320px] z-[1] pointer-events-none">
+      {/* <div className="absolute inset-x-0 bottom-[260px] sm:bottom-[320px] z-[1] pointer-events-none">
         <GroundHorizon />
-      </div>
+      </div> */}
       <div className="relative z-10">
         <FinalCTA />
       </div>

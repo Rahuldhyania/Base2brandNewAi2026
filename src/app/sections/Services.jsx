@@ -61,7 +61,7 @@ function ServiceCard({ s, index }) {
       className="group relative p-4 xl:p-7 rounded-2xl border border-line bg-[#04061a]/60 hover:border-orange-brand/40 transition-colors overflow-hidden"
     >
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-           style={{ background: "radial-gradient(600px circle at var(--x,50%) var(--y,0%), rgba(255,106,0,0.10), transparent 40%)" }} />
+        style={{ background: "radial-gradient(600px circle at var(--x,50%) var(--y,0%), rgba(255,106,0,0.10), transparent 40%)" }} />
       <div className="flex items-center gap-4">
         <div className="grid place-items-center h-11 w-11 rounded-xl bg-orange-brand/10 border border-orange-brand/30 text-orange-brand">
           <Icon size={20} />
@@ -76,7 +76,7 @@ function ServiceCard({ s, index }) {
       <p className="mt-3 text-mute text-sm xl:text-base leading-relaxed">
         {s.desc}
       </p>
-      <ul className="mt-3 xl:mt-5 space-y-1.5">
+      <ul className="mt-3 xl:mt-5 space-y-1.5 flex items-center">
         {s.points.map((p) => (
           <li key={p} className="text-sm text-white/85 flex items-center gap-2">
             <span className="inline-block h-1 w-1 rounded-full bg-orange-brand" />

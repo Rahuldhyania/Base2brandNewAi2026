@@ -67,7 +67,7 @@ export function GlobalPresence() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
                 data-testid={`office-${l.city.toLowerCase().replace(/\s/g, "-")}`}
-                className="bg-[#02030a] py-3 px-4 md:px-6 md:py-6 flex items-center justify-between gap-3 group hover:bg-[#05081a] transition"
+                className="bg-[#02030a] py-3 px-4 md:px-6 md:py-4 flex items-center justify-between gap-3 group hover:bg-[#05081a] transition"
               >
                 <div>
                   <div className="font-display text-white text-base sm:text-lg leading-tight">

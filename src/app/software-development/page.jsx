@@ -12,6 +12,7 @@ import WhyBase2Brand from "@/components/software-development/WhyBase2Brand";
 import Work from "@/components/portfolio-animation/sections/Work";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
 import Industries from "@/components/ai/Industries";
+import { LandingZone } from "@/sections/LandingZone";
 
 const CARDS = [
   {
@@ -224,6 +225,7 @@ const page = () => {
         <CommandCenter />
         <EngineeringPrinciples />
         <FinalCTA />
+        <LandingZone />
       </main>
     </div>
   );

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -61,7 +63,7 @@ export default function ProjectContactForm() {
     firstName: '',
     lastName: '',
     email: '',
-    phone: '',
+    phone: '', // now stores full E.164 value e.g. "+919876543210"
     requirement: '',
     range: '',
     website: '',
@@ -74,6 +76,13 @@ export default function ProjectContactForm() {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+    }));
+  };
+
+  const handlePhoneChange = (value) => {
+    setFormData((prev) => ({
+      ...prev,
+      phone: value || '',
     }));
   };
 
@@ -132,8 +141,6 @@ export default function ProjectContactForm() {
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
-          {/* <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-br from-[var(--b2b-primary)]/70 via-white/10 to-cyan-400/30 opacity-70 blur-sm" /> */}
-
           <form
             onSubmit={handleSubmit}
             className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 p-5 shadow-2xl backdrop-blur-2xl"
@@ -149,7 +156,7 @@ export default function ProjectContactForm() {
               </p>
             </div>
 
-            <div className="relative mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="relative mt-8 grid gap-4 sm:grid-cols-2">
               <div>
                 <FieldLabel>First Name *</FieldLabel>
                 <div className="relative">
@@ -206,18 +213,15 @@ export default function ProjectContactForm() {
 
               <div>
                 <FieldLabel>Phone / WhatsApp</FieldLabel>
-                <div className="flex overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all focus-within:border-[var(--b2b-primary)] focus-within:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]">
-                  <div className="flex items-center gap-2 border-r border-white/10 px-3 text-sm text-white">
-                    <span>🇮🇳</span>
-                    <span className="font-medium">+91</span>
-                  </div>
-                  <input
-                    type="tel"
-                    name="phone"
+                <div className="phone-input-wrap flex overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] px-4 transition-all focus-within:border-[var(--b2b-primary)] focus-within:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]">
+                  <PhoneInput
+                    international
+                    defaultCountry="IN"
+                    countryCallingCodeEditable={false}
                     value={formData.phone}
-                    onChange={handleChange}
+                    onChange={handlePhoneChange}
                     placeholder="Phone number"
-                    className="w-full bg-transparent px-4 py-3.5 text-sm text-white outline-none placeholder:text-white/35"
+                    className="w-full"
                   />
                 </div>
               </div>
@@ -247,7 +251,7 @@ export default function ProjectContactForm() {
               </div>
 
               <div className="">
-                <FieldLabel>.</FieldLabel>
+                <FieldLabel>Range</FieldLabel>
                 <div className="relative">
                   <select
                     name="range"

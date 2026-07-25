@@ -109,7 +109,7 @@ export function Insights() {
               </p>
               <a
                 href="#"
-                className="mt-6 inline-flex items-center gap-2 text-sm text-white group-hover:text-orange-brand transition"
+                className="mt-1 inline-flex items-center gap-2 text-sm text-white group-hover:text-orange-brand transition"
               >
                 Read paper
                 <ArrowUpRight size={14} />
