@@ -772,7 +772,7 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
       data-testid={extraData.work.project(project.id)}
       className="relative flex items-center px-6 md:px-12 py-12"
     >
-      <div className={`max-w-[1180px] mx-auto w-full grid ${wide_container ? index % 2 === 1 ? 'md:grid-cols-[4fr_2fr]' : 'md:grid-cols-[2fr_4fr]' : 'grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]'}  gap-8 items-center`}>
+      <div className={`max-w-[1180px] mx-auto w-full grid ${wide_container ? index % 2 === 1 ? 'md:grid-cols-[4fr_2fr]' : 'md:grid-cols-[2fr_4fr]' : index % 2 === 1 ? 'grid-cols-[3fr_2fr]' : 'grid-cols-[2fr_3fr]'}  gap-8 items-center`}>
         {/* Copy side */}
         <div className={index % 2 === 1 ? "md:order-2" : ""}>
           <div className="flex items-center gap-3 mb-6">
@@ -848,13 +848,13 @@ function BrowserWindow({ project, imageBorderColor }) {
   const { preview } = project;
 
   return (
-    <div className="relative rounded-[20px] overflow-hidden border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgba(244,123,82,0.35)]">
+    <div className="relative rounded-[20px] overflow-hidden border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgba(244,123,82,0.35)] transition-transform duration-500 ease-out will-change-transform hover:scale-[1.03] hover:-rotate-1">
       {/* Chrome */}
       <div className="flex items-center gap-3 px-4 py-3 border-b border-white/8 bg-[rgba(255,255,255,0.02)]">
-        <div className="flex gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#3A3A45]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#3A3A45]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#3A3A45]" />
+        <div className="flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
         </div>
         <div className="flex-1 mx-4">
           <div className="mx-auto max-w-[280px] h-6 rounded-full bg-white/5 flex items-center justify-center gap-2 px-3">

@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 /**
  * Ready-to-use mission dossier fan carousel.
  * Pass `cards` to override defaults, or `renderCard` for fully custom slots.
+ * Pass `cardImage` to show the same image on every card (omitted by default);
+ * a card can override it with its own `image` field.
  */
 export function MissionDossierFan({
     cards ,
@@ -23,6 +25,7 @@ export function MissionDossierFan({
     subtitle = "How we run a Shopify engagement — from discovery to growth operations — as a fan of focused dossiers.",
     badgeLabel,
     showHeader = true,
+    cardImage,
 }) {
     // const dossierCount = cards.length; 
     const resolvedBadge =`${badgeLabel} DOSSIERS`;
@@ -78,6 +81,7 @@ export function MissionDossierFan({
                                     phase={card.phase}
                                     channel={card.channel}
                                     active={isCenter}
+                                    image={card.image || cardImage}
                                 />
                             ))
                         }

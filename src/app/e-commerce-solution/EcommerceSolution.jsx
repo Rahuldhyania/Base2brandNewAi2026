@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import LeadFormDialog from "@/components/shopify-solution/site/LeadFormDialog";
 import Hero from "@/components/shopify-solution/site/Hero";
 import CommerceSystems from "@/components/shopify-solution/site/CommerceSystems";
+import AppScreensMarquee from "@/components/shopify-solution/site/AppScreensMarquee";
 import EcosystemViz from "@/components/shopify-solution/site/EcosystemViz";
 import MissionDossierFan from "@/components/ui/MissionDossierFan";
 import MissionControlTimeline from "@/components/shopify-solution/site/MissionControlTimeline";
@@ -71,62 +72,79 @@ import Industries from "@/components/ai/Industries";
 //   },
 // ];
 
+const MARQUEE_IMAGES = [
+  "/images/marq1.png",
+  "/images/marq2.png",
+  "/images/marq3.png",
+  "/images/marq4.png",
+  "/images/marq5.png",
+  "/images/marq6.png",
+  "/images/marq7.png",
+];
+
 const DEFAULT_DOSSIER_CARDS = [
   {
       id: "dossier-01",
-      code: "DOSSIER-01",
-      title: "Ecommerce Audit & Strategy",
-      body: "We review your store, traffic, analytics, product structure, apps, checkout, SEO and marketing stack to identify the highest-impact growth opportunities.",
-      accent: "GROWTH AUDIT",
+      // code: "DOSSIER-01",
+      title: "AR Integration",
+      body: "Deliver immersive shopping experiences with AR-powered product previews. Let your customers visualize products in real-time, boosting buying confidence and reducing returns.",
+      // accent: "GROWTH AUDIT",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers1n.png",
   },
   {
       id: "dossier-02",
-      code: "DOSSIER-02",
-      title: "UX, CRO & Storefront Design",
-      body: "We design ecommerce journeys that make buying easier. From homepage to product page to checkout, every section is shaped around trust, clarity and conversion.",
-      accent: "CRO & UX",
+      // code: "DOSSIER-02",
+      title: "VR Integration",
+      body: "Supercharge your Shopify store with Hydrogen’s headless architecture, offering blazing-fast performance, dynamic personalization, and unparalleled scalability.",
+      // accent: "CRO & UX",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers2n.png",
   },
   {
       id: "dossier-03",
-      code: "DOSSIER-03",
-      title: "Shopify Build & Online Store Development",
-      body: "We engineer Shopify storefronts with flexible sections, clean code, strong performance and scalable theme architecture.",
-      accent: "ENGINEERING",
+      // code: "DOSSIER-03",
+      title: "Custom Discount Functions",
+      body: "Custom discount functions enable personalized pricing, optimizing sales based on customer type, history, and promotions.",
+      // accent: "ENGINEERING",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers3n.png",
   },
   {
       id: "dossier-04",
-      code: "DOSSIER-04",
-      title: "Integrations & Ecommerce Platform Solutions",
-      body: "We connect Shopify with the systems that run your business — ERP, inventory, OMS, subscriptions, analytics, CRM and marketing automation.",
-      accent: "ECOSYSTEM",
+      // code: "DOSSIER-04",
+      title: "Custom Delivery Functions",
+      body: "Custom delivery functions allow businesses to tailor delivery options based on customer needs, location, and preferences, enhancing service flexibility.",
+      // accent: "ECOSYSTEM",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers4n.png",
   },
   {
       id: "dossier-05",
-      code: "DOSSIER-05",
-      title: "Launch, QA & Stabilization",
-      body: "We launch with SEO preservation, checkout testing, analytics validation, redirects, payment checks and post-launch monitoring.",
-      accent: "OPERATIONS",
+      // code: "DOSSIER-05",
+      title: "Payment Customizations",
+      body: "Payment customizations allow businesses to adjust payment methods and terms, providing customers with a personalized and convenient checkout experience.",
+      // accent: "OPERATIONS",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers5n.png",
   },
   {
       id: "dossier-06",
-      code: "DOSSIER-06",
-      title: "Ecommerce Marketing Services",
-      body: "After launch, we help brands turn the store into a growth engine through paid media, retention flows, landing pages and campaign-specific conversion journeys.",
-      accent: "GROWTH MARKETING",
+      // code: "DOSSIER-06",
+      title: "Cart Transform API",
+      body: "The Cart Transform API lets businesses customize shopping carts in real-time, improving user experience and checkout efficiency.",
+      // accent: "GROWTH MARKETING",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers6n.png",
   },
   {
       id: "dossier-07",
-      code: "DOSSIER-07",
-      title: "Scale, CRO & Growth Ops",
-      body: "We improve performance after launch through testing, speed optimization, conversion analysis and revenue reporting.",
-      accent: "OPTIMIZATION",
+      // code: "DOSSIER-07",
+      title: "Shopify CRM & ERP Integrations",
+      body: "Integrate your Shopify store with CRM and ERP systems to automate orders, sync inventory, manage customer data, streamline operations, and improve overall business efficiency seamlessly.",
+      // accent: "OPTIMIZATION",
       channel: "CHANNEL A · LOCKED",
+      image: "/images/dossiers7n.png",
   },
 ];
 
@@ -142,7 +160,9 @@ const EcommerceSolution = () => {
     >
       {/* <Hero onOpenLeadForm={openLeadForm} /> */}
       <IlluminatedHero />
+      <AppScreensMarquee images={MARQUEE_IMAGES} />
       <CommerceSystems />
+      {/* <AppScreensMarquee images={MARQUEE_IMAGES} /> */}
       <EcosystemViz />
       <MissionDossierFan
        cards={DEFAULT_DOSSIER_CARDS}
@@ -150,6 +170,7 @@ const EcommerceSolution = () => {
        subtitle="We do not just build stores. We build commerce systems that improve revenue, retention and operational control."
        badgeLabel={DEFAULT_DOSSIER_CARDS.length}
        eyebrow="PLAYBOOKS · MISSION DOSSIERS"
+       cardImage="/images/dossier1.png"
       />
       <Industries
         title="Built for ecommerce brands where every click has a cost."

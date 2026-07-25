@@ -54,7 +54,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF3B30",
       title: "CRM Layer — Sales Console",
-      screenshot: "/images/Frame 20 (1).png",
+      screenshot: "/images/crm1.png",
       lines: [
         { label: "Avg. response time", value: "-61%" },
         { label: "Qualified leads", value: "+39%" },
@@ -76,7 +76,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF4A3D",
       title: "SaaS Platform — Product Console",
-      screenshot: "/images/Frame 20 (1).png",
+      screenshot: "/images/crm2.png",
       lines: [
         { label: "Active workspaces", value: "4,820" },
         { label: "Avg. onboarding time", value: "-45%" },
@@ -98,7 +98,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF3B30",
       title: "Business Systems — Operations Console",
-      screenshot: "/images/Frame 20 (1).png",
+      screenshot: "/images/crm3.png",
       lines: [
         { label: "Reporting speed", value: "12x" },
         { label: "Process visibility", value: "98%" },
@@ -120,7 +120,7 @@ const PROJECTS = [
     preview: {
       accent: "#FF4A3D",
       title: "Mobile Experience — Adoption Console",
-      screenshot: "/images/Frame 20 (1).png",
+      screenshot: "/images/crm4.png",
       lines: [
         { label: "Platform adoption", value: "93%" },
         { label: "Business workflows", value: "42" },

@@ -103,7 +103,7 @@ const ARROW_CLASSES =
     "relative flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/55 cursor-pointer shrink-0 z-30 outline-none shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:border-white/25 hover:text-white/80 active:opacity-70 transition-colors duration-300";
 
 const CARD_SHELL =
-    "fan-card absolute left-1/2 top-[48%] w-[min(74vw,300px)] sm:w-[min(68vw,340px)] lg:w-[360px] h-[400px] sm:h-[440px] -translate-x-1/2 -translate-y-1/2 origin-bottom rounded-3xl will-change-transform cursor-pointer";
+    "fan-card absolute left-1/2 top-[48%] w-[min(74vw,300px)] sm:w-[min(68vw,340px)] lg:w-[360px] h-[440px] sm:h-[480px] -translate-x-1/2 -translate-y-1/2 origin-bottom rounded-3xl will-change-transform cursor-pointer";
 
 function Chevron({ direction }) {
     return (

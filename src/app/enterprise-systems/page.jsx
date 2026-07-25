@@ -171,7 +171,7 @@ const PROJECTS = [
     preview: {
       accent: "#22D3EE",
       title: "Garage Management — Job Control Console",
-      screenshot: "/images/EScase1.svg",
+      screenshot: "/images/crm21n.png",
       lines: [
         { label: "Job allocation speed", value: "+46%" },
         { label: "Active jobs tracked", value: "128" },
@@ -193,7 +193,7 @@ const PROJECTS = [
     preview: {
       accent: "#06B6D4",
       title: "LMS Platform — Learning Console",
-      screenshot: "/images/EScase2.svg",
+      screenshot: "/images/crm22n.png",
       lines: [
         { label: "Learning visibility", value: "3x" },
         { label: "Central study access", value: "100%" },
@@ -215,7 +215,7 @@ const PROJECTS = [
     preview: {
       accent: "#0891B2",
       title: "Marketing Task Platform — Agency Console",
-      screenshot: "/images/EScase3.svg",
+      screenshot: "/images/crm23n.png",
       lines: [
         { label: "Task tracking speed", value: "+52%" },
         { label: "Active campaigns", value: "34" },
@@ -237,7 +237,7 @@ const PROJECTS = [
     preview: {
       accent: "#22D3EE",
       title: "Employee Management — Workforce Console",
-      screenshot: "/images/EScase4.svg",
+      screenshot: "/images/crm24n.png",
       lines: [
         { label: "Performance visibility", value: "+38%" },
         { label: "Employees tracked", value: "640" },
@@ -263,6 +263,7 @@ export default function ErpPage() {
             title="Real systems, clear visibility,"
             titleLower="measurable control."
             cardsData={PROJECTS}
+            wide_container={true}
             imageBorderColor="#22D3EE"
           />
           <Modules
