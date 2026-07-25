@@ -89,6 +89,28 @@ const PROJECTS = [
   {
     id: "case-03",
     n: "CASE 03",
+    tag: "App Development · Mobile Experience",
+    title: "Launching a mobile app built for adoption and repeat use.",
+    metrics: [
+      { v: "93%", l: "platform adoption" },
+      { v: "42", l: "business workflows" },
+    ],
+    url: "mobile-experience.b2b/app",
+    preview: {
+      accent: "#FF4A3D",
+      title: "Mobile Experience — Adoption Console",
+      screenshot: "/images/crm4.png",
+      lines: [
+        { label: "Platform adoption", value: "93%" },
+        { label: "Business workflows", value: "42" },
+        { label: "Daily active users", value: "8,340" },
+      ],
+      chart: [22, 27, 33, 41, 49, 57, 63, 71, 76, 82, 88, 93],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
     tag: "Custom Software Development · Business Systems",
     title: "Turning manual operations into one connected software system.",
     metrics: [

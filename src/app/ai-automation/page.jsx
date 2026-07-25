@@ -184,7 +184,7 @@ const PROJECTS = [
     preview: {
       accent: "#7B4DFF",
       title: "AI Workforce — Operations Console",
-      screenshot: "/images/AIcase1.svg",
+      screenshot: "/images/AIcase2.svg",
       lines: [
         { label: "Tasks processed today", value: "8,426" },
         { label: "Auto-resolved workflows", value: "72.8%" },
@@ -206,7 +206,7 @@ const PROJECTS = [
     preview: {
       accent: "#C084FC",
       title: "Multi-Agent Operations — Workflow Map",
-      screenshot: "/images/AIcase2.svg",
+      screenshot: "/images/AIcase1.svg",
       lines: [
         { label: "Active agent runs", value: "1,248" },
         { label: "Policy checks passed", value: "96.2%" },
