@@ -6,32 +6,32 @@ import { SPATIAL } from "@/constants/testIds";
 
 const cases = [
   {
-    industry: "Manufacturing",
-    title: "Industrial Safety Simulation",
-    body: "Immersive safety rehearsal across 14 high-risk procedures rolled out to 3,400 plant operators in 4 regions.",
-    metric: "−40%",
-    metricLabel: "Onboarding time",
+    industry: "Automation",
+    title: "Automation Workflow Engine",
+    body: "Automation technology solutions connecting CRM, email, WhatsApp and internal approvals into one operating flow.",
+    metric: "3.2x",
+    metricLabel: "Faster process execution",
   },
   {
-    industry: "Commerce",
-    title: "Vision Pro Product Visualization",
-    body: "Native visionOS configurator delivered for a flagship retail brand. Live across executive previews and B2B sales.",
-    metric: "2.5×",
+    industry: "Cloud",
+    title: "Cloud Modernization",
+    body: "Cloud technology and data centre modernization designed to improve scalability, reliability and operational control.",
+    metric: "60%",
+    metricLabel: "Infrastructure efficiency improvement",
+  },
+  {
+    industry: "IoT",
+    title: "IoT Intelligence Layer",
+    body: "Connected device monitoring and live dashboards for assets, field teams and industrial operations.",
+    metric: "24/7",
+    metricLabel: "Real-time operational visibility",
+  },
+  {
+    industry: "Metaverse",
+    title: "Metaverse Product Experience",
+    body: "Immersive product visualization and interactive digital experiences built for sales, training and brand storytelling.",
+    metric: "2.5x",
     metricLabel: "Engagement uplift",
-  },
-  {
-    industry: "Energy",
-    title: "Digital Twin Operations Center",
-    body: "Real-time twin of distributed assets with predictive overlays for a multi-national energy operator.",
-    metric: "−27%",
-    metricLabel: "Unplanned downtime",
-  },
-  {
-    industry: "Healthcare",
-    title: "Clinical Training Platform",
-    body: "Scenario-based training for surgical readiness, deployed across 12 teaching hospitals on a regulated MDM stack.",
-    metric: "+76%",
-    metricLabel: "Learning retention",
   },
 ];
 
@@ -55,13 +55,12 @@ export default function CaseStudies() {
             </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
               Outcomes,{" "}
-              <span className="text-white/55">not demonstrations.</span>
+              <span className="text-white/55">not experiments.</span>
             </h2>
           </div>
           <p className="text-white/65 text-base lg:text-lg max-w-[640px] self-end leading-relaxed">
-            We are measured on what production deployments change in your
-            business. A short selection of recent engagements, anonymised where
-            appropriate.
+            We measure our work by speed gained, manual effort reduced, systems
+            connected, risks lowered and revenue opportunities created.
           </p>
         </div>
 

@@ -7,8 +7,8 @@ import { SPATIAL } from "@/constants/testIds";
 const checklist = [
   "Suggested engagement approach",
   "Recommended technology stack",
-  "Surface selection strategy",
-  "Pilot roadmap",
+  "Priority use-case roadmap",
+  "Automation and AI opportunity map",
   "Indicative delivery milestones",
 ];
 
@@ -43,12 +43,13 @@ export default function CtaSection() {
                 · Start the conversation
               </div>
               <h2 className="font-display text-3xl sm:text-5xl lg:text-[56px] leading-[1.02] tracking-tight text-white">
-                Bring spatial computing
+                Bring next-gen business technology
                 <br />
                 into your roadmap.
               </h2>
               <p className="mt-6 text-white/65 text-base lg:text-lg leading-relaxed max-w-[560px]">
-                Share your goals, challenges or opportunities. Our architects will respond with an implementation perspective focused on measurable outcomes — not a sales deck.
+                Share your goals, challenges, or opportunities with our experts. We provide practical, outcome-focused guidance on AI, automation, cloud, IoT, blockchain, cybersecurity, data centre modernization, and metaverse solutions to help you build, implement, and scale effectively.
+
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">

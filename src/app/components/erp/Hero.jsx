@@ -44,7 +44,7 @@ export const Hero = () => {
                         >
                             <span className="status-dot w-1.5 h-1.5 rounded-full" />
                             <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-white/70">
-                                Mission Control for Operations
+                                Business Control, Built Into One System
                             </span>
                         </motion.div>
 
@@ -59,12 +59,12 @@ export const Hero = () => {
                         >
                             From{" "}
                             <span className="text-(--b2b-primary)">
-                                operational chaos{' '}
+                                scattered operations{' '}
                             </span>
                             <br />
-                            to complete{" "}
+                            to one intelligent{" "}
                             <span className="relative inline-block">
-                                visibility
+                                command center
                                 <svg
                                     className="absolute -bottom-2 left-0 w-full h-2 overflow-visible"
                                     viewBox="0 0 200 8"
@@ -100,7 +100,9 @@ export const Hero = () => {
                         >
                             Unify inventory, finance, procurement,
                             manufacturing, sales, logistics and customer
-                            operations into a single intelligent ERP ecosystem.
+                            operations into one connected ERP software
+                            ecosystem built for real-time visibility and
+                            faster decisions.
                         </motion.p>
 
                         <motion.p
@@ -112,11 +114,12 @@ export const Hero = () => {
                             className="mt-4 text-sm md:text-base lg:text-lg text-white max-w-2xl"
                             data-testid="hero-description"
                         >
-                            Most businesses operate through disconnected tools,
-                            spreadsheets and manual processes. Our ERP solutions
-                            create a single source of truth — giving your teams
-                            real-time visibility, automation and control across
-                            every department.
+                            Most businesses do not fail because teams are
+                            slow. They fail because the systems around them
+                            are disconnected. Base2Brand builds ERP solutions
+                            and Business automation systems that bring every
+                            process, record and workflow into one source of
+                            truth.
                         </motion.p>
 
                         <motion.div
@@ -167,9 +170,9 @@ export const Hero = () => {
                             data-testid="hero-stats"
                         >
                             {[
-                                { v: "98%", l: "Process automation" },
+                                { v: "98%", l: "Process visibility" },
                                 { v: "12x", l: "Faster reporting" },
-                                { v: "1×", l: "Source of truth" },
+                                { v: "1x", l: "Source of truth" },
                             ].map((s) => (
                                 <div key={s.l}>
                                     <div className="font-display text-3xl sm:text-4xl font-light tracking-[-0.04em] text-white">

@@ -17,47 +17,67 @@ import { cn } from "@/lib/utils";
 const MODULES = [
   {
     key: "design-system",
-    title: "Design System",
+    title: "Ecommerce Website Development",
     icon: PenTool,
     description:
-      "Premium storefront design, conversion-driven UX, and a Shopify-native design system that scales across collections, PDPs, and bundles.",
-    capabilities: ["Brand-led UX", "Headless-ready themes", "CRO-first PDPs"],
+      "We create storefronts that look premium, load fast, feel easy to use and guide customers clearly from product discovery to checkout.",
+    capabilities: [
+      "Conversion-focused UX",
+      "Mobile-first design",
+      "Product page design",
+      "Collection page systems",
+    ],
     code: "MOD-01",
   },
   {
     key: "shopify-development",
-    title: "Shopify Development",
+    title: "Shopify Development Services",
     icon: Code2,
     description:
-      "Hydrogen, Online Store 2.0, Liquid theme engineering, and custom app development — built to performance and accessibility standards.",
-    capabilities: ["Online Store 2.0", "Hydrogen + Oxygen", "Custom Apps"],
+      "Our Shopify development services help brands launch, improve or rebuild stores that can scale with traffic, campaigns and product growth.",
+    capabilities: [
+      "Shopify store development",
+      "Online Store 2.0",
+      "Liquid development",
+      "Custom Shopify sections",
+    ],
     code: "MOD-02",
   },
   {
     key: "shopify-plus",
-    title: "Shopify Plus",
+    title: "Shopify Plus & Ecommerce Platform Solutions",
     icon: Crown,
     description:
-      "Plus-grade storefronts with B2B, Markets, Flow automations, Functions, and ShopifyQL analytics. Built for enterprise commerce velocity.",
-    capabilities: ["Markets + B2B", "Flow + Functions", "Wholesale"],
+      "Enterprise-grade ecommerce platform solutions for brands that need advanced operations, automation, B2B commerce and international scale.",
+    capabilities: [
+      "Shopify Plus",
+      "B2B commerce",
+      "Shopify Markets",
+      "Wholesale workflows",
+    ],
     code: "MOD-03",
   },
   {
     key: "migrations",
-    title: "Migrations",
+    title: "Online Store Development & Migration",
     icon: ArrowLeftRight,
     description:
-      "Magento, BigCommerce, Salesforce Commerce, WooCommerce — migrated to Shopify with SEO, data, and order integrity preserved.",
-    capabilities: ["Magento → Shopify", "Data integrity", "SEO preserved"],
+      "We help brands launch new stores or migrate from Magento, WooCommerce, BigCommerce, Salesforce Commerce and custom ecommerce platforms to Shopify.",
+    capabilities: [
+      "Magento to Shopify",
+      "WooCommerce to Shopify",
+      "BigCommerce to Shopify",
+      "Custom platform migration",
+    ],
     code: "MOD-04",
   },
   {
     key: "erp-integrations",
-    title: "ERP Integrations",
+    title: "ERP, OMS & Inventory Integrations",
     icon: Database,
     description:
-      "Odoo, Unicommerce, EasyEcom, Increff and bespoke ERP/OMS integrations. Inventory, orders, financials — stitched into one source of truth.",
-    capabilities: ["Odoo / NetSuite", "OMS sync", "Inventory + Finance"],
+      "We connect Shopify with ERP, OMS, inventory, finance, fulfillment and warehouse tools so orders, stock, customers and revenue data stay synchronized.",
+    capabilities: ["Odoo", "NetSuite", "Unicommerce", "EasyEcom"],
     code: "MOD-05",
   },
   {
@@ -65,17 +85,22 @@ const MODULES = [
     title: "Subscription Commerce",
     icon: Repeat,
     description:
-      "Recharge, Bold, and Shopify Subscriptions — designed for retention, LTV, and churn reduction. Replenishment, bundles, and prepaid plans.",
-    capabilities: ["Recharge", "Prepaid plans", "Churn ops"],
+      "We design subscription commerce for replenishment, bundles, prepaid plans and loyalty-led buying experiences.",
+    capabilities: [
+      "Recharge",
+      "Bold Subscriptions",
+      "Shopify Subscriptions",
+      "Prepaid plans",
+    ],
     code: "MOD-06",
   },
   {
     key: "growth-services",
-    title: "Growth Services",
+    title: "Ecommerce Marketing Services",
     icon: LineChart,
     description:
-      "Klaviyo lifecycle, Meta + Google paid acquisition, CRO programs, and analytics. Continuous experimentation against revenue KPIs.",
-    capabilities: ["Klaviyo lifecycle", "Paid acquisition", "CRO + Analytics"],
+      "Our ecommerce marketing services connect paid media, lifecycle marketing, landing pages, CRO, analytics and retention into one growth system for Shopify and ecommerce brands.",
+    capabilities: ["Meta Ads", "Google Ads", "Klaviyo flows", "Email automation"],
     code: "MOD-07",
   },
 ];
@@ -99,8 +124,8 @@ export const CommerceSystems = () => {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <SectionHeader
             eyebrow="COMMERCE SYSTEMS · SERVICES"
-            title="Engineered modules for the Shopify operating system."
-            subtitle="Each capability is a self-contained system with its own SLAs, telemetry, and KPIs — designed to interlock with the others."
+            title="Everything your ecommerce business needs to sell smarter."
+            subtitle="Our Shopify development services combine online store development, CRO, integrations and ecommerce marketing services into one commerce system built for measurable growth."
           />
           <Reveal delay={0.1}>
             <StatusChip>7 MODULES ONLINE</StatusChip>

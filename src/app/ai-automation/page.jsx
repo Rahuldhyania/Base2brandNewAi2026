@@ -183,6 +183,7 @@ const PROJECTS = [
     preview: {
       accent: "#7B4DFF",
       title: "AI Workforce — Operations Console",
+      screenshot: "/images/AIcase1.svg",
       lines: [
         { label: "Tasks processed today", value: "8,426" },
         { label: "Auto-resolved workflows", value: "72.8%" },
@@ -204,6 +205,7 @@ const PROJECTS = [
     preview: {
       accent: "#C084FC",
       title: "Multi-Agent Operations — Workflow Map",
+      screenshot: "/images/AIcase2.svg",
       lines: [
         { label: "Active agent runs", value: "1,248" },
         { label: "Policy checks passed", value: "96.2%" },
@@ -225,6 +227,29 @@ const PROJECTS = [
     preview: {
       accent: "#42D4FF",
       title: "Enterprise Copilot — Knowledge Layer",
+      screenshot: "/images/AIcase3.svg",
+      lines: [
+        { label: "Knowledge sources indexed", value: "46" },
+        { label: "Verified answers", value: "89.7%" },
+        { label: "Avg. response time", value: "2.4 sec" },
+      ],
+      chart: [32, 38, 41, 48, 53, 57, 63, 69, 72, 78, 84, 90],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
+    tag: "Decision Intelligence · Business Automation",
+    title: "Turning scattered data into faster business decisions.",
+    metrics: [
+      { v: "42%", l: "Faster decision cycles" },
+      { v: "3.6x", l: "Improvement in workflow visibility" },
+    ],
+    url: "enterprise-copilot.b2b/app",
+    preview: {
+      accent: "#42D4FF",
+      title: "Enterprise Copilot — Knowledge Layer",
+      screenshot: "/images/AIcase4.svg",
       lines: [
         { label: "Knowledge sources indexed", value: "46" },
         { label: "Verified answers", value: "89.7%" },
@@ -271,6 +296,7 @@ export default function page() {
         title="Selected AI automation cases."
         titleLower="Systems that shipped outcomes."
         cardsData={PROJECTS}
+        imageBorderColor="#8b5cf6"
       />
       <TechStack
         highlightTag={'BUILT ON THE LATEST AI STACK'}

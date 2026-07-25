@@ -100,7 +100,7 @@ export const Integrations = () => {
                             </span>
                         </>
                     }
-                    description="Bidirectional sync with the operational tools your teams already trust — ledgers, CRMs, warehouses, payment rails and warehouses."
+                    description="We design bidirectional sync between ledgers, CRMs, ecommerce platforms, warehouses, payment systems, analytics tools, helpdesks and operational databases."
                     align="center"
                     testId="integrations-heading"
                 />

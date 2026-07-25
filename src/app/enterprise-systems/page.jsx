@@ -16,7 +16,7 @@ const LOGISTICS_MODULES = [
   {
     id: "warehouse",
     label: "Warehouse",
-    desc: "Stock, bins, inventory flow",
+    desc: "Stock, bins, inventory flow, receiving, picking, packing and fulfillment visibility.",
     iconName: "boxes",
     angle: 0,
     image:
@@ -25,7 +25,7 @@ const LOGISTICS_MODULES = [
   {
     id: "dispatch",
     label: "Dispatch",
-    desc: "Orders, jobs, assignments",
+    desc: "Orders, job assignments, driver coordination, delivery instructions and exception handling.",
     iconName: "truck",
     angle: 45,
     image:
@@ -34,7 +34,7 @@ const LOGISTICS_MODULES = [
   {
     id: "fleet",
     label: "Fleet",
-    desc: "Vehicles, drivers, maintenance",
+    desc: "Vehicle data, driver records, maintenance workflows, utilization and route readiness.",
     iconName: "truck",
     angle: 90,
     image:
@@ -43,7 +43,7 @@ const LOGISTICS_MODULES = [
   {
     id: "routes",
     label: "Routes",
-    desc: "Planning, routing, optimization",
+    desc: "Planning, routing, optimization, cost visibility and delivery performance intelligence.",
     iconName: "analytics",
     angle: 135,
     image:
@@ -52,7 +52,7 @@ const LOGISTICS_MODULES = [
   {
     id: "billing",
     label: "Billing",
-    desc: "Freight cost, invoices, payments",
+    desc: "Freight cost, invoices, payments, customer billing and finance reconciliation.",
     iconName: "wallet",
     angle: 180,
     image:
@@ -61,7 +61,7 @@ const LOGISTICS_MODULES = [
   {
     id: "analytics",
     label: "Analytics",
-    desc: "KPIs, delays, performance",
+    desc: "KPIs, delays, forecasts, department performance and business intelligence dashboards.",
     iconName: "barChart",
     angle: 225,
     image:
@@ -70,7 +70,7 @@ const LOGISTICS_MODULES = [
   {
     id: "tracking",
     label: "Tracking",
-    desc: "Live status, ETA, proof of delivery",
+    desc: "Live shipment status, ETA updates, delivery proof and operational movement.",
     iconName: "truck",
     angle: 270,
     image:
@@ -79,7 +79,7 @@ const LOGISTICS_MODULES = [
   {
     id: "carriers",
     label: "Carriers",
-    desc: "Partners, rates, contracts",
+    desc: "Partner management, carrier rates, contracts, dispatch rules and performance tracking.",
     iconName: "users",
     angle: 315,
     image:
@@ -98,68 +98,152 @@ const LOGISTICS_MODULE_SCROLL_ORDER = [
   "analytics",
 ];
 
+const ERP_INDUSTRIES = [
+  {
+    id: "automotive",
+    name: "Automotive",
+    use: "Dealer operations, inventory intelligence, lead qualification, service workflows and customer follow-up systems.",
+    image:
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "manufacturing",
+    name: "Manufacturing",
+    use: "Production planning, procurement, quality checks, supplier coordination, inventory movement and operational reporting.",
+    image:
+      "https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    use: "Patient workflows, appointment operations, compliance-friendly reporting, internal approvals and secure data handling.",
+    image:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "logistics",
+    name: "Logistics",
+    use: "Shipment updates, dispatch workflows, exception handling, customer communication and operational intelligence.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "retail",
+    name: "Retail & Ecommerce",
+    use: "Shopify automation, order management, inventory sync, product data, customer operations and revenue reporting.",
+    image:
+      "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "finserv",
+    name: "Financial Services",
+    use: "Document workflows, approvals, internal reporting, KYC support, billing systems and risk-aware operations.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "government",
+    name: "Government",
+    use: "Citizen services, document intelligence, compliance workflows, policy retrieval and reporting systems.",
+    image:
+      "https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    id: "education",
+    name: "Education",
+    use: "Student inquiry workflows, admission operations, course recommendations, CRM follow-up and learning support systems.",
+    image:
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=70",
+  },
+];
+
 const PROJECTS = [
   {
     id: "case-01",
     n: "CASE 01",
-    tag: "ERP Ecosystem · Operations Visibility",
-    title: "Unifying operations into one ERP command layer.",
+    tag: "Garage Management Platform · Mechanic Job Control",
+    title: "Managing workshop jobs from assignment to completion.",
     metrics: [
-      { v: "98%", l: "process visibility" },
-      { v: "12x", l: "faster reporting" },
+      { v: "46%", l: "faster job allocation" },
+      { v: "1x", l: "workshop operations hub" },
     ],
-    url: "erp-command.b2b/case",
+    url: "garage-management.b2b/case",
     preview: {
       accent: "#22D3EE",
-      title: "ERP Command Center — Operations Layer",
+      title: "Garage Management — Job Control Console",
+      screenshot: "/images/EScase1.svg",
       lines: [
-        { label: "Departments connected", value: "8" },
-        { label: "Process visibility", value: "98%" },
-        { label: "Reporting speed", value: "12x" },
+        { label: "Job allocation speed", value: "+46%" },
+        { label: "Active jobs tracked", value: "128" },
+        { label: "Operations hub", value: "1x" },
       ],
-      chart: [22, 30, 38, 46, 55, 63, 70, 78, 84, 89, 94, 98],
+      chart: [24, 30, 37, 44, 52, 59, 66, 73, 80, 86, 91, 97],
     },
   },
   {
     id: "case-02",
     n: "CASE 02",
-    tag: "Workflow Automation · Connected Departments",
-    title: "Automating workflows across finance and operations.",
+    tag: "LMS Platform · Student Learning System",
+    title: "Bringing study material, assignments and progress tracking into one platform.",
     metrics: [
-      { v: "-64%", l: "manual work reduced" },
-      { v: "1x", l: "single source of truth" },
+      { v: "3x", l: "learning visibility" },
+      { v: "100%", l: "central study access" },
     ],
-    url: "workflow-automation.b2b/live",
+    url: "lms-platform.b2b/case",
     preview: {
       accent: "#06B6D4",
-      title: "Workflow Automation — Department Sync",
+      title: "LMS Platform — Learning Console",
+      screenshot: "/images/EScase2.svg",
       lines: [
-        { label: "Automated workflows", value: "42" },
-        { label: "Manual effort reduced", value: "-64%" },
-        { label: "Data conflicts resolved", value: "1 source" },
+        { label: "Learning visibility", value: "3x" },
+        { label: "Central study access", value: "100%" },
+        { label: "Active learners", value: "2,140" },
       ],
-      chart: [62, 58, 53, 49, 43, 38, 32, 27, 22, 18, 14, 10],
+      chart: [20, 26, 33, 40, 48, 55, 62, 69, 76, 83, 89, 95],
     },
   },
   {
     id: "case-03",
     n: "CASE 03",
-    tag: "Enterprise Governance · Data Control",
-    title: "Building governed systems for real-time decisions.",
+    tag: "Digital Marketing Task Platform · Agency Workflow Management",
+    title: "Keeping campaigns, tasks and teams aligned in one workspace.",
     metrics: [
-      { v: "24/7", l: "business visibility" },
-      { v: "100+", l: "integrations supported" },
+      { v: "52%", l: "faster task tracking" },
+      { v: "1x", l: "marketing work console" },
     ],
-    url: "enterprise-governance.b2b/app",
+    url: "marketing-task-platform.b2b/live",
     preview: {
       accent: "#0891B2",
-      title: "Enterprise Governance — Visibility Dashboard",
+      title: "Marketing Task Platform — Agency Console",
+      screenshot: "/images/EScase3.svg",
       lines: [
-        { label: "Integrations connected", value: "100+" },
-        { label: "Live business modules", value: "8" },
-        { label: "Governance alerts", value: "Real-time" },
+        { label: "Task tracking speed", value: "+52%" },
+        { label: "Active campaigns", value: "34" },
+        { label: "Work console", value: "1x" },
       ],
-      chart: [28, 34, 41, 49, 57, 65, 72, 79, 85, 91, 96, 100],
+      chart: [26, 32, 39, 46, 54, 61, 68, 75, 81, 87, 92, 98],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
+    tag: "Employee Management System · Workforce Operations",
+    title: "Managing employees, tasks and performance from one enterprise system.",
+    metrics: [
+      { v: "38%", l: "performance visibility lift" },
+      { v: "24/7", l: "workforce tracking" },
+    ],
+    url: "employee-management.b2b/app",
+    preview: {
+      accent: "#22D3EE",
+      title: "Employee Management — Workforce Console",
+      screenshot: "/images/EScase4.svg",
+      lines: [
+        { label: "Performance visibility", value: "+38%" },
+        { label: "Employees tracked", value: "640" },
+        { label: "Workforce tracking", value: "24/7" },
+      ],
+      chart: [30, 36, 42, 49, 56, 63, 70, 77, 83, 89, 94, 99],
     },
   },
 ];
@@ -176,23 +260,32 @@ export default function ErpPage() {
           <Hero />
           <Capabilities />
           <Work
-            title="Enterprise systems cases."
-            titleLower="Operational clarity."
+            title="Real systems, clear visibility,"
+            titleLower="measurable control."
             cardsData={PROJECTS}
+            imageBorderColor="#22D3EE"
           />
           <Modules
             title={
               <>
-                Eight modules. <span className="text-(--b2b-primary)">One nucleus.</span>
+                Eight modules, <span className="text-(--b2b-primary)">One nucleus.</span>
               </>
             }
-            description='An orbital architecture where every operational module is connected to the ERP core in real-time.'
+            description='Base2Brand designs ERP solutions around how your business actually works — not around generic software menus.'
             modules={LOGISTICS_MODULES}
             scrollOrder={LOGISTICS_MODULE_SCROLL_ORDER}
           />
           <ProcessFlow />
-          <Industries />
-          <CommandCenter />
+          <Industries
+            title="Deployed across growth-heavy and operations-heavy environments."
+            description="Our ERP software and Business automation systems are designed for businesses that have outgrown spreadsheets, disconnected tools and manual reporting."
+            industriesData={ERP_INDUSTRIES}
+          />
+          <CommandCenter
+            eyebrow="Enterprise Operations Hub"
+            title="Every store. Every signal. One mission console."
+            subtitle="We operate your business stack like mission control — storefronts, integrations, deployments, workflows, revenue signals and reporting systems visible in one place. This is what modern ERP software should feel like: live, connected, controlled and easy to act on."
+          />
           <Integrations />
           <CTA />
         </div>

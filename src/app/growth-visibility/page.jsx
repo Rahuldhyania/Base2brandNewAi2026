@@ -185,6 +185,7 @@ const PROJECTS = [
     preview: {
       accent: "#2F6BFF",
       title: "GEO Strategy — AI Visibility Console",
+      screenshot: "/images/GVcase1.svg",
       lines: [
         { label: "AI mentions tracked", value: "14,820" },
         { label: "Visibility lift", value: "+340%" },
@@ -206,6 +207,7 @@ const PROJECTS = [
     preview: {
       accent: "#3B82F6",
       title: "AEO Implementation — Answer Layer",
+      screenshot: "/images/GVcase2.svg",
       lines: [
         { label: "Question clusters mapped", value: "620" },
         { label: "Answer coverage", value: "94%" },
@@ -227,6 +229,29 @@ const PROJECTS = [
     preview: {
       accent: "#2563EB",
       title: "AI Visibility — Brand Authority Dashboard",
+      screenshot: "/images/GVcase3.svg",
+      lines: [
+        { label: "Sources monitored", value: "1,240" },
+        { label: "Verticals optimized", value: "20+" },
+        { label: "Citation gaps closed", value: "76%" },
+      ],
+      chart: [26, 32, 37, 45, 54, 62, 69, 75, 82, 88, 94, 99],
+    },
+  },
+  {
+    id: "case-04",
+    n: "CASE 04",
+    tag: "AI Search Marketing · Recommendation Tracking",
+    title: "Turning AI visibility into measurable growth.",
+    metrics: [
+      { v: "100+", l: "buyer prompts tested" },
+      { v: "4+", l: "AI engines monitored" },
+    ],
+    url: "ai-visibility.b2b/app",
+    preview: {
+      accent: "#2563EB",
+      title: "AI Visibility — Brand Authority Dashboard",
+      screenshot: "/images/GVcase4.svg",
       lines: [
         { label: "Sources monitored", value: "1,240" },
         { label: "Verticals optimized", value: "20+" },
@@ -274,6 +299,7 @@ export default function page() {
         title="Growth visibility cases."
         titleLower="AI search outcomes."
         cardsData={PROJECTS}
+        imageBorderColor="#2563EB"
       />
       <BuildingNow
         highlightTag={"AI SEARCH GROWTH SYSTEMS "}

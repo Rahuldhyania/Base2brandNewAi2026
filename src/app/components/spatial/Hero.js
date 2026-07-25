@@ -6,9 +6,9 @@ import HeroVisual from "./HeroVisual";
 import { SPATIAL } from "@/constants/testIds";
 
 const metrics = [
-  { value: "120+", label: "Enterprise engagements" },
-  { value: "8", label: "Global offices" },
-  { value: "4", label: "Continents" },
+  { value: "120+", label: "Digital Engagements" },
+  { value: "50", label: "Tech Stacks Deployed" },
+  { value: "15", label: "Industries Enabled " },
   { value: "24/7", label: "Operational support" },
 ];
 
@@ -29,7 +29,7 @@ export default function Hero() {
         <motion.div {...fadeIn} className="flex items-center gap-3 mb-3 md:mb-10">
           <span className="w-2 h-2 rounded-full bg-[#FFB800] animate-pulse-amber" />
           <span className="text-[8px] md:text-[11px] tracking-[0.28em] uppercase text-white/60 font-medium">
-            From base — to brand · Spatial Computing Practice
+            FROM IDEAS TO INTELLIGENT SYSTEMS
           </span>
         </motion.div>
 
@@ -42,14 +42,14 @@ export default function Hero() {
               data-testid={SPATIAL.heroHeadline}
               className="font-display font-medium text-white text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight"
             >
-              Engineer{' '}
+              Adapt the technologies{' '}
               <br />
-              experiences{' '}  
+              your business{' '}  
               <br />
               <span className="text-white/85">
-                beyond the{" "}
+                will run on{" "}
                 <span className="relative inline-block">
-                  <span className="text-[#FFB800]">screen.</span>
+                  <span className="text-[#FFB800]">next.</span>
                   <span className="absolute -inset-x-1 bottom-1 h-[6px] bg-[#FFB800]/15 blur-md -z-10" />
                 </span>
               </span>
@@ -62,10 +62,8 @@ export default function Hero() {
               data-testid={SPATIAL.heroSubheadline}
               className="mt-2 md:mt-8 text-base lg:text-lg text-white/65 max-w-[600px] leading-relaxed"
             >
-              Base2Brand designs and engineers enterprise spatial computing
-              experiences across Vision Pro, XR platforms, digital twins,
-              industrial simulations and immersive workflows — built for
-              measurable business outcomes.
+              Base2Brand helps ambitious companies turn emerging tech trends into real business systems — from AI technology solutions and IoT platforms to blockchain, cloud technology, cybersecurity, data centres, metaverse development and automation.
+
             </motion.p>
 
             <motion.div

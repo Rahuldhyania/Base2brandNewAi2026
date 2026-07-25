@@ -14,42 +14,42 @@ const ITEMS = [
     {
         icon: Eye,
         title: "Single Source of Truth",
-        desc: "One unified data layer across every department. Every record, every transaction, every signal — synchronised.",
+        desc: "One unified data layer across every department. Every record, transaction, inventory movement, invoice, approval and customer update is synchronized inside one reliable ERP software environment.",
         tag: "01 · Unification",
         span: "md:col-span-2",
     },
     {
         icon: Activity,
         title: "Real-Time Visibility",
-        desc: "Operational telemetry across inventory, finance and logistics — streamed live, not stitched together monthly.",
+        desc: "Operational visibility across inventory, finance, procurement, sales and logistics. No more stitched-together monthly reports. Your leadership team gets live business signals from the systems that actually run the company.",
         tag: "02 · Telemetry",
         span: "",
     },
     {
         icon: Workflow,
         title: "Workflow Automation",
-        desc: "Rule-based and AI-assisted automations replace manual handoffs across teams.",
+        desc: "Manual handoffs slow down growth. We design Business automation workflows that replace repetitive approvals, follow-ups, task assignments, stock updates, finance checks and reporting cycles.",
         tag: "03 · Automation",
         span: "",
     },
     {
         icon: Network,
         title: "Connected Ecosystem",
-        desc: "ERP core wired into CRM, manufacturing, procurement, analytics & logistics with native bidirectional sync.",
+        desc: "Your ERP should not sit alone. We connect ERP core systems with CRM, ecommerce, manufacturing, procurement, warehouses, analytics, payments, logistics tools and customer platforms through secure integrations.",
         tag: "04 · Connectivity",
         span: "md:col-span-2",
     },
     {
         icon: LineChart,
         title: "Predictive Intelligence",
-        desc: "Forecast demand, cashflow and capacity using cross-module data — not spreadsheets.",
+        desc: "Use cross-module data to forecast demand, cashflow, stock pressure, delivery timelines and capacity. Your ERP becomes more than a database. It becomes a decision layer.",
         tag: "05 · Intelligence",
         span: "md:col-span-2",
     },
     {
         icon: Shield,
         title: "Enterprise Governance",
-        desc: "Role-based access, audit trails and regulatory reporting baked into the operating layer.",
+        desc: "Strong systems need control. We build role-based access, approval chains, audit trails, reporting logic and regulatory visibility into the operating layer from day one.",
         tag: "06 · Trust",
         span: "",
     },
@@ -114,7 +114,7 @@ export const Capabilities = () => {
                                 </span>
                             </>
                         }
-                        description="Six core capabilities that transform fragmented operations into a single, intelligent system."
+                        description="Our ERP solutions are designed to connect data, workflows and decisions across every department, so your team can stop chasing updates and start operating with clarity."
                         testId="capabilities-heading"
                     />
                     <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/35">
