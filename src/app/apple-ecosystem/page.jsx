@@ -14,6 +14,7 @@ import SeoBlock from "@/pages/AppleEcosystem/sections/SeoBlock";
 import Technologies from "@/pages/AppleEcosystem/sections/Technologies";
 import VisionPro from "@/pages/AppleEcosystem/sections/VisionPro";
 import WhyApple from "@/pages/AppleEcosystem/sections/WhyApple";
+import { LandingZone } from "@/sections/LandingZone";
 const PROJECTS = [
   {
     id: "case-01",
@@ -127,6 +128,7 @@ export default function page() {
         <CommandCenter />
         <SeoBlock />
         <FinalCta />
+        <LandingZone />
       </main>
     </Layout>
   );

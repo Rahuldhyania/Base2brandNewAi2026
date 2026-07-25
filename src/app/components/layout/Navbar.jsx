@@ -9,13 +9,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { CurrentLogo } from "./CurrentLogo";
 
-/**
- * Premium mega-dropdown navbar for Base2Brand.
- * Each top-level item opens a panel with grouped links.
- * - Hover (desktop) and click to open.
- * - Smooth-scroll to in-page anchors.
- * - Mobile uses an accordion sheet.
- */
 
 const MENU = [
   {
@@ -289,7 +282,7 @@ export function Navbar() {
                             data-testid={`nav-item-${it.label
                               .toLowerCase()
                               .replace(/[^a-z0-9]+/g, "-")}`}
-                            className="group flex items-start gap-3 rounded-2xl px-4 py-1.5 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
+                            className="group flex items-start gap-3 rounded-2xl px-2 py-1.5 hover:bg-white/[0.04] border border-transparent hover:border-line transition"
                           >
                             <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-orange-brand/70 group-hover:bg-orange-brand transition shrink-0" />
                             <div>

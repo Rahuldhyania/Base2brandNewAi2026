@@ -11,6 +11,7 @@ import ProcessFlow from "@/components/erp/ProcessFlow";
 import StarsBackground from "@/components/erp/StarsBackground";
 import Work from "@/components/portfolio-animation/sections/Work";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import { LandingZone } from "@/sections/LandingZone";
 
 const LOGISTICS_MODULES = [
   {
@@ -289,6 +290,7 @@ export default function ErpPage() {
           />
           <Integrations />
           <CTA />
+          <LandingZone />
         </div>
       </div>
     </Layout>

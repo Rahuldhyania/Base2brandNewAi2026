@@ -42,10 +42,10 @@ export default function FAQ() {
     <section
       id="faq"
       data-testid="faq-section"
-      className="relative py-16 px-5 sm:px-8"
+      className="relative py-10 px-5 sm:px-8"
     >
       <div className="mx-auto max-w-[920px]">
-        <h2 className="text-center text-white font-semibold tracking-tight leading-[1.1] text-[clamp(2rem,5vw,3.5rem)] mb-12 sm:mb-16 lg:mb-20">
+        <h2 className="text-center text-white font-semibold tracking-tight leading-[1.1] text-[clamp(2rem,5vw,3.5rem)] mb-8">
           Frequently
           <br />
           Asked Questions
@@ -61,27 +61,25 @@ export default function FAQ() {
                   type="button"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-start justify-between gap-6 py-5 sm:py-6 text-left group"
+                  className="flex w-full items-start justify-between gap-6 py-4 text-left group"
                 >
                   <span className="text-white font-semibold text-[15px] sm:text-[17px] leading-snug pr-2">
                     {item.question}
                   </span>
                   <Plus
                     aria-hidden
-                    className={`mt-0.5 size-5 sm:size-[22px] shrink-0 text-[#FFB800] transition-transform duration-300 ${
-                      isOpen ? "rotate-45" : "rotate-0"
-                    }`}
+                    className={`mt-0.5 size-5 sm:size-[22px] shrink-0 text-[#FFB800] transition-transform duration-300 ${isOpen ? "rotate-45" : "rotate-0"
+                      }`}
                     strokeWidth={2.25}
                   />
                 </button>
 
                 <div
-                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-5 sm:pb-6 text-white/65 text-[14px] sm:text-[15px] leading-relaxed max-w-[52rem]">
+                    <p className="pb-4 text-white/65 text-[14px] sm:text-[15px] leading-relaxed max-w-[52rem]">
                       {item.answer}
                     </p>
                   </div>

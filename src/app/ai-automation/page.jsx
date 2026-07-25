@@ -12,6 +12,7 @@ import SEOContent from "@/components/ai/SEOContent";
 import FinalCTA from "@/components/ai/FinalCTA";
 import Work from "@/components/portfolio-animation/sections/Work";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import { LandingZone } from "@/sections/LandingZone";
 
 const features = [
   { l: "Architected", d: "Not patched" },
@@ -308,6 +309,7 @@ export default function page() {
       <CommandCenter />
       {/* <EngagementModels /> */}
       <SEOContent />
+      <LandingZone />
       <FinalCTA
         highlightTag={'START AN AI TRANSFORMATION'}
         titleUpper={'Tell us the hardest workflow'}

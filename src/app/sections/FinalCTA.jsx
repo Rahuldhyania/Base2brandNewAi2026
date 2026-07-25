@@ -78,7 +78,7 @@ export function FinalCTA() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1.05fr_1fr] gap-6 items-start">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-1 gap-6 items-start">
 
         <div className="h-full flex items-center">
           <motion.div
@@ -88,13 +88,13 @@ export function FinalCTA() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-xs font-mono-display uppercase tracking-[0.25em] text-mute">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-(--b2b-primary) mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
               Start a transformation
             </div>
             <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
               Tell us where growth is stuck. We’ll show you how to unlock it.
             </h2>
-            <p className="mt-5 text-mute text-base sm:text-lg max-w-xl leading-relaxed">
+            <p className="mt-5 text-mute text-base sm:text-lg leading-relaxed">
               Need better leads, ROAS, conversions, CRO, automation or a digital product? We’ll map the growth system your brand needs next.
             </p>
 
@@ -105,7 +105,7 @@ export function FinalCTA() {
                 "Just a clear, practical plan built around your business goals.",
               ].map((p) => (
                 <li key={p} className="flex items-center gap-3">
-                  <span className="grid place-items-center h-5 w-5 rounded-full bg-orange-brand/15 text-orange-brand">
+                  <span className="grid place-items-center h-5 w-5 rounded-full bg-(--b2b-primary)/15 text-(--b2b-primary)">
                     <CheckCircle2 size={14} />
                   </span>
                   {p}
@@ -126,7 +126,7 @@ export function FinalCTA() {
 
 
 
-        <div>
+        <div className="max-w-[1040px] mx-auto w-full md:pt-10">
           <ProjectContactForm />
         </div>
       </div>

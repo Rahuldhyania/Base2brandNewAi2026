@@ -10,6 +10,7 @@ import TechStack from "@/components/spatial/TechStack";
 import UseCases from "@/components/spatial/UseCases";
 import WaveBackground from "@/components/spatial/WaveBackground";
 import WhySpatial from "@/components/spatial/WhySpatial";
+import { LandingZone } from "@/sections/LandingZone";
 import React from "react";
 
 const EMERGING_TECH_INDUSTRIES = [
@@ -180,6 +181,7 @@ const page = () => {
         <CaseStudies />
         <CommandCenter />
         <CtaSection />
+        <LandingZone />
       </main>
     </div>
   );

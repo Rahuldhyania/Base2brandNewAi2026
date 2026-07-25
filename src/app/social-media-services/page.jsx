@@ -8,6 +8,7 @@ import TechStack from "@/components/ai/TechStack";
 import Framework from "@/components/landing/Framework";
 import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
 import Industries from "@/components/ai/Industries";
+import { LandingZone } from "@/sections/LandingZone";
 
 const SOCIAL_INDUSTRIES = [
   {
@@ -492,6 +493,7 @@ export default function page() {
         industriesData={SOCIAL_INDUSTRIES}
       />
       <CreativeShowcase />
+      <LandingZone />
     </div>
   );
 }
