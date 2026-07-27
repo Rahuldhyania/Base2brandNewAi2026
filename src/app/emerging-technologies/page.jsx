@@ -74,11 +74,11 @@ const PROJECTS = [
       { v: "-40%", l: "onboarding time" },
       { v: "5,400", l: "operators trained" },
     ],
-    url: "xr-training.b2b/case",
+    url: "https://www.base2brand.com/emerging-technologies",
     preview: {
       accent: "#FACC15",
       title: "XR Training — Simulation Console",
-      screenshot: "/images/ETcase1.svg",
+      screenshot: "/images/emer1.png",
       lines: [
         { label: "Operators trained", value: "5,400" },
         { label: "Onboarding time", value: "-40%" },
@@ -96,11 +96,11 @@ const PROJECTS = [
       { v: "2.5x", l: "engagement uplift" },
       { v: "60fps", l: "native interaction flow" },
     ],
-    url: "vision-product.b2b/live",
+    url: "https://www.base2brand.com/emerging-technologies",
     preview: {
       accent: "#EAB308",
       title: "Vision Pro — Product Experience Layer",
-      screenshot: "/images/ETcase2.svg",
+      screenshot: "/images/emer2.png",
       lines: [
         { label: "Live product sessions", value: "12,840" },
         { label: "Engagement uplift", value: "2.5x" },
@@ -118,11 +118,11 @@ const PROJECTS = [
       { v: "-27%", l: "unplanned downtime" },
       { v: "24/7", l: "operations visibility" },
     ],
-    url: "digital-twin.b2b/app",
+    url: "https://www.base2brand.com/emerging-technologies",
     preview: {
       accent: "#CA8A04",
       title: "Digital Twin — Operations Center",
-      screenshot: "/images/ETcase3.svg",
+      screenshot: "/images/emer3.png",
       lines: [
         { label: "Live assets monitored", value: "1,260" },
         { label: "Unplanned downtime", value: "-27%" },
@@ -140,11 +140,11 @@ const PROJECTS = [
       { v: "2.5x", l: "engagement uplift" },
       { v: "60fps", l: "native interaction flow" },
     ],
-    url: "digital-twin.b2b/app",
+    url: "https://www.base2brand.com/emerging-technologies",
     preview: {
       accent: "#CA8A04",
       title: "Digital Twin — Operations Center",
-      screenshot: "/images/ETcase4.svg",
+      screenshot: "/images/emer4.png",
       lines: [
         { label: "Live assets monitored", value: "1,260" },
         { label: "Unplanned downtime", value: "-27%" },

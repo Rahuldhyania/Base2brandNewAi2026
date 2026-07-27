@@ -1,7 +1,8 @@
 'use client';
 import React from "react";
+import Link from "next/link";
 import { CurrentLogo } from "../components/layout/CurrentLogo";
-import { Linkedin, Twitter, Github, Youtube } from "lucide-react";
+import { Linkedin, Twitter, Github, Youtube, Facebook } from "lucide-react";
 
 const OFFICES = [
   { city: "New Delhi", line: "Connaught Place · 110001 · India", role: "Global HQ" },
@@ -15,10 +16,57 @@ const OFFICES = [
 ];
 
 const NAV = [
-  { title: "Capabilities", links: ["Services", "Solutions", "Industries", "Innovation"] },
-  { title: "Company", links: ["About", "Leadership", "Careers", "Press"] },
-  { title: "Resources", links: ["Insights", "Case Studies", "Trust Center", "Whitepapers"] },
-  { title: "Legal", links: ["Privacy", "Terms", "Cookies", "DPDP / GDPR"] },
+  {
+    title: "Services",
+    links: [
+      { label: "AI & Automation", href: "/ai-automation" },
+      { label: "Software Development", href: "/software-development" },
+      { label: "Apple Ecosystem Development", href: "/apple-ecosystem" },
+      { label: "Ecommerce Solutions", href: "/e-commerce-solution" },
+      { label: "Growth & Visibility", href: "/growth-visibility" },
+      { label: "Enterprise Systems", href: "/enterprise-systems" },
+      { label: "Emerging Technologies", href: "/emerging-technologies" },
+      { label: "Social Media Services", href: "/social-media-services" },
+    ],
+  },
+  // {
+  //   title: "Solutions",
+  //   links: [
+  //     { label: "Sales & Marketing", href: "/sales-marketing" },
+  //     { label: "Operations", href: "/operations-excellence" },
+  //     { label: "Enterprise", href: "/enterprise" },
+  //     { label: "Public Sector & NGOs", href: "/public-sector-ngos" },
+  //     { label: "Intelligent Solutions", href: "/intelligent-solutions" },
+  //   ],
+  // },
+  {
+    title: "Work",
+    links: [
+      { label: "Case Studies", href: "/case-study" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Success Stories", href: "/success-stories" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about-us" },
+      { label: "Contact", href: "/contact-us" },
+    ],
+  },
+  {
+    title: "Industries",
+    links: [
+      { label: "Healthcare", href: "/industries/health-care" },
+      { label: "Manufacturing", href: "/industries/manufacturing" },
+      { label: "Logistics", href: "/industries/logistics" },
+      { label: "Education", href: "/industries/education" },
+      { label: "Retail", href: "/industries/retail" },
+      { label: "Automotive", href: "/industries/automotive" },
+      { label: "Government", href: "/industries/government" },
+      { label: "NGOs", href: "/industries/ngo" },
+    ],
+  },
 ];
 
 export function Footer() {
@@ -64,14 +112,17 @@ export function Footer() {
 
             <div className="mt-8 flex items-center gap-2">
               {[
-                { I: Linkedin, label: "LinkedIn" },
-                { I: Twitter, label: "X" },
-                { I: Github, label: "GitHub" },
-                { I: Youtube, label: "YouTube" },
-              ].map(({ I, label }) => (
+                { I: Facebook, label: "Facebook", href: "https://www.facebook.com/TechBase2Brand/" },
+                { I: Linkedin, label: "LinkedIn", href: "https://in.linkedin.com/company/techbase2brand" },
+                // { I: Twitter, label: "X" },
+                // { I: Github, label: "GitHub" },
+                { I: Youtube, label: "YouTube", href: "https://www.youtube.com/channel/UCEHsjR1TFlEfsbcYQPlLW4Q" },
+              ].map(({ I, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   data-testid={`footer-social-${label.toLowerCase()}`}
                   className="grid place-items-center h-10 w-10 rounded-full border border-line text-mute hover:text-orange-brand hover:border-orange-brand/40 transition"
@@ -82,22 +133,22 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {NAV.map((col) => (
               <div key={col.title}>
                 <div className="text-xs font-mono-display uppercase tracking-[0.22em] text-orange-brand">
                   {col.title}
                 </div>
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-3 space-y-1.5">
                   {col.links.map((l) => (
-                    <li key={l}>
-                      <a
-                        href="#"
-                        data-testid={`footer-link-${l.toLowerCase().replace(/\s/g, "-")}`}
-                        className="text-sm text-white/80 hover:text-orange-brand transition"
+                    <li key={l.label}>
+                      <Link
+                        href={l.href}
+                        data-testid={`footer-link-${l.label.toLowerCase().replace(/\s/g, "-")}`}
+                        className="text-xs text-white/80 hover:text-orange-brand transition"
                       >
-                        {l}
-                      </a>
+                        {l.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

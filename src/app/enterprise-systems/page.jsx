@@ -168,7 +168,7 @@ const PROJECTS = [
       { v: "46%", l: "faster job allocation" },
       { v: "1x", l: "workshop operations hub" },
     ],
-    url: "garage-management.b2b/case",
+    url: "https://www.base2brand.com/enterprise-systems",
     preview: {
       accent: "#22D3EE",
       title: "Garage Management — Job Control Console",
@@ -190,7 +190,7 @@ const PROJECTS = [
       { v: "3x", l: "learning visibility" },
       { v: "100%", l: "central study access" },
     ],
-    url: "lms-platform.b2b/case",
+    url: "https://www.base2brand.com/enterprise-systems",
     preview: {
       accent: "#06B6D4",
       title: "LMS Platform — Learning Console",
@@ -212,7 +212,7 @@ const PROJECTS = [
       { v: "52%", l: "faster task tracking" },
       { v: "1x", l: "marketing work console" },
     ],
-    url: "marketing-task-platform.b2b/live",
+    url: "https://www.base2brand.com/enterprise-systems",
     preview: {
       accent: "#0891B2",
       title: "Marketing Task Platform — Agency Console",
@@ -234,7 +234,7 @@ const PROJECTS = [
       { v: "38%", l: "performance visibility lift" },
       { v: "24/7", l: "workforce tracking" },
     ],
-    url: "employee-management.b2b/app",
+    url: "https://www.base2brand.com/enterprise-systems",
     preview: {
       accent: "#22D3EE",
       title: "Employee Management — Workforce Console",

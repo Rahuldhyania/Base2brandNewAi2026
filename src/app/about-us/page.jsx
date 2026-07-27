@@ -31,112 +31,147 @@ const SpaceScene = dynamic(() => import('@/components/about-us/space-scene'), { 
 const TIMELINE = [
   {
     year: '2020',
-    title: 'The Beginning',
-    tagline: 'A tiny glowing singularity.',
+    title: 'Where the Journey Began',
+    tagline: 'One vision. A small team. Limitless ambition.',
     story:
-      'Base2Brand was founded with a vision to create digital experiences that combine creativity with technology.',
+      'Base2Brand was founded by Arti Bhatia with a clear purpose: to help businesses build a stronger and more visible digital presence. We began as a digital marketing company, offering SEO, PPC and social media marketing services. Our focus was simple—understand each brand, reach the right audience and turn marketing efforts into measurable business growth.',
     stats: [
-      { label: 'Founded', value: 'Q2 2020' },
-      { label: 'Team', value: '4 minds' },
-      { label: 'First Clients', value: '6' },
+      { label: 'Founded', value: '2020' },
+      { label: 'Core Services', value: 'SEO · PPC · SMM' },
+      { label: 'Vision', value: 'Digital growth with purpose' },
     ],
-    achievements: ['Company Founded', 'First Website Delivered', 'Brand Identity Established'],
+    achievements: [
+      'Base2Brand founded by Arti Bhatia',
+      'SEO, PPC and SMM services launched',
+      'First client campaigns delivered',
+      'Our performance-driven culture established',
+    ],
     accent: '#7B4DFF',
     icon: Sparkles,
     intensity: 0.08,
   },
   {
     year: '2021',
-    title: 'Finding Our Orbit',
-    tagline: 'First stars begin appearing. A small galaxy forms.',
+    title: 'Expanding into Web Development',
+    tagline: 'Marketing created visibility. Technology created possibility.',
     story:
-      'Expanded services, strengthened our team and delivered projects across multiple industries.',
+      'As our clients grew, they needed more than campaigns. They needed high-performing digital platforms that could support their next stage of growth. In 2021, Base2Brand expanded into website design and development, helping businesses create faster, more engaging and conversion-focused websites using WordPress and other modern technologies.',
     stats: [
-      { label: 'Projects', value: '32' },
-      { label: 'Team', value: '11' },
-      { label: 'Industries', value: '5' },
+      { label: 'New Capability', value: 'Web Development' },
+      { label: 'Platforms', value: 'WordPress and Custom Web' },
+      { label: 'Focus', value: 'Performance · UX · Conversion' },
     ],
-    achievements: ['Shopify Partnership', 'Full-stack Team', 'First Retainer Clients'],
+    achievements: [
+      'Website development division launched',
+      'WordPress development introduced',
+      'Design and development teams expanded',
+      'End-to-end digital projects delivered',
+    ],
     accent: '#42D4FF',
     icon: Orbit,
     intensity: 0.22,
   },
   {
     year: '2022',
-    title: 'Acceleration',
-    tagline: 'Light trails. Warp speed. Stars move faster.',
+    title: 'Entering the Shopify Ecosystem',
+    tagline: 'From building websites to building complete commerce experiences.',
     story:
-      'Rapid growth in web development, Shopify and digital marketing. More clients. Larger team.',
+      'In 2022, we entered the Shopify ecosystem and began creating scalable online stores, customised storefronts and purpose-built Shopify applications. This chapter strengthened our expertise in ecommerce and led Base2Brand to become a Shopify Plus Partner, with the company also listed in the Shopify Partner Directory.',
     stats: [
-      { label: 'Projects', value: '84' },
-      { label: 'Team', value: '24' },
-      { label: 'Shopify Stores', value: '38' },
+      { label: 'Specialisation', value: 'Shopify Commerce' },
+      { label: 'Capabilities', value: 'Stores · Apps · Integrations' },
+      { label: 'Approach', value: 'Build · Optimise · Scale' },
     ],
-    achievements: ['Digital Marketing Wing', 'Performance Culture', 'Global Clients'],
+    achievements: [
+      'Shopify store development launched',
+      'Custom Shopify app development introduced',
+      'Became a Shopify Plus Partner',
+      'Listed in the Shopify Partner Directory',
+    ],
     accent: '#C084FC',
     icon: Rocket,
     intensity: 0.4,
   },
   {
     year: '2023',
-    title: 'Crossing New Frontiers',
-    tagline: 'Constellations connect. Network expands.',
+    title: 'Moving into Software Development',
+    tagline: 'More complex challenges demanded more powerful technology.',
     story:
-      'AI adoption. Automation. Enterprise solutions. New technologies.',
+      'By 2023, our work had expanded beyond websites and ecommerce. Businesses needed platforms designed around their unique teams, processes and growth plans. We launched our software development practice to build custom web applications, internal platforms, APIs and enterprise-grade digital products that solve real operational challenges.',
     stats: [
-      { label: 'AI Projects', value: '17' },
-      { label: 'Team', value: '38' },
-      { label: 'Automations', value: '60+' },
+      { label: 'New Practice', value: 'Software Development' },
+      { label: 'Solutions', value: 'Web Apps · APIs · Platforms' },
+      { label: 'Purpose', value: 'Technology built around the business' },
     ],
-    achievements: ['AI Practice Launched', 'Enterprise Deals', 'Automation Suite'],
+    achievements: [
+      'Software development practice launched',
+      'Custom business applications delivered',
+      'API and third-party integrations expanded',
+      'Enterprise development capabilities strengthened',
+    ],
     accent: '#7B4DFF',
     icon: Network,
     intensity: 0.55,
   },
   {
     year: '2024',
-    title: 'Breaking Gravity',
-    tagline: 'Large glowing nebula. Brighter universe.',
+    title: 'Connecting Enterprise Operations',
+    tagline: 'The next step was not another platform. It was a connected ecosystem.',
     story:
-      'International clients. Complex digital platforms. Shopify Plus. AI integrations. ERP solutions.',
+      'In 2024, Base2Brand advanced into enterprise technology, including IFS solutions, operational platforms and complex system integrations. We began helping organisations connect teams, workflows and business data through technology designed to improve visibility, efficiency and decision-making.',
     stats: [
-      { label: 'Countries', value: '14' },
-      { label: 'Team', value: '56' },
-      { label: 'Shopify Plus', value: '9' },
+      { label: 'Enterprise Focus', value: 'IFS Solutions' },
+      { label: 'Capabilities', value: 'Workflows · Data · Integrations' },
+      { label: 'Outcome', value: 'Connected business operations' },
     ],
-    achievements: ['Shopify Plus Partner', 'ERP Practice', 'AI + Web Integrations'],
+    achievements: [
+      'IFS-focused solutions introduced',
+      'Enterprise workflows developed',
+      'Complex system integrations delivered',
+      'Operational technology capabilities expanded',
+    ],
     accent: '#42D4FF',
     icon: Zap,
     intensity: 0.7,
   },
   {
     year: '2025',
-    title: 'Entering Hypergrowth',
-    tagline: 'Massive galaxy. Strong light. Energy waves.',
+    title: 'Building Intelligent and Connected Solutions',
+    tagline: 'Automation became smarter. Systems became more connected.',
     story:
-      'Expanded globally. More enterprise partnerships. Advanced AI. Automation. Business transformation.',
+      'In 2025, we entered a new era of innovation through AI automation, IoT systems and intelligent system integrations. Our teams began developing solutions that automate repetitive work, connect physical and digital environments, improve access to real-time information and support faster business decisions.',
     stats: [
-      { label: 'Countries', value: '22' },
-      { label: 'Team', value: '82' },
-      { label: 'Enterprise', value: '30+' },
+      { label: 'Innovation Areas', value: 'AI · Automation · IoT' },
+      { label: 'System Focus', value: 'Connected Intelligence' },
+      { label: 'Business Impact', value: 'Faster · Smarter · Scalable' },
     ],
-    achievements: ['Global Delivery Centers', 'Advanced AI Suite', 'Product Studio'],
+    achievements: [
+      'AI automation services launched',
+      'IoT system development introduced',
+      'Intelligent integrations implemented',
+      'Automated business workflows expanded',
+    ],
     accent: '#C084FC',
     icon: Globe2,
     intensity: 0.85,
   },
   {
     year: '2026',
-    title: 'The Future Is Still Being Written',
-    tagline: 'A glowing portal opens. Future fades into infinity.',
+    title: 'A Full-Service Growth and Technology Company',
+    tagline: 'Six years of evolution have brought every capability together.',
     story:
-      'The journey continues. Building tomorrow’s technology today.',
+      'Today, Base2Brand is a full-service performance marketing and technology company. We combine marketing strategy, creative execution and software engineering to help businesses attract customers, improve operations and scale confidently. Our capabilities now span performance marketing, custom software development, CRM development, ERP solutions, ecommerce, AI automation and enterprise system integration.',
     stats: [
-      { label: 'Vision', value: 'Boundless' },
-      { label: 'Team', value: '∞' },
-      { label: 'Impact', value: 'Global' },
+      { label: 'Growth', value: 'Performance Marketing' },
+      { label: 'Technology', value: 'Software · CRM · ERP' },
+      { label: 'Future', value: 'Intelligent and connected businesses' },
     ],
-    achievements: ['Next-Gen AI Platforms', 'Autonomous Systems', 'The Next Chapter'],
+    achievements: [
+      'Full performance marketing capabilities',
+      'Custom CRM and ERP development',
+      'AI-powered business automation',
+      'Integrated marketing and technology delivery',
+    ],
     accent: '#7B4DFF',
     icon: InfinityIcon,
     intensity: 1.0,
@@ -236,7 +271,7 @@ function Hero() {
             transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
             className="relative z-10"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md px-4 py-1.5 mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md px-4 py-1.5 mb-10 mt-20 md:mt-24">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#42D4FF] opacity-75" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#42D4FF]" />
@@ -251,7 +286,7 @@ function Hero() {
               <span className="italic font-light">Build A Company.</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-[#7B4DFF] via-[#C084FC] to-[#42D4FF] bg-clip-text text-transparent">
-                We Bent Time.
+                We Built What Businesses Need Next.
               </span>
             </h1>
 
@@ -261,8 +296,8 @@ function Hero() {
               transition={{ delay: 1.2, duration: 1.6 }}
               className="mt-10 text-white/60 max-w-2xl mx-auto text-[15px] md:text-[17px] leading-relaxed font-light"
             >
-              Every milestone shaped who we are today. Scroll through six years of
-              innovation, learning and transformation.
+              From performance marketing to intelligent business systems, every chapter of Base2Brand has been shaped to solve bigger challenges.
+
             </motion.p>
 
             <motion.div
@@ -464,12 +499,42 @@ function YearSection({ item, index, total }) {
 }
 
 const DEPARTMENTS = [
-  { name: 'Development', size: 32, points: [[0.2, 0.4], [0.35, 0.28], [0.5, 0.45], [0.62, 0.32], [0.78, 0.5]] },
-  { name: 'Marketing', size: 18, points: [[0.15, 0.5], [0.3, 0.35], [0.5, 0.55], [0.7, 0.4], [0.85, 0.6]] },
-  { name: 'AI', size: 14, points: [[0.25, 0.45], [0.45, 0.3], [0.55, 0.55], [0.72, 0.35], [0.5, 0.6]] },
-  { name: 'Design', size: 12, points: [[0.2, 0.55], [0.35, 0.4], [0.55, 0.5], [0.7, 0.35]] },
-  { name: 'Sales', size: 10, points: [[0.2, 0.4], [0.4, 0.55], [0.6, 0.35], [0.8, 0.5]] },
-  { name: 'Operations', size: 8, points: [[0.25, 0.5], [0.5, 0.35], [0.75, 0.55]] },
+  {
+    name: 'Development',
+    desc: 'Our developers transform complex requirements into secure, scalable and user-focused digital platforms.',
+    size: 32,
+    points: [[0.2, 0.4], [0.35, 0.28], [0.5, 0.45], [0.62, 0.32], [0.78, 0.5]],
+  },
+  {
+    name: 'Performance Marketing',
+    desc: 'Our marketing team combines strategy, data, creativity and continuous optimisation to drive measurable growth.',
+    size: 18,
+    points: [[0.15, 0.5], [0.3, 0.35], [0.5, 0.55], [0.7, 0.4], [0.85, 0.6]],
+  },
+  {
+    name: 'Artificial Intelligence',
+    desc: 'Our AI specialists develop intelligent workflows, automation systems and practical AI solutions for modern businesses.',
+    size: 14,
+    points: [[0.25, 0.45], [0.45, 0.3], [0.55, 0.55], [0.72, 0.35], [0.5, 0.6]],
+  },
+  {
+    name: 'Design',
+    desc: 'Our designers create distinctive digital experiences that bring together brand identity, usability and conversion.',
+    size: 12,
+    points: [[0.2, 0.55], [0.35, 0.4], [0.55, 0.5], [0.7, 0.35]],
+  },
+  {
+    name: 'Sales and Strategy',
+    desc: 'Our strategy team identifies opportunities, understands business challenges and connects clients with the right solutions.',
+    size: 10,
+    points: [[0.2, 0.4], [0.4, 0.55], [0.6, 0.35], [0.8, 0.5]],
+  },
+  {
+    name: 'Operations',
+    desc: 'Our operations team keeps projects organised, communication clear and delivery aligned with the highest standards.',
+    size: 8,
+    points: [[0.25, 0.5], [0.5, 0.35], [0.75, 0.55]],
+  },
 ]
 
 function Constellation({ dept, index }) {
@@ -484,17 +549,19 @@ function Constellation({ dept, index }) {
       transition={{ duration: 0.9, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="glass-panel rounded-2xl p-6 group cursor-pointer relative overflow-hidden"
+      className="glass-panel rounded-2xl p-4 group cursor-pointer relative overflow-hidden"
     >
-      <div className="flex items-baseline justify-between mb-4">
-        <h4 className="font-display text-xl font-medium">{dept.name}</h4>
-        <span className="text-[11px] tracking-[0.15em] uppercase text-white/40">
+      <div className="flex items-baseline justify-between mb-3 gap-3">
+        <h4 className="font-display text-2xl md:text-[26px] font-medium">{dept.name}</h4>
+        <span className="shrink-0 text-xs tracking-[0.15em] uppercase text-white/40">
           {dept.size} humans
         </span>
       </div>
 
+      <p className="text-white/70 text-[15px] md:text-base leading-relaxed mb-3">{dept.desc}</p>
+
       <div className="relative">
-        <svg width={w} height="auto" viewBox={`0 0 ${w} ${h}`} className="w-full h-25 md:h-55">
+        <svg width={w} height="auto" viewBox={`0 0 ${w} ${h}`} className="w-full h-16 md:h-36">
           <defs>
             <linearGradient id={`line-${dept.name}`} x1="0" x2="1" y1="0" y2="1">
               <stop offset="0%" stopColor="#7B4DFF" stopOpacity="0.8" />
@@ -567,10 +634,10 @@ function TeamSection() {
             Our Constellations
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-light tracking-tight mb-5">
-            Every team is <span className="italic">a constellation.</span>
+            Every team is <span className="italic">Part of One System.</span>
           </h2>
           <p className="text-white/60 max-w-xl mx-auto font-light">
-            Individuals connected by shared gravity. Together they form the shape of Base2Brand.
+            Different disciplines. Shared standards. One connected team working toward meaningful business outcomes.
           </p>
         </motion.div>
 
@@ -585,11 +652,11 @@ function TeamSection() {
 }
 
 const VALUES = [
-  { name: 'Innovation', color: '#7B4DFF', desc: 'Pushing boundaries every day.' },
-  { name: 'Trust', color: '#42D4FF', desc: 'Built on transparency and reliability.' },
-  { name: 'Transparency', color: '#C084FC', desc: 'Open books. Open minds.' },
-  { name: 'Quality', color: '#ffffff', desc: 'Craftsmanship in every pixel and line.' },
-  { name: 'Growth', color: '#7B4DFF', desc: 'For clients, for team, for the future.' },
+  { name: 'Innovation', color: '#7B4DFF', desc: 'We continuously explore better ways to solve problems, improve experiences and create lasting business value.' },
+  { name: 'Trust', color: '#42D4FF', desc: 'We communicate honestly, take responsibility and build partnerships grounded in transparency.' },
+  { name: 'Transparency', color: '#C084FC', desc: 'We keep expectations, decisions and project progress clear from the beginning to the final delivery.' },
+  { name: 'Quality', color: '#ffffff', desc: 'We hold every strategy, design, campaign and line of code to a consistently high standard.' },
+  { name: 'Growth', color: '#7B4DFF', desc: 'We believe progress should be shared—across our clients, our company and every person within our team.' },
 ]
 
 function OrbitValues() {
@@ -629,11 +696,11 @@ function OrbitValues() {
           </div>
 
           <h2 className="font-display text-3xl md:text-6xl font-light tracking-tight">
-            Planets in <span className="italic">our system.</span>
+           The Principles at the Centre of  <span className="italic">Everything We Build.</span>
           </h2>
         </motion.div>
 
-        <div className="relative h-[430px] sm:h-[500px] md:h-[620px] mx-auto w-full max-w-[340px] sm:max-w-[480px] md:max-w-[720px]">
+        <div className="relative h-[490px] sm:h-[570px] md:h-[700px] mx-auto w-full max-w-[340px] sm:max-w-[480px] md:max-w-[720px]">
           {/* Central sun */}
           <div className="absolute left-1/2 top-[45%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7B4DFF] via-[#C084FC] to-[#42D4FF] blur-2xl opacity-70" />
@@ -659,7 +726,7 @@ function OrbitValues() {
             return (
               <div
                 key={v.name}
-                className="absolute left-1/2 top-[45%] md:top-1/2 rounded-full border border-white/25 md:border-white/40"
+                className="absolute left-1/2 top-[45%] md:top-1/2 rounded-full border border-white/25 md:border-white/40 pointer-events-none"
                 style={{
                   width: orbitRadius * 2,
                   height: orbitRadius * 2,
@@ -679,7 +746,7 @@ function OrbitValues() {
                   <motion.div
                     onMouseEnter={() => setActive(i)}
                     onClick={() => setActive(i)}
-                    className="absolute cursor-pointer group"
+                    className="absolute cursor-pointer group pointer-events-auto"
                     style={{
                       left: '100%',
                       top: '50%',
@@ -725,7 +792,7 @@ function OrbitValues() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="absolute bottom-2 md:bottom-[-15%] left-1/2 -translate-x-1/2 text-center max-w-[280px] md:max-w-md px-3"
+              className="absolute bottom-0 md:bottom-[-22%] left-1/2 -translate-x-1/2 text-center max-w-[280px] md:max-w-md px-3"
             >
               <div
                 className="font-display text-2xl md:text-3xl font-light"
@@ -787,9 +854,10 @@ function FounderMessage() {
           </div>
 
           <p className="font-display text-2xl md:text-3xl lg:text-[36px] leading-[1.35] font-light text-white/95 italic">
-            &ldquo;We didn’t start Base2Brand to build websites. We started it to bend
-            reality — to make ideas feel inevitable, brands feel alive, and technology feel
-            like magic. Six years in, we’re still just getting started.&rdquo;
+            &ldquo;Base2Brand began with a belief that businesses should not have to choose between creative thinking, effective marketing and powerful technology.
+Over the past six years, we have evolved from a digital marketing team into a multidisciplinary growth and technology company. Every new capability was introduced in response to a real business challenge faced by our clients.
+We are proud of how far we have come, but we are even more excited about what we can build next.
+&rdquo;
           </p>
 
           <div className="mt-8 flex items-center gap-4">
@@ -797,8 +865,12 @@ function FounderMessage() {
               B
             </div>
             <div>
-              <div className="font-display text-[15px] font-medium">Founder &amp; CEO</div>
-              <div className="text-[12px] text-white/50">Base2Brand · Broadcasting since 2020</div>
+              {/* <div className="font-display text-[15px] font-medium">Founder &amp; CEO</div> */}
+               {/* <div className="font-display text-[15px] font-medium">Founder &amp; CEO</div> */}
+
+               <div className="font-display text-[15px] font-medium">Arti Bhatia</div>
+                <div className="text-[12px] text-white/50">Founder, Base2Brand</div>
+              <div className="text-[12px] text-white/50">Building and evolving since 2020</div>
             </div>
           </div>
         </motion.div>
@@ -842,7 +914,7 @@ function Ending() {
           className="font-display text-[42px] sm:text-[64px] md:text-[86px] lg:text-[100px] leading-[0.95] font-light tracking-[-0.02em] hero-gradient-text"
         >
           The best part of our story <br />
-          <span className="italic font-light">hasn’t happened yet.</span>
+          <span className="italic font-light">Is What We Build Next.</span>
         </motion.h2>
 
         <motion.p
@@ -852,7 +924,8 @@ function Ending() {
           transition={{ duration: 1.2, delay: 0.3 }}
           className="mt-4 md:mt-8 text-white/60 max-w-xl mx-auto text-[15px] md:text-[17px] leading-relaxed font-light"
         >
-          Every great chapter needs a co-author. Let&rsquo;s bend time together.
+          {/* Every great chapter needs a co-author. Let&rsquo;s bend time together. */}
+          Six years have shaped our expertise. The next chapter will be defined by the businesses, technologies and transformations we create together.
         </motion.p>
 
         <motion.div

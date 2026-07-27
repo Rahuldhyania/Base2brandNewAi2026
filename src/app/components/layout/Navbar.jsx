@@ -72,13 +72,7 @@ const MENU = [
   },
   {
     label: "About",
-    href: "#footprint",
-    items: [
-      { label: "Company", href: "#footprint" },
-      { label: "Leadership", href: "#footprint" },
-      { label: "Careers", href: "#footprint" },
-      { label: "Partners", href: "#trust" },
-    ],
+    href: "/about-us",
   },
 ];
 
@@ -196,35 +190,47 @@ export function Navbar() {
               className="flex items-center gap-1"
               aria-label="Primary"
             >
-              {MENU.map((m) => (
-                <button
-                  key={m.label}
-                  type="button"
-                  onMouseEnter={() => openMenu(m.label)}
-                  onFocus={() => openMenu(m.label)}
-                  onClick={() =>
-                    setOpenKey(openKey === m.label ? null : m.label)
-                  }
-                  data-testid={`nav-trigger-${m.label.toLowerCase()}`}
-                  className={cn(
-                    "group inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-full transition-colors duration-200",
-                    openKey === m.label
-                      ? "text-white bg-white/5"
-                      : "text-mute hover:text-white hover:bg-white/5"
-                  )}
-                  aria-expanded={openKey === m.label}
-                  aria-haspopup="true"
-                >
-                  {m.label}
-                  <ChevronDown
-                    size={14}
+              {MENU.map((m) =>
+                m.items && m.items.length > 0 ? (
+                  <button
+                    key={m.label}
+                    type="button"
+                    onMouseEnter={() => openMenu(m.label)}
+                    onFocus={() => openMenu(m.label)}
+                    onClick={() =>
+                      setOpenKey(openKey === m.label ? null : m.label)
+                    }
+                    data-testid={`nav-trigger-${m.label.toLowerCase()}`}
                     className={cn(
-                      "transition-transform duration-300",
-                      openKey === m.label ? "rotate-180 text-orange-brand" : ""
+                      "group inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-full transition-colors duration-200",
+                      openKey === m.label
+                        ? "text-white bg-white/5"
+                        : "text-mute hover:text-white hover:bg-white/5"
                     )}
-                  />
-                </button>
-              ))}
+                    aria-expanded={openKey === m.label}
+                    aria-haspopup="true"
+                  >
+                    {m.label}
+                    <ChevronDown
+                      size={14}
+                      className={cn(
+                        "transition-transform duration-300",
+                        openKey === m.label ? "rotate-180 text-orange-brand" : ""
+                      )}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    key={m.label}
+                    href={m.href}
+                    onClick={(e) => handleAnchor(e, m.href)}
+                    data-testid={`nav-trigger-${m.label.toLowerCase()}`}
+                    className="group inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-full transition-colors duration-200 text-mute hover:text-white hover:bg-white/5"
+                  >
+                    {m.label}
+                  </Link>
+                )
+              )}
             </nav>
           </div>
 
@@ -341,6 +347,19 @@ export function Navbar() {
             >
               {MENU.map((m) => {
                 const expanded = mobileExpanded === m.label;
+                if (!m.items || m.items.length === 0) {
+                  return (
+                    <Link
+                      key={m.label}
+                      href={m.href}
+                      onClick={(e) => handleAnchor(e, m.href)}
+                      data-testid={`nav-mobile-trigger-${m.label.toLowerCase()}`}
+                      className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/90 hover:bg-white/5 rounded-2xl transition"
+                    >
+                      <span>{m.label}</span>
+                    </Link>
+                  );
+                }
                 return (
                   <div key={m.label} className="rounded-2xl">
                     <button
