@@ -182,11 +182,11 @@ const PROJECTS = [
       { v: "+340%", l: "AI visibility lift" },
       { v: "8.2x", l: "recommendation growth" },
     ],
-    url: "geo-strategy.b2b/case",
+    url: "https://www.base2brand.com/growth-visibility",
     preview: {
       accent: "#2F6BFF",
       title: "GEO Strategy — AI Visibility Console",
-      screenshot: "/images/GVcase1.svg",
+      screenshot: "/images/growth1.png",
       lines: [
         { label: "AI mentions tracked", value: "14,820" },
         { label: "Visibility lift", value: "+340%" },
@@ -204,11 +204,11 @@ const PROJECTS = [
       { v: "94%", l: "answer coverage" },
       { v: "10x", l: "topic authority growth" },
     ],
-    url: "answer-engine.b2b/live",
+    url: "https://www.base2brand.com/growth-visibility",
     preview: {
       accent: "#3B82F6",
       title: "AEO Implementation — Answer Layer",
-      screenshot: "/images/GVcase2.svg",
+      screenshot: "/images/growth2.png",
       lines: [
         { label: "Question clusters mapped", value: "620" },
         { label: "Answer coverage", value: "94%" },
@@ -226,11 +226,11 @@ const PROJECTS = [
       { v: "20+", l: "verticals optimized" },
       { v: "24/7", l: "visibility monitoring" },
     ],
-    url: "ai-visibility.b2b/app",
+    url: "https://www.base2brand.com/growth-visibility",
     preview: {
       accent: "#2563EB",
       title: "AI Visibility — Brand Authority Dashboard",
-      screenshot: "/images/GVcase3.svg",
+      screenshot: "/images/growth3.png",
       lines: [
         { label: "Sources monitored", value: "1,240" },
         { label: "Verticals optimized", value: "20+" },
@@ -248,11 +248,11 @@ const PROJECTS = [
       { v: "100+", l: "buyer prompts tested" },
       { v: "4+", l: "AI engines monitored" },
     ],
-    url: "ai-visibility.b2b/app",
+    url: "https://www.base2brand.com/growth-visibility",
     preview: {
       accent: "#2563EB",
       title: "AI Visibility — Brand Authority Dashboard",
-      screenshot: "/images/GVcase4.svg",
+      screenshot: "/images/growth4.png",
       lines: [
         { label: "Sources monitored", value: "1,240" },
         { label: "Verticals optimized", value: "20+" },

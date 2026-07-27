@@ -51,7 +51,7 @@ const PROJECTS = [
       { v: "61%", l: "faster response" },
       { v: "+39%", l: "qualified leads" },
     ],
-    url: "crm-layer.b2b/case",
+    url: "https://www.base2brand.com/emerging-technologies",
     preview: {
       accent: "#FF3B30",
       title: "CRM Layer — Sales Console",
@@ -73,7 +73,7 @@ const PROJECTS = [
       { v: "-45%", l: "onboarding time" },
       { v: "Daily", l: "release frequency" },
     ],
-    url: "saas-platform.b2b/case",
+    url: "https://www.base2brand.com/software-development",
     preview: {
       accent: "#FF4A3D",
       title: "SaaS Platform — Product Console",
@@ -95,7 +95,7 @@ const PROJECTS = [
       { v: "93%", l: "platform adoption" },
       { v: "42", l: "business workflows" },
     ],
-    url: "mobile-experience.b2b/app",
+    url: "https://www.base2brand.com/software-development",
     preview: {
       accent: "#FF4A3D",
       title: "Mobile Experience — Adoption Console",
@@ -117,7 +117,7 @@ const PROJECTS = [
       { v: "12x", l: "faster reporting" },
       { v: "98%", l: "process visibility" },
     ],
-    url: "business-systems.b2b/live",
+    url: "https://www.base2brand.com/software-development",
     preview: {
       accent: "#FF3B30",
       title: "Business Systems — Operations Console",
@@ -130,28 +130,28 @@ const PROJECTS = [
       chart: [24, 29, 35, 40, 46, 53, 60, 67, 74, 81, 88, 95],
     },
   },
-  {
-    id: "case-04",
-    n: "CASE 04",
-    tag: "App Development · Mobile Experience",
-    title: "Launching a mobile app built for adoption and repeat use.",
-    metrics: [
-      { v: "93%", l: "platform adoption" },
-      { v: "42", l: "business workflows" },
-    ],
-    url: "mobile-experience.b2b/app",
-    preview: {
-      accent: "#FF4A3D",
-      title: "Mobile Experience — Adoption Console",
-      screenshot: "/images/crm4.png",
-      lines: [
-        { label: "Platform adoption", value: "93%" },
-        { label: "Business workflows", value: "42" },
-        { label: "Daily active users", value: "8,340" },
-      ],
-      chart: [22, 27, 33, 41, 49, 57, 63, 71, 76, 82, 88, 93],
-    },
-  },
+  // {
+  //   id: "case-04",
+  //   n: "CASE 04",
+  //   tag: "App Development · Mobile Experience",
+  //   title: "Launching a mobile app built for adoption and repeat use.",
+  //   metrics: [
+  //     { v: "93%", l: "platform adoption" },
+  //     { v: "42", l: "business workflows" },
+  //   ],
+  //   url: "mobile-experience.b2b/app",
+  //   preview: {
+  //     accent: "#FF4A3D",
+  //     title: "Mobile Experience — Adoption Console",
+  //     screenshot: "/images/crm4.png",
+  //     lines: [
+  //       { label: "Platform adoption", value: "93%" },
+  //       { label: "Business workflows", value: "42" },
+  //       { label: "Daily active users", value: "8,340" },
+  //     ],
+  //     chart: [22, 27, 33, 41, 49, 57, 63, 71, 76, 82, 88, 93],
+  //   },
+  // },
 ];
 
 const SOFTWARE_INDUSTRIES = [

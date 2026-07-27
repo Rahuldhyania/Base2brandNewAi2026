@@ -25,11 +25,11 @@ const PROJECTS = [
       { v: "60fps", l: "native interaction flow" },
       { v: "<200ms", l: "response latency" },
     ],
-    url: "native-ios.b2b/case",
+    url: "https://www.base2brand.com/apple-ecosystem",
     preview: {
       accent: "#42A5FF",
       title: "Native iOS Platform — Workflow Console",
-      screenshot: "/images/AEcase1.svg",
+      screenshot: "/images/apple1.png",
       lines: [
         { label: "Active app sessions", value: "18,420" },
         { label: "Interaction performance", value: "60fps" },
@@ -47,11 +47,11 @@ const PROJECTS = [
       { v: "4.7★", l: "average app rating" },
       { v: "30d", l: "release-to-review cycle" },
     ],
-    url: "vision-pro.b2b/live",
+    url: "https://www.base2brand.com/apple-ecosystem",
     preview: {
       accent: "#00B8FF",
       title: "Vision Pro — Spatial Experience Layer",
-      screenshot: "/images/AEcase2.svg",
+      screenshot: "/images/apple2.png",
       lines: [
         { label: "Spatial sessions", value: "6,814" },
         { label: "Average rating", value: "4.7★" },
@@ -69,11 +69,11 @@ const PROJECTS = [
       { v: "99.95%", l: "uptime" },
       { v: "SOC 2", l: "security-ready build" },
     ],
-    url: "apple-enterprise.b2b/app",
+    url: "https://www.base2brand.com/apple-ecosystem",
     preview: {
       accent: "#1E90FF",
       title: "Apple Enterprise — Deployment Dashboard",
-      screenshot: "/images/AEcase3.svg",
+      screenshot: "/images/apple3.png",
       lines: [
         { label: "Managed devices", value: "12,600" },
         { label: "Platform uptime", value: "99.95%" },
@@ -91,11 +91,11 @@ const PROJECTS = [
       { v: "95%", l: "Decision accuracy" },
       { v: "<150ms", l: "Average execution time" },
     ],
-    url: "apple-enterprise.b2b/app",
+    url: "https://www.base2brand.com/apple-ecosystem",
     preview: {
       accent: "#1E90FF",
       title: "Apple Enterprise — Deployment Dashboard",
-      screenshot: "/images/AEcase4.svg",
+      screenshot: "/images/apple4.png",
       lines: [
         { label: "Managed devices", value: "12,600" },
         { label: "Platform uptime", value: "99.95%" },

@@ -180,7 +180,7 @@ const PROJECTS = [
       { v: "24/7", l: "autonomous operations" },
       { v: "120+", l: "enterprise workflows automated" },
     ],
-    url: "ai-workforce.b2b/case",
+    url: "https://www.base2brand.com/ai-automation",
     preview: {
       accent: "#7B4DFF",
       title: "AI Workforce — Operations Console",
@@ -202,7 +202,7 @@ const PROJECTS = [
       { v: "61%", l: "faster response cycles" },
       { v: "38%", l: "efficiency lift" },
     ],
-    url: "agent-ops.b2b/live",
+    url: "https://www.base2brand.com/ai-automation",
     preview: {
       accent: "#C084FC",
       title: "Multi-Agent Operations — Workflow Map",
@@ -224,7 +224,7 @@ const PROJECTS = [
       { v: "250+", l: "AI deployments supported" },
       { v: "15+", l: "industries served" },
     ],
-    url: "enterprise-copilot.b2b/app",
+    url: "https://www.base2brand.com/ai-automation",
     preview: {
       accent: "#42D4FF",
       title: "Enterprise Copilot — Knowledge Layer",
@@ -246,7 +246,7 @@ const PROJECTS = [
       { v: "42%", l: "Faster decision cycles" },
       { v: "3.6x", l: "Improvement in workflow visibility" },
     ],
-    url: "enterprise-copilot.b2b/app",
+    url: "https://www.base2brand.com/ai-automation",
     preview: {
       accent: "#42D4FF",
       title: "Enterprise Copilot — Knowledge Layer",
