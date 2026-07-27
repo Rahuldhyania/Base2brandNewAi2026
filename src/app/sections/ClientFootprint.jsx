@@ -10,11 +10,11 @@ import { GlobeHero } from "../components/visual/GlobeHero";
  */
 
 const TOP_REGIONS = [
-  { region: "United States", note: "Performance, SaaS & ecommerce projects", count: "200+ Projects" },
-  { region: "United Kingdom", note: " Retail, healthcare & digital platforms", count: "60+ Projects" },
-  { region: "Australia", note: "Marketing, Shopify & automation systems", count: "30+ Projects" },
-  { region: "Canada", note: "Lead generation & enterprise solutions", count: "20+ Projects" },
-  { region: "India", note: "HQ + delivery teams", count: "20+ Brands" },
+  { region: "United States", note: "Performance, SaaS & ecommerce projects", count: "150+ Projects" },
+  { region: "United Kingdom", note: " Retail, healthcare & digital platforms", count: "90+ Projects" },
+  { region: "Australia", note: "Marketing, Shopify & automation systems", count: "65+ Projects" },
+  { region: "India", note: "HQ + delivery teams", count: "60+ Brands" },
+  { region: "Canada", note: "Lead generation & enterprise solutions", count: "30+ Projects" },
 ];
 
 export function ClientFootprint() {

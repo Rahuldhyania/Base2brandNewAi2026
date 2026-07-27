@@ -44,7 +44,7 @@ export default function FAQ() {
       data-testid="faq-section"
       className="relative py-10 px-5 sm:px-8"
     >
-      <div className="mx-auto max-w-[920px]">
+      <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-white font-semibold tracking-tight leading-[1.1] text-[clamp(2rem,5vw,3.5rem)] mb-8">
           Frequently
           <br />
@@ -68,7 +68,7 @@ export default function FAQ() {
                   </span>
                   <Plus
                     aria-hidden
-                    className={`mt-0.5 size-5 sm:size-[22px] shrink-0 text-[#FFB800] transition-transform duration-300 ${isOpen ? "rotate-45" : "rotate-0"
+                    className={`mt-0.5 size-5 sm:size-[22px] shrink-0 text-(--b2b-primary) transition-transform duration-300 ${isOpen ? "rotate-45" : "rotate-0"
                       }`}
                     strokeWidth={2.25}
                   />

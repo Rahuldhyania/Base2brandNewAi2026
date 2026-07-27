@@ -1,150 +1,114 @@
 'use client';
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { toast } from "sonner";
-import { Send, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Clock, MessageSquare, Rocket } from "lucide-react";
 import ProjectContactForm from "@/components/ui/ProjectContactForm";
-import Image from "next/image";
 
-const INITIAL = { name: "", email: "", company: "", message: "" };
+const STEPS = [
+  { icon: MessageSquare, title: "We review your brief", desc: "Our team reads every detail within 2 hours." },
+  { icon: Clock, title: "Custom plan crafted", desc: "No templates. A strategy built for your goals." },
+  { icon: Rocket, title: "We get to work", desc: "Clear timelines, clear ownership, clear results." },
+];
 
 export function FinalCTA() {
-  const [form, setForm] = useState(INITIAL);
-  const [submitting, setSubmitting] = useState(false);
-  const [sent, setSent] = useState(false);
-
-  const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Please complete name, work email and a short message.");
-      return;
-    }
-    setSubmitting(true);
-    try {
-      const res = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/contact`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: form.name,
-            email: form.email,
-            company: form.company || undefined,
-            message: form.message,
-          }),
-        }
-      );
-      if (!res.ok) {
-        const detail = await res.json().catch(() => ({}));
-        throw new Error(
-          detail?.detail?.[0]?.msg || detail?.detail || "Could not send brief."
-        );
-      }
-      const data = await res.json();
-      setSent(true);
-      toast.success(
-        data?.message || "Brief received. A senior partner will respond within 24 hours."
-      );
-      setTimeout(() => {
-        setSent(false);
-        setForm(INITIAL);
-      }, 4000);
-    } catch (err) {
-      toast.error(
-        typeof err?.message === "string"
-          ? err.message
-          : "Network error. Please try again."
-      );
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
   return (
     <section
       id="contact"
       data-testid="final-cta-section"
-      className="relative py-12"
+      className="relative py-20 overflow-hidden"
     >
+      {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 opacity-70"
+          className="absolute inset-0 opacity-80"
           style={{
             background:
-              "radial-gradient(900px circle at 80% 50%, rgba(255,106,0,0.18), transparent 50%), radial-gradient(700px circle at 10% 80%, rgba(80,90,180,0.15), transparent 50%)",
+              "radial-gradient(ellipse 60% 50% at 100% 50%, rgba(255,106,0,0.12), transparent 60%), radial-gradient(ellipse 50% 60% at 0% 80%, rgba(139,92,246,0.1), transparent 55%)",
           }}
         />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[64px_64px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-1 gap-6 items-start">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid lg:grid-cols-[1fr_1.35fr] gap-12 xl:gap-16 items-start">
 
-        <div className="h-full flex items-center">
+          {/* Left column */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8 }}
+            className="lg:sticky lg:top-28 space-y-8 pt-4"
           >
-            <div className="text-xs font-mono-display uppercase tracking-[0.25em] text-mute">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-(--b2b-primary) mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
-              Start a transformation
-            </div>
-            <h2 className="mt-5 font-display text-white text-4xl sm:text-5xl  leading-[1.10] tracking-tight">
-              Tell us where growth is stuck. We’ll show you how to unlock it.
-            </h2>
-            <p className="mt-5 text-mute text-base sm:text-lg leading-relaxed">
-              Need better leads, ROAS, conversions, CRO, automation or a digital product? We’ll map the growth system your brand needs next.
-            </p>
+            <div>
+              <div className="inline-flex items-center gap-2 mb-5">
+                <span className="h-1.5 w-1.5 rounded-full bg-(--b2b-primary) shadow-[0_0_10px_var(--b2b-primary)]" />
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-white/50">Start a transformation</span>
+              </div>
 
-            <ul className="mt-3 space-y-2 text-white/85 text-sm sm:text-base">
+              <h2 className="font-display text-white text-4xl sm:text-5xl leading-[1.10] tracking-tight">
+                Tell us where growth is stuck.{" "}
+                <em
+                  className="not-italic text-(--b2b-primary) bg-clip-text"
+                >
+                  We'll show you how to unlock it.
+                </em>
+              </h2>
+
+              <p className="mt-5 text-white/55 text-base sm:text-lg leading-relaxed">
+                Need better leads, ROAS, conversions, CRO, automation or a digital product? We'll map the growth system your brand needs next.
+              </p>
+            </div>
+
+            {/* Checkpoints */}
+            <ul className="space-y-3">
               {[
                 "No generic proposal.",
                 "No confusing discovery process.",
                 "Just a clear, practical plan built around your business goals.",
               ].map((p) => (
-                <li key={p} className="flex items-center gap-3">
-                  <span className="grid place-items-center h-5 w-5 rounded-full bg-(--b2b-primary)/15 text-(--b2b-primary)">
-                    <CheckCircle2 size={14} />
+                <li key={p} className="flex items-center gap-3 text-white/80 text-sm sm:text-base">
+                  <span className="grid place-items-center h-5 w-5 shrink-0 rounded-full bg-(--b2b-primary)/15 text-(--b2b-primary)">
+                    <CheckCircle2 size={13} />
                   </span>
                   {p}
                 </li>
               ))}
             </ul>
 
-            {/* <div>
-            <Image
-             src={'/images/contact-us-image.png'}
-             alt="Contact us"
-             width={500}
-             height={500}
-            />
-          </div> */}
+            {/* Divider */}
+            <div className="h-px bg-linear-to-r from-white/10 via-white/5 to-transparent" />
+
+            {/* What happens next */}
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-mono text-white/35 mb-5">What happens next</p>
+              <div className="space-y-5">
+                {STEPS.map((step, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/4">
+                        <step.icon size={16} className="text-(--b2b-primary)" />
+                      </div>
+                      {i < STEPS.length - 1 && (
+                        <div className="mt-1 w-px bg-linear-to-b from-white/10 to-transparent" style={{ minHeight: 24 }} />
+                      )}
+                    </div>
+                    <div className="pb-1 pt-1.5">
+                      <p className="text-sm font-medium text-white">{step.title}</p>
+                      <p className="mt-0.5 text-xs text-white/45">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
-        </div>
 
-
-
-        <div className="max-w-[1040px] mx-auto w-full md:pt-10">
-          <ProjectContactForm />
+          {/* Right column — Form */}
+          <div className="pt-4">
+            <ProjectContactForm />
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Field({ label, testId, ...rest }) {
-  return (
-    <div>
-      <label className="block text-xs font-mono-display uppercase tracking-[0.22em] text-mute mb-2">
-        {label}
-      </label>
-      <input
-        data-testid={testId}
-        className="w-full bg-[#02030a] border border-line rounded-2xl px-4 py-3 text-white placeholder:text-mute/60 focus:border-orange-brand/60 focus:outline-none focus:ring-1 focus:ring-orange-brand/40 transition"
-        {...rest}
-      />
-    </div>
   );
 }

@@ -48,10 +48,10 @@ const practices = [
 
 const GrowthSystem = () => {
   return (
-    <section className="py-20 px-5 sm:px-8 bg-[#02030a]">
+    <section className="py-16 xl:py-20 px-5 sm:px-8 bg-[#02030a]">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight">
+          <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.10] uppercase tracking-tight">
             SIX PRACTICES
             <span className="block text-orange-brand">ONE GROWTH SYSTEM</span>
           </h2>
@@ -78,19 +78,19 @@ const GrowthSystem = () => {
                     />
                   </div>
                 </div>
-                <div className="relative h-[68%]">
+                <div className="relative h-[53%] xl:h-[65%] 2xl:h-[68%]">
                   <div className="relative z-20 py-4 px-6">
-                    <h3 className="text-[#FF9041] text-[25px] leading-[1.08] font-medium max-w-[180px]">
+                    <h3 className="text-[#FF9041] text-lg xl:text-[22px] 2xl:text-[25px] leading-[1.08] font-medium max-w-[180px]">
                       {practice.title}
                     </h3>
-                    <p className="text-[15px] text-white pt-2">
+                    <p className="text-[12px] 2xl:text-[14px] 2xl:text-[15px] text-white pt-2">
                       {practice.description}
                     </p>
 
                     <div className="pt-2">
                       <ul className="flex items-center gap-3">
                         {practice.points.map((item, pointIndex) => (
-                          <li key={pointIndex} className="text-white text-[12px]" style={{ listStyle: 'inside' }}>
+                          <li key={pointIndex} className="text-white text-[10px] 2xl:text-[12px]" style={{ listStyle: 'inside' }}>
                             {item}
                           </li>
                         ))}

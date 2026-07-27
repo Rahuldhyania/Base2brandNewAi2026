@@ -51,9 +51,9 @@ export default function CaseStudyHero() {
                         transition={{ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
                         className="font-display text-white text-[40px] md:text-[64px] lg:text-[72px] leading-[0.96] tracking-[-0.04em]"
                     >
-                        Measured 
+                        Our Latest
                         <br />
-                        <span className="text-[var(--b2b-text-muted)]">Success.</span>
+                        <span className="text-[var(--b2b-text-muted)]">Work</span>
                     </motion.h1>
 
                     <motion.p
@@ -62,7 +62,7 @@ export default function CaseStudyHero() {
                         transition={{ duration: 0.85, delay: 0.2 }}
                         className="mt-4 max-w-[560px] text-[15px] md:text-[17px] leading-[1.6] text-[var(--b2b-text-muted)]"
                     >
-                        Every brief below is a production deployment — anonymised where required — with live telemetry, KPIs, and business impact you can interrogate.
+                       Explore our latest projects—where strategy, creativity, and technology come together to deliver measurable results and meaningful business growth.
                     </motion.p>
 
                     <motion.div
@@ -113,7 +113,7 @@ export default function CaseStudyHero() {
                         <span className="font-mono text-[10px] text-[#00e6ff]/80">● indexed</span>
                     </div>
 
-                    <div className="p-5 md:p-6">
+                    {/* <div className="p-5 md:p-6">
                         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4">
                             Case Study Index — Q3 2026
                         </div>
@@ -143,7 +143,9 @@ export default function CaseStudyHero() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
+
+                    <img src="/images/b2bjdp-sm.png" alt="" />
                 </motion.div>
             </div>
 

@@ -149,7 +149,7 @@ import Marquee from 'react-fast-marquee'
 const TrustSection = () => {
   return (
     <div className='max-w-[1800px] ms-auto'>
-      <div className='grid grid-cols-[1fr_2fr] gap-8 items-center pt-12 '>
+      <div className='grid grid-cols-[1fr_2fr] gap-8 items-center pt-12  px-6 2xl:px-0'>
         <div className="border-r-[3px] border-white/60">
           <div>
             <div className="text-2xl font-mono-display uppercase tracking-[0.25em] text-mute">
