@@ -594,7 +594,7 @@ function BrowserWindow({ project, imageBorderColor }) {
   const { preview } = project;
 
   return (
-    <div className="relative overflow-hidden rounded-[20px] border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgba(244,123,82,0.35)]">
+    <div className="relative overflow-hidden rounded-[20px] border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgb(var(--b2b-primary)/0.35)]">
       <div className="flex items-center gap-3 border-b border-white/8 bg-[rgba(255,255,255,0.02)] px-4 py-3">
         <div className="flex gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#3A3A45]" />

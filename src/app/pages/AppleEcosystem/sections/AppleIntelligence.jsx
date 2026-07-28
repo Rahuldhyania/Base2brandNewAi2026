@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import {
@@ -19,7 +20,7 @@ import { APPLE } from "@/constants/testIds";
 
 const STATES = [
   {
-    size: SIZE_PRESETS.COMPACT,
+    size: SIZE_PRESETS.COMPACT_LONG,
     label: "Summarising email…",
     sub: "Apple Intelligence · on-device",
     pill: "✦",
@@ -69,10 +70,6 @@ function IslandContent({ index }) {
           <p className="text-xs text-white/60">{s.sub}</p>
         </div>
       </div>
-      <div className="flex items-center gap-1.5 absolute right-10 top-10">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#64D2FF] animate-pulse" />
-        <span className="text-xs font-mono uppercase tracking-[0.18em] text-white/45">Live</span>
-      </div>
     </DynamicContainer>
   );
 }
@@ -89,22 +86,31 @@ function IslandShow() {
 
   return (
     <div className="relative w-full flex flex-col items-center" data-testid={APPLE.intelligenceIsland}>
-      {/* Phone frame illusion */}
-      <div className="relative w-full max-w-[760px] aspect-[16/10] sm:aspect-[16/10] rounded-[32px] sm:rounded-[44px] b2b-glass overflow-hidden">
+      {/* iPhone frame illusion */}
+      <div className="relative w-full max-w-[420px] sm:max-w-[480px] aspect-[635/507] rounded-t-[83px] overflow-hidden bg-[#05060a]">
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at top, rgba(10,132,255,0.18) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse at top, rgba(10,132,255,0.22) 0%, transparent 70%)" }}
         />
+
         <DynamicIslandProvider initialSize={SIZE_PRESETS.COMPACT}>
-          <div className="absolute top-4 sm:top-6 left-0 right-0 flex justify-center">
-            <DynamicIsland id="apple-intelligence-island">
-              <IslandContent index={index} />
-            </DynamicIsland>
+          <div className="absolute top-[8%] sm:top-[9%] left-0 right-0 flex justify-center z-10">
+            <div className="scale-[0.56] sm:scale-[0.63] origin-top">
+              <DynamicIsland id="apple-intelligence-island">
+                <IslandContent index={index} />
+              </DynamicIsland>
+            </div>
           </div>
         </DynamicIslandProvider>
 
+        {/* Live indicator — pinned relative to the phone frame, not the resizing island */}
+        <div className="absolute top-[9.5%] sm:top-[10.5%] right-7 sm:right-9 flex items-center gap-1.5 z-10">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#64D2FF] animate-pulse" />
+          <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.18em] text-white/45">Live</span>
+        </div>
+
         {/* Caption strip */}
-        <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex flex-col items-center text-center px-4 sm:px-6">
+        <div className="absolute bottom-[10%] left-0 right-0 flex flex-col items-center text-center px-6 sm:px-8 z-10">
           <AnimatePresence mode="wait">
             <motion.p
               key={index}
@@ -112,7 +118,7 @@ function IslandShow() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
-              className="font-mono text-xs uppercase tracking-[0.24em] text-white/50"
+              className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.24em] text-white/50"
             >
               {STATES[index].sub}
             </motion.p>
@@ -130,6 +136,17 @@ function IslandShow() {
             ))}
           </div>
         </div>
+
+        {/* Real iPhone frame overlay */}
+        <Image
+          src="/images/Iphone_frame.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="(max-width: 640px) 420px, 480px"
+          className="absolute inset-0 object-cover pointer-events-none select-none z-20"
+          priority={false}
+        />
       </div>
     </div>
   );

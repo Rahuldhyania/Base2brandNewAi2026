@@ -10,6 +10,7 @@ const practices = [
     icon: "/images/growthcard_backimagev2-1.png",
     backgroud_gradient:
       "linear-gradient(280deg, rgba(113, 31, 35, 1) 0%, rgba(250, 94, 45, 1) 100%)",
+    color_card : '#fa5e2d'
   },
   {
     title: "Shopify & Ecommerce",
@@ -18,7 +19,8 @@ const practices = [
     points: ["Shopify Development", "Shopify Plus", "Custom Themes"],
     icon: "/images/growthcard_backimagev2-2.png",
     backgroud_gradient:
-      "linear-gradient(280deg, rgba(31, 113, 56, 1) 0%, rgba(69, 250, 45, 1) 100%)",
+      "linear-gradient(280deg, #95bf47 0%, #95bf47b5 100%)",
+    color_card : '#95bf47'
   },
   {
     title: "CRO & Growth Optimization",
@@ -27,7 +29,8 @@ const practices = [
     points: ["Landing Page CRO", "A/B Testing", "Heatmap Analysis"],
     icon: "/images/growthcard_backimagev2-3.png",
     backgroud_gradient:
-      "linear-gradient(280deg, rgba(23, 73, 130, 1) 0%, rgba(0, 191, 255, 1) 100%)",
+      "linear-gradient(280deg, #155dfca1 0%, #155dfc 100%)",
+    color_card : '#155dfc'
   },
   {
     title: "AI Solutions & Automation",
@@ -36,7 +39,8 @@ const practices = [
     points: ["AI Chatbots", "AI Sales Assistants", "Lead Scoring"],
     icon: "/images/growthcard_backimagev2-4.png",
     backgroud_gradient:
-      "linear-gradient(280deg, rgba(74, 35, 90, 1) 0%, rgba(186, 85, 211, 1) 100%)",
+      "linear-gradient(280deg, #8b5cf69c 0%, #8b5cf6 100%)",
+    color_card : '#8b5cf6'
   },
   {
     title: "Mobile Apps & Enterprise Platforms",
@@ -45,7 +49,8 @@ const practices = [
     points: ["Android Apps", "iOS Apps", "CRM Systems"],
     icon: "/images/growthcard_backimagev2-5.png",
     backgroud_gradient:
-      "linear-gradient(280deg, rgba(17, 84, 94, 1) 0%, rgba(0, 224, 208, 1) 100%)",
+      "linear-gradient(280deg, #0a84ffd9 0%, #0a84ff 100%)",
+    color_card : '#0a84ff'
   },
   {
     title: "Brand, Creative & Experience",
@@ -54,7 +59,8 @@ const practices = [
     points: ["Brand Identity", "Creative Campaigns", "UI/UX Design"],
     icon: "/images/growthcard_backimagev2-6.png",
     backgroud_gradient:
-      "linear-gradient(280deg, rgba(128, 88, 18, 1) 0%, rgba(255, 193, 7, 1) 100%)",
+      "linear-gradient(280deg, #d946efa1 0%, #d946ef 100%)",
+    color_card : '#d946ef'
   },
 ];
 
@@ -79,20 +85,24 @@ const GrowthSystem = () => {
                 className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end max-h-[360px]"
                 style={{ background: `${practice.backgroud_gradient}` }}
               >
-                <div className="absolute top-8 left-0 w-full flex justify-center">
-                  <div className="ps-14">
+                <div className="absolute top-6 left-0 w-full flex justify-end">
+                  <div className="pe-2">
                     <Image
                       src={practice.icon}
                       alt="growthCard_icon"
-                      width={280}
-                      height={160}
+                      width={320}
+                      height={180}
                       className="object-cover"
                     />
                   </div>
                 </div>
                 <div className="relative h-[53%] xl:h-[65%] 2xl:h-[68%]">
                   <div className="relative z-20 py-4 px-6">
-                    <h3 className="text-[#FF9041] text-lg xl:text-[22px] 2xl:text-[25px] leading-[1.08] font-medium max-w-[180px]">
+                    <h3 className={` text-lg xl:text-[22px] 2xl:text-[25px] leading-[1.08] font-medium max-w-[180px]`}
+                     style={{
+                      color : practice.color_card
+                     }}
+                    >
                       {practice.title}
                     </h3>
                     <p className="text-[12px] 2xl:text-[14px] 2xl:text-[15px] text-white pt-2">

@@ -38,7 +38,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8 }}
-            className="lg:sticky lg:top-28 space-y-3 pt-4"
+            className="lg:sticky lg:top-28 space-y-3 pt-4 h-full"
           >
             <div>
               <div className="inline-flex items-center gap-2 mb-5">

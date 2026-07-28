@@ -33,7 +33,7 @@ const CapCard = ({cap, idx }) => {
     <Reveal delay={idx * 0.04} className={` group relative`}>
       <div
         data-testid={`capability-card-${idx}`}
-        className="relative h-full b2b-card p-5 sm:p-6 md:p-8 overflow-hidden transition-all duration-500 hover:border-[rgba(var(--b2b-primary-rgb),0.4)]"
+        className="relative h-full b2b-card p-5 overflow-hidden transition-all duration-500 hover:border-[rgba(var(--b2b-primary-rgb),0.4)]"
       >
         {/* Hover glow */}
         <div className="pointer-events-none absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[rgba(var(--b2b-primary-rgb),0)] group-hover:bg-[rgba(var(--b2b-primary-rgb),0.15)] blur-[80px] transition-all duration-700" />
