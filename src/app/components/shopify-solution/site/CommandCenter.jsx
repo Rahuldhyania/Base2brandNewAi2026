@@ -74,16 +74,29 @@ export const CommandCenter = ({
               </div>
 
               {/* Full-width image */}
-              <div className="relative h-[220px] w-full overflow-hidden bg-[#070808] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[560px]">
-                <Image
+              <div className="relative h-[220px] w-full overflow-hidden bg-[#070808] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[560px]"
+                style={{
+                  backgroundImage : 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&h=900&q=85)'
+                }}
+               >
+                {/* <Image
                   src={dashboardImage}
                   alt="Commerce mission console dashboard preview"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 94vw, 1400px"
                   priority={false}
-                />
+                /> */}
 
+                <video
+                  src="/videos/Base2Brand_ Your Pathway to Success! A Creative Digital Marketing & Web Development Agency (1) (1).mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-full max-w-[90%] mx-auto object-cover"
+                />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
               </div>
 

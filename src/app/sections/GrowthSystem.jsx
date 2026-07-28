@@ -8,6 +8,8 @@ const practices = [
       "Growth campaigns engineered around revenue, not reach. We plan, launch, optimize, and scale paid media campaigns across high-intent channels with clear performance accountability.",
     points: ["Google Ads", "Meta Ads", "LinkedIn Ads"],
     icon: "/images/growthcard_backimagev2-1.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(113, 31, 35, 1) 0%, rgba(250, 94, 45, 1) 100%)",
   },
   {
     title: "Shopify & Ecommerce",
@@ -15,6 +17,8 @@ const practices = [
       "Commerce experiences designed to convert traffic into revenue. We build Shopify stores, custom ecommerce experiences, product pages, checkout journeys, and retention systems focused on higher sales and smoother buying experiences.",
     points: ["Shopify Development", "Shopify Plus", "Custom Themes"],
     icon: "/images/growthcard_backimagev2-2.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(31, 113, 56, 1) 0%, rgba(69, 250, 45, 1) 100%)",
   },
   {
     title: "CRO & Growth Optimization",
@@ -22,6 +26,8 @@ const practices = [
       "More conversions from the traffic you already have. We improve landing pages, funnels, user journeys, forms, product pages, checkout flows, and lead-generation systems using data-backed CRO strategies.",
     points: ["Landing Page CRO", "A/B Testing", "Heatmap Analysis"],
     icon: "/images/growthcard_backimagev2-3.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(23, 73, 130, 1) 0%, rgba(0, 191, 255, 1) 100%)",
   },
   {
     title: "AI Solutions & Automation",
@@ -29,6 +35,8 @@ const practices = [
       "AI systems that reduce manual work and improve business efficiency. We build intelligent automations that help brands qualify leads, support customers, personalize journeys, and improve decision-making.",
     points: ["AI Chatbots", "AI Sales Assistants", "Lead Scoring"],
     icon: "/images/growthcard_backimagev2-4.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(74, 35, 90, 1) 0%, rgba(186, 85, 211, 1) 100%)",
   },
   {
     title: "Mobile Apps & Enterprise Platforms",
@@ -36,6 +44,8 @@ const practices = [
       "Digital products customers and teams rely on every day. We design and develop mobile apps, portals, CRM systems, ERP workflows, cloud applications, and custom business platforms built for speed, scale, and usability.",
     points: ["Android Apps", "iOS Apps", "CRM Systems"],
     icon: "/images/growthcard_backimagev2-5.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(17, 84, 94, 1) 0%, rgba(0, 224, 208, 1) 100%)",
   },
   {
     title: "Brand, Creative & Experience",
@@ -43,6 +53,8 @@ const practices = [
       "Brands people remember. Experiences customers trust. We create brand identities, social media systems, UI/UX experiences, campaign creatives, content frameworks, and design systems that make growth look as strong as it performs.",
     points: ["Brand Identity", "Creative Campaigns", "UI/UX Design"],
     icon: "/images/growthcard_backimagev2-6.png",
+    backgroud_gradient:
+      "linear-gradient(280deg, rgba(128, 88, 18, 1) 0%, rgba(255, 193, 7, 1) 100%)",
   },
 ];
 
@@ -65,7 +77,7 @@ const GrowthSystem = () => {
             >
               <div
                 className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end max-h-[360px]"
-                style={{ backgroundImage: `url(/images/growth_card_bg.png)` }}
+                style={{ background: `${practice.backgroud_gradient}` }}
               >
                 <div className="absolute top-8 left-0 w-full flex justify-center">
                   <div className="ps-14">

@@ -38,7 +38,7 @@ export function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8 }}
-            className="lg:sticky lg:top-28 space-y-8 pt-4"
+            className="lg:sticky lg:top-28 space-y-3 pt-4"
           >
             <div>
               <div className="inline-flex items-center gap-2 mb-5">
@@ -55,7 +55,7 @@ export function FinalCTA() {
                 </em>
               </h2>
 
-              <p className="mt-5 text-white/55 text-base sm:text-lg leading-relaxed">
+              <p className="mt-2 text-white/55 text-base sm:text-lg leading-relaxed">
                 Need better leads, ROAS, conversions, CRO, automation or a digital product? We'll map the growth system your brand needs next.
               </p>
             </div>
@@ -81,17 +81,17 @@ export function FinalCTA() {
 
             {/* What happens next */}
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-mono text-white/35 mb-5">What happens next</p>
-              <div className="space-y-5">
+              <p className="text-[10px] uppercase tracking-widest font-mono text-white/35 mb-3">What happens next</p>
+              <div className="space-y-1.5">
                 {STEPS.map((step, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="flex flex-col items-center">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/4">
                         <step.icon size={16} className="text-(--b2b-primary)" />
                       </div>
-                      {i < STEPS.length - 1 && (
+                      {/* {i < STEPS.length - 1 && (
                         <div className="mt-1 w-px bg-linear-to-b from-white/10 to-transparent" style={{ minHeight: 24 }} />
-                      )}
+                      )} */}
                     </div>
                     <div className="pb-1 pt-1.5">
                       <p className="text-sm font-medium text-white">{step.title}</p>
