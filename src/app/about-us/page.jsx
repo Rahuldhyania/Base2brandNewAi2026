@@ -815,13 +815,13 @@ function OrbitValues() {
 function FounderMessage() {
   return (
     <section className="relative py-10 md:py-20 lg:py-32 xl:py-40">
-      <div className="container mx-auto px-6 md:px-10 max-w-4xl">
+      <div className="container mx-auto px-6 md:px-10 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 40, rotateX: -8 }}
           whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-panel-strong rounded-3xl p-8 md:p-14 relative overflow-hidden"
+          className="glass-panel-strong rounded-3xl p-8 relative overflow-hidden"
           style={{ transformPerspective: 1200 }}
         >
           {/* Scanlines */}
@@ -853,7 +853,7 @@ function FounderMessage() {
             </span>
           </div>
 
-          <p className="font-display text-2xl md:text-3xl lg:text-[36px] leading-[1.35] font-light text-white/95 italic">
+          <p className="font-display text-2xl md:text-3xl leading-[1.35] font-light text-white/95 italic">
             &ldquo;Base2Brand began with a belief that businesses should not have to choose between creative thinking, effective marketing and powerful technology.
 Over the past six years, we have evolved from a digital marketing team into a multidisciplinary growth and technology company. Every new capability was introduced in response to a real business challenge faced by our clients.
 We are proud of how far we have come, but we are even more excited about what we can build next.

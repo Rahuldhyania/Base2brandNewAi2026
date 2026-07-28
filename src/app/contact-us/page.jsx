@@ -199,7 +199,7 @@ const contactServices = [
 const page = () => {
     return (
         <div>
-         <div className="pt-28">
+         <div className="pt-10">
              <FinalCTA />
              <ServicesSection
                  highlightTag={'OUR SERVICES'}

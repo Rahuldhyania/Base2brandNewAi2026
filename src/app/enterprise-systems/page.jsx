@@ -21,7 +21,7 @@ const LOGISTICS_MODULES = [
     iconName: "boxes",
     angle: 0,
     image:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-warehouse.png",
   },
   {
     id: "dispatch",
@@ -30,7 +30,7 @@ const LOGISTICS_MODULES = [
     iconName: "truck",
     angle: 45,
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-dispatch.png",
   },
   {
     id: "fleet",
@@ -39,7 +39,7 @@ const LOGISTICS_MODULES = [
     iconName: "truck",
     angle: 90,
     image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-fleet.png",
   },
   {
     id: "routes",
@@ -48,7 +48,7 @@ const LOGISTICS_MODULES = [
     iconName: "analytics",
     angle: 135,
     image:
-      "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-routes.png",
   },
   {
     id: "billing",
@@ -57,7 +57,7 @@ const LOGISTICS_MODULES = [
     iconName: "wallet",
     angle: 180,
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-billing.png",
   },
   {
     id: "analytics",
@@ -66,7 +66,7 @@ const LOGISTICS_MODULES = [
     iconName: "barChart",
     angle: 225,
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-analytics.png",
   },
   {
     id: "tracking",
@@ -75,7 +75,7 @@ const LOGISTICS_MODULES = [
     iconName: "truck",
     angle: 270,
     image:
-      "https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-traking.png",
   },
   {
     id: "carriers",
@@ -84,7 +84,7 @@ const LOGISTICS_MODULES = [
     iconName: "users",
     angle: 315,
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1280&h=800&fit=crop&q=80",
+      "/images/ep-sys-carrior.png",
   },
 ];
 

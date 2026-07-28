@@ -13,6 +13,7 @@ import BlogsSection from './blogs/BlogsSection';
 import ArticlesSection from './articles/ArticlesSection';
 import InsightsSection from './insights/InsightsSection';
 import IndustriesSection from './industries/IndustriesSection';
+import { LandingZone } from '@/sections/LandingZone';
 
 const DEFAULT_DOSSIER_CARDS = [
   {
@@ -194,9 +195,13 @@ export default function ResourcesCategoriesPage() {
         <AsteroidBelt />
       </section>
 
-      <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
+      {/* <section className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
         <NewsletterDome />
-      </section>
+      </section> */}
+       
+      <LandingZone />
+       
+
     </div>
   );
 }

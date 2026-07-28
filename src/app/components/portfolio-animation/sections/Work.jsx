@@ -639,19 +639,19 @@ function BrowserWindow({ project, imageBorderColor }) {
       </div>
 
       {/* Screenshot — top attached, sides + bottom padded, bottom corners rounded */}
-      <div className="px-4 pb-4 md:px-5 md:pb-5">
+      <div className="">
         {preview.screenshot ? (
           <div
             className="overflow-hidden rounded-b-3xl bg-[#0c101a]"
-            style={
-              imageBorderColor
-                ? {
-                  borderLeft: `1px solid ${imageBorderColor}`,
-                  borderRight: `1px solid ${imageBorderColor}`,
-                  borderBottom: `1px solid ${imageBorderColor}`,
-                }
-                : undefined
-            }
+            // style={
+            //   imageBorderColor
+            //     ? {
+            //       borderLeft: `1px solid ${imageBorderColor}`,
+            //       borderRight: `1px solid ${imageBorderColor}`,
+            //       borderBottom: `1px solid ${imageBorderColor}`,
+            //     }
+            //     : undefined
+            // }
           >
             <img
               src={preview.screenshot}

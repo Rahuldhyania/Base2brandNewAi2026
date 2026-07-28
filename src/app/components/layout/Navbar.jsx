@@ -36,20 +36,20 @@ const MENU = [
       { label: "Intelligent Solutions", href: "/intelligent-solutions" },
     ],
   },
-  {
-    label: "Industries",
-    href: "#industries",
-    items: [
-      { label: "Healthcare", href: "/industries/health-care" },
-      { label: "Manufacturing", href: "/industries/manufacturing" },
-      { label: "Logistics", href: "/industries/logistics" },
-      { label: "Education", href: "/industries/education" },
-      { label: "Retail", href: "/industries/retail" },
-      { label: "Automotive", href: "/industries/automotive" },
-      { label: "Government", href: "/industries/government" },
-      { label: "NGOs", href: "/industries/ngo" },
-    ],
-  },
+  // {
+  //   label: "Industries",
+  //   href: "#industries",
+  //   items: [
+  //     { label: "Healthcare", href: "/industries/health-care" },
+  //     { label: "Manufacturing", href: "/industries/manufacturing" },
+  //     { label: "Logistics", href: "/industries/logistics" },
+  //     { label: "Education", href: "/industries/education" },
+  //     { label: "Retail", href: "/industries/retail" },
+  //     { label: "Automotive", href: "/industries/automotive" },
+  //     { label: "Government", href: "/industries/government" },
+  //     { label: "NGOs", href: "/industries/ngo" },
+  //   ],
+  // },
   {
     label: "Work",
     href: "#cases",
@@ -73,6 +73,10 @@ const MENU = [
   {
     label: "About",
     href: "/about-us",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
   },
 ];
 
@@ -269,7 +273,7 @@ export function Navbar() {
                         Hand-picked capabilities that we deploy end-to-end —
                         designed for regulated, multi-region enterprises.
                       </p>
-                      <a
+                      {/* <a
                         href={activeMenu.href}
                         onClick={(e) => handleAnchor(e, activeMenu.href)}
                         data-testid={`nav-panel-allcta-${activeMenu.label.toLowerCase()}`}
@@ -277,7 +281,7 @@ export function Navbar() {
                       >
                         View all {activeMenu.label.toLowerCase()}
                         <span aria-hidden>→</span>
-                      </a>
+                      </a> */}
                     </div>
                     <ul className="grid grid-cols-2 gap-1.5">
                       {activeMenu.items.map((it) => (

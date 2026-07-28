@@ -122,6 +122,12 @@ const PROJECTS = [
       ],
       chart: [22, 34, 30, 42, 38, 55, 60, 58, 66, 70, 68, 78],
     },
+    images: [
+      "/images/gwoth_card1.1.png",
+      "/images/gwoth_card1.2.png",
+      "/images/gwoth_card1.3.png",
+      "/images/gwoth_card1.4.png",
+    ],
   },
   {
     id: "case-02",
@@ -143,6 +149,12 @@ const PROJECTS = [
       ],
       chart: [50, 48, 44, 42, 40, 38, 36, 32, 30, 28, 27, 25],
     },
+    images: [
+      "/images/gwoth_card2.1.png",
+      "/images/gwoth_card2.2.png",
+      "/images/gwoth_card2.3.png",
+      "/images/gwoth_card2.4.png",
+    ],
   },
   {
     id: "case-03",
@@ -164,6 +176,12 @@ const PROJECTS = [
       ],
       chart: [40, 44, 48, 46, 52, 58, 62, 64, 70, 74, 78, 82],
     },
+    images: [
+      "/images/gwoth_card3.1.png",
+      "/images/gwoth_card3.2.png",
+      "/images/gwoth_card3.3.png",
+      "/images/gwoth_card3.4.png",
+    ],
   },
 ];
 function BrowserWindow({ project, projectId }) {
@@ -234,14 +252,14 @@ function BrowserWindow({ project, projectId }) {
             pagination={false}
             className="w-full"
           >
-            {Array(4).fill(null).map((_, index) => (
+            {project.images.map((image, index) => (
               <SwiperSlide key={index}>
-                <Image
-                  src="/images/ghfgh 2.png"
+                <img
+                  src={image}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-auto rounded-lg"
-                  width={1000}
-                  height={500}
+                  // width={1000}
+                  // height={500}
                 />
               </SwiperSlide>
             ))}

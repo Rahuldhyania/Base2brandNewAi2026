@@ -17,67 +17,74 @@ const features = [
 ];
 const PROJECTS = [
   {
-    id: "case-01",
-    n: "CASE 01",
-    tag: "Applied AI risk · Tier‑1 BFSI, Asia‑Pacific",
-    title: "Reimagining underwriting with a multi‑agent decision stack.",
+    id: "portfolio-01",
+    n: "PROJECT 01",
+    tag: "Luxury Furniture Brand · Shopify",
+    title:
+      "Premium Shopify storefront for luxury furniture brands.",
     metrics: [
-      { v: "61%", l: "drop in turnaround" },
-      { v: "$28M", l: "annualised lift" },
+      { v: "+38%", l: "conversion rate" },
+      { v: "97+", l: "Lighthouse score" },
     ],
-    url: "orbit-underwriting.b2b/case",
-    // Rich fake browser preview
+    url: "luxuryfurniture.com",
     preview: {
       accent: "#F47B52",
-      title: "Orbit Decision Fabric — Underwriting Console",
+      title: "Luxury Furniture Store",
+      screenshot: "/images/portfolio_work1.png",
       lines: [
-        { label: "Applicants scored today", value: "12,481" },
-        { label: "Auto‑approved", value: "76.3%" },
-        { label: "Escalated to underwriter", value: "9.1%" },
+        { label: "Collections", value: "24+" },
+        { label: "Products", value: "850+" },
+        { label: "PageSpeed Score", value: "97+" },
       ],
-      chart: [22, 34, 30, 42, 38, 55, 60, 58, 66, 70, 68, 78],
+      chart: [18, 24, 28, 35, 42, 48, 55, 61, 68, 74, 82, 90],
     },
   },
+
   {
-    id: "case-02",
-    n: "CASE 02",
-    tag: "Govtech modernization · Public Healthcare Authority EU",
-    title: "An AI‑native citizen services platform across 11 regions.",
+    id: "portfolio-02",
+    n: "PROJECT 02",
+    tag: "Multi-Vendor Commerce · Mobile App",
+    title:
+      "Mobile commerce app built for seamless shopping.",
     metrics: [
-      { v: "9.4M", l: "citizens onboarded" },
-      { v: "-42%", l: "case backlog" },
+      { v: "120K+", l: "app downloads" },
+      { v: "4.8★", l: "user rating" },
     ],
-    url: "citizens.hs‑eu.gov/live",
+    url: "commerce-app.com",
     preview: {
       accent: "#7BC5D9",
-      title: "Citizen Services — Regional Overview",
+      title: "Mobile Commerce Platform",
+      screenshot: "/images/portfolio_work2.png",
       lines: [
-        { label: "Live requests", value: "3,204" },
-        { label: "Median resolution", value: "38 min" },
-        { label: "Backlog vs. Q2", value: "‑42%" },
+        { label: "Downloads", value: "120K+" },
+        { label: "Active Users", value: "42K+" },
+        { label: "App Rating", value: "4.8★" },
       ],
-      chart: [50, 48, 44, 42, 40, 38, 36, 32, 30, 28, 27, 25],
+      chart: [28, 34, 39, 45, 49, 55, 60, 66, 72, 79, 84, 91],
     },
   },
+
   {
-    id: "case-03",
-    n: "CASE 03",
-    tag: "Industry 4.0 data · Global Manufacturer",
-    title: "Digital twin of the entire supply chain, decision‑graph driven.",
+    id: "portfolio-03",
+    n: "PROJECT 03",
+    tag: "Fleet Management · Enterprise SaaS",
+    title:
+      "Fleet management platform with real-time insights.",
     metrics: [
-      { v: "17%", l: "OEE improvement" },
-      { v: "-$54M", l: "inventory carry" },
+      { v: "3,500+", l: "vehicles managed" },
+      { v: "-52%", l: "manual workload" },
     ],
-    url: "twin.acme‑global.io",
+    url: "fleetcloud.io",
     preview: {
       accent: "#F47B52",
-      title: "SupplyGraph Twin — Global Ops",
+      title: "Fleet Management Dashboard",
+      screenshot: "/images/portfolio_work3.png",
       lines: [
-        { label: "Nodes online", value: "1,204 / 1,206" },
-        { label: "Throughput (24h)", value: "+17.4%" },
-        { label: "Alerts", value: "6 active" },
+        { label: "Fleet Size", value: "3,500+" },
+        { label: "Active Drivers", value: "1,200+" },
+        { label: "Live Tracking", value: "24/7" },
       ],
-      chart: [40, 44, 48, 46, 52, 58, 62, 64, 70, 74, 78, 82],
+      chart: [22, 29, 34, 40, 46, 53, 59, 67, 73, 81, 87, 94],
     },
   },
 ];
