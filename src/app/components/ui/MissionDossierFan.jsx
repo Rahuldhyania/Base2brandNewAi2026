@@ -33,7 +33,7 @@ export function MissionDossierFan({
     return (
         <section
             className={cn(
-                "relative py-12 md:py-16 overflow-visible border-t border-white/[0.06]",
+                "relative py-12 md:py-16 overflow-visible border-t border-white/[0.06] scroll-mt-24 md:scroll-mt-28",
                 className,
             )}
             id="mission-dossier"

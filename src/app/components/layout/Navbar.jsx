@@ -63,11 +63,11 @@ const MENU = [
     label: "Resources",
     href: "#insights",
     items: [
-      { label: "Blog", href: "/resources-catgeories" },
+      { label: "Blog", href: "/resources-catgeories#featured" },
       { label: "AI Insights", href: "/resources-catgeories#library" },
-      { label: "GEO Insights", href: "/resources-catgeories#geoinsights" },
-      { label: "Industry Reports", href: "/resources-catgeories#library" },
-      { label: "RFP & Tender Insights", href: "/resources-catgeories#library" },
+      { label: "Articles", href: "/resources-catgeories#geoinsights" },
+      { label: "Industry Reports", href: "/resources-catgeories#industry-reports" },
+      { label: "RFP & Tender Insights", href: "/resources-catgeories#mission-dossier" },
     ],
   },
   {
