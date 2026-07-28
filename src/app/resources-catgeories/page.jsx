@@ -18,41 +18,49 @@ const DEFAULT_DOSSIER_CARDS = [
   {
     id: "dossier-01",
     code: "DOSSIER-01",
-    title: "AI & Automation",
-    body: "Deploy clinical copilots, documentation AI, imaging triage, and intelligent revenue-cycle agents that reduce administrative burden and improve care delivery.",
-    accent: "INTELLIGENT AUTOMATION",
+    title: "RFP vs RFQ vs Tender",
+    body: "An RFQ focuses on price, an RFP evaluates your solution and value, while a tender follows a formal bidding process.",
+    accent: "BID BASICS",
     channel: "CHANNEL A · LOCKED",
   },
   {
     id: "dossier-02",
     code: "DOSSIER-02",
-    title: "Healthcare Software Development",
-    body: "Build secure patient portals, telehealth platforms, clinician workbenches, and interoperable healthcare applications powered by FHIR, HL7, and SMART on FHIR.",
-    accent: "DIGITAL HEALTH",
+    title: "Reading a Freight Tender",
+    body: "Review the scope, pricing format, SLAs, compliance rules, deadlines and submission instructions before preparing your bid.",
+    accent: "TENDER REVIEW",
     channel: "CHANNEL A · LOCKED",
   },
   {
     id: "dossier-03",
     code: "DOSSIER-03",
-    title: "Governance, Risk & Trust",
-    body: "Establish responsible AI governance with clinical model evaluations, regulatory compliance, and alignment with NIST, HIPAA, GDPR, and the EU AI Act.",
-    accent: "COMPLIANCE & TRUST",
+    title: "Winning RFP Response",
+    body: "Highlight your capacity, reliability, compliance and service value with clear evidence and a simple onboarding plan.",
+    accent: "RESPONSE STRATEGY",
     channel: "CHANNEL A · LOCKED",
   },
   {
     id: "dossier-04",
     code: "DOSSIER-04",
-    title: "Shopify Healthcare Commerce",
-    body: "Launch secure Shopify experiences for healthcare brands, wellness products, medical devices, and D2C commerce with seamless integrations and optimized performance.",
-    accent: "HEALTH COMMERCE",
+    title: "Bidding Mistakes to Avoid",
+    body: "Avoid late submissions, missing documents, incorrect formats, generic proposals and pricing that may lead to losses.",
+    accent: "RISK CHECK",
     channel: "CHANNEL A · LOCKED",
   },
   {
     id: "dossier-05",
     code: "DOSSIER-05",
-    title: "Healthcare Data & AI Intelligence",
-    body: "Unify EMRs, imaging, lab systems, and wearable data into actionable insights with predictive analytics, dashboards, and enterprise AI decision support.",
-    accent: "DATA INTELLIGENCE",
+    title: "FMCSA Compliance for Tenders",
+    body: "Keep your MC/DOT authority, insurance, safety records and carrier compliance documents active and up to date.",
+    accent: "COMPLIANCE",
+    channel: "CHANNEL A · LOCKED",
+  },
+  {
+    id: "dossier-06",
+    code: "DOSSIER-06",
+    title: "Where to Find Tenders",
+    body: "Explore government portals, private freight RFPs and relevant industry platforms for opportunities that match your capabilities.",
+    accent: "BID SOURCING",
     channel: "CHANNEL A · LOCKED",
   },
 ];
@@ -160,10 +168,10 @@ export default function ResourcesCategoriesPage() {
 
       <MissionDossierFan
         cards={DEFAULT_DOSSIER_CARDS}
-        title="Six dossiers. One Shopify mission."
-        subtitle="How we run a Shopify engagement — from discovery to growth operations — as a fan of focused dossiers."
+        title="Six insights. One smarter bidding strategy."
+        subtitle="Practical freight bidding insights to help you understand tender requirements, prepare compliant responses, avoid costly mistakes and compete for the right opportunities."
         badgeLabel={DEFAULT_DOSSIER_CARDS.length}
-        eyebrow="PLAYBOOKS · MISSION DOSSIERS"
+        eyebrow="RFP & TENDER INSIGHTS"
       />
 
       <section id="constellation" className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 py-12">
