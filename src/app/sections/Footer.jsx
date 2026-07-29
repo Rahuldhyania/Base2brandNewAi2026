@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { CurrentLogo } from "../components/layout/CurrentLogo";
 import { Linkedin, Twitter, Github, Youtube, Facebook } from "lucide-react";
+import NewsLetter from "@/components/ui/NewsLetter";
 
 const OFFICES = [
   { city: "New Delhi", line: "Connaught Place · 110001 · India", role: "Global HQ" },
@@ -84,7 +85,7 @@ export function Footer() {
               From base — to brand. From idea — to orbit. Base2Brand is the digital transformation, AI and enterprise software partner for organisations that build for the public good and the global stage.
             </p>
 
-            <form
+            {/* <form
               className="mt-8 max-w-md"
               onSubmit={(e) => e.preventDefault()}
               data-testid="footer-newsletter-form"
@@ -108,7 +109,8 @@ export function Footer() {
                   Subscribe
                 </button>
               </div>
-            </form>
+            </form> */}
+            <NewsLetter lable="Quarterly briefing" />
 
             <div className="mt-8 flex items-center gap-2">
               {[
@@ -139,7 +141,7 @@ export function Footer() {
                 <div className="text-xs font-mono-display uppercase tracking-[0.22em] text-orange-brand">
                   {col.title}
                 </div>
-                <ul className="mt-3 space-y-1.5">
+                <ul className="mt-3">
                   {col.links.map((l) => (
                     <li key={l.label}>
                       <Link

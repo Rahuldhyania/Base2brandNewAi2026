@@ -2,12 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Clock, MessageSquare, Rocket } from "lucide-react";
-import ProjectContactForm from "@/components/ui/ProjectContactForm";
+import ContactFormTabs from "@/components/ui/ContactFormTabs";
 
 const STEPS = [
-  { icon: MessageSquare, title: "We review your brief", desc: "Our team reads every detail within 2 hours." },
-  { icon: Clock, title: "Custom plan crafted", desc: "No templates. A strategy built for your goals." },
-  { icon: Rocket, title: "We get to work", desc: "Clear timelines, clear ownership, clear results." },
+  { icon: MessageSquare, title: "We review your brief", desc: "Our team evaluates every product requirement." },
+  { icon: Clock, title: "Custom roadmap crafted", desc: "A focused Apple plan built for your goals." },
+  { icon: Rocket, title: "We get to work", desc: "Clear milestones, native engineering, strong delivery." },
 ];
 
 export function FinalCTA() {
@@ -17,18 +17,6 @@ export function FinalCTA() {
       data-testid="final-cta-section"
       className="relative py-20 overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute inset-0 opacity-80"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 50% at 100% 50%, rgba(255,106,0,0.12), transparent 60%), radial-gradient(ellipse 50% 60% at 0% 80%, rgba(139,92,246,0.1), transparent 55%)",
-          }}
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[64px_64px]" />
-      </div>
-
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid lg:grid-cols-[1fr_1.35fr] gap-12 xl:gap-16 items-start">
 
@@ -105,7 +93,7 @@ export function FinalCTA() {
 
           {/* Right column — Form */}
           <div className="pt-4">
-            <ProjectContactForm />
+            <ContactFormTabs />
           </div>
         </div>
       </div>

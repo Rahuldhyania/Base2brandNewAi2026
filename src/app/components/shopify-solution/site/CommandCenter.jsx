@@ -40,12 +40,7 @@ export const CommandCenter = ({
               />
             </div>
 
-            <Reveal
-              delay={0.1}
-              className="shrink-0 self-start sm:self-auto"
-            >
-              <StatusChip>ALL SYSTEMS NOMINAL</StatusChip>
-            </Reveal>
+           
           </div>
 
           {/* Full-width dashboard */}
@@ -95,7 +90,7 @@ export const CommandCenter = ({
                   muted
                   playsInline
                   preload="auto"
-                  className="w-full max-w-[90%] mx-auto object-cover"
+                  className="w-full max-w-[100%] mx-auto object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
               </div>
