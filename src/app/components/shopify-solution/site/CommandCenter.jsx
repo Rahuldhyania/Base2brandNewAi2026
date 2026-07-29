@@ -11,8 +11,8 @@ const DASHBOARD_IMAGE =
 export const CommandCenter = ({
   dashboardImage = DASHBOARD_IMAGE,
   eyebrow = "COMMAND CENTER",
-  title = "Every product. Every signal. One engineering console.",
-  subtitle = "We operate your software ecosystem like mission control — applications, APIs, deployments, cloud infrastructure, performance data and user activity visible in one connected view.",
+  title = "Every workflow. Every agent. One AI operating layer.",
+  subtitle = "We engineer enterprise AI automation that orchestrates agents, workflows, business systems and real-time data from one intelligent control layer. From AI copilots and document intelligence to workflow automation and system integrations, every decision becomes faster, smarter and measurable.",
 }) => {
   return (
     <section

@@ -9,6 +9,7 @@ import TrustSection from "./sections/Trust";
 import GrowthSystem from "./sections/GrowthSystem";
 import ClientFeedback from "./sections/ClientFeedback";
 import FAQ from "./sections/FAQ";
+import InsightsSection from "./resources-catgeories/insights/InsightsSection";
 
 
 const ClientFootprint = dynamic(
@@ -107,7 +108,8 @@ export default function page() {
         <CommandCenter />
         <FAQ />
         <GlobalPresence />
-        <Insights />
+        {/* <Insights /> */}
+        <InsightsSection displayCount={3} />
         <LandingZone />
       </main>
       <Toaster

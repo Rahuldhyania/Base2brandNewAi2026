@@ -297,8 +297,8 @@ export function CaseStudies() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
-          eyebrow="Proof"
-          title="Outcomes, Growth backed by numbers"
+          eyebrow="Outcomes"
+          title="Growth backed by numbers"
           intro="We do not sell activity. We build systems that create measurable movement."
         />
 

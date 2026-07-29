@@ -9,7 +9,7 @@ import { useScrollToSectionOnPageChange } from "../hooks/useScrollToSectionOnPag
 
 const ITEMS_PER_PAGE = 3;
 
-export default function InsightsSection() {
+export default function InsightsSection({displayCount}) {
   const sectionRef = useRef(null);
   const [insights, setInsights] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,6 +70,7 @@ export default function InsightsSection() {
       ) : (
         <LatestMeteors
           items={insights}
+          displayCount
           hrefPrefix="/resources-catgeories/insights"
           viewAllHref="/resources-catgeories#geoinsights"
         />

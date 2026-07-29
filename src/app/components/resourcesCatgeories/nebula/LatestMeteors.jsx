@@ -11,6 +11,7 @@ export default function LatestMeteors({
   items,
   hrefPrefix = "/resources",
   viewAllHref = "/resources",
+  displayCount,
 }) {
   return (
     <div className="relative" data-testid="latest-meteors">
@@ -20,7 +21,7 @@ export default function LatestMeteors({
             Newest signals
           </p>
           <h3 className="font-display text-3xl md:text-4xl tracking-tight">
-            Latest Insights
+            Latest Articles
           </h3>
         </div>
         <Link
@@ -32,7 +33,7 @@ export default function LatestMeteors({
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {items.map((r, i) => (
+        {items.slice(0, displayCount ? displayCount : items.length).map((r, i) => (
           <motion.div
             key={r.id}
             className="relative"
