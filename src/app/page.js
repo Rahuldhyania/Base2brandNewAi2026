@@ -52,6 +52,7 @@ const GovtNGO = dynamic(
   { loading: () => <SectionFallback minHeight={480} /> },
 );
 
+
 const GlobalPresence = dynamic(
   () => import("./sections/GlobalPresence").then((m) => m.GlobalPresence),
   { loading: () => <SectionFallback minHeight={680} /> },
