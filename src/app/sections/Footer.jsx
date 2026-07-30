@@ -13,7 +13,7 @@ const OFFICES = [
   { city: "Toronto", line: "King Street W · M5V · Canada", role: "North America" },
   { city: "Leicester", line: "Welford Road · LE2 · United Kingdom", role: "EMEA HQ" },
   { city: "Sydney", line: "Macquarie Park · NSW 2113 · Australia", role: "APAC" },
-  { city: "Lagos", line: "Victoria Island · 101241 · Nigeria", role: "Africa" },
+  { city: "", line: "Victoria Island · 101241 · Nigeria", role: "Kenya" },
 ];
 
 const NAV = [
