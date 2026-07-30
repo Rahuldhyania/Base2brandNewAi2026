@@ -244,10 +244,28 @@ const page = () => {
         />
         {/* <DevelopmentProcess /> */}
         {/* <CaseStudies /> */}
-        <CommandCenter />
+        <CommandCenter
+          title="Every application. Every system. One engineering console."
+          subtitle="We design, build and operate custom software ecosystems across web applications, APIs, cloud infrastructure, enterprise platforms and system integrations—bringing performance, deployments, data and user activity into one connected view."
+        />
         <EngineeringPrinciples />
         <FinalCTA />
-        <LandingZone />
+        <LandingZone
+          eyebrow="Start a transformation"
+          titleMain="Tell us what software is holding you back."
+          titleAccent="We'll show you how to rebuild it."
+          description="Need a custom platform, CRM, ERP, web application or system integration? We'll map the software solution your business needs next."
+          checklist={[
+            "No generic development proposal.",
+            "No confusing discovery process.",
+            "Just a clear, practical roadmap built around your business goals.",
+          ]}
+          steps={[
+            { title: "We review your brief", desc: "Our team evaluates every technical requirement." },
+            { title: "Custom roadmap crafted", desc: "No templates. A solution built for your goals." },
+            { title: "We get to work", desc: "Clear milestones, expert engineering, measurable results." },
+          ]}
+        />
       </main>
     </div>
   );

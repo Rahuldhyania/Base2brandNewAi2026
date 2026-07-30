@@ -24,7 +24,7 @@ const CAPS = [
   {
     icon: "Network",
     title: "Applied AI & Agentic Engineering",
-    desc: "AI systems designed to plan, act, learn and support real business workflows.",
+    desc: "AI systems that reason, automate and execute real business workflows.",
     span: "md:col-span-7",
     items: [
       "AI Agents & Multi-Agent Systems",
@@ -38,7 +38,7 @@ const CAPS = [
   {
     icon: "Workflow",
     title: "AI Operations",
-    desc: "Automation systems that remove repetitive work from sales, support, marketing and operations.",
+    desc: "Automation systems that remove repetitive work across sales, support, marketing and operations.",
     span: "md:col-span-5",
     items: [
       "Workflow Orchestration",
@@ -53,7 +53,7 @@ const CAPS = [
   {
     icon: "AudioLines",
     title: "Voice Intelligence",
-    desc: "AI-powered voice systems for calls, customer interaction and business communication.",
+    desc: "AI-powered voice systems for calls automation, customer interactions and business communication.",
     span: "md:col-span-5",
     items: [
       "Voice Agents",
@@ -99,7 +99,7 @@ const CAPS = [
   {
     icon: "Microscope",
     title: "AI Research & Innovation",
-    desc: "Practical AI research that turns emerging technology into usable business systems.",
+    desc: "Practical AI research that transforms emerging technologies into real business solutions.",
     span: "md:col-span-5",
     items: [
       "Custom AI Solutions",
@@ -304,7 +304,10 @@ export default function page() {
       <Industries />
       <MaturityFramework />
       <ResearchLab />
-      <CommandCenter />
+      <CommandCenter
+        title="Every workflow. Every agent. One AI operating layer."
+        subtitle="We engineer enterprise AI automation that orchestrates agents, workflows, business systems and real-time data from one intelligent control layer. From AI copilots and document intelligence to workflow automation and system integrations, every decision becomes faster, smarter and measurable."
+      />
       {/* <EngagementModels /> */}
       <SEOContent />
       <LandingZone />

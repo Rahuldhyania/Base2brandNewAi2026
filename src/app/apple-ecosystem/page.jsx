@@ -125,9 +125,36 @@ export default function page() {
         {/* <Enterprise /> */}
         <Industries />
         <Process />
-        <CommandCenter />
+        <CommandCenter
+          title="Every touchpoint. Every workflow. One Apple experience."
+          subtitle="From iPhone app development and enterprise iOS applications to Vision Pro, Apple Watch and CarPlay, we design connected products that feel native, perform flawlessly and scale securely across the Apple ecosystem."
+        />
         <SeoBlock />
-        <FinalCta />
+        <FinalCta
+          eyebrow="Start an Apple engagement"
+          titleLines={["Tell us what you need to build.", "We'll show you how to ship it."]}
+          description="Need an iPhone app, enterprise iOS platform or Vision Pro experience? We'll map the Apple product your business needs next."
+          checklist={[
+            "No generic app proposal.",
+            "No confusing development process.",
+            "Just a clear plan built around your product goals.",
+          ]}
+          sidePanelLabel="What happens next"
+          steps={[
+            {
+              title: "We review your brief",
+              description: "Our team evaluates every product requirement.",
+            },
+            {
+              title: "Custom roadmap crafted",
+              description: "A focused Apple plan built for your goals.",
+            },
+            {
+              title: "We get to work",
+              description: "Clear milestones, native engineering, strong delivery.",
+            },
+          ]}
+        />
         <LandingZone />
       </main>
     </Layout>

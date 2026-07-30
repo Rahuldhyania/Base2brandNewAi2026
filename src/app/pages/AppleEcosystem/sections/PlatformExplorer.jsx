@@ -320,11 +320,12 @@ export default function PlatformExplorer() {
               Ecosystem Explorer
             </p>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.05] tracking-tight mt-4 max-w-4xl">
-              Every device. Same engineering team. One coherent product.
+              Every device your users touch, engineered under one product vision 
+
             </h2>
             <p className="mt-3 sm:mt-4 md:mt-5 text-white/60 max-w-2xl leading-relaxed text-xs sm:text-sm md:text-base">
-              Scroll through each surface to see how we approach it — the technologies,
-              the design constraints, and what we consider the engineering bar.
+              Apple products perform best when every surface feels connected. We design each device experience around its actual role — not by copying the same interface everywhere.
+
             </p>
           </div>
 

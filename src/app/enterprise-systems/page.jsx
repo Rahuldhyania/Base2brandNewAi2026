@@ -290,7 +290,22 @@ export default function ErpPage() {
           />
           <Integrations />
           <CTA />
-          <LandingZone />
+          <LandingZone
+            eyebrow="Start a transformation"
+            titleMain="Tell us where your systems are disconnected."
+            titleAccent="We'll show you how to connect them."
+            description="Need ERP, CRM, workflow automation, data integration or enterprise software? We'll map the connected system your business needs next."
+            checklist={[
+              "No generic enterprise proposal.",
+              "No confusing discovery process.",
+              "Just a clear, practical roadmap built around your operations.",
+            ]}
+            steps={[
+              { title: "We review your systems", desc: "Our team evaluates every process and requirement." },
+              { title: "Custom roadmap crafted", desc: "No templates. A system built for your goals." },
+              { title: "We get to work", desc: "Clear milestones, secure integration, measurable results." },
+            ]}
+          />
         </div>
       </div>
     </Layout>

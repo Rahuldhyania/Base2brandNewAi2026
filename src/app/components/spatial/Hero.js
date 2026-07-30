@@ -7,8 +7,8 @@ import { SPATIAL } from "@/constants/testIds";
 
 const metrics = [
   { value: "120+", label: "Digital Engagements" },
-  { value: "50", label: "Tech Stacks Deployed" },
-  { value: "15", label: "Industries Enabled " },
+  { value: "50+", label: "Tech Stacks Deployed" },
+  { value: "15+", label: "Industries Enabled " },
   { value: "24/7", label: "Operational support" },
 ];
 

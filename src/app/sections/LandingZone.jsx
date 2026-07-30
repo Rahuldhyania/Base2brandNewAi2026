@@ -4,7 +4,14 @@ import { StarsBackground } from "../components/visual/StarsBackground";
 import GroundHorizon from "../components/visual/GroundHorizon";
 import { FinalCTA } from "./FinalCTA";
 
-export function LandingZone() {
+export function LandingZone({
+  eyebrow,
+  titleMain,
+  titleAccent,
+  description,
+  checklist,
+  steps,
+} = {}) {
   return (
     <div
       data-testid="landing-zone"
@@ -19,7 +26,14 @@ export function LandingZone() {
         <GroundHorizon />
       </div> */}
       <div className="relative z-10">
-        <FinalCTA />
+        <FinalCTA
+          eyebrow={eyebrow}
+          titleMain={titleMain}
+          titleAccent={titleAccent}
+          description={description}
+          checklist={checklist}
+          steps={steps}
+        />
       </div>
     </div>
   );

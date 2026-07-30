@@ -5,29 +5,39 @@ import { Plus } from "lucide-react";
 
 const FAQ_ITEMS = [
   {
-    question: "What digital marketing services does Base2Brand offer?",
+    question: "What does Base2Brand do?",
     answer:
-      "We offer performance marketing, SEO, social media, content strategy, Shopify & ecommerce, CRO, AI automation, and full-funnel growth campaigns — all aligned to measurable business outcomes.",
+      "Base2Brand builds connected digital growth systems for brands through performance marketing, AI automation, Shopify, CRO, mobile apps, enterprise software, branding and customer experience design.",
   },
   {
-    question: "How does Base2Brand align strategies with my specific business goals?",
+    question: "How is Base2Brand different from a normal marketing or IT agency?",
     answer:
-      "We start with a discovery deep-dive into your market, audience, and KPIs. From there we build a custom growth roadmap so every channel, creative, and campaign maps directly to your revenue goals.",
+      "Base2Brand does not work in disconnected silos. Strategy, creative, media, technology, AI, analytics and conversion optimization are connected into one system focused on measurable business growth.",
   },
   {
-    question: "Does Base2Brand require long-term contracts?",
+    question: "Does Base2Brand provide performance marketing services?",
     answer:
-      "No. We work on flexible engagement models so you can start with a defined scope or sprint and scale only when you see clear results.",
+      "Yes. Base2Brand plans, launches and scales performance campaigns across Google Ads, Meta Ads, LinkedIn, YouTube and marketplace platforms with a focus on leads, revenue, ROAS and conversion quality.",
   },
   {
-    question: "How will I receive updates on my campaigns' performance?",
+    question: "Can Base2Brand help improve website conversions?",
     answer:
-      "You get regular performance reports, live dashboards, and scheduled strategy calls so you always know what’s working, what’s being optimized, and what’s next.",
+      "Yes. Base2Brand provides CRO services for landing pages, Shopify stores, product pages, forms, checkout flows and lead-generation funnels to help brands convert more traffic into customers.",
   },
   {
-    question: "Does Base2Brand work with businesses of all sizes and industries?",
+    question: "Does Base2Brand build Shopify and ecommerce websites?",
     answer:
-      "Yes. We partner with startups, mid-market brands, and enterprises across ecommerce, SaaS, services, and more — adapting our systems to your stage and industry.",
+      "Yes. Base2Brand builds Shopify stores, Shopify Plus experiences, custom ecommerce websites, subscription commerce systems, checkout journeys and retention-focused customer experiences.",
+  },
+  {
+    question: "What kind of AI solutions does Base2Brand build?",
+    answer:
+      "Base2Brand builds AI chatbots, AI sales assistants, lead scoring systems, marketing automation workflows, predictive analytics, generative AI workflows and custom AI applications for business growth.",
+  },
+  {
+    question: "Who does Base2Brand work with?",
+    answer:
+      "Base2Brand works with D2C brands, ecommerce businesses, healthcare companies, education platforms, SaaS companies, real estate brands, manufacturers, professional services firms and enterprise teams.",
   },
 ];
 

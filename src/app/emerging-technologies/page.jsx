@@ -1,3 +1,5 @@
+'use client';
+
 import Industries from "@/components/ai/Industries";
 import Work from "@/components/portfolio-animation/sections/Work";
 import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
@@ -12,6 +14,38 @@ import WaveBackground from "@/components/spatial/WaveBackground";
 import WhySpatial from "@/components/spatial/WhySpatial";
 import { LandingZone } from "@/sections/LandingZone";
 import React from "react";
+import { Zap, Workflow, Cloud, ShieldCheck } from "lucide-react";
+
+const WHY_EMERGING_TECH_CARDS = [
+  {
+    icon: Zap,
+    title: "AI makes operations faster",
+    body: "AI helps teams qualify leads, analyze data, automate decisions, improve customer support and reduce repetitive work across departments.",
+    metric: "+45%",
+    metricLabel: "Faster response time",
+  },
+  {
+    icon: Workflow,
+    title: "Automation removes operational drag",
+    body: "Manual processes slow growth. Our automation technology solutions connect teams, tools and workflows so businesses can move with less friction.",
+    metric: "−40%",
+    metricLabel: "Manual workload",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud gives businesses room to scale",
+    body: "Modern cloud technology helps companies improve performance, security, storage, deployment speed and system reliability.",
+    metric: "2.8x",
+    metricLabel: "Faster deployment",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Cybersecurity protects growth",
+    body: "Every modern system needs security built into the foundation. We design technology with privacy, access control, monitoring and resilience from day one.",
+    metric: "100%",
+    metricLabel: "Security-first architecture",
+  },
+];
 
 const EMERGING_TECH_INDUSTRIES = [
   {
@@ -161,7 +195,12 @@ const page = () => {
 
       <main>
         <Hero />
-        <WhySpatial />
+        <WhySpatial
+          titlePrefix="Why enterprises are investing in"
+          titleAccent="Emerging Technologies"
+          subtitle="The next advantage belongs to businesses that modernize before they are forced to. Technology is no longer just a support function. It is the operating layer behind growth, efficiency, customer experience and resilience."
+          cards={WHY_EMERGING_TECH_CARDS}
+        />
         <Capabilities />
         <Work
           title="Emerging tech cases."
@@ -179,9 +218,27 @@ const page = () => {
         />
         <Process />
         <CaseStudies />
-        <CommandCenter />
+        <CommandCenter
+          title="Every technology. Every innovation. One future-ready ecosystem."
+          subtitle="We help businesses adopt emerging technologies through AI, IoT, enterprise automation, cloud platforms, blockchain, digital twins and intelligent systems—bringing innovation, infrastructure and connected operations into one unified technology stack."
+        />
         <CtaSection />
-        <LandingZone />
+        <LandingZone
+          eyebrow="Start a transformation"
+          titleMain="Tell us where innovation is stuck."
+          titleAccent="We'll show you how to unlock it."
+          description="Need AI, IoT, automation, cloud, blockchain or connected enterprise solutions? We'll map the technology strategy your business needs next."
+          checklist={[
+            "No generic technology proposal.",
+            "No confusing discovery process.",
+            "Just a clear, practical roadmap built around your business goals.",
+          ]}
+          steps={[
+            { title: "We review your vision", desc: "Our team evaluates your technology requirements." },
+            { title: "Custom roadmap crafted", desc: "No templates. A strategy built for innovation." },
+            { title: "We get to work", desc: "Clear milestones, expert delivery, measurable outcomes." },
+          ]}
+        />
       </main>
     </div>
   );

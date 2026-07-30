@@ -18,7 +18,7 @@ const features = [
     d: "Conversational search is replacing traditional search journeys for high-intent questions.",
   },
   {
-    l: "Behaviour is shifting",
+    l: "Buyer behaviour is shifting",
     d: "Customers now ask AI assistants before they open a search tab, browse a website or contact sales.",
   },
   {
@@ -325,10 +325,28 @@ export default function page() {
         steps={steps}
       />
       <Industries />
-      <CommandCenter />
+      <CommandCenter
+        title="Every prompt. Every mention. One AI visibility console"
+        subtitle="We monitor how your brand appears across ChatGPT, Gemini, Claude, Perplexity, Google AI Overviews and Bing Copilot—bringing prompts, citations, recommendations, competitor visibility and share-of-answer into one connected growth view."
+      />
       <Services />
       <WhyUs />
-      <LandingZone />
+      <LandingZone
+        eyebrow="Start a transformation"
+        titleMain="Tell us where visibility is stuck."
+        titleAccent="We'll show you how to unlock it."
+        description="Need more AI mentions, citations, recommendations or search visibility? We'll map the growth system your brand needs next."
+        checklist={[
+          "No generic SEO proposal.",
+          "No confusing audit process.",
+          "Just a clear plan built around your visibility goals.",
+        ]}
+        steps={[
+          { title: "We review your visibility", desc: "Our team tests prompts and identifies gaps." },
+          { title: "Custom roadmap crafted", desc: "A focused strategy built for your brand." },
+          { title: "We get to work", desc: "Clear priorities, measurable visibility, real growth." },
+        ]}
+      />
     </main>
   );
 }

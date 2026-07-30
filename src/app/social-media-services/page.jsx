@@ -443,17 +443,15 @@ export default function page() {
       />
       <MarqueeStrip />
       <Narrative
-        highlightTag={"Why Growth Has Changed"}
+        highlightTag={"WHO CAN IMPROVE MY PRODUCT CONVERSIONS? "}
         title={"Attention is scattered, Your marketing cannot be"}
         description={[
           "Customers no longer discover brands from one channel alone. They move across Google, AI search, social feeds, YouTube, reviews, ads, communities and websites before making a decision. Winning brands connect every touchpoint into one clear growth system — built to attract, engage and convert.",
         ]}
         features={features}
         tagList={[
-          "Best CRM software for B2B SaaS",
-          "Top digital marketing agency in 2026",
-          "Best HRMS company for mid-market",
-          "Who should I hire for web development?",
+          "Traffic only matters when it converts. Businesses are looking for CRO, landing pages and analytics that turn visitors into customers.",
+        
         ]}
       />
       <Capabilities
@@ -493,7 +491,22 @@ export default function page() {
         industriesData={SOCIAL_INDUSTRIES}
       />
       <CreativeShowcase />
-      <LandingZone />
+      <LandingZone
+        eyebrow="Start a transformation"
+        titleMain="Tell us where your marketing is stuck."
+        titleAccent="We'll show you how to scale it."
+        description="Need better leads, ROAS, conversions, SEO or social growth? We'll map the digital marketing strategy your business needs next."
+        checklist={[
+          "No generic marketing proposal.",
+          "No confusing discovery process.",
+          "Just a clear, practical plan built around your growth goals.",
+        ]}
+        steps={[
+          { title: "We review your marketing", desc: "Our team analyses every channel and opportunity." },
+          { title: "Custom strategy crafted", desc: "No templates. A growth plan built for your goals." },
+          { title: "We get to work", desc: "Clear campaigns, focused execution, measurable results." },
+        ]}
+      />
     </div>
   );
 }

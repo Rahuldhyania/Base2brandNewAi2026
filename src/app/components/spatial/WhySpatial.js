@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, ShieldCheck, Users, Layers } from "lucide-react";
 import { SPATIAL } from "@/constants/testIds";
 
-const cards = [
+const defaultCards = [
   {
     icon: GraduationCap,
     title: "Immersive learning that sticks",
@@ -44,7 +44,12 @@ const itemVariants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-export default function WhySpatial() {
+export default function WhySpatial({
+  titlePrefix = "Why enterprises are investing in",
+  titleAccent = "Spatial Computing.",
+  subtitle = "Spatial computing is no longer experimental. It is rapidly becoming the most efficient interface for training, operations and collaboration across regulated, distributed enterprises.",
+  cards = defaultCards,
+}) {
   return (
     <section
       id="why"
@@ -55,14 +60,14 @@ export default function WhySpatial() {
         <div className="gap-12 mb-10 text-center">
           <div>
             <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-              Why enterprises are investing in{" "}
-              <span className="text-(--b2b-primary)">Spatial Computing.</span>
+              {titlePrefix}{" "}
+              <span className="text-(--b2b-primary)">{titleAccent}</span>
             </h2>
           </div>
           <p
             className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3"
           >
-            Spatial computing is no longer experimental. It is rapidly becoming the most efficient interface for training, operations and collaboration across regulated, distributed enterprises.
+            {subtitle}
           </p>
         </div>
 
