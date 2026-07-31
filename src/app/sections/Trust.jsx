@@ -152,12 +152,12 @@ const TrustSection = () => {
       <div className='grid md:grid-cols-[1fr_2fr] gap-8 items-center pt-12  px-6 2xl:px-0'>
         <div className="border-r-[3px] border-white/60">
           <div>
-            <div className="text-2xl font-mono-display uppercase tracking-[0.25em] text-mute">
+            <div className="text-lg md:text-2xl font-mono-display uppercase tracking-[0.25em] text-mute">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand mr-2 align-middle shadow-[0_0_10px_#ff6a00]" />
               VOICES FROM THE BRIDGE
             </div>
 
-            <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.10] uppercase">
+            <h2 className="mt-4 font-display text-white text-2xl sm:text-4xl lg:text-5xl leading-[1.10] uppercase">
               Confidential partners
               <span className="block text-mute">Public outcomes</span>
             </h2>
