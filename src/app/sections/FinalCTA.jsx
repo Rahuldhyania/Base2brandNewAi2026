@@ -15,7 +15,7 @@ export function FinalCTA() {
     <section
       id="contact"
       data-testid="final-cta-section"
-      className="relative py-20 overflow-hidden"
+      className="relative py-6 md:py-14 lg:py-20 overflow-hidden"
     >
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid lg:grid-cols-[1fr_1.35fr] gap-12 xl:gap-16 items-start">

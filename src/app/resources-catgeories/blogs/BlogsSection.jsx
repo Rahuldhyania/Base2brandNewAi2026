@@ -65,7 +65,7 @@ export default function BlogsSection({ sectionRef }) {
         {loading ? (
           <BlogsSectionSkeleton />
         ) : blogData.length === 0 ? (
-          <div className="text-center text-white/60 py-10">
+          <div className="text-center text-white/60 py-3 md:py-10">
             No blogs available right now.
           </div>
         ) : (

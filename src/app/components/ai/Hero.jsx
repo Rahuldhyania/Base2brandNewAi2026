@@ -73,7 +73,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
-              className="mt-4 font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance"
+              className="mt-4 font-display text-white text-3xl lg:text-5xl leading-[1.05] tracking-tight text-balance"
             >
               We engineer AI automation systems 
               <span className="text-white/95">that run workflows,</span>{" "}
@@ -87,7 +87,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="mt-4 text-lg sm:text-xl text-white/55 max-w-2xl"
+              className="mt-4 text-base md:text-lg text-white/55 max-w-2xl"
             >
              Base2Brand delivers AI automation services, AI agent development, enterprise AI solutions and generative AI solutions built to improve operations, qualify leads, support customers, automate decisions and scale business performance.
             </motion.p>

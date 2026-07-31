@@ -275,7 +275,7 @@ export default function page() {
         features={features}
         highlightTag={"THE NEW OPERATING MODEL"}
         tagList={["01 — Thesis"]}
-      />
+       />
       <Capabilities
         title={"Six practices, One intelligence layer."}
         description={`We don't sell features. We engineer the AI capability stack your operations depend on — designed, governed, and measured end-to-end.`}
@@ -290,7 +290,7 @@ export default function page() {
         }
         ITEMS={ITEMS}
       />
-      <Architecture />
+     <Architecture />
       <Work
         title="Selected AI automation cases."
         titleLower="Systems that shipped outcomes."
@@ -301,17 +301,16 @@ export default function page() {
         highlightTag={'BUILT ON THE LATEST AI STACK'}
         title={"Models, frameworks and infrastructure — composed deliberately."}
       />
-      <Industries />
-      <MaturityFramework />
+     <Industries />
+     <MaturityFramework />
       <ResearchLab />
-      <CommandCenter
+       <CommandCenter
         title="Every workflow. Every agent. One AI operating layer."
         subtitle="We engineer enterprise AI automation that orchestrates agents, workflows, business systems and real-time data from one intelligent control layer. From AI copilots and document intelligence to workflow automation and system integrations, every decision becomes faster, smarter and measurable."
       />
-      {/* <EngagementModels /> */}
-      <SEOContent />
-      <LandingZone />
-      <FinalCTA
+     <SEOContent />
+     <LandingZone />
+        <FinalCTA
         highlightTag={'START AN AI TRANSFORMATION'}
         titleUpper={'Tell us the hardest workflow'}
         titleLower={"you've postponed."}
@@ -324,7 +323,7 @@ export default function page() {
           "Production-grade",
           "Globally deployed",
         ]}
-      />
+      /> 
     </main>
   );
 }

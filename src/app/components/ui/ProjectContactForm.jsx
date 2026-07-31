@@ -52,7 +52,7 @@ const initialFormData = {
 };
 
 const inputBase =
-  "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:border-[var(--b2b-primary)] focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]";
+  "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-2 md:py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:border-[var(--b2b-primary)] focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]";
 
 function FieldLabel({ children }) {
   return (
@@ -154,7 +154,7 @@ export default function ProjectContactForm({ embedded = false }) {
   const formCard = (
     <form
       onSubmit={handleSubmit}
-      className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 p-5 shadow-2xl backdrop-blur-2xl sm:p-6"
+      className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 px-3 py-5 shadow-2xl backdrop-blur-2xl sm:py-6"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,color-mix(in_srgb,var(--b2b-primary)_18%,transparent),transparent_36%)]" />
 
@@ -360,7 +360,7 @@ export default function ProjectContactForm({ embedded = false }) {
           whileTap={isSubmitting ? undefined : { scale: 0.98 }}
           type="submit"
           disabled={isSubmitting}
-          className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--b2b-primary)] px-6 py-4 text-sm font-bold text-black transition-all hover:shadow-[0_0_40px_color-mix(in_srgb,var(--b2b-primary)_45%,transparent)] disabled:cursor-not-allowed disabled:opacity-60"
+          className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--b2b-primary)] px-6 py-3 md:py-4 text-sm font-bold text-black transition-all hover:shadow-[0_0_40px_color-mix(in_srgb,var(--b2b-primary)_45%,transparent)] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "Submitting..." : "Get Your Free Audit"}
 

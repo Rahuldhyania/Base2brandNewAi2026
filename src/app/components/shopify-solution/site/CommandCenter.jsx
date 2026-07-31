@@ -17,7 +17,7 @@ export const CommandCenter = ({
   return (
     <section
       data-testid="command-center"
-      className="relative overflow-hidden border-t border-white/[0.06] py-16"
+      className="relative overflow-hidden border-t border-white/[0.06] py-12 md:py-16"
     >
       <div
         aria-hidden="true"

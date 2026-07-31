@@ -69,7 +69,7 @@ export function ClientFootprint() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.1 }}
-            className="relative mx-auto w-full md:max-w-[520px]"
+            className="relative mx-auto w-full md:max-w-[520px] hidden md:block"
             data-testid="footprint-globe"
           >
             {/* outer orbit ring */}
@@ -103,15 +103,15 @@ export function ClientFootprint() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.55, delay: i * 0.06 }}
-                className="group relative flex items-center justify-between gap-3 md:gap-6 rounded-lg md:rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-2.5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
+                className="group relative flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-6 rounded-lg md:rounded-2xl border border-line bg-white/[0.02] px-5 sm:px-6 py-2.5 hover:border-orange-brand/60 hover:bg-white/[0.04] transition"
                 data-testid={`footprint-region-${r.region.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {/* index */}
-                <div className="font-mono-display text-xs text-mute w-6">
+                <div className="font-mono-display text-xs text-mute w-6 hidden md:block">
                   0{i + 1}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-display text-white text-lg sm:text-xl tracking-tight">
+                  <div className="font-display text-white text-base md:text-xl tracking-tight">
                     {r.region}
                   </div>
                   <div className="md:mt-1 text-sm text-mute truncate">

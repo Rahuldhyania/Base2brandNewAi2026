@@ -26,7 +26,7 @@ export const SectionHeader = ({
       <Reveal delay={0.05}>
         <h2
           className={cn(
-            "font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-2 md:mt-4 max-w-3xl",
+            "mt-2 sm:mt-4 font-display text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance max-w-3xl",
             titleClassName,
           )}
         >

@@ -1,9 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import FinalCTA from "@/components/ai/FinalCTA";
 import StarsBackground from "@/components/erp/StarsBackground";
+import "swiper/css";
 
 const API_BASE =
   process.env.NEXT_PUBLIC_LOCAL_API_URL ||
@@ -72,6 +75,7 @@ const formatDate = (date) => {
 };
 
 export default function CaseStudyDetail({ slug }) {
+  const galleryRef = useRef(null);
   const [study, setStudy] = useState(null);
   const [relatedStudies, setRelatedStudies] =
     useState([]);
@@ -766,26 +770,59 @@ export default function CaseStudyDetail({ slug }) {
 
           {study.detail.gallery.length >
             0 && (
-              <article className="rounded-2xl mt-10">
-
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <article className="relative mt-10 rounded-2xl">
+                <Swiper
+                  onSwiper={(swiper) => {
+                    galleryRef.current = swiper;
+                  }}
+                  spaceBetween={16}
+                  slidesPerView={1}
+                  breakpoints={{
+                    768: { slidesPerView: 2 },
+                    1280: { slidesPerView: 3 },
+                  }}
+                  loop={study.detail.gallery.length > 1}
+                  speed={500}
+                  className="w-full"
+                >
                   {study.detail.gallery.map(
                     (source, index) => (
-                      <div
-                        key={`${source}-${index}`}
-                        className="overflow-hidden rounded-xl border border-white/10"
-                      >
-                        <img
-                          src={source}
-                          alt={`${study.title} gallery ${index + 1
-                            }`}
-                          className="aspect-[4/3] w-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
+                      <SwiperSlide key={`${source}-${index}`}>
+                        <div className="overflow-hidden rounded-xl border border-white/10">
+                          <img
+                            src={source}
+                            alt={`${study.title} gallery ${index + 1
+                              }`}
+                            className="aspect-[4/3] w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      </SwiperSlide>
                     )
                   )}
-                </div>
+                </Swiper>
+
+                {study.detail.gallery.length > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      aria-label="Previous image"
+                      onClick={() => galleryRef.current?.slidePrev()}
+                      className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur transition hover:bg-black/70"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Next image"
+                      onClick={() => galleryRef.current?.slideNext()}
+                      className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur transition hover:bg-black/70"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </>
+                )}
               </article>
             )}
 

@@ -52,11 +52,22 @@ const polar = (angle, radius) => {
   return { x: 50 + radius * Math.cos(a), y: 50 + radius * Math.sin(a) };
 };
 
+const MOBILE_BREAKPOINT = "(max-width: 1023px)";
+
 const MaturityFramework = () => {
   const sectionRef = useRef(null);
   const [active, setActive] = useState(0);
   const [pinPhase, setPinPhase] = useState("before");
+  const [isMobile, setIsMobile] = useState(false);
   const reduce = useReducedMotion();
+
+  useLayoutEffect(() => {
+    const mq = window.matchMedia(MOBILE_BREAKPOINT);
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -71,14 +82,16 @@ const MaturityFramework = () => {
   });
 
   // Indicator rotation goes from first node (0°) to last node (300°)
-  const lastAngle = (360 / STAGES.length) * (STAGES.length - 1);
+  const perStageAngle = 360 / STAGES.length;
+  const lastAngle = perStageAngle * (STAGES.length - 1);
   const indicatorAngle = useTransform(smoothed, [0, 1], [0, lastAngle]);
 
   // Progress bar width
   const progressWidth = useTransform(smoothed, [0, 1], ["0%", "100%"]);
 
-  // Update discrete active stage based on motion value
+  // Update discrete active stage based on motion value (desktop scroll-scrub only)
   useMotionValueEvent(smoothed, "change", (v) => {
+    if (isMobile) return;
     const next = Math.min(
       STAGES.length - 1,
       Math.max(0, Math.floor(v * STAGES.length)),
@@ -87,6 +100,11 @@ const MaturityFramework = () => {
   });
 
   useLayoutEffect(() => {
+    if (isMobile) {
+      setPinPhase("before");
+      return;
+    }
+
     const section = sectionRef.current;
     if (!section) return;
 
@@ -110,9 +128,14 @@ const MaturityFramework = () => {
       window.removeEventListener("scroll", updatePin);
       window.removeEventListener("resize", updatePin);
     };
-  }, []);
+  }, [isMobile]);
 
   const jumpToStage = (i) => {
+    if (isMobile) {
+      setActive(i);
+      return;
+    }
+
     const el = sectionRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -127,15 +150,17 @@ const MaturityFramework = () => {
   const scrollTrackHeight = `${STAGES.length * SCROLL_PER_STAGE_VH}vh`;
   const panelHeight = `calc(100vh - ${NAV_HEIGHT}px)`;
 
-  const panelClass =
-    pinPhase === "pinned"
+  const panelClass = isMobile
+    ? "relative z-10"
+    : pinPhase === "pinned"
       ? "fixed left-0 right-0 z-20"
       : pinPhase === "after"
         ? "absolute left-0 right-0 bottom-0 z-10"
         : "relative z-10";
 
-  const panelStyle =
-    pinPhase === "pinned"
+  const panelStyle = isMobile
+    ? {}
+    : pinPhase === "pinned"
       ? { top: NAV_HEIGHT, height: panelHeight }
       : { height: panelHeight };
 
@@ -144,7 +169,7 @@ const MaturityFramework = () => {
       ref={sectionRef}
       data-testid="maturity-section"
       className="relative overflow-hidden bg-[#03030A]"
-      style={{ height: scrollTrackHeight }}
+      style={isMobile ? undefined : { height: scrollTrackHeight }}
     >
       <div
         className={`${panelClass} flex items-center overflow-hidden bg-[#03030A]`}
@@ -178,7 +203,7 @@ const MaturityFramework = () => {
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Radial timeline */}
               <div className="lg:col-span-6">
-                <div className="relative aspect-square w-full max-w-[460px] mx-auto">
+                <div className="relative aspect-square w-full max-w-[360px] md:max-w-[460px] mx-auto">
                   <svg
                     viewBox="0 0 100 100"
                     className="absolute inset-0 w-full h-full"
@@ -259,10 +284,17 @@ const MaturityFramework = () => {
                   {/* Smooth orbital indicator — driven by scroll */}
                   <motion.div
                     className="absolute inset-0"
-                    style={{
-                      transformOrigin: "50% 50%",
-                      rotate: indicatorAngle,
-                    }}
+                    style={
+                      isMobile
+                        ? { transformOrigin: "50% 50%" }
+                        : { transformOrigin: "50% 50%", rotate: indicatorAngle }
+                    }
+                    animate={isMobile ? { rotate: perStageAngle * active } : undefined}
+                    transition={
+                      isMobile
+                        ? { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+                        : undefined
+                    }
                     aria-hidden="true"
                   >
                     <div className="absolute left-1/2 top-[10%] -translate-x-1/2 -translate-y-1/2">
@@ -385,7 +417,17 @@ const MaturityFramework = () => {
                 <div className="mt-6 relative h-1 rounded-full bg-white/8 overflow-hidden">
                   <motion.div
                     className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#C084FC]"
-                    style={{ width: progressWidth }}
+                    style={isMobile ? undefined : { width: progressWidth }}
+                    animate={
+                      isMobile
+                        ? { width: `${((active + 1) / STAGES.length) * 100}%` }
+                        : undefined
+                    }
+                    transition={
+                      isMobile
+                        ? { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+                        : undefined
+                    }
                   />
                 </div>
                 {/* Stage jump dots */}

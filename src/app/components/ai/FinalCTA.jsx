@@ -64,7 +64,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
         <Reveal delay={0.15}>
           <p
             data-testid="final-cta-subheadline"
-            className="mt-4 max-w-2xl mx-auto text-white/55 text-base md:text-lg leading-relaxed"
+            className="mt-4 max-w-2xl mx-auto text-white/55 text-sm md:text-lg leading-relaxed"
           >
             {description}
           </p>
@@ -75,7 +75,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
             <a
               href="mailto:hello@base2brand.com?subject=AI%20Transformation"
               data-testid="final-cta-primary"
-              className="group inline-flex items-center justify-center gap-2 bg-(--b2b-primary)/80 hover:bg-(--b2b-primary) text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
+              className="group inline-flex items-center justify-center gap-2 bg-(--b2b-primary)/80 hover:bg-(--b2b-primary) text-white px-6 sm:px-7 py-2 sm:py-4 rounded-full text-xs md:text-sm font-medium transition-all shadow-[0_0_35px_-10px_rgba(139,92,246,0.55)]"
             >
               <Sparkles className="w-4 h-4" />
               {CTALeft}
@@ -84,7 +84,7 @@ const FinalCTA = ({ highlightTag, titleUpper, titleLower, description, CTALeft, 
             <a
               href="mailto:hello@base2brand.com?subject=Talk%20to%20AI%20Architects"
               data-testid="final-cta-secondary"
-              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm font-medium transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/40 hover:bg-white/[0.03] text-white px-6 sm:px-7 py-2 sm:py-4 rounded-full text-xs md:text-sm font-medium transition-all"
             >
               {CTARight}
               <ArrowUpRight className="w-4 h-4" />

@@ -7,7 +7,7 @@ import { CalendarDays, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase } from "../../../lib/supabase/client";
 const inputBase =
-  "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:border-[var(--b2b-primary)] focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]";
+  "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-2 md:py-3.5 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:border-[var(--b2b-primary)] focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_color-mix(in_srgb,var(--b2b-primary)_16%,transparent)]";
 
 function FieldLabel({ children, required }) {
   return (
@@ -85,7 +85,7 @@ export default function ScheduleCallForm({ className }) {
     <form
       onSubmit={handleSubmit}
       className={cn(
-        "relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 p-5 shadow-2xl backdrop-blur-2xl sm:p-6",
+        "relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 px-3 py-5 shadow-2xl backdrop-blur-2xl sm:py-6",
         className,
       )}
     >
@@ -173,7 +173,7 @@ export default function ScheduleCallForm({ className }) {
       <div className="relative mt-6">
         <button
           type="submit"
-          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--b2b-primary)] px-6 py-4 text-sm font-bold text-black transition-all hover:shadow-[0_0_40px_color-mix(in_srgb,var(--b2b-primary)_45%,transparent)]"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--b2b-primary)] px-6 py-3 md:py-4 text-sm font-bold text-black transition-all hover:shadow-[0_0_40px_color-mix(in_srgb,var(--b2b-primary)_45%,transparent)]"
         >
           <CalendarDays className="h-4 w-4" />
           Confirm Meeting

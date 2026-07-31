@@ -225,7 +225,7 @@ export async function getIndustryBySlug(slug) {
 export async function fetchBlogs({ page = 1, limit = 9 } = {}) {
   try {
     const data = await clientFetch(
-      `https://admin.b2bcampus.com/api/v2/api/B2Badmin/blogs?page=${page}&limit=${limit}`
+      `${API_BASE}/blogs?page=${page}&limit=${limit}`
     );
     const blogs = data?.blogs || [];
 
@@ -246,7 +246,7 @@ export async function getBlogBySlug(slug) {
   try {
     if (!slug) return null;
 
-    const data = await clientFetch(`https://admin.b2bcampus.com/api/v2/api/B2Badmin/blogs/slug/${slug}`);
+    const data = await clientFetch(`${API_BASE}/blogs/slug/${slug}`);
     return data?.blog || null;
   } catch {
     return null;

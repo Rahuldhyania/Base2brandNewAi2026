@@ -2497,6 +2497,12 @@
   font-size: 0.875rem;
   padding: 0.875rem 0;
 }
+
+@media screen and (max-width : 768px) {
+    .phone-input-wrap .PhoneInputInput {
+       padding: 0.700rem 0; 
+    }
+}
 .phone-input-wrap .PhoneInputInput::placeholder {
   color: rgba(255, 255, 255, 0.35);
 }

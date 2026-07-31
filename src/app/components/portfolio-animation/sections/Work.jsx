@@ -516,12 +516,12 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
     <div
       ref={ref}
       data-testid={extraData.work.project(project.id)}
-      className="relative flex items-center px-6 md:px-12 py-12"
+      className="relative flex items-center px-4 md:px-12 py-6 md:py-12"
     >
-      <div className={`max-w-[1180px] mx-auto w-full grid ${wide_container ? index % 2 === 1 ? 'md:grid-cols-[4fr_2fr]' : 'md:grid-cols-[2fr_4fr]' : index % 2 === 1 ? 'grid-cols-[3fr_2fr]' : 'grid-cols-[2fr_3fr]'}  gap-8 items-center`}>
+      <div className={`md:max-w-[1180px] mx-auto w-full grid ${wide_container ? index % 2 === 1 ? 'lg:grid-cols-[4fr_2fr]' : 'lg:grid-cols-[2fr_4fr]' : index % 2 === 1 ? 'lg:grid-cols-[3fr_2fr]' : 'lg:grid-cols-[2fr_3fr]'}  gap-3 md:gap-8 items-center`}>
         {/* Copy side */}
         <div className={index % 2 === 1 ? "md:order-2" : ""}>
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-3 md:mb-6">
             <span className="font-mono text-[11px] tracking-[0.22em] text-[var(--b2b-orange)]">
               {project.n}
             </span>
@@ -530,14 +530,14 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
               {project.tag}
             </span>
           </div>
-          <h3 className="font-display text-white text-[30px] md:text-[38px] leading-[1.05] tracking-[-0.03em] max-w-[520px]">
+          <h3 className="font-display text-white text-[22px] md:text-[28px] xl:text-[32px] 2xl:text-[38px] leading-[1.05] tracking-[-0.03em] max-w-[520px]">
             {project.title}
           </h3>
 
-          <div className="mt-2 flex flex-wrap gap-8">
+          <div className="mt-2 flex flex-wrap gap-3 md:gap-8">
             {project.metrics.map((m) => (
               <div key={m.l} className="flex flex-col gap-1">
-                <div className="font-display text-4xl text-[var(--b2b-orange)] tracking-[-0.03em]">
+                <div className="font-display text-2xl md:text-4xl text-[var(--b2b-orange)] tracking-[-0.03em]">
                   {m.v}
                 </div>
                 <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--b2b-text-muted)]">
@@ -566,7 +566,7 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
         {/* Browser side */}
         <motion.div
           data-testid={extraData.work.browserExpand(project.id)}
-          className={`relative ddff ${index % 2 === 1 ? "md:order-1" : ""}`}
+          className={`relative ddff min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}
         >
           <motion.div
             aria-hidden
@@ -596,19 +596,20 @@ function BrowserWindow({ project, imageBorderColor }) {
   return (
     <div className="relative overflow-hidden rounded-[20px] border border-white/12 bg-gradient-to-br from-[#0E1018] to-[#080910] shadow-[0_40px_120px_-40px_rgb(var(--b2b-primary)/0.35)]">
       <div className="flex items-center gap-3 border-b border-white/8 bg-[rgba(255,255,255,0.02)] px-4 py-3">
-        <div className="flex gap-1.5">
+        <div className="flex shrink-0 gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#3A3A45]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#3A3A45]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#3A3A45]" />
         </div>
 
-        <div className="mx-4 flex-1">
-          <div className="mx-auto flex h-6 max-w-[280px] items-center justify-center gap-2 rounded-full bg-white/5 px-3">
+        <div className="mx-4 min-w-0 flex-1">
+          <div className="mx-auto flex h-6 max-w-[280px] min-w-0 items-center justify-center gap-2 rounded-full bg-white/5 px-3">
             <svg
               width="10"
               height="10"
               viewBox="0 0 10 10"
               fill="none"
+              className="shrink-0"
             >
               <rect
                 x="2"
@@ -627,13 +628,13 @@ function BrowserWindow({ project, imageBorderColor }) {
               />
             </svg>
 
-            <span className="truncate font-mono text-[10px] text-white/50">
+            <span className="min-w-0 truncate font-mono text-[10px] text-white/50">
               {project.url || project.slug}
             </span>
           </div>
         </div>
 
-        <span className="font-mono text-[10px] text-[var(--b2b-orange)]/80">
+        <span className="shrink-0 font-mono text-[10px] text-[var(--b2b-orange)]/80">
           ● live
         </span>
       </div>
@@ -750,13 +751,13 @@ export default function Work({
       data-testid={extraData.work.root}
       className="relative"
     >
-      <div className="px-6 pb-6 pt-14 md:px-12 md:pb-10">
+      <div className="px-4 pt-10 md:pt-14 md:px-12 md:pb-10">
         <div className="mx-auto max-w-[1180px]">
           <div className="eyebrow mb-4">
             Proof
           </div>
 
-          <h2 className="max-w-[820px] font-display text-[38px] leading-[0.98] tracking-[-0.035em] text-white md:text-[56px]">
+          <h2 className="max-w-[820px] font-display text-[20px] md:text-[24px] lg:text-[26px] xl:text-[32px] 2xl:text-[38px] leading-[1.2] tracking-[-0.035em] text-white md:text-[56px]">
             {title}
             <br />
 

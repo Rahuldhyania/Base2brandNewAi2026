@@ -99,7 +99,7 @@ const TweetCard = ({
   return (
     <article
       data-testid={testId}
-      className={`w-full max-w-[590px] rounded-2xl p-5 md:p-6 bg-[#0B0716] border border-white/[0.06] hover:border-[#8B5CF6]/30 transition-colors text-white/90 ${className}`}
+      className={`w-full max-w-[590px] rounded-2xl p-3 md:p-6 bg-[#0B0716] border border-white/[0.06] hover:border-[#8B5CF6]/30 transition-colors text-white/90 ${className}`}
     >
       <header className="flex items-start justify-between">
         <div className="flex items-center gap-2.5">

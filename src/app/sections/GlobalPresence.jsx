@@ -50,7 +50,7 @@ export function GlobalPresence() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.9 }}
-          className="mt-14 rounded-3xl border border-line bg-[#04061a]/60 p-4 sm:p-8 relative overflow-hidden"
+          className="mt-12 rounded-3xl border border-line bg-[#04061a]/60 p-4 sm:p-8 relative overflow-hidden"
           data-testid="global-map-container"
         >
           <DottedWorldMap locations={LOCATIONS} originIndex={0} />

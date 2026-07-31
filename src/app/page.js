@@ -10,6 +10,7 @@ import GrowthSystem from "./sections/GrowthSystem";
 import ClientFeedback from "./sections/ClientFeedback";
 import FAQ from "./sections/FAQ";
 import InsightsSection from "./resources-catgeories/insights/InsightsSection";
+import { WORK_CAROUSEL_CASES } from "./case-study/data/workCarouselData";
 
 
 const ClientFootprint = dynamic(
@@ -68,6 +69,11 @@ const LandingZone = dynamic(
   { loading: () => <SectionFallback minHeight={640} /> },
 );
 
+const WorkCarousel = dynamic(
+  () => import("@/components/portfolio-animation/sections/WorkCarousel"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+
 const SECTIONS = [
   { id: "top", label: "Welcome to Base2Brand" },
   { id: "trust", label: "How We Do Things" },
@@ -100,11 +106,12 @@ export default function page() {
         <ClientFeedback />
         {/* <Services /> */}
                  {/* <Solutions /> */}
-        <CaseStudies />
+        {/* <CaseStudies /> */}
                  {/* <Industries /> */}
         <Industries />
         {/* <Testimonials /> */}
                    {/* <Innovation /> */}
+        <WorkCarousel cardsData={WORK_CAROUSEL_CASES} />
         <GovtNGO />
         <CommandCenter />
         <FAQ />

@@ -180,7 +180,7 @@ const SuccessStoriesWrap = () => {
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9, delay: 0.2 }}
-                            className="relative mt-10 md:mt-14 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 md:p-12 grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-12 items-center overflow-hidden"
+                            className="relative mt-10 md:mt-14 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-4 md:p-12 grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-12 items-center overflow-hidden"
                         >
                             <Quote className="absolute -top-2 left-6 text-[var(--b2b-orange)]/15" size={96} />
                             <div className="relative">
@@ -302,7 +302,7 @@ const SuccessStoriesWrap = () => {
                 </section>
 
                 {/* ── By the numbers band ── */}
-                <section className="px-6 md:px-12 py-12 md:py-16">
+                <section className="px-6 md:px-12 pt-12 md:pt-16 pb-12 md:pb-16">
                     <div className="max-w-[1180px] mx-auto rounded-3xl border border-white/10 bg-[rgba(10,11,18,0.55)] overflow-hidden">
                         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/8">
                             {NUMBERS.map((n) => (

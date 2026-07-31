@@ -55,7 +55,7 @@ const ResearchLab = () => {
       data-testid="research-section"
       className="relative py-12 md:py-16"
     >
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         <BackgroundPaths opacity={0.01} />
         <SmokeBackground smokeColor="#8B5CF6" opacity={0.22} />
         <Atmosphere intensity={0.25} />
@@ -97,12 +97,12 @@ const ResearchLab = () => {
               <h2 className="mt-6 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance">
                 What we&apos;re researching.
               </h2>
-              <p className="mt-6 text-white/55 leading-relaxed">
+              <p className="mt-2 md:mt-6 text-white/55 leading-relaxed">
                 Active research lines feeding our enterprise AI engagements — where we are investing engineering, automation and design capital this year.
               </p>
               <div
                 data-testid="research-thinking"
-                className="mt-10 inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/[0.02]"
+                className="mt-4 md:mt-10 inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/[0.02]"
               >
                 <span className="relative inline-flex">
                   <span className="w-2 h-2 rounded-full bg-[#A855F7]" />

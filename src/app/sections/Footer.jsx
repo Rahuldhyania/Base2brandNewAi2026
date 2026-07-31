@@ -1,8 +1,8 @@
 'use client';
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { CurrentLogo } from "../components/layout/CurrentLogo";
-import { Linkedin, Twitter, Github, Youtube, Facebook } from "lucide-react";
+import { Linkedin, Twitter, Github, Youtube, Facebook, ChevronDown } from "lucide-react";
 import NewsLetter from "@/components/ui/NewsLetter";
 
 const OFFICES = [
@@ -70,6 +70,90 @@ const NAV = [
   },
 ];
 
+function FooterNavColumn({ col }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-line/40 pb-2 sm:border-none sm:pb-0">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        data-testid={`footer-nav-toggle-${col.title.toLowerCase()}`}
+        className="flex w-full items-center justify-between gap-2 text-xs font-mono-display uppercase tracking-[0.22em] text-orange-brand sm:pointer-events-none sm:cursor-default"
+      >
+        {col.title}
+        <ChevronDown
+          size={14}
+          className={`shrink-0 transition-transform duration-300 sm:hidden ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <ul
+        className={`mt-3 overflow-hidden transition-[max-height] duration-300 ease-out sm:max-h-none! sm:overflow-visible ${
+          open ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        {col.links.map((l) => (
+          <li key={l.label} className="pb-3 last:pb-0">
+            <Link
+              href={l.href}
+              data-testid={`footer-link-${l.label.toLowerCase().replace(/\s/g, "-")}`}
+              className="text-xs text-white/80 hover:text-orange-brand transition"
+            >
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function FooterOffices() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        data-testid="footer-offices-toggle"
+        className="flex w-full items-center justify-between gap-2 text-xs font-mono-display uppercase tracking-[0.22em] text-mute md:mb-6 sm:pointer-events-none sm:cursor-default"
+      >
+        Where we operate
+        <ChevronDown
+          size={14}
+          className={`shrink-0 transition-transform duration-300 sm:hidden ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <div
+        className={`grid grid-cols-2 gap-6 overflow-hidden transition-[max-height] duration-300 ease-out lg:grid-cols-4 sm:max-h-none! sm:overflow-visible ${
+          open ? "max-h-300" : "max-h-0"
+        }`}
+      >
+        {OFFICES.map((o) => (
+          <div
+            key={o.city}
+            data-testid={`footer-office-${o.city.toLowerCase().replace(/\s/g, "-")}`}
+            className="border-l border-orange-brand/30 pl-4"
+          >
+            <div className="text-xs uppercase tracking-[0.22em] text-orange-brand font-mono-display">
+              {o.role}
+            </div>
+            <div className="mt-2 font-display text-white text-base">
+              {o.city}
+            </div>
+            <div className="mt-1 text-xs text-mute leading-relaxed">
+              {o.line}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer
@@ -78,7 +162,7 @@ export function Footer() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Top: brand + nav */}
-        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-8">
+        <div className="grid lg:grid-cols-[1.5fr_2fr] gap-8 pb-6">
           <div>
             <CurrentLogo />
             <p className="mt-2 text-mute max-w-md text-sm sm:text-base leading-relaxed">
@@ -135,26 +219,9 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
             {NAV.map((col) => (
-              <div key={col.title}>
-                <div className="text-xs font-mono-display uppercase tracking-[0.22em] text-orange-brand">
-                  {col.title}
-                </div>
-                <ul className="mt-3">
-                  {col.links.map((l) => (
-                    <li key={l.label}>
-                      <Link
-                        href={l.href}
-                        data-testid={`footer-link-${l.label.toLowerCase().replace(/\s/g, "-")}`}
-                        className="text-xs text-white/80 hover:text-orange-brand transition"
-                      >
-                        {l.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <FooterNavColumn key={col.title} col={col} />
             ))}
           </div>
         </div>
@@ -162,32 +229,9 @@ export function Footer() {
         <div className="my-2 divider-line" />
 
         {/* Office grid */}
-        <div>
-          <div className="text-xs font-mono-display uppercase tracking-[0.22em] text-mute mb-6">
-            Where we operate
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {OFFICES.map((o) => (
-              <div
-                key={o.city}
-                data-testid={`footer-office-${o.city.toLowerCase().replace(/\s/g, "-")}`}
-                className="border-l border-orange-brand/30 pl-4"
-              >
-                <div className="text-xs uppercase tracking-[0.22em] text-orange-brand font-mono-display">
-                  {o.role}
-                </div>
-                <div className="mt-2 font-display text-white text-base">
-                  {o.city}
-                </div>
-                <div className="mt-1 text-xs text-mute leading-relaxed">
-                  {o.line}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <FooterOffices />
 
-        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-mute">
+        <div className="mt-6 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-mute">
           <div>© {new Date().getFullYear()} Base2Brand Technologies. All rights reserved.</div>
           <div className="font-mono-display uppercase tracking-[0.2em]">
             Crafted in 8 cities · Delivered globally

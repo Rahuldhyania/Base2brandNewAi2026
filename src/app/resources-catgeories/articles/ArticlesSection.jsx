@@ -136,11 +136,11 @@ export default function ArticlesSection({
       id="library"
       className="relative z-10 mx-auto max-w-7xl px-4 md:px-10 scroll-mt-24 md:scroll-mt-28"
     >
-      <StickyFilters
+      {/* <StickyFilters
         active={activeCategory}
         onChange={onCategoryChange}
         categories={CATEGORIES}
-      />
+      /> */}
 
       {activeTopic && (
         <div className="mt-4 mb-2 text-sm text-white/60 flex items-center gap-2">
