@@ -4,19 +4,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { supabase } from "../../../lib/supabase/client";
 import {
   ArrowRight,
-  BriefcaseBusiness,
   ChevronDown,
   FileText,
   Globe2,
   Mail,
-  Phone,
-  ShieldCheck,
-  Sparkles,
   User,
 } from "lucide-react";
+
+const API_BASE =
+  process.env.NEXT_PUBLIC_LOCAL_API_URL || "http://localhost:5000/api";
 
 const REQUIREMENTS = [
   "AI Automation",
@@ -114,28 +112,31 @@ export default function ProjectContactForm({ embedded = false }) {
     setSubmitStatus("");
 
     try {
-      const { error } = await supabase.from("leads_contactusb2b").insert([
-        {
-          first_name: formData.firstName.trim(),
-          last_name: formData.lastName.trim(),
+      const response = await fetch(`${API_BASE}/forms/main-enquiry`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.firstName.trim(),
+          lastName: formData.lastName.trim(),
           email: formData.email.trim().toLowerCase(),
-          phone: formData.phone || null,
-          requirement: formData.requirement || null,
-          budget_range: formData.range || null,
-          website_url: formData.website.trim() || null,
-          description: formData.description.trim() || null,
-          source: "website",
-          status: "new",
-        },
-      ]);
+          phone: formData.phone || "",
+          website: formData.website.trim(),
+          range: formData.range || "",
+          requirement: formData.requirement || "",
+          description: formData.description.trim(),
+        }),
+      });
 
-      if (error) {
-        throw error;
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Submission failed.");
       }
 
       setSubmitStatus("success");
       setSubmitMessage(
-        "Thank you! Your project details have been submitted successfully.",
+        result.message ||
+          "Thank you! Your project details have been submitted successfully.",
       );
 
       setFormData(initialFormData);
