@@ -36,40 +36,51 @@ const TESTIMONIALS = [
     video: "https://res.cloudinary.com/protected/video/upload/v1784706626/Base2brandNew2026/Video_one_1_eyzvxq.mp4",
   },
   {
-    name: "Deepak Dhingra",
-    role: "Managing Director & CEO",
+    name: "Anniedavies",
+    role: "E-COMMERCE STORE OWNER",
     company: null,
     quote:
       "Working with Base2Brand was a really great experience from start to finish. The communication was on point, the team was really communicative and able to deliver an exceptional branded sales orientated website.",
     avatar: "https://randomuser.me/api/portraits/men/45.jpg",
     video: "https://res.cloudinary.com/protected/video/upload/v1784706867/Base2brandNew2026/video-three_1_1_zvurvo.mp4",
   },
+
+  // copy content for slider 
   {
-    name: "Seda Hos Bas",
-    role: "Head of Marketing & Sales",
-    company: "Coconut Stock · United States",
+    name: "BROOKLYNSTOKELY",
+    role: "E-COMMERCE STORE OWNER",
+    company: null,
     quote:
-      "The team approached every project with a clear strategy and attention to detail. From website improvements to marketing execution, Base2Brand consistently delivered solutions that supported stronger engagement.",
-    avatar: "https://randomuser.me/api/portraits/women/46.jpg",
-    video: "/videos/client_YoYo1.mp4",
+      "So I got my Shopify website built on Base2Brand. I'm, I'm glad to have contacted these guys as they helped me in identifying and understanding different aspects of, e-commerce, which I was totally unaware of. Now, I'm, getting a good amount of conversions through the website, which they designed and developed for me. So, I totally recommend everyone to get their e-commerce store designed by these guys. Kudos to their team.",
+    avatar: "https://randomuser.me/api/portraits/women/42.jpg",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706041/Base2brandNew2026/Video-two_1_gampmt.mp4",
   },
   {
-    name: "Kevin Gada",
-    role: "Founder & CEO",
-    company: "SaaS Integration · Australia",
+    name: "Jahn Brazil",
+    role: "CEO & Owner",
+    company: null,
     quote:
-      "Base2Brand understood the complexity of our business and translated it into a clear digital experience. Their work across branding, website development and lead generation created a more scalable platform.",
-    avatar: "https://randomuser.me/api/portraits/men/47.jpg",
-    video: "/videos/client_YoYo1.mp4",
+      "Congratulations on 6 years in business. On behalf of Mara Lang, Nikki and I and everybody else, we want to wish you guys a very happy 6 years of being in business. Special thanks to Arti, Rakesh, Sara, Rahul, and Sam. Thank you guys.",
+    avatar: "https://randomuser.me/api/portraits/men/43.jpg",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706418/Base2brandNew2026/VID-20260721-WA0011_2_gg5rsu.mp4",
   },
   {
-    name: "Paul Singh",
-    role: "Managing Director",
-    company: "Scanfluence Software Inc · United States",
+    name: "Ronald Martin",
+    role: "Founder & Operator",
+    company: null,
     quote:
-      "Working with Base2Brand felt like having an extension of our own team. They aligned our website, messaging and digital campaigns into one cohesive strategy that improved visibility and lead quality.",
-    avatar: "https://randomuser.me/api/portraits/men/49.jpg",
-    video: "/videos/client_YoYo1.mp4",
+      "We have worked with Base2Brand for about 6 months now, from everything from social media to SEO. They've been unbelievably helpful, and also extremely responsive, which has been a huge priority for us, because obviously. Sometimes you need something done on very, very short notice, and they've always been able to provide, so we're very happy to recommend them.",
+    avatar: "https://randomuser.me/api/portraits/men/41.jpg",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706626/Base2brandNew2026/Video_one_1_eyzvxq.mp4",
+  },
+  {
+    name: "Anni",
+    role: "Managing Director & CEO",
+    company: null,
+    quote:
+      "Working with Base2Brand was a really great experience from start to finish. The communication was on point, the team was really communicative and able to deliver an exceptional branded sales orientated website.",
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    video: "https://res.cloudinary.com/protected/video/upload/v1784706867/Base2brandNew2026/video-three_1_1_zvurvo.mp4",
   },
 ];
 
