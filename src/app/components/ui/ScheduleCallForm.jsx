@@ -29,6 +29,14 @@ function getMinDateTime() {
   return `${year}-${month}-${day}T${hour}:${minute}`;
 }
 
+function getLeadTimeZone() {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  } catch {
+    return "";
+  }
+}
+
 function formatDisplayTime(value) {
   if (!value) return "";
 
@@ -115,6 +123,7 @@ export default function ScheduleCallForm({ className }) {
           email: formData.email.trim().toLowerCase(),
           phone: formData.phone,
           scheduledTime: formData.scheduledTime,
+          timezone: getLeadTimeZone(),
         }),
       });
 

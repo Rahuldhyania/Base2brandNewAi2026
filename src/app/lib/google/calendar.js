@@ -2,6 +2,8 @@ import { google } from "googleapis";
 
 const TIME_ZONE = "Asia/Kolkata";
 const MEETING_DURATION_MINUTES = 30;
+// India has a fixed UTC+5:30 offset with no DST, so this is always safe.
+const IST_OFFSET_MINUTES = 5 * 60 + 30;
 
 function getPrivateKey() {
   const key = process.env.GOOGLE_PRIVATE_KEY || "";
@@ -68,6 +70,16 @@ function addMinutesToDateTime(dateTime, minutes) {
   return `${year}-${month}-${day}T${hour}:${minute}:00`;
 }
 
+// `dateTime` here is a naive "YYYY-MM-DDTHH:mm:ss" string representing a wall-clock
+// time in Asia/Kolkata. `new Date(dateTime)` would parse it using the server's local
+// timezone (often UTC on hosting platforms), silently shifting the time. Anchoring the
+// parse to Z first and then subtracting the fixed IST offset gives the correct UTC
+// instant regardless of where the server runs.
+function istWallTimeToUtcISOString(dateTime) {
+  const utcMs = Date.parse(`${dateTime}Z`) - IST_OFFSET_MINUTES * 60 * 1000;
+  return Number.isNaN(utcMs) ? null : new Date(utcMs).toISOString();
+}
+
 function extractMeetLink(event) {
   return (
     event.hangoutLink ||
@@ -92,7 +104,8 @@ export async function createMeetingEvent({
   const endDateTime = addMinutesToDateTime(startDateTime, MEETING_DURATION_MINUTES);
   const requestId = `b2b-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
-  const selectedTime = new Date(startDateTime);
+  const startAtUTC = istWallTimeToUtcISOString(startDateTime);
+  const selectedTime = startAtUTC ? new Date(startAtUTC) : new Date(NaN);
   if (Number.isNaN(selectedTime.getTime()) || selectedTime <= new Date()) {
     throw new Error("Please select a future date and time.");
   }
@@ -134,6 +147,9 @@ export async function createMeetingEvent({
     htmlLink: data.htmlLink,
     startDateTime,
     endDateTime,
+    // Absolute instants (real UTC), safe to format into ANY timezone (India or lead's).
+    startAtUTC,
+    endAtUTC: istWallTimeToUtcISOString(endDateTime),
     timeZone: TIME_ZONE,
   };
 }

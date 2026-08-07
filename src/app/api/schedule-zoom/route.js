@@ -12,6 +12,9 @@ async function bookMeeting(body) {
   const scheduledTime = String(
     body.scheduledTime || body.date || "",
   ).trim();
+  const leadTimeZone = String(
+    body.timezone || body.timeZone || "",
+  ).trim();
 
   if (!scheduledTime || !firstName || !lastName || !email) {
     return {
@@ -39,7 +42,9 @@ async function bookMeeting(body) {
       phone,
       meetLink: meeting.meetLink,
       startDateTime: meeting.startDateTime,
+      startAtUTC: meeting.startAtUTC,
       timeZone: meeting.timeZone,
+      leadTimeZone,
     });
   } catch (emailError) {
     console.error("Meeting email error:", emailError?.message || emailError);

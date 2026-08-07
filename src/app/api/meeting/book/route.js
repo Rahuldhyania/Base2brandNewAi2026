@@ -14,6 +14,9 @@ export async function POST(request) {
     const scheduledTime = String(
       body.scheduledTime || body.date || "",
     ).trim();
+    const leadTimeZone = String(
+      body.timezone || body.timeZone || "",
+    ).trim();
 
     if (!scheduledTime || !firstName || !lastName || !email) {
       return Response.json(
@@ -38,7 +41,9 @@ export async function POST(request) {
         phone,
         meetLink: meeting.meetLink,
         startDateTime: meeting.startDateTime,
+        startAtUTC: meeting.startAtUTC,
         timeZone: meeting.timeZone,
+        leadTimeZone,
       });
     } catch (emailError) {
       console.error("Meeting email error:", emailError?.message || emailError);

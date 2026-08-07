@@ -42,14 +42,71 @@ function getAdminRecipients(userEmail) {
   return unique.filter((recipient) => recipient !== userEmail.toLowerCase());
 }
 
-function formatMeetingTime(startDateTime, timeZone) {
-  const normalized = startDateTime.length === 16 ? `${startDateTime}:00` : startDateTime;
+function getZoneAbbreviation(instant, timeZone) {
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      timeZoneName: "short",
+    }).formatToParts(new Date(instant));
+    return parts.find((part) => part.type === "timeZoneName")?.value || "";
+  } catch {
+    return "";
+  }
+}
 
-  return new Intl.DateTimeFormat("en-IN", {
+function formatMeetingTime(instant, timeZone) {
+  const formatted = new Intl.DateTimeFormat("en-IN", {
     dateStyle: "full",
     timeStyle: "short",
     timeZone,
-  }).format(new Date(normalized));
+  }).format(new Date(instant));
+
+  const zoneAbbreviation = getZoneAbbreviation(instant, timeZone);
+  return zoneAbbreviation ? `${formatted} (${zoneAbbreviation})` : formatted;
+}
+
+function isValidTimeZone(timeZone) {
+  if (!timeZone) return false;
+  try {
+    Intl.DateTimeFormat(undefined, { timeZone });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function resolveMeetingTimes(startAtUTC, indiaTimeZone, leadTimeZone) {
+  const indiaTime = formatMeetingTime(startAtUTC, indiaTimeZone);
+  const leadTime = isValidTimeZone(leadTimeZone)
+    ? formatMeetingTime(startAtUTC, leadTimeZone)
+    : null;
+
+  return { indiaTime, leadTime };
+}
+
+// User only cares about a duplicate line when their zone actually differs from India's.
+function buildUserTimeLines({ indiaTime, leadTime }, indiaTimeZone, leadTimeZone) {
+  if (!leadTime || leadTimeZone === indiaTimeZone) {
+    return [{ label: "When", value: indiaTime }];
+  }
+
+  return [
+    { label: "Your Time", value: leadTime },
+    { label: "India Time", value: indiaTime },
+  ];
+}
+
+// Admin always wants to see both India time and the lead's local time, even when
+// they happen to be the same, so it's obvious which zone the lead booked from.
+function buildAdminTimeLines({ indiaTime, leadTime }) {
+  if (!leadTime) {
+    return [{ label: "When", value: indiaTime }];
+  }
+
+  return [
+    { label: "India Time", value: indiaTime },
+    { label: "User's Time", value: leadTime },
+  ];
 }
 
 function buildMeetingEmailHtml({
@@ -57,8 +114,15 @@ function buildMeetingEmailHtml({
   greeting,
   body,
   meetLink,
-  meetingTime,
+  timeLines,
 }) {
+  const timeLinesHtml = timeLines
+    .map(
+      ({ label, value }) =>
+        `<p style="margin:0 0 8px;font-size:15px;"><strong>${label}:</strong> ${value}</p>`,
+    )
+    .join("");
+
   return `
 <!DOCTYPE html>
 <html>
@@ -77,7 +141,8 @@ function buildMeetingEmailHtml({
               <td style="padding:32px;">
                 <p style="margin:0 0 16px;font-size:16px;">${greeting}</p>
                 <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">${body}</p>
-                <p style="margin:0 0 16px;font-size:15px;"><strong>When:</strong> ${meetingTime}</p>
+                ${timeLinesHtml}
+                <div style="margin:16px 0;"></div>
                 ${
                   meetLink
                     ? `<p style="margin:0 0 24px;font-size:15px;"><a href="${meetLink}" style="display:inline-block;padding:14px 22px;background:#ff6a00;color:#000000;text-decoration:none;border-radius:12px;font-weight:700;">Join Google Meet</a></p>`
@@ -119,10 +184,17 @@ export async function sendMeetingConfirmationEmails({
   phone,
   meetLink,
   startDateTime,
+  startAtUTC,
   timeZone,
+  leadTimeZone,
 }) {
   const fullName = `${firstName} ${lastName}`.trim();
-  const meetingTime = formatMeetingTime(startDateTime, timeZone);
+  // Prefer the absolute UTC instant (correct regardless of server timezone).
+  // Fall back to the legacy naive string for backwards compatibility.
+  const instant = startAtUTC || startDateTime;
+  const meetingTimes = resolveMeetingTimes(instant, timeZone, leadTimeZone);
+  const userTimeLines = buildUserTimeLines(meetingTimes, timeZone, leadTimeZone);
+  const adminTimeLines = buildAdminTimeLines(meetingTimes);
   const adminRecipients = getAdminRecipients(email);
 
   const jobs = [
@@ -135,7 +207,7 @@ export async function sendMeetingConfirmationEmails({
         greeting: `Hi ${firstName},`,
         body: "Thanks for booking a call with Base2Brand. Your Google Meet link is below.",
         meetLink,
-        meetingTime,
+        timeLines: userTimeLines,
       }),
     }),
     ...adminRecipients.map((recipient, index) =>
@@ -148,7 +220,7 @@ export async function sendMeetingConfirmationEmails({
           greeting: "Hello team,",
           body: `${fullName} (${email}) booked a call.${phone ? ` Phone: ${phone}` : ""}`,
           meetLink,
-          meetingTime,
+          timeLines: adminTimeLines,
         }),
       }),
     ),
