@@ -29,13 +29,38 @@ export default async function BlogDetailPage({ slug }) {
 
   const excerpt = getExcerpt(blog?.description);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": blog?.heading || blog?.title,
+    "datePublished": blog?.createdAt,
+    "dateModified": blog?.updatedAt || blog?.createdAt,
+    "author": {
+      "@type": "Person",
+      "name": blog?.author?.name || "Base2Brand Editorial"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Base2Brand",
+      "url": "https://base2brand.com",
+      "logo": "https://base2brand.com/logo.png"
+    },
+    "description": excerpt,
+    "image": blog?.imageUrl || ""
+  };
+
   const displayTags =
     Array.isArray(blog?.tags) && blog.tags.length > 0
       ? blog.tags.slice(0, 4)
       : [blog?.category || "Blog", "Insights", "Research"].filter(Boolean);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#02050b] text-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <main className="relative min-h-screen overflow-hidden bg-[#02050b] text-white">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-[-120px] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#173dff]/15 blur-[150px]" />
         <div className="absolute left-1/2 top-[80px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#7c3aed]/10 blur-[120px]" />
@@ -149,5 +174,6 @@ export default async function BlogDetailPage({ slug }) {
         </article>
       </section>
     </main>
+    </>
   );
 }

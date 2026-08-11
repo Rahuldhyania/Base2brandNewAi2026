@@ -16,6 +16,29 @@ export const metadata = {
   description: "Base2Brand builds high-converting websites and digital strategies that help brands grow. Expert website design, development, SEO, and performance marketing",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://base2brand.com/#organization",
+      "name": "Base2Brand",
+      "url": "https://base2brand.com",
+      "logo": "https://base2brand.com/logo.png",
+      "description": "Base2Brand builds high-converting websites and digital strategies that help brands grow. Expert website design, development, SEO, and performance marketing",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://base2brand.com/#website",
+      "url": "https://base2brand.com",
+      "name": "Base2Brand",
+      "description": "Base2Brand builds high-converting websites and digital strategies that help brands grow. Expert website design, development, SEO, and performance marketing",
+      "publisher": { "@id": "https://base2brand.com/#organization" }
+    }
+  ]
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -23,6 +46,12 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${DEFAULT_THEME.className} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${manrope.className} ${DEFAULT_THEME.className} min-h-full flex flex-col`}
         cz-shortcut-listen="true"

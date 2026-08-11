@@ -34,13 +34,31 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+
 export default function FAQ() {
   return (
-    <section
-      id="faq"
-      data-testid="faq-section"
-      className="relative py-28 md:py-36"
-    >
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section
+        id="faq"
+        data-testid="faq-section"
+        className="relative py-28 md:py-36"
+      >
       <div className="max-w-4xl mx-auto px-6 md:px-10">
         <div className="text-center">
           <div className="label-mono">· FAQ</div>
@@ -84,5 +102,6 @@ export default function FAQ() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
