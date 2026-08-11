@@ -12,6 +12,7 @@ export const LeadFormDialog = ({ open, onOpenChange }) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         data-testid="lead-form-dialog"
+        data-nosnippet
         className="sm:max-w-[680px] bg-[#0A0B0C] border border-white/10 text-white p-0 overflow-hidden"
       >
         <div className="relative">

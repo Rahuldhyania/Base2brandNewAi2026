@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function CosmicFooter() {
   return (
-    <footer className="relative pt-24 pb-10 overflow-hidden" data-testid="cosmic-footer">
+    <footer className="relative pt-24 pb-10 overflow-hidden" data-testid="cosmic-footer" data-nosnippet>
       {/* Fading star field */}
       <div
         className="absolute inset-x-0 top-0 h-24 pointer-events-none"

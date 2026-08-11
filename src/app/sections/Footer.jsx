@@ -158,6 +158,7 @@ export function Footer() {
   return (
     <footer
       data-testid="footer"
+      data-nosnippet
       className="relative border-t border-line/50 bg-transparent pt-12 md:pt-16 pb-10 z-11"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">

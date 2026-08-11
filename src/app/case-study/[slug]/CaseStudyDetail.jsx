@@ -589,7 +589,7 @@ export default function CaseStudyDetail({ slug }) {
 
             </div>
 
-            <aside className="space-y-6">
+            <aside className="space-y-6" data-nosnippet>
               {study.detail.capabilities
                 .length > 0 && (
                   <div className="rounded-2xl border border-white/10 bg-[#10141e] p-6">

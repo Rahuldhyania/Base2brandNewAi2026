@@ -154,6 +154,7 @@ export default function ContactCTA() {
           {/* Form */}
           <form
             onSubmit={onSubmit}
+            data-nosnippet
             className="rounded-3xl border border-white/10 p-8 backdrop-blur"
             style={{
               background:

@@ -13,6 +13,7 @@ export default function TopNav() {
         style={{ opacity }}
         className="fixed top-0 inset-x-0 z-40 pointer-events-none"
         data-testid="top-nav"
+        data-nosnippet
       >
         <div className="mx-auto max-w-7xl px-6 md:px-10 pt-4">
           <div className="pointer-events-auto flex items-center justify-between glass-strong rounded-full px-4 py-3">

@@ -28,6 +28,7 @@ export default function TopNav() {
   return (
     <header
       data-testid={HOME.nav.root}
+      data-nosnippet
       className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-24px)] max-w-[1240px]"
     >
       <div className="b2b-glass rounded-full px-4 md:px-6 py-2.5 flex items-center gap-6">

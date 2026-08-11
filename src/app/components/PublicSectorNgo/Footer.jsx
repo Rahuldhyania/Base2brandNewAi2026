@@ -33,6 +33,7 @@ export const Footer = () => {
   return (
     <footer
       data-testid="footer"
+      data-nosnippet
       className="relative pt-20 pb-10 border-t border-border bg-background"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">

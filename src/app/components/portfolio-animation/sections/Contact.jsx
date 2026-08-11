@@ -66,6 +66,7 @@ export default function Contact() {
           <form
             data-testid={extraData.contact.form}
             onSubmit={submit}
+            data-nosnippet
             className="b2b-panel rounded-2xl p-6 md:p-8 flex flex-col gap-4"
           >
             <div>

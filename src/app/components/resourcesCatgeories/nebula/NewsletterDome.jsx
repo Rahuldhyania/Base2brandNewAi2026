@@ -14,7 +14,7 @@ export default function NewsletterDome() {
   };
 
   return (
-    <div className="relative flex justify-center pt-12 md:pt-18" data-testid="newsletter-dome">
+    <div className="relative flex justify-center pt-12 md:pt-18" data-testid="newsletter-dome" data-nosnippet>
       <div className="relative w-full max-w-3xl">
         {/* Dome — top rounded observatory shape */}
         <div

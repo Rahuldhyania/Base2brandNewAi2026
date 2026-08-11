@@ -35,6 +35,7 @@ export default function Footer() {
   return (
     <footer
       data-testid="footer"
+      data-nosnippet
       className="relative pt-24 pb-12 border-t border-white/5 bg-[#030305]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">

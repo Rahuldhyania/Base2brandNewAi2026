@@ -155,6 +155,7 @@ export default function ProjectContactForm({ embedded = false }) {
   const formCard = (
     <form
       onSubmit={handleSubmit}
+      data-nosnippet
       className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 px-3 py-5 shadow-2xl backdrop-blur-2xl sm:py-6"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,color-mix(in_srgb,var(--b2b-primary)_18%,transparent),transparent_36%)]" />

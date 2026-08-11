@@ -336,7 +336,7 @@ const ClientFeedback = () => {
             aria-label="Client video testimonials"
           >
             {TESTIMONIALS.map((card, index) => (
-              <SwiperSlide key={card.name} className="client-feedback-slide">
+              <SwiperSlide key={index} className="client-feedback-slide">
                 <FeedbackCard
                   card={card}
                   index={index}

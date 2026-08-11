@@ -204,6 +204,7 @@ export default function ScheduleCallForm({ className }) {
   return (
     <form
       onSubmit={handleSubmit}
+      data-nosnippet
       className={cn(
         "relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#05070D]/90 px-3 py-5 shadow-2xl backdrop-blur-2xl sm:py-6",
         className,

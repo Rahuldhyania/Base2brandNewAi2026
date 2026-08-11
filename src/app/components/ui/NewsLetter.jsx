@@ -46,6 +46,7 @@ export default function NewsLetter({ lable }) {
       className="mt-8 max-w-md"
       onSubmit={handleSubmit}
       data-testid="footer-newsletter-form"
+      data-nosnippet
     >
       {lable && (
         <label className="block text-xs font-mono-display uppercase tracking-[0.22em] text-mute mb-2">

@@ -56,6 +56,7 @@ export const TopNav = ({ onOpenLeadForm }) => {
   return (
     <header
       data-testid="top-nav"
+      data-nosnippet
       className={cn(
         "sticky top-0 z-50 w-full",
         "backdrop-blur-xl",

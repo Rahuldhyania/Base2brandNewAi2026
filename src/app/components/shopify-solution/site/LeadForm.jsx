@@ -199,6 +199,7 @@ export const LeadForm = ({
           <motion.form
             key="form"
             data-testid={idPrefix}
+            data-nosnippet
             initial={false}
             onSubmit={handleSubmit}
             className="space-y-4"

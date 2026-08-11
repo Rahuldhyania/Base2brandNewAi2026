@@ -24,6 +24,7 @@ export default function Navbar() {
   return (
     <motion.header
       data-testid="navbar"
+      data-nosnippet
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
