@@ -233,7 +233,7 @@ export function Footer() {
         <FooterOffices />
 
         <div className="mt-6 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-mute">
-          <div>© {new Date().getFullYear()} Base2Brand Technologies. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Base2Brand Technologies. All rights reserved. <Link href="/privacy-policy" className="text-orange-brand hover:text-orange-brand/80 transition">Privacy Policy</Link></div> 
           <div className="font-mono-display uppercase tracking-[0.2em]">
             Crafted in 8 cities · Delivered globally
           </div>

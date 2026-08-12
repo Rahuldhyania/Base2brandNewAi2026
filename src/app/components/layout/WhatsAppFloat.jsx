@@ -1,6 +1,6 @@
 // Update this with your WhatsApp number (country code + number, no + or spaces)
 // Example: India 9876543210 → "919876543210"
-const WHATSAPP_NUMBER = "919876543210";
+const WHATSAPP_NUMBER = "7889101844";
 
 const WHATSAPP_MESSAGE = "Hi! I'd like to know more about Base2Brand.";
 
