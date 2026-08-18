@@ -14,6 +14,9 @@ const manrope = Manrope({
 export const metadata = {
   title: "Base2Brand | High-Converting Website Design & Digital Growth Agency",
   description: "Base2Brand builds high-converting websites and digital strategies that help brands grow. Expert website design, development, SEO, and performance marketing",
+  verification: {
+    google: "bUGDRRzEBb5VQ8pNq6l7Qtp-sQJg15CvaLJ2a2O8ZH8",
+  },
 };
 
 const organizationSchema = {
