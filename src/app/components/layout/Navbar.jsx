@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Base2BrandWordmark } from "../../components/visual/Base2BrandLogo";
 import { cn } from "../../lib/utils";
@@ -240,8 +240,8 @@ export function Navbar() {
           </div>
 
           {/* Desktop mega-dropdown — centered to the navbar container, not the nav buttons.
-              Outer wrapper handles absolute + centering (translate-x), inner motion.div
-              handles only opacity/y animation. This avoids framer-motion overriding the
+              Outer wrapper handles absolute + centering (translate-x), inner m.div
+              handles only opacity/y animation. This avoids framer-m overriding the
               tailwind transform used for horizontal centering.
               The pt-4 bridge keeps the mouse path from button to panel continuous. */}
           <AnimatePresence>
@@ -252,7 +252,7 @@ export function Navbar() {
                 onMouseEnter={cancelClose}
                 onMouseLeave={scheduleClose}
               >
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
@@ -309,7 +309,7 @@ export function Navbar() {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </m.div>
               </div>
             )}
           </AnimatePresence>
@@ -342,7 +342,7 @@ export function Navbar() {
         {/* Mobile sheet */}
         <AnimatePresence>
           {mobileOpen && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -350,32 +350,32 @@ export function Navbar() {
               data-testid="navbar-mobile-panel"
               className="lg:hidden mt-3 glass rounded-3xl p-3 flex flex-col gap-1 max-h-[75vh] overflow-y-auto"
             >
-              {MENU.map((m) => {
-                const expanded = mobileExpanded === m.label;
-                if (!m.items || m.items.length === 0) {
+              {MENU.map((menuItem) => {
+                const expanded = mobileExpanded === menuItem.label;
+                if (!menuItem.items || menuItem.items.length === 0) {
                   return (
                     <Link
-                      key={m.label}
-                      href={m.href}
-                      onClick={(e) => handleAnchor(e, m.href)}
-                      data-testid={`nav-mobile-trigger-${m.label.toLowerCase()}`}
+                      key={menuItem.label}
+                      href={menuItem.href}
+                      onClick={(e) => handleAnchor(e, menuItem.href)}
+                      data-testid={`nav-mobile-trigger-${menuItem.label.toLowerCase()}`}
                       className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/90 hover:bg-white/5 rounded-2xl transition"
                     >
-                      <span>{m.label}</span>
+                      <span>{menuItem.label}</span>
                     </Link>
                   );
                 }
                 return (
-                  <div key={m.label} className="rounded-2xl">
+                  <div key={menuItem.label} className="rounded-2xl">
                     <button
                       type="button"
                       onClick={() =>
-                        setMobileExpanded(expanded ? null : m.label)
+                        setMobileExpanded(expanded ? null : menuItem.label)
                       }
-                      data-testid={`nav-mobile-trigger-${m.label.toLowerCase()}`}
+                      data-testid={`nav-mobile-trigger-${menuItem.label.toLowerCase()}`}
                       className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/90 hover:bg-white/5 rounded-2xl transition"
                     >
-                      <span>{m.label}</span>
+                      <span>{menuItem.label}</span>
                       <ChevronDown
                         size={14}
                         className={cn(
@@ -386,14 +386,14 @@ export function Navbar() {
                     </button>
                     <AnimatePresence initial={false}>
                       {expanded && (
-                        <motion.ul
+                        <m.ul
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.22 }}
                           className="overflow-hidden pl-3"
                         >
-                          {m.items.map((it) => (
+                          {menuItem.items.map((it) => (
                             <li key={it.label}>
                               <Link
                                 href={it.href}
@@ -405,7 +405,7 @@ export function Navbar() {
                               </Link>
                             </li>
                           ))}
-                        </motion.ul>
+                        </m.ul>
                       )}
                     </AnimatePresence>
                   </div>
@@ -423,7 +423,7 @@ export function Navbar() {
               >
                 Get Proposal →
               </a>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
       </div>

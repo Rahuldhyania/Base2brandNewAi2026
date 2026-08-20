@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 
 const ARTICLES = [
@@ -50,7 +50,7 @@ export default function Resources() {
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-5">
           {ARTICLES.map((a, i) => (
-            <motion.article
+            <m.article
               key={a.id}
               data-testid={extraData.resources.article(a.id)}
               initial={{ opacity: 0, y: 24 }}
@@ -90,7 +90,7 @@ export default function Resources() {
                   </svg>
                 </span>
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

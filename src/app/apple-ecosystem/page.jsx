@@ -1,20 +1,55 @@
+import dynamic from "next/dynamic";
 import Layout from "@/components/apple/Layout";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import AppleIntelligence from "@/pages/AppleEcosystem/sections/AppleIntelligence";
 import Capabilities from "@/pages/AppleEcosystem/sections/Capabilities";
-import Enterprise from "@/pages/AppleEcosystem/sections/Enterprise";
-import Industries from "@/components/ai/Industries";
-
-import FinalCta from "@/pages/AppleEcosystem/sections/FinalCta";
 import Hero from "@/pages/AppleEcosystem/sections/Hero";
-import PlatformExplorer from "@/pages/AppleEcosystem/sections/PlatformExplorer";
-import Process from "@/pages/AppleEcosystem/sections/Process";
-import SeoBlock from "@/pages/AppleEcosystem/sections/SeoBlock";
-import Technologies from "@/pages/AppleEcosystem/sections/Technologies";
-import VisionPro from "@/pages/AppleEcosystem/sections/VisionPro";
 import WhyApple from "@/pages/AppleEcosystem/sections/WhyApple";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load.
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const PlatformExplorer = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/PlatformExplorer"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Technologies = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/Technologies"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const AppleIntelligence = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/AppleIntelligence"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const VisionPro = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/VisionPro"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const Process = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/Process"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const SeoBlock = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/SeoBlock"),
+  { loading: () => <SectionFallback minHeight={400} /> },
+);
+const FinalCta = dynamic(
+  () => import("@/pages/AppleEcosystem/sections/FinalCta"),
+  { loading: () => <SectionFallback minHeight={400} /> },
+);
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 const PROJECTS = [
   {
     id: "case-01",

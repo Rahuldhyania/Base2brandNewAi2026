@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { m, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 /**
  * Black Hole ↔ White Hole visual.
@@ -92,13 +92,13 @@ export const BlackHoleWhiteHole = () => {
             data-testid="bh-wh-visual"
         >
             {/* Atmospheric layers */}
-            <motion.div
+            <m.div
                 style={{ x: txAlt, y: tyAlt }}
                 className="absolute inset-0 tech-grid pointer-events-none opacity-60"
             />
 
             {/* SVG core */}
-            <motion.svg
+            <m.svg
                 viewBox="0 0 800 640"
                 className="absolute inset-0 w-full h-full"
                 style={{ x: tx, y: ty }}
@@ -331,7 +331,7 @@ export const BlackHoleWhiteHole = () => {
                     fill="url(#wh-core)"
                     filter="url(#wh-glow)"
                 />
-                <motion.circle
+                <m.circle
                     cx={WH_CX}
                     cy={WH_CY}
                     r="44"
@@ -469,10 +469,10 @@ export const BlackHoleWhiteHole = () => {
                         />
                     );
                 })}
-            </motion.svg>
+            </m.svg>
 
             {/* === HTML overlay: ERP CORE node + labels === */}
-            <motion.div
+            <m.div
                 style={{ x: tx, y: ty }}
                 className="absolute inset-0 pointer-events-none"
             >
@@ -515,7 +515,7 @@ export const BlackHoleWhiteHole = () => {
                     );
                     const end = { x: BH_CX, y: BH_CY };
                     return (
-                        <motion.div
+                        <m.div
                             key={lbl.text}
                             initial={{ opacity: 0 }}
                             animate={{
@@ -552,7 +552,7 @@ export const BlackHoleWhiteHole = () => {
                                     {lbl.text}
                                 </span>
                             </div>
-                        </motion.div>
+                        </m.div>
                     );
                 })}
 
@@ -567,7 +567,7 @@ export const BlackHoleWhiteHole = () => {
                 >
                     <div className="flex flex-col gap-1.5">
                         {ORDERED_LABELS.map((l, i) => (
-                            <motion.div
+                            <m.div
                                 key={l.text}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{
@@ -586,7 +586,7 @@ export const BlackHoleWhiteHole = () => {
                                 <span className="font-mono text-[9.5px] tracking-[0.16em] uppercase text-white/80 whitespace-nowrap">
                                     {l.text}
                                 </span>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                 </div>
@@ -612,7 +612,7 @@ export const BlackHoleWhiteHole = () => {
                 >
                     White Hole · Clarity
                 </div>
-            </motion.div>
+            </m.div>
         </div>
     );
 };

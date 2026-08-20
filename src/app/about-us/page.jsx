@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import {
-  motion,
+  m,
   useMotionValue,
   useScroll,
   useSpring,
@@ -204,7 +204,7 @@ function TopNav({ progress }) {
           <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </button>
       </div>
-      {/* <motion.div
+      {/* <m.div
         style={{ width }}
         className="h-[1px] bg-gradient-to-r from-[#7B4DFF] via-[#C084FC] to-[#42D4FF]"
       /> */}
@@ -250,13 +250,13 @@ function Hero() {
 
   return (
     <section ref={ref} className="relative md:h-[100vh]">
-      <motion.div
+      <m.div
         style={{ opacity, y }}
         className="sticky top-0 h-[80vh] md:h-screen flex items-center justify-center"
       >
         <div className="relative w-full max-w-6xl px-6 text-center">
           {/* Central pulsing singularity */}
-          <motion.div
+          <m.div
             style={{
               opacity: dotOpacity,
               scale: dotScale,
@@ -265,7 +265,7 @@ function Hero() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white pointer-events-none"
           />
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30, filter: 'blur(20px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
@@ -290,7 +290,7 @@ function Hero() {
               </span>
             </h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 1.6 }}
@@ -298,9 +298,9 @@ function Hero() {
             >
               From performance marketing to intelligent business systems, every chapter of Base2Brand has been shaped to solve bigger challenges.
 
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1.5 }}
@@ -309,15 +309,15 @@ function Hero() {
               <span className="text-[10px] tracking-[0.4em] text-white/40 uppercase">
                 Enter Spacetime
               </span>
-              <motion.div
+              <m.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 className="w-[1px] h-14 bg-gradient-to-b from-white/60 to-transparent"
               />
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }
@@ -341,7 +341,7 @@ function YearSection({ item, index, total }) {
   return (
     <section ref={ref} className="relative md:min-h-screen py-6 md:py-16 flex items-center">
       {/* Glow blob */}
-      <motion.div
+      <m.div
         style={{ scale: glowScale, opacity }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] md:h-[900px] rounded-full pointer-events-none"
       >
@@ -351,10 +351,10 @@ function YearSection({ item, index, total }) {
             background: `radial-gradient(circle at center, ${item.accent}40 0%, ${item.accent}20 30%, transparent 70%)`,
           }}
         />
-      </motion.div>
+      </m.div>
 
       {/* Spacetime ring behind year */}
-      <motion.svg
+      <m.svg
         style={{ scale: ringScale, opacity }}
         className="absolute right-[20%] top-[85%]  -translate-y-1/2 pointer-events-none"
         width="780" height="780" viewBox="0 0 780 780"
@@ -366,7 +366,7 @@ function YearSection({ item, index, total }) {
             <stop offset="100%" stopColor={item.accent} stopOpacity="0.6" />
           </linearGradient>
         </defs>
-        <motion.ellipse
+        <m.ellipse
           cx="390" cy="390" rx="360" ry="110"
           fill="none"
           stroke={`url(#ringGrad-${item.year})`}
@@ -375,7 +375,7 @@ function YearSection({ item, index, total }) {
           transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
           style={{ transformOrigin: '390px 390px' }}
         />
-        <motion.ellipse
+        <m.ellipse
           cx="390" cy="390" rx="330" ry="90"
           fill="none"
           stroke={`url(#ringGrad-${item.year})`}
@@ -385,9 +385,9 @@ function YearSection({ item, index, total }) {
           transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
           style={{ transformOrigin: '390px 390px' }}
         />
-      </motion.svg>
+      </m.svg>
 
-      <motion.div
+      <m.div
         style={{ y, scale, opacity }}
         className="relative container mx-auto px-6 md:px-10 max-w-6xl"
       >
@@ -400,7 +400,7 @@ function YearSection({ item, index, total }) {
             </span>
           </div>
 
-          <motion.h2
+          <m.h2
             // initial={{ letterSpacing: '0.2em' }}
             // whileInView={{ letterSpacing: '-0.05em', filter: 'blur(0px)' }}
             // viewport={{ once: false, margin: '-30% 0px -30% 0px' }}
@@ -409,7 +409,7 @@ function YearSection({ item, index, total }) {
             style={{ color: '#ffffff' }}
           >
             {item.year}
-          </motion.h2>
+          </m.h2>
 
           <div className={`mt-2 flex flex-col md:flex-row md:items-end justify-between gap-6 ${isLeft ? '' : 'md:flex-row-reverse'}`}>
             <div className={`max-w-xl ${isLeft ? '' : 'md:ml-auto md:text-right'}`}>
@@ -427,7 +427,7 @@ function YearSection({ item, index, total }) {
         {/* Milestone card + orbiting stats */}
         <div className="relative mt-4 md:mt-16 grid md:grid-cols-3 gap-4">
           {/* Achievements card */}
-          <motion.div
+          <m.div
             // initial={{ opacity: 0, y: 40 }}
             // whileInView={{ opacity: 1, y: 0 }}
             // viewport={{ once: false, margin: '-20% 0px -10% 0px' }}
@@ -445,7 +445,7 @@ function YearSection({ item, index, total }) {
               </div>
               <ul className="space-y-1 md:space-y-3">
                 {item.achievements.map((a, i) => (
-                  <motion.li
+                  <m.li
                     key={a}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -458,14 +458,14 @@ function YearSection({ item, index, total }) {
                       style={{ background: item.accent, boxShadow: `0 0 12px ${item.accent}` }}
                     />
                     <span className="font-display text-sm md:text-[17px] font-light">{a}</span>
-                  </motion.li>
+                  </m.li>
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Stats card */}
-          <motion.div
+          <m.div
             // initial={{ opacity: 0, y: 40 }}
             // whileInView={{ opacity: 1, y: 0 }}
             // viewport={{ once: false, margin: '-20% 0px -10% 0px' }}
@@ -491,9 +491,9 @@ function YearSection({ item, index, total }) {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }
@@ -542,7 +542,7 @@ function Constellation({ dept, index }) {
   const w = 320
   const h = 220
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, margin: '-10% 0px' }}
@@ -581,7 +581,7 @@ function Constellation({ dept, index }) {
             const [x1, y1] = p
             const [x2, y2] = dept.points[i + 1]
             return (
-              <motion.line
+              <m.line
                 key={i}
                 x1={x1 * w} y1={y1 * h}
                 x2={x2 * w} y2={y2 * h}
@@ -595,7 +595,7 @@ function Constellation({ dept, index }) {
           })}
 
           {dept.points.map((p, i) => (
-            <motion.circle
+            <m.circle
               key={i}
               cx={p[0] * w}
               cy={p[1] * h}
@@ -615,7 +615,7 @@ function Constellation({ dept, index }) {
           ))}
         </svg>
       </div>
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -623,7 +623,7 @@ function TeamSection() {
   return (
     <section className="relative py-2 md:py-20 lg:py-32 xl:py-40">
       <div className="container mx-auto px-6 md:px-10 max-w-6xl">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
@@ -639,7 +639,7 @@ function TeamSection() {
           <p className="text-white/60 max-w-xl mx-auto font-light">
             Different disciplines. Shared standards. One connected team working toward meaningful business outcomes.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {DEPARTMENTS.map((d, i) => (
@@ -684,7 +684,7 @@ function OrbitValues() {
       className="relative py-12 md:py-20 lg:py-32 xl:py-40 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-10 max-w-6xl">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
@@ -698,7 +698,7 @@ function OrbitValues() {
           <h2 className="font-display text-3xl md:text-6xl font-light tracking-tight">
            The Principles at the Centre of  <span className="italic">Everything We Build.</span>
           </h2>
-        </motion.div>
+        </m.div>
 
         <div className="relative h-[490px] sm:h-[570px] md:h-[700px] mx-auto w-full max-w-[340px] sm:max-w-[480px] md:max-w-[720px]">
           {/* Central sun */}
@@ -733,7 +733,7 @@ function OrbitValues() {
                   transform: 'translate(-50%, -50%)',
                 }}
               >
-                <motion.div
+                <m.div
                   animate={{ rotate: 360 }}
                   transition={{ duration, repeat: Infinity, ease: 'linear' }}
                   style={{
@@ -743,7 +743,7 @@ function OrbitValues() {
                     transform: `rotate(${startAngle}deg)`,
                   }}
                 >
-                  <motion.div
+                  <m.div
                     onMouseEnter={() => setActive(i)}
                     onClick={() => setActive(i)}
                     className="absolute cursor-pointer group pointer-events-auto"
@@ -756,7 +756,7 @@ function OrbitValues() {
                     whileTap={{ scale: 1.25 }}
                   >
                     {/* Counter-rotate so label stays upright */}
-                    <motion.div
+                    <m.div
                       animate={{ rotate: -360 }}
                       transition={{ duration, repeat: Infinity, ease: 'linear' }}
                       className="relative flex flex-col items-center"
@@ -777,16 +777,16 @@ function OrbitValues() {
                       >
                         {v.name}
                       </span>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
+                    </m.div>
+                  </m.div>
+                </m.div>
               </div>
             )
           })}
 
           {/* Active description */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <m.div
               key={active}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -804,7 +804,7 @@ function OrbitValues() {
               <p className="text-white/60 text-[13px] md:text-[14px] leading-relaxed">
                 {VALUES[active].desc}
               </p>
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </div>
       </div>
@@ -816,7 +816,7 @@ function FounderMessage() {
   return (
     <section className="relative py-10 md:py-20 lg:py-32 xl:py-40">
       <div className="container mx-auto px-6 md:px-10 max-w-5xl">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 40, rotateX: -8 }}
           whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
@@ -873,7 +873,7 @@ We are proud of how far we have come, but we are even more excited about what we
               <div className="text-[12px] text-white/50">Building and evolving since 2020</div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )
@@ -891,7 +891,7 @@ function Ending() {
 
   return (
     <section ref={ref} className="relative md:min-h-[90vh] py-10 md:py-20 lg:py-32 xl:py-40 flex items-center">
-      {/*   <motion.div
+      {/*   <m.div
         style={{ scale: galaxyScale, opacity: galaxyOpacity }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-175 rounded-full pointer-events-none"
       >
@@ -903,10 +903,10 @@ function Ending() {
             filter: 'blur(50px)',
           }}
         />
-      </motion.div> */}
+      </m.div> */}
 
       <div className="relative container mx-auto px-6 md:px-10 max-w-4xl text-center">
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
           whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: false, margin: '-20% 0px' }}
@@ -915,9 +915,9 @@ function Ending() {
         >
           The best part of our story <br />
           <span className="italic font-light">Is What We Build Next.</span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
@@ -926,9 +926,9 @@ function Ending() {
         >
           {/* Every great chapter needs a co-author. Let&rsquo;s bend time together. */}
           Six years have shaped our expertise. The next chapter will be defined by the businesses, technologies and transformations we create together.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: '-15% 0px' }}
@@ -943,9 +943,9 @@ function Ending() {
             <Play className="w-3.5 h-3.5" />
             Watch Our Journey
           </button>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, margin: '-20% 0px' }}
@@ -953,7 +953,7 @@ function Ending() {
           className="mt-5 md:mt-24 text-[10px] tracking-[0.4em] uppercase text-white/60"
         >
           Base2Brand · Building tomorrow’s technology today
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import OrbitalBackground from "./OrbitalBackground";
 
@@ -29,7 +29,7 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
       />
 
       <div className="relative max-w-5xl mx-auto px-4 md:px-10 text-center">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,9 +37,9 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           className="section-label"
         >
           {highlightTag}
-        </motion.div>
+        </m.div>
 
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,9 +51,9 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           <span className="text-orange-gradient">
             {titleLower}
           </span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,11 +61,11 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           className="mt-2 text-zinc-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
         >
           {description}
-        </motion.p>
+        </m.p>
 
 
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,10 +82,10 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           >
             Talk To A Growth Expert <ArrowRight size={14} />
           </a>
-        </motion.div>
+        </m.div>
 
         {/* Trust ribbon */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function FinalCTA({ highlightTag, titleUpper, titleLower, descrip
           <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-(--b2b-primary)">
             Engaged
           </span>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

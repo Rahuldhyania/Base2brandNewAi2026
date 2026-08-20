@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SPATIAL } from "@/constants/testIds";
 
 const steps = [
@@ -78,7 +78,7 @@ export default function Process() {
 
           <div className="space-y-8">
             {steps.map((s, i) => (
-              <motion.div
+              <m.div
                 key={s.n}
                 data-testid={SPATIAL.processStep(i)}
                 initial={{ opacity: 0, y: 24 }}
@@ -126,7 +126,7 @@ export default function Process() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

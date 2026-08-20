@@ -66,51 +66,51 @@ const practices = [
 
 const GrowthSystem = () => {
   return (
-    <section className="py-16 xl:py-20 px-5 sm:px-8 bg-[#02030a]">
+    <section className="py-12 sm:py-16 xl:py-20 px-4 sm:px-8 bg-[#02030a]">
       <div className="max-w-[1440px] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.10] uppercase tracking-tight">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="mt-4 font-display text-white text-2xl sm:text-3xl lg:text-5xl leading-[1.10] uppercase tracking-tight">
             SIX PRACTICES
             <span className="block text-orange-brand">ONE GROWTH SYSTEM</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {practices.map((practice, index) => (
             <div
               key={index}
-              className="border-2 border-white/10 rounded-t-4xl rounded-b-[45px] p-3 max-h-[380px]"
+              className="border-2 border-white/10 rounded-t-4xl rounded-b-[45px] p-3"
             >
               <div
-                className="bg-cover bg-center bg-no-repeat h-103 rounded-t-3xl rounded-b-[45px] relative flex items-end max-h-[360px]"
+                className="bg-cover bg-center bg-no-repeat rounded-t-3xl rounded-b-[45px] relative flex items-end min-h-[480px] sm:min-h-[300px] md:min-h-[340px] xl:h-103"
                 style={{ background: `${practice.backgroud_gradient}` }}
               >
-                <div className="absolute top-6 left-0 w-full flex justify-end">
+                <div className="absolute top-4 sm:top-6 left-0 w-full flex justify-end">
                   <div className="pe-2">
                     <Image
                       src={practice.icon}
                       alt="growthCard_icon"
                       width={320}
                       height={180}
-                      className="object-cover"
+                      className="object-cover w-[180px] sm:w-[200px] md:w-[240px] xl:w-[320px] h-auto"
                     />
                   </div>
                 </div>
-                <div className="relative h-[53%] xl:h-[65%] 2xl:h-[68%]">
-                  <div className="relative z-20 py-4 px-6">
-                    <h3 className={` text-lg xl:text-[22px] 2xl:text-[25px] leading-[1.08] font-medium max-w-[180px]`}
+                <div className="relative w-full pb-10 sm:pb-0 sm:h-[53%] xl:h-[65%] 2xl:h-[68%] bg-black/55 sm:bg-transparent rounded-t-3xl sm:rounded-none">
+                  <div className="relative z-20 py-4 px-5 sm:px-6">
+                    <h3 className={`text-lg xl:text-[22px] 2xl:text-[25px] leading-[1.15] font-medium max-w-[220px] sm:max-w-[180px]`}
                      style={{
                       color : practice.color_card
                      }}
                     >
                       {practice.title}
                     </h3>
-                    <p className="text-[12px] 2xl:text-[14px] 2xl:text-[15px] text-white pt-2">
+                    <p className="text-[13px] sm:text-[12px] 2xl:text-[15px] text-white pt-2 leading-relaxed">
                       {practice.description}
                     </p>
 
-                    <div className="pt-2">
-                      <ul className="flex items-center gap-3">
+                    <div className="pt-3">
+                      <ul className="flex flex-wrap items-center gap-2 sm:gap-3">
                         {practice.points.map((item, pointIndex) => (
                           <li key={pointIndex} className="text-white text-[10px] 2xl:text-[12px]" style={{ listStyle: 'inside' }}>
                             {item}
@@ -124,7 +124,7 @@ const GrowthSystem = () => {
                     alt="growthCard_poligunv2"
                     width={1000}
                     height={500}
-                    className="object-cover absolute bottom-[2%] max-w-[98%] right-[1%] z-10 "
+                    className="object-cover absolute bottom-[2%] max-w-[85%] sm:max-w-[98%] right-[1%] z-10"
                   />
                 </div>
               </div>

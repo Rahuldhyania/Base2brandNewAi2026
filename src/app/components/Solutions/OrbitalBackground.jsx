@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 /**
  * OrbitalBackground
@@ -31,7 +31,7 @@ export function OrbitalBackground({
         }}
       >
         {rings.map((r, i) => (
-          <motion.div
+          <m.div
             key={r}
             className={`orbital-ring ${i % 2 === 0 ? "orbital-ring--accent" : ""}`}
             style={{
@@ -56,7 +56,7 @@ export function OrbitalBackground({
                 }}
               />
             )}
-          </motion.div>
+          </m.div>
         ))}
         {centerGlow && (
           <div

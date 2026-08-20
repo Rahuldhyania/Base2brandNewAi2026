@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Cpu,
   Users,
@@ -142,7 +142,7 @@ export default function CoreTechnologies({
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--b2b-primary)/35 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -155,7 +155,7 @@ export default function CoreTechnologies({
           <p className="mt-5 text-[16px] sm:text-[18px] leading-relaxed text-zinc-400">
             {subtitle}
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="mt-10 md:mt-16 lg:mt-20 space-y-12 md:space-y-20 lg:space-y-28">
           {items.map((item, index) => (

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import * as d3 from "d3";
+import { geoOrthographic, geoPath, geoGraticule, geoBounds } from "d3-geo";
 
 
 const DEFAULT_HOTSPOTS = [
@@ -65,14 +65,13 @@ export default function RotatingEarth({
     canvas.style.height = `${containerHeight}px`;
     context.scale(dpr, dpr);
 
-    const projection = d3
-      .geoOrthographic()
+    const projection = geoOrthographic()
       .scale(radius)
       .translate([containerWidth / 2, containerHeight / 2])
       .clipAngle(90);
 
-    const path = d3.geoPath().projection(projection).context(context);
-    const graticule = d3.geoGraticule().step([20, 20]);
+    const path = geoPath().projection(projection).context(context);
+    const graticule = geoGraticule().step([20, 20]);
     const pointInPolygon = (point, polygon) => {
       const [x, y] = point;
       let inside = false;
@@ -115,7 +114,7 @@ export default function RotatingEarth({
 
     const generateDotsInPolygon = (feature, dotSpacing = 32) => {
       const dots = [];
-      const bounds = d3.geoBounds(feature);
+      const bounds = geoBounds(feature);
       const [[minLng, minLat], [maxLng, maxLat]] = bounds;
       const stepSize = dotSpacing * 0.22;
       for (let lng = minLng; lng <= maxLng; lng += stepSize) {

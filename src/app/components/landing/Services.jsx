@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Target,
   MessageSquare,
@@ -14,64 +14,84 @@ import {
   Quote,
 } from "lucide-react";
 
-const services = [
+const DEFAULT_ICONS = {
+  Target,
+  MessageSquare,
+  Eye,
+  Fingerprint,
+  Network,
+  LayoutGrid,
+  Signal,
+  BarChart3,
+  Users,
+  Quote,
+};
+
+const defaultServices = [
   {
     title: "GEO Strategy",
     desc: "End-to-end roadmap for generative engine visibility across ChatGPT, Gemini, Claude, Perplexity and AI search surfaces.",
-    icon: Target,
+    icon: "Target",
     span: "md:col-span-2",
     big: true,
   },
   {
     title: "AEO Implementation",
     desc: "Answer-shaped content, schema, FAQ systems and structured response blocks built for AI extraction.",
-    icon: MessageSquare,
+    icon: "MessageSquare",
   },
   {
     title: "AI Visibility Optimization",
     desc: "Lift brand mentions across ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews.",
-    icon: Eye,
+    icon: "Eye",
   },
   {
     title: "Brand Entity Optimization",
     desc: "A coherent brand entity AI engines can understand, connect and trust.",
-    icon: Fingerprint,
+    icon: "Fingerprint",
   },
   {
     title: "Knowledge Graph Improvement",
     desc: "Structured signals that give your brand machine-readable depth and authority.",
-    icon: Network,
+    icon: "Network",
   },
   {
     title: "AI Content Structuring",
     desc: "Modular, citation-ready content blocks that help AI engines retrieve and recommend your brand.",
-    icon: LayoutGrid,
+    icon: "LayoutGrid",
   },
   {
     title: "Authority Signal Building",
     desc: "Compounding trust across your website, third-party mentions, citations and open-web references.",
-    icon: Signal,
+    icon: "Signal",
   },
   {
     title: "AI Search Analytics",
     desc: "Track AI visibility, share-of-answer, sentiment, citation frequency and competitor presence.",
-    icon: BarChart3,
+    icon: "BarChart3",
     span: "md:col-span-2",
     big: true,
   },
   {
     title: "Competitor AI Analysis",
     desc: "Decode why rivals get recommended — and build the system to outperform them.",
-    icon: Users,
+    icon: "Users",
   },
   {
     title: "Citation & Mention Optimization",
     desc: "Land in the sources, pages and answer patterns AI engines actually cite.",
-    icon: Quote,
+    icon: "Quote",
   },
 ];
 
-export default function Services() {
+export default function Services({
+  eyebrow = "· Our Growth Visibility Capabilities",
+  titleLead = "The visibility toolkit for",
+  titleAccent = "the <br /> AI search era.",
+  description = "A complete AI-first growth practice, built to make your brand the obvious answer in any AI conversation.",
+  services = defaultServices,
+  icons = DEFAULT_ICONS,
+}) {
   return (
     <section
       id="services"
@@ -81,23 +101,26 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="gap-6 mb-10 md:mb-16 text-center mx-auto">
           <div>
-            <div className="label-mono">· Our Growth Visibility Capabilities</div>
+            <div className="label-mono">{eyebrow}</div>
             <h2 className="mt-2 font-display text-2xl mx-auto sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance">
-              The visibility toolkit for
-              
-              <span className="text-gradient-blue-violet font-medium">
-                the <br /> AI search era.
-              </span>
+              {titleLead}
+              {" "}
+              <span
+                className="text-gradient-blue-violet font-medium"
+                dangerouslySetInnerHTML={{ __html: titleAccent }}
+              />
             </h2>
           </div>
           <p className="text-zinc-400 mx-auto pt-3">
-            A complete AI-first growth practice, built to make your brand the obvious answer in any AI conversation.
+            {description}
           </p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-4 md:gap-5">
-          {services.map((s, i) => (
-            <motion.div
+          {services.map((s, i) => {
+            const Icon = icons[s.icon] || Target;
+            return (
+            <m.div
               key={s.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +134,7 @@ export default function Services() {
               <div className="absolute -top-24 -right-24 w-52 h-52 rounded-full bg-gradient-to-br from-blue-500/0 to-violet-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
                 <div className="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center mb-2 group-hover:border-blue-400/40 transition-colors">
-                  <s.icon className="w-4 h-4 text-blue-300" />
+                  <Icon className="w-4 h-4 text-blue-300" />
                 </div>
                 <h3
                   className={`font-display font-medium tracking-tight ${
@@ -126,8 +149,9 @@ export default function Services() {
                   {s.desc}
                 </p>
               </div>
-            </motion.div>
-          ))}
+            </m.div>
+            );
+          })}
         </div>
       </div>
     </section>

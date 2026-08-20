@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 // CSS/SVG-built spatial visual: floating amber holographic panels,
 // orbital rings, vision-pro glass surfaces and digital twin wireframe.
@@ -112,7 +112,7 @@ export default function HeroVisual() {
       </div>
 
       {/* Floating glass panel — top-left */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -135,10 +135,10 @@ export default function HeroVisual() {
             />
           ))}
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Floating glass panel — right */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55 }}
@@ -162,10 +162,10 @@ export default function HeroVisual() {
           <span>Step 3 / 8</span>
           <span>62% complete</span>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Floating glass panel — bottom */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
@@ -191,7 +191,7 @@ export default function HeroVisual() {
         <div className="text-white text-xs leading-relaxed">
           Distributed review — assembly line, Plant 12.
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Subtle ambient corner brackets */}
       <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-[#FFB800]/30" />

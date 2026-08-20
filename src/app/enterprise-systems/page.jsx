@@ -1,17 +1,41 @@
 "use client";
 
-import Industries from "@/components/ai/Industries";
+import dynamic from "next/dynamic";
 import Layout from "@/components/apple/Layout";
 import Capabilities from "@/components/erp/Capabilities";
-import CTA from "@/components/erp/CTA";
 import Hero from "@/components/erp/Hero";
-import Integrations from "@/components/erp/Integrations";
-import Modules from "@/components/erp/Modules";
-import ProcessFlow from "@/components/erp/ProcessFlow";
 import StarsBackground from "@/components/erp/StarsBackground";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load.
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const Modules = dynamic(() => import("@/components/erp/Modules"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const ProcessFlow = dynamic(() => import("@/components/erp/ProcessFlow"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const Integrations = dynamic(() => import("@/components/erp/Integrations"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const CTA = dynamic(() => import("@/components/erp/CTA"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 
 const LOGISTICS_MODULES = [
   {

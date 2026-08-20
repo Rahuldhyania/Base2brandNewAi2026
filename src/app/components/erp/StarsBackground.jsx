@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import {
-    motion,
+    m,
     useMotionValue,
     useSpring,
 } from "framer-motion";
@@ -33,7 +33,7 @@ function StarLayer({
     }, [count, starColor]);
 
     return (
-        <motion.div
+        <m.div
             data-slot="star-layer"
             animate={{ y: [0, -2000] }}
             transition={transition}
@@ -56,7 +56,7 @@ function StarLayer({
                     boxShadow: boxShadow,
                 }}
             />
-        </motion.div>
+        </m.div>
     );
 }
 
@@ -97,7 +97,7 @@ export function StarsBackground({
             onMouseMove={handleMouseMove}
             {...props}
         >
-            <motion.div style={{ x: springX, y: springY }}>
+            <m.div style={{ x: springX, y: springY }}>
                 <StarLayer
                     count={900}
                     size={1}
@@ -128,7 +128,7 @@ export function StarsBackground({
                     }}
                     starColor={starColor}
                 />
-            </motion.div>
+            </m.div>
             {children}
         </div>
     );

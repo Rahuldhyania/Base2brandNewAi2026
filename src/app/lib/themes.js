@@ -36,6 +36,11 @@ export const THEMES = {
             pathname.startsWith("/growth-visibility/") ||
             pathname === "/growth-visibility-demo",
     },
+    services: {
+        id: "services",
+        className: "theme-geo",
+        match: (pathname) => pathname.startsWith("/services/"),
+    },
     socialMedia: {
         id: "social-media",
         className: "theme-social-media",

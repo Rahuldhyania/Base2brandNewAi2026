@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Bot, Sparkles, Brain, Compass, Search, Bird } from "lucide-react";
 
 const platforms = [
@@ -40,7 +40,7 @@ export default function Platforms() {
         {/* Desktop: grid */}
         <div className="mt-16 hidden md:grid grid-cols-6 border-t border-l border-white/5 rounded-2xl overflow-hidden">
           {platforms.map((p, i) => (
-            <motion.div
+            <m.div
               key={p.name}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Platforms() {
                   {p.sub}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

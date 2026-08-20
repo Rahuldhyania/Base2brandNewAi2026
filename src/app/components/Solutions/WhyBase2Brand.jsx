@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Building2, GitMerge, FlaskConical, Handshake, Icon } from "lucide-react";
 
 
@@ -21,7 +21,7 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
     >
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="max-w-2xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -29,8 +29,8 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
             className="section-label"
           >
             {highlightTag}
-          </motion.div>
-          <motion.h2
+          </m.div>
+          <m.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -39,14 +39,14 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
           >
             {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
-          </motion.h2>
+          </m.h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           {reasonsData.map((r, i) => {
             const Icon = Icons[r.icon];
             return (
-              <motion.div
+              <m.div
                 key={r.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function WhyBase2Brand({highlightTag, titleUpper, titleLower, des
                     {r.desc}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

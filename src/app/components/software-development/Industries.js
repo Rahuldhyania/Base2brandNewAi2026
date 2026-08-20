@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   HeartPulse,
   Landmark,
@@ -28,28 +28,28 @@ const Industries = () => {
   return (
     <section id="industries" className="py-12 relative">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
+          <m.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
             Industries
-          </motion.div>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
+          </m.div>
+          <m.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">Built for industries where </span> <br />
             <span className="text-(--b2b-primary)">reliability matters.</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+          </m.h2>
+          <m.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             From regulated financial systems to live operations — we engineer software for
             environments where downtime is not an option.
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -59,7 +59,7 @@ const Industries = () => {
           {INDUSTRIES.map((ind) => {
             const Icon = ind.icon;
             return (
-              <motion.div
+              <m.div
                 key={ind.name}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
@@ -70,10 +70,10 @@ const Industries = () => {
                 </div>
                 <div className="mt-2 md:mt-5 text-[15px] font-medium text-white">{ind.name}</div>
                 <div className="mt-1 text-[12.5px] text-white/50">{ind.note}</div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

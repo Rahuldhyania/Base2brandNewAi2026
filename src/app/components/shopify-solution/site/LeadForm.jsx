@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { z } from "zod";
 import { toast } from "sonner";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
@@ -146,7 +146,7 @@ export const LeadForm = ({
     <div className={wrapperClass}>
       <AnimatePresence mode="wait">
         {state === "success" ? (
-          <motion.div
+          <m.div
             key="success"
             data-testid={tid("success-state")}
             initial={{ opacity: 0, y: 12 }}
@@ -194,9 +194,9 @@ export const LeadForm = ({
                 </button>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         ) : (
-          <motion.form
+          <m.form
             key="form"
             data-testid={idPrefix}
             data-nosnippet
@@ -310,7 +310,7 @@ export const LeadForm = ({
                 )}
               </button>
             </div>
-          </motion.form>
+          </m.form>
         )}
       </AnimatePresence>
     </div>

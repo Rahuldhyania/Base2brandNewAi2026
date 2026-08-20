@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import {
   DynamicIslandProvider,
@@ -112,7 +112,7 @@ function IslandShow() {
         {/* Caption strip */}
         <div className="absolute bottom-[10%] left-0 right-0 flex flex-col items-center text-center px-6 sm:px-8 z-10">
           <AnimatePresence mode="wait">
-            <motion.p
+            <m.p
               key={index}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ function IslandShow() {
               className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.24em] text-white/50"
             >
               {STATES[index].sub}
-            </motion.p>
+            </m.p>
           </AnimatePresence>
           <div className="mt-3 flex items-center gap-1.5">
             {STATES.map((_, i) => (

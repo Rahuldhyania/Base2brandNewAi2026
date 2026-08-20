@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const steps = [
   {
@@ -62,7 +62,7 @@ export const Process = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-8 xl:gap-6">
             {steps.map((s, i) => (
-              <motion.div
+              <m.div
                 key={s.n}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export const Process = () => {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

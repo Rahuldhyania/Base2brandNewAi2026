@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SPATIAL } from "@/constants/testIds";
 
@@ -64,7 +64,7 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           variants={container}
           initial="initial"
           whileInView="animate"
@@ -72,7 +72,7 @@ export default function CaseStudies() {
           className="grid md:grid-cols-2 gap-5"
         >
           {cases.map((c, i) => (
-            <motion.a
+            <m.a
               key={c.title}
               href="#"
               variants={item}
@@ -102,9 +102,9 @@ export default function CaseStudies() {
                 {c.title}
               </h3>
               <p className="text-sm text-white/60 leading-relaxed">{c.body}</p>
-            </motion.a>
+            </m.a>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

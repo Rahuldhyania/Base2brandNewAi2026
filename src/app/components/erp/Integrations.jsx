@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
     SiSap,
     SiSnowflake,
@@ -116,7 +116,7 @@ export const Integrations = () => {
                 </div>
             </div>
 
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -152,7 +152,7 @@ export const Integrations = () => {
                         </svg>
                     </a>
                 </div>
-            </motion.div>
+            </m.div>
         </section>
     );
 };

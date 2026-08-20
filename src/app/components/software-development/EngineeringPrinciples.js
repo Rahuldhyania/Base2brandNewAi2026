@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Boxes, Eye, ShieldCheck, TrendingUp, Wrench } from "lucide-react";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
@@ -36,27 +36,27 @@ const EngineeringPrinciples = () => {
   return (
     <section id="principles" className=" pt-12 md:pt-0 pb-12 relative">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="text-(--b2b-primary) ">
+          <m.div variants={fadeUp} className="text-(--b2b-primary) ">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
             Built With Discipline
-          </motion.div>
-          <motion.h2 variants={fadeUp} className="mt-2 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
+          </m.div>
+          <m.h2 variants={fadeUp} className="mt-2 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">How we </span>
             <span className="text-(--b2b-primary)">build software that lasts.</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-2">
+          </m.h2>
+          <m.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-2">
             Five principles shape every decision — from architecture sketches to production runbooks.
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -66,7 +66,7 @@ const EngineeringPrinciples = () => {
           {PRINCIPLES.map((p, idx) => {
             const Icon = p.icon;
             return (
-              <motion.div
+              <m.div
                 key={p.title}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
@@ -80,10 +80,10 @@ const EngineeringPrinciples = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{p.title}</h3>
                 <p className="text-[13.5px] leading-relaxed text-white/60">{p.desc}</p>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

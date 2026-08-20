@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import { ArrowUpRight } from "lucide-react";
@@ -69,7 +69,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
   const ref = useRef(null);
 
   return (
-    <motion.button
+    <m.button
       ref={ref}
       type="button"
       data-testid={`industry-photo-${industry.id}`}
@@ -86,7 +86,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       onViewportEnter={() => onHover(industry.id)}
       className={`relative overflow-hidden rounded-xl flex-shrink-0 cursor-pointer ${size}`}
     >
-      <motion.img
+      <m.img
         src={industry.image}
         alt={industry.name}
         loading="lazy"
@@ -101,7 +101,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Purple duotone wash — strong on inactive, soft on active */}
-      <motion.div
+      <m.div
         animate={{
           opacity: isActive ? 0.12 : 0.55,
         }}
@@ -110,21 +110,21 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Top vignette */}
-      <motion.div
+      <m.div
         animate={{ opacity: isActive ? 1 : 0.65 }}
         transition={{ duration: 0.5 }}
         className="absolute inset-0 bg-gradient-to-t from-[#03030A]/85 via-transparent to-transparent"
       />
 
       {/* Dim layer for non-hovered when something else is hovered */}
-      <motion.div
+      <m.div
         animate={{ opacity: isDimmed ? 0.55 : 0 }}
         transition={{ duration: 0.4 }}
         className="absolute inset-0 bg-[#03030A]"
       />
 
       {/* Glow ring on active */}
-      <motion.div
+      <m.div
         animate={{
           opacity: isActive ? 1 : 0,
         }}
@@ -133,7 +133,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Corner accent dot */}
-      <motion.span
+      <m.span
         animate={{
           scale: isActive ? 1 : 0,
           opacity: isActive ? 1 : 0,
@@ -143,7 +143,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Industry label */}
-      <motion.div
+      <m.div
         animate={{
           y: isActive ? 0 : 8,
           opacity: isActive ? 1 : 0,
@@ -152,13 +152,13 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
         className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-xs uppercase tracking-[0.2em] text-white"
       >
         {industry.name}
-      </motion.div>
-    </motion.button>
+      </m.div>
+    </m.button>
   );
 };
 
 const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
-  <motion.button
+  <m.button
     type="button"
     data-testid={`industry-card-${idx}`}
     onMouseEnter={() => onHover(industry.id)}
@@ -174,12 +174,12 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
     onViewportEnter={() => onHover(industry.id)}
     className="text-left group block w-full py-3 cursor-pointer"
   >
-    <motion.div
+    <m.div
       animate={{ opacity: isDimmed ? 0.4 : 1 }}
       transition={{ duration: 0.3 }}
       className="flex items-center gap-3"
     >
-      <motion.span
+      <m.span
         animate={{
           width: isActive ? 26 : 16,
           backgroundColor: isActive
@@ -199,7 +199,7 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
       >
         {industry.name}
       </span>
-      <motion.span
+      <m.span
         animate={{
           opacity: isActive ? 1 : 0,
           x: isActive ? 0 : -8,
@@ -208,19 +208,19 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
         className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-(--b2b-primary)"
       >
         {ctaLabel} <ArrowUpRight className="w-3 h-3" />
-      </motion.span>
-    </motion.div>
+      </m.span>
+    </m.div>
     {industry.use && (
-      <motion.p
+      <m.p
         animate={{ opacity: isDimmed ? 0.3 : 1 }}
         className={`mt-1.5 pl-9 text-xs md:text-sm transition-colors duration-300 ${
           isActive ? "text-white/70" : "text-white/35"
         }`}
       >
         {industry.use}
-      </motion.p>
+      </m.p>
     )}
-  </motion.button>
+  </m.button>
 );
 
 const Industries = ({

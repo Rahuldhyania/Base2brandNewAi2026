@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FLOATING_CATEGORIES } from "../data/resources";
 
 /**
@@ -25,7 +25,7 @@ export default function CategoryOrbits({ onSelect }) {
   return (
     <div className="pointer-events-none absolute inset-0 z-20 hidden lg:block" aria-hidden>
       {FLOATING_CATEGORIES.map((cat, i) => (
-        <motion.button
+        <m.button
           key={cat}
           data-testid={`floating-category-${cat.toLowerCase().replace(/\s+/g, "-")}`}
           onClick={() => onSelect && onSelect(cat)}
@@ -59,7 +59,7 @@ export default function CategoryOrbits({ onSelect }) {
               }}
             />
           </span>
-        </motion.button>
+        </m.button>
       ))}
     </div>
   );

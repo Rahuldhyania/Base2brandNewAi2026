@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { GraduationCap, ShieldCheck, Users, Layers } from "lucide-react";
 import { SPATIAL } from "@/constants/testIds";
 
@@ -71,7 +71,7 @@ export default function WhySpatial({
           </p>
         </div>
 
-        <motion.div
+        <m.div
           variants={containerVariants}
           initial="initial"
           whileInView="animate"
@@ -81,7 +81,7 @@ export default function WhySpatial({
           {cards.map((c, i) => {
             const Icon = c.icon;
             return (
-              <motion.div
+              <m.div
                 key={c.title}
                 variants={itemVariants}
                 data-testid={SPATIAL.whyCard(i)}
@@ -104,10 +104,10 @@ export default function WhySpatial({
                     {c.metricLabel}
                   </span>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

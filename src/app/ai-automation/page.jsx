@@ -1,18 +1,50 @@
+import dynamic from "next/dynamic";
 import MetricsBar from "@/components/ai/MetricsBar";
 import Hero from "../components/ai/Hero";
 import Narrative from "@/components/ai/Narrative";
 import Capabilities from "@/components/ai/Capabilities";
-import BuildingNow from "@/components/ai/BuildingNow";
-import Architecture from "@/components/ai/Architecture";
-import TechStack from "@/components/ai/TechStack";
-import Industries from "@/components/ai/Industries";
-import MaturityFramework from "@/components/ai/MaturityFramework";
-import ResearchLab from "@/components/ai/ResearchLab";
-import SEOContent from "@/components/ai/SEOContent";
-import FinalCTA from "@/components/ai/FinalCTA";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load — same
+// pattern already used on the home page (src/app/page.js).
+const BuildingNow = dynamic(() => import("@/components/ai/BuildingNow"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const Architecture = dynamic(() => import("@/components/ai/Architecture"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const TechStack = dynamic(() => import("@/components/ai/TechStack"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const MaturityFramework = dynamic(
+  () => import("@/components/ai/MaturityFramework"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const ResearchLab = dynamic(() => import("@/components/ai/ResearchLab"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const SEOContent = dynamic(() => import("@/components/ai/SEOContent"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const FinalCTA = dynamic(() => import("@/components/ai/FinalCTA"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
 
 const features = [
   { l: "Architected", d: "Not patched" },

@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCircle2, Clock, MessageSquare, Rocket } from "lucide-react";
 import ContactFormTabs from "@/components/ui/ContactFormTabs";
 
@@ -21,7 +21,7 @@ export function FinalCTA() {
         <div className="grid lg:grid-cols-[1fr_1.35fr] gap-12 xl:gap-16 items-start">
 
           {/* Left column */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -89,7 +89,7 @@ export function FinalCTA() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right column — Form */}
           <div className="pt-4">

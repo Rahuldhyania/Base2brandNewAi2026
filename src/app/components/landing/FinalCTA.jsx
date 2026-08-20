@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 
@@ -78,7 +78,7 @@ export default function FinalCTA() {
 
           <div className="relative">
             {sent ? (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="rounded-2xl border border-white/10 bg-white/[0.02] p-10 text-center min-h-[420px] flex flex-col items-center justify-center"
@@ -109,7 +109,7 @@ export default function FinalCTA() {
                 >
                   Submit another request →
                 </button>
-              </motion.div>
+              </m.div>
             ) : (
               <form
                 onSubmit={submit}

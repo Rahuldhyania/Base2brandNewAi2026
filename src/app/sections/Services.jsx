@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import {
   Megaphone,
@@ -52,7 +52,7 @@ const SERVICES = [
 function ServiceCard({ s, index }) {
   const Icon = s.icon;
   return (
-    <motion.article
+    <m.article
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -84,7 +84,7 @@ function ServiceCard({ s, index }) {
           </li>
         ))}
       </ul>
-    </motion.article>
+    </m.article>
   );
 }
 

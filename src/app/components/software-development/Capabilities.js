@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Code2,
   Boxes,
@@ -116,7 +116,7 @@ const Capabilities = () => {
       <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-full md:w-[700px] h-full md:h-[700px] b2b-glow-red opacity-50" />
 
       <div className="b2b-container relative">
-        <motion.div
+        <m.div
           variants={stagger(0.06)}
           initial="hidden"
           whileInView="visible"
@@ -124,10 +124,10 @@ const Capabilities = () => {
           className="text-center"
         >
           <div className="max-w-2xl mx-auto">
-            <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
+            <m.div variants={fadeUp} className="text-(--b2b-primary) mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-(--b2b-primary)" />
               SOFTWARE DEVELOPMENT CAPABILITIES
-            </motion.div>
+            </m.div>
             <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
               <span className="b2b-text-gradient">Everything Your Digital Product Needs,</span>{" "} <br />
               <span className="text-(--b2b-primary)">One Team Delivers.</span>
@@ -136,9 +136,9 @@ const Capabilities = () => {
           <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             We build custom web apps, SaaS platforms, and enterprise software with performance, scalability, and business value.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           variants={stagger(0.05)}
           initial="hidden"
           whileInView="visible"
@@ -148,7 +148,7 @@ const Capabilities = () => {
           {CAPABILITIES.map((cap) => {
             const Icon = cap.icon;
             return (
-              <motion.div
+              <m.div
                 key={cap.n}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
@@ -184,10 +184,10 @@ const Capabilities = () => {
                   <span className="text-[11px] uppercase tracking-[0.22em] text-white/35">Learn more</span>
                   <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-[color:var(--b2b-primary)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

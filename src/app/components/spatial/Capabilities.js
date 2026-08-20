@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Brain,
   Workflow,
@@ -109,7 +109,7 @@ export default function Capabilities() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           variants={container}
           initial="initial"
           whileInView="animate"
@@ -119,7 +119,7 @@ export default function Capabilities() {
           {capabilities.map((c, i) => {
             const Icon = c.icon;
             return (
-              <motion.div
+              <m.div
                 key={c.title}
                 variants={item}
                 data-testid={SPATIAL.capabilityCard(i)}
@@ -150,10 +150,10 @@ export default function Capabilities() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

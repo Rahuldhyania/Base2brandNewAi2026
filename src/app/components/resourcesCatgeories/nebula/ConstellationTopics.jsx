@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { TOPIC_LINKS, TOPIC_NODES } from "../data/resources";
 
 /**
@@ -36,7 +36,7 @@ export default function ConstellationTopics({ activeTopic, onSelect }) {
           const nb = TOPIC_NODES.find((n) => n.id === b);
           if (!na || !nb) return null;
           return (
-            <motion.line
+            <m.line
               key={i}
               x1={na.x}
               y1={na.y}
@@ -57,7 +57,7 @@ export default function ConstellationTopics({ activeTopic, onSelect }) {
       {TOPIC_NODES.map((n, i) => {
         const isActive = activeTopic === n.label;
         return (
-          <motion.button
+          <m.button
             key={n.id}
             data-testid={`topic-node-${n.id}`}
             onClick={() => onSelect(n.label)}
@@ -86,7 +86,7 @@ export default function ConstellationTopics({ activeTopic, onSelect }) {
             >
               {n.label}
             </span>
-          </motion.button>
+          </m.button>
         );
       })}
 

@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import StarsBackground from "./StarsBackground";
 import OrbitalBackground from "./OrbitalBackground";
@@ -55,16 +55,16 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
 
       {/* Content */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-10 text-center pt-24 md:pt-28 pb-10 md:pb-20">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="section-label inline-flex"
         >
           {highlightTag}
-        </motion.div>
+        </m.div>
 
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: "easeOut", delay: 0.1 }}
@@ -72,18 +72,18 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
         >
           <span className="block">{titleupper}</span>{' '}
           <span className="block text-orange-gradient w-fit mx-auto">{titlelower}</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
           className="mt-3 md:mt-6 text-sm md:text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed"
         >
           {description}
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
@@ -112,10 +112,10 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
             )
           }
 
-        </motion.div>
+        </m.div>
 
         {/* Hero ticker readout */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
@@ -130,10 +130,10 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           <span className="font-mono text-[10px] sm:text-[11px] tracking-[0.22em] text-(--b2b-primary) uppercase">
             Online
           </span>
-        </motion.div>
+        </m.div>
 
         {/* Scroll hint */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
@@ -143,7 +143,7 @@ export default function Hero({ highlightTag, titleupper, titlelower, description
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase rotate-90 origin-center pt-6">
             Scroll
           </span>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

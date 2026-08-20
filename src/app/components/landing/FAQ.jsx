@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "Do you replace our existing marketing team?",
-    a: "No — we plug in alongside your team. We bring the AI-first specialism, frameworks and operating motion. Your team retains brand ownership and we accelerate distribution, authority and AI presence in parallel.",
+    a: "No — we plug in alongside your team. We bring the AI-first specialism, frameworks and operating m. Your team retains brand ownership and we accelerate distribution, authority and AI presence in parallel.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -99,7 +99,7 @@ export default function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
-        </motion.div>
+        </m.div>
       </div>
     </section>
     </>

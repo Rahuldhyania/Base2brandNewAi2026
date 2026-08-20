@@ -3,13 +3,9 @@ import { Hero } from "./sections/Hero";
 import { SectionFallback } from "./components/layout/SectionFallback";
 import { DeferredRocketScrollNavigator } from "./components/layout/DeferredRocketScrollNavigator";
 import { Toaster } from "./components/ui/toaster";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import Industries from "@/components/ai/Industries";
 import TrustSection from "./sections/Trust";
 import GrowthSystem from "./sections/GrowthSystem";
-import ClientFeedback from "./sections/ClientFeedback";
 import FAQ from "./sections/FAQ";
-import InsightsSection from "./resources-catgeories/insights/InsightsSection";
 import { WORK_CAROUSEL_CASES } from "./case-study/data/workCarouselData";
 
 
@@ -17,6 +13,12 @@ const ClientFootprint = dynamic(
   () => import("./sections/ClientFootprint").then((m) => m.ClientFootprint),
   { loading: () => <SectionFallback minHeight={720} /> },
 );
+
+// Pulls in the full Swiper carousel library — lazy-load since it's mid-page,
+// not needed for initial paint.
+const ClientFeedback = dynamic(() => import("./sections/ClientFeedback"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
 
 const Services = dynamic(
   () => import("./sections/Services").then((m) => m.Services),
@@ -72,6 +74,21 @@ const LandingZone = dynamic(
 const WorkCarousel = dynamic(
   () => import("@/components/portfolio-animation/sections/WorkCarousel"),
   { loading: () => <SectionFallback minHeight={640} /> },
+);
+
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+
+const Industries = dynamic(
+  () => import("@/components/ai/Industries"),
+  { loading: () => <SectionFallback minHeight={520} /> },
+);
+
+const InsightsSection = dynamic(
+  () => import("./resources-catgeories/insights/InsightsSection"),
+  { loading: () => <SectionFallback minHeight={480} /> },
 );
 
 const SECTIONS = [

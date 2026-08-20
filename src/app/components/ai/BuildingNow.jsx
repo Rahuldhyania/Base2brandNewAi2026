@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useLayoutEffect } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import {
@@ -163,7 +163,7 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
   const progressWidth = `${progress * 100}%`;
 
   const detailCard = (
-    <motion.div
+    <m.div
       key={active}
       initial={{ opacity: 0, y: 18, scale: 0.99 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -207,39 +207,39 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
         </span>
       </div>
 
-      <motion.h3
+      <m.h3
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.08, duration: 0.45 }}
         className="relative mt-5 sm:mt-7 font-display text-xl sm:text-2xl lg:text-5xl tracking-[-0.03em] font-medium leading-[1.05]"
       >
         {it.title}
-      </motion.h3>
+      </m.h3>
 
-      <motion.p
+      <m.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.16, duration: 0.45 }}
         className="relative mt-4 sm:mt-5 text-sm sm:text-base text-white/55 leading-relaxed max-w-xl"
       >
         {it.desc}
-      </motion.p>
+      </m.p>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.22, duration: 0.45 }}
         className="relative mt-6 sm:mt-8 flex flex-wrap gap-2"
       >
-        {it.metrics?.map((m) => (
+        {it.metrics?.map((metric) => (
           <span
-            key={m}
+            key={metric}
             className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/4 border border-white/10 text-white/70"
           >
-            {m}
+            {metric}
           </span>
         ))}
-      </motion.div>
+      </m.div>
 
       <div className="relative mt-6 sm:mt-9 pt-4 sm:pt-5 border-t border-white/5 flex items-center justify-between gap-4">
         <span className="font-mono text-xs tracking-[0.25em] uppercase text-white/35">
@@ -254,7 +254,7 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
           Engage →
         </a>
       </div>
-    </motion.div>
+    </m.div>
   );
 
   const tabList = (
@@ -274,7 +274,7 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
                 : "bg-transparent border-transparent hover:border-white/10 hover:bg-white/2"
             }`}
           >
-            <motion.span
+            <m.span
               animate={{ scale: isActive ? 1.05 : 1 }}
               transition={{ duration: 0.35 }}
               className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-lg shrink-0 border border-white/8 ${
@@ -284,7 +284,7 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
               }`}
             >
               <ItemIcon className="w-4 h-4" />
-            </motion.span>
+            </m.span>
 
             <span className="flex-1 min-w-0">
               <span
@@ -304,7 +304,7 @@ const BuildingNow = ({ title, description, highlightTag, ITEMS }) => {
               </span>
             </span>
 
-            <motion.span
+            <m.span
               animate={{
                 height: isActive ? 32 : 0,
                 opacity: isActive ? 1 : 0,

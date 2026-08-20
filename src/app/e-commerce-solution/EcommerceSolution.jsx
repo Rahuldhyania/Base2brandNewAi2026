@@ -1,17 +1,36 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import LeadFormDialog from "@/components/shopify-solution/site/LeadFormDialog";
-import Hero from "@/components/shopify-solution/site/Hero";
 import CommerceSystems from "@/components/shopify-solution/site/CommerceSystems";
 import AppScreensMarquee from "@/components/shopify-solution/site/AppScreensMarquee";
-import EcosystemViz from "@/components/shopify-solution/site/EcosystemViz";
-import MissionDossierFan from "@/components/ui/MissionDossierFan";
-import MissionControlTimeline from "@/components/shopify-solution/site/MissionControlTimeline";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import FinalCTA from "@/components/ai/FinalCTA";
 import { IlluminatedHero } from "@/components/illuminated-hero";
-import Industries from "@/components/ai/Industries";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load.
+const EcosystemViz = dynamic(
+  () => import("@/components/shopify-solution/site/EcosystemViz"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const MissionDossierFan = dynamic(() => import("@/components/ui/MissionDossierFan"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const MissionControlTimeline = dynamic(
+  () => import("@/components/shopify-solution/site/MissionControlTimeline"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const FinalCTA = dynamic(() => import("@/components/ai/FinalCTA"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
 
 // const ECOMMERCE_INDUSTRIES = [
 //   {

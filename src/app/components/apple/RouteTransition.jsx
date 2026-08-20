@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 /**
  * Route transition loader — a slim launch sequence that briefly appears on
@@ -42,14 +42,14 @@ export default function RouteTransition({ tint = "orange" }) {
   return (
     <AnimatePresence>
       {active && (
-        <motion.div
+        <m.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="fixed inset-0 z-[100] pointer-events-none flex items-center justify-center bg-[#020408]"
         >
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -65,13 +65,13 @@ export default function RouteTransition({ tint = "orange" }) {
             <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/55">
               {label}
             </p>
-          </motion.div>
+          </m.div>
           <style jsx global>{`
             @keyframes spin { 
               to { transform: rotate(360deg); } 
             }
           `}</style>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

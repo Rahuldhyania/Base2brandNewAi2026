@@ -1,5 +1,7 @@
-import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useInView, usePrefersReducedMotion } from "@/lib/useInView";
+
+const EASE = "cubic-bezier(0.22,1,0.36,1)";
+const DURATION = 0.65;
 
 export default function Reveal({
   children,
@@ -10,23 +12,26 @@ export default function Reveal({
   amount = 0.2,
   as = "div",
 }) {
-  const reduced = useReducedMotion();
-  const MotionTag = motion[as] || motion.div;
+  const reduced = usePrefersReducedMotion();
+  const [ref, inView] = useInView({ once, amount });
+  const Tag = as;
 
   if (reduced) {
-    const Tag = as;
     return <Tag className={className}>{children}</Tag>;
   }
 
   return (
-    <MotionTag
+    <Tag
+      ref={ref}
       className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
-      viewport={{ once, amount }}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : `translateY(${y}px)`,
+        transition: `opacity ${DURATION}s ${EASE} ${delay}s, transform ${DURATION}s ${EASE} ${delay}s`,
+        willChange: "opacity, transform",
+      }}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

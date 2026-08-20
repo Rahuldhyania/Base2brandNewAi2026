@@ -4,7 +4,7 @@
 // import Image from "next/image";
 // import {
 //     AnimatePresence,
-//     motion,
+//     m,
 //     useMotionValueEvent,
 //     useReducedMotion,
 //     useScroll,
@@ -551,7 +551,7 @@
 //                         activeScrollIndex > scrollIndex;
 
 //                     return (
-//                         <motion.line
+//                         <m.line
 //                             key={module.id}
 //                             x1={CENTER_X}
 //                             y1={CENTER_Y}
@@ -582,7 +582,7 @@
 //             </svg>
 
 //             {!reduceMotion && (
-//                 <motion.div
+//                 <m.div
 //                     className="
 //                         absolute
 //                         inset-0
@@ -621,7 +621,7 @@
 //                             "
 //                         />
 //                     </div>
-//                 </motion.div>
+//                 </m.div>
 //             )}
 
 //             <div
@@ -765,7 +765,7 @@
 //                                 : undefined
 //                         }
 //                     >
-//                         <motion.span
+//                         <m.span
 //                             animate={{
 //                                 scale: isActive
 //                                     ? 1.1
@@ -815,7 +815,7 @@
 //                                 "
 //                                 strokeWidth={1.35}
 //                             />
-//                         </motion.span>
+//                         </m.span>
 
 //                         <span
 //                             className={`
@@ -1228,7 +1228,7 @@
 //                             }
 //                         `}
 //                     >
-//                         <motion.div
+//                         <m.div
 //                             layout
 //                             className={
 //                                 layoutPhase ===
@@ -1282,9 +1282,9 @@
 //                                         modules
 //                                     </p>
 //                                 )}
-//                         </motion.div>
+//                         </m.div>
 
-//                         <motion.div
+//                         <m.div
 //                             layout
 //                             className={
 //                                 layoutPhase ===
@@ -1325,7 +1325,7 @@
 //                                 {layoutPhase ===
 //                                     "split" &&
 //                                     activeModule && (
-//                                         <motion.div
+//                                         <m.div
 //                                             key={
 //                                                 activeModule.id
 //                                             }
@@ -1366,7 +1366,7 @@
 //                                                     activeModule
 //                                                 }
 //                                             />
-//                                         </motion.div>
+//                                         </m.div>
 //                                     )}
 //                             </AnimatePresence>
 
@@ -1386,7 +1386,7 @@
 //                                             lg:w-full
 //                                         "
 //                                         >
-//                                             <motion.div
+//                                             <m.div
 //                                                 className="
 //                                                 absolute
 //                                                 inset-y-0
@@ -1471,7 +1471,7 @@
 //                                         </div>
 //                                     </>
 //                                 )}
-//                         </motion.div>
+//                         </m.div>
 //                     </div>
 //                 </div>
 //             </div>
@@ -1495,7 +1495,7 @@ import React, {
 import Image from "next/image";
 import {
   AnimatePresence,
-  motion,
+  m,
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
@@ -1923,7 +1923,7 @@ function ModulesWheel({
             activeScrollIndex > scrollIndex;
 
           return (
-            <motion.line
+            <m.line
               key={module.id}
               x1={CENTER_X}
               y1={CENTER_Y}
@@ -1949,7 +1949,7 @@ function ModulesWheel({
       </svg>
 
       {!reduceMotion && (
-        <motion.div
+        <m.div
           className="
             absolute
             inset-0
@@ -1986,7 +1986,7 @@ function ModulesWheel({
               "
             />
           </div>
-        </motion.div>
+        </m.div>
       )}
 
       <div
@@ -2121,7 +2121,7 @@ function ModulesWheel({
             aria-label={`${module.label}: ${module.desc}`}
             aria-current={isActive ? "true" : undefined}
           >
-            <motion.span
+            <m.span
               animate={{
                 scale: isActive ? 1.1 : 1,
 
@@ -2166,7 +2166,7 @@ function ModulesWheel({
                 "
                 strokeWidth={1.35}
               />
-            </motion.span>
+            </m.span>
 
             <span
               className={`
@@ -2498,7 +2498,7 @@ export const Modules = ({
               }
             `}
           >
-            <motion.div
+            <m.div
               layout
               className={
                 layoutPhase === "intro"
@@ -2535,9 +2535,9 @@ export const Modules = ({
                   Scroll to explore modules
                 </p>
               )}
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               layout
               className={
                 layoutPhase === "intro"
@@ -2559,7 +2559,7 @@ export const Modules = ({
                 custom={direction}
               >
                 {layoutPhase === "split" && activeModule && (
-                  <motion.div
+                  <m.div
                     key={activeModule.id}
                     custom={direction}
                     variants={modulePanelVariants}
@@ -2573,7 +2573,7 @@ export const Modules = ({
                     className="w-full"
                   >
                     <ModuleImagePanel module={activeModule} />
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
 
@@ -2582,7 +2582,7 @@ export const Modules = ({
                   <div
                     className="mt-2 md:mt-10 relative h-px rounded-full bg-white/8 overflow-hidden max-w-[640px] lg:ml-auto lg:w-full"
                   >
-                    <motion.div
+                    <m.div
                       className="
                         absolute
                         inset-y-0
@@ -2638,7 +2638,7 @@ export const Modules = ({
                   </div>
                 </>
               )}
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

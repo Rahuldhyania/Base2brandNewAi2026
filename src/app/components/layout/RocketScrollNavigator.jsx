@@ -1,6 +1,6 @@
 // 'use client';
 // import React, { useEffect, useMemo, useRef, useState } from "react";
-// import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+// import { m, useScroll, useSpring, useTransform } from "framer-motion";
 // import { ROCKET_PATH } from "../../components/visual/OfficialLogo";
 
 // /**
@@ -122,7 +122,7 @@
 //             className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute"
 //             data-testid="rocket-nav-progress"
 //           >
-//             <motion.span>{progressPercent}</motion.span>
+//             <m.span>{progressPercent}</m.span>
 //           </span>
 //         </div>
 
@@ -135,7 +135,7 @@
 //           <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-white/12" />
 
 //           {/* orange progress fill */}
-//           <motion.div
+//           <m.div
 //             style={{ height: progressHeight }}
 //             className="absolute top-0 left-1/2 -translate-x-1/2 w-px bg-orange-brand"
 //           >
@@ -143,7 +143,7 @@
 //               className="absolute inset-0 blur-[3px] bg-orange-brand opacity-70"
 //               aria-hidden
 //             />
-//           </motion.div>
+//           </m.div>
 
 //           {/* dots */}
 //           {dots.map((d, i) => {
@@ -204,7 +204,7 @@
 
 //           {/* rocket - rotated 180° so the nose points downward into space,
 //               with the flame trail rising upward behind it */}
-//           <motion.div
+//           <m.div
 //             style={{ y: rocketY }}
 //             className="absolute top-0 left-1/1 -translate-x-1/2"
 //             data-testid="rocket-nav-rocket"
@@ -228,7 +228,7 @@
 //                 <path d={ROCKET_PATH} fill="#ff6a00" />
 //               </svg>
 //             </div>
-//           </motion.div>
+//           </m.div>
 //         </div>
 //       </div>
 //     </aside>
@@ -240,7 +240,7 @@
 
 'use client';
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import { ROCKET_PATH } from "../../components/visual/OfficialLogo";
 
 /**
@@ -371,7 +371,7 @@ export function RocketScrollNavigator({ sections }) {
             className="text-xs font-mono-display uppercase tracking-[0.28em] text-mute"
             data-testid="rocket-nav-progress"
           >
-            <motion.span>{progressPercent}</motion.span>
+            <m.span>{progressPercent}</m.span>
           </span>
         </div>
 
@@ -384,7 +384,7 @@ export function RocketScrollNavigator({ sections }) {
           <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-white/12" />
 
           {/* orange progress fill — anchored to the bottom, grows upward */}
-          <motion.div
+          <m.div
             style={{ height: progressHeight }}
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px bg-orange-brand"
           >
@@ -392,7 +392,7 @@ export function RocketScrollNavigator({ sections }) {
               className="absolute inset-0 blur-[3px] bg-orange-brand opacity-70"
               aria-hidden
             />
-          </motion.div>
+          </m.div>
 
           {/* dots */}
           {dots.map((d, i) => {
@@ -453,7 +453,7 @@ export function RocketScrollNavigator({ sections }) {
 
           {/* rocket - nose points upward (ascending out of the page), with
               the flame trail below it, trailing downward as it climbs */}
-          <motion.div
+          <m.div
             style={{ y: rocketY }}
             className="absolute top-0 left-1/1 -translate-x-1/2"
             data-testid="rocket-nav-rocket"
@@ -477,7 +477,7 @@ export function RocketScrollNavigator({ sections }) {
                 <path d={ROCKET_PATH} fill="var(--b2b-primary)" />
               </svg>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </aside>

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   Workflow,
   Users,
@@ -153,7 +153,7 @@ const ProductsWeBuild = () => {
   return (
     <section id="products" className="b2b-section relative py-2 md:py-12">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -171,7 +171,7 @@ const ProductsWeBuild = () => {
           <p className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
            Our software development services are shaped around that outcome first — then designed and engineered with the right stack.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Tabs */}
         <div className="mt-8 flex flex-wrap gap-2 overflow-x-auto pb-2 scrollbar-hide" data-testid="products-tablist">
@@ -199,7 +199,7 @@ const ProductsWeBuild = () => {
         {/* Active content */}
         <div className="mt-10 grid grid-cols-12 gap-6">
           <AnimatePresence mode="wait">
-            <motion.div
+            <m.div
               key={product.id}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -229,12 +229,12 @@ const ProductsWeBuild = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </AnimatePresence>
 
           {/* Stat panel */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <m.div
               key={`stats-${product.id}`}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -255,7 +255,7 @@ const ProductsWeBuild = () => {
                 Sample telemetry shape from a live engagement. Actual numbers vary by client
                 requirements, scale, and traffic envelope.
               </div>
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </div>
       </div>

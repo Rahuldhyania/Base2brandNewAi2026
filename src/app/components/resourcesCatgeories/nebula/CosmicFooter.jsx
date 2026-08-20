@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function CosmicFooter() {
   return (
@@ -18,7 +18,7 @@ export default function CosmicFooter() {
         preserveAspectRatio="none"
         className="absolute inset-x-0 top-4 h-10 w-full opacity-40"
       >
-        <motion.polyline
+        <m.polyline
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: true }}

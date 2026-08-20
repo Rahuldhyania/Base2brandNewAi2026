@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Activity,
   Eye,
@@ -48,7 +48,7 @@ function Bars({ data }) {
   return (
     <div className="tick-row w-[68px] sm:w-[88px]">
       {data.map((h, i) => (
-        <motion.span
+        <m.span
           key={i}
           initial={{ height: 0 }}
           whileInView={{ height: `${h}%` }}
@@ -105,7 +105,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -113,8 +113,8 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
             className="section-label"
           >
             {highlightTag}
-          </motion.div>
-          <motion.h2
+          </m.div>
+          <m.h2
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -123,8 +123,8 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
           >
             {titleUpper} {" "}
             <span className="text-orange-gradient">{titleLower}</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -132,10 +132,10 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
             className="mt-2 text-zinc-400 text-base md:text-lg"
           >
             {description}
-          </motion.p>
+          </m.p>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -171,21 +171,21 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
 
           {/* Module list */}
           <div className="relative">
-            {modulesData.map((m, idx) => {
-              const Icon = Icons[m.icon];
+            {modulesData.map((mod, idx) => {
+              const Icon = Icons[mod.icon];
               return (
-                <motion.div
-                  key={m.id}
+                <m.div
+                  key={mod.id}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.06 }}
                   className="group relative flex items-center gap-2 md:gap-4 px-4 sm:px-8 py-3 md:py-5 border-b border-white/5 hover:bg-(--b2b-primary)/[0.03] transition-colors"
-                  data-testid={`mc-module-${m.id}`}
+                  data-testid={`mc-module-${mod.id}`}
                 >
                   {/* Index/code */}
                   <div className="hidden sm:flex flex-col items-start min-w-[64px] font-mono text-[10px] tracking-[0.22em] text-zinc-500">
-                    <span>{m.code}</span>
+                    <span>{mod.code}</span>
                     <span className="mt-1 text-zinc-700">
                       MOD/{String(idx + 1).padStart(2, "0")}
                     </span>
@@ -199,24 +199,24 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
                   {/* Label + dotted line */}
                   <div className="flex-1 min-w-0 flex items-center">
                     <span className="font-mono text-[11px] sm:text-[14px] tracking-[0.18em] uppercase text-white">
-                      {m.label}
+                      {mod.label}
                     </span>
                     <span className="dotted-fill" />
                   </div>
 
                   {/* Metric */}
                   <span className="hidden md:inline font-mono text-[11px] tracking-[0.16em] uppercase text-zinc-400">
-                    {m.metric}
+                    {mod.metric}
                   </span>
 
                   {/* Bars */}
-                  <Bars data={m.bars} />
+                  <Bars data={mod.bars} />
 
                   {/* Status */}
                   <div className="min-w-[110px] sm:min-w-[120px] flex justify-end">
-                    <StatusBadge status={m.status} type={m.statusType} />
+                    <StatusBadge status={mod.status} type={mod.statusType} />
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>
@@ -233,7 +233,7 @@ export default function MissionControl({highlightTag, titleUpper, titleLower, de
               <span className="text-(--b2b-primary)">Engaged</span>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

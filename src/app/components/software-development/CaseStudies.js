@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, TrendingUp, Users, Zap, Boxes } from "lucide-react";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
@@ -55,7 +55,7 @@ const CaseStudies = () => {
   return (
     <section id="case-studies" className="py-2 md:py-12 relative">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -63,22 +63,22 @@ const CaseStudies = () => {
           className="text-center gap-8"
         >
           <div className="max-w-2xl mx-auto">
-            <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-2">
+            <m.div variants={fadeUp} className="text-(--b2b-primary) mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
               Case Studies
-            </motion.div>
-            <motion.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
+            </m.div>
+            <m.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
               <span className="b2b-text-gradient">Outcomes, </span>
               <span className="text-(--b2b-primary)">not deployments.</span>
-            </motion.h2>
+            </m.h2>
           </div>
-          <motion.p variants={fadeUp} className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+          <m.p variants={fadeUp} className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             Engagements are measured by the business outcomes they unlock — not the artifacts they
             ship.
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -88,7 +88,7 @@ const CaseStudies = () => {
           {CASES.map((c, idx) => {
             const Icon = c.icon;
             return (
-              <motion.article
+              <m.article
                 key={c.title}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
@@ -125,10 +125,10 @@ const CaseStudies = () => {
                     View case study <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
-              </motion.article>
+              </m.article>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

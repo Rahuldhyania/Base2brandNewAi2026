@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { BlackHoleWhiteHole } from "./BlackHoleWhiteHole";
 
 const fadeUp = {
@@ -33,7 +33,7 @@ export const Hero = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 lg:gap-10 items-center">
                     {/* Left: content */}
                     <div className="max-w-xl">
-                        <motion.div
+                        <m.div
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -46,9 +46,9 @@ export const Hero = () => {
                             <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-white/70">
                                 Business Control, Built Into One System
                             </span>
-                        </motion.div>
+                        </m.div>
 
-                        <motion.h1
+                        <m.h1
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -71,7 +71,7 @@ export const Hero = () => {
                                     preserveAspectRatio="none"
                                     fill="none"
                                 >
-                                    <motion.path
+                                    <m.path
                                         d="M0 5 Q 50 1 100 5 T 200 5"
                                         stroke="var(--b2b-primary)"
                                         strokeWidth="1.5"
@@ -87,9 +87,9 @@ export const Hero = () => {
                                 </svg>
                             </span>
                             .
-                        </motion.h1>
+                        </m.h1>
 
-                        <motion.p
+                        <m.p
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -103,9 +103,9 @@ export const Hero = () => {
                             operations into one connected ERP software
                             ecosystem built for real-time visibility and
                             faster decisions.
-                        </motion.p>
+                        </m.p>
 
-                        <motion.p
+                        <m.p
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -120,9 +120,9 @@ export const Hero = () => {
                             and Business automation systems that bring every
                             process, record and workflow into one source of
                             truth.
-                        </motion.p>
+                        </m.p>
 
-                        <motion.div
+                        <m.div
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -157,10 +157,10 @@ export const Hero = () => {
                             >
                                 Explore ERP Capabilities
                             </a>
-                        </motion.div>
+                        </m.div>
 
                         {/* Stat strip */}
-                        <motion.div
+                        <m.div
                             {...fadeUp}
                             transition={{
                                 ...fadeUp.transition,
@@ -183,11 +183,11 @@ export const Hero = () => {
                                     </div>
                                 </div>
                             ))}
-                        </motion.div>
+                        </m.div>
                     </div>
 
                     {/* Right: black hole / white hole */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, scale: 0.96 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
@@ -198,11 +198,11 @@ export const Hero = () => {
                         className="relative"
                     >
                         <BlackHoleWhiteHole />
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 {/* Scroll hint */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
@@ -212,12 +212,12 @@ export const Hero = () => {
                     <span className="font-mono text-[10px] uppercase tracking-[0.32em]">
                         Scroll to begin transmission
                     </span>
-                    <motion.span
+                    <m.span
                         animate={{ x: [0, 6, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
                         className="block w-8 h-px bg-white/30"
                     />
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

@@ -1,14 +1,37 @@
-import Narrative from "@/components/ai/Narrative";
+import dynamic from "next/dynamic";
 import Hero from "@/components/social-media/site/Hero";
 import MarqueeStrip from "@/components/social-media/site/MarqueeStrip";
 import ServicesSection from "@/components/social-media/site/ServicesSection";
-import Capabilities from "@/components/ai/Capabilities";
-import BuildingNow from "@/components/ai/BuildingNow";
-import TechStack from "@/components/ai/TechStack";
-import Framework from "@/components/landing/Framework";
-import CreativeShowcase from "@/components/social-media/site/CreativeShowcase";
-import Industries from "@/components/ai/Industries";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS isn't parsed/executed
+// on initial load.
+const Narrative = dynamic(() => import("@/components/ai/Narrative"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
+const Capabilities = dynamic(() => import("@/components/ai/Capabilities"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const BuildingNow = dynamic(() => import("@/components/ai/BuildingNow"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const TechStack = dynamic(() => import("@/components/ai/TechStack"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Framework = dynamic(() => import("@/components/landing/Framework"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const CreativeShowcase = dynamic(
+  () => import("@/components/social-media/site/CreativeShowcase"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 
 const SOCIAL_INDUSTRIES = [
   {

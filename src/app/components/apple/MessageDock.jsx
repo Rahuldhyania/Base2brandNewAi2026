@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { m, AnimatePresence, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
@@ -108,7 +108,7 @@ export default function MessageDock({
   };
 
   return (
-    <motion.div
+    <m.div
       ref={dockRef}
       data-testid={testId}
       className={cn(positionClasses, className)}
@@ -117,7 +117,7 @@ export default function MessageDock({
       viewport={{ once: true, margin: "-80px" }}
       variants={enableAnimations ? containerVariants : {}}
     >
-      <motion.div
+      <m.div
         className="rounded-full px-4 py-2 border mx-auto   max-w-[360px] md:max-w-[520px]"
         animate={{
           width: isExpanded ? expandedWidth : collapsedWidth,
@@ -139,12 +139,12 @@ export default function MessageDock({
         <div className="flex items-center gap-2 relative">
           {/* Sparkle */}
           {showSparkleButton && (
-            <motion.div
+            <m.div
               className="flex items-center justify-center"
               animate={{ opacity: isExpanded ? 0 : 1, x: isExpanded ? -20 : 0, scale: isExpanded ? 0.8 : 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
             >
-              <motion.button
+              <m.button
                 type="button"
                 className="w-11 h-11 flex items-center justify-center cursor-pointer rounded-full"
                 whileHover={!isExpanded ? { scale: 1.06, y: -2 } : undefined}
@@ -152,11 +152,11 @@ export default function MessageDock({
                 aria-label="Apple Intelligence"
               >
                 <span className="text-xl">✨</span>
-              </motion.button>
-            </motion.div>
+              </m.button>
+            </m.div>
           )}
 
-          <motion.div
+          <m.div
             className="w-px h-6 bg-white/12 mr-2 -ml-2"
             animate={{ opacity: isExpanded ? 0 : 1, scaleY: isExpanded ? 0 : 1 }}
             transition={{ type: "spring", stiffness: 300, damping: 30, delay: isExpanded ? 0 : 0.3 }}
@@ -167,7 +167,7 @@ export default function MessageDock({
             const actualIndex = idx + 1;
             const isSelected = expanded === actualIndex;
             return (
-              <motion.div
+              <m.div
                 key={character.name}
                 className={cn("relative", isSelected && isExpanded && "absolute left-1 top-1 z-20")}
                 style={{
@@ -182,7 +182,7 @@ export default function MessageDock({
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 30, delay: isExpanded && !isSelected ? idx * 0.04 : 0 }}
               >
-                <motion.button
+                <m.button
                   type="button"
                   className={cn(
                     "relative w-10 h-10 rounded-full flex items-center justify-center cursor-pointer",
@@ -201,7 +201,7 @@ export default function MessageDock({
                 >
                   <span className="text-xl">{character.emoji}</span>
                   {character.online && (
-                    <motion.span
+                    <m.span
                       className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border-2"
                       style={{ background: "#64D2FF", borderColor: "#020408" }}
                       initial={{ scale: 0 }}
@@ -209,14 +209,14 @@ export default function MessageDock({
                       transition={{ delay: isExpanded ? (isSelected ? 0.3 : 0) : (idx + 1) * 0.08 + 0.4, type: "spring", stiffness: 500, damping: 30 }}
                     />
                   )}
-                </motion.button>
-              </motion.div>
+                </m.button>
+              </m.div>
             );
           })}
 
           <AnimatePresence>
             {isExpanded && (
-              <motion.input
+              <m.input
                 key={`input-${expanded}`}
                 type="text"
                 value={messageInput}
@@ -235,20 +235,20 @@ export default function MessageDock({
             )}
           </AnimatePresence>
 
-          <motion.div
+          <m.div
             className="w-px h-6 bg-white/12 ml-2 -mr-2"
             animate={{ opacity: isExpanded ? 0 : 1, scaleY: isExpanded ? 0 : 1 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           />
 
           {showMenuButton && (
-            <motion.div
+            <m.div
               className={cn("flex items-center justify-center z-20", isExpanded && "absolute right-0")}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
             >
               <AnimatePresence mode="wait">
                 {!isExpanded ? (
-                  <motion.button
+                  <m.button
                     key="menu"
                     type="button"
                     className="w-11 h-11 flex items-center justify-center cursor-pointer rounded-full"
@@ -264,9 +264,9 @@ export default function MessageDock({
                       <line x1="3" y1="12" x2="21" y2="12" />
                       <line x1="3" y1="18" x2="21" y2="18" />
                     </svg>
-                  </motion.button>
+                  </m.button>
                 ) : (
-                  <motion.button
+                  <m.button
                     key="send"
                     type="button"
                     onClick={handleSend}
@@ -282,13 +282,13 @@ export default function MessageDock({
                       <path d="m22 2-7 20-4-9-9-4z" />
                       <path d="M22 2 11 13" />
                     </svg>
-                  </motion.button>
+                  </m.button>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </m.div>
           )}
         </div>
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }

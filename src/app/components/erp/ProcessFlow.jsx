@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
     ArrowLeftRight,
     BadgeCheck,
@@ -84,7 +84,7 @@ const ChaosVis = ({ labels }) => (
                 CHAOS_CHIP_POSITIONS[0];
 
             return (
-                <motion.div
+                <m.div
                     key={label}
                     initial={{ opacity: 0 }}
                     animate={{
@@ -112,7 +112,7 @@ const ChaosVis = ({ labels }) => (
                         strokeWidth={1.5}
                     />
                     {label}
-                </motion.div>
+                </m.div>
             );
         })}
     </div>
@@ -137,7 +137,7 @@ const CoreVis = ({ labels }) => (
             const y = 50 + (r / 3.4) * Math.sin(rad);
 
             return (
-                <motion.div
+                <m.div
                     key={label}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0.4, 0.85, 0.4] }}
@@ -158,7 +158,7 @@ const CoreVis = ({ labels }) => (
                         strokeWidth={1.5}
                     />
                     {label}
-                </motion.div>
+                </m.div>
             );
         })}
     </div>
@@ -167,7 +167,7 @@ const CoreVis = ({ labels }) => (
 const ClarityVis = ({ labels }) => (
     <div className="relative w-full h-full flex flex-col justify-center gap-2">
         {labels.map((l, i) => (
-            <motion.div
+            <m.div
                 key={l}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -180,7 +180,7 @@ const ClarityVis = ({ labels }) => (
                 <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-white/75">
                     {l}
                 </span>
-            </motion.div>
+            </m.div>
         ))}
     </div>
 );
@@ -197,7 +197,7 @@ const Stage = ({ stage, idx }) => {
     const onLeft = idx % 2 === 0;
 
     return (
-        <motion.div
+        <m.div
             variants={fadeUp}
             className="relative grid grid-cols-12 gap-4 items-start"
             data-testid={`process-stage-${stage.index}`}
@@ -235,7 +235,7 @@ const Stage = ({ stage, idx }) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </m.div>
     );
 };
 
@@ -269,7 +269,7 @@ export const ProcessFlow = () => {
                 <div className="mt-10 relative">
                     <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[color:var(--b2b-primary)]/10 via-[color:var(--b2b-primary)]/40 to-[color:var(--b2b-primary)]/10" />
 
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={viewportOnce}
@@ -283,7 +283,7 @@ export const ProcessFlow = () => {
                                 idx={idx}
                             />
                         ))}
-                    </motion.div>
+                    </m.div>
                 </div>
             </div>
         </section>

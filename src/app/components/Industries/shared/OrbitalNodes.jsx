@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 
 // Floating ecosystem nodes — abstract SVG with orbital rings and pulsing dots.
@@ -30,7 +30,7 @@ export default function OrbitalNodes({
       {/* Rings */}
       <div className="absolute inset-0 flex items-center justify-center">
         {[260, 350, 480].map((size, i) => (
-          <motion.div
+          <m.div
             key={size}
             className="absolute rounded-full border border-white/8"
             style={{
@@ -71,7 +71,7 @@ export default function OrbitalNodes({
             className="absolute left-1/2 top-1/2 will-change-transform"
             style={{ transform: `translate(${n.x - 22}px, ${n.y - 22}px)` }}
           >
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0.6 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 + idx * 0.1, duration: 0.6, ease: "easeOut" }}
@@ -91,7 +91,7 @@ export default function OrbitalNodes({
               >
                 <span className="px-1">{n.label}</span>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         ))}
       </div>

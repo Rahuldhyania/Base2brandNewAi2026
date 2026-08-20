@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { motion, AnimatePresence, useWillChange } from "framer-motion";
+import { m, AnimatePresence, useWillChange } from "framer-motion";
 
 /**
  * Dynamic Island — converted from supplied TypeScript component to JSX,
@@ -153,7 +153,7 @@ function DynamicIslandContent({ children, id, willChange, screenSize, ...props }
   const dimensions = calculateDimensions(state.size, screenSize, currentSize);
 
   return (
-    <motion.div
+    <m.div
       id={id}
       className="mx-auto h-0 w-0 items-center justify-center text-center text-white"
       style={{
@@ -171,7 +171,7 @@ function DynamicIslandContent({ children, id, willChange, screenSize, ...props }
       {...props}
     >
       <AnimatePresence>{children}</AnimatePresence>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -206,7 +206,7 @@ export function DynamicContainer({ className, children }) {
   const isSizeChanged = size !== previousSize;
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: size === previousSize ? 1 : 0, scale: size === previousSize ? 1 : 0.9, y: size === previousSize ? 0 : 5 }}
       animate={{ opacity: 1, scale: 1, y: 0, transition: { type: "spring", stiffness, damping, duration: isSizeChanged ? 0.5 : 0.8 } }}
       exit={{ opacity: 0, filter: "blur(10px)", scale: 0.95, y: 20 }}
@@ -214,7 +214,7 @@ export function DynamicContainer({ className, children }) {
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -223,7 +223,7 @@ export function DynamicDiv({ className, children }) {
   const { size, previousSize } = state;
   const willChange = useWillChange();
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: size === previousSize ? 1 : 0, scale: size === previousSize ? 1 : 0.9 }}
       animate={{ opacity: size === previousSize ? 0 : 1, scale: size === previousSize ? 0.9 : 1, transition: { type: "spring", stiffness, damping } }}
       exit={{ opacity: 0, filter: "blur(10px)", scale: 0 }}
@@ -231,7 +231,7 @@ export function DynamicDiv({ className, children }) {
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -240,14 +240,14 @@ export function DynamicTitle({ className, children }) {
   const { size, previousSize } = state;
   const willChange = useWillChange();
   return (
-    <motion.h3
+    <m.h3
       className={className}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: size === previousSize ? 0 : 1, scale: size === previousSize ? 0.9 : 1, transition: { type: "spring", stiffness, damping } }}
       style={{ willChange }}
     >
       {children}
-    </motion.h3>
+    </m.h3>
   );
 }
 
@@ -256,13 +256,13 @@ export function DynamicDescription({ className, children }) {
   const { size, previousSize } = state;
   const willChange = useWillChange();
   return (
-    <motion.p
+    <m.p
       className={className}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: size === previousSize ? 0 : 1, scale: size === previousSize ? 0.9 : 1, transition: { type: "spring", stiffness, damping } }}
       style={{ willChange }}
     >
       {children}
-    </motion.p>
+    </m.p>
   );
 }

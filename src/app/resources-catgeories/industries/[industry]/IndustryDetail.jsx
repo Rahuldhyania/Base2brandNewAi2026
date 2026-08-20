@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import {
   fetchIndustries,
@@ -103,7 +103,7 @@ export default function IndustryDetail({ slug }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,.08),transparent_65%)]" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-0">
-        <motion.div {...fadeUp} transition={{ duration: 0.4 }} className="pt-10 mb-8">
+        <m.div {...fadeUp} transition={{ duration: 0.4 }} className="pt-10 mb-8">
           <Link
             href="/resources-catgeories#industry-reports"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white/50 transition hover:text-cyan-400"
@@ -111,9 +111,9 @@ export default function IndustryDetail({ slug }) {
             <ArrowLeft className="h-3.5 w-3.5" />
             Back to Industry Reports
           </Link>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           {...fadeUp}
           transition={{ duration: 0.5 }}
           className="relative overflow-hidden rounded-2xl md:rounded-[32px] border border-white/10 bg-[#080C16]/80 backdrop-blur-xl p-6 md:p-12"
@@ -153,9 +153,9 @@ export default function IndustryDetail({ slug }) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           {...fadeUp}
           transition={{ duration: 0.5, delay: 0.05 }}
           className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
@@ -178,11 +178,11 @@ export default function IndustryDetail({ slug }) {
               </p>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="rounded-2xl border border-white/10 bg-[#080C16]/60 p-6 md:p-8 backdrop-blur-xl"
@@ -193,9 +193,9 @@ export default function IndustryDetail({ slug }) {
               <p className="mt-4 text-white/60 leading-8">
                 {industry.description}
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="rounded-2xl border border-white/10 bg-[#080C16]/60 p-6 md:p-8 backdrop-blur-xl"
@@ -206,7 +206,7 @@ export default function IndustryDetail({ slug }) {
 
               <div className="mt-8 flex h-32 md:h-40 items-end gap-2 md:gap-3">
                 {(industry.trend || []).map((bar, i) => (
-                  <motion.div
+                  <m.div
                     key={i}
                     initial={{ height: 4 }}
                     whileInView={{ height: `${bar}%` }}
@@ -216,9 +216,9 @@ export default function IndustryDetail({ slug }) {
                   />
                 ))}
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.14 }}
               className="rounded-2xl border border-white/10 bg-[#080C16]/60 backdrop-blur-xl overflow-hidden"
@@ -244,11 +244,11 @@ export default function IndustryDetail({ slug }) {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           <div className="space-y-6">
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="rounded-2xl border border-white/10 bg-[#080C16]/60 p-6 md:p-8 backdrop-blur-xl"
@@ -268,9 +268,9 @@ export default function IndustryDetail({ slug }) {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-cyan-500/5 to-transparent p-6 md:p-8 backdrop-blur-xl"
@@ -289,10 +289,10 @@ export default function IndustryDetail({ slug }) {
                 Talk to Specialists
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
-            </motion.div>
+            </m.div>
 
             {related.length > 0 && (
-              <motion.div
+              <m.div
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: 0.14 }}
                 className="rounded-2xl border border-white/10 bg-[#080C16]/60 p-6 md:p-8 backdrop-blur-xl"
@@ -316,7 +316,7 @@ export default function IndustryDetail({ slug }) {
                     </Link>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </div>
         </div>

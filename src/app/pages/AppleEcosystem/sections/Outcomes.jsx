@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AppleActivityCard from "@/components/apple/AppleActivityCard";
 import { APPLE } from "@/constants/testIds";
 
@@ -49,7 +49,7 @@ export default function Outcomes() {
           </div>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -62,7 +62,7 @@ export default function Outcomes() {
             ringContainerSize={260}
             title="Apple Engagement Production Floor · representative metrics"
           />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

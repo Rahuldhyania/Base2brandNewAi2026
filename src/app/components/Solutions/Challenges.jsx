@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Target,
   GitBranch,
@@ -38,7 +38,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -46,8 +46,8 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
             className="section-label"
           >
             {highlightTag}
-          </motion.div>
-          <motion.h2
+          </m.div>
+          <m.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,8 +57,8 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
             {titleUpper}{' '}
             <br />
             <span className="text-orange-gradient"> {titleLower}</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
             className="mt-2    text-zinc-400 text-base md:text-lg"
           >
             {description}
-          </motion.p>
+          </m.p>
         </div>
 
         <div
@@ -76,7 +76,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
           {challengesData.map((c, i) => {
             const Icon = icons[c.icon];
             return (
-              <motion.div
+              <m.div
                 key={c.id}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function Challenges({highlightTag, titleUpper, titleLower, descri
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400">
                   {c.desc}
                 </p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

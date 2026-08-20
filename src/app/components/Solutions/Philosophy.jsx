@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function Philosophy({highlightTag, titleUpper, titleLower, description}) {
   return (
@@ -26,7 +26,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
       <div className="relative max-w-6xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 2xl:gap-16">
           <div className="lg:col-span-5">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -34,9 +34,9 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
               className="section-label"
             >
             {highlightTag}  
-            </motion.div>
+            </m.div>
 
-            <motion.h2
+            <m.h2
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -46,9 +46,9 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
               {titleUpper}{' '}
               <br />
               <span className="text-orange-gradient"> {titleLower}</span>
-            </motion.h2>
+            </m.h2>
 
-            <motion.div
+            <m.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -57,7 +57,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
             />
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -71,7 +71,7 @@ export default function Philosophy({highlightTag, titleUpper, titleLower, descri
                 </p>
               ))
             }
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

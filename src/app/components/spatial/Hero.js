@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import HeroVisual from "./HeroVisual";
 import { SPATIAL } from "@/constants/testIds";
@@ -26,17 +26,17 @@ export default function Hero() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* From-base label */}
-        <motion.div {...fadeIn} className="flex items-center gap-3 mb-3 md:mb-10">
+        <m.div {...fadeIn} className="flex items-center gap-3 mb-3 md:mb-10">
           <span className="w-2 h-2 rounded-full bg-[#FFB800] animate-pulse-amber" />
           <span className="text-[8px] md:text-[11px] tracking-[0.28em] uppercase text-white/60 font-medium">
             FROM IDEAS TO INTELLIGENT SYSTEMS
           </span>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-[1.15fr_1fr] gap-6 md:gap-12 lg:gap-16 items-center">
           {/* Left — copy */}
           <div>
-            <motion.h1
+            <m.h1
               {...fadeIn}
               transition={{ duration: 0.7, ease: "easeOut" }}
               data-testid={SPATIAL.heroHeadline}
@@ -53,9 +53,9 @@ export default function Hero() {
                   <span className="absolute -inset-x-1 bottom-1 h-[6px] bg-[#FFB800]/15 blur-md -z-10" />
                 </span>
               </span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -64,9 +64,9 @@ export default function Hero() {
             >
               Base2Brand helps ambitious companies turn emerging tech trends into real business systems — from AI technology solutions and IoT platforms to blockchain, cloud technology, cybersecurity, data centres, metaverse development and automation.
 
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.32 }}
@@ -95,22 +95,22 @@ export default function Hero() {
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </a>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Right — spatial visual */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
             className="relative"
           >
             <HeroVisual />
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Metrics */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
@@ -134,7 +134,7 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

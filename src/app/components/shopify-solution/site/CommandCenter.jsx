@@ -1,15 +1,10 @@
 "use client";
-import Image from "next/image";
 import Container from "@/components/shopify-solution/site/Container";
 import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
 import Reveal from "@/components/shopify-solution/site/Reveal";
 import StatusChip from "@/components/shopify-solution/site/StatusChip";
 
-const DASHBOARD_IMAGE =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&h=900&q=85";
-
 export const CommandCenter = ({
-  dashboardImage = DASHBOARD_IMAGE,
   eyebrow = "COMMAND CENTER",
   title = "Every workflow. Every agent. One AI operating layer.",
   subtitle = "We engineer enterprise AI automation that orchestrates agents, workflows, business systems and real-time data from one intelligent control layer. From AI copilots and document intelligence to workflow automation and system integrations, every decision becomes faster, smarter and measurable.",
@@ -68,28 +63,15 @@ export const CommandCenter = ({
                 </div>
               </div>
 
-              {/* Full-width image */}
-              <div className="relative h-[220px] w-full overflow-hidden bg-[#070808] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[560px]"
-                style={{
-                  backgroundImage : 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&h=900&q=85)'
-                }}
-               >
-                {/* <Image
-                  src={dashboardImage}
-                  alt="Commerce mission console dashboard preview"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 94vw, 1400px"
-                  priority={false}
-                /> */}
-
+              {/* Full-width video */}
+              <div className="relative h-[220px] w-full overflow-hidden bg-[#070808] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[560px]">
                 <video
-                  src="/videos/Base2Brand_ Your Pathway to Success! A Creative Digital Marketing & Web Development Agency (1) (1).mp4"
+                  src="/videos/Base2Brand_ Your Pathway to Success! A Creative Digital Marketing & Web Development Agency newCompressed.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-full max-w-[100%] mx-auto object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />

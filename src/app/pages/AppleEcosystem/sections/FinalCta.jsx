@@ -1,13 +1,13 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Calendar } from "lucide-react";
 import { APPLE } from "@/constants/testIds";
 
 export default function FinalCta() {
   return (
     <section id="contact" className="relative b2b-container py-8 sm:py-12">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -69,7 +69,7 @@ export default function FinalCta() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

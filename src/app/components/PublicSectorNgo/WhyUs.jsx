@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Heart, Clock, Lightbulb, Target } from "lucide-react";
 
 const benefits = [
@@ -52,7 +52,7 @@ export const WhyUs = () => {
           {benefits.map((b, i) => {
             const Icon = b.icon;
             return (
-              <motion.div
+              <m.div
                 key={b.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export const WhyUs = () => {
                     {b.desc}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

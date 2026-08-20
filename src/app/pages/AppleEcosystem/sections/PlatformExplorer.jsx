@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useState, useLayoutEffect } from "react";
 import {
-  motion,
+  m,
   AnimatePresence,
   useScroll,
   useTransform,
@@ -98,7 +98,7 @@ function PlatformDetailCard({ platform, detail }) {
     <div className="relative grid lg:grid-cols-[1.6fr_1fr] gap-6 lg:gap-10 items-start">
       <div className="relative min-h-[240px] sm:min-h-[280px] lg:min-h-[300px]">
         <AnimatePresence mode="wait">
-          <motion.div
+          <m.div
             key={`left-${platform}`}
             layout
             variants={leftVariants}
@@ -116,24 +116,24 @@ function PlatformDetailCard({ platform, detail }) {
             <p className="mt-3 sm:mt-5 text-sm sm:text-base text-white/65 leading-relaxed max-w-xl">
               {detail.body}
             </p>
-            <motion.div layout className="mt-5 sm:mt-7 flex flex-wrap gap-2">
+            <m.div layout className="mt-5 sm:mt-7 flex flex-wrap gap-2">
               {detail.tags.map((t) => (
-                <motion.span
+                <m.span
                   layout
                   key={t}
                   className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.14em] sm:tracking-[0.16em] text-white/65 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 bg-white/[0.03]"
                 >
                   {t}
-                </motion.span>
+                </m.span>
               ))}
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </AnimatePresence>
       </div>
 
       <div className="relative min-h-[220px] sm:min-h-[260px]">
         <AnimatePresence mode="wait">
-          <motion.div
+          <m.div
             key={`right-${platform}`}
             layout
             variants={rightVariants}
@@ -155,7 +155,7 @@ function PlatformDetailCard({ platform, detail }) {
               <p>· TestFlight CI, App Store Connect API, automated phased releases.</p>
               <p>· Crash-free sessions tracked against an internal SLA.</p>
             </div>
-          </motion.div>
+          </m.div>
         </AnimatePresence>
       </div>
     </div>
@@ -297,11 +297,11 @@ export default function PlatformExplorer() {
       style={{ height: scrollTrackHeight }}
       aria-label="Apple platform explorer"
     >
-      <motion.div
+      <m.div
         className={`${panelClass} flex items-center overflow-hidden`}
         style={panelStyle}
       >
-        <motion.div
+        <m.div
           className="absolute inset-0 pointer-events-none"
           style={{ opacity: glowOpacity }}
         >
@@ -312,7 +312,7 @@ export default function PlatformExplorer() {
                 "radial-gradient(ellipse, rgba(10,132,255,0.08) 0%, transparent 70%)",
             }}
           />
-        </motion.div>
+        </m.div>
 
         <div className="relative w-full b2b-container py-6 sm:py-8 md:py-10 cursor-grab">
           <div className="flex flex-col items-center text-center mb-6 sm:mb-8 md:mb-10">
@@ -340,7 +340,7 @@ export default function PlatformExplorer() {
             </div>
 
             <div className="w-full max-w-md h-0.5 rounded-full bg-white/[0.06] overflow-hidden">
-              <motion.div
+              <m.div
                 className="h-full rounded-full"
                 style={{
                   width: progressWidth,
@@ -357,7 +357,7 @@ export default function PlatformExplorer() {
 
           <PlatformDetailCard platform={platform} detail={detail} />
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

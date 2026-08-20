@@ -1,9 +1,9 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 /**
  * Atmosphere - lightweight smoke/shader-like atmospheric layer.
  * Pure CSS / SVG (no WebGL) so it costs little, pauses gracefully under
- * prefers-reduced-motion. Designed for very-low-opacity overlays inside
+ * prefers-reduced-m. Designed for very-low-opacity overlays inside
  * Research Lab, Architecture, and similar interior sections.
  */
 const Atmosphere = ({ className = "", intensity = 0.35 }) => {
@@ -16,7 +16,7 @@ const Atmosphere = ({ className = "", intensity = 0.35 }) => {
       aria-hidden="true"
     >
       {/* Drifting violet plume */}
-      <motion.div
+      <m.div
         initial={{ x: "-15%", y: "10%", scale: 1 }}
         animate={
           reduce
@@ -36,7 +36,7 @@ const Atmosphere = ({ className = "", intensity = 0.35 }) => {
         }}
       />
       {/* Drifting violet plume 2 */}
-      <motion.div
+      <m.div
         initial={{ x: "0%", y: "0%", scale: 1 }}
         animate={
           reduce
@@ -56,7 +56,7 @@ const Atmosphere = ({ className = "", intensity = 0.35 }) => {
         }}
       />
       {/* Soft white veil */}
-      <motion.div
+      <m.div
         initial={{ x: "10%", y: "20%" }}
         animate={
           reduce

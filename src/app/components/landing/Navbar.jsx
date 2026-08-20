@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 
 const links = [
@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.header
+    <m.header
       data-testid="navbar"
       data-nosnippet
       initial={{ y: -40, opacity: 0 }}
@@ -84,7 +84,7 @@ export default function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -110,9 +110,9 @@ export default function Navbar() {
                 Get AI Audit
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </m.header>
   );
 }

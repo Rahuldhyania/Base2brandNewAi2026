@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ArrowUpRight,
   Sparkles,
@@ -54,7 +54,7 @@ export default function Hero({
         <div className="grid lg:grid-cols-12 gap-2 md:gap-12 lg:gap-8 items-center">
           {/* Left */}
           <div className="lg:col-span-7">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -63,7 +63,7 @@ export default function Hero({
             >
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
               <span className="label-mono">{highlightTag}</span>
-            </motion.div>
+            </m.div>
 
             <h1 className="font-display text-white text-4xl lg:text-5xl leading-[1.05] tracking-tight mt-4 max-w-5xl">
               {titleUpper}{" "}
@@ -76,7 +76,7 @@ export default function Hero({
               {titleLower}
             </h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.18 }}
@@ -84,9 +84,9 @@ export default function Hero({
               data-testid="hero-subhead"
             >
               {description}
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
@@ -108,9 +108,9 @@ export default function Hero({
                 <Sparkles className="w-4 h-4 text-(--b2b-primary)" />
                 {rightCTA}
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -125,12 +125,12 @@ export default function Hero({
                   {p}
                 </span>
               ))}
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Right - Rotating Earth */}
           <div className="lg:col-span-5 relative h-[440px] md:h-[560px]">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
@@ -148,15 +148,15 @@ export default function Hero({
                 />
               </div>
               {floatingMetrics &&
-                floatingMetrics.map((m, i) => {
-                  const Icon = Icons[m.icon]
+                floatingMetrics.map((metric, i) => {
+                  const Icon = Icons[metric.icon]
                   return (
-                    <motion.div
+                    <m.div
                       key={i}
                       initial={{ opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.7, delay: m.delay }}
-                      className={`absolute ${m.pos} animate-float-slow z-10`}
+                      transition={{ duration: 0.7, delay: metric.delay }}
+                      className={`absolute ${metric.pos} animate-float-slow z-10`}
                       style={{ animationDelay: `${i * 1.2}s` }}
                     >
                       <div className="glass-strong rounded-2xl px-4 py-3 flex items-center gap-3 min-w-[170px] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
@@ -165,22 +165,22 @@ export default function Hero({
                         </div>
                         <div>
                           <div className="text-[10px] uppercase tracking-widest text-zinc-500 font-mono">
-                            {m.label}
+                            {metric.label}
                           </div>
                           <div className="font-display text-lg font-medium text-white">
-                            {m.value}
+                            {metric.value}
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
                   );
                 })}
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
         {/* Bottom stat strip */}
-        {/* <motion.div
+        {/* <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -203,7 +203,7 @@ export default function Hero({
               </div>
             </div>
           ))}
-        </motion.div> */}
+        </m.div> */}
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 /**
@@ -13,7 +13,7 @@ export default function CoreTechnologyRow({ item, index }) {
   const visualFirst = item.visualPosition === "left";
 
   const copy = (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -50,11 +50,11 @@ export default function CoreTechnologyRow({ item, index }) {
         </span>
         <span>{item.cta}</span>
       </div>
-    </motion.div>
+    </m.div>
   );
 
   const visual = (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -77,7 +77,7 @@ export default function CoreTechnologyRow({ item, index }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 
   return (

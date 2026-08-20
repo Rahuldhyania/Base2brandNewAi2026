@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Wrench, Cloud, Layers3, Rocket } from "lucide-react";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
@@ -16,17 +16,17 @@ const WhyBase2Brand = ({ hightlighttag, titleUpper, titleLower, description, car
   return (
     <section id="why" className="b2b-section relative py-12">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           variants={stagger(0.06)}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.div variants={fadeUp} className="text-[var(--b2b-primary)] mb-2 md:mb-6 text-center">
+          <m.div variants={fadeUp} className="text-[var(--b2b-primary)] mb-2 md:mb-6 text-center">
             <span className="w-1.5 h-1.5 rounded-full text-(--b2b-primary)" />
             {hightlighttag}
-          </motion.div>
+          </m.div>
           <h2 className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient"> {titleUpper}</span>
             <span className="text-(--b2b-primary)">{titleLower ? ' ' : ''}{titleLower}</span>
@@ -34,9 +34,9 @@ const WhyBase2Brand = ({ hightlighttag, titleUpper, titleLower, description, car
           <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             {description}
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           variants={stagger(0.07)}
           initial="hidden"
           whileInView="visible"
@@ -46,7 +46,7 @@ const WhyBase2Brand = ({ hightlighttag, titleUpper, titleLower, description, car
           {cardsdata.map((c, idx) => {
             const Icon = Icons[c.icon];
             return (
-              <motion.div
+              <m.div
                 key={c.title}
                 variants={fadeUp}
                 whileHover={{ y: -3 }}
@@ -73,10 +73,10 @@ const WhyBase2Brand = ({ hightlighttag, titleUpper, titleLower, description, car
                   </span>
                   <span className="text-[12px] text-[color:var(--b2b-primary)] font-medium">Engineered→</span>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

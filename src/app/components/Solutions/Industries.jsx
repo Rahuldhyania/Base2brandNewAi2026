@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   HeartPulse,
   ShoppingBag,
@@ -35,7 +35,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 lg:gap-8">
           <div>
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -43,8 +43,8 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
               className="section-label"
             >
               {highlightTag}
-            </motion.div>
-            <motion.h2
+            </m.div>
+            <m.h2
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -53,9 +53,9 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
             >
               {titleUpper}{" "}
               {titleLower}
-            </motion.h2>
+            </m.h2>
           </div>
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,10 +63,10 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
             className="lg:max-w-sm text-zinc-400 leading-relaxed"
           >
             {description}
-          </motion.p>
+          </m.p>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -77,7 +77,7 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
           {industriesData.map((ind, i) => {
             const Icon = Icons[ind.icon];
             return (
-              <motion.div
+              <m.div
                 key={ind.name}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,10 +88,10 @@ export default function Industries({highlightTag, titleUpper, titleLower, descri
               >
                 <Icon className="w-4 h-4 text-(--b2b-primary)" />
                 {ind.name}
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
 
         {/* Ticker */}
         <div className="mt-4 lg:mt-10 border-y border-white/5 py-5 overflow-hidden">

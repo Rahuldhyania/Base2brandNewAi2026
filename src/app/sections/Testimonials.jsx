@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 /**
@@ -127,7 +127,7 @@ export function Testimonials() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         {/* eyebrow + heading */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -150,12 +150,12 @@ export function Testimonials() {
           <p className="mt-5 text-mute text-base sm:text-lg max-w-2xl">
            Business owners, marketing heads and product leaders from the UK and US on what changed after Base2Brand connected strategy, performance, AI, CRO and technology into one growth system.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Grid */}
         <div className="mt-8 xl:mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map(({ name, role, company, quote, image }, index) => (
-            <motion.div
+            <m.div
               key={name}
               initial={{ y: 16, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -208,7 +208,7 @@ export function Testimonials() {
                 aria-hidden
                 className="pointer-events-none absolute -bottom-px -right-px h-6 w-6 border-r border-b border-orange-brand/0 group-hover:border-orange-brand/70 transition-colors"
               />
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { slugify } from "../data/industriesData";
@@ -61,7 +61,7 @@ export default function IndustryReports({ industries }) {
                     {/* Rows */}
 
                     {industries.map((item, index) => (
-                        <motion.div
+                        <m.div
                             key={item.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function IndustryReports({ industries }) {
                         >
                             {/* Hover Glow */}
 
-                            <motion.div
+                            <m.div
                                 variants={{
                                     hover: {
                                         opacity: 1,
@@ -140,7 +140,7 @@ export default function IndustryReports({ industries }) {
                                     <div className="flex h-6 md:h-8 items-end gap-[2px]">
 
                                         {item.trend.map((bar, i) => (
-                                            <motion.div
+                                            <m.div
                                                 key={i}
                                                 initial={{ height: 4 }}
                                                 whileInView={{
@@ -162,7 +162,7 @@ export default function IndustryReports({ industries }) {
 
                                 <div className="flex justify-end">
 
-                                    <motion.div
+                                    <m.div
                                         variants={{
                                             hover: {
                                                 x: 5,
@@ -173,12 +173,12 @@ export default function IndustryReports({ industries }) {
                                         <ArrowUpRight
                                             className="text-cyan-400 transition-colors group-hover:text-white text-base md:text-xl lg:text-[22px]"
                                         />
-                                    </motion.div>
+                                    </m.div>
 
                                 </div>
 
                             </Link>
-                        </motion.div>
+                        </m.div>
                     ))}
 
                     {/* Footer */}

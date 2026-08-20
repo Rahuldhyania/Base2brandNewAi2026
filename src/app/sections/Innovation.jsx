@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { Atom, Beaker, Rocket, Cpu } from "lucide-react";
 
@@ -60,7 +60,7 @@ export function Innovation() {
           {PILLARS.map((p, i) => {
             const I = p.icon;
             return (
-              <motion.div
+              <m.div
                 key={p.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export function Innovation() {
                       "linear-gradient(135deg, rgba(255,106,0,0.18), transparent 40%)",
                   }}
                 />
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

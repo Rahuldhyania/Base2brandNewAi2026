@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Search,
   Microscope,
@@ -31,7 +31,7 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
     >
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -39,8 +39,8 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
             className="section-label"
           >
             {highlightTag}
-          </motion.div>
-          <motion.h2
+          </m.div>
+          <m.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -49,7 +49,7 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
           >
             {titleUpper}{" "}
             <span className="text-orange-gradient">{titleLower}</span>
-          </motion.h2>
+          </m.h2>
         </div>
 
         {/* Desktop: vertical stepper with timeline */}
@@ -74,7 +74,7 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
               const Icon = Icons[s.icon];
               const isLeft = i % 2 === 0;
               return (
-                <motion.div
+                <m.div
                   key={s.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function Process({highlightTag, titleUpper, titleLower, StepsData
                       <ArrowDown className="w-4 h-4 text-(--b2b-primary)/60" />
                     </div>
                   )}
-                </motion.div>
+                </m.div>
               );
             })}
           </div>

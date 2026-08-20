@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Sparkles, Cloud, Smartphone, Building2 } from "lucide-react";
 import WarpBackground from "@/components/Background/WarpBackgroundSD";
 import HeroVisual from "@/components/visual/HeroVisual";
@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 -z-10 b2b-section-grid opacity-40" />
 
       <div className="b2b-container">
-        <motion.div
+        <m.div
           variants={stagger(0.08)}
           initial="hidden"
           animate="visible"
@@ -36,7 +36,7 @@ const Hero = () => {
         >
           {/* Left: copy */}
           <div className="col-span-12 lg:col-span-7">
-            <motion.div variants={fadeUp} className="hidden md:inline-flex items-center gap-2 mb-7">
+            <m.div variants={fadeUp} className="hidden md:inline-flex items-center gap-2 mb-7">
               <span className="relative inline-flex w-2 h-2">
                 <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-primary)] animate-pulse" />
                 <span className="absolute inset-0 rounded-full bg-[color:var(--b2b-primary)] opacity-40" />
@@ -45,19 +45,19 @@ const Hero = () => {
                 Digital Product Engineering
               </span>
               <span className="text-[11px] text-white/35">— Software Division</span>
-            </motion.div>
+            </m.div>
 
-            <motion.h1 variants={fadeUp} className="font-display font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
+            <m.h1 variants={fadeUp} className="font-display font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
               <span className="b2b-text-gradient">Build software that </span>
               <span className="b2b-text-gradient"> that scale with your </span>
               <span className="text-(--b2b-primary)"> business. </span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p variants={fadeUp} className="b2b-lead mt-5 sm:mt-7 text-sm md:text-base">
+            <m.p variants={fadeUp} className="b2b-lead mt-5 sm:mt-7 text-sm md:text-base">
               Base2Brand delivers software development services for businesses that need more than code. We design and engineer scalable platforms, SaaS products, mobile applications, cloud-native systems and enterprise software solutions built around measurable business outcomes.
-            </motion.p>
+            </m.p>
 
-            <motion.div variants={fadeUp} className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">
+            <m.div variants={fadeUp} className="mt-6 sm:mt-9 flex flex-wrap items-center gap-3">
               <a href="#cta" className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition-all duration-300 bg-[linear-gradient(180deg,#ff5a4d,#ff3b30)] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_18px_40px_-16px_rgba(255,59,48,0.7)]" data-testid="hero-cta-primary">
                 Start a software engagement
                 <ArrowUpRight className="w-4 h-4" />
@@ -65,9 +65,9 @@ const Hero = () => {
               <a href="#capabilities" className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 bg-white/4 border border-white/12 text-[var(--b2b-fg)]" data-testid="hero-cta-secondary">
                 Explore capabilities
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div variants={fadeUp} className="mt-8 sm:mt-10 flex flex-wrap items-center gap-2">
+            <m.div variants={fadeUp} className="mt-8 sm:mt-10 flex flex-wrap items-center gap-2">
               {SUPPORTING_LABELS.map(({ icon: Icon, text }) => (
                 <div
                   key={text}
@@ -77,20 +77,20 @@ const Hero = () => {
                   {text}
                 </div>
               ))}
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Right: visual */}
-          <motion.div
+          <m.div
             variants={fadeUp}
             className="col-span-12 lg:col-span-5 relative"
           >
             <HeroVisual />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         {/* Metrics row */}
-        <motion.div
+        <m.div
           variants={stagger(0.1)}
           initial="hidden"
           whileInView="visible"
@@ -98,21 +98,21 @@ const Hero = () => {
           className="mt-8 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06] rounded-2xl overflow-hidden border border-white/[0.08]"
           data-testid="hero-metrics"
         >
-          {METRICS.map((m) => (
-            <motion.div
-              key={m.label}
+          {METRICS.map((metric) => (
+            <m.div
+              key={metric.label}
               variants={fadeUp}
               className="bg-[#070b1c] py-3 md:py-7 px-4 md:px-7 lg:px-8 hover:bg-[#0b1024] transition-colors group"
             >
               <div className="b2b-number text-3xl md:text-4xl font-semibold tracking-tight bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-                {m.value}
+                {metric.value}
               </div>
               <div className="mt-2 text-[8px] md:text-[12px] uppercase tracking-[0.18em] text-white/55 group-hover:text-white/80 transition-colors">
-                {m.label}
+                {metric.label}
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

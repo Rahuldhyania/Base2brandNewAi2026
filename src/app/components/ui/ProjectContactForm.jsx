@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import {
@@ -357,7 +357,7 @@ export default function ProjectContactForm({ embedded = false }) {
           </div>
         )}
 
-        <motion.button
+        <m.button
           whileHover={isSubmitting ? undefined : { y: -2 }}
           whileTap={isSubmitting ? undefined : { scale: 0.98 }}
           type="submit"
@@ -369,7 +369,7 @@ export default function ProjectContactForm({ embedded = false }) {
           {!isSubmitting && (
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           )}
-        </motion.button>
+        </m.button>
 
         <div className="mt-5 flex items-center justify-center gap-2 text-center text-xs text-white/45 sm:text-sm">
           <span>🔒</span>
@@ -395,7 +395,7 @@ export default function ProjectContactForm({ embedded = false }) {
 
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:48px_48px] opacity-20" />
 
-        <motion.div
+        <m.div
           animate={{
             y: [0, -18, 0],
             opacity: [0.25, 0.55, 0.25],
@@ -408,7 +408,7 @@ export default function ProjectContactForm({ embedded = false }) {
           className="absolute left-[12%] top-[18%] h-2 w-2 rounded-full bg-[var(--b2b-primary)] shadow-[0_0_24px_var(--b2b-primary)]"
         />
 
-        <motion.div
+        <m.div
           animate={{
             y: [0, 22, 0],
             opacity: [0.2, 0.6, 0.2],
@@ -423,7 +423,7 @@ export default function ProjectContactForm({ embedded = false }) {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-start gap-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{
@@ -437,7 +437,7 @@ export default function ProjectContactForm({ embedded = false }) {
           className="relative"
         >
           {formCard}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

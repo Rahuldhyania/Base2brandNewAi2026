@@ -1,7 +1,7 @@
 'use client';
 import React, { useMemo, useState, useRef, useEffect } from "react";
 import DottedMap from "dotted-map";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { cn } from "../../lib/utils";
 
 /**
@@ -113,7 +113,7 @@ export function DottedWorldMap({
             const d = arcPath(origin, p);
             return (
               <g key={`arc-${p.city}`}>
-                <motion.path
+                <m.path
                   d={d}
                   stroke="url(#arcGrad)"
                   strokeWidth="1.2"
@@ -124,7 +124,7 @@ export function DottedWorldMap({
                   transition={{ duration: 1.4, delay: 0.2 + i * 0.18, ease: "easeInOut" }}
                 />
                 {visible && (
-                  <motion.circle
+                  <m.circle
                     r="2.4"
                     fill="#ff6a00"
                     initial={{ opacity: 0 }}
@@ -136,7 +136,7 @@ export function DottedWorldMap({
                       repeatCount="indefinite"
                       path={d}
                     />
-                  </motion.circle>
+                  </m.circle>
                 )}
               </g>
             );
@@ -152,7 +152,7 @@ export function DottedWorldMap({
             onMouseLeave={() => setHoverIdx(null)}
           >
             <circle r="18" fill="url(#pinGlow)" />
-            <motion.circle
+            <m.circle
               r="3"
               fill={pinColor}
               initial={{ scale: 0 }}

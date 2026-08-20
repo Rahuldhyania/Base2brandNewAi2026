@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function StickyFilters({ active, onChange, categories }) {
   return (
@@ -17,7 +17,7 @@ export default function StickyFilters({ active, onChange, categories }) {
                 style={{ color: isActive ? "#fff" : "rgba(255,255,255,0.6)" }}
               >
                 {isActive && (
-                  <motion.span
+                  <m.span
                     layoutId="filter-pill"
                     className="absolute inset-0 rounded-full"
                     style={{

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { INDUSTRY_PAGE } from "@/constants/testIds";
 
 // Sticky progress indicator with section list + active state.
@@ -50,7 +50,7 @@ export default function StickyProgress({ sections = [] }) {
 
         <div className="relative pl-3">
           <div className="absolute left-0 top-1 bottom-1 w-px bg-white/10 rounded-full" />
-          <motion.div
+          <m.div
             className="absolute left-0 top-1 w-px bg-brand origin-top"
             style={{ scaleY: progress, height: "calc(100% - 8px)" }}
           />

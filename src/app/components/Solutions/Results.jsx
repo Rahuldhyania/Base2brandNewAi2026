@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   TrendingUp,
   Filter,
@@ -43,7 +43,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -51,8 +51,8 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
             className="section-label"
           >
             {highlightTag}
-          </motion.div>
-          <motion.h2
+          </m.div>
+          <m.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -61,8 +61,8 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
           >
             {titleUpper}{' '}
             <span className="text-orange-gradient">{titleLower}</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
             className="mt-5 text-zinc-400 text-base md:text-lg"
           >
             {description}
-          </motion.p>
+          </m.p>
         </div>
 
         <div
@@ -80,7 +80,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
           {resultsData.map((r, i) => {
             const Icon = Icons[r.icon];
             return (
-              <motion.div
+              <m.div
                 key={r.id}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
 
                 {/* progress line */}
                 <div className="mt-3 md:mt-6 h-1 bg-white/5 rounded-full overflow-hidden">
-                  <motion.div
+                  <m.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${65 + (i * 5)}%` }}
                     viewport={{ once: true }}
@@ -129,7 +129,7 @@ export default function Results({highlightTag, titleUpper, titleLower, descripti
                     className="h-full bg-gradient-to-r from-(--b2b-primary) to-(--b2b-primary)/40"
                   />
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Smartphone, Tablet, Watch, Tv, Glasses, Car, Laptop, Brain } from "lucide-react";
 import { Warp } from "@paper-design/shaders-react";
 import MacOSDock from "@/components/apple/MacOSDock";
@@ -69,15 +69,15 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 b2b-container" >
-      {/* <motion.p
+      {/* <m.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="font-mono text-xs uppercase tracking-[0.24em] text-[#5AC8FA]"
       >
         Apple Ecosystem Division · From Idea to Orbit
-      </motion.p> */} 
-      <motion.h1
+      </m.p> */} 
+      <m.h1
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
@@ -85,18 +85,18 @@ export default function Hero() {
       >
         Build experiences across the{" "}
         <span className="apple-text-gradient">entire Apple ecosystem.</span>
-      </motion.h1>
+      </m.h1>
 
-      <motion.p
+      <m.p
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
         className="mt-2 text-base sm:text-lg lg:text-xl text-white/65 max-w-2xl leading-relaxed"
       >
         Base2Brand designs, develops and operates native Apple applications for businesses that need more than another mobile app. From iPhone app development and enterprise iOS app development to Vision Pro, Apple Watch, iPad, CarPlay, Apple TV and Mac experiences, we engineer products that feel native, perform fast and scale securely.
-      </motion.p>
+      </m.p>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.25 }}
@@ -116,10 +116,10 @@ export default function Hero() {
         >
           Explore capabilities
         </a>
-      </motion.div>
+      </m.div>
 
       {/* Interactive ecosystem dock */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
@@ -157,7 +157,7 @@ export default function Hero() {
             })
           )}
         </div>
-      </motion.div>
+      </m.div>
       </div>
     </section>
   );
