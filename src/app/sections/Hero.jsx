@@ -131,7 +131,7 @@ export function Hero() {
           {[
             { k: "300+", v: "Projects Delivered" },
             { k: "250+", v: "Brands Scaled" },
-            { k: "12+ yrs", v: "Digital Excellence" },
+            { k: "6+ yrs", v: "Digital Excellence" },
             // { k: "$2M +", v: "Ad Spend Managed" },
           ].map((s) => (
             <div key={s.v} className="bg-[#02030a] p-3 md:p-5 xl:p-6">
