@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useState } from "react";
 import { m } from "framer-motion";
+import Marquee from "react-fast-marquee";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import { ArrowUpRight } from "lucide-react";
@@ -259,8 +260,34 @@ const Industries = ({
         </div>
 
         <div className="flex flex-col lg:flex-row items-start gap-8 sm:gap-10 lg:gap-16">
+          {/* Mobile-only: right-to-left auto-sliding image marquee.
+              Desktop/tablet keep the existing staggered photo grid below,
+              untouched — this block is hidden from md: up. */}
+          <div className="md:hidden -mx-5 sm:-mx-6 w-[calc(100%+2.5rem)] sm:w-[calc(100%+3rem)]">
+            <Marquee gap={14} speed={42} direction="left" autoFill pauseOnClick>
+              {industriesData.map((ind) => (
+                <div
+                  key={ind.id}
+                  data-testid={`industry-mobile-slide-${ind.id}`}
+                  className="relative w-[220px] h-[260px] rounded-2xl overflow-hidden mx-1.5"
+                >
+                  <img
+                    src={ind.image}
+                    alt={ind.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03030A]/90 via-[#03030A]/10 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 font-mono text-xs uppercase tracking-[0.2em] text-white">
+                    {ind.name}
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+
           {/* Photo grid */}
-          <div className="flex gap-2.5 md:gap-3 flex-shrink-0 overflow-x-auto pb-2 lg:pb-0 max-w-full">
+          <div className="hidden md:flex gap-2.5 md:gap-3 flex-shrink-0 overflow-x-auto pb-2 lg:pb-0 max-w-full">
             <div className="flex flex-col gap-2.5 md:gap-3">
               {cols[0].map((ind, i) => (
                 <PhotoCard
