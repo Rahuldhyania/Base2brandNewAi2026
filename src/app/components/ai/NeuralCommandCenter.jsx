@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import Rocket from "@/components/site/Rocket";
 
 /**
@@ -222,7 +222,7 @@ const NeuralCommandCenter = () => {
       {NODES.map((n, i) => {
         const { x, y } = polarToXY(n.angle, n.radius);
         return (
-          <motion.div
+          <m.div
             key={n.label}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -245,14 +245,14 @@ const NeuralCommandCenter = () => {
               />
               {n.label}
             </div>
-          </motion.div>
+          </m.div>
         );
       })}
 
       {/* Floating soft sparks */}
       {!reduce &&
         [...Array(4)].map((_, i) => (
-          <motion.div
+          <m.div
             key={`spark-${i}`}
             className="absolute w-1 h-1 rounded-full bg-[#C084FC] shadow-[0_0_8px_2px_rgba(192,132,252,0.5)]"
             initial={{

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { StarsBackground } from "../components/visual/StarsBackground";
 import { OfficialLogo } from "../components/visual/OfficialLogo";
 import SlotText from "@/components/ui/SlotText";
@@ -38,23 +38,23 @@ export function Hero() {
       {/* Hero content */}
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-24 md:pt-34 pb-10 md:pb-22">
         {/* eyebrow */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="flex items-center gap-3 text-xs sm:text-sm font-mono-display text-mute uppercase tracking-[0.25em]"
           data-testid="hero-eyebrow"
         >
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand shadow-[0_0_12px_#ff6a00]" />
           From base — to brand. From idea — to orbit.
-        </motion.div>
+        </m.div>
 
         {/* Wordmark lockup */}
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
           className="relative mt-4 sm:mt-6"
           data-testid="hero-wordmark"
           style={{ filter: "drop-shadow(0 18px 60px rgba(255,106,0,0.18))" }}
@@ -64,7 +64,7 @@ export function Hero() {
             accent="#ff6a00"
             letterColor="#ffffff"
           />
-        </motion.div>
+        </m.div>
 
         {/* <h1 className="text-start font-black text-white leading-[0.9] tracking-tight pt-8 text-[38px] md:text-[50px] lg:text-[70px] xl:text-[90px] 2xl:text-[120px]">
           <SlotText
@@ -79,10 +79,10 @@ export function Hero() {
 
         {/* tagline + CTAs */}
         <div className="mt-4 sm:mt-10 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8 lg:gap-12 items-end">
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-white text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight max-w-3xl"
             data-testid="hero-headline"
           >
@@ -92,12 +92,12 @@ export function Hero() {
             <span className="block text-mute mt-4 text-lg sm:text-xl font-normal max-w-2xl">
               AI automation, performance marketing, Shopify Plus, CRO, apps and software — built together to turn brands into growth engines.
             </span>
-          </motion.h1>
+          </m.h1>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.75 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end"
           >
             <a
@@ -117,21 +117,21 @@ export function Hero() {
             >
               Explore capabilities
             </a>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* stats strip */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.9 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-4 md:mt-10 grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line"
           data-testid="hero-stats"
         >
           {[
             { k: "300+", v: "Projects Delivered" },
             { k: "250+", v: "Brands Scaled" },
-            { k: "12+ yrs", v: "Digital Excellence" },
+            { k: "6+ yrs", v: "Digital Excellence" },
             // { k: "$2M +", v: "Ad Spend Managed" },
           ].map((s) => (
             <div key={s.v} className="bg-[#02030a] p-3 md:p-5 xl:p-6">
@@ -143,7 +143,7 @@ export function Hero() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

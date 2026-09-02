@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import {
   Landmark,
@@ -67,7 +67,7 @@ export function Industries() {
           {INDUSTRIES.map((ind, i) => {
             const I = ind.icon;
             return (
-              <motion.div
+              <m.div
                 key={ind.name}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export function Industries() {
                 <div className="mt-4 md:mt-6 inline-flex items-center gap-2 text-xs font-mono-display uppercase tracking-[0.2em] text-(--b2b-primary)  group-hover:opacity-100 transition">
                   Explore sector →
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

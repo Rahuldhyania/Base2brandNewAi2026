@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const DISCIPLINES = [
     'Applied AI',
@@ -38,7 +38,7 @@ export default function CaseStudyIntro() {
         >
             <div className="max-w-[1180px] mx-auto">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: '-60px' }}
@@ -51,9 +51,9 @@ export default function CaseStudyIntro() {
                                 We build systems that create measurable movement.
                             </span>
                         </h2>
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: '-60px' }}
@@ -66,10 +66,10 @@ export default function CaseStudyIntro() {
                         <p>
                             Briefs are anonymised where client confidentiality requires it, but the metrics, architecture patterns, and engineering decisions remain fully transparent.
                         </p>
-                    </motion.div>
+                    </m.div>
                 </div>
 
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-40px' }}
@@ -87,11 +87,11 @@ export default function CaseStudyIntro() {
                             </span>
                         ))}
                     </div>
-                </motion.div>
+                </m.div>
 
                 <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
                     {PROOF_PILLARS.map((pillar, i) => (
-                        <motion.article
+                        <m.article
                             key={pillar.label}
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function CaseStudyIntro() {
                                         'linear-gradient(160deg, rgba(0,230,255,0.08), transparent 50%)',
                                 }}
                             />
-                        </motion.article>
+                        </m.article>
                     ))}
                 </div>
             </div>

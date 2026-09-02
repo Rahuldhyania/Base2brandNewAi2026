@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const STEPS = [
   {
@@ -12,7 +12,7 @@ const STEPS = [
   {
     n: "02",
     title: "Experience Architecture",
-    body: "Design and engineering work together from week one. We define interaction models, user journeys, accessibility, motion, haptics, content structure and technical architecture before production begins.",
+    body: "Design and engineering work together from week one. We define interaction models, user journeys, accessibility, m, haptics, content structure and technical architecture before production begins.",
     artefacts: ["UX architecture", "SwiftUI design system", "Motion & haptics spec", "Accessibility Guidelines"],
   },
   {
@@ -59,7 +59,7 @@ export default function Process() {
 
         <div className="space-y-5">
           {STEPS.map((s, i) => (
-            <motion.div
+            <m.div
               key={s.n}
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +85,7 @@ export default function Process() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

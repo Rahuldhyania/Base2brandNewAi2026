@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
@@ -26,7 +26,7 @@ function CircleProgress({ data, index }) {
   const gradientId = `apple-ring-${data.label.toLowerCase().replace(/[^a-z]/g, "")}-${index}`;
 
   return (
-    <motion.div
+    <m.div
       className="absolute inset-0 flex items-center justify-center"
       initial={{ opacity: 0, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -56,7 +56,7 @@ function CircleProgress({ data, index }) {
             stroke="rgba(255,255,255,0.07)"
             strokeWidth={strokeWidth}
           />
-          <motion.circle
+          <m.circle
             cx={data.size / 2}
             cy={data.size / 2}
             r={radius}
@@ -73,13 +73,13 @@ function CircleProgress({ data, index }) {
           />
         </svg>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
 function DetailedInfo({ activities }) {
   return (
-    <motion.div
+    <m.div
       className="flex flex-col gap-6 ml-0 lg:ml-12"
       initial={{ opacity: 0, x: 16 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -100,7 +100,7 @@ function DetailedInfo({ activities }) {
           </span>
         </div>
       ))}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -130,14 +130,14 @@ export default function AppleActivityCard({
         <DetailedInfo activities={activities} />
       </div>
       {title && (
-        <motion.p
+        <m.p
           className="mt-8 font-mono text-xs uppercase tracking-[0.22em] text-white/45 text-center lg:text-left"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           {title}
-        </motion.p>
+        </m.p>
       )}
     </div>
   );

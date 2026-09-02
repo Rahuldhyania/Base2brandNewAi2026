@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -245,7 +245,7 @@ export default function ProjectDetail({ slug }) {
     <div className="relative overflow-x-hidden md:min-h-screen">
       <section className="relative z-[1] pb-24 text-[#f0f4ff]">
         <div className="mx-auto max-w-7xl px-4 md:px-10">
-          <motion.div
+          <m.div
             {...fadeUp}
             transition={{
               duration: 0.4,
@@ -259,9 +259,9 @@ export default function ProjectDetail({ slug }) {
               <ArrowLeft className="h-3.5 w-3.5" />
               Back to Portfolio
             </Link>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             {...fadeUp}
             transition={{
               duration: 0.5,
@@ -325,10 +325,10 @@ export default function ProjectDetail({ slug }) {
                 </div>
               )}
             </div>
-          </motion.div>
+          </m.div>
 
           {(project.image) && (
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{
                 duration: 0.5,
@@ -341,11 +341,11 @@ export default function ProjectDetail({ slug }) {
                 alt={project.title}
                 className="aspect-[16/9] w-full object-cover"
               />
-            </motion.div>
+            </m.div>
           )}
 
           {project.results.length > 0 && (
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{
                 duration: 0.5,
@@ -365,13 +365,13 @@ export default function ProjectDetail({ slug }) {
                   <p className="mt-2 text-sm text-[#9aa5c0]">{result.label}</p>
                 </div>
               ))}
-            </motion.div>
+            </m.div>
           )}
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="space-y-6 lg:col-span-2">
               {project.challenge && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -386,11 +386,11 @@ export default function ProjectDetail({ slug }) {
                   <p className="mt-4 leading-7 text-[#9aa5c0]">
                     {project.challenge}
                   </p>
-                </motion.div>
+                </m.div>
               )}
 
               {project.solution && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -405,11 +405,11 @@ export default function ProjectDetail({ slug }) {
                   <p className="mt-4 leading-7 text-[#9aa5c0]">
                     {project.solution}
                   </p>
-                </motion.div>
+                </m.div>
               )}
 
               {project.approach.length > 0 && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -449,11 +449,11 @@ export default function ProjectDetail({ slug }) {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               )}
 
               {project.features.length > 0 && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -477,11 +477,11 @@ export default function ProjectDetail({ slug }) {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </m.div>
               )}
 
               {project.testimonial && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -510,13 +510,13 @@ export default function ProjectDetail({ slug }) {
                       {project.testimonial.role}
                     </p>
                   )}
-                </motion.div>
+                </m.div>
               )}
             </div>
 
             <div className="space-y-6">
               {project.role && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -529,11 +529,11 @@ export default function ProjectDetail({ slug }) {
                   </p>
 
                   <p className="mt-2 text-sm text-[#f0f4ff]">{project.role}</p>
-                </motion.div>
+                </m.div>
               )}
 
               {project.techStack.length > 0 && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -555,11 +555,11 @@ export default function ProjectDetail({ slug }) {
                       </span>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               )}
 
               {project.liveUrl && (
-                <motion.div
+                <m.div
                   {...fadeUp}
                   transition={{
                     duration: 0.5,
@@ -580,10 +580,10 @@ export default function ProjectDetail({ slug }) {
                     View Live Project
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
-                </motion.div>
+                </m.div>
               )}
 
-              <motion.div
+              <m.div
                 {...fadeUp}
                 transition={{
                   duration: 0.5,
@@ -605,13 +605,13 @@ export default function ProjectDetail({ slug }) {
                   Start a Project
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
-              </motion.div>
+              </m.div>
             </div>
           </div>
 
           <div className="nnnnnkl">
             {project.gallery.length > 1 && (
-              <motion.div
+              <m.div
                 {...fadeUp}
                 transition={{
                   duration: 0.5,
@@ -632,12 +632,12 @@ export default function ProjectDetail({ slug }) {
                     />
                   </div>
                 ))}
-              </motion.div>
+              </m.div>
             )}
           </div>
 
           {related.length > 0 && (
-            <motion.div
+            <m.div
               {...fadeUp}
               transition={{
                 duration: 0.5,
@@ -677,7 +677,7 @@ export default function ProjectDetail({ slug }) {
                   </Link>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           )}
         </div>
       </section>

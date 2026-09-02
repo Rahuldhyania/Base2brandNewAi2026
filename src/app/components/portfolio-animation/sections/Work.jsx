@@ -1,6 +1,6 @@
 // "use client";
 // import React, { useEffect, useRef, useState } from "react";
-// import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+// import { m, useScroll, useSpring, useTransform } from "framer-motion";
 // import Link from "next/link";
 // import { extraData } from "@/constants/testIds/extraData";
 // import { CASE_STUDIES } from "@/case-study/data/caseStudiesData";
@@ -89,12 +89,12 @@
 //         </div>
 
 //         {/* Browser side */}
-//         <motion.div
+//         <m.div
 //           data-testid={extraData.work.browserExpand(project.id)}
 //           style={{ scale, rotate, y }}
 //           className={`relative ddff ${index % 2 === 1 ? "md:order-1" : ""}`}
 //         >
-//           <motion.div
+//           <m.div
 //             aria-hidden
 //             style={{ opacity: glow }}
 //             className="absolute -inset-6 rounded-[28px] pointer-events-none"
@@ -107,10 +107,10 @@
 //                 filter: "blur(20px)",
 //               }}
 //             />
-//           </motion.div>
+//           </m.div>
 
 //           <BrowserWindow project={project} scrollYProgress={scrollYProgress} />
-//         </motion.div>
+//         </m.div>
 //       </div>
 //     </div>
 //   );
@@ -205,7 +205,7 @@
 
 //         <div className="rounded-lg border border-white/5 bg-white/[0.02] p-2 overflow-hidden">
 //           {preview.screenshot ? (
-//             <motion.img
+//             <m.img
 //               src={preview.screenshot}
 //               alt={`${project.title} dashboard preview`}
 //               style={{ scale: imageScale, y: imageY }}
@@ -335,7 +335,7 @@
 
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { extraData } from "@/constants/testIds/extraData";
@@ -475,11 +475,11 @@ const normalizeCaseStudy = (item, index = 0) => ({
 //           </div>
 //         </div>
 
-//         <motion.div
+//         <m.div
 //           data-testid={extraData.work.browserExpand(project.id)}
 //           className={`relative ddff ${index % 2 === 1 ? "md:order-1" : ""}`}
 //         >
-//           <motion.div
+//           <m.div
 //             aria-hidden
 //             style={{
 //               opacity: glow,
@@ -494,10 +494,10 @@ const normalizeCaseStudy = (item, index = 0) => ({
 //                 filter: "blur(20px)",
 //               }}
 //             />
-//           </motion.div>
+//           </m.div>
 
 //           <BrowserWindow project={project} imageBorderColor={imageBorderColor} />
-//         </motion.div>
+//         </m.div>
 //       </div>
 //     </div>
 //   );
@@ -564,11 +564,11 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
         </div>
 
         {/* Browser side */}
-        <motion.div
+        <m.div
           data-testid={extraData.work.browserExpand(project.id)}
           className={`relative ddff min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}
         >
-          <motion.div
+          <m.div
             aria-hidden
             style={{ opacity: glow }}
             className="absolute -inset-6 rounded-[28px] pointer-events-none"
@@ -581,10 +581,10 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
                 filter: "blur(20px)",
               }}
             />
-          </motion.div>
+          </m.div>
 
           <BrowserWindow project={project} imageBorderColor={imageBorderColor} />
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );
@@ -844,7 +844,7 @@ export default function Work({
 // staging code
 // "use client";
 // import React, { useRef } from "react";
-// import { motion, useScroll, useTransform } from "framer-motion";
+// import { m, useScroll, useTransform } from "framer-motion";
 // import Image from "next/image";
 // import Link from "next/link";
 // import { extraData } from "@/constants/testIds/extraData";
@@ -918,11 +918,11 @@ export default function Work({
 //         </div>
 
 //         {/* Browser side */}
-//         <motion.div
+//         <m.div
 //           data-testid={extraData.work.browserExpand(project.id)}
 //           className={`relative ddff ${index % 2 === 1 ? "md:order-1" : ""}`}
 //         >
-//           <motion.div
+//           <m.div
 //             aria-hidden
 //             style={{ opacity: glow }}
 //             className="absolute -inset-6 rounded-[28px] pointer-events-none"
@@ -935,10 +935,10 @@ export default function Work({
 //                 filter: "blur(20px)",
 //               }}
 //             />
-//           </motion.div>
+//           </m.div>
 
 //           <BrowserWindow project={project} imageBorderColor={imageBorderColor} />
-//         </motion.div>
+//         </m.div>
 //       </div>
 //     </div>
 //   );

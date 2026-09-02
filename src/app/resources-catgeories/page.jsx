@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import HeroSection from '@/components/resourcesCatgeories/nebula/HeroSection';
 import NebulaBackground from '@/components/resourcesCatgeories/nebula/NebulaBackground';
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import './resources.css';
 import ConstellationTopics from '@/components/resourcesCatgeories/nebula/ConstellationTopics';
 import AsteroidBelt from '@/components/resourcesCatgeories/nebula/AsteroidBelt';
@@ -68,7 +68,7 @@ const DEFAULT_DOSSIER_CARDS = [
 
 const SectionHeader = ({ eyebrow, title, description, id }) => (
   <div id={id} className="mb-2 md:mb-10 max-w-3xl">
-    <motion.p
+    <m.p
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -76,8 +76,8 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
       className="text-[11px] tracking-[0.35em] uppercase text-white/45 mb-3"
     >
       {eyebrow}
-    </motion.p>
-    <motion.h2
+    </m.p>
+    <m.h2
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -85,9 +85,9 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
       className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight"
     >
       {title}
-    </motion.h2>
+    </m.h2>
     {description && (
-      <motion.p
+      <m.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -95,7 +95,7 @@ const SectionHeader = ({ eyebrow, title, description, id }) => (
         className="mt-2 md:mt-4 text-white/60 max-w-2xl leading-relaxed"
       >
         {description}
-      </motion.p>
+      </m.p>
     )}
   </div>
 );

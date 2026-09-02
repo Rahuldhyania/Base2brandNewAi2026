@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export const SectionHeading = ({
     eyebrow,
@@ -15,7 +15,7 @@ export const SectionHeading = ({
             data-testid={testId || "section-heading"}
         >
             {eyebrow && (
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
@@ -26,9 +26,9 @@ export const SectionHeading = ({
                     <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-white/55">
                         {eyebrow}
                     </span>
-                </motion.div>
+                </m.div>
             )}
-            <motion.h2
+            <m.h2
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
@@ -36,9 +36,9 @@ export const SectionHeading = ({
                 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.02] tracking-[-0.035em] font-medium text-balance text-white"
             >
                 {title}
-            </motion.h2>
+            </m.h2>
             {description && (
-                <motion.p
+                <m.p
                     initial={{ opacity: 0, y: 18 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
@@ -46,7 +46,7 @@ export const SectionHeading = ({
                     className="mt-5 text-[15px] leading-[1.6] text-white/55 max-w-2xl mx-auto"
                 >
                     {description}
-                </motion.p>
+                </m.p>
             )}
         </div>
     );

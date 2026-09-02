@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 /**
  * Subtle elliptical orbit divider used between major sections.
@@ -91,7 +91,7 @@ export function OrbitalDivider({
         />
 
         {/* travelling planet — slow loop along the ellipse */}
-        <motion.g
+        <m.g
           animate={{ rotate: 360 }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
           style={{ transformOrigin: `${cfg.cx}px ${cfg.cy}px` }}
@@ -103,7 +103,7 @@ export function OrbitalDivider({
             fill="#ffffff"
             opacity="0.85"
           />
-        </motion.g>
+        </m.g>
       </svg>
     </div>
   );

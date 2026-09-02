@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const TECHNOLOGIES = [
   { name: "Swift", category: "Language" },
@@ -71,7 +71,7 @@ SwiftUI first. Swift for performance. App Intents for intelligent actions. Cloud
         <div className="flex items-center justify-start">
           <div className="flex flex-wrap gap-2 sm:gap-2.5 content-start">
             {TECHNOLOGIES.map((t, i) => (
-              <motion.span
+              <m.span
                 key={t.name}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ SwiftUI first. Swift for performance. App Intents for intelligent actions. Cloud
                 <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.14em] sm:tracking-[0.16em] text-white/40 hidden sm:inline">
                   {t.category}
                 </span>
-              </motion.span>
+              </m.span>
             ))}
           </div>
         </div>

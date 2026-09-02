@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import {
-  motion,
+  m,
   useScroll,
   useTransform,
   useReducedMotion,
@@ -63,7 +63,7 @@ const LayerCard = ({ layer, index, total, scrollProgress }) => {
   );
 
   return (
-    <motion.div
+    <m.div
       data-testid={`architecture-layer-${index}`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const LayerCard = ({ layer, index, total, scrollProgress }) => {
       }`}
     >
       {/* Animated glow indicator on the left edge */}
-      <motion.span
+      <m.span
         style={{ opacity: glow }}
         className="pointer-events-none absolute inset-y-0 left-0 w-0.5 bg-gradient-to-b from-[#C084FC] to-[#6D28D9] shadow-[0_0_18px_2px_rgba(192,132,252,0.55)]"
       />
@@ -101,7 +101,7 @@ const LayerCard = ({ layer, index, total, scrollProgress }) => {
         </div>
       </div>
       <div className="text-xs text-white/40 hidden sm:block">{layer.sub}</div>
-    </motion.div>
+    </m.div>
   );
 };
 
@@ -161,7 +161,7 @@ const Architecture = () => {
                     "Every automation is tied to business outcomes — leads qualified, hours saved, response time reduced, revenue influenced.",
                   ],
                 ].map(([k, v], i) => (
-                  <motion.div
+                  <m.div
                     key={k}
                     initial={{ opacity: 0, x: -8 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -173,7 +173,7 @@ const Architecture = () => {
                       <div className="font-display font-medium">{k}</div>
                       <div className="text-sm text-white/40">{v}</div>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Check } from "lucide-react";
 
 const industries = [
@@ -138,7 +138,7 @@ export const Industries = () => {
                 }`}
               >
                 {isActive && (
-                  <motion.div
+                  <m.div
                     layoutId="industry-active-pill"
                     className="absolute inset-0 bg-brand rounded-full"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
@@ -154,7 +154,7 @@ export const Industries = () => {
           <div className="grid lg:grid-cols-12 border border-white/40">
             <div className="lg:col-span-7 p-4 md:p-8 xl:p-14 rounded-[50px]">
               <AnimatePresence mode="wait">
-                <motion.div
+                <m.div
                   key={current.id}
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -233,13 +233,13 @@ export const Industries = () => {
                   >
                     Discuss your initiative <ArrowUpRight size={16} />
                   </a>
-                </motion.div>
+                </m.div>
               </AnimatePresence>
             </div>
 
             <div className="lg:col-span-5 relative min-h-[280px] lg:min-h-full border-t lg:border-t-0 lg:border-l border-border overflow-hidden">
               <AnimatePresence mode="wait">
-                <motion.div
+                <m.div
                   key={current.id}
                   initial={{ opacity: 0, scale: 1.04 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -255,7 +255,7 @@ export const Industries = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-transparent to-brand/20 mix-blend-overlay" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-                </motion.div>
+                </m.div>
               </AnimatePresence>
             </div>
           </div>

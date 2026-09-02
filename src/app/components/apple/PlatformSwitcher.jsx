@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 /**
  * Platform Switcher — adapted from the supplied Apple Liquid Glass Theme
@@ -46,7 +46,7 @@ export default function PlatformSwitcher({
             }}
           >
             {active && (
-              <motion.span
+              <m.span
                 layoutId="platform-active-pill"
                 transition={{ type: "spring", stiffness: 360, damping: 32 }}
                 className="absolute inset-0 rounded-full"

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const STATS = [
     { key: 'cases', value: '5', label: 'Published briefs' },
@@ -35,7 +35,7 @@ export default function CaseStudyHero() {
 
             <div className="max-w-[1180px] mx-auto grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-12 lg:gap-16 items-center">
                 <div>
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -43,9 +43,9 @@ export default function CaseStudyHero() {
                     >
                         <span className="inline-block w-2 h-2 rounded-full bg-[var(--b2b-orange)] shadow-[0_0_10px_rgba(244,123,82,0.9)]" />
                         Case Studies · Anonymised briefs
-                    </motion.div>
+                    </m.div>
 
-                    <motion.h1
+                    <m.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
@@ -54,18 +54,18 @@ export default function CaseStudyHero() {
                         Our Latest
                         <br />
                         <span className="text-[var(--b2b-text-muted)]">Work</span>
-                    </motion.h1>
+                    </m.h1>
 
-                    <motion.p
+                    <m.p
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.85, delay: 0.2 }}
                         className="mt-4 max-w-[560px] text-[15px] md:text-[17px] leading-[1.6] text-[var(--b2b-text-muted)]"
                     >
                        Explore our latest projects—where strategy, creativity, and technology come together to deliver measurable results and meaningful business growth.
-                    </motion.p>
+                    </m.p>
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.32 }}
@@ -90,10 +90,10 @@ export default function CaseStudyHero() {
                         >
                             Request unredacted brief
                         </a>
-                    </motion.div>
+                    </m.div>
                 </div>
 
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, x: 24 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
@@ -146,10 +146,10 @@ export default function CaseStudyHero() {
                     </div> */}
 
                     <img src="/images/b2bjdp-sm.png" alt="" />
-                </motion.div>
+                </m.div>
             </div>
 
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.45 }}
@@ -168,7 +168,7 @@ export default function CaseStudyHero() {
                         </div>
                     </div>
                 ))}
-            </motion.div>
+            </m.div>
         </section>
     );
 }

@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+import Marquee from "react-fast-marquee";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import { ArrowUpRight } from "lucide-react";
@@ -69,7 +70,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
   const ref = useRef(null);
 
   return (
-    <motion.button
+    <m.button
       ref={ref}
       type="button"
       data-testid={`industry-photo-${industry.id}`}
@@ -86,7 +87,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       onViewportEnter={() => onHover(industry.id)}
       className={`relative overflow-hidden rounded-xl flex-shrink-0 cursor-pointer ${size}`}
     >
-      <motion.img
+      <m.img
         src={industry.image}
         alt={industry.name}
         loading="lazy"
@@ -101,7 +102,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Purple duotone wash — strong on inactive, soft on active */}
-      <motion.div
+      <m.div
         animate={{
           opacity: isActive ? 0.12 : 0.55,
         }}
@@ -110,21 +111,21 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Top vignette */}
-      <motion.div
+      <m.div
         animate={{ opacity: isActive ? 1 : 0.65 }}
         transition={{ duration: 0.5 }}
         className="absolute inset-0 bg-gradient-to-t from-[#03030A]/85 via-transparent to-transparent"
       />
 
       {/* Dim layer for non-hovered when something else is hovered */}
-      <motion.div
+      <m.div
         animate={{ opacity: isDimmed ? 0.55 : 0 }}
         transition={{ duration: 0.4 }}
         className="absolute inset-0 bg-[#03030A]"
       />
 
       {/* Glow ring on active */}
-      <motion.div
+      <m.div
         animate={{
           opacity: isActive ? 1 : 0,
         }}
@@ -133,7 +134,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Corner accent dot */}
-      <motion.span
+      <m.span
         animate={{
           scale: isActive ? 1 : 0,
           opacity: isActive ? 1 : 0,
@@ -143,7 +144,7 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
       />
 
       {/* Industry label */}
-      <motion.div
+      <m.div
         animate={{
           y: isActive ? 0 : 8,
           opacity: isActive ? 1 : 0,
@@ -152,13 +153,13 @@ const PhotoCard = ({ industry, isActive, isDimmed, onHover, size, index }) => {
         className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-xs uppercase tracking-[0.2em] text-white"
       >
         {industry.name}
-      </motion.div>
-    </motion.button>
+      </m.div>
+    </m.button>
   );
 };
 
 const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
-  <motion.button
+  <m.button
     type="button"
     data-testid={`industry-card-${idx}`}
     onMouseEnter={() => onHover(industry.id)}
@@ -174,12 +175,12 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
     onViewportEnter={() => onHover(industry.id)}
     className="text-left group block w-full py-3 cursor-pointer"
   >
-    <motion.div
+    <m.div
       animate={{ opacity: isDimmed ? 0.4 : 1 }}
       transition={{ duration: 0.3 }}
       className="flex items-center gap-3"
     >
-      <motion.span
+      <m.span
         animate={{
           width: isActive ? 26 : 16,
           backgroundColor: isActive
@@ -199,7 +200,7 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
       >
         {industry.name}
       </span>
-      <motion.span
+      <m.span
         animate={{
           opacity: isActive ? 1 : 0,
           x: isActive ? 0 : -8,
@@ -208,19 +209,19 @@ const Row = ({ industry, idx, isActive, isDimmed, onHover, ctaLabel }) => (
         className="ml-auto hidden sm:inline-flex items-center gap-1 font-mono text-xs tracking-[0.2em] uppercase text-(--b2b-primary)"
       >
         {ctaLabel} <ArrowUpRight className="w-3 h-3" />
-      </motion.span>
-    </motion.div>
+      </m.span>
+    </m.div>
     {industry.use && (
-      <motion.p
+      <m.p
         animate={{ opacity: isDimmed ? 0.3 : 1 }}
         className={`mt-1.5 pl-9 text-xs md:text-sm transition-colors duration-300 ${
           isActive ? "text-white/70" : "text-white/35"
         }`}
       >
         {industry.use}
-      </motion.p>
+      </m.p>
     )}
-  </motion.button>
+  </m.button>
 );
 
 const Industries = ({
@@ -259,8 +260,34 @@ const Industries = ({
         </div>
 
         <div className="flex flex-col lg:flex-row items-start gap-8 sm:gap-10 lg:gap-16">
+          {/* Mobile-only: right-to-left auto-sliding image marquee.
+              Desktop/tablet keep the existing staggered photo grid below,
+              untouched — this block is hidden from md: up. */}
+          <div className="md:hidden -mx-5 sm:-mx-6 w-[calc(100%+2.5rem)] sm:w-[calc(100%+3rem)]">
+            <Marquee gap={14} speed={42} direction="left" autoFill pauseOnClick>
+              {industriesData.map((ind) => (
+                <div
+                  key={ind.id}
+                  data-testid={`industry-mobile-slide-${ind.id}`}
+                  className="relative w-[220px] h-[260px] rounded-2xl overflow-hidden mx-1.5"
+                >
+                  <img
+                    src={ind.image}
+                    alt={ind.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03030A]/90 via-[#03030A]/10 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 font-mono text-xs uppercase tracking-[0.2em] text-white">
+                    {ind.name}
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+
           {/* Photo grid */}
-          <div className="flex gap-2.5 md:gap-3 flex-shrink-0 overflow-x-auto pb-2 lg:pb-0 max-w-full">
+          <div className="hidden md:flex gap-2.5 md:gap-3 flex-shrink-0 overflow-x-auto pb-2 lg:pb-0 max-w-full">
             <div className="flex flex-col gap-2.5 md:gap-3">
               {cols[0].map((ind, i) => (
                 <PhotoCard

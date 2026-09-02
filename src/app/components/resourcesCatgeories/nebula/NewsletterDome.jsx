@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Send, Check } from "lucide-react";
 
 export default function NewsletterDome() {
@@ -74,7 +74,7 @@ export default function NewsletterDome() {
             >
               <AnimatePresence mode="wait">
                 {status === "idle" && (
-                  <motion.span
+                  <m.span
                     key="idle"
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -82,10 +82,10 @@ export default function NewsletterDome() {
                     className="relative z-10 inline-flex items-center gap-2 text-white"
                   >
                     Subscribe <Send className="h-4 w-4" />
-                  </motion.span>
+                  </m.span>
                 )}
                 {status === "sending" && (
-                  <motion.span
+                  <m.span
                     key="sending"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -93,17 +93,17 @@ export default function NewsletterDome() {
                     className="relative z-10 inline-flex items-center gap-2 text-white"
                   >
                     Transmitting…
-                  </motion.span>
+                  </m.span>
                 )}
                 {status === "success" && (
-                  <motion.span
+                  <m.span
                     key="success"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="relative z-10 inline-flex items-center gap-2 text-white"
                   >
                     <Check className="h-4 w-4" /> On the beam
-                  </motion.span>
+                  </m.span>
                 )}
               </AnimatePresence>
             </button>

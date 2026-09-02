@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -146,7 +146,7 @@ const OrbitRing = ({
                         : "border border-white/10",
                 )}
             />
-            <motion.div
+            <m.div
                 className="absolute inset-0 pointer-events-auto"
                 animate={reduced ? undefined : { rotate: 360 * direction }}
                 transition={
@@ -164,7 +164,7 @@ const OrbitRing = ({
                                 transform: `rotate(${angle}deg) translate(${radius}px) rotate(${-angle}deg)`,
                             }}
                         >
-                            <motion.div
+                            <m.div
                                 animate={reduced ? undefined : { rotate: -360 * direction }}
                                 transition={
                                     reduced
@@ -173,7 +173,7 @@ const OrbitRing = ({
                                 }
                                 style={{ transformOrigin: "50% 50%" }}
                             >
-                                <motion.div
+                                <m.div
                                     animate={reduced ? undefined : { y: [0, -6, 0] }}
                                     transition={
                                         reduced
@@ -193,17 +193,24 @@ const OrbitRing = ({
                                     }}
                                 >
                                     <OrbitNode node={node} size={nodeSize} />
-                                </motion.div>
-                            </motion.div>
+                                </m.div>
+                            </m.div>
                         </div>
                     );
                 })}
-            </motion.div>
+            </m.div>
         </div>
     );
 };
 
-export function IlluminatedHero({ onOpenLeadForm }) {
+export function IlluminatedHero({
+    onOpenLeadForm,
+    srH1 = "Built Around Shopify. Engineered For Growth.",
+    titleLine1 = "Shopify stores built to sell,",
+    titleLine2 = "Ecommerce systems built to scale.",
+    primaryCTA = "Start Your Project",
+    secondaryCTA = "View Shopify Work",
+}) {
 
     const scale = useResponsiveScale();
     const reduced = useReducedMotion();
@@ -245,9 +252,9 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "relative inline-block pointer-events-auto",
                         )}
 
-                        data-text="Shopify stores built to sell,"
+                        data-text={titleLine1}
                     >
-                       Shopify stores built to sell, {' '}
+                       {titleLine1} {' '}
                     </span>
                     <span
                         className={cn(
@@ -256,14 +263,14 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "before:bg-[linear-gradient(0deg,#dfe5ee_0%,#fffaf6_50%)] before:bg-clip-text before:text-[#fffaf6]",
                         )}
                         // style={{ filter: "url(#glow-4)" }}
-                        data-text="Ecommerce systems built to scale."
+                        data-text={titleLine2}
                     >
-                        {' '}Ecommerce systems built to scale.
+                        {' '}{titleLine2}
                     </span>
                 </div>
 
                 <h1 className="sr-only">
-                    Built Around Shopify. {' '} Engineered For Growth.
+                    {srH1}
                 </h1>
 
                 <div
@@ -325,7 +332,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                                 "0 0 0 1px rgba(149,191,71,0.28), 0 18px 60px rgba(0,0,0,0.55), 0 0 80px rgba(149,191,71,0.35)",
                         }}
                     >
-                        <motion.span
+                        <m.span
                             aria-hidden
                             className="absolute inset-0 rounded-3xl pointer-events-none"
                             style={{
@@ -382,7 +389,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#95BF47]/55",
                         )}
                     >
-                        Start Your Project
+                        {primaryCTA}
                         <ArrowRight className="h-4 w-4" />
                     </button>
                     <button
@@ -397,7 +404,7 @@ export function IlluminatedHero({ onOpenLeadForm }) {
                             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35",
                         )}
                     >
-                        View Shopify Work
+                        {secondaryCTA}
                         <ArrowUpRight className="h-4 w-4" />
                     </button>
                 </div>

@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Search, Sparkles, MessageSquare, BrainCircuit } from "lucide-react";
 
 const TEX =
@@ -50,15 +50,15 @@ export default function SearchChanged() {
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="label-mono"
             >
               · The Shift
-            </motion.div>
-            <motion.h2
+            </m.div>
+            <m.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -68,7 +68,7 @@ export default function SearchChanged() {
               Search has changed.
               <br />
               <span className="text-zinc-500">Your marketing should too.</span>
-            </motion.h2>
+            </m.h2>
 
             <p className="mt-6 text-zinc-400 text-base md:text-lg leading-relaxed max-w-md">
               People don't only ask Google anymore. They ask ChatGPT, Gemini,
@@ -81,7 +81,7 @@ export default function SearchChanged() {
                 · How customers ask today
               </div>
               {examples.map((e, i) => (
-                <motion.div
+                <m.div
                   key={e}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -91,13 +91,13 @@ export default function SearchChanged() {
                 >
                   <MessageSquare className="w-4 h-4 text-blue-400 shrink-0" />
                   <span className="text-sm text-zinc-200">"{e}"</span>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
 
           <div className="lg:col-span-7">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -119,11 +119,11 @@ export default function SearchChanged() {
                   sales team.
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             <div className="grid sm:grid-cols-3 gap-4 mt-6">
               {stats.map((s, i) => (
-                <motion.div
+                <m.div
                   key={s.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ export default function SearchChanged() {
                   <div className="mt-2 text-sm text-zinc-400 md:leading-relaxed">
                     {s.body}
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

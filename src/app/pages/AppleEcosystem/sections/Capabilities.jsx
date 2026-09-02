@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Code2, ShieldCheck, Cloud, Smartphone, Cpu, Workflow, Eye, Compass } from "lucide-react";
 
 const CAPABILITIES = [
@@ -77,7 +77,7 @@ export default function Capabilities() {
         {CAPABILITIES.map((c, i) => {
           const Icon = c.icon;
           return (
-            <motion.div
+            <m.div
               key={c.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ export default function Capabilities() {
                   {c.keywords}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           );
         })}
       </div>

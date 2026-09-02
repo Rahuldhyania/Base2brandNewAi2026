@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Sparkles,
   FileText,
@@ -24,7 +24,7 @@ const ICONS = {
 function Asteroid({ item }) {
   const Icon = ICONS[item.icon] || Sparkles;
   return (
-    <motion.div
+    <m.div
       // whileHover={{ rotate: 6, y: -6, scale: 1.03 }}
       transition={{ type: "spring", stiffness: 220, damping: 18 }}
       className="mx-4 w-64 md:w-72 h-40 rounded-3xl glass p-6 flex flex-col justify-between group relative overflow-hidden"
@@ -63,7 +63,7 @@ function Asteroid({ item }) {
           boxShadow: "0 0 0 1px rgba(66,212,255,0.35), 0 20px 60px rgba(66,212,255,0.2)",
         }}
       />
-    </motion.div>
+    </m.div>
   );
 }
 

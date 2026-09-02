@@ -1,6 +1,6 @@
 // // "use client";
 // // import React, { useState } from "react";
-// // import { motion } from "framer-motion";
+// // import { m } from "framer-motion";
 // // import { Play, ArrowUpRight } from "lucide-react";
 // // import Marquee from "react-fast-marquee";
 // // import Image from "next/image";
@@ -56,7 +56,7 @@
 // //       onMouseEnter={() => setHovered(true)}
 // //       onMouseLeave={() => setHovered(false)}
 // //     >
-// //       <motion.div
+// //       <m.div
 // //         className="relative w-full h-full"
 // //         animate={{ rotateY: hovered ? 180 : 0 }}
 // //         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -152,7 +152,7 @@
 // //             </a>
 // //           </div>
 // //         </div>
-// //       </motion.div>
+// //       </m.div>
 // //     </div>
 // //   );
 // // }
@@ -227,7 +227,7 @@
 
 // "use client";
 // import React, { useRef, useEffect } from "react";
-// import { motion } from "framer-motion";
+// import { m } from "framer-motion";
 // import { Play, ArrowUpRight } from "lucide-react";
 // import Image from "next/image";
 
@@ -397,8 +397,8 @@ const cardsData = [
   {
     type: "video",
     title: "Motion Graphics",
-    videoUrl: "/videos/motion-graphics.mp4",
-    thumbnail: "/images/motion-graphics-thumb.png",
+    videoUrl: "/videos/m-graphics.mp4",
+    thumbnail: "/images/m-graphics-thumb.png",
   },
   {
     type: "image",

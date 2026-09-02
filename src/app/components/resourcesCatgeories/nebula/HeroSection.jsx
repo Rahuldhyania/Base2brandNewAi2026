@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles, Compass } from "lucide-react";
 import CosmicSearch from "./CosmicSearch";
 import CategoryOrbits from "./CategoryOrbits";
@@ -20,7 +20,7 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
       {!reduce && <EntranceDust />}
 
       <div className="relative z-20 mx-auto max-w-6xl px-4 md:px-10 pt-24 md:pt-28 lg:pt-34 xl:pt-40 pb-4 md:pb-24 lg:pb-32 text-center">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 1.2 }}
@@ -28,9 +28,9 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
         >
           <Sparkles className="h-3.5 w-3.5" style={{ color: "#42D4FF" }} />
           <span className="tracking-widest uppercase">The Base2Brand Knowledge Nebula</span>
-        </motion.div>
+        </m.div>
 
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 24, filter: "blur(24px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 2.1, duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
@@ -39,9 +39,9 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           <span className="gradient-text">Discover the Future</span>
           <br />
           <span className="text-white/90">of Digital Innovation</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.9, duration: 1 }}
@@ -50,9 +50,9 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
           Explore premium insights, AI research, Shopify guides, case studies,
           industry reports, prompt libraries and engineering resources — created to
           help ambitious teams scale smarter.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.3, duration: 0.9 }}
@@ -91,31 +91,31 @@ export default function HeroSection({ query, setQuery, onSelectCategory, onExplo
             View Latest Research
             <ArrowRight className="h-4 w-4" />
           </button>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.6, duration: 0.9 }}
           className="mt-6 md:mt-8 lg:mt-14"
         >
           <CosmicSearch value={query} onChange={setQuery} />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 4.4, duration: 1.2 }}
           className="mt-5 md:mt-8 lg:mt-16 flex flex-col items-center gap-2 text-white/40"
         >
           <span className="text-[10px] uppercase tracking-[0.35em]">Scroll to discover</span>
-          <motion.span
+          <m.span
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
             className="block h-8 w-[1px]"
             style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.6), transparent)" }}
           />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );
@@ -137,7 +137,7 @@ function EntranceDust() {
   return (
     <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center" aria-hidden>
       {particles.map((p) => (
-        <motion.span
+        <m.span
           key={p.id}
           initial={{
             x: `${p.startX}vw`,

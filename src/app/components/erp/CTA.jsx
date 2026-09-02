@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export const CTA = () => {
     return (
@@ -19,7 +19,7 @@ export const CTA = () => {
             />
 
             <div className="relative z-10 mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-16 text-center">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -30,9 +30,9 @@ export const CTA = () => {
                     <span className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-white/65">
                         Initiate transmission
                     </span>
-                </motion.div>
+                </m.div>
 
-                <motion.h2
+                <m.h2
                     initial={{ opacity: 0, y: 18 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -45,9 +45,9 @@ export const CTA = () => {
                         command center
                     </span>{" "}
                     of your business.
-                </motion.h2>
+                </m.h2>
 
-                <motion.p
+                <m.p
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -57,9 +57,9 @@ export const CTA = () => {
                     Schedule a discovery call with our ERP architects. We will
                     map your current operations, identify the singularities
                     and chart the path to clarity.
-                </motion.p>
+                </m.p>
 
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -93,10 +93,10 @@ export const CTA = () => {
                     >
                         Explore ERP Capabilities
                     </a>
-                </motion.div>
+                </m.div>
 
                 {/* trust strip */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -110,7 +110,7 @@ export const CTA = () => {
                     <span>GDPR aligned</span>
                     <span className="w-1 h-1 rounded-full bg-white/20" />
                     <span>99.99% uptime SLA</span>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

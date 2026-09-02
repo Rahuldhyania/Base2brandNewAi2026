@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 
 const CAPABILITIES = [
@@ -73,7 +73,7 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-px b2b-hairline rounded-3xl overflow-hidden">
           {CAPABILITIES.map((c, i) => (
-            <motion.article
+            <m.article
               key={c.id}
               data-testid={extraData.services.card(c.id)}
               initial={{ opacity: 0, y: 24 }}
@@ -108,7 +108,7 @@ export default function Services() {
                   </span>
                 ))}
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

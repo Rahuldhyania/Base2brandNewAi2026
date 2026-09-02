@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Container from "@/components/shopify-solution/site/Container";
 import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
@@ -122,7 +122,7 @@ export const CardFanCarousel = () => {
             const z = 100 - distance;
 
             return (
-              <motion.button
+              <m.button
                 key={d.key}
                 type="button"
                 onClick={() => goTo(i)}
@@ -148,7 +148,7 @@ export const CardFanCarousel = () => {
                 }
               >
                 <DossierCard d={d} active={distance === 0} />
-              </motion.button>
+              </m.button>
             );
           })}
         </div>

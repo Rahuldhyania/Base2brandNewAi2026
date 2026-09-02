@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
     Eye,
     Activity,
@@ -58,7 +58,7 @@ const ITEMS = [
 const Card = ({ item, idx }) => {
     const Icon = item.icon;
     return (
-        <motion.div
+        <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -91,7 +91,7 @@ const Card = ({ item, idx }) => {
 
             {/* hairline accent */}
             <div className="absolute bottom-0 left-7 right-7 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-60" />
-        </motion.div>
+        </m.div>
     );
 };
 

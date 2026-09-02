@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Code2,
   Globe,
@@ -84,7 +84,7 @@ export const Stats = () => {
           {capabilities.map((item, i) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <m.div
                 key={item.title}
                 initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export const Stats = () => {
                     {item.desc}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

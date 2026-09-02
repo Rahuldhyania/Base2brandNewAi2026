@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Clock } from "lucide-react";
 import Link from "next/link";
 
@@ -34,12 +34,12 @@ export default function LatestMeteors({
 
       <div className="grid md:grid-cols-3 gap-6">
         {items.slice(0, displayCount ? displayCount : items.length).map((r, i) => (
-          <motion.div
+          <m.div
             key={r.id}
             className="relative"
           >
             {/* Meteor trail */}
-            <motion.span
+            <m.span
               viewport={{ once: true }}
               className="absolute -top-8 -left-16 h-[1.5px] w-40 origin-left rounded-full"
               style={{
@@ -86,7 +86,7 @@ export default function LatestMeteors({
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </div>

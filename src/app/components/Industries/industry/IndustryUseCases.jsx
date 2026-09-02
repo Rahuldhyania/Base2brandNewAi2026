@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { Check } from "lucide-react";
 import SectionLabel from "@/components/shared/SectionLabel";
 import Reveal from "@/components/shared/Reveal";
@@ -75,7 +75,7 @@ export default function IndustryUseCases({ industry, id = "use-cases" }) {
           {/* Right detail panel */}
           <div className="lg:col-span-8">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={active}
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -107,19 +107,19 @@ export default function IndustryUseCases({ industry, id = "use-cases" }) {
 
                 {uc.metrics?.length > 0 && (
                   <div className="mt-9 pt-7 border-t border-white/8 grid sm:grid-cols-2 gap-5">
-                    {uc.metrics.map((m) => (
-                      <div key={m.label}>
+                    {uc.metrics.map((metric) => (
+                      <div key={metric.label}>
                         <div className="font-display text-[30px] md:text-[36px] text-white tracking-tight">
-                          <AnimatedCounter value={m.value} />
+                          <AnimatedCounter value={metric.value} />
                         </div>
                         <div className="mt-1 text-[11px] uppercase tracking-widest2 text-white/45">
-                          {m.label}
+                          {metric.label}
                         </div>
                       </div>
                     ))}
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
         </div>

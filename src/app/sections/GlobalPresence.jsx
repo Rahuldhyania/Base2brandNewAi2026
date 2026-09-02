@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { DottedWorldMap } from "../components/visual/DottedWorldMap";
 
@@ -45,7 +45,7 @@ export function GlobalPresence() {
         />
 
         {/* Map */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -54,13 +54,13 @@ export function GlobalPresence() {
           data-testid="global-map-container"
         >
           <DottedWorldMap locations={LOCATIONS} originIndex={0} />
-        </motion.div>
+        </m.div>
 
         {/* Office grid + stats */}
         <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-4 md:gap-8">
           <div className="grid sm:grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden border border-line">
             {LOCATIONS.map((l, i) => (
-              <motion.div
+              <m.div
                 key={l.city}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -87,13 +87,13 @@ export function GlobalPresence() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           <div className="grid grid-cols-2 gap-2 md:gap-4">
             {STATS.map((s, i) => (
-              <motion.div
+              <m.div
                 key={s.v}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export function GlobalPresence() {
                 <div className="mt-2 text-xs text-mute uppercase tracking-[0.2em]">
                   {s.v}
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

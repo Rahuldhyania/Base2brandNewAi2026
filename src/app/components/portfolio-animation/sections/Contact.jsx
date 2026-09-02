@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 import { Base2BrandLogo } from "@/components/portfolio-animation/Logo";
 
@@ -139,7 +139,7 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -154,7 +154,7 @@ export default function Contact() {
             <a href="#" className="hover:text-[var(--b2b-orange)]">Privacy</a>
             <a href="#" className="hover:text-[var(--b2b-orange)]">Careers</a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

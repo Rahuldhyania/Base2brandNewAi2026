@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { GlobeHero } from "../components/visual/GlobeHero";
 
 /**
@@ -36,7 +36,7 @@ export function ClientFootprint() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         {/* eyebrow + heading */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -59,12 +59,12 @@ export function ClientFootprint() {
           <p className="mt-5 text-mute text-base sm:text-lg max-w-2xl">
              Our delivery footprint follows business outcomes — from ecommerce stores and performance campaigns to AI automation, mobile applications, CRM systems, and enterprise platforms.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Globe + regions */}
         <div className="mt-14 grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
           {/* Globe */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.92 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -92,12 +92,12 @@ export function ClientFootprint() {
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand" />
               Interactive · drag to rotate
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Regions list */}
           <div className="space-y-3" data-testid="footprint-regions">
             {TOP_REGIONS.map((r, i) => (
-              <motion.div
+              <m.div
                 key={r.region}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -121,7 +121,7 @@ export function ClientFootprint() {
                 <div className="shrink-0 rounded-full border border-orange-brand/40 bg-orange-brand/10 px-3 py-1.5 text-xs font-mono-display text-orange-brand uppercase tracking-wider">
                   {r.count}
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

@@ -1,5 +1,5 @@
 'use client';
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 /**
  * ShiningText - enterprise eyebrow with neutral metallic shimmer.
@@ -36,7 +36,7 @@ const ShiningText = ({
           aria-hidden="true"
         />
       )}
-      <motion.span
+      <m.span
         initial={{ backgroundPosition: "200% 0" }}
         animate={{ backgroundPosition: "-200% 0" }}
         transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
@@ -50,7 +50,7 @@ const ShiningText = ({
         }}
       >
         {children}
-      </motion.span>
+      </m.span>
     </span>
   );
 };

@@ -1,20 +1,46 @@
 'use client';
 
-import Industries from "@/components/ai/Industries";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
+import dynamic from "next/dynamic";
 import Capabilities from "@/components/spatial/Capabilities";
-import CaseStudies from "@/components/spatial/CaseStudies";
-import CtaSection from "@/components/spatial/CtaSection";
 import Hero from "@/components/spatial/Hero";
-import Process from "@/components/spatial/Process";
-import TechStack from "@/components/spatial/TechStack";
-import UseCases from "@/components/spatial/UseCases";
 import WaveBackground from "@/components/spatial/WaveBackground";
 import WhySpatial from "@/components/spatial/WhySpatial";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
 import React from "react";
 import { Zap, Workflow, Cloud, ShieldCheck } from "lucide-react";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load.
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const UseCases = dynamic(() => import("@/components/spatial/UseCases"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const TechStack = dynamic(() => import("@/components/spatial/TechStack"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const Process = dynamic(() => import("@/components/spatial/Process"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const CaseStudies = dynamic(() => import("@/components/spatial/CaseStudies"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const CtaSection = dynamic(() => import("@/components/spatial/CtaSection"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 
 const WHY_EMERGING_TECH_CARDS = [
   {

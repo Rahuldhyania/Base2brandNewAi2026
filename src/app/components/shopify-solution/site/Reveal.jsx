@@ -1,4 +1,7 @@
-import { motion, useReducedMotion } from "framer-motion";
+"use client";
+import { useInView, usePrefersReducedMotion } from "@/lib/useInView";
+
+const EASE = "cubic-bezier(0.22,1,0.36,1)";
 
 /**
  * Reveal: scroll-triggered fade-in + slide-up wrapper.
@@ -15,8 +18,8 @@ export const Reveal = ({
   as: Tag = "div",
   ...rest
 }) => {
-  const reduced = useReducedMotion();
-  const MotionTag = motion[Tag] || motion.div;
+  const reduced = usePrefersReducedMotion();
+  const [ref, inView] = useInView({ once, amount });
 
   if (reduced) {
     return (
@@ -27,20 +30,20 @@ export const Reveal = ({
   }
 
   return (
-    <MotionTag
-      initial={{ opacity: 0, y, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once, amount }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+    <Tag
+      ref={ref}
       className={className}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : `translateY(${y}px)`,
+        filter: inView ? "blur(0px)" : "blur(6px)",
+        transition: `opacity ${duration}s ${EASE} ${delay}s, transform ${duration}s ${EASE} ${delay}s, filter ${duration}s ${EASE} ${delay}s`,
+        willChange: "opacity, transform, filter",
+      }}
       {...rest}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 };
 

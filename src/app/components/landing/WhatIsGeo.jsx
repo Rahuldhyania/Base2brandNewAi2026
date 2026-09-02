@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Globe, Target, BrainCircuit, ArrowUpRight } from "lucide-react";
 
 const cards = [
@@ -63,7 +63,7 @@ export default function WhatIsGeo() {
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
           {cards.map((c, i) => (
-            <motion.div
+            <m.div
               key={c.tag}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function WhatIsGeo() {
                 Explore {c.tag}
                 <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

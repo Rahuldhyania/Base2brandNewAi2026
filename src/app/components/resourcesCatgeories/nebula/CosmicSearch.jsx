@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Search as SearchIcon } from "lucide-react";
 
 export default function CosmicSearch({ value, onChange, testId = "cosmic-search" }) {
@@ -16,7 +16,7 @@ export default function CosmicSearch({ value, onChange, testId = "cosmic-search"
 
   return (
     <div className="relative w-full max-w-2xl mx-auto" data-testid={`${testId}-wrapper`}>
-      <motion.div
+      <m.div
         animate={{
           boxShadow: focused
             ? "0 0 0 1px rgba(123,77,255,0.5), 0 0 40px rgba(123,77,255,0.35), 0 0 80px rgba(66,212,255,0.15)"
@@ -43,12 +43,12 @@ export default function CosmicSearch({ value, onChange, testId = "cosmic-search"
           <kbd className="font-sans">⌘</kbd>
           <kbd className="font-sans">K</kbd>
         </span>
-      </motion.div>
+      </m.div>
 
       {/* Orbit stars appear when focused */}
       {focused &&
         orbitStars.map((s, i) => (
-          <motion.span
+          <m.span
             key={i}
             initial={{ opacity: 0, scale: 0.4 }}
             animate={{

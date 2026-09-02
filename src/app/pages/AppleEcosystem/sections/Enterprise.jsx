@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Truck, Stethoscope, Factory, ShoppingBag, Briefcase } from "lucide-react";
 import Outcomes from "@/pages/AppleEcosystem/sections/Outcomes";
 
@@ -55,7 +55,7 @@ export default function Enterprise() {
             {PILLARS.map((p, i) => {
               const Icon = p.icon;
               return (
-                <motion.div
+                <m.div
                   key={p.title}
                   initial={{ opacity: 0, x: 16 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ export default function Enterprise() {
                     <h3 className="font-display text-lg sm:text-xl leading-tight">{p.title}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-white/60 leading-relaxed">{p.body}</p>
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>
@@ -92,7 +92,7 @@ export default function Enterprise() {
           {INDUSTRIES.map((ind, i) => {
             const Icon = ind.icon;
             return (
-              <motion.div
+              <m.div
                 key={ind.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export default function Enterprise() {
                 </span>
                 <h3 className="mt-4 sm:mt-5 font-display text-xl sm:text-2xl leading-tight">{ind.title}</h3>
                 <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-white/60 leading-relaxed">{ind.body}</p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

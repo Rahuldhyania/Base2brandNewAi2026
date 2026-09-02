@@ -1,4 +1,5 @@
 import { Manrope } from "next/font/google";
+import { LazyMotion, domMax } from "framer-motion";
 import "./globals.css?dsh";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./sections/Footer";
@@ -60,12 +61,14 @@ export default function RootLayout({ children }) {
         cz-shortcut-listen="true"
         suppressHydrationWarning
       >
-        <ThemeWrapper>
-          <Navbar />
-           {children}
-          <Footer />
-          <WhatsAppFloat />
-        </ThemeWrapper>
+        <LazyMotion features={domMax}>
+          <ThemeWrapper>
+            <Navbar />
+             {children}
+            <Footer />
+            <WhatsAppFloat />
+          </ThemeWrapper>
+        </LazyMotion>
       </body>
     </html>
   );

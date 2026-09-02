@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo, useRef } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { m, useMotionValue, useSpring } from "framer-motion";
 
 function generateStars(count, starColor) {
   const shadows = [];
@@ -19,7 +19,7 @@ function StarLayer({ count, size, duration, starColor }) {
   }, [count, starColor]);
 
   return (
-    <motion.div
+    <m.div
       animate={{ y: [0, -2000] }}
       transition={{ repeat: Infinity, duration, ease: "linear" }}
       style={{
@@ -51,7 +51,7 @@ function StarLayer({ count, size, duration, starColor }) {
           boxShadow: boxShadow,
         }}
       />
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -100,11 +100,11 @@ export function StarsBackground({
       onMouseMove={handleMouseMove}
       data-slot="stars-background"
     >
-      <motion.div style={{ x: springX, y: springY, position: "absolute", inset: 0 }}>
+      <m.div style={{ x: springX, y: springY, position: "absolute", inset: 0 }}>
         <StarLayer count={700} size={1} duration={speed} starColor={starColor} />
         <StarLayer count={300} size={2} duration={speed * 2} starColor={starColor} />
         <StarLayer count={120} size={3} duration={speed * 3} starColor={starColor} />
-      </motion.div>
+      </m.div>
       {children}
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Container from "@/components/shopify-solution/site/Container";
 import SectionHeader from "@/components/shopify-solution/site/SectionHeader";
 import Reveal from "@/components/shopify-solution/site/Reveal";
@@ -236,7 +236,7 @@ const CategoryBlock = ({ category, align = "left", onHover, onLeave, active }) =
 );
 
 const CentralHub = () => (
-  <motion.div
+  <m.div
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true, amount: 0.3 }}
@@ -269,7 +269,7 @@ const CentralHub = () => (
     <p className="mt-4 text-center font-mono text-[10px] tracking-[0.18em] uppercase text-white/55">
       Source of Truth
     </p>
-  </motion.div>
+  </m.div>
 );
 
 export default EcosystemViz;

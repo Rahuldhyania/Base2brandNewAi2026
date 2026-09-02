@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+import { m } from 'framer-motion';
 import { Quote, Star, ArrowUpRight, PlayCircle } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -8,7 +9,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "../components/Solutions/solution.css";
 import "../portfolio-demo/portfoliodemo.css";
-import FinalCTA from "@/components/ai/FinalCTA";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+const FinalCTA = dynamic(() => import("@/components/ai/FinalCTA"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
 
 const FEATURED = {
     quote:
@@ -155,7 +160,7 @@ const SuccessStoriesWrap = () => {
                     className="px-6 md:px-12 pt-28 md:pt-36 pb-12 md:pb-16"
                 >
                     <div className="max-w-[1180px] mx-auto">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 12 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
@@ -163,9 +168,9 @@ const SuccessStoriesWrap = () => {
                         >
                             <span className="inline-block w-2 h-2 rounded-full bg-[var(--b2b-orange)] shadow-[0_0_10px_rgba(244,123,82,0.9)]" />
                             Success Stories · Voices from the field
-                        </motion.div>
+                        </m.div>
 
-                        <motion.h1
+                        <m.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.85, delay: 0.08 }}
@@ -173,10 +178,10 @@ const SuccessStoriesWrap = () => {
                         >
                             The people we build for,
                             <span className="text-[var(--b2b-orange)]"> in their own words.</span>
-                        </motion.h1>
+                        </m.h1>
 
                         {/* Featured quote card */}
-                        <motion.blockquote
+                        <m.blockquote
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9, delay: 0.2 }}
@@ -208,7 +213,7 @@ const SuccessStoriesWrap = () => {
                                     {FEATURED.metricLabel}
                                 </div>
                             </div>
-                        </motion.blockquote>
+                        </m.blockquote>
 
                         {/* Logo marquee */}
                         <div className="mt-10 md:mt-14">
@@ -328,7 +333,7 @@ const SuccessStoriesWrap = () => {
                         </h2>
                         <div className="grid md:grid-cols-2 gap-5">
                             {SPOTLIGHTS.map((sp, i) => (
-                                <motion.a
+                                <m.a
                                     href="#contact"
                                     key={sp.title}
                                     initial={{ opacity: 0, y: 24 }}
@@ -361,7 +366,7 @@ const SuccessStoriesWrap = () => {
                                             </span>
                                         </div>
                                     </div>
-                                </motion.a>
+                                </m.a>
                             ))}
                         </div>
                     </div>

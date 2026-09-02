@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SPATIAL } from "@/constants/testIds";
 
 const techGroups = [
@@ -121,7 +121,7 @@ export default function TechStack() {
 
         <div className="space-y-5 md:space-y-10">
           {techGroups.map((group, gi) => (
-            <motion.div
+            <m.div
               key={group.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ export default function TechStack() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

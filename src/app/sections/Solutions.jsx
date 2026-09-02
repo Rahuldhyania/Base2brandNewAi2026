@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import {
   Sparkles,
@@ -123,7 +123,7 @@ export function Solutions() {
             <div className="absolute inset-0 opacity-40 pointer-events-none"
                  style={{ background: "radial-gradient(800px circle at 100% 0%, rgba(255,106,0,0.18), transparent 50%)" }} />
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={current.id}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export function Solutions() {
                     <span className="transition-transform group-hover:translate-x-1">→</span>
                   </a>
                 </div>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
         </div>

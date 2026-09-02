@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { GlobeHero } from "../visual/GlobeHero";
 
@@ -26,7 +26,7 @@ export default function Hero({
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="grid lg:grid-cols-[3fr_2fr] gap-4 md:gap-12 lg:gap-8 items-center">
           <div>
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -35,9 +35,9 @@ export default function Hero({
             >
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
               <span className="label-mono">{highlightTag}</span>
-            </motion.div>
+            </m.div>
 
-            <motion.h1
+            <m.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -45,11 +45,11 @@ export default function Hero({
               data-testid="hero-headline"
             >
               {title}
-            </motion.h1>
+            </m.h1>
 
             <div className="mt-8 2xl:max-w-xl space-y-4" data-testid="hero-subhead">
               {descriptions.map((paragraph, index) => (
-                <motion.p
+                <m.p
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -57,11 +57,11 @@ export default function Hero({
                   className="text-base md:text-lg text-zinc-400 leading-relaxed"
                 >
                   {paragraph}
-                </motion.p>
+                </m.p>
               ))}
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
@@ -83,10 +83,10 @@ export default function Hero({
                 <Sparkles className="w-4 h-4 text-(--b2b-primary)" />
                 {rightCTA}
               </a>
-            </motion.div>
+            </m.div>
 
             {trustLine && (
-              <motion.p
+              <m.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -94,12 +94,12 @@ export default function Hero({
                 data-testid="hero-trust-line"
               >
                 {trustLine}
-              </motion.p>
+              </m.p>
             )}
           </div>
 
           <div>
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0.92 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -122,7 +122,7 @@ export default function Hero({
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange-brand" />
                 Interactive · drag to rotate
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

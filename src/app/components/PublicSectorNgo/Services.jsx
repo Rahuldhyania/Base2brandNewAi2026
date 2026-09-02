@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   Target,
   Search,
@@ -99,7 +99,7 @@ const ServiceCard = ({ service, index }) => {
   const [open, setOpen] = useState(index === 0);
   const Icon = service.icon;
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -133,7 +133,7 @@ const ServiceCard = ({ service, index }) => {
 
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -157,10 +157,10 @@ const ServiceCard = ({ service, index }) => {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </m.div>
   );
 };
 

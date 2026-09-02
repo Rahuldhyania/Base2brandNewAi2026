@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionLabel from "@/components/Industries/shared/SectionLabel";
 import Reveal from "@/components/Industries/shared/Reveal";
@@ -10,7 +10,7 @@ function Layer({ layer, index, total, inView }) {
   const Icon = layer.icon;
   const delay = 0.12 + index * 0.07;
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, x: -16 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
@@ -34,7 +34,7 @@ function Layer({ layer, index, total, inView }) {
               {layer.subtitle}
             </p>
           </div>
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: delay + 0.2, duration: 0.4 }}
@@ -44,7 +44,7 @@ function Layer({ layer, index, total, inView }) {
       </div>
 
       {index < total - 1 && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scaleY: 0 }}
           animate={
             inView ? { opacity: 1, scaleY: 1 } : { opacity: 0, scaleY: 0 }
@@ -56,9 +56,9 @@ function Layer({ layer, index, total, inView }) {
         >
           {/* <div className="w-px h-6 bg-gradient-to-b from-brand/70 to-brand/0 hidden md:block" /> */}
           <ArrowDown className="w-3.5 h-3.5 text-brand -mt-1" />
-        </motion.div>
+        </m.div>
       )}
-    </motion.div>
+    </m.div>
   );
 }
 

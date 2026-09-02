@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { ArrowUpRight } from "lucide-react";
 import { extraData } from "@/constants/testIds/extraData";
@@ -49,7 +49,7 @@ const CASES = [
 
 function CaseCard({ c, i }) {
   return (
-    <motion.article
+    <m.article
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -97,7 +97,7 @@ function CaseCard({ c, i }) {
             "linear-gradient(160deg, rgba(255,106,0,0.18), transparent 45%)",
         }}
       />
-    </motion.article>
+    </m.article>
   );
 }
 const PROJECTS = [
@@ -325,13 +325,13 @@ export function CaseStudies() {
             <CaseCard key={c.title} c={c} i={i} />
           ))} */}
           {PROJECTS.map((project, i) => (
-            <motion.div
+            <m.div
               key={i}
               data-testid={extraData.work.browserExpand(project.id)}
               style={{ scale, rotate, y }}
               className="relative ddff"
             >
-              <motion.div
+              <m.div
                 aria-hidden
                 style={{ opacity: glow }}
                 className="absolute -inset-6 rounded-[28px] pointer-events-none"
@@ -344,10 +344,10 @@ export function CaseStudies() {
                     filter: "blur(20px)",
                   }}
                 />
-              </motion.div>
+              </m.div>
 
               <BrowserWindow project={project} projectId={project.id} />
-            </motion.div>
+            </m.div>
           ))}
 
         </div>

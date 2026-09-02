@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   HeartPulse,
   Building,
@@ -44,7 +44,7 @@ export default function Industries() {
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
           {industries.map((ind, i) => (
-            <motion.div
+            <m.div
               key={ind.name}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Industries() {
                   AI visibility, mapped to your buyer
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

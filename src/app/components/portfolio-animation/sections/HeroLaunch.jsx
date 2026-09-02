@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 
 const STATS = [
@@ -27,7 +27,7 @@ export default function HeroLaunch() {
     >
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10">
         {/* Eyebrow */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -35,10 +35,10 @@ export default function HeroLaunch() {
         >
           <span className="inline-block w-2 h-2 rounded-full bg-[var(--b2b-orange)] shadow-[0_0_10px_rgba(244,123,82,0.9)]" />
           Mission control · 8 cities · 4 continents
-        </motion.div>
+        </m.div>
 
         {/* Headline */}
-        <motion.h1
+        <m.h1
           data-testid={extraData.hero.headline}
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,27 +46,27 @@ export default function HeroLaunch() {
           className="font-display text-white text-[52px] md:text-[96px] lg:text-[120px] leading-[0.94] tracking-[-0.045em]"
         >
           BASE<span className="text-[var(--b2b-orange)]">2</span>BRAND.
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 max-w-[720px] text-[18px] md:text-[22px] leading-[1.45] text-[var(--b2b-text)]/90 tracking-[-0.01em]"
         >
           We architect the digital backbone for enterprises ready to leave gravity behind.
-        </motion.p>
-        <motion.p
+        </m.p>
+        <m.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="mt-4 max-w-[680px] text-[15px] md:text-[16px] leading-[1.6] text-[var(--b2b-text-muted)]"
         >
           AI systems, enterprise software, cloud and intelligent automation—engineered end‑to‑end from 8 cities across 4 continents.
-        </motion.p>
+        </m.p>
 
         {/* CTAs */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.5 }}
@@ -91,10 +91,10 @@ export default function HeroLaunch() {
           >
             Explore capabilities
           </a>
-        </motion.div>
+        </m.div>
 
         {/* Stats strip */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.65 }}
@@ -114,7 +114,7 @@ export default function HeroLaunch() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* Trusted line */}
         <div className="mt-16 md:mt-24">

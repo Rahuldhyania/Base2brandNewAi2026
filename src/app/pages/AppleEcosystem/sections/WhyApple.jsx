@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Lock, Zap, Layers, Sparkles } from "lucide-react";
 
 const PILLARS = [
@@ -26,7 +26,7 @@ const PILLARS = [
     icon: Sparkles,
     title: "Craft is still the competitive advantage",
     body:
-      "Premium is not decoration. It is how the product feels, responds and earns trust. We engineer Apple apps with the detail users expect — from spacing and motion to accessibility and reliability.",
+      "Premium is not decoration. It is how the product feels, responds and earns trust. We engineer Apple apps with the detail users expect — from spacing and m to accessibility and reliability.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function WhyApple() {
           {PILLARS.map((p, i) => {
             const Icon = p.icon;
             return (
-              <motion.div
+              <m.div
                 key={p.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function WhyApple() {
                 </span>
                 <h3 className="mt-3 sm:mt-5 font-display text-lg sm:text-xl leading-tight">{p.title}</h3>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed">{p.body}</p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

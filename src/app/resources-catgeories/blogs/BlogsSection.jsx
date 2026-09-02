@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Clock, Calendar, Eye } from "lucide-react";
 import Link from "next/link";
 import { fetchBlogs } from "../lib/resourcesApi";
@@ -74,13 +74,13 @@ export default function BlogsSection({ sectionRef }) {
               key={blog?._id || blog?.id || index}
               href={`/blog/${blog?.slugUrl || blog?.slug}`}
             >
-              <motion.div
+              <m.div
                 viewport={{ once: true, margin: "-100px" }}
                 className="relative"
                 data-testid="featured-resource"
               >
                 <div className="absolute -inset-px rounded-3xl overflow-hidden pointer-events-none">
-                  <motion.div
+                  <m.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     className="absolute -inset-1/2"
@@ -152,7 +152,7 @@ export default function BlogsSection({ sectionRef }) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             </Link>
           ))
         )}
@@ -161,7 +161,7 @@ export default function BlogsSection({ sectionRef }) {
       {!loading && blogData.length > 1 && (
         <div className="grid md:grid-cols-2 gap-4 pt-8 md:pt-10">
           {blogData.slice(1).map((blog, index) => (
-            <motion.div
+            <m.div
               key={blog?._id || blog?.id || index}
               viewport={{ once: true, margin: "-100px" }}
               className="relative"
@@ -169,7 +169,7 @@ export default function BlogsSection({ sectionRef }) {
             >
               <Link href={`/blog/${blog?.slugUrl || blog?.slug}`}>
                 <div className="absolute -inset-px rounded-3xl overflow-hidden pointer-events-none">
-                  <motion.div
+                  <m.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     className="absolute -inset-1/2"
@@ -227,7 +227,7 @@ export default function BlogsSection({ sectionRef }) {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       )}

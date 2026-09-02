@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { ShieldCheck, Globe2, HandHeart, FileLock2 } from "lucide-react";
 
@@ -58,7 +58,7 @@ export function GovtNGO() {
           {PROGRAMS.map((p, i) => {
             const I = p.icon;
             return (
-              <motion.div
+              <m.div
                 key={p.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export function GovtNGO() {
                   {p.title}
                 </h3>
                 <p className="mt-2 text-sm text-mute leading-relaxed">{p.body}</p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

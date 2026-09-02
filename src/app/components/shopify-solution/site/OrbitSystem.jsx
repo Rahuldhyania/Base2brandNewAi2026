@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   ShopifyLogo,
@@ -128,7 +128,7 @@ const OrbitRing = ({
       />
 
       {/* Rotating layer with nodes */}
-      <motion.div
+      <m.div
         className="absolute inset-0"
         animate={
           reduced
@@ -153,7 +153,7 @@ const OrbitRing = ({
               }}
             >
               {/* Counter-rotation to keep upright */}
-              <motion.div
+              <m.div
                 animate={
                   reduced
                     ? undefined
@@ -167,7 +167,7 @@ const OrbitRing = ({
                 style={{ transformOrigin: "50% 50%" }}
               >
                 {/* gentle vertical bobbing */}
-                <motion.div
+                <m.div
                   animate={
                     reduced
                       ? undefined
@@ -186,12 +186,12 @@ const OrbitRing = ({
                   style={{ width: nodeSize, height: nodeSize, marginLeft: -nodeSize / 2, marginTop: -nodeSize / 2 }}
                 >
                   <NodeChip name={node.name} size={nodeSize} official={node.official} />
-                </motion.div>
-              </motion.div>
+                </m.div>
+              </m.div>
             </div>
           );
         })}
-      </motion.div>
+      </m.div>
     </div>
   );
 };
@@ -299,7 +299,7 @@ export const OrbitSystem = ({ scale = 1 }) => {
         }}
       >
         {/* conic highlight ring */}
-        <motion.span
+        <m.span
           aria-hidden
           className="absolute inset-0 rounded-3xl pointer-events-none"
           style={{

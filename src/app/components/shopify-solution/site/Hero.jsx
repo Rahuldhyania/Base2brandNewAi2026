@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -156,7 +156,7 @@ const OrbitRing = ({
             : "border border-white/10",
         )}
       />
-      <motion.div
+      <m.div
         className="absolute inset-0 pointer-events-auto"
         animate={reduced ? undefined : { rotate: 360 * direction }}
         transition={
@@ -174,7 +174,7 @@ const OrbitRing = ({
                 transform: `rotate(${angle}deg) translate(${radius}px) rotate(${-angle}deg)`,
               }}
             >
-              <motion.div
+              <m.div
                 animate={reduced ? undefined : { rotate: -360 * direction }}
                 transition={
                   reduced
@@ -183,7 +183,7 @@ const OrbitRing = ({
                 }
                 style={{ transformOrigin: "50% 50%" }}
               >
-                <motion.div
+                <m.div
                   animate={reduced ? undefined : { y: [0, -6, 0] }}
                   transition={
                     reduced
@@ -203,12 +203,12 @@ const OrbitRing = ({
                   }}
                 >
                   <OrbitNode node={node} size={nodeSize} />
-                </motion.div>
-              </motion.div>
+                </m.div>
+              </m.div>
             </div>
           );
         })}
-      </motion.div>
+      </m.div>
     </div>
   );
 };
@@ -365,7 +365,7 @@ export const Hero = ({ onOpenLeadForm }) => {
                 "0 0 0 1px rgba(149,191,71,0.28), 0 18px 60px rgba(0,0,0,0.55), 0 0 80px rgba(149,191,71,0.35)",
             }}
           >
-            <motion.span
+            <m.span
               aria-hidden
               className="absolute inset-0 rounded-3xl pointer-events-none"
               style={{

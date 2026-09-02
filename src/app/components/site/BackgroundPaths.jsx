@@ -1,5 +1,5 @@
 'use client';
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 /**
  * BackgroundPaths — atmospheric pathways layer.
@@ -8,7 +8,7 @@ import { motion, useReducedMotion } from "framer-motion";
  *  - PathLength + pathOffset infinite animation
  *  - Recolored for the Intelligence Division (desaturated white tinted
  *    with electric violet via a linear gradient stroke)
- *  - Performance: pauses animation under prefers-reduced-motion, opacity
+ *  - Performance: pauses animation under prefers-reduced-m, opacity
  *    capped to keep paths sub-attentional.
  */
 
@@ -35,7 +35,7 @@ const FloatingPaths = ({ position, reduce }) => {
     >
       <title>Enterprise pathways</title>
       {paths.map((path) => (
-        <motion.path
+        <m.path
           key={path.id}
           d={path.d}
           stroke={`url(#bp-stroke-${position > 0 ? "a" : "b"})`}

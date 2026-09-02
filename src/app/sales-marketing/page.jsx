@@ -1,15 +1,34 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import "../components/Solutions/solution.css";
 import Hero from "@/components/Solutions/Hero";
 import Philosophy from "@/components/Solutions/Philosophy";
 import Challenges from "@/components/Solutions/Challenges";
-import Capabilities from "@/components/Solutions/Capabilities";
-import MissionControl from "@/components/Solutions/MissionControl";
-import WhyBase2Brand from "@/components/Solutions/WhyBase2Brand";
-import Process from "@/components/Solutions/Process";
-import Industries from "@/components/Solutions/Industries";
-import Results from "@/components/Solutions/Results";
-import FinalCTA from "@/components/Solutions/FinalCTA";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS isn't parsed/executed
+// on initial load.
+const Capabilities = dynamic(() => import("@/components/Solutions/Capabilities"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const MissionControl = dynamic(() => import("@/components/Solutions/MissionControl"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const WhyBase2Brand = dynamic(() => import("@/components/Solutions/WhyBase2Brand"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Process = dynamic(() => import("@/components/Solutions/Process"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Industries = dynamic(() => import("@/components/Solutions/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const Results = dynamic(() => import("@/components/Solutions/Results"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const FinalCTA = dynamic(() => import("@/components/Solutions/FinalCTA"), {
+  loading: () => <SectionFallback minHeight={400} />,
+});
 
 const CHALLENGES = [
   {

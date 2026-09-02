@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { cn } from "../../lib/utils";
 
 export function SectionHeader({
@@ -27,7 +27,7 @@ export function SectionHeader({
           {eyebrow}
         </div>
       )}
-      <motion.h2
+      <m.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -35,9 +35,9 @@ export function SectionHeader({
         className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight"
       >
         {title}
-      </motion.h2>
+      </m.h2>
       {intro && (
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -46,7 +46,7 @@ export function SectionHeader({
           style={align === "center" ? { marginInline: "auto" } : undefined}
         >
           {intro}
-        </motion.p>
+        </m.p>
       )}
     </div>
   );

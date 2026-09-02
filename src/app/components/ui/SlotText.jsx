@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 /**
  * Slot-machine cycling text component.
@@ -42,7 +42,7 @@ export default function SlotText({
 
       </div>
 
-      <motion.span
+      <m.span
         animate={{ width }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="relative inline-block overflow-hidden"
@@ -58,7 +58,7 @@ export default function SlotText({
         </span>
 
         <AnimatePresence mode="wait" initial={false}>
-          <motion.span
+          <m.span
             key={idx}
             initial={{ y: "60%", opacity: 0, filter: "blur(8px)" }}
             animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
@@ -68,9 +68,9 @@ export default function SlotText({
             // style={{ textShadow: "0 0 40px rgba(243,115,53,0.6)" }}
           >
             {items_text[idx]}
-          </motion.span>
+          </m.span>
         </AnimatePresence>
-      </motion.span>
+      </m.span>
     </span>
   );
 }

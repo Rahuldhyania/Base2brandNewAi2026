@@ -1,15 +1,41 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Hero from "@/components/PublicSectorNgo/Hero";
 import { TrustBar } from "@/components/PublicSectorNgo/TrustBar";
 import { ValueProp } from "@/components/PublicSectorNgo/ValueProp";
-import { Problems } from "@/components/PublicSectorNgo/Problems";
-import { Industries } from "@/components/PublicSectorNgo/Industries";
-import { Process } from "@/components/PublicSectorNgo/Process";
-import { Stats } from "@/components/PublicSectorNgo/Stats";
-import { Testimonials } from "@/components/PublicSectorNgo/Testimonials";
-import { WhyUs } from "@/components/PublicSectorNgo/WhyUs";
-import { FinalCTA } from "@/components/PublicSectorNgo/FinalCTA";
+import { SectionFallback } from "@/components/layout/SectionFallback";
 import Image from "next/image";
+
+// Below-the-fold sections are lazy-loaded so their JS isn't parsed/executed
+// on initial load.
+const Problems = dynamic(
+  () => import("@/components/PublicSectorNgo/Problems").then((m) => m.Problems),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Industries = dynamic(
+  () => import("@/components/PublicSectorNgo/Industries").then((m) => m.Industries),
+  { loading: () => <SectionFallback minHeight={520} /> },
+);
+const Process = dynamic(
+  () => import("@/components/PublicSectorNgo/Process").then((m) => m.Process),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Stats = dynamic(
+  () => import("@/components/PublicSectorNgo/Stats").then((m) => m.Stats),
+  { loading: () => <SectionFallback minHeight={320} /> },
+);
+const Testimonials = dynamic(
+  () => import("@/components/PublicSectorNgo/Testimonials").then((m) => m.Testimonials),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const WhyUs = dynamic(
+  () => import("@/components/PublicSectorNgo/WhyUs").then((m) => m.WhyUs),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const FinalCTA = dynamic(
+  () => import("@/components/PublicSectorNgo/FinalCTA").then((m) => m.FinalCTA),
+  { loading: () => <SectionFallback minHeight={400} /> },
+);
 
 const page = () => {
   return (

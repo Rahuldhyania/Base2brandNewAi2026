@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Factory,
   HeartPulse,
@@ -50,7 +50,7 @@ export default function Industries() {
           {industries.map((ind, i) => {
             const Icon = ind.icon;
             return (
-              <motion.a
+              <m.a
                 key={ind.code}
                 href="#"
                 data-testid={SPATIAL.industryTile(i)}
@@ -78,7 +78,7 @@ export default function Industries() {
                     Explore practice →
                   </div>
                 </div>
-              </motion.a>
+              </m.a>
             );
           })}
         </div>

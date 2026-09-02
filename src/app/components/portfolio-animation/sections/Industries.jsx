@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { extraData } from "@/constants/testIds/extraData";
 
 const INDUSTRIES = [
@@ -35,7 +35,7 @@ export default function Industries() {
 
         <div className="rounded-3xl overflow-hidden b2b-hairline">
           {INDUSTRIES.map((ind, i) => (
-            <motion.div
+            <m.div
               key={ind.id}
               data-testid={extraData.industries.item(ind.id)}
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Industries() {
                   <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

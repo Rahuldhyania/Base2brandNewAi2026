@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Clock, Calendar, Bookmark, Share2, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ function ResourceCard({ r, index, hrefPrefix = "/resources" }) {
   const [bookmarked, setBookmarked] = React.useState(false);
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -27,7 +27,7 @@ function ResourceCard({ r, index, hrefPrefix = "/resources" }) {
     >
       <Link href={`${hrefPrefix}/${r.slug}`} className="block">
         <div className={`relative ${heightClass} overflow-hidden`}>
-          <motion.img
+          <m.img
             src={r.cover}
             alt={r.title}
             loading="lazy"
@@ -108,7 +108,7 @@ function ResourceCard({ r, index, hrefPrefix = "/resources" }) {
             "0 0 0 1px rgba(123,77,255,0.25), 0 30px 80px rgba(123,77,255,0.18), 0 10px 40px rgba(66,212,255,0.15)",
         }}
       />
-    </motion.div>
+    </m.div>
   );
 }
 

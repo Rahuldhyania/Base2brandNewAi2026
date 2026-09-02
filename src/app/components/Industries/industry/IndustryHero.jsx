@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import SectionLabel from "@/components/Industries/shared/SectionLabel";
 import CTAButton from "@/components/Industries/shared/CTAButton";
 import OrbitalNodes from "@/components/Industries/shared/OrbitalNodes";
@@ -44,15 +44,15 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left: Editorial copy */}
           <div className="lg:col-span-7 text-center md:text-left">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               <SectionLabel>{label}</SectionLabel>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
@@ -61,27 +61,27 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
               <h2 className="font-display text-[12px] uppercase tracking-widest2 text-white/55">
                 Industries / {name}
               </h2>
-            </motion.div>
+            </m.div>
 
-            <motion.h1
+            <m.h1
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="display text-balance text-[30px] md:text-[38px] lg:text-[56px] mt-3 md:leading-[1.04]"
             >
               {hero.headline}
-            </motion.h1>
+            </m.h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
               className="mt-4 md:mt-7 text-white/70 text-[16px] md:text-[18px] leading-relaxed text-pretty max-w-2xl"
             >
               {hero.description}
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.28 }}
@@ -103,9 +103,9 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
               >
                 {hero.ctas.secondary.label}
               </CTAButton>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.42 }}
@@ -124,7 +124,7 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
                   {label}  
                 </span>
               ))}
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Right: Orbital visual */}
@@ -140,39 +140,39 @@ export default function IndustryHero({ hero, name, label, heroPrimaryCta, heroSe
                 />
               </div>
               <div className="absolute -inset-10 rounded-full bg-brand/[0.06] blur-3xl pointer-events-none" />
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.0, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
               >
                 <OrbitalNodes nodes={hero.nodes} />
-              </motion.div>
+              </m.div>
             </div>
 
           </div>
         </div>
 
         {/* Metrics row */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden border border-white/8"
         >
-          {hero.metrics.map((m) => (
+          {hero.metrics.map((metric) => (
             <div
-              key={m.label}
+              key={metric.label}
               className="bg-ink-950/95 px-3 sm:px-6 py-3 md:py-4 md:px-8 hover:bg-ink-900/80 transition"
             >
               <div className="font-display text-[24px] sm:text-[34px] md:text-[44px] leading-none text-white tracking-tight">
-                <AnimatedCounter value={m.value} />
+                <AnimatedCounter value={metric.value} />
               </div>
               <div className="mt-1 sm:mt-3 text-[11px] sm:text-[12px] uppercase tracking-widest2 text-white/45">
-                {m.label}
+                {metric.label}
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

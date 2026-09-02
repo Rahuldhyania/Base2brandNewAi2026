@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ScanSearch, Database, FileText, Award, Sparkles } from "lucide-react";
 const icons = [
   ScanSearch,
@@ -44,7 +44,7 @@ export default function Framework({ highlightTag, title, description, steps}) {
               const Icon = icons[i];
               const isLeft = i % 2 === 0;
               return (
-                <motion.div
+                <m.div
                   key={s.n}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export default function Framework({ highlightTag, title, description, steps}) {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>

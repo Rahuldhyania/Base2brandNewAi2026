@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SPATIAL } from "@/constants/testIds";
 
@@ -127,7 +127,7 @@ export default function UseCases() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           variants={container}
           initial="initial"
           whileInView="animate"
@@ -135,7 +135,7 @@ export default function UseCases() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {useCases.map((u, i) => (
-            <motion.div key={u.title} variants={item}>
+            <m.div key={u.title} variants={item}>
               <TiltCard index={i}>
                 <div className="flex items-center justify-between mb-3">
                   <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-[#FFB800]/90 px-3 py-1 rounded-full border border-[#FFB800]/20 bg-[#FFB800]/[0.06]">
@@ -153,9 +153,9 @@ export default function UseCases() {
                   {u.description}
                 </p>
               </TiltCard>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

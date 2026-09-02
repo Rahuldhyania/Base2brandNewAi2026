@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import ShiningText from "@/components/site/ShiningText";
 import NeuralCommandCenter from "@/components/ai/NeuralCommandCenter";
@@ -58,7 +58,7 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-7">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -66,9 +66,9 @@ const Hero = () => {
               <ShiningText testId="hero-eyebrow">
                 FROM AUTOMATION TO AUTONOMY
               </ShiningText>
-            </motion.div>
+            </m.div>
 
-            <motion.h1
+            <m.h1
               data-testid="hero-headline"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -80,9 +80,9 @@ const Hero = () => {
               <span className="bg-gradient-to-br from-[#C084FC] via-[#A855F7] to-[#6D28D9] bg-clip-text text-transparent">
                 not demos.
               </span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p
+            <m.p
               data-testid="hero-subheadline"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,9 +90,9 @@ const Hero = () => {
               className="mt-4 text-base md:text-lg text-white/55 max-w-2xl"
             >
              Base2Brand delivers AI automation services, AI agent development, enterprise AI solutions and generative AI solutions built to improve operations, qualify leads, support customers, automate decisions and scale business performance.
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3 }}
@@ -115,9 +115,9 @@ const Hero = () => {
                 Explore AI Capabilities
                 <ArrowUpRight className="w-4 h-4" />
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
@@ -130,17 +130,17 @@ const Hero = () => {
               <span>Production Deployments</span>
               <span className="w-1 h-1 rounded-full bg-[#8B5CF6]" />
                <span>Outcome-Focused</span>
-            </motion.div>
+            </m.div>
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
             <NeuralCommandCenter />
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

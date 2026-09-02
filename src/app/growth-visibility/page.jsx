@@ -1,16 +1,43 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Hero from "@/components/landing/Hero";
 import Narrative from "@/components/ai/Narrative";
 import Capabilities from "@/components/ai/Capabilities";
-import BuildingNow from "@/components/ai/BuildingNow";
-import TechStack from "@/components/ai/TechStack";
-import Framework from "@/components/landing/Framework";
-import Services from "@/components/landing/Services";
-import WhyUs from "@/components/landing/WhyUs";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import Industries from "@/components/ai/Industries";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load — same
+// pattern used on the home page (src/app/page.js) and ai-automation.
+const BuildingNow = dynamic(() => import("@/components/ai/BuildingNow"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const TechStack = dynamic(() => import("@/components/ai/TechStack"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Framework = dynamic(() => import("@/components/landing/Framework"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Services = dynamic(() => import("@/components/landing/Services"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const WhyUs = dynamic(() => import("@/components/landing/WhyUs"), {
+  loading: () => <SectionFallback minHeight={480} />,
+});
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 
 const features = [
   {

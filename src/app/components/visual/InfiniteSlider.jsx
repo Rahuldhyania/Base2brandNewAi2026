@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { m, useAnimationControls } from "framer-motion";
 import { cn } from "../../lib/utils";
 
 /**
@@ -83,7 +83,7 @@ export function InfiniteSlider({
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
     >
-      <motion.div
+      <m.div
         ref={trackRef}
         animate={controls}
         className="flex w-max"
@@ -94,7 +94,7 @@ export function InfiniteSlider({
             {child}
           </div>
         ))}
-      </motion.div>
+      </m.div>
     </div>
   );
 }

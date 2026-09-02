@@ -1,7 +1,7 @@
 // 'use client';
 
 // import React from "react";
-// import { motion } from "framer-motion";
+// import { m } from "framer-motion";
 // import { InfiniteSlider } from "../components/visual/InfiniteSlider";
 // import {
 //   ShoppingBag,
@@ -92,7 +92,7 @@
 //       className="relative py-12 border-y border-line"
 //     >
 //       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-//         <motion.div
+//         <m.div
 //           initial={{ opacity: 0, y: 16 }}
 //           whileInView={{ opacity: 1, y: 0 }}
 //           viewport={{ once: true }}
@@ -116,7 +116,7 @@
 //             healthcare companies, education businesses, SaaS platforms, and
 //             service-led organizations.
 //           </p>
-//         </motion.div>
+//         </m.div>
 
 //         <div className="relative">
 //           <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#02030a] to-transparent z-10" />

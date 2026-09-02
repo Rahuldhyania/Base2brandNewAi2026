@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 
 export default function TopNav() {
   const { scrollY } = useScroll();
@@ -9,7 +9,7 @@ export default function TopNav() {
 
   return (
     <>
-      <motion.header
+      <m.header
         style={{ opacity }}
         className="fixed top-0 inset-x-0 z-40 pointer-events-none"
         data-testid="top-nav"
@@ -46,10 +46,10 @@ export default function TopNav() {
             </Link>
           </div>
         </div>
-      </motion.header>
+      </m.header>
 
       {/* Initial hero logo (top-left) fades out as user scrolls */}
-      <motion.div
+      <m.div
         style={{ opacity: topLogoOpacity }}
         className="pointer-events-none fixed top-6 left-6 md:top-8 md:left-10 z-40"
       >
@@ -66,7 +66,7 @@ export default function TopNav() {
             Base2Brand
           </span>
         </div>
-      </motion.div>
+      </m.div>
     </>
   );
 }

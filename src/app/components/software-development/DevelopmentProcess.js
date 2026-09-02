@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
 const STEPS = [
@@ -40,32 +40,32 @@ const DevelopmentProcess = () => {
   return (
     <section id="process" className="py-12 relative">
       <div className="b2b-container">
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={stagger(0.06)}
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUp} className="text-(--b2b-primary) mb-3">
+          <m.div variants={fadeUp} className="text-(--b2b-primary) mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--b2b-red)]" />
             Development Process
-          </motion.div>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
+          </m.div>
+          <m.h2 variants={fadeUp} className="mt-4 font-display text-white text-3xl sm:text-4xl lg:text-5xl leading-[1.05] tracking-tight">
             <span className="b2b-text-gradient">From concept to production — </span>
             <span className="b2b-text-red-gradient">one continuous engagement.</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
+          </m.h2>
+          <m.p variants={fadeUp} className="text-white/65 text-base lg:text-lg max-w-[940px] mx-auto self-end leading-relaxed pt-3">
             We engineer in a single, continuous lifecycle — from the first conversation to the
             millionth user.
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
 
         <div className="mt-8 md:mt-14 relative">
           {/* central rail */}
           <div className="absolute left-4 sm:left-6 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[color:var(--b2b-red)]/10 via-[color:var(--b2b-red)]/40 to-[color:var(--b2b-red)]/10" />
 
-          <motion.div
+          <m.div
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
@@ -75,7 +75,7 @@ const DevelopmentProcess = () => {
             {STEPS.map((s, idx) => {
               const onLeft = idx % 2 === 0;
               return (
-                <motion.div
+                <m.div
                   key={s.n}
                   variants={fadeUp}
                   className="relative grid grid-cols-12 gap-6 items-start"
@@ -99,10 +99,10 @@ const DevelopmentProcess = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

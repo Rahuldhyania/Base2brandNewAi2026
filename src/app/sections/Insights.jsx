@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SectionHeader } from "../components/layout/SectionHeader";
 import { ArrowUpRight } from "lucide-react";
 
@@ -59,7 +59,7 @@ export function Insights() {
 
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {POSTS.map((p, i) => (
-            <motion.article
+            <m.article
               key={p.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ export function Insights() {
                 Read paper
                 <ArrowUpRight size={14} />
               </a>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

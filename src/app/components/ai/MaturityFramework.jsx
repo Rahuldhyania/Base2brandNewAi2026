@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState, useLayoutEffect } from "react";
 import {
-  motion,
+  m,
   useReducedMotion,
   useScroll,
   useTransform,
@@ -89,7 +89,7 @@ const MaturityFramework = () => {
   // Progress bar width
   const progressWidth = useTransform(smoothed, [0, 1], ["0%", "100%"]);
 
-  // Update discrete active stage based on motion value (desktop scroll-scrub only)
+  // Update discrete active stage based on m value (desktop scroll-scrub only)
   useMotionValueEvent(smoothed, "change", (v) => {
     if (isMobile) return;
     const next = Math.min(
@@ -282,7 +282,7 @@ const MaturityFramework = () => {
                   </svg>
 
                   {/* Smooth orbital indicator — driven by scroll */}
-                  <motion.div
+                  <m.div
                     className="absolute inset-0"
                     style={
                       isMobile
@@ -303,7 +303,7 @@ const MaturityFramework = () => {
                         <span className="absolute inset-0 w-3 h-3 rounded-full bg-[#C084FC] animate-ping opacity-50" />
                       </div>
                     </div>
-                  </motion.div>
+                  </m.div>
 
                   {/* Stage nodes */}
                   {STAGES.map((s, i) => {
@@ -319,7 +319,7 @@ const MaturityFramework = () => {
                         style={{ left: `${x}%`, top: `${y}%` }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 group focus:outline-none"
                       >
-                        <motion.span
+                        <m.span
                           animate={{
                             scale: isActive ? 1.25 : 1,
                             backgroundColor: isActive
@@ -371,7 +371,7 @@ const MaturityFramework = () => {
 
               {/* Active stage description */}
               <div className="lg:col-span-6 relative min-h-[260px]">
-                <motion.div
+                <m.div
                   key={active}
                   initial={{ opacity: 0, y: 20, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -387,35 +387,35 @@ const MaturityFramework = () => {
                     </span>
                     <span className="flex-1 h-px bg-gradient-to-r from-[#8B5CF6]/60 to-transparent" />
                   </div>
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
                     className="relative mt-3 font-display text-xl sm:text-2xl font-medium tracking-tight"
                   >
                     {STAGES[active].label}
-                  </motion.div>
-                  <motion.p
+                  </m.div>
+                  <m.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.18, duration: 0.5 }}
                     className="relative mt-4 text-white/65 leading-relaxed"
                   >
                     {STAGES[active].desc}
-                  </motion.p>
-                  <motion.p
+                  </m.p>
+                  <m.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.26, duration: 0.5 }}
                     className="relative mt-3 text-sm text-white/40 italic"
                   >
                     {STAGES[active].note}
-                  </motion.p>
-                </motion.div>
+                  </m.p>
+                </m.div>
 
                 {/* Continuous progress bar (scroll-linked) */}
                 <div className="mt-6 relative h-1 rounded-full bg-white/8 overflow-hidden">
-                  <motion.div
+                  <m.div
                     className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#C084FC]"
                     style={isMobile ? undefined : { width: progressWidth }}
                     animate={

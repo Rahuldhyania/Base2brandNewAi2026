@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Unplug,
   ClipboardList,
@@ -69,7 +69,7 @@ export const Problems = () => {
           {problems.map((p, i) => {
             const Icon = p.icon;
             return (
-              <motion.div
+              <m.div
                 key={p.title}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export const Problems = () => {
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {p.text}
                 </p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

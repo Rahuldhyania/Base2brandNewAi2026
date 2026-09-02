@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -122,11 +122,11 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
         </div>
 
         {/* Browser side */}
-        <motion.div
+        <m.div
           data-testid={extraData.work.browserExpand(project.id)}
           className={`relative ddff min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}
         >
-          <motion.div
+          <m.div
             aria-hidden
             style={{ opacity: glow }}
             className="absolute -inset-6 rounded-[28px] pointer-events-none"
@@ -139,10 +139,10 @@ function ProjectCase({ project, index, imageBorderColor, wide_container }) {
                 filter: "blur(20px)",
               }}
             />
-          </motion.div>
+          </m.div>
 
           <BrowserWindow project={project} imageBorderColor={imageBorderColor} />
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );

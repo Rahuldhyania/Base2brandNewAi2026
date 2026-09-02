@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Glasses } from "lucide-react";
 
 const APPLICATIONS = [
@@ -55,7 +55,7 @@ export default function VisionPro() {
 
       <div className="relative mt-10 sm:mt-16 grid lg:grid-cols-[1fr_1.2fr] gap-6 sm:gap-10 lg:gap-16 items-start">
         {/* Visual stage */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -89,12 +89,12 @@ export default function VisionPro() {
           </svg>
 
           <Glasses className="hidden" />
-        </motion.div>
+        </m.div>
 
         {/* Applications */}
         <div className="space-y-4">
           {APPLICATIONS.map((a, i) => (
-            <motion.div
+            <m.div
               key={a.title}
               initial={{ opacity: 0, x: 16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -104,7 +104,7 @@ export default function VisionPro() {
             >
               <h3 className="font-display text-lg sm:text-xl leading-tight">{a.title}</h3>
               <p className="mt-2 text-xs sm:text-sm text-white/60 leading-relaxed">{a.body}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

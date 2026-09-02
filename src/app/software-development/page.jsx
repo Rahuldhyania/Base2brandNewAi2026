@@ -1,18 +1,47 @@
 import React from "react";
-import Architecture from "@/components/software-development/Architecture";
+import dynamic from "next/dynamic";
 import Capabilities from "@/components/software-development/Capabilities";
-import CaseStudies from "@/components/software-development/CaseStudies";
-import DevelopmentProcess from "@/components/software-development/DevelopmentProcess";
-import EngineeringPrinciples from "@/components/software-development/EngineeringPrinciples";
-import FinalCTA from "@/components/software-development/FinalCTA";
 import Hero from "@/components/software-development/Hero";
-import ProductsWeBuild from "@/components/software-development/ProductsWeBuild";
-import TechStack from "@/components/software-development/TechStack";
 import WhyBase2Brand from "@/components/software-development/WhyBase2Brand";
-import Work from "@/components/portfolio-animation/sections/Work";
-import CommandCenter from "@/components/shopify-solution/site/CommandCenter";
-import Industries from "@/components/ai/Industries";
-import { LandingZone } from "@/sections/LandingZone";
+import { SectionFallback } from "@/components/layout/SectionFallback";
+
+// Below-the-fold sections are lazy-loaded so their JS (and, for
+// CommandCenter, its video) isn't parsed/executed on initial load.
+const Work = dynamic(
+  () => import("@/components/portfolio-animation/sections/Work"),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
+const ProductsWeBuild = dynamic(
+  () => import("@/components/software-development/ProductsWeBuild"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const TechStack = dynamic(
+  () => import("@/components/software-development/TechStack"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Architecture = dynamic(
+  () => import("@/components/software-development/Architecture"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const Industries = dynamic(() => import("@/components/ai/Industries"), {
+  loading: () => <SectionFallback minHeight={520} />,
+});
+const CommandCenter = dynamic(
+  () => import("@/components/shopify-solution/site/CommandCenter"),
+  { loading: () => <SectionFallback minHeight={560} /> },
+);
+const EngineeringPrinciples = dynamic(
+  () => import("@/components/software-development/EngineeringPrinciples"),
+  { loading: () => <SectionFallback minHeight={480} /> },
+);
+const FinalCTA = dynamic(
+  () => import("@/components/software-development/FinalCTA"),
+  { loading: () => <SectionFallback minHeight={400} /> },
+);
+const LandingZone = dynamic(
+  () => import("@/sections/LandingZone").then((m) => m.LandingZone),
+  { loading: () => <SectionFallback minHeight={640} /> },
+);
 
 const CARDS = [
   {

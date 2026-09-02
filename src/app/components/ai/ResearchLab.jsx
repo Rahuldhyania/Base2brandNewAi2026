@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import Reveal from "@/components/site/Reveal";
 import ShiningText from "@/components/site/ShiningText";
 import Atmosphere from "@/components/site/Atmosphere";
@@ -150,7 +150,7 @@ const ResearchLab = () => {
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.div
+                      <m.div
                         id={`research-panel-${i}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
@@ -161,7 +161,7 @@ const ResearchLab = () => {
                         <div className="pb-6 sm:pb-7 pl-10 sm:pl-14 pr-4 sm:pr-12 text-sm sm:text-base text-white/55 leading-relaxed">
                           {t.desc}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>

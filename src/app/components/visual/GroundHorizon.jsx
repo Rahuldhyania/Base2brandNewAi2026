@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 /**
  * Dark, rocky lunar-style horizon that sits between FinalCTA and Footer.
@@ -31,7 +31,7 @@ export function GroundHorizon() {
       />
 
       {/* landing pad pulse */}
-      <motion.div
+      <m.div
         className="absolute left-1/2 -translate-x-1/2 bottom-[22%] h-8 w-8 rounded-full"
         animate={{ opacity: [0.35, 0.85, 0.35], scale: [1, 1.25, 1] }}
         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
